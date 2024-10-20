@@ -1,0 +1,21 @@
+modLoader = 'lowcodefml'
+showAsResourcePack = false
+loaderVersion="[47,)"
+license="All rights reserved"
+
+[[mods]]
+modId="infinity"
+displayName="Infinity Stones"
+version="0.1"
+logoFile = "logo.png"
+logoBlur = false
+description='''
+<something>
+'''
+
+[[dependencies.test]]
+modId = "palladium"
+mandatory = true
+versionRange = ""
+ordering = "NONE"
+side = "BOTH"

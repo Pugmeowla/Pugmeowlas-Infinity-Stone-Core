@@ -1,0 +1,5 @@
+{
+  "model_layer": "infinity:gauntlet",
+  "texture": "infinity:textures/models/mind.png",
+        "render_type": "glow"
+}

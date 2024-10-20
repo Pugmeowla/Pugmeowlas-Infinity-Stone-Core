@@ -1,0 +1,104 @@
+{
+    "name": "Space Stone",
+    "background": "minecraft:textures/block/light_blue_concrete.png",
+    "icon": "infinity:space_stone",
+    "gui_display_type": "list",
+ 
+    "abilities": {
+      
+        "Teleport": {
+            "type": "palladium:command",
+            "icon": "infinity:textures/icon/teleport.png",
+            "title": "Teleport",
+            "bar_color": "light_blue",
+            "hidden": false,
+            "hidden_in_bar": false,
+            "list_index": 0,
+            "gui_position": "null",
+            "description": "null",
+            "first_tick_commands": [],
+            "last_tick_commands": [],
+            "commands": [
+                "learnSpell learn teleport",
+                "cast @s teleport 5"
+            ],
+            "conditions": {
+                
+                "enabling": [
+                    {
+                        "type": "palladium:action",
+                        "cooldown": 0,
+                        "key_type": "key_bind",
+                        "needs_empty_hand": false,
+                        "allow_scrolling_when_crouching": true
+                    }
+                ]
+            }
+        },
+      
+        "Grab Entity": {
+            "type": "palladium:command",
+            "icon": "infinity:space_stone",
+            "title": "Grab Entity",
+            "bar_color": "light_blue",
+            "hidden": false,
+            "hidden_in_bar": false,
+            "list_index": 1,
+            "gui_position": "null",
+            "description": "null",
+            "first_tick_commands": [],
+            "last_tick_commands": [],
+            "commands": [
+                "learnSpell learn telekinesis",
+                "cast @s telekinesis"
+            ],
+            "conditions": {
+                
+                "enabling": [
+                    {
+                        "type": "palladium:action",
+                        "cooldown": 0,
+                        "key_type": "key_bind",
+                        "needs_empty_hand": false,
+                        "allow_scrolling_when_crouching": true
+                    }
+                ]
+            }
+            
+        },
+       
+        "Force Field": {
+            "type": "palladium:command",
+            "icon": "infinity:textures/icon/force_field.png",
+            "title": "Force Field",
+            "bar_color": "light_blue",
+            "hidden": false,
+            "hidden_in_bar": false,
+            "list_index": 2,
+            "gui_position": "null",
+            "description": "null",
+            "first_tick_commands": [],
+            "last_tick_commands": [],
+            "commands": [
+                "learnSpell learn shield",
+                "cast @s shield 10"
+            ],
+            "conditions": {
+                
+                "enabling": [
+                    {
+                        "type": "palladium:action",
+                        "cooldown": 0,
+                        "key_type": "key_bind",
+                        "needs_empty_hand": false,
+                        "allow_scrolling_when_crouching": true
+                    }
+                ]
+            }
+        }
+        
+       
+
+       
+    }
+}

@@ -1,0 +1,13 @@
+{
+    "type": "minecraft:crafting_shapeless",
+    "ingredients": [
+      {
+        "item": "infinity:eye_of_agamotto"
+      }
+    ],
+    "result": {
+      "item": "infinity:time_stone",
+      "count": 1
+  }
+  }
+  

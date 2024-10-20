@@ -1,0 +1,25 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+      "GHG",
+      "GIG",
+      "G G"
+  ],
+  "key": {
+      "G": {
+          "item": "infinity:gold_titanium_alloy_plate"
+      },
+      "I": {
+          "item": "infinity:infinity_gauntlet_cast"
+      },
+      "H": {
+        "item": "infinity:hammer"
+    }
+      
+  
+  },
+  "result": {
+      "item": "infinity:infinity_gauntlet",
+      "count": 1
+  }
+}

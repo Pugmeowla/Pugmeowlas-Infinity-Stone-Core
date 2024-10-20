@@ -1,0 +1,86 @@
+{
+    "name": "Power Stone",
+    "background": "minecraft:textures/block/red_concrete.png",
+    "icon": "infinity:reality_stone",
+    "gui_display_type": "list",
+ 
+    "abilities": {
+      
+        "Shrink": {
+            "type": "palladium:size",
+            "icon": "palladium:textures/icon/size.png",
+            "title": "Shrink",
+            "bar_color": "red",
+            "hidden": false,
+            "hidden_in_bar": false,
+            "list_index": 0,
+            "gui_position": "null",
+            "description": "null",
+            "scale": 0.1,
+            "conditions": {
+                
+                "enabling": [
+                    {
+                        "type": "palladium:toggle",
+                        "cooldown": 0,
+                        "key_type": "key_bind",
+                        "needs_empty_hand": false,
+                        "allow_scrolling_when_crouching": true
+                    }
+                ]
+            }
+        },
+        "Grow": {
+            "type": "palladium:size",
+            "icon": "palladium:textures/icon/size.png",
+            "title": "Grow",
+            "bar_color": "red",
+            "hidden": false,
+            "hidden_in_bar": false,
+            "list_index": 1,
+            "gui_position": "null",
+            "description": "null",
+            "scale": 10,
+            "conditions": {
+                
+                "enabling": [
+                    {
+                        "type": "palladium:toggle",
+                        "cooldown": 0,
+                        "key_type": "key_bind",
+                        "needs_empty_hand": false,
+                        "allow_scrolling_when_crouching": true
+                    }
+                ]
+            }
+        },
+       "Invisibility": {
+            "type": "palladium:invisibility",
+            "icon": "palladium:textures/icon/invisibility.png",
+            "title": "Invisibility",
+            "bar_color": "red",
+            "hidden": false,
+            "hidden_in_bar": false,
+            "list_index": 2,
+            "gui_position": "null",
+            "description": "null",
+            "conditions": {
+                
+                "enabling": [
+                    {
+                        "type": "palladium:toggle",
+                        "cooldown": 0,
+                        "key_type": "key_bind",
+                        "needs_empty_hand": false,
+                        "allow_scrolling_when_crouching": true
+                    }
+                ]
+            }
+        }
+        
+       
+       
+
+       
+    }
+}

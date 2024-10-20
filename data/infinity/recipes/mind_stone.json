@@ -1,0 +1,13 @@
+{
+    "type": "minecraft:crafting_shapeless",
+    "ingredients": [
+      {
+        "item": "infinity:scepter"
+      }
+    ],
+    "result": {
+      "item": "infinity:mind_stone",
+      "count": 1
+  }
+  }
+  

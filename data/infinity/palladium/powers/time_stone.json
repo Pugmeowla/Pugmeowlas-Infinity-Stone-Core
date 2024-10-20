@@ -1,0 +1,97 @@
+{
+    "name": "Power Stone",
+    "background": "minecraft:textures/block/lime_concrete.png",
+    "icon": "infinity:time_stone",
+    "gui_display_type": "list",
+ 
+    "abilities": {
+      
+        "Fast Forward": {
+            "type": "palladium:command",
+            "icon": "minecraft:clock",
+            "title": "Fast Forward",
+            "bar_color": "lime",
+            "hidden": false,
+            "hidden_in_bar": false,
+            "list_index": 0,
+            "gui_position": "null",
+            "description": "null",
+            "first_tick_commands": [],
+            "last_tick_commands": [],
+            "commands": [
+                "time add 100"
+            ],
+            "conditions": {
+                
+                "enabling": [
+                    {
+                        "type": "palladium:held",
+                        "cooldown": 0,
+                        "key_type": "key_bind",
+                        "needs_empty_hand": false
+                    }
+                ]
+            }
+        },
+        
+        "Stop Time": {
+            "type": "palladium:command",
+            "icon": "infinity:time_stone",
+            "title": "Stop Time",
+            "bar_color": "lime",
+            "hidden": false,
+            "hidden_in_bar": false,
+            "list_index": 1,
+            "gui_position": "null",
+            "description": "null",
+            "first_tick_commands": [],
+            "last_tick_commands": [],
+            "commands": [
+                "gamerule doDaylightCycle false"
+            ],
+            "conditions": {
+                
+                "enabling": [
+                    {
+                        "type": "palladium:action",
+                        "cooldown": 0,
+                        "key_type": "key_bind",
+                        "needs_empty_hand": false,
+                        "allow_scrolling_when_crouching": true
+                    }
+                ]
+            }
+        },
+        "Start Time": {
+            "type": "palladium:command",
+            "icon": "infinity:time_stone",
+            "title": "Start Time",
+            "bar_color": "lime",
+            "hidden": false,
+            "hidden_in_bar": false,
+            "list_index": 2,
+            "gui_position": "null",
+            "description": "null",
+            "first_tick_commands": [],
+            "last_tick_commands": [],
+            "commands": [
+                "gamerule doDaylightCycle true"
+            ],
+            "conditions": {
+                
+                "enabling": [
+                    {
+                        "type": "palladium:action",
+                        "cooldown": 0,
+                        "key_type": "key_bind",
+                        "needs_empty_hand": false,
+                        "allow_scrolling_when_crouching": true
+                    }
+                ]
+            }
+        }
+       
+
+       
+    }
+}

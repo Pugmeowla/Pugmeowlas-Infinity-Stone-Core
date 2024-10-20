@@ -1,0 +1,42 @@
+{
+    "name": "Power Stone",
+    "background": "minecraft:textures/block/orange_concrete.png",
+    "icon": "infinity:soul_stone",
+    "gui_display_type": "list",
+ 
+    "abilities": {
+      
+        "healing": {
+            "type": "palladium:healing",
+            "icon": "infinity:soul_stone",
+            "title": "Healing",
+            "bar_color": "orange",
+            "hidden": true,
+            "hidden_in_bar": true,
+            "list_index": -1,
+            "gui_position": "null",
+            "description": "null",
+            "frequency": 1,
+            "amount": 3
+        },
+        
+        "max_health":{
+            "type": "palladium:attribute_modifier",
+            "icon": "minecraft:iron_chestplate",
+            "title": "Max Health",
+            "bar_color": "orange",
+            "hidden": true,
+            "hidden_in_bar": true,
+            "list_index": -1,
+            "gui_position": "null",
+            "description": "null",
+            "attribute": "minecraft:generic.max_health",
+            "amount": 999999999999999999999999999999999999999999999999999999999999999999999999,
+            "operation": 0,
+            "uuid": "498be4fb-af04-42f2-8948-e6ccdc0d99e1"
+        }
+       
+
+       
+    }
+}

@@ -1,0 +1,22 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "HG ",
+        "   ",
+        "   "
+    ],
+    "key": {
+        "H": {
+            "item": "infinity:hammer"
+        },
+        "G": {
+            "item": "infinity:titanium_ingot"
+        }
+        
+    
+    },
+    "result": {
+        "item": "infinity:titanium_dust",
+        "count": 1
+    }
+}
