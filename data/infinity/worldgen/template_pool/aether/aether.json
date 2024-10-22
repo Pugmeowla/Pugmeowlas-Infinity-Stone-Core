@@ -1,5 +1,5 @@
 {
-    "name": "infintiy:aether/aether",
+    "name": "infinity:aether/aether",
     "fallback": "minecraft:empty",
     "elements": [
         {
