@@ -1,0 +1,3 @@
+execute unless block ^ ^ ^ #infinity:unless align xyz positioned ~0.5 ~ ~0.5 unless entity @e[type=area_effect_cloud,tag=get_blocks_look,distance=..0.2] run loot give @s mine ~ ~ ~ netherite_pickaxe{Enchantments:[{id:"minecraft:silk_touch",lvl:1}],get_blocks_look:1b}
+execute unless block ^ ^ ^ #infinity:unless align xyz run summon area_effect_cloud ~0.5 ~ ~0.5 {Duration:2,Tags:["get_blocks_look"]}
+execute if entity @s[distance=..5] if block ^ ^ ^ #infinity:unless positioned ^ ^ ^0.1 run function infinity:raycast

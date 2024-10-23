@@ -1,0 +1,1 @@
+execute as @a[tag=reality_copy_on] at @s anchored eyes run function infinity:raycast
