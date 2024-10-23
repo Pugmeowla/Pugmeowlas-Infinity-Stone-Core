@@ -95,6 +95,98 @@
                     }
                 ]
             }
+        },
+
+       "render_layer_power": {
+        "type": "palladium:render_layer",
+        "hidden": true,
+        "hidden_in_bar": true,
+        "render_layer": "infinity:space_stone_shield",
+        "conditions": {
+          "enabling":[
+              {
+                  "type": "palladium:ability_enabled",
+                  "ability": "shield"
+                 }
+          ]
+        }
+      },
+         
+      "shield":{
+            "type": "palladium:attribute_modifier",
+            "icon": "minecraft:iron_chestplate",
+            "title": "shield",
+            "bar_color": "orange",
+            "hidden": false,
+            "hidden_in_bar": false,
+            "list_index": 3,
+            "gui_position": "null",
+            "description": "null",
+            "attribute": "minecraft:generic.armor",
+            "amount": 999999999999999999999999999999999999999999999999999999999999999999999999,
+            "operation": 0,
+            "uuid": "498be4fb-af04-42f2-8948-e6ccdc0d99e1",
+            "conditions": {
+                
+                "enabling": [
+                    {
+                        "type": "palladium:toggle",
+                        "cooldown": 0,
+                        "key_type": "key_bind",
+                        "needs_empty_hand": false,
+                        "allow_scrolling_when_crouching": true
+                    }
+                ]
+            }
+        },
+        "shield_toughness":{
+            "type": "palladium:attribute_modifier",
+            "icon": "minecraft:iron_chestplate",
+            "title": "Max Health",
+            "bar_color": "orange",
+            "hidden": false,
+            "hidden_in_bar": false,
+            "list_index": 3,
+            "gui_position": "null",
+            "description": "null",
+            "attribute": "minecraft:generic.armor_toughness",
+            "amount": 999999999999999999999999999999999999999999999999999999999999999999999999,
+            "operation": 0,
+            "uuid": "498be4fb-af04-42f2-8948-e6ccdc0d99e1",
+            "conditions": {
+                
+                "enabling": [
+                    {
+                        "type": "palladium:ability_enabled",
+                        "ability": "shield"
+                       }
+                ]
+            }
+        },
+        "Shield Resistance": {
+            "type": "palladium:command",
+            "icon": "infinity:textures/icon/energy_blast.png",
+            "title": "Shield Resistance",
+            "bar_color": "purple",
+            "hidden": false,
+            "hidden_in_bar": false,
+            "list_index": 0,
+            "gui_position": "null",
+            "description": "null",
+            "first_tick_commands": [],
+            "last_tick_commands": [],
+            "commands": [
+                "effect give @s minecraft:resistance infinite 255 true"
+            ],
+            "conditions": {
+                
+                "enabling": [
+                    {
+                        "type": "palladium:ability_enabled",
+                        "ability": "shield"
+                       }
+                ]
+            }
         }
         
        
