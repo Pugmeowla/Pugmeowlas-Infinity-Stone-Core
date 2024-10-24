@@ -1,8 +1,8 @@
 {
 	"credit": "Made with Blockbench",
 	"textures": {
-		"0": "infinity:item/soul_stone",
-		"particle": "infinity:item/soul_stone"
+		"0": "infinity:item/space_stone",
+		"particle": "infinity:item/space_stone"
 	},
 	"elements": [
 		{
