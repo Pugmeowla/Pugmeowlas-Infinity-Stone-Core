@@ -1,0 +1,22 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "  B",
+        " H ",
+        "B  "
+    ],
+    "key": {
+        "B": {
+            "item": "infinity:uru_blade"
+        },
+        "H": {
+            "item": "infinity:hammer"
+        }
+        
+    
+    },
+    "result": {
+        "item": "infinity:double_edged_sword",
+        "count": 1
+    }
+}

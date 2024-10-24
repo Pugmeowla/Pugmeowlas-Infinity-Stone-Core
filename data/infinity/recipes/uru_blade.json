@@ -1,0 +1,22 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        " A ",
+        " A ",
+        " H "
+    ],
+    "key": {
+        "A": {
+            "item": "infinity:uru_plate"
+        },
+        "H": {
+            "item": "infinity:hammer"
+        }
+        
+    
+    },
+    "result": {
+        "item": "infinity:uru_blade",
+        "count": 1
+    }
+}

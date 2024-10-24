@@ -1,0 +1,10 @@
+{
+    "type": "minecraft:smelting",
+    "ingredient":
+    {
+        "item":"palladium:raw_uru"
+    },
+    "result":"infinity:uru_ingot",
+    "experience":1,
+    "cookingtime":100
+}
