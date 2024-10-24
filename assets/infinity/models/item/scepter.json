@@ -1,7 +1,7 @@
 {
 	"credit": "Made with Blockbench",
 	"textures": {
-		"0": "infinity:item/scepter"
+		"0": "scepter (1)"
 	},
 	"elements": [
 		{
@@ -201,36 +201,5 @@
 				"down": {"uv": [2.5, 0, 4, 1], "texture": "#0"}
 			}
 		}
-	],
-	"display": {
-		"thirdperson_righthand": {
-			"rotation": [0, -90, 0],
-			"translation": [-8, -3.5, 9.25]
-		},
-		"thirdperson_lefthand": {
-			"rotation": [0, 90, 0],
-			"translation": [-4, -3.5, 9]
-		},
-		"firstperson_righthand": {
-			"rotation": [0, -22, 0],
-			"translation": [11, -8, 7.25]
-		},
-		"firstperson_lefthand": {
-			"rotation": [0, 156, 0],
-			"translation": [17.25, -8, -7.25]
-		},
-		"ground": {
-			"translation": [6, 2.5, 5.25],
-			"scale": [0.63, 0.63, 0.63]
-		},
-		"gui": {
-			"translation": [6.75, -4.75, 0],
-			"scale": [0.55, 0.55, 0.55]
-		},
-		"fixed": {
-			"rotation": [0, -180, 0],
-			"translation": [-6.25, -5, -4.5],
-			"scale": [0.63, 0.63, 0.63]
-		}
-	}
+	]
 }

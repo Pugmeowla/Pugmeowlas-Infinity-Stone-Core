@@ -1,8 +1,10 @@
 {
-    "max_stack_size": 1,
-    "creative_mode_tab": [
-        "infinity:infinity"
-    ],
-    "rarity": "epic",
-    "is_fire_resistant": false
+  "type": "palladium:sword",
+  "max_stack_size": 1,
+  "creative_mode_tab": "infinity:infinity",
+  "rarity": "epic",
+  "is_fire_resistant": true,
+  "tier": "minecraft:iron",
+  "base_damage": 3,
+  "attack_speed": -2.4
 }
