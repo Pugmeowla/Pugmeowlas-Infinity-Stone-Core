@@ -44,6 +44,24 @@
             "amount": 30,
             "operation": 0,
             "uuid": "498be4fb-af04-42f2-8948-e6ccdc0d99e1"
+        },
+        
+        "Resistance": {
+            "type": "palladium:command",
+            "icon": "infinity:textures/icon/teleport.png",
+            "title": "resistance",
+            "bar_color": "light_blue",
+            "hidden": true,
+            "hidden_in_bar": true,
+            "list_index": 0,
+            "gui_position": "null",
+            "description": "null",
+            "first_tick_commands": [],
+            "last_tick_commands": [],
+            "commands": [
+                "effect give @s minecraft:resistance infinite 10 trues "
+            ]
+           
         }
 
        
