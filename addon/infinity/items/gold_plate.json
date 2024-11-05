@@ -1,5 +1,5 @@
 {
-    "max_stack_size": 1,
+    "max_stack_size": 64,
     "creative_mode_tab": [
         "palladium:palladium_mods"
     ],
