@@ -2,7 +2,7 @@
   "type": "minecraft:jigsaw",
   "start_pool": "infinity:vormir/vormir",
   "size": 2,
-  "biomes": ["minecraft:end_barrens"],
+  "biomes": ["minecraft:small_end_islands"],
   "step": "surface_structures",
   "max_distance_from_center": 116,
   "terrain_adaptation": "beard_thin",
