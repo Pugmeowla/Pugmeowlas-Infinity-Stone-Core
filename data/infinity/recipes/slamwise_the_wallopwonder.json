@@ -1,0 +1,28 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "VSV",
+        "CHC",
+        "VSV"
+    ],
+    "key": {
+        "V": {
+            "item": "palladium:vibranium_block"
+        },
+        "S": {
+            "item": "minecraft:nether_star"
+        },
+        "H": {
+            "item": "infinity:hammer"
+        },
+        "C": {
+            "item": "minecraft:end_crystal"
+        }
+        
+    
+    },
+    "result": {
+        "item": "infinity:slamwise_the_wallopwonder",
+        "count": 1
+    }
+}
