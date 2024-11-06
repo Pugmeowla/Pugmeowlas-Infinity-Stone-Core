@@ -1,0 +1,6 @@
+{
+  "values": [
+    "#minecraft:mineable/pickaxe",
+    "#minecraft:needs_diamond_tool"
+  ]
+}

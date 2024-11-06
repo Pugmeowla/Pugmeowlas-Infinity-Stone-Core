@@ -1,7 +1,7 @@
 {
     "map_color": "minecraft:terracotta_cyan",
-    "sound_type": "minecraft:small_amethyst_bud",
-    "destroy_time": 6.0,
+    "sound_type": "minecraft:ancient_debris",
+    "destroy_time": 50.0,
     "explosion_resistance": 1200,
     "render_type": "solid",
     "no_occlusion": false,
