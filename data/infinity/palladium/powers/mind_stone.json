@@ -1,5 +1,5 @@
 {
-    "name": "Power Stone",
+    "name": "Mind Stone",
     "background": "minecraft:textures/block/yellow_concrete.png",
     "icon": "infinity:mind_stone",
     "gui_display_type": "list",

@@ -1,16 +1,16 @@
 {
     "type": "minecraft:crafting_shaped",
     "pattern": [
-        "  B",
-        " H ",
-        "B  "
+        " G ",
+        "GHG",
+        " G "
     ],
     "key": {
         "B": {
-            "item": "infinity:uru_blade"
+            "item": "infinity:gold_titanium_alloy"
         },
         "H": {
-            "item": "infinity:gold_titanium_alloy_handle"
+            "item": "infinity:hammer"
         }
         
     
