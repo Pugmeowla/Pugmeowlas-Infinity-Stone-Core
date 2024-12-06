@@ -6,8 +6,8 @@
         " G "
     ],
     "key": {
-        "B": {
-            "item": "infinity:gold_titanium_alloy"
+        "G": {
+            "item": "infinity:gold_titanium_alloy_plate"
         },
         "H": {
             "item": "infinity:hammer"
@@ -16,7 +16,7 @@
     
     },
     "result": {
-        "item": "infinity:double_edged_sword",
+        "item": "infinity:gold_titanium_alloy_handle",
         "count": 1
     }
 }
