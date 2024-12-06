@@ -27,5 +27,12 @@
     "item.infinity.uru_plate": "Uru Plate",
     "item.infinity.uru_ingot": "Uru Ingot",
     "item.infinity.raw_uru": "Raw Uru",
-    "item.infinity.uru_blade": "Uru Blade"
+    "item.infinity.uru_blade": "Uru Blade",
+    "item.infinity.cosmi-rod_with_mind_stone":"Cosmi-rod",
+    "item.infinity.cosmi-rod_with_power_stone":"Cosmi-rod",
+    "item.infinity.cosmi-rod_with_soul_stone":"Cosmi-rod",
+    "item.infinity.cosmi-rod_with_time_stone":"Cosmi-rod",
+    "item.infinity.cosmi-rod_with_space_stone":"Cosmi-rod",
+    "item.infinity.cosmi-rod_with_reality_stone":"Cosmi-rod",
+    "item.infinity.cosmi-rod":"Cosmi-rod"
 }

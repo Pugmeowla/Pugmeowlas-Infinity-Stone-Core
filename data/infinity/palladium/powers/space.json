@@ -1,0 +1,220 @@
+{
+    "name": "Space Stone",
+    "background": "minecraft:textures/block/light_blue_concrete.png",
+    "icon": "infinity:space_stone",
+    "gui_display_type": "list",
+ 
+    "abilities": {
+      
+        "Teleport": {
+            "type": "palladium:command",
+            "icon": "infinity:textures/icon/teleport.png",
+            "title": "Teleport",
+            "bar_color": "light_blue",
+            "hidden": false,
+            "hidden_in_bar": false,
+            "list_index": 0,
+            "gui_position": "null",
+            "description": "null",
+            "first_tick_commands": [],
+            "last_tick_commands": [],
+            "commands": [
+                "learnSpell learn teleport",
+                "cast @s teleport 5"
+            ],
+            "conditions": {
+                
+                "enabling": [
+                    {
+                        "type": "palladium:action",
+                        "cooldown": 0,
+                        "key_type": "key_bind",
+                        "needs_empty_hand": false,
+                        "allow_scrolling_when_crouching": true
+                    }
+                ]
+            }
+        },
+      
+        "Grab Entity": {
+            "type": "palladium:command",
+            "icon": "infinity:space_stone",
+            "title": "Grab Entity",
+            "bar_color": "light_blue",
+            "hidden": false,
+            "hidden_in_bar": false,
+            "list_index": 1,
+            "gui_position": "null",
+            "description": "null",
+            "first_tick_commands": [],
+            "last_tick_commands": [],
+            "commands": [
+                "learnSpell learn telekinesis",
+                "cast @s telekinesis"
+            ],
+            "conditions": {
+                
+                "enabling": [
+                    {
+                        "type": "palladium:action",
+                        "cooldown": 0,
+                        "key_type": "key_bind",
+                        "needs_empty_hand": false,
+                        "allow_scrolling_when_crouching": true
+                    }
+                ]
+            }
+            
+        },
+       
+       
+
+       "render_layer_space_stone_shield": {
+        "type": "palladium:render_layer",
+        "hidden": true,
+        "hidden_in_bar": true,
+        "render_layer": "infinity:space_stone_shield",
+        "conditions": {
+          "enabling":[
+              {
+                  "type": "palladium:ability_enabled",
+                  "ability": "Force Field"
+                 }
+          ]
+        }
+      },
+         
+      "Force Field":{
+            "type": "palladium:attribute_modifier",
+            "icon": "infinity:textures/icon/force_field.png",
+            "title": "Force Field",
+            "bar_color": "light_blue",
+            "hidden": false,
+            "hidden_in_bar": false,
+            "list_index": 2,
+            "gui_position": "null",
+            "description": "null",
+            "attribute": "minecraft:generic.armor",
+            "amount": 999999999999999999999999999999999999999999999999999999999999999999999999,
+            "operation": 0,
+            "uuid": "498be4fb-af04-42f2-8948-e6ccdc0d99e1",
+            "conditions": {
+                
+                "enabling": [
+                    {
+                        "type": "palladium:toggle",
+                        "cooldown": 0,
+                        "key_type": "key_bind",
+                        "needs_empty_hand": false,
+                        "allow_scrolling_when_crouching": true
+                    }
+                ]
+            }
+        },
+        "shield_toughness":{
+            "type": "palladium:attribute_modifier",
+            "icon": "minecraft:iron_chestplate",
+            "title": "Max Health",
+            "bar_color": "orange",
+            "hidden": false,
+            "hidden_in_bar": false,
+            "list_index": 3,
+            "gui_position": "null",
+            "description": "null",
+            "attribute": "minecraft:generic.armor_toughness",
+            "amount": 999999999999999999999999999999999999999999999999999999999999999999999999,
+            "operation": 0,
+            "uuid": "498be4fb-af04-42f2-8948-e6ccdc0d99e1",
+            "conditions": {
+                
+                "enabling": [
+                    {
+                        "type": "palladium:ability_enabled",
+                        "ability": "Force Field"
+                       }
+                ]
+            }
+        },
+      
+        "Shield Block":{
+            "type": "pantheonsent:moon_knight_blocking",
+            "icon": "minecraft:blaze_rod",
+            "title": "null",
+            "bar_color": "light_gray",
+            "hidden": true,
+            "hidden_in_bar": true,
+            "list_index": -1,
+            "gui_position": "null",
+            "description": "null",
+            "conditions": {
+                
+                "enabling": [
+                    {
+                        "type": "palladium:ability_enabled",
+                        "ability": "Force Field"
+                       }
+                ]
+            }
+        },
+"Shockwave": {
+            "type": "palladium:command",
+            "icon": "infinity:textures/icon/cosmi_rod.png",
+            "title": "Shockwave",
+            "bar_color": "light_blue",
+            "hidden": false,
+            "hidden_in_bar": false,
+            "list_index": 5,
+            "gui_position": "null",
+            "description": "null",
+            "first_tick_commands": [],
+            "last_tick_commands": [],
+            "commands": [
+                "learnSpell learn sonic_boom",
+                "cast @s sonic_boom 3"
+            ],
+            "conditions": {
+                
+                "enabling": [
+                    {
+                        "type": "palladium:action",
+                        "cooldown": 0,
+                        "key_type": "key_bind",
+                        "needs_empty_hand": false,
+                        "allow_scrolling_when_crouching": true
+                    }
+                ]
+            }
+        },
+        "Remove Space Stone": {
+            "type": "palladium:command",
+            "icon": "infinity:space_stone",
+            "title": "Remove Space Stone",
+            "bar_color": "light_blue",
+            "hidden": true,
+            "hidden_in_bar": false,
+            "list_index": 6,
+            "gui_position": "null",
+            "description": "Get rid of it!",
+            "first_tick_commands": [],
+            "last_tick_commands": ["execute as @s run ability lock @s infinity:infinity_gauntlet Power_Stone"],
+            "commands": [
+                "execute as @s run give @s infinity:space_stone", "execute as @s run give @s infinity:cosmi-rod", "execute as @s run clear @s infinity:cosmi-rod_with_space_stone"
+            ],
+            "conditions": {
+                "enabling": [
+                    {
+                        "type": "palladium:action",
+                        "cooldown": 0,
+                        "key_type": "key_bind",
+                        "needs_empty_hand": false,
+                        "allow_scrolling_when_crouching": true
+                    }
+                ]
+            }
+        } 
+        
+       
+
+       
+    }
+}

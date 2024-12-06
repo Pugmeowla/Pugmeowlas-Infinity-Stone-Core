@@ -1,0 +1,15 @@
+{
+  "type": "crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "infinity:cosmi-rod",
+      "data": 0
+    },
+    {
+      "item": "infinity:time_stone"
+    }
+  ],
+  "result": {
+    "item": "infinity:cosmi-rod_with_time_stone"
+  }
+}

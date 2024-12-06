@@ -1,0 +1,10 @@
+{
+    "type": "palladium:sword",
+    "tier": "minecraft:netherite",
+    "base_damage": 4,
+    "attack_speed": -2.4,
+    "max_stack_size": 1,
+    "rarity": "rare",
+    "creative_mode_tab": "infinity:infinity",
+    "is_fire_resistant": true
+  }
