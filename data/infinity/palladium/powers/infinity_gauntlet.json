@@ -273,7 +273,7 @@
             ],
             "description": "null",
             "energy_beam": "infinity:gauntlet_beam",
-            "damage": 999999999999999999999999999999999999999999999999999999999999999999999999,
+            "damage": 2147483647,
             "max_distance": 50,
             "speed": 0.5,
             "set_on_fire_seconds": 1,
@@ -452,7 +452,7 @@
             "gui_position": "null",
             "description": "null",
             "attribute": "palladium:punch_damage",
-            "amount": 999999999999999999999999999999999999999999999999999999999999999999999999,
+            "amount": 2147483647,
             "operation": 0,
             "uuid": "498be4fb-af04-42f2-8948-e6ccdc0d99e1",
             "conditions": {
@@ -567,7 +567,7 @@
                 "gui_position": "null",
                 "description": "null",
                 "attribute": "minecraft:generic.armor",
-                "amount": 999999999999999999999999999999999999999999999999999999999999999999999999,
+                "amount": 2147483647,
                 "operation": 0,
                 "uuid": "498be4fb-af04-42f2-8948-e6ccdc0d99e1",
                 "conditions": {
@@ -600,7 +600,7 @@
                 "gui_position": "null",
                 "description": "null",
                 "attribute": "minecraft:generic.armor_toughness",
-                "amount": 999999999999999999999999999999999999999999999999999999999999999999999999,
+                "amount": 2147483647,
                 "operation": 0,
                 "uuid": "498be4fb-af04-42f2-8948-e6ccdc0d99e1",
                 "conditions": {
@@ -995,7 +995,7 @@
         "gui_position": "null",
         "description": "null",
         "attribute": "minecraft:generic.max_health",
-        "amount": 999999999999999999999999999999999999999999999999999999999999999999999999,
+        "amount": 2147483647,
         "operation": 0,
         "uuid": "498be4fb-af04-42f2-8948-e6ccdc0d99e1",
         "conditions": {

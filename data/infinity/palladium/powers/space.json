@@ -95,7 +95,7 @@
             "gui_position": "null",
             "description": "null",
             "attribute": "minecraft:generic.armor",
-            "amount": 999999999999999999999999999999999999999999999999999999999999999999999999,
+            "amount": 2147483647,
             "operation": 0,
             "uuid": "498be4fb-af04-42f2-8948-e6ccdc0d99e1",
             "conditions": {
@@ -122,7 +122,7 @@
             "gui_position": "null",
             "description": "null",
             "attribute": "minecraft:generic.armor_toughness",
-            "amount": 999999999999999999999999999999999999999999999999999999999999999999999999,
+            "amount": 2147483647,
             "operation": 0,
             "uuid": "498be4fb-af04-42f2-8948-e6ccdc0d99e1",
             "conditions": {
