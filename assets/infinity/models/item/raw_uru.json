@@ -1,0 +1,6 @@
+{
+    "parent":"minecraft:item/generated",
+    "textures":{
+        "layer0":"infinity:item/raw_uru"
+    }
+}
