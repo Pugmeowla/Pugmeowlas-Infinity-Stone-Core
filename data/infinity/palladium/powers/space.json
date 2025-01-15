@@ -49,14 +49,13 @@
             "first_tick_commands": [],
             "last_tick_commands": [],
             "commands": [
-                "learnSpell learn telekinesis",
-                "cast @s telekinesis"
+                "execute as @s run execute at @s run tp @e[type=!player,type=!item,distance=..7] ^ ^1 ^5"
             ],
             "conditions": {
                 
                 "enabling": [
                     {
-                        "type": "palladium:action",
+                        "type": "palladium:toggle",
                         "cooldown": 0,
                         "key_type": "key_bind",
                         "needs_empty_hand": false,

@@ -18,11 +18,11 @@
             "uuid": "498be4fb-af04-42f2-8948-e6ccdc0d99e1"
         },
 
-       "Grab Entity": {
+        "Grab Entity": {
             "type": "palladium:command",
             "icon": "infinity:space_stone",
             "title": "Grab Entity",
-            "bar_color": "yellow",
+            "bar_color": "light_blue",
             "hidden": false,
             "hidden_in_bar": false,
             "list_index": 1,
@@ -31,14 +31,13 @@
             "first_tick_commands": [],
             "last_tick_commands": [],
             "commands": [
-                "learnSpell learn telekinesis",
-                "cast @s telekinesis"
+                "execute as @s run execute at @s run tp @e[type=!player,type=!item,distance=..7] ^ ^1 ^5"
             ],
             "conditions": {
                 
                 "enabling": [
                     {
-                        "type": "palladium:action",
+                        "type": "palladium:toggle",
                         "cooldown": 0,
                         "key_type": "key_bind",
                         "needs_empty_hand": false,
