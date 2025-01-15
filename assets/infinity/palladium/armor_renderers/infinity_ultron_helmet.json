@@ -1,0 +1,5 @@
+{
+    "textures": "infinity:textures/models/infinity_ultron_helmet.png",
+    "model_layers": "infinity:infinity_ultron_helmet",
+    "hide_second_layer": true
+}
