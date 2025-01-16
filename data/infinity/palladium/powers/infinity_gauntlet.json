@@ -2,6 +2,7 @@
     "name": "Infinity Gauntlet",
     "background": "minecraft:textures/block/sculk.png",
     "icon": "infinity:infinity_gauntlet",
+    "ability_bar_texture": "infinity:textures/gui/ability_bars/infinity_ability_bar.png",
     "gui_display_type": "tree",
     "persistent_data": true,
     "abilities": {
@@ -129,6 +130,14 @@
             ]
         }
     },
+
+"render_layer_gauntlet": {
+        "type": "palladium:render_layer",
+        "hidden": true,
+        "hidden_in_bar": true,
+        "render_layer": "infinity:gauntlet"
+       
+      },
 
     "render_layer_power": {
         "type": "palladium:render_layer",
@@ -511,7 +520,7 @@
             "bar_color": "light_blue",
             "hidden": false,
             "hidden_in_bar": false,
-            "list_index": 1,
+            "list_index": 6,
             "gui_position": "null",
             "description": "null",
             "first_tick_commands": [],
@@ -528,6 +537,12 @@
                         "key_type": "key_bind",
                         "needs_empty_hand": false,
                         "allow_scrolling_when_crouching": true
+                    }
+                ],
+                "unlocking": [
+                    {
+                        "type": "palladium:ability_unlocked",
+                        "ability": "Space_Stone"
                     }
                 ]
             }

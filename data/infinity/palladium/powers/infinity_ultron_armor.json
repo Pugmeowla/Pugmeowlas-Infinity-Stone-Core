@@ -4,6 +4,7 @@
     "icon": "infinity:infinity_ultron_helmet",
     "gui_display_type": "tree",
     "persistent_data": true,
+    "ability_bar_texture": "infinity:textures/gui/ability_bars/infinity_ability_bar.png",
     "abilities": {
 
  

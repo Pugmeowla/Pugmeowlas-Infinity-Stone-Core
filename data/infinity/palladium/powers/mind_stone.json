@@ -3,6 +3,7 @@
     "background": "minecraft:textures/block/yellow_concrete.png",
     "icon": "infinity:mind_stone",
     "gui_display_type": "list",
+    "ability_bar_texture": "infinity:textures/gui/ability_bars/infinity_ability_bar.png",
  
     "abilities": {
       

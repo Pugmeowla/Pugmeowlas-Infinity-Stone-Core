@@ -2,6 +2,7 @@
     "name": "Cosmi-rod",
     "background": "minecraft:textures/block/purple_concrete.png",
     "icon": "infinity:textures/icon/cosmi_rod.png",
+    "ability_bar_texture": "infinity:textures/gui/ability_bars/infinity_ability_bar.png",
     "gui_display_type": "list",
  
     "abilities": {
