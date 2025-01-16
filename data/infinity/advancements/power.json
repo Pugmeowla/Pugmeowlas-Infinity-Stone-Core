@@ -1,0 +1,39 @@
+{
+    "display": {
+        "title": {
+            "text": "Power",
+            "color": "dark_purple",
+            "bold": true
+        },
+        "description": {
+            "text": "Obtain the Power Stone"
+        },
+        "icon": {
+            "item": "infinity:power_stone"
+        },
+        "frame": "challenge",
+        "show_toast": true,
+        "announce_to_chat": true,
+        "hidden": false
+    },
+    "criteria": {
+        "power": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "items": [
+                            "infinity:power_stone"
+                        ]
+                    }
+                ]
+            }
+        }
+    },
+    "requirements": [
+        [
+            "power"
+        ]
+    ],
+    "parent": "infinity:orb"
+}

@@ -1,0 +1,41 @@
+{
+    "display": {
+        "title": {
+            "text": "\"Fine, I'll do it myself\"",
+            "color": "gold",
+            "bold": true,
+            "italic": true
+        },
+        "description": {
+            "text": "Create the Gauntlet",
+            "bold": true
+        },
+        "icon": {
+            "item": "infinity:infinity_gauntlet"
+        },
+        "frame": "challenge",
+        "show_toast": true,
+        "announce_to_chat": true,
+        "hidden": false
+    },
+    "criteria": {
+        "inf": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "items": [
+                            "infinity:infinity_gauntlet_cast"
+                        ]
+                    }
+                ]
+            }
+        }
+    },
+    "requirements": [
+        [
+            "inf"
+        ]
+    ],
+    "parent": "infinity:gauntlet_cast"
+}

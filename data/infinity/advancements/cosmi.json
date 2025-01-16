@@ -1,0 +1,39 @@
+{
+    "display": {
+        "title": {
+            "text": "Cosmi-Rod",
+            "color": "gray",
+            "bold": true
+        },
+        "description": {
+            "text": "Obtain the Cosmi-Rod"
+        },
+        "icon": {
+            "item": "infinity:cosmi-rod"
+        },
+        "frame": "task",
+        "show_toast": true,
+        "announce_to_chat": true,
+        "hidden": false
+    },
+    "criteria": {
+        "power": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "items": [
+                            "infinity:cosmi-rod"
+                        ]
+                    }
+                ]
+            }
+        }
+    },
+    "requirements": [
+        [
+            "power"
+        ]
+    ],
+    "parent": "infinity:root"
+}

@@ -1,0 +1,39 @@
+{
+    "display": {
+        "title": {
+            "text": "Infinity Gauntlet Cast",
+            "color": "gold",
+            "bold": true
+        },
+        "description": {
+            "text": "Obtain the Infinity Gauntlet Cast"
+        },
+        "icon": {
+            "item": "infinity:infinity_gauntlet_cast"
+        },
+        "frame": "task",
+        "show_toast": true,
+        "announce_to_chat": true,
+        "hidden": false
+    },
+    "criteria": {
+        "power": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "items": [
+                            "infinity:infinity_gauntlet_cast"
+                        ]
+                    }
+                ]
+            }
+        }
+    },
+    "requirements": [
+        [
+            "power"
+        ]
+    ],
+    "parent": "infinity:root"
+}

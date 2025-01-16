@@ -1,0 +1,39 @@
+{
+    "display": {
+        "title": {
+            "text": "Mind",
+            "color": "yellow",
+            "bold": true
+        },
+        "description": {
+            "text": "Obtain the Mind Stone"
+        },
+        "icon": {
+            "item": "infinity:mind_stone"
+        },
+        "frame": "challenge",
+        "show_toast": true,
+        "announce_to_chat": true,
+        "hidden": false
+    },
+    "criteria": {
+        "power": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "items": [
+                            "infinity:mind_stone"
+                        ]
+                    }
+                ]
+            }
+        }
+    },
+    "requirements": [
+        [
+            "power"
+        ]
+    ],
+    "parent": "infinity:scepter"
+}

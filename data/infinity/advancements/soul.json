@@ -1,0 +1,39 @@
+{
+    "display": {
+        "title": {
+            "text": "Soul",
+            "color": "gold",
+            "bold": true
+        },
+        "description": {
+            "text": "Obtain the Soul Stone"
+        },
+        "icon": {
+            "item": "infinity:soul_stone"
+        },
+        "frame": "challenge",
+        "show_toast": true,
+        "announce_to_chat": true,
+        "hidden": false
+    },
+    "criteria": {
+        "power": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "items": [
+                            "infinity:soul_stone"
+                        ]
+                    }
+                ]
+            }
+        }
+    },
+    "requirements": [
+        [
+            "power"
+        ]
+    ],
+    "parent": "infinity:gauntlet"
+}

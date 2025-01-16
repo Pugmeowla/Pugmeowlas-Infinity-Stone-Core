@@ -1,0 +1,39 @@
+{
+    "display": {
+        "title": {
+            "text": "The Sorcerers Quest",
+            "color": "green",
+            "bold": true
+        },
+        "description": {
+            "text": "Obtain the Eye of Agamoto"
+        },
+        "icon": {
+            "item": "infinity:eye_of_agamotto"
+        },
+        "frame": "challenge",
+        "show_toast": true,
+        "announce_to_chat": true,
+        "hidden": false
+    },
+    "criteria": {
+        "power": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "items": [
+                            "infinity:eye_of_agamotto"
+                        ]
+                    }
+                ]
+            }
+        }
+    },
+    "requirements": [
+        [
+            "power"
+        ]
+    ],
+    "parent": "infinity:gauntlet"
+}

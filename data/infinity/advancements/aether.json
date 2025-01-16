@@ -1,0 +1,39 @@
+{
+    "display": {
+        "title": {
+            "text": "The Converter of Matter into Dark Matter",
+            "color": "red",
+            "bold": true
+        },
+        "description": {
+            "text": "Obtain the Aether"
+        },
+        "icon": {
+            "item": "infinity:aether"
+        },
+        "frame": "challenge",
+        "show_toast": true,
+        "announce_to_chat": true,
+        "hidden": false
+    },
+    "criteria": {
+        "power": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "items": [
+                            "infinity:aether"
+                        ]
+                    }
+                ]
+            }
+        }
+    },
+    "requirements": [
+        [
+            "power"
+        ]
+    ],
+    "parent": "infinity:gauntlet"
+}

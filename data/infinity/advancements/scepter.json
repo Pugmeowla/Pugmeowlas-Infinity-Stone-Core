@@ -1,0 +1,39 @@
+{
+    "display": {
+        "title": {
+            "text": "The Scepter of Loki",
+            "color": "yellow",
+            "bold": true
+        },
+        "description": {
+            "text": "Obtain the Scepter"
+        },
+        "icon": {
+            "item": "infinity:scepter"
+        },
+        "frame": "challenge",
+        "show_toast": true,
+        "announce_to_chat": true,
+        "hidden": false
+    },
+    "criteria": {
+        "power": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "items": [
+                            "infinity:scepter"
+                        ]
+                    }
+                ]
+            }
+        }
+    },
+    "requirements": [
+        [
+            "power"
+        ]
+    ],
+    "parent": "infinity:gauntlet"
+}

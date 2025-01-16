@@ -1,0 +1,39 @@
+{
+    "display": {
+        "title": {
+            "text": "The Power of a Celestial",
+            "color": "dark_purple",
+            "bold": true
+        },
+        "description": {
+            "text": "Obtain the Orb"
+        },
+        "icon": {
+            "item": "infinity:orb"
+        },
+        "frame": "challenge",
+        "show_toast": true,
+        "announce_to_chat": true,
+        "hidden": false
+    },
+    "criteria": {
+        "power": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "items": [
+                            "infinity:orb"
+                        ]
+                    }
+                ]
+            }
+        }
+    },
+    "requirements": [
+        [
+            "power"
+        ]
+    ],
+    "parent": "infinity:gauntlet"
+}

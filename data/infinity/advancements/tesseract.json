@@ -1,0 +1,39 @@
+{
+    "display": {
+        "title": {
+            "text": "The Jewel of Odin's Treasure Room",
+            "color": "blue",
+            "bold": true
+        },
+        "description": {
+            "text": "Obtain the Tesseract"
+        },
+        "icon": {
+            "item": "infinity:tesseract"
+        },
+        "frame": "challenge",
+        "show_toast": true,
+        "announce_to_chat": true,
+        "hidden": false
+    },
+    "criteria": {
+        "power": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "items": [
+                            "infinity:tesseract"
+                        ]
+                    }
+                ]
+            }
+        }
+    },
+    "requirements": [
+        [
+            "power"
+        ]
+    ],
+    "parent": "infinity:gauntlet"
+}

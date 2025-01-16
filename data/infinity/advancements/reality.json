@@ -1,0 +1,39 @@
+{
+    "display": {
+        "title": {
+            "text": "Reality",
+            "color": "red",
+            "bold": true
+        },
+        "description": {
+            "text": "Obtain the Reality Stone"
+        },
+        "icon": {
+            "item": "infinity:reality_stone"
+        },
+        "frame": "challenge",
+        "show_toast": true,
+        "announce_to_chat": true,
+        "hidden": false
+    },
+    "criteria": {
+        "power": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "items": [
+                            "infinity:reality_stone"
+                        ]
+                    }
+                ]
+            }
+        }
+    },
+    "requirements": [
+        [
+            "power"
+        ]
+    ],
+    "parent": "infinity:aether"
+}

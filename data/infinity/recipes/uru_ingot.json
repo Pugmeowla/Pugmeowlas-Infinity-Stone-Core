@@ -2,7 +2,7 @@
     "type": "minecraft:smelting",
     "ingredient":
     {
-        "item":"palladium:raw_uru"
+        "item":"infinity:raw_uru"
     },
     "result":"infinity:uru_ingot",
     "experience":1,

@@ -1,0 +1,39 @@
+{
+    "display": {
+        "title": {
+            "text": "Space",
+            "color": "blue",
+            "bold": true
+        },
+        "description": {
+            "text": "Obtain the Space Stone"
+        },
+        "icon": {
+            "item": "infinity:space_stone"
+        },
+        "frame": "challenge",
+        "show_toast": true,
+        "announce_to_chat": true,
+        "hidden": false
+    },
+    "criteria": {
+        "power": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "items": [
+                            "infinity:space_stone"
+                        ]
+                    }
+                ]
+            }
+        }
+    },
+    "requirements": [
+        [
+            "power"
+        ]
+    ],
+    "parent": "infinity:tesseract"
+}

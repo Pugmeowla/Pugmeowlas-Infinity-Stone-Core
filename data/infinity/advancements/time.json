@@ -1,0 +1,39 @@
+{
+    "display": {
+        "title": {
+            "text": "Time",
+            "color": "green",
+            "bold": true
+        },
+        "description": {
+            "text": "Obtain the Time Stone"
+        },
+        "icon": {
+            "item": "infinity:time_stone"
+        },
+        "frame": "challenge",
+        "show_toast": true,
+        "announce_to_chat": true,
+        "hidden": false
+    },
+    "criteria": {
+        "power": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "items": [
+                            "infinity:time_stone"
+                        ]
+                    }
+                ]
+            }
+        }
+    },
+    "requirements": [
+        [
+            "power"
+        ]
+    ],
+    "parent": "infinity:eye_of_agamotto"
+}
