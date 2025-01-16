@@ -6,6 +6,8 @@
     "persistent_data": true,
     "abilities": {
 
+ 
+
 "Power_Stone": {
         "type": "palladium:dummy",
         "bar_color": "purple",
