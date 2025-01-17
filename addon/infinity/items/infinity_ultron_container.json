@@ -1,10 +1,9 @@
 {
     "type": "palladium:armor",
     "creative_mode_tab": "infinity:infinity",
-    "slot": "helmet",
+    "slot": "chestplate",
     "rarity": "epic",
     "is_fire_resistant": true,
     "armor_material": "minecraft:netherite",
-    "armor_renderer": "infinity:infinity_ultron_helmet",
     "opening_toggle_sound": "minecraft:item.armor.equip_netherite"
 }
