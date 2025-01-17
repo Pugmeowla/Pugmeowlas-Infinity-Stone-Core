@@ -193,6 +193,36 @@
         }
       },
 
+"render_layer_leggings": {
+        "type": "palladium:render_layer",
+        "hidden": true,
+        "hidden_in_bar": true,
+        "render_layer": "infinity:infinity_ultron_leggings",
+        "conditions": {
+            "unlocking": [
+                {
+                    "type": "palladium:ability_enabled",
+                    "ability": "suit"
+                }
+            ]
+        }
+      },
+
+      "render_layer_boots": {
+        "type": "palladium:render_layer",
+        "hidden": true,
+        "hidden_in_bar": true,
+        "render_layer": "infinity:infinity_ultron_boots",
+        "conditions": {
+            "unlocking": [
+                {
+                    "type": "palladium:ability_enabled",
+                    "ability": "suit"
+                }
+            ]
+        }
+      },
+
     "remove_left_arm":  {
         "type": "palladium:hide_body_part",
         "hidden": true,
