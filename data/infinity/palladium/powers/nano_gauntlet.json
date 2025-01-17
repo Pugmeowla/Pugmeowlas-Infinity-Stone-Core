@@ -1,30 +1,11 @@
 {
-    "name": "Infinity Ultron Container",
+    "name": "Nano Gauntlet",
     "background": "minecraft:textures/block/sculk.png",
-    "icon": "infinity:infinity_gauntlet",
+    "icon": "infinity:nano_gauntlet",
     "ability_bar_texture": "infinity:textures/gui/ability_bars/infinity_ability_bar.png",
     "gui_display_type": "tree",
     "persistent_data": true,
     "abilities": {
-
-"suit": {
-          "type": "palladium:shrink_body_overlay",
-          "title": "Suit",
-          "start_value": 0,
-          "max_value": 16,
-          "list_index": "20",
-          "bar_color": "red",
-          "hidden": false,
-          "hidden_in_bar": false,
-          "icon": "infinity:infinity_ultron_container",
-          "conditions": {
-              "enabling": [
-                  {
-                      "type": "palladium:toggle"
-                  }
-              ]
-  }
-},
 
 "Power_Stone": {
         "type": "palladium:dummy",
@@ -149,69 +130,104 @@
             ]
         }
     },
-"render_layer_cape": {
+
+"render_layer_gauntlet": {
         "type": "palladium:render_layer",
         "hidden": true,
         "hidden_in_bar": true,
-        "render_layer": "infinity:cape",
-        "conditions": {
-            "unlocking": [
-                {
-                    "type": "palladium:ability_enabled",
-                    "ability": "suit"
-                }
-            ]
-        }
+        "render_layer": "infinity:nano_gauntlet"
+       
       },
-"render_layer_chestplate": {
+
+    "render_layer_power": {
         "type": "palladium:render_layer",
         "hidden": true,
         "hidden_in_bar": true,
-        "render_layer": "infinity:infinity_ultron_chestplate",
+        "render_layer": "infinity:gauntlet_power",
         "conditions": {
-            "unlocking": [
-                {
-                    "type": "palladium:ability_enabled",
-                    "ability": "suit"
-                }
-            ]
+          "enabling":[
+              {
+                  "type": "palladium:ability_enabled",
+                  "ability": "Power_Stone"
+                 }
+          ]
         }
       },
 
-"render_layer_helmet": {
+      "render_layer_space": {
         "type": "palladium:render_layer",
         "hidden": true,
         "hidden_in_bar": true,
-        "render_layer": "infinity:infinity_ultron_helmet",
+        "render_layer": "infinity:gauntlet_space",
         "conditions": {
-            "unlocking": [
-                {
-                    "type": "palladium:ability_enabled",
-                    "ability": "suit"
-                }
-            ]
+          "enabling":[
+              {
+                  "type": "palladium:ability_enabled",
+                  "ability": "Space_Stone"
+                 }
+          ]
         }
       },
 
-    "remove_left_arm":  {
-        "type": "palladium:hide_body_part",
+      "render_layer_reality": {
+        "type": "palladium:render_layer",
         "hidden": true,
         "hidden_in_bar": true,
-        "body_parts": [
-            "right_arm",
-            "left_arm"
-        ],
-        "affects_first_person": true,
+        "render_layer": "infinity:gauntlet_reality",
         "conditions": {
-            "unlocking": [
-                {
-                    "type": "palladium:ability_enabled",
-                    "ability": "suit"
-                }
-            ]
+          "enabling":[
+              {
+                  "type": "palladium:ability_enabled",
+                  "ability": "Reality_Stone"
+                 }
+          ]
         }
-    },
-   
+      },
+
+      "render_layer_time": {
+        "type": "palladium:render_layer",
+        "hidden": true,
+        "hidden_in_bar": true,
+        "render_layer": "infinity:gauntlet_time",
+        "conditions": {
+          "enabling":[
+              {
+                  "type": "palladium:ability_enabled",
+                  "ability": "Time_Stone"
+                 }
+          ]
+        }
+      },
+
+      "render_layer_soul": {
+        "type": "palladium:render_layer",
+        "hidden": true,
+        "hidden_in_bar": true,
+        "render_layer": "infinity:gauntlet_soul",
+        "conditions": {
+          "enabling":[
+              {
+                  "type": "palladium:ability_enabled",
+                  "ability": "Soul_Stone"
+                 }
+          ]
+        }
+      },
+
+      "render_layer_mind": {
+        "type": "palladium:render_layer",
+        "hidden": true,
+        "hidden_in_bar": true,
+        "render_layer": "infinity:gauntlet_mind",
+        "conditions": {
+          "enabling":[
+              {
+                  "type": "palladium:ability_enabled",
+                  "ability": "Mind_Stone"
+                 }
+          ]
+        }
+      },
 
        "Energy Blast": {
             "type": "palladium:command",
@@ -247,10 +263,6 @@
                     {
                         "type": "palladium:ability_unlocked",
                         "ability": "Power_Stone"
-                    },
-                    {
-                        "type": "palladium:ability_enabled",
-                        "ability": "suit"
                     }
                 ]
             }
@@ -288,10 +300,6 @@
                     {
                         "type": "palladium:ability_unlocked",
                         "ability": "Power_Stone"
-                    },
-                    {
-                        "type": "palladium:ability_enabled",
-                        "ability": "suit"
                     }
                 ]
             }
@@ -324,10 +332,6 @@
                     {
                         "type": "palladium:ability_unlocked",
                         "ability": "Power_Stone"
-                    },
-                    {
-                        "type": "palladium:ability_enabled",
-                        "ability": "suit"
                     }
                 ]
             }
@@ -366,10 +370,6 @@
                     {
                         "type": "palladium:ability_unlocked",
                         "ability": "Power_Stone"
-                    },
-                    {
-                        "type": "palladium:ability_enabled",
-                        "ability": "suit"
                     }
                 ]
             }
@@ -408,10 +408,6 @@
                     {
                         "type": "palladium:ability_unlocked",
                         "ability": "Power_Stone"
-                    },
-                    {
-                        "type": "palladium:ability_enabled",
-                        "ability": "suit"
                     }
                 ]
             }
@@ -450,10 +446,6 @@
                     {
                         "type": "palladium:ability_unlocked",
                         "ability": "Power_Stone"
-                    },
-                    {
-                        "type": "palladium:ability_enabled",
-                        "ability": "suit"
                     }
                 ]
             }
@@ -478,10 +470,6 @@
                     {
                         "type": "palladium:ability_unlocked",
                         "ability": "Power_Stone"
-                    },
-                    {
-                        "type": "palladium:ability_enabled",
-                        "ability": "suit"
                     }
                 ]
             }
@@ -520,10 +508,6 @@
                     {
                         "type": "palladium:ability_unlocked",
                         "ability": "Space_Stone"
-                    },
-                    {
-                        "type": "palladium:ability_enabled",
-                        "ability": "suit"
                     }
                 ]
             }
@@ -534,7 +518,7 @@
             "icon": "infinity:space_stone",
             "title": "Grab Entity",
             "bar_color": "light_blue",
-            "hidden": true,
+            "hidden": false,
             "hidden_in_bar": false,
             "list_index": 6,
             "gui_position": "null",
@@ -559,10 +543,6 @@
                     {
                         "type": "palladium:ability_unlocked",
                         "ability": "Space_Stone"
-                    },
-                    {
-                        "type": "palladium:ability_enabled",
-                        "ability": "suit"
                     }
                 ]
             }
@@ -613,10 +593,6 @@
                     {
                         "type": "palladium:ability_unlocked",
                         "ability": "Space_Stone"
-                    },
-                    {
-                        "type": "palladium:ability_enabled",
-                        "ability": "suit"
                     }
                 ]
                 }
@@ -702,10 +678,6 @@
                     {
                         "type": "palladium:ability_unlocked",
                         "ability": "Power_Stone"
-                    },
-                    {
-                        "type": "palladium:ability_enabled",
-                        "ability": "suit"
                     }
                 ]
             }
@@ -737,10 +709,6 @@
                     {
                         "type": "palladium:ability_unlocked",
                         "ability": "Reality_Stone"
-                    },
-                    {
-                        "type": "palladium:ability_enabled",
-                        "ability": "suit"
                     }
                 ]
             }
@@ -771,10 +739,6 @@
                     {
                         "type": "palladium:ability_unlocked",
                         "ability": "Reality_Stone"
-                    },
-                    {
-                        "type": "palladium:ability_enabled",
-                        "ability": "suit"
                     }
                 ]
             }
@@ -804,10 +768,6 @@
                     {
                         "type": "palladium:ability_unlocked",
                         "ability": "Reality_Stone"
-                    },
-                    {
-                        "type": "palladium:ability_enabled",
-                        "ability": "suit"
                     }
                 ]
             }
@@ -843,10 +803,6 @@
                     {
                         "type": "palladium:ability_unlocked",
                         "ability": "Reality_Stone"
-                    },
-                    {
-                        "type": "palladium:ability_enabled",
-                        "ability": "suit"
                     }
                 ]
             }
@@ -881,10 +837,6 @@
                     {
                         "type": "palladium:ability_unlocked",
                         "ability": "Reality_Stone"
-                    },
-                    {
-                        "type": "palladium:ability_enabled",
-                        "ability": "suit"
                     }
                 ]
             }
@@ -919,10 +871,6 @@
                     {
                         "type": "palladium:ability_unlocked",
                         "ability": "Time_Stone"
-                    },
-                    {
-                        "type": "palladium:ability_enabled",
-                        "ability": "suit"
                     }
                 ]
             }
@@ -958,10 +906,6 @@
                     {
                         "type": "palladium:ability_unlocked",
                         "ability": "Time_Stone"
-                    },
-                    {
-                        "type": "palladium:ability_enabled",
-                        "ability": "suit"
                     }
                 ]
             }
@@ -996,10 +940,6 @@
                     {
                         "type": "palladium:ability_unlocked",
                         "ability": "Time_Stone"
-                    },
-                    {
-                        "type": "palladium:ability_enabled",
-                        "ability": "suit"
                     }
                 ]
             }
@@ -1022,10 +962,6 @@
                     {
                         "type": "palladium:ability_unlocked",
                         "ability": "Mind_Stone"
-                    },
-                    {
-                        "type": "palladium:ability_enabled",
-                        "ability": "suit"
                     }
                 ]
         }
@@ -1051,10 +987,6 @@
                 {
                     "type": "palladium:ability_unlocked",
                     "ability": "Soul_Stone"
-                },
-                {
-                    "type": "palladium:ability_enabled",
-                    "ability": "suit"
                 }
             ]
         }
@@ -1079,10 +1011,6 @@
                 {
                     "type": "palladium:ability_unlocked",
                     "ability": "Soul_Stone"
-                },
-                {
-                    "type": "palladium:ability_enabled",
-                    "ability": "suit"
                 }
             ]
         }
@@ -1119,10 +1047,6 @@
                 {
                     "type": "palladium:ability_unlocked",
                     "ability": "Power_Stone"
-                },
-                {
-                    "type": "palladium:ability_enabled",
-                    "ability": "suit"
                 }
             ]
         }
@@ -1157,10 +1081,6 @@
                 {
                     "type": "palladium:ability_unlocked",
                     "ability": "Space_Stone"
-                },
-                {
-                    "type": "palladium:ability_enabled",
-                    "ability": "suit"
                 }
             ]
         }
@@ -1195,10 +1115,6 @@
                 {
                     "type": "palladium:ability_unlocked",
                     "ability": "Reality_Stone"
-                },
-                {
-                    "type": "palladium:ability_enabled",
-                    "ability": "suit"
                 }
             ]
         }
@@ -1232,10 +1148,6 @@
                 {
                     "type": "palladium:ability_unlocked",
                     "ability": "Time_Stone"
-                },
-                {
-                    "type": "palladium:ability_enabled",
-                    "ability": "suit"
                 }
             ]
         }
@@ -1269,10 +1181,6 @@
                 {
                     "type": "palladium:ability_unlocked",
                     "ability": "Soul_Stone"
-                },
-                {
-                    "type": "palladium:ability_enabled",
-                    "ability": "suit"
                 }
             ]
         }
@@ -1306,10 +1214,6 @@
                 {
                     "type": "palladium:ability_unlocked",
                     "ability": "Mind_Stone"
-                },
-                {
-                    "type": "palladium:ability_enabled",
-                    "ability": "suit"
                 }
             ]
         }
