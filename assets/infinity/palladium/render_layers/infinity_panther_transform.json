@@ -1,0 +1,25 @@
+{
+          "type": "palladium:skin_overlay",
+          "texture": {
+          "base": "infinity:textures/models/infinity_panther_suit.png",
+              "transformers": [
+                  {
+            "type": "palladium:alpha_mask",
+            "mask": "redsaddon:textures/models/alpha_masks/black_panther_suit/transformation_#TIMER.png"
+                  }
+              ],
+              "variables": {
+                  "TIMER": {
+                      "type": "palladium:ability_integer_property",
+                      "power": "infinity:infinity_panther_necklace",
+                      "ability": "suit",
+                      "property": "value",
+                      "divide": 1
+                  }
+              }
+          }
+      }
+  
+
+
+
