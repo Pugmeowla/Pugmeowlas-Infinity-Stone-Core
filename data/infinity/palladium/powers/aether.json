@@ -1,0 +1,30 @@
+{
+    "name": "Aether",
+    "background": "minecraft:textures/block/red_concrete.png",
+    "icon": "infinity:aether",
+    "gui_display_type": "list",
+    "ability_bar_texture": "infinity:textures/gui/ability_bars/infinity_ability_bar.png",
+ 
+    "abilities": {
+        "aim":{
+            "type": "palladium:aim",
+            "hidden": true,
+            "hidden_in_bar": true,
+            "list_index": -1,
+            "time": 10,
+            "arm": "main_arm",
+            "conditions": {
+                
+                "enabling": [
+                    {
+                        "type": "palladium:item_in_slot",
+                        "item": {
+                            "item": "infinity:aether"
+                        },
+                        "slot": "mainhand"
+                    }
+                ]
+            }
+        }
+    }
+}

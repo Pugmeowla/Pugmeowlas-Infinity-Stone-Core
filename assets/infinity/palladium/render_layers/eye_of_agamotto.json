@@ -1,4 +1,4 @@
 {
-    "textures": "infinity:textures/models/eye_of_agamotto.png",
-    "model_layers": "palladium:humanoid#suit"
-  }
+  "model_layer": "infinity:eye_of_agamotto",
+  "texture": "infinity:textures/models/eye_of_agamotto.png"
+}
