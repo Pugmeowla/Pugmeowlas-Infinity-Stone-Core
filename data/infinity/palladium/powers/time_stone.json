@@ -31,6 +31,62 @@
                         "key_type": "key_bind",
                         "needs_empty_hand": false
                     }
+                ],
+                "unlocking": [
+                    {
+                        "type": "palladium:or",
+                        "conditions": [
+                            {
+                                "type": "palladium:has_power",
+                                "power": "infinity:infinity_gauntlet"
+                            },
+                            {
+                                "type": "palladium:has_power",
+                                "power": "infinity:nano_gauntlet"
+                            },
+                            {
+                                "type": "palladium:has_power",
+                                "power": "infinity:cosmi-rod"
+                            },   
+                            {
+                                "type": "palladium:has_power",
+                                "power": "infinity:infinity_ultron_container"
+                            },    
+                            {
+                                "type": "palladium:has_power",
+                                "power": "infinity:infinity_panther_necklace"
+                            },                    
+                            {
+                                "type": "palladium:item_in_slot",
+                                "item": {
+                                    "item": "infinity:eye_of_agamotto"
+                                },
+                                "slot": "mainhand"
+                            },
+                            {
+                                "type": "palladium:item_in_slot",
+                                "item": {
+                                    "item": "infinity:eye_of_agamotto"
+                                },
+                                "slot": "offhand"
+                            },
+                            {
+                                "type": "palladium:item_in_slot",
+                                "item": {
+                                    "item": "infinity:time_stone"
+                                },
+                                "slot": "mainhand"
+                            },
+                            {
+                                "type": "palladium:item_in_slot",
+                                "item": {
+                                    "item": "infinity:time_stone"
+                                },
+                                "slot": "offhand"
+                            }
+                            
+                        ]
+                    }
                 ]
             }
         },
@@ -60,6 +116,12 @@
                         "needs_empty_hand": false,
                         "allow_scrolling_when_crouching": true
                     }
+                ],
+                "unlocking": [
+                    {  
+                        "type": "palladium:has_power",
+                        "power": "infinity:infinity_gauntlet"
+                    }
                 ]
             }
         },
@@ -87,6 +149,12 @@
                         "key_type": "key_bind",
                         "needs_empty_hand": false,
                         "allow_scrolling_when_crouching": true
+                    }
+                ],
+                "unlocking": [
+                    {  
+                        "type": "palladium:has_power",
+                        "power": "infinity:infinity_gauntlet"
                     }
                 ]
             }

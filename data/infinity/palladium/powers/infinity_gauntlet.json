@@ -59,7 +59,7 @@
     }
 },
 
-"Remove Power Stone": {
+"remove_power_stone": {
     "type": "palladium:command",
     "icon": "infinity:power_stone",
     "title": "Remove Power Stone",
@@ -70,9 +70,9 @@
     "gui_position": "null",
     "description": "Remove Power Stone",
     "commands": [
+        "execute as @s run clear @s infinity:power_stone",
         "execute as @s run give @s infinity:power_stone",
-        "execute as @s run superpower remove infinity:power_stone_passive @s",
-        "execute as @s run ability lock @s infinity:infinity_gauntlet insert_power_stone"
+        "execute as @s run superpower remove infinity:power_stone_passive @s"
     ],
     "conditions": {
         "enabling": [
@@ -95,9 +95,9 @@
 
 "space_stone": {
     "type": "palladium:command",
-    "icon": "infinity:power_stone",
+    "icon": "infinity:space_stone",
     "title": "Insert Space Stone",
-    "bar_color": "blue",
+    "bar_color": "light_blue",
     "hidden": true,
     "hidden_in_bar": true,
     "list_index": -1,
@@ -118,6 +118,366 @@
         "enabling": [
             {
                 "type": "palladium:crouching"
+            }
+        ]
+    }
+},
+"render_layer_space": {
+    "type": "palladium:render_layer",
+    "hidden": true,
+    "hidden_in_bar": true,
+    "render_layer": "infinity:gauntlet_space",
+    "conditions": {
+        "enabling": [
+            {  
+                "type": "palladium:has_power",
+                "power": "infinity:space_stone"
+            }
+        ]
+    }
+},
+
+"remove_space_stone": {
+    "type": "palladium:command",
+    "icon": "infinity:space_stone",
+    "title": "Remove Space Stone",
+    "bar_color": "light_blue",
+    "hidden": true,
+    "hidden_in_bar": false,
+    "list_index": 6,
+    "gui_position": "null",
+    "description": "Remove Space Stone",
+    "commands": [
+        "execute as @s run clear @s infinity:space_stone",
+        "execute as @s run give @s infinity:space_stone",
+        "execute as @s run superpower remove infinity:space_stone @s"
+    ],
+    "conditions": {
+        "enabling": [
+            {
+                "type": "palladium:action",
+                "cooldown": 0,
+                "key_type": "key_bind",
+                "needs_empty_hand": false,
+                "allow_scrolling_when_crouching": true
+            }
+        ],
+        "unlocking": [
+            {   
+                "type": "palladium:has_power",
+                "power": "infinity:space_stone"
+            }
+        ]
+    }
+},
+"reality_stone": {
+    "type": "palladium:command",
+    "icon": "infinity:reality_stone",
+    "title": "Insert Reality Stone",
+    "bar_color": "red",
+    "hidden": true,
+    "hidden_in_bar": true,
+    "list_index": -1,
+    "gui_position": "null",
+    "description": "Reality Stone Abilities",
+    "commands": [
+        "clear @s infinity:reality_stone 1",
+        "superpower add infinity:reality_stone @s"
+    ],
+    "conditions": {   
+        "unlocking": [
+            {
+                "type": "palladium:item_in_slot",
+                "item": {"item": "infinity:reality_stone"},
+                "slot": "mainhand"
+            }
+        ],
+        "enabling": [
+            {
+                "type": "palladium:crouching"
+            }
+        ]
+    }
+},
+
+"render_layer_reality": {
+    "type": "palladium:render_layer",
+    "hidden": true,
+    "hidden_in_bar": true,
+    "render_layer": "infinity:gauntlet_reality",
+    "conditions": {
+        "enabling": [
+            {  
+                "type": "palladium:has_power",
+                "power": "infinity:reality_stone"
+            }
+        ]
+    }
+},
+
+"remove_power_reality": {
+    "type": "palladium:command",
+    "icon": "infinity:reality_stone",
+    "title": "Remove Reality Stone",
+    "bar_color": "red",
+    "hidden": true,
+    "hidden_in_bar": false,
+    "list_index": 7,
+    "gui_position": "null",
+    "description": "Remove Reality Stone",
+    "commands": [
+        "execute as @s run clear @s infinity:reality_stone",
+        "execute as @s run give @s infinity:reality_stone",
+        "execute as @s run superpower remove infinity:reality_stone @s"
+    ],
+    "conditions": {
+        "enabling": [
+            {
+                "type": "palladium:action",
+                "cooldown": 0,
+                "key_type": "key_bind",
+                "needs_empty_hand": false,
+                "allow_scrolling_when_crouching": true
+            }
+        ],
+        "unlocking": [
+            {   
+                "type": "palladium:has_power",
+                "power": "infinity:reality_stone"
+            }
+        ]
+    }
+},
+"time_stone": {
+    "type": "palladium:command",
+    "icon": "infinity:reality_stone",
+    "title": "Insert Time Stone",
+    "bar_color": "lime",
+    "hidden": true,
+    "hidden_in_bar": true,
+    "list_index": -1,
+    "gui_position": "null",
+    "description": "Time Stone Abilities",
+    "commands": [
+        "clear @s infinity:time_stone 1",
+        "superpower add infinity:time_stone @s"
+    ],
+    "conditions": {   
+        "unlocking": [
+            {
+                "type": "palladium:item_in_slot",
+                "item": {"item": "infinity:time_stone"},
+                "slot": "mainhand"
+            }
+        ],
+        "enabling": [
+            {
+                "type": "palladium:crouching"
+            }
+        ]
+    }
+},
+
+"render_layer_time": {
+    "type": "palladium:render_layer",
+    "hidden": true,
+    "hidden_in_bar": true,
+    "render_layer": "infinity:gauntlet_time",
+    "conditions": {
+        "enabling": [
+            {  
+                "type": "palladium:has_power",
+                "power": "infinity:time_stone"
+            }
+        ]
+    }
+},
+
+"remove_power_time": {
+    "type": "palladium:command",
+    "icon": "infinity:time_stone",
+    "title": "Remove Time Stone",
+    "bar_color": "lime",
+    "hidden": true,
+    "hidden_in_bar": false,
+    "list_index": 8,
+    "gui_position": "null",
+    "description": "Remove Time Stone",
+    "commands": [
+        "execute as @s run clear @s infinity:time_stone",
+        "execute as @s run give @s infinity:time_stone",
+        "execute as @s run superpower remove infinity:time_stone @s"
+    ],
+    "conditions": {
+        "enabling": [
+            {
+                "type": "palladium:action",
+                "cooldown": 0,
+                "key_type": "key_bind",
+                "needs_empty_hand": false,
+                "allow_scrolling_when_crouching": true
+            }
+        ],
+        "unlocking": [
+            {   
+                "type": "palladium:has_power",
+                "power": "infinity:time_stone"
+            }
+        ]
+    }
+},
+"soul_stone": {
+    "type": "palladium:command",
+    "icon": "infinity:soul_stone",
+    "title": "Insert Soul Stone",
+    "bar_color": "orange",
+    "hidden": true,
+    "hidden_in_bar": true,
+    "list_index": -1,
+    "gui_position": "null",
+    "description": "Soul Stone Abilities",
+    "commands": [
+        "clear @s infinity:soul_stone 1",
+        "superpower add infinity:soul_stone @s"
+    ],
+    "conditions": {   
+        "unlocking": [
+            {
+                "type": "palladium:item_in_slot",
+                "item": {"item": "infinity:soul_stone"},
+                "slot": "mainhand"
+            }
+        ],
+        "enabling": [
+            {
+                "type": "palladium:crouching"
+            }
+        ]
+    }
+},
+
+"render_layer_soul": {
+    "type": "palladium:render_layer",
+    "hidden": true,
+    "hidden_in_bar": true,
+    "render_layer": "infinity:gauntlet_soul",
+    "conditions": {
+        "enabling": [
+            {  
+                "type": "palladium:has_power",
+                "power": "infinity:soul_stone"
+            }
+        ]
+    }
+},
+
+"remove_power_soul": {
+    "type": "palladium:command",
+    "icon": "infinity:soul_stone",
+    "title": "Remove Soul Stone",
+    "bar_color": "orange",
+    "hidden": true,
+    "hidden_in_bar": false,
+    "list_index": 9,
+    "gui_position": "null",
+    "description": "Remove Soul Stone",
+    "commands": [
+        "execute as @s run clear @s infinity:soul_stone",
+        "execute as @s run give @s infinity:soul_stone",
+        "execute as @s run superpower remove infinity:soul_stone @s"
+    ],
+    "conditions": {
+        "enabling": [
+            {
+                "type": "palladium:action",
+                "cooldown": 0,
+                "key_type": "key_bind",
+                "needs_empty_hand": false,
+                "allow_scrolling_when_crouching": true
+            }
+        ],
+        "unlocking": [
+            {   
+                "type": "palladium:has_power",
+                "power": "infinity:soul_stone"
+            }
+        ]
+    }
+},
+"mind_stone": {
+    "type": "palladium:command",
+    "icon": "infinity:mind_stone",
+    "title": "Insert Mind Stone",
+    "bar_color": "yellow",
+    "hidden": true,
+    "hidden_in_bar": true,
+    "list_index": -1,
+    "gui_position": "null",
+    "description": "Mind Stone Abilities",
+    "commands": [
+        "clear @s infinity:mind_stone 1",
+        "superpower add infinity:mind_stone @s"
+    ],
+    "conditions": {   
+        "unlocking": [
+            {
+                "type": "palladium:item_in_slot",
+                "item": {"item": "infinity:mind_stone"},
+                "slot": "mainhand"
+            }
+        ],
+        "enabling": [
+            {
+                "type": "palladium:crouching"
+            }
+        ]
+    }
+},
+
+"render_layer_mind": {
+    "type": "palladium:render_layer",
+    "hidden": true,
+    "hidden_in_bar": true,
+    "render_layer": "infinity:gauntlet_mind",
+    "conditions": {
+        "enabling": [
+            {  
+                "type": "palladium:has_power",
+                "power": "infinity:mind_stone"
+            }
+        ]
+    }
+},
+
+"remove_mind_stone": {
+    "type": "palladium:command",
+    "icon": "infinity:mind_stone",
+    "title": "Remove Mind Stone",
+    "bar_color": "yellow",
+    "hidden": true,
+    "hidden_in_bar": false,
+    "list_index": 10,
+    "gui_position": "null",
+    "description": "Remove Mind Stone",
+    "commands": [
+        "execute as @s run clear @s infinity:mind_stone",
+        "execute as @s run give @s infinity:mind_stone",
+        "execute as @s run superpower remove infinity:mind_stone @s"
+    ],
+    "conditions": {
+        "enabling": [
+            {
+                "type": "palladium:action",
+                "cooldown": 0,
+                "key_type": "key_bind",
+                "needs_empty_hand": false,
+                "allow_scrolling_when_crouching": true
+            }
+        ],
+        "unlocking": [
+            {   
+                "type": "palladium:has_power",
+                "power": "infinity:mind_stone"
             }
         ]
     }
