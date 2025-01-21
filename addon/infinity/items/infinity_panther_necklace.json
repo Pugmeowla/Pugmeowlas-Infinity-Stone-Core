@@ -1,0 +1,9 @@
+{
+    "type": "palladium:armor",
+    "creative_mode_tab": "infinity:infinity",
+    "slot": "chestplate",
+    "rarity": "epic",
+    "is_fire_resistant": true,
+    "armor_material": "minecraft:netherite",
+    "opening_toggle_sound": "minecraft:item.armor.equip_netherite"
+}
