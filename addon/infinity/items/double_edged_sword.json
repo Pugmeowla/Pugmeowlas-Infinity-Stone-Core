@@ -6,5 +6,5 @@
   "is_fire_resistant": true,
   "tier": "minecraft:netherite",
   "base_damage": 7,
-  "attack_speed": -5
+  "attack_speed": -3
 }
