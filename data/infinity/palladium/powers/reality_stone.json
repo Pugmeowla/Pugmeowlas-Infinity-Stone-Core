@@ -384,20 +384,6 @@
                             {
                                 "type": "palladium:item_in_slot",
                                 "item": {
-                                    "item": "infinity:aether"
-                                },
-                                "slot": "mainhand"
-                            },
-                            {
-                                "type": "palladium:item_in_slot",
-                                "item": {
-                                    "item": "infinity:aether"
-                                },
-                                "slot": "offhand"
-                            },
-                            {
-                                "type": "palladium:item_in_slot",
-                                "item": {
                                     "item": "infinity:reality_stone"
                                 },
                                 "slot": "mainhand"
