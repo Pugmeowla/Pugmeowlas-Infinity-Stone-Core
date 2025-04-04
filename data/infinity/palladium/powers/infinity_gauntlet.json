@@ -509,7 +509,28 @@
             {   
                 "type": "palladium:has_power",
                 "power": "infinity:mind_stone"
+            },
+            {   
+                "type": "palladium:has_power",
+                "power": "infinity:power_stone_passive"
+            },
+            {   
+                "type": "palladium:has_power",
+                "power": "infinity:space_stone"
+            },
+            {   
+                "type": "palladium:has_power",
+                "power": "infinity:reality_stone"
+            },
+            {   
+                "type": "palladium:has_power",
+                "power": "infinity:time_stone"
+            },
+            {   
+                "type": "palladium:has_power",
+                "power": "infinity:soul_stone"
             }
+            
         ]
     }
 }
