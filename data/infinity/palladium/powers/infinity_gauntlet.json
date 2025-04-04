@@ -481,6 +481,37 @@
             }
         ]
     }
+},
+"snap": {
+    "type": "palladium:command",
+    "icon": "infinity:infinity_gauntlet",
+    "title": "Snap",
+    "bar_color": "yellow",
+    "hidden": true,
+    "hidden_in_bar": false,
+    "list_index": 11,
+    "gui_position": "null",
+    "description": "Snap",
+    "commands": [
+        "function infinity:snap1"
+    ],
+    "conditions": {
+        "enabling": [
+            {
+                "type": "palladium:action",
+                "cooldown": 0,
+                "key_type": "key_bind",
+                "needs_empty_hand": false,
+                "allow_scrolling_when_crouching": true
+            }
+        ],
+        "unlocking": [
+            {   
+                "type": "palladium:has_power",
+                "power": "infinity:mind_stone"
+            }
+        ]
+    }
 }
     }
 }
