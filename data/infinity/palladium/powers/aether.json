@@ -47,16 +47,16 @@
                 ]
             }
         },
-       "remove_mind_stone": {
+       "remove_reality_stone": {
     "type": "palladium:command",
-    "icon": "infinity:mind_stone",
-    "title": "Remove Mind Stone",
-    "bar_color": "yellow",
+    "icon": "infinity:reality_stone",
+    "title": "Remove Reality Stone",
+    "bar_color": "red",
     "hidden": true,
     "hidden_in_bar": false,
     "list_index": 10,
     "gui_position": "null",
-    "description": "Remove Mind Stone",
+    "description": "Remove Reality Stone",
     "commands": [
         "execute as @s run clear @s infinity:aether",
         "execute as @s run give @s infinity:reality_stone",
@@ -70,12 +70,6 @@
                 "key_type": "key_bind",
                 "needs_empty_hand": false,
                 "allow_scrolling_when_crouching": true
-            }
-        ],
-        "unlocking": [
-            {   
-                "type": "palladium:has_power",
-                "power": "infinity:mind_stone"      
             }
         ]
     }
