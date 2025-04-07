@@ -1,7 +1,7 @@
 {
-    "name": "Aether",
+    "name": "Empty Aether",
     "background": "minecraft:textures/block/red_concrete.png",
-    "icon": "infinity:aether",
+    "icon": "infinity:empty_aether",
     "gui_display_type": "list",
     "ability_bar_texture": "infinity:textures/gui/ability_bars/infinity_ability_bar.png",
  
@@ -19,7 +19,7 @@
                     {
                         "type": "palladium:item_in_slot",
                         "item": {
-                            "item": "infinity:aether"
+                            "item": "infinity:empty_aether"
                         },
                         "slot": "mainhand"
                     }
@@ -40,46 +40,13 @@
                     {
                         "type": "palladium:item_in_slot",
                         "item": {
-                            "item": "infinity:aether"
+                            "item": "infinity:empty_aether"
                         },
                         "slot": "offhand"
                     }
                 ]
             }
-        },
-       "remove_mind_stone": {
-    "type": "palladium:command",
-    "icon": "infinity:mind_stone",
-    "title": "Remove Mind Stone",
-    "bar_color": "yellow",
-    "hidden": true,
-    "hidden_in_bar": false,
-    "list_index": 10,
-    "gui_position": "null",
-    "description": "Remove Mind Stone",
-    "commands": [
-        "execute as @s run clear @s infinity:aether",
-        "execute as @s run give @s infinity:reality_stone",
-        "execute as @s run give @s infinity:empty_aether"
-    ],
-    "conditions": {
-        "enabling": [
-            {
-                "type": "palladium:action",
-                "cooldown": 0,                                              
-                "key_type": "key_bind",
-                "needs_empty_hand": false,
-                "allow_scrolling_when_crouching": true
-            }
-        ],
-        "unlocking": [
-            {   
-                "type": "palladium:has_power",
-                "power": "infinity:mind_stone"      
-            }
-        ]
-    }
-}
+        }
         }
     }
 
