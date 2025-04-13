@@ -275,6 +275,14 @@
                 ],
                 "unlocking": [
                     {
+                        "type": "palladium:not",
+                        "conditions": [
+                            {
+                                "type": "palladium:crouching"
+                            }
+                        ]
+                    },
+                    {
                         "type": "palladium:or",
                         "conditions": [
                             {
@@ -338,7 +346,7 @@
             "bar_color": "red",
             "hidden": false,
             "hidden_in_bar": false,
-            "list_index": 4,
+            "list_index": 3,
             "gui_position": "null",
             "description": "null",
             "first_tick_commands": [],
@@ -358,6 +366,9 @@
                     }
                 ],
                 "unlocking": [
+                    {
+                        "type": "palladium:crouching"
+                    },
                     {
                         "type": "palladium:or",
                         "conditions": [
