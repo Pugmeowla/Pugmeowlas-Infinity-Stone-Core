@@ -1,0 +1,11 @@
+{
+    "schemaVersion": 1,
+    "authors": [],
+    "environment": "*",
+    "name": "Pugmeowlas Infinity Stones Core",
+    "id": "infinity",
+    "version": "2.1",
+    "description": "Unofficial Successor to Infinity Craft, made by Pugmeowla",
+    "icon": "logo.png",
+    "license": "All rights reserved"
+  }

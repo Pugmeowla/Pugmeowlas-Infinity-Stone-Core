@@ -3,6 +3,18 @@
         "id": "infinity",
         "description": "Unofficial Successor to Infinity Craft, made by Pugmeowla",
         "pack_format": 15,
-        "version": "1.0.0.0"
-    }
+        "version": "2.1"
+    },
+    "dependencies": {
+        "common": {
+          "minecraft": "1.20.1",
+          "palladium": ">=4.0.0"
+        },
+        "forge": {
+          "curios": "*"
+        },
+        "fabric": {
+          "trinkets": ">=3.3.0"
+        }
+      },
 }
