@@ -1,5 +1,5 @@
 {
-    "name": "Empty Aether",
+    "name": "Empty_Aether",
     "background": "minecraft:textures/block/red_concrete.png",
     "icon": "infinity:empty_aether",
     "gui_display_type": "list",
