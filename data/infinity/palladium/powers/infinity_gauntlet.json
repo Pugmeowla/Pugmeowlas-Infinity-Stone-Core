@@ -43,12 +43,6 @@
                 "needs_empty_hand": false,
                 "allow_scrolling_when_crouching": true
             }
-        ],
-        "unlocking": [
-            {   
-                "type": "palladium:has_power",
-                "power": "infinity:power_stone_passive"
-            }
         ]
     }
 },
