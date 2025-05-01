@@ -14,6 +14,45 @@
      "render_layer": "infinity:gauntlet"    
 },
 
+"remove_stone_wheel":{
+    "type": "palladium:ability_wheel",
+    "icon": "minecraft:blaze_rod",
+    "title": "null",
+    "bar_color": "light_gray",
+    "hidden": false,
+    "hidden_in_bar": false,
+    "list_index": 1,
+    "gui_position": "null",
+    "description": "null",
+    "abilities": [
+        "remove_power_stone",
+         "remove_space_stone",
+          "remove_reality_stone",
+           "remove_time_stone",
+            "remove_soul_stone",
+             "remove_mind_stone"
+        
+    ],
+    "texture": "null",
+    "conditions": {
+        "enabling": [
+            {
+                "type": "palladium:toggle",
+                "cooldown": 0,
+                "key_type": "key_bind",
+                "needs_empty_hand": false,
+                "allow_scrolling_when_crouching": true
+            }
+        ],
+        "unlocking": [
+            {   
+                "type": "palladium:has_power",
+                "power": "infinity:power_stone_passive"
+            }
+        ]
+    }
+},
+
 "power_stone": {
     "type": "palladium:command",
     "icon": "infinity:power_stone",
@@ -65,7 +104,7 @@
     "title": "Remove Power Stone",
     "bar_color": "purple",
     "hidden": true,
-    "hidden_in_bar": false,
+    "hidden_in_bar": true,
     "list_index": 5,
     "gui_position": "null",
     "description": "Remove Power Stone",
@@ -143,7 +182,7 @@
     "title": "Remove Space Stone",
     "bar_color": "light_blue",
     "hidden": true,
-    "hidden_in_bar": false,
+    "hidden_in_bar": true,
     "list_index": 6,
     "gui_position": "null",
     "description": "Remove Space Stone",
@@ -215,13 +254,13 @@
     }
 },
 
-"remove_power_reality": {
+"remove_reality_stone": {
     "type": "palladium:command",
     "icon": "infinity:reality_stone",
     "title": "Remove Reality Stone",
     "bar_color": "red",
     "hidden": true,
-    "hidden_in_bar": false,
+    "hidden_in_bar": true,
     "list_index": 7,
     "gui_position": "null",
     "description": "Remove Reality Stone",
@@ -293,13 +332,13 @@
     }
 },
 
-"remove_power_time": {
+"remove_time_stone": {
     "type": "palladium:command",
     "icon": "infinity:time_stone",
     "title": "Remove Time Stone",
     "bar_color": "lime",
     "hidden": true,
-    "hidden_in_bar": false,
+    "hidden_in_bar": true,
     "list_index": 8,
     "gui_position": "null",
     "description": "Remove Time Stone",
@@ -371,13 +410,13 @@
     }
 },
 
-"remove_power_soul": {
+"remove_soul_stone": {
     "type": "palladium:command",
     "icon": "infinity:soul_stone",
     "title": "Remove Soul Stone",
     "bar_color": "orange",
     "hidden": true,
-    "hidden_in_bar": false,
+    "hidden_in_bar": true,
     "list_index": 9,
     "gui_position": "null",
     "description": "Remove Soul Stone",
@@ -455,7 +494,7 @@
     "title": "Remove Mind Stone",
     "bar_color": "yellow",
     "hidden": true,
-    "hidden_in_bar": false,
+    "hidden_in_bar": true,
     "list_index": 10,
     "gui_position": "null",
     "description": "Remove Mind Stone",
@@ -489,7 +528,7 @@
     "bar_color": "yellow",
     "hidden": true,
     "hidden_in_bar": false,
-    "list_index": 11,
+    "list_index": 2,
     "gui_position": "null",
     "description": "Snap",
     "commands": [
