@@ -105,7 +105,8 @@
             "first_tick_commands": [],
             "last_tick_commands": [],
             "commands": [
-                "execute as @s run execute at @s run tp @e[type=!player,type=!item,distance=..7] ^ ^1 ^5"
+                "execute as @s run execute at @s run tp @e[type=!player,type=!item,distance=..7] ^ ^1 ^5",
+                "execute as @s run execute at @s run particle dust 0.345 0.714 0.89 1 ^ ^2 ^5 0.3 0.3 0.3 0 50"
             ],
             "conditions": {
                 
