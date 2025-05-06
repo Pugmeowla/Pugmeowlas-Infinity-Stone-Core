@@ -21,7 +21,7 @@
     "bar_color": "light_gray",
     "hidden": false,
     "hidden_in_bar": false,
-    "list_index": 1,
+    "list_index": 0,
     "gui_position": "null",
     "description": "null",
     "abilities": [
@@ -43,11 +43,61 @@
                 "needs_empty_hand": false,
                 "allow_scrolling_when_crouching": true
             }
+        ],
+        "unlocking":[
+            {
+                "type": "palladium:crouching"
+            }
         ]
     }
 },
 
-"power_stone": {
+"insert_stone_wheel":{
+    "type": "palladium:ability_wheel",
+    "icon": "minecraft:snowball",
+    "title": "null",
+    "bar_color": "light_gray",
+    "hidden": false,
+    "hidden_in_bar": false,
+    "list_index": 0,
+    "gui_position": "null",
+    "description": "null",
+    "abilities": [
+        "insert_power_stone",
+         "insert_space_stone",
+          "insert_reality_stone",
+           "insert_time_stone",
+            "insert_soul_stone",
+             "insert_mind_stone"
+        
+    ],
+    "texture": "null",
+    "conditions": {
+        "enabling": [
+            {
+                "type": "palladium:toggle",
+                "cooldown": 0,
+                "key_type": "key_bind",
+                "needs_empty_hand": false,
+                "allow_scrolling_when_crouching": true
+            }
+        ],
+        "unlocking":[
+            {
+                "type": "palladium:not",
+                "conditions": [
+                    {
+                        "type": "palladium:crouching"
+                    }
+                ]
+            }
+            
+            
+        ]
+    }
+},
+
+"insert_power_stone": {
     "type": "palladium:command",
     "icon": "infinity:power_stone",
     "title": "Insert Power Stone",
@@ -61,17 +111,21 @@
         "clear @s infinity:power_stone 1",
         "superpower add infinity:power_stone_passive @s"
     ],
-    "conditions": {   
+    "conditions": {  
+        "enabling": [
+            {
+                "type": "palladium:toggle",
+                "cooldown": 0,
+                "key_type": "key_bind",
+                "needs_empty_hand": false,
+                "allow_scrolling_when_crouching": true
+            }
+        ], 
         "unlocking": [
             {
                 "type": "palladium:item_in_slot",
                 "item": {"item": "infinity:power_stone"},
                 "slot": "mainhand"
-            }
-        ],
-        "enabling": [
-            {
-                "type": "palladium:crouching"
             }
         ]
     }
@@ -126,7 +180,7 @@
     }
 },
 
-"space_stone": {
+"insert_space_stone": {
     "type": "palladium:command",
     "icon": "infinity:space_stone",
     "title": "Insert Space Stone",
@@ -140,17 +194,21 @@
         "clear @s infinity:space_stone 1",
         "superpower add infinity:space_stone @s"
     ],
-    "conditions": {   
+    "conditions": {  
+        "enabling": [
+            {
+                "type": "palladium:toggle",
+                "cooldown": 0,
+                "key_type": "key_bind",
+                "needs_empty_hand": false,
+                "allow_scrolling_when_crouching": true
+            }
+        ], 
         "unlocking": [
             {
                 "type": "palladium:item_in_slot",
                 "item": {"item": "infinity:space_stone"},
                 "slot": "mainhand"
-            }
-        ],
-        "enabling": [
-            {
-                "type": "palladium:crouching"
             }
         ]
     }
@@ -203,7 +261,7 @@
         ]
     }
 },
-"reality_stone": {
+"insert_reality_stone": {
     "type": "palladium:command",
     "icon": "infinity:reality_stone",
     "title": "Insert Reality Stone",
@@ -217,17 +275,21 @@
         "clear @s infinity:reality_stone 1",
         "superpower add infinity:reality_stone @s"
     ],
-    "conditions": {   
+    "conditions": {  
+        "enabling": [
+            {
+                "type": "palladium:toggle",
+                "cooldown": 0,
+                "key_type": "key_bind",
+                "needs_empty_hand": false,
+                "allow_scrolling_when_crouching": true
+            }
+        ], 
         "unlocking": [
             {
                 "type": "palladium:item_in_slot",
                 "item": {"item": "infinity:reality_stone"},
                 "slot": "mainhand"
-            }
-        ],
-        "enabling": [
-            {
-                "type": "palladium:crouching"
             }
         ]
     }
@@ -281,9 +343,9 @@
         ]
     }
 },
-"time_stone": {
+"insert_time_stone": {
     "type": "palladium:command",
-    "icon": "infinity:reality_stone",
+    "icon": "infinity:time_stone",
     "title": "Insert Time Stone",
     "bar_color": "lime",
     "hidden": true,
@@ -295,17 +357,21 @@
         "clear @s infinity:time_stone 1",
         "superpower add infinity:time_stone @s"
     ],
-    "conditions": {   
+    "conditions": {  
+        "enabling": [
+            {
+                "type": "palladium:toggle",
+                "cooldown": 0,
+                "key_type": "key_bind",
+                "needs_empty_hand": false,
+                "allow_scrolling_when_crouching": true
+            }
+        ], 
         "unlocking": [
             {
                 "type": "palladium:item_in_slot",
                 "item": {"item": "infinity:time_stone"},
                 "slot": "mainhand"
-            }
-        ],
-        "enabling": [
-            {
-                "type": "palladium:crouching"
             }
         ]
     }
@@ -359,7 +425,7 @@
         ]
     }
 },
-"soul_stone": {
+"insert_soul_stone": {
     "type": "palladium:command",
     "icon": "infinity:soul_stone",
     "title": "Insert Soul Stone",
@@ -373,17 +439,21 @@
         "clear @s infinity:soul_stone 1",
         "superpower add infinity:soul_stone @s"
     ],
-    "conditions": {   
+    "conditions": {  
+        "enabling": [
+            {
+                "type": "palladium:toggle",
+                "cooldown": 0,
+                "key_type": "key_bind",
+                "needs_empty_hand": false,
+                "allow_scrolling_when_crouching": true
+            }
+        ], 
         "unlocking": [
             {
                 "type": "palladium:item_in_slot",
                 "item": {"item": "infinity:soul_stone"},
                 "slot": "mainhand"
-            }
-        ],
-        "enabling": [
-            {
-                "type": "palladium:crouching"
             }
         ]
     }
@@ -437,7 +507,7 @@
         ]
     }
 },
-"mind_stone": {
+"insert_mind_stone": {
     "type": "palladium:command",
     "icon": "infinity:mind_stone",
     "title": "Insert Mind Stone",
@@ -451,17 +521,21 @@
         "clear @s infinity:mind_stone 1",
         "superpower add infinity:mind_stone @s"
     ],
-    "conditions": {   
+    "conditions": {  
+        "enabling": [
+            {
+                "type": "palladium:toggle",
+                "cooldown": 0,
+                "key_type": "key_bind",
+                "needs_empty_hand": false,
+                "allow_scrolling_when_crouching": true
+            }
+        ], 
         "unlocking": [
             {
                 "type": "palladium:item_in_slot",
                 "item": {"item": "infinity:mind_stone"},
                 "slot": "mainhand"
-            }
-        ],
-        "enabling": [
-            {
-                "type": "palladium:crouching"
             }
         ]
     }
@@ -522,7 +596,7 @@
     "bar_color": "yellow",
     "hidden": true,
     "hidden_in_bar": false,
-    "list_index": 2,
+    "list_index": 1,
     "gui_position": "null",
     "description": "Snap",
     "commands": [
