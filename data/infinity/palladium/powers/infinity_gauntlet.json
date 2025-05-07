@@ -16,7 +16,7 @@
 
 "remove_stone_wheel":{
     "type": "palladium:ability_wheel",
-    "icon": "minecraft:blaze_rod",
+    "icon": "infinity:textures/item/infinity_gauntlet2.png",
     "title": "null",
     "bar_color": "light_gray",
     "hidden": false,
@@ -54,7 +54,7 @@
 
 "insert_stone_wheel":{
     "type": "palladium:ability_wheel",
-    "icon": "minecraft:snowball",
+    "icon": "infinity:textures/item/infinity_gauntlet_full.png",
     "title": "null",
     "bar_color": "light_gray",
     "hidden": false,
