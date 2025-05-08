@@ -1,1 +1,0 @@
-execute unless score global initCheck matches 1 run function infinity:init_once
