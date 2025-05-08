@@ -13,4 +13,4 @@ forceload add -9375 -10457
 forceload add 9973 10035
 forceload add -10019 -9712
 scoreboard objectives add initCheck dummy
-execute unless score global initCheck matches 1 run function infinity:init_once
+execute unless score global initCheck matches 2 run function infinity:init_once
