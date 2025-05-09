@@ -158,7 +158,7 @@
     "description": "Remove Power Stone",
     "commands": [
         "execute as @s run clear @s infinity:power_stone",
-        "execute as @s run give @s infinity:power_stone",
+        "execute as @s run give @s infinity:power_stone{Enchantments:[{}]}",
         "execute as @s run superpower remove infinity:power_stone_passive @s"
     ],
     "conditions": {
@@ -240,7 +240,7 @@
     "description": "Remove Space Stone",
     "commands": [
         "execute as @s run clear @s infinity:space_stone",
-        "execute as @s run give @s infinity:space_stone",
+        "execute as @s run give @s infinity:space_stone{Enchantments:[{}]}",
         "execute as @s run superpower remove infinity:space_stone @s"
     ],
     "conditions": {
@@ -322,7 +322,7 @@
     "description": "Remove Reality Stone",
     "commands": [
         "execute as @s run clear @s infinity:reality_stone",
-        "execute as @s run give @s infinity:reality_stone",
+      "execute as @s run give @s infinity:reality_stone{Enchantments:[{}]}",
         "execute as @s run superpower remove infinity:reality_stone @s"
     ],
     "conditions": {
@@ -404,7 +404,7 @@
     "description": "Remove Time Stone",
     "commands": [
         "execute as @s run clear @s infinity:time_stone",
-        "execute as @s run give @s infinity:time_stone",
+       "execute as @s run give @s infinity:time_stone{Enchantments:[{}]}",
         "execute as @s run superpower remove infinity:time_stone @s"
     ],
     "conditions": {
@@ -486,7 +486,7 @@
     "description": "Remove Soul Stone",
     "commands": [
         "execute as @s run clear @s infinity:soul_stone",
-        "execute as @s run give @s infinity:soul_stone",
+        "execute as @s run give @s infinity:soul_stone{Enchantments:[{}]}",
         "execute as @s run superpower remove infinity:soul_stone @s"
     ],
     "conditions": {
@@ -568,7 +568,7 @@
     "description": "Remove Mind Stone",
     "commands": [
         "execute as @s run clear @s infinity:mind_stone",
-        "execute as @s run give @s infinity:mind_stone",
+        "execute as @s run give @s infinity:mind_stone{Enchantments:[{}]}",
         "execute as @s run superpower remove infinity:mind_stone @s"
     ],
     "conditions": {
