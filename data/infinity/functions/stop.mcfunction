@@ -1,0 +1,1 @@
+execute as @e[type=#infinity:projectiles,tag=!TimeStopper-stopped,distance=..6] at @s run function infinity:store-motion
