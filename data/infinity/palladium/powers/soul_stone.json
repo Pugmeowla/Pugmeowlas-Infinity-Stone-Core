@@ -201,7 +201,7 @@
             "bar_color": "light_gray",
             "hidden": true,
             "hidden_in_bar": true,
-            "list_index": -1,
+            "list_index": 0,
             "gui_position": "null",
             "description": "null",
             "conditions": {
@@ -210,11 +210,123 @@
                     "type": "palladium:ability_enabled",
                     "ability": "intangibility"
                 }
-            ]
+            ],
+             "unlocking": [
+                    {
+                        "type": "palladium:or",
+                        "conditions": [
+                            {
+                                "type": "palladium:has_power",
+                                "power": "infinity:infinity_gauntlet"
+                            },
+                            {
+                                "type": "palladium:has_power",
+                                "power": "infinity:nano_gauntlet"
+                            },
+                            {
+                                "type": "palladium:has_power",
+                                "power": "infinity:cosmi-rod"
+                            },   
+                            {
+                                "type": "palladium:has_power",
+                                "power": "infinity:infinity_ultron_container"
+                            },    
+                            {
+                                "type": "palladium:has_power",
+                                "power": "infinity:infinity_panther_necklace"
+                            },                    
+                            {
+                                "type": "palladium:item_in_slot",
+                                "item": {
+                                    "item": "infinity:soul_stone"
+                                },
+                                "slot": "mainhand"
+                            },
+                            {
+                                "type": "palladium:item_in_slot",
+                                "item": {
+                                    "item": "infinity:soul_stone"
+                                },
+                                "slot": "offhand"
+                            }
+                            
+                        ]
+                    }
+                ]
         }
        
 
        
-    }
+    },
+    "Glow": {
+            "type": "palladium:command",
+            "icon": "infinity:reality_stone",
+            "title": "Save Block On",
+            "bar_color": "red",
+            "hidden": false,
+            "hidden_in_bar": false,
+            "list_index": 1,
+            "gui_position": "null",
+            "description": "null",
+            "first_tick_commands": [],
+            "last_tick_commands": [],
+            "commands": [
+                "effect give @e[distance=..100] minecraft:glowing 100 1 true"
+            ],
+            "conditions": {
+                
+                "enabling": [
+                    {
+                        "type": "palladium:action",
+                        "cooldown": 0,
+                        "key_type": "key_bind",
+                        "needs_empty_hand": false,
+                        "allow_scrolling_when_crouching": true
+                    }
+                ],
+                 "unlocking": [
+                    {
+                        "type": "palladium:or",
+                        "conditions": [
+                            {
+                                "type": "palladium:has_power",
+                                "power": "infinity:infinity_gauntlet"
+                            },
+                            {
+                                "type": "palladium:has_power",
+                                "power": "infinity:nano_gauntlet"
+                            },
+                            {
+                                "type": "palladium:has_power",
+                                "power": "infinity:cosmi-rod"
+                            },   
+                            {
+                                "type": "palladium:has_power",
+                                "power": "infinity:infinity_ultron_container"
+                            },    
+                            {
+                                "type": "palladium:has_power",
+                                "power": "infinity:infinity_panther_necklace"
+                            },                    
+                            {
+                                "type": "palladium:item_in_slot",
+                                "item": {
+                                    "item": "infinity:soul_stone"
+                                },
+                                "slot": "mainhand"
+                            },
+                            {
+                                "type": "palladium:item_in_slot",
+                                "item": {
+                                    "item": "infinity:soul_stone"
+                                },
+                                "slot": "offhand"
+                            }
+                            
+                        ]
+                    }
+                ]
+            }
+        }
 }
 }
