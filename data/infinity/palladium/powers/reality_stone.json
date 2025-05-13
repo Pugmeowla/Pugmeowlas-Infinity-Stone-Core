@@ -341,7 +341,7 @@
         },
         "Save Block Off": {
             "type": "palladium:command",
-            "icon": "infinity:reality_stone",
+            "icon": "minecraft:barrier",
             "title": "Save Block Off",
             "bar_color": "red",
             "hidden": false,
@@ -392,6 +392,98 @@
                                 "type": "palladium:has_power",
                                 "power": "infinity:infinity_panther_necklace"
                             },                    
+                            {
+                                "type": "palladium:item_in_slot",
+                                "item": {
+                                    "item": "infinity:reality_stone"
+                                },
+                                "slot": "mainhand"
+                            },
+                            {
+                                "type": "palladium:item_in_slot",
+                                "item": {
+                                    "item": "infinity:reality_stone"
+                                },
+                                "slot": "offhand"
+                            }
+                            
+                        ]
+                    }
+                ]
+            }
+        },
+         "Effects": {
+            "type": "palladium:command",
+            "icon": "minecraft:textures/mob_effect/nausea.png",
+            "title": "Effects",
+            "bar_color": "red",
+            "hidden": false,
+            "hidden_in_bar": false,
+            "list_index": 4,
+            "gui_position": "null",
+            "description": "null",
+            "first_tick_commands": [],
+            "last_tick_commands": [],
+            "commands": [
+                "effect give @e[distance=..100] minecraft:blindness 100 1 true",
+                "effect give @e[distance=..100] minecraft:nausea 100 1 true",
+                "effect give @e[distance=..100] minecraft:darkness 100 1 true",
+                      "effect give @e[distance=..100] minecraft:slowness 100 1 true",
+                "effect clear @s minecraft:blindness",
+                "effect clear @s minecraft:nausea",
+                "effect clear @s minecraft:darkness",
+                "effect clear @s minecraft:slowness"
+            ],
+            "conditions": {
+                
+                "enabling": [
+                    {
+                        "type": "palladium:action",
+                        "cooldown": 0,
+                        "key_type": "key_bind",
+                        "needs_empty_hand": false,
+                        "allow_scrolling_when_crouching": true
+                    }
+                ],
+                "unlocking": [
+                  
+                    {
+                        "type": "palladium:or",
+                        "conditions": [
+                            {
+                                "type": "palladium:has_power",
+                                "power": "infinity:infinity_gauntlet"
+                            },
+                            {
+                                "type": "palladium:has_power",
+                                "power": "infinity:nano_gauntlet"
+                            },
+                            {
+                                "type": "palladium:has_power",
+                                "power": "infinity:cosmi-rod"
+                            },   
+                            {
+                                "type": "palladium:has_power",
+                                "power": "infinity:infinity_ultron_container"
+                            },    
+                            {
+                                "type": "palladium:has_power",
+                                "power": "infinity:infinity_panther_necklace"
+                            },                    
+                            {
+                                "type": "palladium:item_in_slot",
+                                "item": {
+                                    "item": "infinity:aether"
+                                },
+                                "slot": "mainhand"
+                            },
+                            {
+                                "type": "palladium:item_in_slot",
+                                "item": {
+                                    "item": "infinity:aether"
+                                },
+                                "slot": "offhand"
+                            },
                             {
                                 "type": "palladium:item_in_slot",
                                 "item": {

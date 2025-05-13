@@ -4,5 +4,9 @@
         "infinity:infinity"
     ],
     "rarity": "epic",
-    "is_fire_resistant": true
+    "is_fire_resistant": true,
+     "type": "palladium:flux_capacitor",
+    "capacity": 9999999999,
+    "max_input": 9999999999,
+    "max_output": 9999999999
 }

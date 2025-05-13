@@ -107,7 +107,7 @@
         
         "Stop Time": {
             "type": "palladium:command",
-            "icon": "infinity:time_stone",
+            "icon": "minecraft:barrier",
             "title": "Stop Time",
             "bar_color": "lime",
             "hidden": false,
@@ -133,6 +133,9 @@
                 ],
                 "unlocking": [
                     {
+                "type": "palladium:crouching"
+            },
+             {
                         "type": "palladium:or",
                         "conditions": [
                             {
@@ -196,7 +199,7 @@
             "bar_color": "lime",
             "hidden": false,
             "hidden_in_bar": false,
-            "list_index": 2,
+            "list_index": 1,
             "gui_position": "null",
             "description": "null",
             "first_tick_commands": [],
@@ -216,7 +219,15 @@
                     }
                 ],
                 "unlocking": [
+                   {
+                "type": "palladium:not",
+                "conditions": [
                     {
+                        "type": "palladium:crouching"
+                    }
+                ]
+            },
+             {
                         "type": "palladium:or",
                         "conditions": [
                             {
@@ -372,12 +383,12 @@
 },
  "projectile_stop": {
             "type": "palladium:command",
-            "icon": "infinity:time_stone",
+            "icon": "infinity:textures/icon/no_arrow.png",
             "title": "Stop Projectile",
             "bar_color": "lime",
             "hidden": false,
             "hidden_in_bar": false,
-            "list_index": 4,
+            "list_index": 2,
             "gui_position": "null",
             "description": "null",
             "first_tick_commands": [],

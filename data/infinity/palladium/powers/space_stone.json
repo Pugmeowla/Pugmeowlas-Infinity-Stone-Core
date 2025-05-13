@@ -594,7 +594,7 @@
         },
         "black_hole_off": {
             "type": "palladium:command",
-            "icon": "infinity:space_stone",
+            "icon": "minecraft:barrier",
             "title": "Black Hole Off",
             "bar_color": "light_blue",
             "hidden": true,
