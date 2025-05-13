@@ -687,7 +687,13 @@
             }
                 ]
             }
+        },
+         "ad_astra_breathe": {
+            "type": "infinity:ad_astra_breathe",
+            "hidden": true,
+            "hidden_in_bar": true
         }
+        
         
        
 
