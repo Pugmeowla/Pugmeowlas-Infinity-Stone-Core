@@ -1,0 +1,10 @@
+{
+  "type": "tconstruct:melting",
+  "ingredient": { "item": "palladium:raw_titanium_block" },
+  "result": {
+    "fluid": "kubejs:molten_titanium",
+    "amount": 1296
+  },
+  "temperature": 500,
+  "time": 800
+}

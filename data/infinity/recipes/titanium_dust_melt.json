@@ -1,0 +1,10 @@
+{
+  "type": "tconstruct:melting",
+  "ingredient": { "item": "infinity:titanium_dust" },
+  "result": {
+    "fluid": "kubejs:molten_titanium",
+    "amount": 144
+  },
+  "temperature": 250,
+  "time": 800
+}

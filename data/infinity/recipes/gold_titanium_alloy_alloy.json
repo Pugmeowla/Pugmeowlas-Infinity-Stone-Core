@@ -1,0 +1,12 @@
+{
+  "type": "tconstruct:alloy",
+  "inputs": [
+    { "tag": "tconstruct:molten_gold",     "amount":   144 },
+   { "fluid": "kubejs:molten_titanium",     "amount":   288 }
+  ],
+  "result": {
+    "fluid": "kubejs:molten_gold_titanium_alloy",
+    "amount": 432
+  },
+  "temperature": 1250
+}

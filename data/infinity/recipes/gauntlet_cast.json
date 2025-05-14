@@ -1,0 +1,11 @@
+{
+  "type": "tconstruct:casting_table",
+  "cast": { "item": "infinity:infinity_gauntlet_cast" },
+  "cast_consumed": false,
+  "fluid": {
+    "fluid": "kubejs:molten_gold_titanium_alloy",
+    "amount": 6000
+  },
+  "result": "infinity:infinity_gauntlet",
+  "cooling_time": 2080
+}

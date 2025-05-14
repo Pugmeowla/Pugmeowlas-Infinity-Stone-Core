@@ -1,0 +1,10 @@
+{
+  "type": "tconstruct:melting",
+  "ingredient": { "item": "fsang:gold_titanium_ingot" },
+  "result": {
+    "fluid": "kubejs:molten_gold_titanium_alloy",
+    "amount": 144
+  },
+  "temperature": 275,
+  "time": 800
+}
