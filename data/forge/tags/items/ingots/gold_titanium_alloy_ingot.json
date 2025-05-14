@@ -1,0 +1,12 @@
+{
+  "values": [
+    {
+      "id": "infinity:gold_titanium_alloy_ingot",
+      "required": false
+    },
+    {
+      "id": "fsang:gold_titanium_ingot",
+      "required": false
+    }
+  ]
+}

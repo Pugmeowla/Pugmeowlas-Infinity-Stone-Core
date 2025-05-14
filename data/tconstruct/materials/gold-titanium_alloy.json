@@ -1,0 +1,12 @@
+{
+  "tier": 4,
+  "sortOrder": 6,
+  "fluid": "kubejs:molten_gold_titanium_alloy",
+  "textColor": "#635c1b",
+  "temperature": 1200,
+  "traits": {
+    "head": ["tconstruct:shiny"],
+    "handle": ["tconstruct:durable"],
+    "extra": []
+  }
+}

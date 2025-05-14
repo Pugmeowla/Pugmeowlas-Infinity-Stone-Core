@@ -29,22 +29,6 @@
                                 "power": "infinity:infinity_gauntlet"
                             },
                             {
-                                "type": "palladium:has_power",
-                                "power": "infinity:nano_gauntlet"
-                            },
-                            {
-                                "type": "palladium:has_power",
-                                "power": "infinity:cosmi-rod"
-                            },   
-                            {
-                                "type": "palladium:has_power",
-                                "power": "infinity:infinity_ultron_container"
-                            },    
-                            {
-                                "type": "palladium:has_power",
-                                "power": "infinity:infinity_panther_necklace"
-                            },                    
-                            {
                                 "type": "palladium:item_in_slot",
                                 "item": {
                                     "item": "infinity:scepter"
@@ -106,29 +90,13 @@
                     }
                 ],
                 "unlocking": [
-                    {
+                   {
                         "type": "palladium:or",
                         "conditions": [
                             {
                                 "type": "palladium:has_power",
                                 "power": "infinity:infinity_gauntlet"
                             },
-                            {
-                                "type": "palladium:has_power",
-                                "power": "infinity:nano_gauntlet"
-                            },
-                            {
-                                "type": "palladium:has_power",
-                                "power": "infinity:cosmi-rod"
-                            },   
-                            {
-                                "type": "palladium:has_power",
-                                "power": "infinity:infinity_ultron_container"
-                            },    
-                            {
-                                "type": "palladium:has_power",
-                                "power": "infinity:infinity_panther_necklace"
-                            },                    
                             {
                                 "type": "palladium:item_in_slot",
                                 "item": {
