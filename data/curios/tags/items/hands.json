@@ -1,8 +1,7 @@
 {
     "replace": false,
     "values":[
-        "infinity:infinity_gauntlet",
-        "infinity:nano_gauntlet"
+        "infinity:infinity_gauntlet"
        
     ]
 }
