@@ -14,7 +14,7 @@
             "bar_color": "yellow",
             "description": "null",
             "attribute": "palladium:flight_speed",
-            "amount": 1,
+            "amount": 3,
             "operation": 0,
             "uuid": "498be4fb-af04-42f2-8948-e6ccdc0d99e1",
             "conditions": {
