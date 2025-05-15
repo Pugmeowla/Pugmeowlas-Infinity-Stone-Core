@@ -1,5 +1,8 @@
 {
   "slot": "mainhand",
   "item": "infinity:cosmi-rod_power",
-  "power": "infinity:power_stone_passive"
+  "power": [
+    "infinity:cosmi-rod",
+    "infinity:power_stone_passive"
+  ]
 }

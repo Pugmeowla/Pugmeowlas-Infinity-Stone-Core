@@ -1,5 +1,8 @@
 {
   "slot": "mainhand",
   "item": "infinity:cosmi-rod_reality",
-  "power": "infinity:reality_stone"
+  "power": [
+    "infinity:cosmi-rod",
+    "infinity:reality_stone"
+  ]
 }
