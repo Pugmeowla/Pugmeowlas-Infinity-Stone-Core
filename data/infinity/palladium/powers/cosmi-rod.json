@@ -1,12 +1,53 @@
 {
-    "name": "Cosmi-rod",
+    "name": "Cosmi-Rod",
     "background": "minecraft:textures/block/sculk.png",
-    "icon": "infinity:infinity_gauntlet",
+    "icon": "infinity:cosmi-rod",
     "ability_bar_texture": "infinity:textures/gui/ability_bars/infinity_ability_bar.png",
     "gui_display_type": "tree",
     "persistent_data": true,
     "abilities": {
 
+"insert_stone_wheel":{
+    "type": "palladium:ability_wheel",
+    "icon": "infinity:cosmi-rod_power",
+    "title": "insert Stone",
+    "bar_color": "light_gray",
+    "hidden": false,
+    "hidden_in_bar": false,
+    "list_index": 0,
+    "gui_position": "null",
+    "description": "null",
+    "abilities": [
+        "insert_power_stone",
+         "insert_space_stone",
+          "insert_reality_stone",
+           "insert_time_stone",
+            "insert_soul_stone",
+             "insert_mind_stone"
+        
+    ],
+    "texture": "null",
+    "conditions": {
+        "enabling": [
+            {
+                "type": "palladium:toggle",
+                "cooldown": 0,
+                "key_type": "key_bind",
+                "needs_empty_hand": false,
+                "allow_scrolling_when_crouching": true
+            }
+        ],
+        "unlocking":[
+           {
+                "type": "palladium:item_in_slot",
+                "item": {"item": "infinity:cosmi-rod"},
+                "slot": "mainhand"
+            }
+            
+            
+        ]
+    }
+},
 "remove_stone_wheel":{
     "type": "palladium:ability_wheel",
     "icon": "infinity:textures/item/infinity_gauntlet2.png",
@@ -39,58 +80,44 @@
         ],
         "unlocking":[
             {
-                "type": "palladium:crouching"
+    "type": "palladium:or",
+    "conditions": [
+         {
+                "type": "palladium:item_in_slot",
+                "item": {"item": "infinity:cosmi-rod_power"},
+                "slot": "mainhand"
+            },
+            {
+                "type": "palladium:item_in_slot",
+                "item": {"item": "infinity:cosmi-rod_space"},
+                "slot": "mainhand"
+            },
+             {
+                "type": "palladium:item_in_slot",
+                "item": {"item": "infinity:cosmi-rod_reality"},
+                "slot": "mainhand"
+            },
+             {
+                "type": "palladium:item_in_slot",
+                "item": {"item": "infinity:cosmi-rod_time"},
+                "slot": "mainhand"
+            },
+             {
+                "type": "palladium:item_in_slot",
+                "item": {"item": "infinity:cosmi-rod_soul"},
+                "slot": "mainhand"
+            },
+             {
+                "type": "palladium:item_in_slot",
+                "item": {"item": "infinity:cosmi-rod_mind"},
+                "slot": "mainhand"
             }
+    ]
+}
         ]
     }
 },
-
-"insert_stone_wheel":{
-    "type": "palladium:ability_wheel",
-    "icon": "infinity:textures/item/infinity_gauntlet_full.png",
-    "title": "insert Stone",
-    "bar_color": "light_gray",
-    "hidden": false,
-    "hidden_in_bar": false,
-    "list_index": 0,
-    "gui_position": "null",
-    "description": "null",
-    "abilities": [
-        "insert_power_stone",
-         "insert_space_stone",
-          "insert_reality_stone",
-           "insert_time_stone",
-            "insert_soul_stone",
-             "insert_mind_stone"
-        
-    ],
-    "texture": "null",
-    "conditions": {
-        "enabling": [
-            {
-                "type": "palladium:toggle",
-                "cooldown": 0,
-                "key_type": "key_bind",
-                "needs_empty_hand": false,
-                "allow_scrolling_when_crouching": true
-            }
-        ],
-        "unlocking":[
-            {
-                "type": "palladium:not",
-                "conditions": [
-                    {
-                        "type": "palladium:crouching"
-                    }
-                ]
-            }
-            
-            
-        ]
-    }
-},
-
-"insert_power_stone": {
+        "insert_power_stone": {
     "type": "palladium:command",
     "icon": "infinity:power_stone",
     "title": "Insert Power Stone",
@@ -99,11 +126,11 @@
     "hidden_in_bar": true,
     "list_index": -1,
     "gui_position": "null",
-    "description": "Power Stone Abilities",
+    "description": "Insert Power Stone",
     "commands": [
         "clear @s infinity:power_stone 1",
-         "clear @s infinity:cosmi-rod 1",
-        "give @s cosmi-rod_power"
+        "clear @s infinity:cosmi-rod 1",
+        "give @s infinity:cosmi-rod_power"
     ],
     "conditions": {  
         "enabling": [
@@ -119,12 +146,16 @@
             {
                 "type": "palladium:item_in_slot",
                 "item": {"item": "infinity:power_stone"},
+                "slot": "offhand"
+            },
+             {
+                "type": "palladium:item_in_slot",
+                "item": {"item": "infinity:cosmi-rod"},
                 "slot": "mainhand"
             }
         ]
     }
 },
-
 "remove_power_stone": {
     "type": "palladium:command",
     "icon": "infinity:power_stone",
@@ -132,13 +163,13 @@
     "bar_color": "purple",
     "hidden": true,
     "hidden_in_bar": true,
-    "list_index": 5,
+    "list_index": -1,
     "gui_position": "null",
     "description": "Remove Power Stone",
     "commands": [
-        "execute as @s run clear @s infinity:power_stone",
+        "execute as @s run clear @s infinity:cosmi-rod_power",
         "execute as @s run give @s infinity:power_stone{Enchantments:[{}]}",
-        "execute as @s run give @s cosmi-rod"
+        "execute as @s run give @s infinity:cosmi-rod"
     ],
     "conditions": {
         "enabling": [
@@ -151,30 +182,28 @@
             }
         ],
         "unlocking": [
-            {
-    "type": "palladium:item_in_slot",
-    "item": {
-        "item": "infinity:cosmi-rod_power"
-    },
-    "slot": "mainhand"
-}
+           {
+                "type": "palladium:item_in_slot",
+                "item": {"item": "infinity:cosmi-rod_power"},
+                "slot": "mainhand"
+            }
         ]
     }
 },
-
-"insert_space_stone": {
+ "insert_space_stone": {
     "type": "palladium:command",
     "icon": "infinity:space_stone",
-    "title": "Insert Space Stone",
+    "title": "Insert Power Stone",
     "bar_color": "light_blue",
     "hidden": true,
     "hidden_in_bar": true,
     "list_index": -1,
     "gui_position": "null",
-    "description": "Space Stone Abilities",
+    "description": "Insert Space Stone",
     "commands": [
         "clear @s infinity:space_stone 1",
-        "superpower add infinity:space_stone @s"
+        "clear @s infinity:cosmi-rod 1",
+        "give @s infinity:cosmi-rod_space"
     ],
     "conditions": {  
         "enabling": [
@@ -190,26 +219,16 @@
             {
                 "type": "palladium:item_in_slot",
                 "item": {"item": "infinity:space_stone"},
+                "slot": "offhand"
+            },
+             {
+                "type": "palladium:item_in_slot",
+                "item": {"item": "infinity:cosmi-rod"},
                 "slot": "mainhand"
             }
         ]
     }
 },
-"render_layer_space": {
-    "type": "palladium:render_layer",
-    "hidden": true,
-    "hidden_in_bar": true,
-    "render_layer": "infinity:gauntlet_space",
-    "conditions": {
-        "enabling": [
-            {  
-                "type": "palladium:has_power",
-                "power": "infinity:space_stone"
-            }
-        ]
-    }
-},
-
 "remove_space_stone": {
     "type": "palladium:command",
     "icon": "infinity:space_stone",
@@ -217,13 +236,13 @@
     "bar_color": "light_blue",
     "hidden": true,
     "hidden_in_bar": true,
-    "list_index": 6,
+    "list_index": -1,
     "gui_position": "null",
     "description": "Remove Space Stone",
     "commands": [
-        "execute as @s run clear @s infinity:space_stone",
+        "execute as @s run clear @s infinity:cosmi-rod_space",
         "execute as @s run give @s infinity:space_stone{Enchantments:[{}]}",
-        "execute as @s run superpower remove infinity:space_stone @s"
+        "execute as @s run give @s infinity:cosmi-rod"
     ],
     "conditions": {
         "enabling": [
@@ -236,9 +255,10 @@
             }
         ],
         "unlocking": [
-            {   
-                "type": "palladium:has_power",
-                "power": "infinity:space_stone"
+           {
+                "type": "palladium:item_in_slot",
+                "item": {"item": "infinity:cosmi-rod_space"},
+                "slot": "mainhand"
             }
         ]
     }
@@ -252,10 +272,11 @@
     "hidden_in_bar": true,
     "list_index": -1,
     "gui_position": "null",
-    "description": "Reality Stone Abilities",
+    "description": "Insert Reality Stone",
     "commands": [
         "clear @s infinity:reality_stone 1",
-        "superpower add infinity:reality_stone @s"
+        "clear @s infinity:cosmi-rod 1",
+        "give @s infinity:cosmi-rod_reality"
     ],
     "conditions": {  
         "enabling": [
@@ -271,41 +292,30 @@
             {
                 "type": "palladium:item_in_slot",
                 "item": {"item": "infinity:reality_stone"},
+                "slot": "offhand"
+            },
+             {
+                "type": "palladium:item_in_slot",
+                "item": {"item": "infinity:cosmi-rod"},
                 "slot": "mainhand"
             }
         ]
     }
 },
-
-"render_layer_reality": {
-    "type": "palladium:render_layer",
-    "hidden": true,
-    "hidden_in_bar": true,
-    "render_layer": "infinity:gauntlet_reality",
-    "conditions": {
-        "enabling": [
-            {  
-                "type": "palladium:has_power",
-                "power": "infinity:reality_stone"
-            }
-        ]
-    }
-},
-
 "remove_reality_stone": {
     "type": "palladium:command",
-    "icon": "infinity:reality_stone",
-    "title": "Remove Reality Stone",
-    "bar_color": "red",
+    "icon": "infinity:space_stone",
+    "title": "Remove Space Stone",
+    "bar_color": "light_blue",
     "hidden": true,
     "hidden_in_bar": true,
-    "list_index": 7,
+    "list_index": -1,
     "gui_position": "null",
     "description": "Remove Reality Stone",
     "commands": [
-        "execute as @s run clear @s infinity:reality_stone",
-      "execute as @s run give @s infinity:reality_stone{Enchantments:[{}]}",
-        "execute as @s run superpower remove infinity:reality_stone @s"
+        "execute as @s run clear @s infinity:cosmi-rod_reality",
+        "execute as @s run give @s infinity:reality_stone{Enchantments:[{}]}",
+        "execute as @s run give @s infinity:cosmi-rod"
     ],
     "conditions": {
         "enabling": [
@@ -318,9 +328,10 @@
             }
         ],
         "unlocking": [
-            {   
-                "type": "palladium:has_power",
-                "power": "infinity:reality_stone"
+           {
+                "type": "palladium:item_in_slot",
+                "item": {"item": "infinity:cosmi-rod_reality"},
+                "slot": "mainhand"
             }
         ]
     }
@@ -329,15 +340,16 @@
     "type": "palladium:command",
     "icon": "infinity:time_stone",
     "title": "Insert Time Stone",
-    "bar_color": "lime",
+    "bar_color": "red",
     "hidden": true,
     "hidden_in_bar": true,
     "list_index": -1,
     "gui_position": "null",
-    "description": "Time Stone Abilities",
+    "description": "Insert Time Stone",
     "commands": [
         "clear @s infinity:time_stone 1",
-        "superpower add infinity:time_stone @s"
+        "clear @s infinity:cosmi-rod 1",
+        "give @s infinity:cosmi-rod_time"
     ],
     "conditions": {  
         "enabling": [
@@ -353,27 +365,16 @@
             {
                 "type": "palladium:item_in_slot",
                 "item": {"item": "infinity:time_stone"},
+                "slot": "offhand"
+            },
+             {
+                "type": "palladium:item_in_slot",
+                "item": {"item": "infinity:cosmi-rod"},
                 "slot": "mainhand"
             }
         ]
     }
 },
-
-"render_layer_time": {
-    "type": "palladium:render_layer",
-    "hidden": true,
-    "hidden_in_bar": true,
-    "render_layer": "infinity:gauntlet_time",
-    "conditions": {
-        "enabling": [
-            {  
-                "type": "palladium:has_power",
-                "power": "infinity:time_stone"
-            }
-        ]
-    }
-},
-
 "remove_time_stone": {
     "type": "palladium:command",
     "icon": "infinity:time_stone",
@@ -381,13 +382,13 @@
     "bar_color": "lime",
     "hidden": true,
     "hidden_in_bar": true,
-    "list_index": 8,
+    "list_index": -1,
     "gui_position": "null",
     "description": "Remove Time Stone",
     "commands": [
-        "execute as @s run clear @s infinity:time_stone",
-       "execute as @s run give @s infinity:time_stone{Enchantments:[{}]}",
-        "execute as @s run superpower remove infinity:time_stone @s"
+        "execute as @s run clear @s infinity:cosmi-rod_time",
+        "execute as @s run give @s infinity:time_stone{Enchantments:[{}]}",
+        "execute as @s run give @s infinity:cosmi-rod"
     ],
     "conditions": {
         "enabling": [
@@ -400,9 +401,10 @@
             }
         ],
         "unlocking": [
-            {   
-                "type": "palladium:has_power",
-                "power": "infinity:time_stone"
+           {
+                "type": "palladium:item_in_slot",
+                "item": {"item": "infinity:cosmi-rod_time"},
+                "slot": "mainhand"
             }
         ]
     }
@@ -416,10 +418,11 @@
     "hidden_in_bar": true,
     "list_index": -1,
     "gui_position": "null",
-    "description": "Soul Stone Abilities",
+    "description": "Insert Soul Stone",
     "commands": [
         "clear @s infinity:soul_stone 1",
-        "superpower add infinity:soul_stone @s"
+        "clear @s infinity:cosmi-rod 1",
+        "give @s infinity:cosmi-rod_soul"
     ],
     "conditions": {  
         "enabling": [
@@ -435,27 +438,16 @@
             {
                 "type": "palladium:item_in_slot",
                 "item": {"item": "infinity:soul_stone"},
+                "slot": "offhand"
+            },
+             {
+                "type": "palladium:item_in_slot",
+                "item": {"item": "infinity:cosmi-rod"},
                 "slot": "mainhand"
             }
         ]
     }
 },
-
-"render_layer_soul": {
-    "type": "palladium:render_layer",
-    "hidden": true,
-    "hidden_in_bar": true,
-    "render_layer": "infinity:gauntlet_soul",
-    "conditions": {
-        "enabling": [
-            {  
-                "type": "palladium:has_power",
-                "power": "infinity:soul_stone"
-            }
-        ]
-    }
-},
-
 "remove_soul_stone": {
     "type": "palladium:command",
     "icon": "infinity:soul_stone",
@@ -463,13 +455,13 @@
     "bar_color": "orange",
     "hidden": true,
     "hidden_in_bar": true,
-    "list_index": 9,
+    "list_index": -1,
     "gui_position": "null",
     "description": "Remove Soul Stone",
     "commands": [
-        "execute as @s run clear @s infinity:soul_stone",
+        "execute as @s run clear @s infinity:cosmi-rod_soul",
         "execute as @s run give @s infinity:soul_stone{Enchantments:[{}]}",
-        "execute as @s run superpower remove infinity:soul_stone @s"
+        "execute as @s run give @s infinity:cosmi-rod"
     ],
     "conditions": {
         "enabling": [
@@ -482,9 +474,10 @@
             }
         ],
         "unlocking": [
-            {   
-                "type": "palladium:has_power",
-                "power": "infinity:soul_stone"
+           {
+                "type": "palladium:item_in_slot",
+                "item": {"item": "infinity:cosmi-rod_soul"},
+                "slot": "mainhand"
             }
         ]
     }
@@ -498,10 +491,11 @@
     "hidden_in_bar": true,
     "list_index": -1,
     "gui_position": "null",
-    "description": "Mind Stone Abilities",
+    "description": "Insert Mind Stone",
     "commands": [
         "clear @s infinity:mind_stone 1",
-        "superpower add infinity:mind_stone @s"
+        "clear @s infinity:cosmi-rod 1",
+        "give @s infinity:cosmi-rod_mind"
     ],
     "conditions": {  
         "enabling": [
@@ -517,27 +511,16 @@
             {
                 "type": "palladium:item_in_slot",
                 "item": {"item": "infinity:mind_stone"},
+                "slot": "offhand"
+            },
+             {
+                "type": "palladium:item_in_slot",
+                "item": {"item": "infinity:cosmi-rod"},
                 "slot": "mainhand"
             }
         ]
     }
 },
-
-"render_layer_mind": {
-    "type": "palladium:render_layer",
-    "hidden": true,
-    "hidden_in_bar": true,
-    "render_layer": "infinity:gauntlet_mind",
-    "conditions": {
-        "enabling": [
-            {  
-                "type": "palladium:has_power",
-                "power": "infinity:mind_stone"
-            }
-        ]
-    }
-},
-
 "remove_mind_stone": {
     "type": "palladium:command",
     "icon": "infinity:mind_stone",
@@ -545,13 +528,13 @@
     "bar_color": "yellow",
     "hidden": true,
     "hidden_in_bar": true,
-    "list_index": 10,
+    "list_index": -1,
     "gui_position": "null",
     "description": "Remove Mind Stone",
     "commands": [
-        "execute as @s run clear @s infinity:mind_stone",
+        "execute as @s run clear @s infinity:cosmi-rod_mind",
         "execute as @s run give @s infinity:mind_stone{Enchantments:[{}]}",
-        "execute as @s run superpower remove infinity:mind_stone @s"
+        "execute as @s run give @s infinity:cosmi-rod"
     ],
     "conditions": {
         "enabling": [
@@ -564,127 +547,11 @@
             }
         ],
         "unlocking": [
-            {   
-                "type": "palladium:has_power",
-                "power": "infinity:mind_stone"
+           {
+                "type": "palladium:item_in_slot",
+                "item": {"item": "infinity:cosmi-rod_mind"},
+                "slot": "mainhand"
             }
-        ]
-    }
-},
-"snap": {
-    "type": "palladium:command",
-    "icon": "infinity:infinity_gauntlet",
-    "title": "Snap",
-    "bar_color": "yellow",
-    "hidden": true,
-    "hidden_in_bar": false,
-    "list_index": 1,
-    "gui_position": "null",
-    "description": "Snap",
-    "commands": [
-        "function infinity:snap1",
-        "playsound minecraft:block.conduit.activate master @a",
-        "playsound minecraft:entity.wither.spawn master @a",
-        "playsound minecraft:entity.lightning_bolt.thunder master @a",
-        "playsound minecraft:entity.ender_dragon.death master @a"
-    ],
-    "conditions": {
-        "enabling": [
-            {
-                "type": "palladium:action",
-                "cooldown": 0,
-                "key_type": "key_bind",
-                "needs_empty_hand": false,
-                "allow_scrolling_when_crouching": true
-            }
-        ],
-        "unlocking": [
-            {   
-                "type": "palladium:has_power",
-                "power": "infinity:mind_stone"
-            },
-            {   
-                "type": "palladium:has_power",
-                "power": "infinity:power_stone_passive"
-            },
-            {   
-                "type": "palladium:has_power",
-                "power": "infinity:space_stone"
-            },
-            {   
-                "type": "palladium:has_power",
-                "power": "infinity:reality_stone"
-            },
-            {   
-                "type": "palladium:has_power",
-                "power": "infinity:time_stone"
-            },
-            {   
-                "type": "palladium:has_power",
-                "power": "infinity:soul_stone"
-            }
-            
-        ]
-    }
-},
-"destroy_stones": {
-    "type": "palladium:command",
-    "icon": "infinity:infinity_gauntlet",
-    "title": "Destroy All Stones",
-    "bar_color": "yellow",
-    "hidden": true,
-    "hidden_in_bar": false,
-    "list_index": 2,
-    "gui_position": "null",
-    "description": "Snap",
-    "commands": [
-        "superpower remove infinity:power_stone_passive",
-        "superpower remove infinity:space_stone",
-        "superpower remove infinity:reality_stone",
-        "superpower remove infinity:time_stone",
-        "superpower remove infinity:soul_stone",
-        "superpower remove infinity:mind_stone",
-        "playsound minecraft:block.conduit.activate master @a",
-        "playsound minecraft:entity.wither.spawn master @a",
-        "playsound minecraft:entity.lightning_bolt.thunder master @a",
-        "playsound minecraft:entity.ender_dragon.death master @a"
-    ],
-    "conditions": {
-        "enabling": [
-            {
-                "type": "palladium:action",
-                "cooldown": 0,
-                "key_type": "key_bind",
-                "needs_empty_hand": false,
-                "allow_scrolling_when_crouching": true
-            }
-        ],
-        "unlocking": [
-            {   
-                "type": "palladium:has_power",
-                "power": "infinity:mind_stone"
-            },
-            {   
-                "type": "palladium:has_power",
-                "power": "infinity:power_stone_passive"
-            },
-            {   
-                "type": "palladium:has_power",
-                "power": "infinity:space_stone"
-            },
-            {   
-                "type": "palladium:has_power",
-                "power": "infinity:reality_stone"
-            },
-            {   
-                "type": "palladium:has_power",
-                "power": "infinity:time_stone"
-            },
-            {   
-                "type": "palladium:has_power",
-                "power": "infinity:soul_stone"
-            }
-            
         ]
     }
 }
