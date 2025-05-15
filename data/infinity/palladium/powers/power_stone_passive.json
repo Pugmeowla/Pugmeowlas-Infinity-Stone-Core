@@ -52,6 +52,20 @@
                             {
                                 "type": "palladium:item_in_slot",
                                 "item": {
+                                    "item": "infinity:cosmi-rod_power"
+                                },
+                                "slot": "offhand"
+                            },
+                            {
+                                "type": "palladium:item_in_slot",
+                                "item": {
+                                    "item": "infinity:cosmi-rod_power"
+                                },
+                                "slot": "mainhand"
+                            },
+                            {
+                                "type": "palladium:item_in_slot",
+                                "item": {
                                     "item": "infinity:power_stone"
                                 },
                                 "slot": "offhand"
@@ -115,6 +129,20 @@
                             {
                                 "type": "palladium:item_in_slot",
                                 "item": {
+                                    "item": "infinity:cosmi-rod_power"
+                                },
+                                "slot": "offhand"
+                            },
+                            {
+                                "type": "palladium:item_in_slot",
+                                "item": {
+                                    "item": "infinity:cosmi-rod_power"
+                                },
+                                "slot": "mainhand"
+                            },
+                            {
+                                "type": "palladium:item_in_slot",
+                                "item": {
                                     "item": "infinity:power_stone"
                                 },
                                 "slot": "offhand"
@@ -152,7 +180,7 @@
                     }
                 ],
                 "unlocking": [
-                     {
+                      {
                         "type": "palladium:or",
                         "conditions": [
                             {
@@ -163,6 +191,20 @@
                                 "type": "palladium:item_in_slot",
                                 "item": {
                                     "item": "infinity:power_stone"
+                                },
+                                "slot": "mainhand"
+                            },
+                            {
+                                "type": "palladium:item_in_slot",
+                                "item": {
+                                    "item": "infinity:cosmi-rod_power"
+                                },
+                                "slot": "offhand"
+                            },
+                            {
+                                "type": "palladium:item_in_slot",
+                                "item": {
+                                    "item": "infinity:cosmi-rod_power"
                                 },
                                 "slot": "mainhand"
                             },
@@ -207,7 +249,7 @@
                     }
                 ],
                 "unlocking": [
-            {
+             {
                         "type": "palladium:or",
                         "conditions": [
                             {
@@ -218,6 +260,20 @@
                                 "type": "palladium:item_in_slot",
                                 "item": {
                                     "item": "infinity:power_stone"
+                                },
+                                "slot": "mainhand"
+                            },
+                            {
+                                "type": "palladium:item_in_slot",
+                                "item": {
+                                    "item": "infinity:cosmi-rod_power"
+                                },
+                                "slot": "offhand"
+                            },
+                            {
+                                "type": "palladium:item_in_slot",
+                                "item": {
+                                    "item": "infinity:cosmi-rod_power"
                                 },
                                 "slot": "mainhand"
                             },
@@ -265,6 +321,20 @@
                                 "type": "palladium:item_in_slot",
                                 "item": {
                                     "item": "infinity:power_stone"
+                                },
+                                "slot": "mainhand"
+                            },
+                            {
+                                "type": "palladium:item_in_slot",
+                                "item": {
+                                    "item": "infinity:cosmi-rod_power"
+                                },
+                                "slot": "offhand"
+                            },
+                            {
+                                "type": "palladium:item_in_slot",
+                                "item": {
+                                    "item": "infinity:cosmi-rod_power"
                                 },
                                 "slot": "mainhand"
                             },

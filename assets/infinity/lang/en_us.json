@@ -34,11 +34,17 @@
     "item.infinity.cosmi-rod_with_time_stone":"Cosmi-rod",
     "item.infinity.cosmi-rod_with_space_stone":"Cosmi-rod",
     "item.infinity.cosmi-rod_with_reality_stone":"Cosmi-rod",
-    "item.infinity.cosmi-rod":"Cosmi-rod",
+    "item.infinity.cosmi-rod":"Cosmi-Rod",
     "item.infinity.pugmeowla":"Pugmeowla Icon",
     "item.infinity.infinity_ultron_container":"Infinity Ultron Container",
     "item.infinity.nano_gauntlet":"Nano Gauntlet",
     "item.infinity.double-headed_spear":"Double-Headed Spear",
     "item.infinity.op_stoner":"The OP Stone Activatinator",
-    "item.infinity.empty_aether":"Empty Aether"
+    "item.infinity.empty_aether":"Empty Aether",
+    "item.infinity.cosmi-rod_power":"Power Infused Cosmi-Rod",
+    "item.infinity.cosmi-rod_space":"Space Infused Cosmi-Rod",
+    "item.infinity.cosmi-rod_reality":"Reality Infused Cosmi-Rod",
+    "item.infinity.cosmi-rod_time":"Time Infused Cosmi-Rod",
+    "item.infinity.cosmi-rod_soul":"Soul Infused Cosmi-Rod",
+    "item.infinity.cosmi-rod_mind":"Mind Infused Cosmi-Rod"
 }

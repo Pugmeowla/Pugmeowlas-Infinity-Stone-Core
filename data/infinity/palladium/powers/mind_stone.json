@@ -55,6 +55,20 @@
                                     "item": "infinity:mind_stone"
                                 },
                                 "slot": "offhand"
+                            },
+                            {
+                                "type": "palladium:item_in_slot",
+                                "item": {
+                                    "item": "infinity:cosmi-rod_mind"
+                                },
+                                "slot": "mainhand"
+                            },
+                            {
+                                "type": "palladium:item_in_slot",
+                                "item": {
+                                    "item": "infinity:cosmi-rod_mind"
+                                },
+                                "slot": "offhand"
                             }
                             
                         ]
@@ -122,6 +136,20 @@
                                 "type": "palladium:item_in_slot",
                                 "item": {
                                     "item": "infinity:mind_stone"
+                                },
+                                "slot": "offhand"
+                            },
+                            {
+                                "type": "palladium:item_in_slot",
+                                "item": {
+                                    "item": "infinity:cosmi-rod_mind"
+                                },
+                                "slot": "mainhand"
+                            },
+                            {
+                                "type": "palladium:item_in_slot",
+                                "item": {
+                                    "item": "infinity:cosmi-rod_mind"
                                 },
                                 "slot": "offhand"
                             }

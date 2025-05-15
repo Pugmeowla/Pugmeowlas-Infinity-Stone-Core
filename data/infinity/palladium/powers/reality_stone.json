@@ -64,6 +64,20 @@
                                     "item": "infinity:reality_stone"
                                 },
                                 "slot": "offhand"
+                            },
+                            {
+                                "type": "palladium:item_in_slot",
+                                "item": {
+                                    "item": "infinity:cosmi-rod_reality"
+                                },
+                                "slot": "mainhand"
+                            },
+                            {
+                                "type": "palladium:item_in_slot",
+                                "item": {
+                                    "item": "infinity:cosmi-rod_reality"
+                                },
+                                "slot": "offhand"
                             }
                             
                         ]
@@ -126,6 +140,20 @@
                                 "type": "palladium:item_in_slot",
                                 "item": {
                                     "item": "infinity:reality_stone"
+                                },
+                                "slot": "offhand"
+                            },
+                            {
+                                "type": "palladium:item_in_slot",
+                                "item": {
+                                    "item": "infinity:cosmi-rod_reality"
+                                },
+                                "slot": "mainhand"
+                            },
+                            {
+                                "type": "palladium:item_in_slot",
+                                "item": {
+                                    "item": "infinity:cosmi-rod_reality"
                                 },
                                 "slot": "offhand"
                             }
@@ -191,6 +219,20 @@
                                     "item": "infinity:reality_stone"
                                 },
                                 "slot": "offhand"
+                            },
+                            {
+                                "type": "palladium:item_in_slot",
+                                "item": {
+                                    "item": "infinity:cosmi-rod_reality"
+                                },
+                                "slot": "mainhand"
+                            },
+                            {
+                                "type": "palladium:item_in_slot",
+                                "item": {
+                                    "item": "infinity:cosmi-rod_reality"
+                                },
+                                "slot": "offhand"
                             }
                             
                         ]
@@ -234,7 +276,7 @@
                             }
                         ]
                     },
-                   {
+                    {
                         "type": "palladium:or",
                         "conditions": [
                             {
@@ -266,6 +308,20 @@
                                 "type": "palladium:item_in_slot",
                                 "item": {
                                     "item": "infinity:reality_stone"
+                                },
+                                "slot": "offhand"
+                            },
+                            {
+                                "type": "palladium:item_in_slot",
+                                "item": {
+                                    "item": "infinity:cosmi-rod_reality"
+                                },
+                                "slot": "mainhand"
+                            },
+                            {
+                                "type": "palladium:item_in_slot",
+                                "item": {
+                                    "item": "infinity:cosmi-rod_reality"
                                 },
                                 "slot": "offhand"
                             }
@@ -305,7 +361,7 @@
                     {
                         "type": "palladium:crouching"
                     },
-                  {
+                   {
                         "type": "palladium:or",
                         "conditions": [
                             {
@@ -337,6 +393,20 @@
                                 "type": "palladium:item_in_slot",
                                 "item": {
                                     "item": "infinity:reality_stone"
+                                },
+                                "slot": "offhand"
+                            },
+                            {
+                                "type": "palladium:item_in_slot",
+                                "item": {
+                                    "item": "infinity:cosmi-rod_reality"
+                                },
+                                "slot": "mainhand"
+                            },
+                            {
+                                "type": "palladium:item_in_slot",
+                                "item": {
+                                    "item": "infinity:cosmi-rod_reality"
                                 },
                                 "slot": "offhand"
                             }
@@ -413,6 +483,20 @@
                                 "type": "palladium:item_in_slot",
                                 "item": {
                                     "item": "infinity:reality_stone"
+                                },
+                                "slot": "offhand"
+                            },
+                            {
+                                "type": "palladium:item_in_slot",
+                                "item": {
+                                    "item": "infinity:cosmi-rod_reality"
+                                },
+                                "slot": "mainhand"
+                            },
+                            {
+                                "type": "palladium:item_in_slot",
+                                "item": {
+                                    "item": "infinity:cosmi-rod_reality"
                                 },
                                 "slot": "offhand"
                             }

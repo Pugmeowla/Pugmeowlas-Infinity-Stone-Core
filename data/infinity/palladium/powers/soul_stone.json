@@ -48,6 +48,20 @@
                                     "item": "infinity:soul_stone"
                                 },
                                 "slot": "offhand"
+                            },
+                            {
+                                "type": "palladium:item_in_slot",
+                                "item": {
+                                    "item": "infinity:cosmi-rod_soul"
+                                },
+                                "slot": "mainhand"
+                            },
+                            {
+                                "type": "palladium:item_in_slot",
+                                "item": {
+                                    "item": "infinity:cosmi-rod_soul"
+                                },
+                                "slot": "offhand"
                             }
                             
                         ]
@@ -73,7 +87,7 @@
                 }
             ],
              "unlocking": [
-                   {
+                  {
                         "type": "palladium:or",
                         "conditions": [
                             {
@@ -91,6 +105,20 @@
                                 "type": "palladium:item_in_slot",
                                 "item": {
                                     "item": "infinity:soul_stone"
+                                },
+                                "slot": "offhand"
+                            },
+                            {
+                                "type": "palladium:item_in_slot",
+                                "item": {
+                                    "item": "infinity:cosmi-rod_soul"
+                                },
+                                "slot": "mainhand"
+                            },
+                            {
+                                "type": "palladium:item_in_slot",
+                                "item": {
+                                    "item": "infinity:cosmi-rod_soul"
                                 },
                                 "slot": "offhand"
                             }
@@ -125,7 +153,7 @@
                     }
                 ],
                  "unlocking": [
-                   {
+                  {
                         "type": "palladium:or",
                         "conditions": [
                             {
@@ -143,6 +171,20 @@
                                 "type": "palladium:item_in_slot",
                                 "item": {
                                     "item": "infinity:soul_stone"
+                                },
+                                "slot": "offhand"
+                            },
+                            {
+                                "type": "palladium:item_in_slot",
+                                "item": {
+                                    "item": "infinity:cosmi-rod_soul"
+                                },
+                                "slot": "mainhand"
+                            },
+                            {
+                                "type": "palladium:item_in_slot",
+                                "item": {
+                                    "item": "infinity:cosmi-rod_soul"
                                 },
                                 "slot": "offhand"
                             }
@@ -165,7 +207,7 @@
             "conditions": {
                 
                  "unlocking": [
-                   {
+                  {
                         "type": "palladium:or",
                         "conditions": [
                             {
@@ -183,6 +225,20 @@
                                 "type": "palladium:item_in_slot",
                                 "item": {
                                     "item": "infinity:soul_stone"
+                                },
+                                "slot": "offhand"
+                            },
+                            {
+                                "type": "palladium:item_in_slot",
+                                "item": {
+                                    "item": "infinity:cosmi-rod_soul"
+                                },
+                                "slot": "mainhand"
+                            },
+                            {
+                                "type": "palladium:item_in_slot",
+                                "item": {
+                                    "item": "infinity:cosmi-rod_soul"
                                 },
                                 "slot": "offhand"
                             }
@@ -231,6 +287,20 @@
                                     "item": "infinity:soul_stone"
                                 },
                                 "slot": "offhand"
+                            },
+                            {
+                                "type": "palladium:item_in_slot",
+                                "item": {
+                                    "item": "infinity:cosmi-rod_soul"
+                                },
+                                "slot": "mainhand"
+                            },
+                            {
+                                "type": "palladium:item_in_slot",
+                                "item": {
+                                    "item": "infinity:cosmi-rod_soul"
+                                },
+                                "slot": "offhand"
                             }
                             
                         ]
@@ -256,7 +326,7 @@
                 
                 
                 "unlocking": [
-                   {
+                  {
                         "type": "palladium:or",
                         "conditions": [
                             {
@@ -274,6 +344,20 @@
                                 "type": "palladium:item_in_slot",
                                 "item": {
                                     "item": "infinity:soul_stone"
+                                },
+                                "slot": "offhand"
+                            },
+                            {
+                                "type": "palladium:item_in_slot",
+                                "item": {
+                                    "item": "infinity:cosmi-rod_soul"
+                                },
+                                "slot": "mainhand"
+                            },
+                            {
+                                "type": "palladium:item_in_slot",
+                                "item": {
+                                    "item": "infinity:cosmi-rod_soul"
                                 },
                                 "slot": "offhand"
                             }
@@ -334,6 +418,20 @@
                                 "type": "palladium:item_in_slot",
                                 "item": {
                                     "item": "infinity:soul_stone"
+                                },
+                                "slot": "offhand"
+                            },
+                            {
+                                "type": "palladium:item_in_slot",
+                                "item": {
+                                    "item": "infinity:cosmi-rod_soul"
+                                },
+                                "slot": "mainhand"
+                            },
+                            {
+                                "type": "palladium:item_in_slot",
+                                "item": {
+                                    "item": "infinity:cosmi-rod_soul"
                                 },
                                 "slot": "offhand"
                             }
