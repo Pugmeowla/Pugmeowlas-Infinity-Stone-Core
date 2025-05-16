@@ -6,6 +6,7 @@
     "gui_display_type": "tree",
     "persistent_data": true,
     "abilities": {
+
 "shockwave": {
       "type": "palladium:projectile",
       "icon": "infinity:cosmi-rod",
@@ -15,10 +16,9 @@
       "hidden_in_bar": false,
       "entity_type": "palladium:custom_projectile",
       "entity_data": {
-        "Damage": 0,
+        "Damage": 1,
         "Gravity": 0,
-        "CommandOnEntityHit": "function fsang:sound_weakness",
-        "CommandOnBlockHit": "function fsang:sound_weakness",
+        "Lifetime": 20,
         "Appearances": [
           {
             "Type": "particles",
@@ -42,6 +42,15 @@
             "needs_empty_hand": false,
             "allow_scrolling_when_crouching": true
           }
+        ],
+         "unlocking":[
+           {
+                "type": "palladium:item_in_slot",
+                "item": {"item": "infinity:cosmi-rod"},
+                "slot": "mainhand"
+            }
+            
+            
         ]
       }
     },
