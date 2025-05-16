@@ -437,7 +437,7 @@
             "first_tick_commands": [],
             "last_tick_commands": [],
             "commands": [
-               "execute in infinity:soulworld run tp @s ~ 72 ~"
+               "execute as @e[distance=..5] run execute in infinity:soulworld run tp @s ~ 72 ~"
             ],
             "conditions": {
                  "enabling": [
@@ -513,8 +513,8 @@
             "first_tick_commands": [],
             "last_tick_commands": [],
             "commands": [
-               "execute in minecraft:overworld run tp @s ~ 72 ~",
-               "effect give @s minecraft:slow_falling 20 1 true"
+                "execute as @e[distance=..5] run effect give @e[distance=..5] minecraft:slow_falling 20 1 true",
+               "execute as @e[distance=..5] run execute in minecraft:overworld run tp @s ~ 72 ~"
             ],
             "conditions": {
                  "enabling": [
