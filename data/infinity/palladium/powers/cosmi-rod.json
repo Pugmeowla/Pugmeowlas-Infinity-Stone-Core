@@ -6,7 +6,45 @@
     "gui_display_type": "tree",
     "persistent_data": true,
     "abilities": {
-
+"shockwave": {
+      "type": "palladium:projectile",
+      "icon": "infinity:cosmi-rod",
+      "title": "Shockwave",
+      "bar_color": "light_gray",
+      "hidden": true,
+      "hidden_in_bar": false,
+      "entity_type": "palladium:custom_projectile",
+      "entity_data": {
+        "Damage": 0,
+        "Gravity": 0,
+        "CommandOnEntityHit": "function fsang:sound_weakness",
+        "CommandOnBlockHit": "function fsang:sound_weakness",
+        "Appearances": [
+          {
+            "Type": "particles",
+            "ParticleType": "infinity:shockwave",
+            "Spread": 0
+          }
+        ]
+      },
+      "inaccuracy": 0,
+      "velocity": 3.0,
+      "swinging_arm": "none",
+      "damage_from_player": false,
+      "ignore_player_movement": false,
+      "conditions": {
+       
+        "enabling": [
+          {
+            "type": "palladium:held",
+            "cooldown": 200,
+            "key_type": "key_bind",
+            "needs_empty_hand": false,
+            "allow_scrolling_when_crouching": true
+          }
+        ]
+      }
+    },
 "insert_stone_wheel":{
     "type": "palladium:ability_wheel",
     "icon": "infinity:cosmi-rod_power",
