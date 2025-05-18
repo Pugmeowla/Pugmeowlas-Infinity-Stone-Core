@@ -273,42 +273,42 @@
                             {
                                 "type": "palladium:item_in_slot",
                                 "item": {
-                                    "item": "infinity:aether"
+                                    "item": "infinity:scepter"
                                 },
                                 "slot": "mainhand"
                             },
                             {
                                 "type": "palladium:item_in_slot",
                                 "item": {
-                                    "item": "infinity:aether"
+                                    "item": "infinity:scepter"
                                 },
                                 "slot": "offhand"
                             },
                             {
                                 "type": "palladium:item_in_slot",
                                 "item": {
-                                    "item": "infinity:reality_stone"
+                                    "item": "infinity:mind_stone"
                                 },
                                 "slot": "mainhand"
                             },
                             {
                                 "type": "palladium:item_in_slot",
                                 "item": {
-                                    "item": "infinity:reality_stone"
+                                    "item": "infinity:mind_stone"
                                 },
                                 "slot": "offhand"
                             },
                             {
                                 "type": "palladium:item_in_slot",
                                 "item": {
-                                    "item": "infinity:cosmi-rod_reality"
+                                    "item": "infinity:cosmi-rod_mind"
                                 },
                                 "slot": "mainhand"
                             },
                             {
                                 "type": "palladium:item_in_slot",
                                 "item": {
-                                    "item": "infinity:cosmi-rod_reality"
+                                    "item": "infinity:cosmi-rod_mind"
                                 },
                                 "slot": "offhand"
                             }
@@ -359,48 +359,117 @@
                             {
                                 "type": "palladium:item_in_slot",
                                 "item": {
-                                    "item": "infinity:aether"
+                                    "item": "infinity:scepter"
                                 },
                                 "slot": "mainhand"
                             },
                             {
                                 "type": "palladium:item_in_slot",
                                 "item": {
-                                    "item": "infinity:aether"
+                                    "item": "infinity:scepter"
                                 },
                                 "slot": "offhand"
                             },
                             {
                                 "type": "palladium:item_in_slot",
                                 "item": {
-                                    "item": "infinity:reality_stone"
+                                    "item": "infinity:mind_stone"
                                 },
                                 "slot": "mainhand"
                             },
                             {
                                 "type": "palladium:item_in_slot",
                                 "item": {
-                                    "item": "infinity:reality_stone"
+                                    "item": "infinity:mind_stone"
                                 },
                                 "slot": "offhand"
                             },
                             {
                                 "type": "palladium:item_in_slot",
                                 "item": {
-                                    "item": "infinity:cosmi-rod_reality"
+                                    "item": "infinity:cosmi-rod_mind"
                                 },
                                 "slot": "mainhand"
                             },
                             {
                                 "type": "palladium:item_in_slot",
                                 "item": {
-                                    "item": "infinity:cosmi-rod_reality"
+                                    "item": "infinity:cosmi-rod_mind"
                                 },
                                 "slot": "offhand"
                             }
                             
                         ]
                     }
+                ]
+            }
+        },
+         "Power Blast": {
+            "type": "palladium:energy_beam",
+            "icon": "infinity:textures/icon/power_blast.png",
+            "title": "Power Blast",
+            "bar_color": "yellow",
+            "hidden": false,
+            "hidden_in_bar": false,
+            "list_index": -1,
+            "gui_position": "null",
+            "description": "null",
+            "energy_beam": "infinity:scepter_beam",
+            "damage": 20,
+            "max_distance": 50,
+            "speed": 0.5,
+            "set_on_fire_seconds": 1,
+            "cause_fire": true,
+            "smelt_blocks": false,
+            "conditions": {
+               
+                "enabling": [
+                    {
+                        "type": "palladium:ability_enabled",
+                        "ability": "aim"
+                    }
+                ],
+                "unlocking": [
+                   {
+                                "type": "palladium:item_in_slot",
+                                "item": {
+                                    "item": "infinity:scepter"
+                                },
+                                "slot": "mainhand"
+                            }
+                   
+                ]
+            }
+            
+        },
+         "aim": {
+            "type": "palladium:aim",
+            "icon": "infinity:textures/icon/power_blast.png",
+            "title": "Power Blast",
+            "bar_color": "yellow",
+            "hidden": true,
+            "hidden_in_bar": false,
+            "list_index": 2,
+            "gui_position": "null",
+            "description": "null",
+            "time": 1,
+            "arm": "main_arm",
+            "conditions": {
+                
+                "enabling": [
+                    {
+                        "type": "palladium:held",
+                        "cooldown": 0
+                    }
+                ],
+                "unlocking": [
+                     {
+                                "type": "palladium:item_in_slot",
+                                "item": {
+                                    "item": "infinity:scepter"
+                                },
+                                "slot": "mainhand"
+                            }
                 ]
             }
         }
