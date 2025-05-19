@@ -47,5 +47,9 @@
     "item.infinity.cosmi-rod_time":"Time Infused Cosmi-Rod",
     "item.infinity.cosmi-rod_soul":"Soul Infused Cosmi-Rod",
     "item.infinity.cosmi-rod_mind":"Mind Infused Cosmi-Rod",
-    "item.infinity.single_edged_sword": "Single-Edged Sword"
+    "item.infinity.single_edged_sword": "Single-Edged Sword",
+     "item.infinity.empty_tesseract": "Empty Tesseract",
+      "item.infinity.empty_eye_of_agamotto": "Empty Eye of Agamotto",
+        "item.infinity.empty_scepter": "Empty Scepter",
+        "item.infinity.empty_orb": "Empty Orb"
 }

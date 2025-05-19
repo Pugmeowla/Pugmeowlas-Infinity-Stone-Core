@@ -505,7 +505,97 @@
                     }
                 ]
             }
-        }
+        },
+         "aim":{
+            "type": "palladium:aim",
+            "hidden": true,
+            "hidden_in_bar": true,
+            "list_index": -1,
+            "time": 10,
+            "arm": "main_arm",
+            "conditions": {
+                
+                "enabling": [
+                    {
+                        "type": "palladium:item_in_slot",
+                        "item": {
+                            "item": "infinity:aether"
+                        },
+                        "slot": "mainhand"
+                    }
+                ]
+            }
+        },
+
+        "aim2":{
+            "type": "palladium:aim",
+            "hidden": true,
+            "hidden_in_bar": true,
+            "list_index": -1,
+            "time": 10,
+            "arm": "off_arm",
+            "conditions": {
+                
+                "enabling": [
+                    {
+                        "type": "palladium:item_in_slot",
+                        "item": {
+                            "item": "infinity:aether"
+                        },
+                        "slot": "offhand"
+                    }
+                ]
+            }
+        },
+       "remove_reality_stone": {
+    "type": "palladium:command",
+    "icon": "infinity:reality_stone",
+    "title": "Remove Reality Stone",
+    "bar_color": "red",
+    "hidden": true,
+    "hidden_in_bar": false,
+    "list_index": -1,
+    "gui_position": "null",
+    "description": "Remove Reality Stone",
+    "commands": [
+        "execute as @s run clear @s infinity:aether",
+       "execute as @s run give @s infinity:reality_stone{Enchantments:[{}]}",
+        "execute as @s run give @s infinity:empty_aether"
+    ],
+    "conditions": {
+        "enabling": [
+            {
+                "type": "palladium:action",
+                "cooldown": 0,                                              
+                "key_type": "key_bind",
+                "needs_empty_hand": false,
+                "allow_scrolling_when_crouching": true
+            }
+        ],
+        "unlocking":[
+             {
+                        "type": "palladium:or",
+                        "conditions": [
+                            {
+                        "type": "palladium:item_in_slot",
+                        "item": {
+                            "item": "infinity:aether"
+                        },
+                        "slot": "offhand"
+                    },
+                     {
+                        "type": "palladium:item_in_slot",
+                        "item": {
+                            "item": "infinity:aether"
+                        },
+                        "slot": "mainhand"
+                    }
+
+                        ]
+                    }
+        ]
+    }
+}
         
        
        

@@ -1,0 +1,9 @@
+{
+    "type": "palladium:armor",
+    "creative_mode_tab": "infinity:infinity",
+    "slot": "chest",
+    "rarity": "epic",
+    "is_fire_resistant": true,
+    "armor_material": "minecraft:iron",
+    "opening_toggle_sound": "minecraft:item.armor.equip_gold"
+}

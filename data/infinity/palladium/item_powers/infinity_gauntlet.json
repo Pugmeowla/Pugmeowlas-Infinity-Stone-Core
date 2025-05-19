@@ -1,5 +1,5 @@
 {
-  "slot": "offhand",
+  "slot": ["offhand","curios:hands"],
   "item": "infinity:infinity_gauntlet",
   "power": "infinity:infinity_gauntlet"
 }
