@@ -560,16 +560,74 @@
                             }
                             
                         ]
-                    },
-                {
-                    "type": "palladium:not",
-                    "conditions": [
-                        {
-                        "type": "palladium:has_tag",
-                        "tag": "op_stone"
                     }
-                ]
-                }
+            ]
+            }
+        },
+        "Explosion": {
+            "type": "palladium:command",
+            "icon": "infinity:textures/icon/teleport.png",
+            "title": "Explosion",
+            "bar_color": "light_blue",
+            "hidden": true,
+            "hidden_in_bar": true,
+            "list_index": 0,
+            "gui_position": "null",
+            "description": "null",
+            "first_tick_commands": [],
+            "last_tick_commands": [],
+            "commands": [
+                "/summon tnt ~8 ~ ~ {Fuse:0}", 
+                "/summon tnt ~-8 ~ ~ {Fuse:0}", 
+                "/summon tnt ~ ~ ~8 {Fuse:0}",  
+                "/summon tnt ~ ~ ~-8 {Fuse:0}",
+                "/summon tnt ~8 ~ ~8 {Fuse:0}",
+                "/summon tnt ~-8 ~ ~-8 {Fuse:0}",
+                "/summon tnt ~8 ~ ~-8 {Fuse:0}",
+                "/summon tnt ~-8 ~ ~8 {Fuse:0}",
+                "/effect give @s minecraft:wither 1 1 true"
+                
+            ],
+             "conditions": {
+            
+                "unlocking": [
+                {
+                        "type": "palladium:not",
+                        "conditions": [
+                            {
+                        "type": "palladium:or",
+                        "conditions": [
+                            {
+                                "type": "palladium:has_power",
+                                "power": "infinity:infinity_gauntlet"
+                            },
+                            
+                            {
+                                "type": "palladium:item_in_slot",
+                                "item": {
+                                    "item": "infinity:cosmi-rod_power"
+                                },
+                                "slot": "offhand"
+                            },
+                            {
+                                "type": "palladium:item_in_slot",
+                                "item": {
+                                    "item": "infinity:cosmi-rod_power"
+                                },
+                                "slot": "mainhand"
+                            }
+                            
+                            
+                        ]
+                    }
+                        ]},
+                        {
+                                "type": "palladium:item_in_slot",
+                                "item": {
+                                    "item": "infinity:power_stone"
+                                },
+                                "slot": "mainhand"
+                            }
             ]
             }
         }
