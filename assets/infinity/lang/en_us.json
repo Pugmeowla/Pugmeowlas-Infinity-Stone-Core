@@ -51,5 +51,6 @@
      "item.infinity.empty_tesseract": "Empty Tesseract",
       "item.infinity.empty_eye_of_agamotto": "Empty Eye of Agamotto",
         "item.infinity.empty_scepter": "Empty Scepter",
-        "item.infinity.empty_orb": "Empty Orb"
+        "item.infinity.empty_orb": "Empty Orb",
+         "entity.minecraft.villager.infinity.soul_guardian": "Soul Guardian"
 }

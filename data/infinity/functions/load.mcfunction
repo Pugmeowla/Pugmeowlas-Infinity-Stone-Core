@@ -12,6 +12,7 @@ execute in minecraft:the_end run forceload add -9375 -10457
 forceload add 9973 10035
 #vormir
 execute in minecraft:the_end run forceload add -10019 -9712
+execute in minecraft:the_end run forceload add -10001 -9704
 
 scoreboard objectives add initCheck dummy
 execute unless score global initCheck matches 2 run function infinity:init_once

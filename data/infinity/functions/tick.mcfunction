@@ -7,3 +7,5 @@ execute as @e[tag=blackhole] at @s run fill ~-1 ~-1 ~-1 ~1 ~1 ~1 air replace
 
 scoreboard players remove @e[tag=TimeStopper-stopped] TimeStopper_Time 1
 execute as @e[tag=TimeStopper-stopped,scores={TimeStopper_Time=..0}] at @s run function infinity:restore-motion
+
+tag @e[type=minecraft:wolf,nbt={Sitting:1b}] add tamed_wolf

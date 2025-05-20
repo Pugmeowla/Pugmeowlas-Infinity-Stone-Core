@@ -1,0 +1,1 @@
+execute in minecraft:the_end run execute if entity @a[x=-10019,y=64,z=-9709,dx=31,dy=86,dz=10] run give @p infinity:best_friends_soul{display:{Name:'{"text":"Best Friends Soul","color":"purple","italic":false}',Lore:['{"text":"How Could You","color":"orange","italic":true}']}} 1
