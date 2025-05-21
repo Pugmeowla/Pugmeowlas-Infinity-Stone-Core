@@ -1,5 +1,5 @@
 {
-  "slot": "mainhand",
+  "slot": "offhand",
   "item": ["infinity:mind_stone","infinity:scepter"],
   "power": "infinity:mind_stone"
 }

@@ -1,0 +1,1 @@
+global.alienevo_alien_1027 = ['infinity:celestialsapien']

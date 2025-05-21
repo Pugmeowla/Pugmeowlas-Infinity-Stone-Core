@@ -1,5 +1,5 @@
 {
-  "slot": "mainhand",
+  "slot": "curios:necklace",
   "item": ["infinity:time_stone","infinity:eye_of_agamotto"],
   "power": "infinity:time_stone"
 }
