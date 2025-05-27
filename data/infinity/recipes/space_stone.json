@@ -1,0 +1,13 @@
+{
+    "type": "minecraft:crafting_shapeless",
+    "ingredients": [
+      {
+        "item": "infinity:tesseract"
+      }
+    ],
+    "result": {
+      "item": "infinity:space_stone",
+      "count": 1
+  }
+  }
+  
