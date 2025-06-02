@@ -3,13 +3,13 @@
     "type": "minecraft:concentric_rings",
     "count": 1,
     "distance": 100,
-    "preferred_biomes": "#minecraft:is_overworld",
-    "salt": 62211,
-    "spread": 3
+    "preferred_biomes": "#minecraft:is_end",
+    "salt": 31714,
+    "spread": 2
   },
   "structures": [
     {
-      "structure": "infinity:norse_village",
+      "structure": "infinity:morag_temple",
       "weight": 1
     }
   ]

@@ -1,6 +1,6 @@
 {
   "type": "minecraft:jigsaw",
-  "start_pool": "infinity:norse_village/norse_village",
+  "start_pool": "infinity:sanctum/sanctum",
   "size": 1,
  "biomes": "#minecraft:is_overworld",
   "step": "surface_structures",

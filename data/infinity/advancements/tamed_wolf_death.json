@@ -6,6 +6,9 @@
         "entity": {
           "type": "minecraft:wolf",
           "tags": ["tamed_wolf"]
+        },
+        "player": {
+          "predicate": "infinity:near_soul_guardian"
         }
       }
     }

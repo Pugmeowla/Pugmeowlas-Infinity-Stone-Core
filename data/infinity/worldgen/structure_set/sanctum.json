@@ -2,14 +2,14 @@
   "placement": {
     "type": "minecraft:concentric_rings",
     "count": 1,
-    "distance": 100,
+    "distance": 90,
     "preferred_biomes": "#minecraft:is_overworld",
-    "salt": 62211,
-    "spread": 3
+    "salt": 11416,
+    "spread": 5
   },
   "structures": [
     {
-      "structure": "infinity:norse_village",
+      "structure": "infinity:sanctum",
       "weight": 1
     }
   ]

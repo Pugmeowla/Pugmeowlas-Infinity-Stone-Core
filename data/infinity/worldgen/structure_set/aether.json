@@ -3,13 +3,13 @@
     "type": "minecraft:concentric_rings",
     "count": 1,
     "distance": 100,
-    "preferred_biomes": "#minecraft:is_overworld",
-    "salt": 62211,
-    "spread": 3
+    "preferred_biomes": "#minecraft:is_nether",
+    "salt": 81113,
+    "spread": 1
   },
   "structures": [
     {
-      "structure": "infinity:norse_village",
+      "structure": "infinity:aether",
       "weight": 1
     }
   ]
