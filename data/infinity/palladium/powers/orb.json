@@ -1,0 +1,62 @@
+{
+    "name": "orb",
+    "background": "minecraft:textures/block/purple_concrete.png",
+    "icon": "infinity:orb",
+    "gui_display_type": "list",
+    "ability_bar_texture": "infinity:textures/gui/ability_bars/infinity_ability_bar.png",
+ 
+    "abilities": {
+       
+        "remove_power_stone": {
+    "type": "palladium:command",
+    "icon": "infinity:power_stone",
+    "title": "Remove Power Stone",
+    "bar_color": "purple",
+    "hidden": true,
+    "hidden_in_bar": false,
+    "list_index": -1,
+    "gui_position": "null",
+    "description": "Remove Power Stone",
+    "commands": [
+        "execute as @s run clear @s infinity:orb",
+       "execute as @s run give @s infinity:power_stone{Enchantments:[{}]}",
+        "execute as @s run give @s infinity:empty_orb"
+    ],
+    "conditions": {
+        "enabling": [
+            {
+                "type": "palladium:action",
+                "cooldown": 0,                                              
+                "key_type": "key_bind",
+                "needs_empty_hand": false,
+                "allow_scrolling_when_crouching": true
+            }
+        ],
+        "unlocking":[
+             {
+                        "type": "palladium:or",
+                        "conditions": [
+                            {
+                        "type": "palladium:item_in_slot",
+                        "item": {
+                            "item": "infinity:orb"
+                        },
+                        "slot": "offhand"
+                    },
+                     {
+                        "type": "palladium:item_in_slot",
+                        "item": {
+                            "item": "infinity:orb"
+                        },
+                        "slot": "mainhand"
+                    }
+
+                        ]
+                    }
+        ]
+    }
+}
+
+        }
+    }
+

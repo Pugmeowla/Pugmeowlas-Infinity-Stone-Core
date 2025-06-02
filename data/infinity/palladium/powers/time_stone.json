@@ -470,7 +470,56 @@
                     }
                 ]
             }
-        }
+        },
+         "remove_time_stone": {
+    "type": "palladium:command",
+    "icon": "infinity:time_stone",
+    "title": "Remove Time Stone",
+    "bar_color": "lime",
+    "hidden": true,
+    "hidden_in_bar": false,
+    "list_index": -1,
+    "gui_position": "null",
+    "description": "Remove Time Stone",
+    "commands": [
+        "execute as @s run clear @s infinity:eye_of_agamotto",
+       "execute as @s run give @s infinity:time_stone{Enchantments:[{}]}",
+        "execute as @s run give @s infinity:empty_eye_of_agamotto"
+    ],
+    "conditions": {
+        "enabling": [
+            {
+                "type": "palladium:action",
+                "cooldown": 0,                                              
+                "key_type": "key_bind",
+                "needs_empty_hand": false,
+                "allow_scrolling_when_crouching": true
+            }
+        ],
+        "unlocking":[
+             {
+                        "type": "palladium:or",
+                        "conditions": [
+                            {
+                        "type": "palladium:item_in_slot",
+                        "item": {
+                            "item": "infinity:eye_of_agamotto"
+                        },
+                        "slot": "offhand"
+                    },
+                     {
+                        "type": "palladium:item_in_slot",
+                        "item": {
+                            "item": "infinity:eye_of_agamotto"
+                        },
+                        "slot": "mainhand"
+                    }
+
+                        ]
+                    }
+        ]
+    }
+}
        
 
        

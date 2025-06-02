@@ -1,5 +1,5 @@
 {
   "slot": "offhand",
-  "item": ["infinity:space_stone","tesseract"],
+  "item": ["infinity:space_stone","infinity:tesseract"],
   "power": "infinity:space_stone"
 }

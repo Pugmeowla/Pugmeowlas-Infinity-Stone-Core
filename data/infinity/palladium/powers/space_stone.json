@@ -671,7 +671,56 @@
     }
                 ]
             }
-        }
+        },
+         "remove_space_stone": {
+    "type": "palladium:command",
+    "icon": "infinity:space_stone",
+    "title": "Remove Space Stone",
+    "bar_color": "light_blue",
+    "hidden": true,
+    "hidden_in_bar": false,
+    "list_index": -1,
+    "gui_position": "null",
+    "description": "Remove Space Stone",
+    "commands": [
+        "execute as @s run clear @s infinity:tesseract",
+       "execute as @s run give @s infinity:space_stone{Enchantments:[{}]}",
+        "execute as @s run give @s infinity:empty_tesseract"
+    ],
+    "conditions": {
+        "enabling": [
+            {
+                "type": "palladium:action",
+                "cooldown": 0,                                              
+                "key_type": "key_bind",
+                "needs_empty_hand": false,
+                "allow_scrolling_when_crouching": true
+            }
+        ],
+        "unlocking":[
+             {
+                        "type": "palladium:or",
+                        "conditions": [
+                            {
+                        "type": "palladium:item_in_slot",
+                        "item": {
+                            "item": "infinity:tesseract"
+                        },
+                        "slot": "offhand"
+                    },
+                     {
+                        "type": "palladium:item_in_slot",
+                        "item": {
+                            "item": "infinity:tesseract"
+                        },
+                        "slot": "mainhand"
+                    }
+
+                        ]
+                    }
+        ]
+    }
+}
         
        
 

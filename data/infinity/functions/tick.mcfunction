@@ -4,8 +4,6 @@ execute at @e[type=minecraft:armor_stand,tag=blackhole] as @e[tag=!blackholeon,t
 execute as @e[tag=blackhole] at @s run damage @e[distance=..1,type=!armor_stand,limit=1,sort=nearest,tag=!blackholeon] 5 minecraft:generic_kill
 execute as @e[tag=blackholeon] run execute at @s run tp @e[type=!player,type=!item,distance=..7,tag=blackhole] ^ ^1 ^5
 execute as @e[tag=blackhole] at @s run fill ~-1 ~-1 ~-1 ~1 ~1 ~1 air replace
-
 scoreboard players remove @e[tag=TimeStopper-stopped] TimeStopper_Time 1
 execute as @e[tag=TimeStopper-stopped,scores={TimeStopper_Time=..0}] at @s run function infinity:restore-motion
-
 tag @e[type=minecraft:wolf,nbt={Sitting:1b}] add tamed_wolf

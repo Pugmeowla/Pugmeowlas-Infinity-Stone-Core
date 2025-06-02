@@ -472,7 +472,56 @@
                             }
                 ]
             }
-        }
+        },
+         "remove_mind_stone": {
+    "type": "palladium:command",
+    "icon": "infinity:mind_stone",
+    "title": "Remove Mind Stone",
+    "bar_color": "yellow",
+    "hidden": true,
+    "hidden_in_bar": false,
+    "list_index": -1,
+    "gui_position": "null",
+    "description": "Remove Mind Stone",
+    "commands": [
+        "execute as @s run clear @s infinity:scepter",
+       "execute as @s run give @s infinity:mind_stone{Enchantments:[{}]}",
+        "execute as @s run give @s infinity:empty_scepter"
+    ],
+    "conditions": {
+        "enabling": [
+            {
+                "type": "palladium:action",
+                "cooldown": 0,                                              
+                "key_type": "key_bind",
+                "needs_empty_hand": false,
+                "allow_scrolling_when_crouching": true
+            }
+        ],
+        "unlocking":[
+             {
+                        "type": "palladium:or",
+                        "conditions": [
+                            {
+                        "type": "palladium:item_in_slot",
+                        "item": {
+                            "item": "infinity:scepter"
+                        },
+                        "slot": "offhand"
+                    },
+                     {
+                        "type": "palladium:item_in_slot",
+                        "item": {
+                            "item": "infinity:scepter"
+                        },
+                        "slot": "mainhand"
+                    }
+
+                        ]
+                    }
+        ]
+    }
+}
 
        
 
