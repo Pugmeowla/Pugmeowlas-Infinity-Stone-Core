@@ -14,10 +14,10 @@
           "r": 0.75,
           "g": 0.3,
           "b": 0.55,
-          "scale": 1
+          "scale": 4
         }
       },
-      "probability": 1
+      "probability": 1.0
     }
   },
   "spawners": {},
