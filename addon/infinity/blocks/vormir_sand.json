@@ -1,0 +1,11 @@
+{
+    "map_color": "minecraft:color_purple",
+    "sound_type": "minecraft:sand",
+    "destroy_time": 0.75,
+    "explosion_resistance": 1,
+    "render_type": "solid",
+    "no_occlusion": false,
+    "requires_correct_tool_for_drops": false,
+    "register_item": true,
+    "creative_mode_tab": "infinity:infinity"
+}

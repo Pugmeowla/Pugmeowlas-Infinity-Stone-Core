@@ -48,9 +48,10 @@
     "item.infinity.cosmi-rod_soul":"Soul Infused Cosmi-Rod",
     "item.infinity.cosmi-rod_mind":"Mind Infused Cosmi-Rod",
     "item.infinity.single_edged_sword": "Single-Edged Sword",
-     "item.infinity.empty_tesseract": "Empty Tesseract",
-      "item.infinity.empty_eye_of_agamotto": "Empty Eye of Agamotto",
-        "item.infinity.empty_scepter": "Empty Scepter",
-        "item.infinity.empty_orb": "Empty Orb",
-         "entity.minecraft.villager.infinity.soul_guardian": "Soul Guardian"
+    "item.infinity.empty_tesseract": "Empty Tesseract",
+    "item.infinity.empty_eye_of_agamotto": "Empty Eye of Agamotto",
+    "item.infinity.empty_scepter": "Empty Scepter",
+    "item.infinity.empty_orb": "Empty Orb",
+    "entity.minecraft.villager.infinity.soul_guardian": "Soul Guardian",
+    "block.infinity.vormir_sand": "Vormir Sand"
 }
