@@ -3,7 +3,7 @@
     "type": "minecraft:concentric_rings",
     "count": 1,
     "distance": 115,
-    "preferred_biomes": "#minecraft:is_end",
+    "preferred_biomes": "infinity:vormir",
     "salt": 25418,
     "spread": 6
   },
