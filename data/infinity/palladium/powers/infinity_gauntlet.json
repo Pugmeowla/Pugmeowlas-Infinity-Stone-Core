@@ -37,11 +37,10 @@
     "conditions": {
         "enabling": [
             {
-                "type": "palladium:toggle",
+                "type": "palladium:held",
                 "cooldown": 0,
                 "key_type": "key_bind",
-                "needs_empty_hand": false,
-                "allow_scrolling_when_crouching": true
+                "needs_empty_hand": false
             }
         ],
         "unlocking":[
@@ -74,12 +73,11 @@
     "texture": "null",
     "conditions": {
         "enabling": [
-            {
-                "type": "palladium:toggle",
+             {
+                "type": "palladium:held",
                 "cooldown": 0,
                 "key_type": "key_bind",
-                "needs_empty_hand": false,
-                "allow_scrolling_when_crouching": true
+                "needs_empty_hand": false
             }
         ],
         "unlocking":[
