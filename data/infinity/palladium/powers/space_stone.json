@@ -493,7 +493,8 @@
             "first_tick_commands": [],
             "last_tick_commands": [],
             "commands": [
-                "function infinity:blackhole"
+                "tag @s add blackholetag",
+                "function infinity:blackholetoggle"
             ],
             "conditions": {
                 
