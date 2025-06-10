@@ -151,7 +151,7 @@
     "bar_color": "purple",
     "hidden": true,
     "hidden_in_bar": true,
-    "list_index": 5,
+    "list_index": -1,
     "gui_position": "null",
     "description": "Remove Power Stone",
     "commands": [
@@ -233,7 +233,7 @@
     "bar_color": "light_blue",
     "hidden": true,
     "hidden_in_bar": true,
-    "list_index": 6,
+    "list_index": -1,
     "gui_position": "null",
     "description": "Remove Space Stone",
     "commands": [
@@ -315,7 +315,7 @@
     "bar_color": "red",
     "hidden": true,
     "hidden_in_bar": true,
-    "list_index": 7,
+    "list_index": -1,
     "gui_position": "null",
     "description": "Remove Reality Stone",
     "commands": [
@@ -397,7 +397,7 @@
     "bar_color": "lime",
     "hidden": true,
     "hidden_in_bar": true,
-    "list_index": 8,
+    "list_index": -1,
     "gui_position": "null",
     "description": "Remove Time Stone",
     "commands": [
@@ -479,7 +479,7 @@
     "bar_color": "orange",
     "hidden": true,
     "hidden_in_bar": true,
-    "list_index": 9,
+    "list_index": -1,
     "gui_position": "null",
     "description": "Remove Soul Stone",
     "commands": [
@@ -561,7 +561,7 @@
     "bar_color": "yellow",
     "hidden": true,
     "hidden_in_bar": true,
-    "list_index": 10,
+    "list_index": -1,
     "gui_position": "null",
     "description": "Remove Mind Stone",
     "commands": [

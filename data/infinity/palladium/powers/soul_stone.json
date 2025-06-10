@@ -514,6 +514,7 @@
             "last_tick_commands": [],
             "commands": [
                 "execute as @e[distance=..5] run effect give @e[distance=..5] minecraft:slow_falling 20 1 true",
+                "effect give @s minecraft:slow_falling 20 1 true",
                "execute as @e[distance=..5] run execute in minecraft:overworld run tp @s ~ 72 ~"
             ],
             "conditions": {

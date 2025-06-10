@@ -516,14 +516,7 @@
                 "type": "palladium:has_power",
                 "power": "infinity:power_stone_passive"
             },
-            {
-                "type": "palladium:not",
-                "conditions": [
-                    {
-                        "type": "palladium:crouching"
-                    }
-                ]
-            },
+            
             {
         "type": "palladium:or",
         "conditions": [
@@ -579,100 +572,7 @@
                 ]
             }
         },
-        "black_hole_off": {
-            "type": "palladium:command",
-            "icon": "minecraft:barrier",
-            "title": "Black Hole Off",
-            "bar_color": "light_blue",
-            "hidden": true,
-            "hidden_in_bar": false,
-            "list_index": 3,
-         "gui_position": "null",
-            "description": "null",
-            "first_tick_commands": [],
-            "last_tick_commands": [],
-            "commands": [
-                "kill @e[tag=blackhole]",
-                "tag @s remove blackholeon"
-            ],
-            "conditions": {
-                
-                "enabling": [
-                    {
-                        "type": "palladium:action",
-                        "cooldown": 0,
-                        "key_type": "key_bind",
-                        "needs_empty_hand": false,
-                        "allow_scrolling_when_crouching": true
-                    }
-                ],
-                "unlocking": [
-                    {   
-                "type": "palladium:has_power",
-                "power": "infinity:space_stone"
-            },
-            {   
-                "type": "palladium:has_power",
-                "power": "infinity:power_stone_passive"
-            },
-            {
-                "type": "palladium:crouching"
-            },
-            {
-        "type": "palladium:or",
-        "conditions": [
-            {
-                "type": "palladium:has_power",
-                "power": "infinity:infinity_gauntlet"
-            },
-            {
-                "type": "palladium:item_in_slot",
-                "item": {
-                    "item": "infinity:tesseract"
-                },
-                "slot": "mainhand"
-            },
-            {
-                "type": "palladium:item_in_slot",
-                "item": {
-                    "item": "infinity:tesseract"
-                },
-                "slot": "offhand"
-            },
-            {
-                "type": "palladium:item_in_slot",
-                "item": {
-                    "item": "infinity:space_stone"
-                },
-                "slot": "mainhand"
-            },
-            {
-                "type": "palladium:item_in_slot",
-                "item": {
-                    "item": "infinity:space_stone"
-                },
-                "slot": "offhand"
-            },
-             {
-                "type": "palladium:item_in_slot",
-                "item": {
-                    "item": "infinity:cosmi-rod_space"
-                },
-                "slot": "mainhand"
-            },
-            {
-                "type": "palladium:item_in_slot",
-                "item": {
-                    "item": "infinity:cosmi-rod_space"
-                },
-                "slot": "offhand"
-            }
-            
-        ]
-    }
-                ]
-            }
-        },
+       
          "remove_space_stone": {
     "type": "palladium:command",
     "icon": "infinity:space_stone",

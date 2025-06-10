@@ -6,7 +6,34 @@
     "ability_bar_texture": "infinity:textures/gui/ability_bars/infinity_ability_bar.png",
  
     "abilities": {
-      
+      "power_stone_stuff":{
+    "type": "palladium:ability_wheel",
+    "icon": "infinity:textures/item/infinity_gauntlet2.png",
+    "title": "test",
+    "bar_color": "light_gray",
+    "hidden": false,
+    "hidden_in_bar": false,
+    "list_index": 2,
+    "gui_position": "null",
+    "description": "null",
+    "abilities": [
+    
+          "aim_3",
+           "Impower"
+        
+    ],
+    "texture": "null",
+    "conditions": {
+        "enabling": [
+            {
+                "type": "palladium:held",
+                "cooldown": 0,
+                "key_type": "key_bind",
+                "needs_empty_hand": false
+            }
+        ]
+    }
+},
         
       
         "Power Blast": {
