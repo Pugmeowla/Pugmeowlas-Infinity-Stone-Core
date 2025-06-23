@@ -494,6 +494,7 @@
             "last_tick_commands": [],
             "commands": [
                 "tag @s add blackholetag",
+                "scoreboard players set @a blackholetoggle 0",
                 "function infinity:blackholetoggle"
             ],
             "conditions": {
