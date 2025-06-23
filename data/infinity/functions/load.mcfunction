@@ -6,6 +6,7 @@ scoreboard objectives add TimeStopper_Y dummy
 scoreboard objectives add TimeStopper_Z dummy
 scoreboard objectives add TimeStopper_Time dummy
 scoreboard objectives add blackholetoggle dummy
+scoreboard players set @a blackholetoggle 0
 team add peaceful
 scoreboard objectives add initCheck dummy
 execute unless score global initCheck matches 2 run function infinity:init_once
