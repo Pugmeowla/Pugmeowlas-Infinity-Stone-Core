@@ -8,7 +8,7 @@
     "abilities": {
       
         "Teleport": {
-            "type": "palladium:command",
+           "type": "palladium:dummy",
             "icon": "infinity:textures/icon/teleport.png",
             "title": "Teleport",
             "bar_color": "light_blue",
@@ -20,17 +20,13 @@
             "first_tick_commands": [],
             "last_tick_commands": [],
             "commands": [
-                "say will be fixed later on"
+                ""
             ],
             "conditions": {
                 
                 "enabling": [
                     {
-                        "type": "palladium:action",
-                        "cooldown": 0,
-                        "key_type": "key_bind",
-                        "needs_empty_hand": false,
-                        "allow_scrolling_when_crouching": true
+                        "type": "palladium:true"
                     }
                 ],
                 "unlocking": [
