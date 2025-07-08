@@ -18,8 +18,10 @@ ServerEvents.commandRegistry(event => {
 
                             let username = player.getGameProfile().getName();
 
-                            if (abilityUtil.isEnabled(player, 'infinity:space_stone', 'Teleport')) {
+                            if (abilityUtil.isEnabled(player, 'infinity:space_stone', 'teleport_command')) {
                                 server.runCommandSilent(`execute as ${username} at @s in ${dim} as @e[distance=..3] run execute in ${dimension} run tp @s ${x} ${y} ${z}`)
+                                server.runCommandSilent(`summon armor_stand ~ ~ ~ {Tags:["temp_stand"],NoGravity:1b,Invisible:1b,ArmorItems:[{},{},{},{id:"infinity:portal",Count:1b}]}`)
+                                server.runCommandSilent(`schedule function infinity:space_tp_remove 2s`)
                             
                 }
             
