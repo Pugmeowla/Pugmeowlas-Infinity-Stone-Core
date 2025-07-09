@@ -1,0 +1,26 @@
+{
+    "space_stone_portal":{
+        "sounds":[
+            "infinity:space_stone_portal",
+            "infinity:space_stone_portal2",
+            "infinity:space_stone_portal3",
+            "infinity:space_stone_portal4",
+            "infinity:space_stone_portal5"
+        ]
+    },
+     "space_stone_grab":{
+        "sounds":[
+            "infinity:space_stone_grab"
+        ]
+    },
+     "space_stone_random":{
+        "sounds":[
+            "infinity:space_stone_random"
+        ]
+    },
+     "black_hole":{
+        "sounds":[
+            "infinity:black_hole"
+        ]
+    }
+}

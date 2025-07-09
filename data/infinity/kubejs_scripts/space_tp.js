@@ -22,6 +22,7 @@ ServerEvents.commandRegistry(event => {
                                 server.runCommandSilent(`execute as ${username} at @s in ${dim} as @e[distance=..3] run execute in ${dimension} run tp @s ${x} ${y} ${z}`)
                                 server.runCommandSilent(`summon armor_stand ~ ~ ~ {Tags:["temp_stand"],NoGravity:1b,Invisible:1b,ArmorItems:[{},{},{},{id:"infinity:portal",Count:1b}]}`)
                                 server.runCommandSilent(`schedule function infinity:space_tp_remove 2s`)
+                                server.runCommandSilent(`playsound infinity:space_stone_portal block @a ~ ~ ~ 1 1 1`)
                             
                 }
             

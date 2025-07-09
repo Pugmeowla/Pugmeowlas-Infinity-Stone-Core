@@ -180,7 +180,7 @@
             "list_index": 1,
             "gui_position": "null",
             "description": "Telekinesis, pretty self explanitory",
-            "first_tick_commands": [],
+            "first_tick_commands": ["playsound infinity:space_stone_grab player @a ~ ~ ~"],
             "last_tick_commands": [],
             "commands": [
                 "execute as @s run execute at @s run tp @e[type=!player,type=!item,distance=..7] ^ ^1 ^5",
@@ -569,8 +569,8 @@
             "hidden_in_bar": false,
             "list_index": 3,
          "gui_position": "null",
-            "description": "The Black Hole sucks and kills entities nearby, as well as eating all blocks around it",
-            "first_tick_commands": [],
+            "description": "The Black Hole sucks and kills entities nearby, as well as eating all blocks around it. It requires both the Space and Power Stones.",
+            "first_tick_commands": ["playsound infinity:black_hole player @a ~ ~ ~"],
             "last_tick_commands": [],
             "commands": [
                 "tag @a add blackholeon",
@@ -808,10 +808,90 @@
                     }
         ]
     }
-}
+},
+"fall_immunity": {
+"type": "palladium:damage_immunity",
+    "icon": "minecraft:diamond_boots",
+    "title": "Fall Damage Immunity",
+    "bar_color": "light_gray",
+    "hidden": false,
+    "hidden_in_bar": true,
+    "list_index": -1,
+    "gui_position": "null",
+    "description": "Negates Fall Damage",
+    "damage_sources": [
+        "minecraft:is_fall"
+    ],
+    "conditions": {
+                
+               
+                "unlocking": [
+                    
+                    {   
+                "type": "palladium:has_power",
+                "power": "infinity:space_stone"
+            },
+           
+            
+            {
+        "type": "palladium:or",
+        "conditions": [
+            {
+                "type": "palladium:has_power",
+                "power": "infinity:infinity_gauntlet"
+            },
+            {
+                "type": "palladium:item_in_slot",
+                "item": {
+                    "item": "infinity:tesseract"
+                },
+                "slot": "mainhand"
+            },
+            {
+                "type": "palladium:item_in_slot",
+                "item": {
+                    "item": "infinity:tesseract"
+                },
+                "slot": "offhand"
+            },
+            {
+                "type": "palladium:item_in_slot",
+                "item": {
+                    "item": "infinity:space_stone"
+                },
+                "slot": "mainhand"
+            },
+            {
+                "type": "palladium:item_in_slot",
+                "item": {
+                    "item": "infinity:space_stone"
+                },
+                "slot": "offhand"
+            },
+             {
+                "type": "palladium:item_in_slot",
+                "item": {
+                    "item": "infinity:cosmi-rod_space"
+                },
+                "slot": "mainhand"
+            },
+            {
+                "type": "palladium:item_in_slot",
+                "item": {
+                    "item": "infinity:cosmi-rod_space"
+                },
+                "slot": "offhand"
+            }
+            
+        ]
+    }
+                ]
+            }        
+        
         
        
 
        
     }
+}
 }
