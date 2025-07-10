@@ -210,11 +210,11 @@
                 ]
             }
         },
-               "immunity": {
+               "invulnerability": {
             
     "type": "palladium:damage_immunity",
     "icon": "minecraft:potion",
-    "title": "null",
+    "title": "invulnerability",
     "bar_color": "light_gray",
     "hidden": false,
     "hidden_in_bar": false,
@@ -222,7 +222,8 @@
     "gui_position": "null",
     "description": "null",
     "damage_sources": [
-        "minecraft:bypasses_invulnerability"
+        "minecraft:bypasses_invulnerability",
+        "minecraft:no_impact"
     ],
             "conditions": {
                 

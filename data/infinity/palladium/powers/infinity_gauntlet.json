@@ -46,51 +46,36 @@
         "unlocking":[
             {
                 "type": "palladium:crouching"
-            }
-        ]
-    }
-},
-
-"insert_stone_wheel":{
-    "type": "palladium:ability_wheel",
-    "icon": "infinity:textures/item/infinity_gauntlet_full.png",
-    "title": "insert Stone",
-    "bar_color": "light_gray",
-    "hidden": false,
-    "hidden_in_bar": false,
-    "list_index": 0,
-    "gui_position": "null",
-    "description": "null",
-    "abilities": [
-        "insert_power_stone",
-         "insert_space_stone",
-          "insert_reality_stone",
-           "insert_time_stone",
-            "insert_soul_stone",
-             "insert_mind_stone"
-        
-    ],
-    "texture": "null",
-    "conditions": {
-        "enabling": [
-             {
-                "type": "palladium:held",
-                "cooldown": 0,
-                "key_type": "key_bind",
-                "needs_empty_hand": false
-            }
-        ],
-        "unlocking":[
+            },
             {
-                "type": "palladium:not",
-                "conditions": [
-                    {
-                        "type": "palladium:crouching"
-                    }
-                ]
+    "type": "palladium:or",
+    "conditions": [
+        {   
+                "type": "palladium:has_power",
+                "power": "infinity:mind_stone"
+            },
+            {   
+                "type": "palladium:has_power",
+                "power": "infinity:power_stone_passive"
+            },
+            {   
+                "type": "palladium:has_power",
+                "power": "infinity:space_stone"
+            },
+            {   
+                "type": "palladium:has_power",
+                "power": "infinity:reality_stone"
+            },
+            {   
+                "type": "palladium:has_power",
+                "power": "infinity:time_stone"
+            },
+            {   
+                "type": "palladium:has_power",
+                "power": "infinity:soul_stone"
             }
-            
-            
+    ]
+}
         ]
     }
 },
@@ -101,8 +86,8 @@
     "title": "Insert Power Stone",
     "bar_color": "purple",
     "hidden": true,
-    "hidden_in_bar": true,
-    "list_index": -1,
+    "hidden_in_bar": false,
+    "list_index": 0,
     "gui_position": "null",
     "description": "Power Stone Abilities",
     "commands": [
@@ -189,8 +174,8 @@
     "title": "Insert Space Stone",
     "bar_color": "light_blue",
     "hidden": true,
-    "hidden_in_bar": true,
-    "list_index": -1,
+    "hidden_in_bar": false,
+    "list_index": 0,
     "gui_position": "null",
     "description": "Space Stone Abilities",
     "commands": [
@@ -270,8 +255,8 @@
     "title": "Insert Reality Stone",
     "bar_color": "red",
     "hidden": true,
-    "hidden_in_bar": true,
-    "list_index": -1,
+    "hidden_in_bar": false,
+    "list_index": 0,
     "gui_position": "null",
     "description": "Reality Stone Abilities",
     "commands": [
@@ -352,8 +337,8 @@
     "title": "Insert Time Stone",
     "bar_color": "lime",
     "hidden": true,
-    "hidden_in_bar": true,
-    "list_index": -1,
+    "hidden_in_bar": false,
+    "list_index": 0,
     "gui_position": "null",
     "description": "Time Stone Abilities",
     "commands": [
@@ -434,8 +419,8 @@
     "title": "Insert Soul Stone",
     "bar_color": "orange",
     "hidden": true,
-    "hidden_in_bar": true,
-    "list_index": -1,
+    "hidden_in_bar": false,
+    "list_index": 0,
     "gui_position": "null",
     "description": "Soul Stone Abilities",
     "commands": [
@@ -516,8 +501,8 @@
     "title": "Insert Mind Stone",
     "bar_color": "yellow",
     "hidden": true,
-    "hidden_in_bar": true,
-    "list_index": -1,
+    "hidden_in_bar": false,
+    "list_index": 0,
     "gui_position": "null",
     "description": "Mind Stone Abilities",
     "commands": [
@@ -706,34 +691,6 @@
                 "power": "infinity:soul_stone"
             }
             
-        ]
-    }
-},
-"power_stone_stuff":{
-    "type": "palladium:ability_wheel",
-    "icon": "infinity:textures/item/infinity_gauntlet2.png",
-    "title": "test",
-    "bar_color": "light_gray",
-    "hidden": false,
-    "hidden_in_bar": false,
-    "list_index": 3,
-    "gui_position": "null",
-    "description": "null",
-    "abilities": [
-    
-          "aim_3",
-           "Impower"
-        
-    ],
-    "texture": "null",
-    "conditions": {
-        "enabling": [
-            {
-                "type": "palladium:held",
-                "cooldown": 0,
-                "key_type": "key_bind",
-                "needs_empty_hand": false
-            }
         ]
     }
 }

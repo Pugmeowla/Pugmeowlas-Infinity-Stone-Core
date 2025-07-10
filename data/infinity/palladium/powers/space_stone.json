@@ -892,6 +892,152 @@
        
 
        
+    },
+     "step_assist":{
+            "type": "palladium:attribute_modifier",
+            "icon": "infinity:textures/icon/force_field.png",
+            "title": "Step Assist",
+            "bar_color": "light_blue",
+            "hidden": false,
+            "hidden_in_bar": true,
+            "list_index": -1,
+            "gui_position": "null",
+            "description": "Lets you walk up a whole block at once",
+            "attribute": "forge:step_height_addition",
+            "amount": 0.5,
+            "operation": 0,
+            "uuid": "498be4fb-af04-42f2-8948-e6ccdc0d99e1",
+            "conditions": {
+                
+                
+                "unlocking": [
+                    {
+        "type": "palladium:or",
+        "conditions": [
+            {
+                "type": "palladium:has_power",
+                "power": "infinity:infinity_gauntlet"
+            },
+            {
+                "type": "palladium:item_in_slot",
+                "item": {
+                    "item": "infinity:tesseract"
+                },
+                "slot": "mainhand"
+            },
+            {
+                "type": "palladium:item_in_slot",
+                "item": {
+                    "item": "infinity:tesseract"
+                },
+                "slot": "offhand"
+            },
+            {
+                "type": "palladium:item_in_slot",
+                "item": {
+                    "item": "infinity:space_stone"
+                },
+                "slot": "mainhand"
+            },
+            {
+                "type": "palladium:item_in_slot",
+                "item": {
+                    "item": "infinity:space_stone"
+                },
+                "slot": "offhand"
+            },
+             {
+                "type": "palladium:item_in_slot",
+                "item": {
+                    "item": "infinity:cosmi-rod_space"
+                },
+                "slot": "mainhand"
+            },
+            {
+                "type": "palladium:item_in_slot",
+                "item": {
+                    "item": "infinity:cosmi-rod_space"
+                },
+                "slot": "offhand"
+            }
+            
+        ]
     }
+                ]
+            }
+        },
+         "speed":{
+            "type": "palladium:attribute_modifier",
+            "icon": "infinity:textures/icon/force_field.png",
+            "title": "Step Assist",
+            "bar_color": "light_blue",
+            "hidden": false,
+            "hidden_in_bar": true,
+            "list_index": -1,
+            "gui_position": "null",
+            "description": "Lets you run faster",
+            "attribute": "minecraft:generic.movement_speed",
+            "amount": 0.05,
+            "operation": 0,
+            "uuid": "498be4fb-af04-42f2-8948-e6ccdc0d99e1",
+            "conditions": {
+                
+                
+                "unlocking": [
+                    {
+        "type": "palladium:or",
+        "conditions": [
+            {
+                "type": "palladium:has_power",
+                "power": "infinity:infinity_gauntlet"
+            },
+            {
+                "type": "palladium:item_in_slot",
+                "item": {
+                    "item": "infinity:tesseract"
+                },
+                "slot": "mainhand"
+            },
+            {
+                "type": "palladium:item_in_slot",
+                "item": {
+                    "item": "infinity:tesseract"
+                },
+                "slot": "offhand"
+            },
+            {
+                "type": "palladium:item_in_slot",
+                "item": {
+                    "item": "infinity:space_stone"
+                },
+                "slot": "mainhand"
+            },
+            {
+                "type": "palladium:item_in_slot",
+                "item": {
+                    "item": "infinity:space_stone"
+                },
+                "slot": "offhand"
+            },
+             {
+                "type": "palladium:item_in_slot",
+                "item": {
+                    "item": "infinity:cosmi-rod_space"
+                },
+                "slot": "mainhand"
+            },
+            {
+                "type": "palladium:item_in_slot",
+                "item": {
+                    "item": "infinity:cosmi-rod_space"
+                },
+                "slot": "offhand"
+            }
+            
+        ]
+    }
+                ]
+            }
+        }
 }
 }
