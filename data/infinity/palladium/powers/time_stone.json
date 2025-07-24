@@ -16,7 +16,7 @@
             "hidden_in_bar": false,
             "list_index": 0,
             "gui_position": "null",
-            "description": "null",
+            "description": "Fast forwards daylight cycle",
             "first_tick_commands": [],
             "last_tick_commands": [],
             "commands": [
@@ -112,7 +112,7 @@
             "hidden_in_bar": false,
             "list_index": 1,
             "gui_position": "null",
-            "description": "null",
+            "description": "Stops the daylight cycle",
             "first_tick_commands": [],
             "last_tick_commands": [],
             "commands": [
@@ -211,7 +211,7 @@
             "hidden_in_bar": false,
             "list_index": 1,
             "gui_position": "null",
-            "description": "null",
+            "description": "Starts the daylight cycle",
             "first_tick_commands": [],
             "last_tick_commands": [],
             "commands": [
@@ -384,7 +384,7 @@
             "hidden_in_bar": false,
             "list_index": 2,
             "gui_position": "null",
-            "description": "null",
+            "description": "Stops all projectiles around you. When you laeve them, the projectiles will eventually regain momentumn",
             "first_tick_commands": [],
             "last_tick_commands": [],
             "commands": [

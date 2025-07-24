@@ -16,7 +16,7 @@
             "hidden_in_bar": false,
             "list_index": 0,
             "gui_position": "null",
-            "description": "null",
+            "description": "Shrinks the player to 1/10th scale",
             "scale": 0.1,
             "conditions": {
                 
@@ -94,7 +94,7 @@
             "hidden_in_bar": false,
             "list_index": 1,
             "gui_position": "null",
-            "description": "null",
+            "description": "Grows the player to 10x scale",
             "scale": 10,
             "conditions": {
                 
@@ -172,7 +172,7 @@
             "hidden_in_bar": false,
             "list_index": 2,
             "gui_position": "null",
-            "description": "null",
+            "description": "Makes you truly invisible",
             "conditions": {
                 
                 "enabling": [
@@ -244,13 +244,13 @@
         "Save Block On": {
             "type": "palladium:command",
             "icon": "infinity:reality_stone",
-            "title": "Save Block On",
+            "title": "Block Duplication On",
             "bar_color": "red",
             "hidden": false,
             "hidden_in_bar": false,
             "list_index": 3,
             "gui_position": "null",
-            "description": "null",
+            "description": "Turns on Block Duplication",
             "first_tick_commands": [],
             "last_tick_commands": [],
             "commands": [
@@ -334,13 +334,13 @@
         "Save Block Off": {
             "type": "palladium:command",
             "icon": "minecraft:barrier",
-            "title": "Save Block Off",
+            "title": "Block Duplication Off",
             "bar_color": "red",
             "hidden": false,
             "hidden_in_bar": false,
             "list_index": 3,
             "gui_position": "null",
-            "description": "null",
+            "description": "Turns off Block Duplication",
             "first_tick_commands": [],
             "last_tick_commands": [],
             "commands": [
@@ -425,7 +425,7 @@
             "hidden_in_bar": false,
             "list_index": 4,
             "gui_position": "null",
-            "description": "null",
+            "description": "Gives entities nearby blindness, nausea, darkness and slowness",
             "first_tick_commands": [],
             "last_tick_commands": [],
             "commands": [
