@@ -1,6 +1,6 @@
 {
     "name": "Infinity Gauntlet",
-    "background": "minecraft:textures/block/sculk.png",
+    "background": "infinity:textures/gui/powers/infinity_window.png",
     "icon": "infinity:infinity_gauntlet",
     "ability_bar_texture": "infinity:textures/gui/ability_bars/infinity_ability_bar.png",
     "gui_display_type": "tree",
