@@ -1,8 +1,10 @@
 {
     "max_stack_size": 1,
-    "creative_mode_tab": [
-        "infinity:infinity"
-    ],
+    "creative_mode_tab": {
+        "tab": "infinity:infinity",
+        "before": "infinity:orb",
+         "after": "infinity:soul_stone"
+    },
     "rarity": "epic",
     "is_fire_resistant": true
 }

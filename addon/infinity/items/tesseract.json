@@ -1,8 +1,10 @@
 {
     "max_stack_size": 1,
-    "creative_mode_tab": [
-        "infinity:infinity"
-    ],
+    "creative_mode_tab": {
+        "tab": "infinity:infinity",
+        "before": "infinity:aether",
+         "after": "infinity:orb"
+    },
     "rarity": "epic",
     "is_fire_resistant": true
 }

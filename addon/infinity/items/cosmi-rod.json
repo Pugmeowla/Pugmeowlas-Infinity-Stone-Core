@@ -1,7 +1,10 @@
 {
   "type": "palladium:sword",
   "max_stack_size": 1,
-  "creative_mode_tab": "infinity:infinity",
+  "creative_mode_tab": {
+        "tab": "infinity:infinity",
+        "before": "infinity:best_friends_soul"
+    },
   "rarity": "epic",
   "is_fire_resistant": true,
   "tier": "minecraft:netherite",

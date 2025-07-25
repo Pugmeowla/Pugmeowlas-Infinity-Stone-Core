@@ -11,7 +11,31 @@
      "type": "palladium:render_layer",
      "hidden": true,
      "hidden_in_bar": true,
-     "render_layer": "infinity:gauntlet"    
+     "render_layer": "infinity:gauntlet",
+     "conditions":{
+        "enabling":[
+            {
+    "type": "palladium:or",
+    "conditions": [
+        {
+    "type": "palladium:item_in_slot",
+    "item": {
+        "item": "infinity:infinity_gauntlet"
+    },
+    "slot": "offhand"
+},
+{
+    "type": "palladium:item_in_slot",
+    "item": {
+        "item": "infinity:infinity_gauntlet"
+    },
+    "slot": "curios:hands"
+}
+    ]
+}
+            
+        ]
+     }    
 },
 
 "remove_stone_wheel":{
@@ -132,6 +156,61 @@
     "objective": "power_stone",
     "min_score": 1,
     "max_score": 1
+},
+{
+    "type": "palladium:or",
+    "conditions": [
+        {
+    "type": "palladium:item_in_slot",
+    "item": {
+        "item": "infinity:infinity_gauntlet"
+    },
+    "slot": "offhand"
+},
+{
+    "type": "palladium:item_in_slot",
+    "item": {
+        "item": "infinity:infinity_gauntlet"
+    },
+    "slot": "curios:hands"
+}
+    ]
+}
+        ]
+    }
+},
+
+"render_layer_power_mainhand": {
+    "type": "palladium:render_layer",
+    "hidden": true,
+    "hidden_in_bar": true,
+    "render_layer": "infinity:gauntlet_power_mainhand",
+    "conditions": {
+        "enabling": [
+            {
+    "type": "palladium:objective_score",
+    "objective": "power_stone",
+    "min_score": 1,
+    "max_score": 1
+},
+{
+    "type": "palladium:or",
+    "conditions": [
+        {
+    "type": "palladium:item_in_slot",
+    "item": {
+        "item": "infinity:infinity_gauntlet"
+    },
+    "slot": "offhand"
+},
+{
+    "type": "palladium:item_in_slot",
+    "item": {
+        "item": "infinity:infinity_gauntlet"
+    },
+    "slot": "curios:hands"
+}
+    ]
 }
         ]
     }
@@ -218,6 +297,61 @@
     "objective": "space_stone",
     "min_score": 1,
     "max_score": 1
+},
+{
+    "type": "palladium:or",
+    "conditions": [
+        {
+    "type": "palladium:item_in_slot",
+    "item": {
+        "item": "infinity:infinity_gauntlet"
+    },
+    "slot": "offhand"
+},
+{
+    "type": "palladium:item_in_slot",
+    "item": {
+        "item": "infinity:infinity_gauntlet"
+    },
+    "slot": "curios:hands"
+}
+    ]
+}
+        ]
+    }
+},
+
+"render_layer_space_mainhand": {
+    "type": "palladium:render_layer",
+    "hidden": true,
+    "hidden_in_bar": true,
+    "render_layer": "infinity:gauntlet_space_mainhand",
+    "conditions": {
+        "enabling": [
+             {
+    "type": "palladium:objective_score",
+    "objective": "space_stone",
+    "min_score": 1,
+    "max_score": 1
+},
+{
+    "type": "palladium:or",
+    "conditions": [
+        {
+    "type": "palladium:item_in_slot",
+    "item": {
+        "item": "infinity:infinity_gauntlet"
+    },
+    "slot": "offhand"
+},
+{
+    "type": "palladium:item_in_slot",
+    "item": {
+        "item": "infinity:infinity_gauntlet"
+    },
+    "slot": "curios:hands"
+}
+    ]
 }
         ]
     }
@@ -304,6 +438,61 @@
     "objective": "reality_stone",
     "min_score": 1,
     "max_score": 1
+},
+{
+    "type": "palladium:or",
+    "conditions": [
+        {
+    "type": "palladium:item_in_slot",
+    "item": {
+        "item": "infinity:infinity_gauntlet"
+    },
+    "slot": "offhand"
+},
+{
+    "type": "palladium:item_in_slot",
+    "item": {
+        "item": "infinity:infinity_gauntlet"
+    },
+    "slot": "curios:hands"
+}
+    ]
+}
+        ]
+    }
+},
+
+"render_layer_reality_mainhand": {
+    "type": "palladium:render_layer",
+    "hidden": true,
+    "hidden_in_bar": true,
+    "render_layer": "infinity:gauntlet_reality_mainhand",
+    "conditions": {
+        "enabling": [
+            {
+    "type": "palladium:objective_score",
+    "objective": "reality_stone",
+    "min_score": 1,
+    "max_score": 1
+},
+{
+    "type": "palladium:or",
+    "conditions": [
+        {
+    "type": "palladium:item_in_slot",
+    "item": {
+        "item": "infinity:infinity_gauntlet"
+    },
+    "slot": "offhand"
+},
+{
+    "type": "palladium:item_in_slot",
+    "item": {
+        "item": "infinity:infinity_gauntlet"
+    },
+    "slot": "curios:hands"
+}
+    ]
 }
         ]
     }
@@ -390,6 +579,60 @@
     "objective": "time_stone",
     "min_score": 1,
     "max_score": 1
+},
+{
+    "type": "palladium:or",
+    "conditions": [
+        {
+    "type": "palladium:item_in_slot",
+    "item": {
+        "item": "infinity:infinity_gauntlet"
+    },
+    "slot": "offhand"
+},
+{
+    "type": "palladium:item_in_slot",
+    "item": {
+        "item": "infinity:infinity_gauntlet"
+    },
+    "slot": "curios:hands"
+}
+    ]
+}
+        ]
+    }
+},
+"render_layer_time_mainhand": {
+    "type": "palladium:render_layer",
+    "hidden": true,
+    "hidden_in_bar": true,
+    "render_layer": "infinity:gauntlet_time_mainhand",
+    "conditions": {
+        "enabling": [
+             {
+    "type": "palladium:objective_score",
+    "objective": "time_stone",
+    "min_score": 1,
+    "max_score": 1
+},
+{
+    "type": "palladium:or",
+    "conditions": [
+        {
+    "type": "palladium:item_in_slot",
+    "item": {
+        "item": "infinity:infinity_gauntlet"
+    },
+    "slot": "offhand"
+},
+{
+    "type": "palladium:item_in_slot",
+    "item": {
+        "item": "infinity:infinity_gauntlet"
+    },
+    "slot": "curios:hands"
+}
+    ]
 }
         ]
     }
@@ -476,6 +719,49 @@
     "objective": "soul_stone",
     "min_score": 1,
     "max_score": 1
+},
+{
+    "type": "palladium:or",
+    "conditions": [
+        {
+    "type": "palladium:item_in_slot",
+    "item": {
+        "item": "infinity:infinity_gauntlet"
+    },
+    "slot": "offhand"
+},
+{
+    "type": "palladium:item_in_slot",
+    "item": {
+        "item": "infinity:infinity_gauntlet"
+    },
+    "slot": "curios:hands"
+}
+    ]
+}
+        ]
+    }
+},
+
+"render_layer_soul_mainhand": {
+    "type": "palladium:render_layer",
+    "hidden": true,
+    "hidden_in_bar": true,
+    "render_layer": "infinity:gauntlet_soul_mainhand",
+    "conditions": {
+        "enabling": [
+             {
+    "type": "palladium:objective_score",
+    "objective": "soul_stone",
+    "min_score": 1,
+    "max_score": 1
+},
+{
+    "type": "palladium:item_in_slot",
+    "item": {
+        "item": "infinity:infinity_gauntlet"
+    },
+    "slot": "mainhand"
 }
         ]
     }
@@ -562,10 +848,53 @@
     "objective": "mind_stone",
     "min_score": 1,
     "max_score": 1
+},
+{
+    "type": "palladium:or",
+    "conditions": [
+        {
+    "type": "palladium:item_in_slot",
+    "item": {
+        "item": "infinity:infinity_gauntlet"
+    },
+    "slot": "offhand"
+},
+{
+    "type": "palladium:item_in_slot",
+    "item": {
+        "item": "infinity:infinity_gauntlet"
+    },
+    "slot": "curios:hands"
+}
+    ]
 }
         ]
     }
 },
+"render_layer_mind_mainhand": {
+    "type": "palladium:render_layer",
+    "hidden": true,
+    "hidden_in_bar": true,
+    "render_layer": "infinity:gauntlet_mind_mainhand",
+    "conditions": {
+        "enabling": [
+            {
+    "type": "palladium:objective_score",
+    "objective": "mind_stone",
+    "min_score": 1,
+    "max_score": 1
+},
+ {
+    "type": "palladium:item_in_slot",
+    "item": {
+        "item": "infinity:infinity_gauntlet"
+    },
+    "slot": "mainhand"
+}
+        ]
+    }
+},
+
 
 "remove_mind_stone": {
     "type": "palladium:command",

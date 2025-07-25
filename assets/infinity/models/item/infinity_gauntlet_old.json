@@ -1,5 +1,4 @@
 {
-	"format_version": "1.21.6",
 	"credit": "Made with Blockbench",
 	"textures": {
 		"0": "infinity:item/infinity_gauntlet_item",
@@ -161,7 +160,6 @@
 			}
 		}
 	],
-	"gui_light": "front",
 	"display": {
 		"thirdperson_righthand": {
 			"scale": [0, 0, 0]

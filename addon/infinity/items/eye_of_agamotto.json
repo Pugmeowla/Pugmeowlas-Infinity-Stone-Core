@@ -1,6 +1,9 @@
 {
     "type": "palladium:armor",
-    "creative_mode_tab": "infinity:infinity",
+    "creative_mode_tab": {
+        "tab": "infinity:infinity",
+        "before": "infinity:scepter"
+    },
     "slot": "chest",
     "rarity": "epic",
     "is_fire_resistant": true,

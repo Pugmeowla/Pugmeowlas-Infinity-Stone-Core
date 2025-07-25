@@ -1,7 +1,7 @@
 {
   "type": "palladium:sword",
   "max_stack_size": 1,
-  "creative_mode_tab": "infinity:infinity",
+  "creative_mode_tab": "minecraft:combat",
   "rarity": "epic",
   "is_fire_resistant": true,
   "tier": "minecraft:netherite",
