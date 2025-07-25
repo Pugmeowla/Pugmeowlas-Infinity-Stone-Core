@@ -38,6 +38,25 @@
      }    
 },
 
+"render_layer_gauntlet_mainhand": {
+     "type": "palladium:render_layer",
+     "hidden": true,
+     "hidden_in_bar": true,
+     "render_layer": "infinity:gauntlet_mainhand",
+     "conditions":{
+        "enabling":[
+         {
+    "type": "palladium:item_in_slot",
+    "item": {
+        "item": "infinity:infinity_gauntlet"
+    },
+    "slot": "mainhand"
+}
+            
+        ]
+     }    
+},
+
 "remove_stone_wheel":{
     "type": "palladium:ability_wheel",
     "icon": "infinity:textures/item/infinity_gauntlet2.png",
@@ -194,23 +213,11 @@
     "max_score": 1
 },
 {
-    "type": "palladium:or",
-    "conditions": [
-        {
     "type": "palladium:item_in_slot",
     "item": {
         "item": "infinity:infinity_gauntlet"
     },
-    "slot": "offhand"
-},
-{
-    "type": "palladium:item_in_slot",
-    "item": {
-        "item": "infinity:infinity_gauntlet"
-    },
-    "slot": "curios:hands"
-}
-    ]
+    "slot": "mainhand"
 }
         ]
     }
@@ -335,23 +342,11 @@
     "max_score": 1
 },
 {
-    "type": "palladium:or",
-    "conditions": [
-        {
     "type": "palladium:item_in_slot",
     "item": {
         "item": "infinity:infinity_gauntlet"
     },
-    "slot": "offhand"
-},
-{
-    "type": "palladium:item_in_slot",
-    "item": {
-        "item": "infinity:infinity_gauntlet"
-    },
-    "slot": "curios:hands"
-}
-    ]
+    "slot": "mainhand"
 }
         ]
     }
@@ -476,23 +471,11 @@
     "max_score": 1
 },
 {
-    "type": "palladium:or",
-    "conditions": [
-        {
     "type": "palladium:item_in_slot",
     "item": {
         "item": "infinity:infinity_gauntlet"
     },
-    "slot": "offhand"
-},
-{
-    "type": "palladium:item_in_slot",
-    "item": {
-        "item": "infinity:infinity_gauntlet"
-    },
-    "slot": "curios:hands"
-}
-    ]
+    "slot": "mainhand"
 }
         ]
     }
@@ -616,23 +599,11 @@
     "max_score": 1
 },
 {
-    "type": "palladium:or",
-    "conditions": [
-        {
     "type": "palladium:item_in_slot",
     "item": {
         "item": "infinity:infinity_gauntlet"
     },
-    "slot": "offhand"
-},
-{
-    "type": "palladium:item_in_slot",
-    "item": {
-        "item": "infinity:infinity_gauntlet"
-    },
-    "slot": "curios:hands"
-}
-    ]
+    "slot": "mainhand"
 }
         ]
     }
