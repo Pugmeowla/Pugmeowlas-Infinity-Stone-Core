@@ -92,7 +92,8 @@
     "description": "Power Stone Abilities",
     "commands": [
         "clear @s infinity:power_stone 1",
-        "superpower add infinity:power_stone_passive @s"
+        "superpower add infinity:power_stone_passive @s",
+        "scoreboard players set @s power_stone 1"
     ],
     "conditions": {  
         "enabling": [
@@ -126,10 +127,12 @@
     "render_layer": "infinity:gauntlet_power",
     "conditions": {
         "enabling": [
-            {  
-                "type": "palladium:has_power",
-                "power": "infinity:power_stone_passive"
-            }
+            {
+    "type": "palladium:objective_score",
+    "objective": "power_stone",
+    "min_score": 1,
+    "max_score": 1
+}
         ]
     }
 },
@@ -147,7 +150,8 @@
     "commands": [
         "execute as @s run clear @s infinity:power_stone",
         "execute as @s run give @s infinity:power_stone{Enchantments:[{}]}",
-        "execute as @s run superpower remove infinity:power_stone_passive @s"
+        "execute as @s run superpower remove infinity:power_stone_passive @s",
+        "scoreboard players set @s power_stone 0"
     ],
     "conditions": {
         "enabling": [
@@ -180,7 +184,8 @@
     "description": "Space Stone Abilities",
     "commands": [
         "clear @s infinity:space_stone 1",
-        "superpower add infinity:space_stone @s"
+        "superpower add infinity:space_stone @s",
+        "scoreboard players set @s space_stone 1"
     ],
     "conditions": {  
         "enabling": [
@@ -208,10 +213,12 @@
     "render_layer": "infinity:gauntlet_space",
     "conditions": {
         "enabling": [
-            {  
-                "type": "palladium:has_power",
-                "power": "infinity:space_stone"
-            }
+             {
+    "type": "palladium:objective_score",
+    "objective": "space_stone",
+    "min_score": 1,
+    "max_score": 1
+}
         ]
     }
 },
@@ -229,7 +236,8 @@
     "commands": [
         "execute as @s run clear @s infinity:space_stone",
         "execute as @s run give @s infinity:space_stone{Enchantments:[{}]}",
-        "execute as @s run superpower remove infinity:space_stone @s"
+        "execute as @s run superpower remove infinity:space_stone @s",
+         "scoreboard players set @s space_stone 0"
     ],
     "conditions": {
         "enabling": [
@@ -261,7 +269,8 @@
     "description": "Reality Stone Abilities",
     "commands": [
         "clear @s infinity:reality_stone 1",
-        "superpower add infinity:reality_stone @s"
+        "superpower add infinity:reality_stone @s",
+        "scoreboard players set @s reality_stone 1"
     ],
     "conditions": {  
         "enabling": [
@@ -290,10 +299,12 @@
     "render_layer": "infinity:gauntlet_reality",
     "conditions": {
         "enabling": [
-            {  
-                "type": "palladium:has_power",
-                "power": "infinity:reality_stone"
-            }
+            {
+    "type": "palladium:objective_score",
+    "objective": "reality_stone",
+    "min_score": 1,
+    "max_score": 1
+}
         ]
     }
 },
@@ -311,7 +322,8 @@
     "commands": [
         "execute as @s run clear @s infinity:reality_stone",
       "execute as @s run give @s infinity:reality_stone{Enchantments:[{}]}",
-        "execute as @s run superpower remove infinity:reality_stone @s"
+        "execute as @s run superpower remove infinity:reality_stone @s",
+         "scoreboard players set @s reality_stone 0"
     ],
     "conditions": {
         "enabling": [
@@ -343,7 +355,8 @@
     "description": "Time Stone Abilities",
     "commands": [
         "clear @s infinity:time_stone 1",
-        "superpower add infinity:time_stone @s"
+        "superpower add infinity:time_stone @s",
+        "scoreboard players set @s time_stone 1"
     ],
     "conditions": {  
         "enabling": [
@@ -372,10 +385,12 @@
     "render_layer": "infinity:gauntlet_time",
     "conditions": {
         "enabling": [
-            {  
-                "type": "palladium:has_power",
-                "power": "infinity:time_stone"
-            }
+             {
+    "type": "palladium:objective_score",
+    "objective": "time_stone",
+    "min_score": 1,
+    "max_score": 1
+}
         ]
     }
 },
@@ -393,7 +408,8 @@
     "commands": [
         "execute as @s run clear @s infinity:time_stone",
        "execute as @s run give @s infinity:time_stone{Enchantments:[{}]}",
-        "execute as @s run superpower remove infinity:time_stone @s"
+        "execute as @s run superpower remove infinity:time_stone @s",
+         "scoreboard players set @s time_stone 0"
     ],
     "conditions": {
         "enabling": [
@@ -425,7 +441,8 @@
     "description": "Soul Stone Abilities",
     "commands": [
         "clear @s infinity:soul_stone 1",
-        "superpower add infinity:soul_stone @s"
+        "superpower add infinity:soul_stone @s",
+        "scoreboard players set @s soul_stone 1"
     ],
     "conditions": {  
         "enabling": [
@@ -454,10 +471,12 @@
     "render_layer": "infinity:gauntlet_soul",
     "conditions": {
         "enabling": [
-            {  
-                "type": "palladium:has_power",
-                "power": "infinity:soul_stone"
-            }
+             {
+    "type": "palladium:objective_score",
+    "objective": "soul_stone",
+    "min_score": 1,
+    "max_score": 1
+}
         ]
     }
 },
@@ -475,7 +494,8 @@
     "commands": [
         "execute as @s run clear @s infinity:soul_stone",
         "execute as @s run give @s infinity:soul_stone{Enchantments:[{}]}",
-        "execute as @s run superpower remove infinity:soul_stone @s"
+        "execute as @s run superpower remove infinity:soul_stone @s",
+         "scoreboard players set @s soul_stone 0"
     ],
     "conditions": {
         "enabling": [
@@ -507,7 +527,8 @@
     "description": "Mind Stone Abilities",
     "commands": [
         "clear @s infinity:mind_stone 1",
-        "superpower add infinity:mind_stone @s"
+        "superpower add infinity:mind_stone @s",
+        "scoreboard players set @s mind_stone 1"
     ],
     "conditions": {  
         "enabling": [
@@ -536,10 +557,12 @@
     "render_layer": "infinity:gauntlet_mind",
     "conditions": {
         "enabling": [
-            {  
-                "type": "palladium:has_power",
-                "power": "infinity:mind_stone"
-            }
+            {
+    "type": "palladium:objective_score",
+    "objective": "mind_stone",
+    "min_score": 1,
+    "max_score": 1
+}
         ]
     }
 },
@@ -557,7 +580,8 @@
     "commands": [
         "execute as @s run clear @s infinity:mind_stone",
         "execute as @s run give @s infinity:mind_stone{Enchantments:[{}]}",
-        "execute as @s run superpower remove infinity:mind_stone @s"
+        "execute as @s run superpower remove infinity:mind_stone @s",
+         "scoreboard players set @s mind_stone 0"
     ],
     "conditions": {
         "enabling": [

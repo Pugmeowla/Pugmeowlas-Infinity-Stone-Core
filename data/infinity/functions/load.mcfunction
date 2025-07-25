@@ -1,4 +1,10 @@
 execute in infinity:vormir run forceload add 0 0
+scoreboard objectives add power_stone dummy
+scoreboard objectives add space_stone dummy
+scoreboard objectives add reality_stone dummy
+scoreboard objectives add time_stone dummy
+scoreboard objectives add soul_stone dummy
+scoreboard objectives add mind_stone dummy
 scoreboard objectives add mobCount dummy
 scoreboard objectives add killLimit dummy
 scoreboard objectives add TimeStopper_X dummy
