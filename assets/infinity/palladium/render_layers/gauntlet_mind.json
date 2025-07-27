@@ -1,5 +1,5 @@
 {
   "model_layer": "infinity:gauntlet",
-  "texture": "infinity:textures/models/mind.png",
+  "texture": "infinity:textures/models/gauntlet_stone.png",
         "render_type": "glow"
 }

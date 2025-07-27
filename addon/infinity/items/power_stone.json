@@ -1,9 +1,13 @@
 {
+     "type": "palladium:flux_capacitor",
     "max_stack_size": 1,
     "creative_mode_tab": {
         "tab": "infinity:infinity",
         "before": "infinity:infinity_gauntlet"
     },
     "rarity": "epic",
-    "is_fire_resistant": true
+    "is_fire_resistant": true,
+    "capacity": 2147483647,
+    "max_input": 2147483647,
+    "max_output": 2147483647
 }
