@@ -1,18 +1,15 @@
 Mods:
-Infinity Craft
+Lucraft Core - Lucraft
+Heroes Expansion - Lucraft
+Speedster Heroes - Lucraft
 
-Lucraft Core
+Star Tech, Man! The Legendary Mod? - Nictogen
 
-Heroes Expansion
-
-Star Tech, Man! The Legendary Mod?
+Infinity Craft - Tilera
 
 Some Models + Textures + code:
-
 Dogcme
-
-Gokublack365 - scepter, tesseract
-
-coaber - double-edged blade
-
-curse of the med 𓀔𓀇𓀅𓀋𓀡𓀡𓀕𓀠𓀧𓀨𓀣𓀷𓀷𓀿𓀿 - cosmi-rod
+Dogboi64 - Vormir Structure
+Riley - Icon
+OnixST - projectile commands
+Giga (Ultrasupreme) - photos
