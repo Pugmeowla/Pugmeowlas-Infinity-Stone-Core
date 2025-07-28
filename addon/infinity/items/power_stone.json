@@ -7,7 +7,7 @@
     },
     "rarity": "epic",
     "is_fire_resistant": true,
-    "capacity": 2147483647,
-    "max_input": 2147483647,
-    "max_output": 2147483647
+    "capacity": 1,
+    "max_input": 1,
+    "max_output": 1
 }
