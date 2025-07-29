@@ -7,6 +7,7 @@
  
     "abilities": {
       
+    
  
         "Shrink": {
             "type": "palladium:command",
@@ -19,13 +20,13 @@
             "gui_position": "null",
             "description": "Shrinks the player to 1/10th scale",
             "commands": [
-                 ""
+                 "scale set pehkui:base 0.1"
             ],
             "conditions": {
                 
                 "enabling": [
                     {
-                        "type": "palladium:toggle",
+                        "type": "palladium:action",
                         "cooldown": 0,
                         "key_type": "key_bind",
                         "needs_empty_hand": false,
@@ -33,6 +34,21 @@
                     }
                 ],
                 "unlocking": [
+                    {
+    "type": "palladium:not",
+    "conditions": [
+        {
+    "type": "palladium:crouching"
+}
+    ]
+},
+
+{
+    "type": "palladium:size",
+    "min": 1,
+    "max": 1
+},
+
                     {
                         "type": "palladium:or",
                         "conditions": [
@@ -88,22 +104,24 @@
                 ]
             }
         },
-        "Grow": {
-            "type": "palladium:size",
+       "grow": {
+            "type": "palladium:command",
             "icon": "palladium:textures/icon/size.png",
             "title": "Grow",
             "bar_color": "red",
             "hidden": false,
             "hidden_in_bar": false,
-            "list_index": 1,
+            "list_index": 0,
             "gui_position": "null",
             "description": "Grows the player to 10x scale",
-            "scale": 10,
+            "commands": [
+                 "scale set pehkui:base 10"
+            ],
             "conditions": {
                 
                 "enabling": [
                     {
-                        "type": "palladium:toggle",
+                        "type": "palladium:action",
                         "cooldown": 0,
                         "key_type": "key_bind",
                         "needs_empty_hand": false,
@@ -111,7 +129,15 @@
                     }
                 ],
                 "unlocking": [
-                   {
+                    {
+    "type": "palladium:crouching"
+},
+{
+    "type": "palladium:size",
+    "min": 1,
+    "max": 1
+},
+{
                         "type": "palladium:or",
                         "conditions": [
                             {
@@ -166,6 +192,97 @@
                 ]
             }
         },
+"normal": {
+            "type": "palladium:command",
+            "icon": "minecraft:barrier",
+            "title": "Normal Scale",
+            "bar_color": "red",
+            "hidden": false,
+            "hidden_in_bar": false,
+            "list_index": 0,
+            "gui_position": "null",
+            "description": "Returms the player to 1x scale",
+            "commands": [
+                 "scale set pehkui:base 1"
+            ],
+            "conditions": {
+                
+                "enabling": [
+                    {
+                        "type": "palladium:action",
+                        "cooldown": 0,
+                        "key_type": "key_bind",
+                        "needs_empty_hand": false,
+                        "allow_scrolling_when_crouching": true
+                    }
+                ],
+                "unlocking": [
+                    {
+    "type": "palladium:not",
+    "conditions": [
+        {
+    "type": "palladium:size",
+    "min": 1,
+    "max": 1
+}
+    ]
+},
+                    {
+                        "type": "palladium:or",
+                        "conditions": [
+                            {
+                                "type": "palladium:has_power",
+                                "power": "infinity:infinity_gauntlet"
+                            },
+                            {
+                                "type": "palladium:item_in_slot",
+                                "item": {
+                                    "item": "infinity:aether"
+                                },
+                                "slot": "mainhand"
+                            },
+                            {
+                                "type": "palladium:item_in_slot",
+                                "item": {
+                                    "item": "infinity:aether"
+                                },
+                                "slot": "offhand"
+                            },
+                            {
+                                "type": "palladium:item_in_slot",
+                                "item": {
+                                    "item": "infinity:reality_stone"
+                                },
+                                "slot": "mainhand"
+                            },
+                            {
+                                "type": "palladium:item_in_slot",
+                                "item": {
+                                    "item": "infinity:reality_stone"
+                                },
+                                "slot": "offhand"
+                            },
+                            {
+                                "type": "palladium:item_in_slot",
+                                "item": {
+                                    "item": "infinity:cosmi-rod_reality"
+                                },
+                                "slot": "mainhand"
+                            },
+                            {
+                                "type": "palladium:item_in_slot",
+                                "item": {
+                                    "item": "infinity:cosmi-rod_reality"
+                                },
+                                "slot": "offhand"
+                            }
+                            
+                        ]
+                    }
+                ]
+            }
+        },
+
        "Invisibility": {
             "type": "palladium:invisibility",
             "icon": "palladium:textures/icon/invisibility.png",
