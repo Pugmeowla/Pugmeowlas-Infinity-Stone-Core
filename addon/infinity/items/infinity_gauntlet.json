@@ -4,6 +4,5 @@
         "tab": "infinity:infinity"
     },
     "rarity": "epic",
-    "is_fire_resistant": true,
-    "render_layers": {"curios:hands": "infinity:gauntlet"}
+    "is_fire_resistant": true
 }

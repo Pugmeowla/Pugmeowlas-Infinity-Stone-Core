@@ -306,7 +306,7 @@
                 ]
             }
         },
-        "render_layer": {
+ "render_layer": {
     "type": "palladium:render_layer",
     "hidden": true,
     "hidden_in_bar": true,
@@ -334,7 +334,7 @@
                 }
         ]
     }
-},
+},       
 "aim":{
     "type": "palladium:aim",
     "hidden": true,
