@@ -1042,6 +1042,156 @@
             
         ]
     }
+},
+"render_layer_power_mark_85": {
+    "type": "palladium:render_layer",
+    "hidden": true,
+    "hidden_in_bar": true,
+    "render_layer": "infinity:gauntlet_power",
+    "conditions": {
+        "enabling": [
+            {
+    "type": "palladium:objective_score",
+    "objective": "power_stone",
+    "min_score": 1,
+    "max_score": 1
+}
+        ],
+         "unlocking": [
+         {
+                    "type": "palladium:objective_score",
+                    "objective": "satsu.iron.man.armor.actived",
+                    "min_score": 1,
+                    "max_score": 1
+                  }
+                 
+        ]
+    }
+},
+"render_layer_space_mark_85": {
+    "type": "palladium:render_layer",
+    "hidden": true,
+    "hidden_in_bar": true,
+    "render_layer": "infinity:gauntlet_space",
+    "conditions": {
+        "enabling": [
+            {
+    "type": "palladium:objective_score",
+    "objective": "space_stone",
+    "min_score": 1,
+    "max_score": 1
+}
+        ],
+         "unlocking": [
+         {
+                    "type": "palladium:objective_score",
+                    "objective": "satsu.iron.man.armor.actived",
+                    "min_score": 1,
+                    "max_score": 1
+                  }
+                 
+        ]
+    }
+},
+"render_layer_reality_mark_85": {
+    "type": "palladium:render_layer",
+    "hidden": true,
+    "hidden_in_bar": true,
+    "render_layer": "infinity:gauntlet_reality",
+    "conditions": {
+        "enabling": [
+            {
+    "type": "palladium:objective_score",
+    "objective": "reality_stone",
+    "min_score": 1,
+    "max_score": 1
+}
+        ],
+         "unlocking": [
+         {
+                    "type": "palladium:objective_score",
+                    "objective": "satsu.iron.man.armor.actived",
+                    "min_score": 1,
+                    "max_score": 1
+                  }
+                 
+        ]
+    }
+},
+"render_layer_time_mark_85": {
+    "type": "palladium:render_layer",
+    "hidden": true,
+    "hidden_in_bar": true,
+    "render_layer": "infinity:gauntlet_time",
+    "conditions": {
+        "enabling": [
+            {
+    "type": "palladium:objective_score",
+    "objective": "time_stone",
+    "min_score": 1,
+    "max_score": 1
+}
+        ],
+         "unlocking": [
+         {
+                    "type": "palladium:objective_score",
+                    "objective": "satsu.iron.man.armor.actived",
+                    "min_score": 1,
+                    "max_score": 1
+                  }
+                 
+        ]
+    }
+},
+"render_layer_soul_mark_85": {
+    "type": "palladium:render_layer",
+    "hidden": true,
+    "hidden_in_bar": true,
+    "render_layer": "infinity:gauntlet_soul",
+    "conditions": {
+        "enabling": [
+            {
+    "type": "palladium:objective_score",
+    "objective": "soul_stone",
+    "min_score": 1,
+    "max_score": 1
+}
+        ],
+         "unlocking": [
+         {
+                    "type": "palladium:objective_score",
+                    "objective": "satsu.iron.man.armor.actived",
+                    "min_score": 1,
+                    "max_score": 1
+                  }
+                 
+        ]
+    }
+},
+"render_layer_mind_mark_85": {
+    "type": "palladium:render_layer",
+    "hidden": true,
+    "hidden_in_bar": true,
+    "render_layer": "infinity:gauntlet_mind",
+    "conditions": {
+        "enabling": [
+            {
+    "type": "palladium:objective_score",
+    "objective": "mind_stone",
+    "min_score": 1,
+    "max_score": 1
+}
+        ],
+         "unlocking": [
+         {
+                    "type": "palladium:objective_score",
+                    "objective": "satsu.iron.man.armor.actived",
+                    "min_score": 1,
+                    "max_score": 1
+                  }
+                 
+        ]
+    }
 }
     }
 }

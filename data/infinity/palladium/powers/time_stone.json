@@ -2,7 +2,7 @@
     "name": "Time Stone",
     "background": "minecraft:textures/block/lime_concrete.png",
     "icon": "infinity:time_stone",
-    "gui_display_type": "list",
+    "gui_display_type": "tree",
     "ability_bar_texture": "infinity:textures/gui/ability_bars/infinity_ability_bar.png",
  
     "abilities": {
@@ -527,6 +527,98 @@
             "bar_color": "light_blue",
             "hidden": false,
             "hidden_in_bar": false,
+            "list_index": -1,
+            "gui_position": "null",
+            "description": "Lets you use the space_tp command, the format is space_tp x y z example:example",
+            "first_tick_commands": [],
+            "last_tick_commands": [],
+            "commands": [
+                ""
+            ],
+            "conditions": {
+                
+                "enabling": [
+                    {
+                        "type": "palladium:true"
+                    }
+                ],
+             "unlocking": [
+                    {
+                        "type": "palladium:or",
+                        "conditions": [
+                            {
+                                "type": "palladium:has_power",
+                                "power": "infinity:infinity_gauntlet"
+                            },
+                            {
+                                "type": "palladium:item_in_slot",
+                                "item": {
+                                    "item": "infinity:eye_of_agamotto"
+                                },
+                                "slot": "chest"
+                            },
+                            {
+                                "type": "palladium:item_in_slot",
+                                "item": {
+                                    "item": "infinity:eye_of_agamotto"
+                                },
+                                "slot": "curios:necklace"
+                            },
+                            {
+                                "type": "palladium:item_in_slot",
+                                "item": {
+                                    "item": "infinity:time_stone"
+                                },
+                                "slot": "mainhand"
+                            },
+                            {
+                                "type": "palladium:item_in_slot",
+                                "item": {
+                                    "item": "infinity:time_stone"
+                                },
+                                "slot": "offhand"
+                            },
+                            {
+                                "type": "palladium:item_in_slot",
+                                "item": {
+                                    "item": "infinity:eye_of_agamotto"
+                                },
+                                "slot": "mainhand"
+                            },
+                            {
+                                "type": "palladium:item_in_slot",
+                                "item": {
+                                    "item": "infinity:eye_of_agamotto"
+                                },
+                                "slot": "offhand"
+                            },
+                            {
+                                "type": "palladium:item_in_slot",
+                                "item": {
+                                    "item": "infinity:cosmi-rod_time"
+                                },
+                                "slot": "mainhand"
+                            },
+                            {
+                                "type": "palladium:item_in_slot",
+                                "item": {
+                                    "item": "infinity:cosmi-rod_time"
+                                },
+                                "slot": "offhand"
+                            }
+                            
+                        ]
+                    }
+                ]   
+            }
+        },
+         "repair": {
+           "type": "palladium:dummy",
+            "icon": "infinity:textures/icon/teleport.png",
+            "title": "Repair",
+            "bar_color": "light_blue",
+            "hidden": false,
+            "hidden_in_bar": true,
             "list_index": -1,
             "gui_position": "null",
             "description": "Lets you use the space_tp command, the format is space_tp x y z example:example",

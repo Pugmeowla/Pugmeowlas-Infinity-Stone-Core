@@ -2,7 +2,7 @@
     "name": "Empty_Aether",
     "background": "minecraft:textures/block/red_concrete.png",
     "icon": "infinity:empty_aether",
-    "gui_display_type": "list",
+    "gui_display_type": "tree",
     "ability_bar_texture": "infinity:textures/gui/ability_bars/infinity_ability_bar.png",
  
     "abilities": {

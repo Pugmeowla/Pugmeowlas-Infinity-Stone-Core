@@ -2,7 +2,7 @@
     "name": "Power Stone",
     "background": "minecraft:textures/block/orange_concrete.png",
     "icon": "infinity:soul_stone",
-    "gui_display_type": "list",
+    "gui_display_type": "tree",
     "ability_bar_texture": "infinity:textures/gui/ability_bars/infinity_ability_bar.png",
  
     "abilities": {
@@ -161,10 +161,9 @@
             "list_index": -1,
             "gui_position": "null",
             "description": "Gives you infinite saturation",
-            "first_tick_commands": [],
-            "last_tick_commands": [],
+            "first_tick_commands": ["effect give @s minecraft:saturation infinite 20 true"],
+            "last_tick_commands": ["effect give @s minecraft:saturation infinite 20 true"],
             "commands": [
-                "effect give @s minecraft:saturation infinite 20 true"
             ],
             "conditions": {
                 
@@ -585,10 +584,10 @@
             "list_index": -1,
             "gui_position": "null",
             "description": "Gives Regeneration",
-            "first_tick_commands": [],
-            "last_tick_commands": [],
+            "first_tick_commands": [ "effect give @s minecraft:regeneration infinite 20 true"],
+            "last_tick_commands": [ "effect give @s minecraft:regeneration infinite 20 true"],
             "commands": [
-               "effect give @s minecraft:regeneration infinite 20 true"
+              
             ],
             "conditions": {
                 
