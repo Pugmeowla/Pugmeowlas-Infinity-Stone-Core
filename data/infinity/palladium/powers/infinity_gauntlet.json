@@ -1058,12 +1058,25 @@
 }
         ],
          "unlocking": [
-         {
+        
+                  {
+    "type": "palladium:or",
+    "conditions": [
+        {
+                        "type": "palladium:animation_timer_ability",
+                        "power": "fsang:iron_man",
+                        "ability": "iron_man_suit_enabled",
+                        "min": 9,
+                        "max": 10
+                    },
+                     {
                     "type": "palladium:objective_score",
                     "objective": "satsu.iron.man.armor.actived",
                     "min_score": 1,
                     "max_score": 1
                   }
+    ]
+}
                  
         ]
     }
@@ -1084,11 +1097,23 @@
         ],
          "unlocking": [
          {
+    "type": "palladium:or",
+    "conditions": [
+        {
+                        "type": "palladium:animation_timer_ability",
+                        "power": "fsang:iron_man",
+                        "ability": "iron_man_suit_enabled",
+                        "min": 9,
+                        "max": 10
+                    },
+                     {
                     "type": "palladium:objective_score",
                     "objective": "satsu.iron.man.armor.actived",
                     "min_score": 1,
                     "max_score": 1
                   }
+    ]
+}
                  
         ]
     }
@@ -1109,11 +1134,23 @@
         ],
          "unlocking": [
          {
+    "type": "palladium:or",
+    "conditions": [
+        {
+                        "type": "palladium:animation_timer_ability",
+                        "power": "fsang:iron_man",
+                        "ability": "iron_man_suit_enabled",
+                        "min": 9,
+                        "max": 10
+                    },
+                     {
                     "type": "palladium:objective_score",
                     "objective": "satsu.iron.man.armor.actived",
                     "min_score": 1,
                     "max_score": 1
                   }
+    ]
+}
                  
         ]
     }
@@ -1134,11 +1171,23 @@
         ],
          "unlocking": [
          {
+    "type": "palladium:or",
+    "conditions": [
+        {
+                        "type": "palladium:animation_timer_ability",
+                        "power": "fsang:iron_man",
+                        "ability": "iron_man_suit_enabled",
+                        "min": 9,
+                        "max": 10
+                    },
+                     {
                     "type": "palladium:objective_score",
                     "objective": "satsu.iron.man.armor.actived",
                     "min_score": 1,
                     "max_score": 1
                   }
+    ]
+}
                  
         ]
     }
@@ -1159,11 +1208,23 @@
         ],
          "unlocking": [
          {
+    "type": "palladium:or",
+    "conditions": [
+        {
+                        "type": "palladium:animation_timer_ability",
+                        "power": "fsang:iron_man",
+                        "ability": "iron_man_suit_enabled",
+                        "min": 9,
+                        "max": 10
+                    },
+                     {
                     "type": "palladium:objective_score",
                     "objective": "satsu.iron.man.armor.actived",
                     "min_score": 1,
                     "max_score": 1
                   }
+    ]
+}
                  
         ]
     }
@@ -1184,14 +1245,55 @@
         ],
          "unlocking": [
          {
+    "type": "palladium:or",
+    "conditions": [
+        {
+                        "type": "palladium:animation_timer_ability",
+                        "power": "fsang:iron_man",
+                        "ability": "iron_man_suit_enabled",
+                        "min": 9,
+                        "max": 10
+                    },
+                     {
                     "type": "palladium:objective_score",
                     "objective": "satsu.iron.man.armor.actived",
                     "min_score": 1,
                     "max_score": 1
                   }
+    ]
+}
                  
         ]
     }
+},
+"render_layer_nano_gauntlet": {
+     "type": "palladium:render_layer",
+     "hidden": true,
+     "hidden_in_bar": true,
+     "render_layer": "infinity:nano_gauntlet",
+     "conditions":{
+         "unlocking": [
+         {
+    "type": "palladium:or",
+    "conditions": [
+        {
+                        "type": "palladium:animation_timer_ability",
+                        "power": "fsang:iron_man",
+                        "ability": "iron_man_suit_enabled",
+                        "min": 9,
+                        "max": 10
+                    },
+                     {
+                    "type": "palladium:objective_score",
+                    "objective": "satsu.iron.man.armor.actived",
+                    "min_score": 1,
+                    "max_score": 1
+                  }
+    ]
+}
+                 
+        ]
+     }
 }
     }
 }
