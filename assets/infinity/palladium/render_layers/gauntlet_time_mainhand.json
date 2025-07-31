@@ -1,5 +1,6 @@
 {
   "model_layer": "infinity:gauntlet_mainhand",
   "texture": "infinity:textures/models/gauntlet_stone_time.png",
-        "render_type": "glow"
+        "render_type": "glow",
+          "enchantment_glint": true
 }

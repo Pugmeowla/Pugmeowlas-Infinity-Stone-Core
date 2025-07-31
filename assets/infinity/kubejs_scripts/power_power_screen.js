@@ -1,5 +1,5 @@
 PalladiumEvents.renderPowerScreen(e => {
-     if (e.tab.toString() !== 'infinity:power_stone') return;
+     if (e.tab.toString() !== 'infinity:power_stone_passive') return;
     const tex1 = 'infinity:textures/gui/powers/power_window.png';
     
     const width1 = 252;
