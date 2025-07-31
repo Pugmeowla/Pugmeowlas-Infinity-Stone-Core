@@ -1376,6 +1376,41 @@
      }    
 },
 
+"render_layer_fantastic_four_skin": {
+     "type": "palladium:render_layer",
+     "hidden": true,
+     "hidden_in_bar": true,
+     "render_layer": "infinity:fantastic_four_skin",
+     "conditions":{
+        "enabling":[
+            {
+    "type": "palladium:or",
+    "conditions": [
+        {
+    "type": "palladium:item_in_slot",
+    "item": {
+        "item": "infinity:infinity_gauntlet"
+    },
+    "slot": "offhand"
+},
+{
+    "type": "palladium:item_in_slot",
+    "item": {
+        "item": "infinity:infinity_gauntlet"
+    },
+    "slot": "curios:hands"
+}
+    ]
+},
+{
+    "type": "palladium:has_tag",
+    "tag": "fantastic_four_skin"
+}
+            
+        ]
+     }    
+},
+
  "nano_gauntlet": {
             "type": "palladium:command",
             "icon": "palladium:vibranium_flux_capacitor",
@@ -1417,6 +1452,10 @@
 }, {
     "type": "palladium:has_tag",
     "tag": "netherite_gauntlet"
+},
+{
+    "type": "palladium:has_tag",
+    "tag": "fantastic_four_skin"
 }
     ]
 }
@@ -1426,6 +1465,71 @@
     "type": "palladium:item_in_slot",
     "item": {
         "item": "palladium:vibranium_flux_capacitor"
+    },
+    "slot": "mainhand"
+}
+                
+
+          
+                ]
+            }
+        },
+
+        "fantastic_four_skin": {
+            "type": "palladium:command",
+            "icon": "palladium:vibranium_flux_capacitor",
+            "title": "Black Hole",
+            "bar_color": "red",
+            "hidden": false,
+            "hidden_in_bar": false,
+            "list_index": 3,
+         "gui_position": "null",
+            "description": "The Black Hole sucks and kills entities nearby, as well as eating all blocks around it. It requires both the Space and Power Stones.",
+            "first_tick_commands": [],
+            "last_tick_commands": [],
+            "commands": [
+                "clear @s minecraft:shears",
+                "tag @s add fantastic_four_skin"
+            ],
+            "conditions": {
+                
+                "enabling": [
+                    {
+                        "type": "palladium:action",
+                        "cooldown": 0,
+                        "key_type": "key_bind",
+                        "needs_empty_hand": false,
+                        "allow_scrolling_when_crouching": true
+                    }
+                ],
+                "unlocking": [
+                  
+                  {
+    "type": "palladium:not",
+    "conditions": [
+        {
+    "type": "palladium:or",
+    "conditions": [
+         {
+    "type": "palladium:has_tag",
+    "tag": "nano_gauntlet"
+}, 
+{
+    "type": "palladium:has_tag",
+    "tag": "netherite_gauntlet"
+},
+{
+    "type": "palladium:has_tag",
+    "tag": "fantastic_four_skin"
+}
+    ]
+}
+    ]
+},
+{
+    "type": "palladium:item_in_slot",
+    "item": {
+        "item": "minecraft:shears"
     },
     "slot": "mainhand"
 }
@@ -1477,6 +1581,10 @@
 }, {
     "type": "palladium:has_tag",
     "tag": "netherite_gauntlet"
+},
+{
+    "type": "palladium:has_tag",
+    "tag": "fantastic_four_skin"
 }
     ]
 }
@@ -1535,6 +1643,10 @@
 }, {
     "type": "palladium:has_tag",
     "tag": "netherite_gauntlet"
+},
+{
+    "type": "palladium:has_tag",
+    "tag": "fantastic_four_skin"
 }
     ]
 }
