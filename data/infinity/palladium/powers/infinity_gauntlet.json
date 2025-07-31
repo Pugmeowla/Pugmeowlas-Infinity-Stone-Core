@@ -1299,13 +1299,7 @@
                         "ability": "iron_man_suit_enabled",
                         "min": 9,
                         "max": 10
-                    },
-                     {
-                    "type": "palladium:objective_score",
-                    "objective": "satsu.iron.man.armor.actived",
-                    "min_score": 1,
-                    "max_score": 1
-                  }
+                    }
     ]
 }
                  
@@ -1346,9 +1340,45 @@
         ]
      }    
 },
+
+"render_layer_netherite_gauntlet": {
+     "type": "palladium:render_layer",
+     "hidden": true,
+     "hidden_in_bar": true,
+     "render_layer": "infinity:netherite_gauntlet",
+     "conditions":{
+        "enabling":[
+            {
+    "type": "palladium:or",
+    "conditions": [
+        {
+    "type": "palladium:item_in_slot",
+    "item": {
+        "item": "infinity:infinity_gauntlet"
+    },
+    "slot": "offhand"
+},
+{
+    "type": "palladium:item_in_slot",
+    "item": {
+        "item": "infinity:infinity_gauntlet"
+    },
+    "slot": "curios:hands"
+}
+    ]
+},
+{
+    "type": "palladium:has_tag",
+    "tag": "netherite_gauntlet"
+}
+            
+        ]
+     }    
+},
+
  "nano_gauntlet": {
             "type": "palladium:command",
-            "icon": "infinity:textures/icon/black_hole.png",
+            "icon": "palladium:vibranium_flux_capacitor",
             "title": "Black Hole",
             "bar_color": "red",
             "hidden": false,
@@ -1378,9 +1408,17 @@
                   {
     "type": "palladium:not",
     "conditions": [
+        {
+    "type": "palladium:or",
+    "conditions": [
          {
     "type": "palladium:has_tag",
     "tag": "nano_gauntlet"
+}, {
+    "type": "palladium:has_tag",
+    "tag": "netherite_gauntlet"
+}
+    ]
 }
     ]
 },
@@ -1397,11 +1435,12 @@
                 ]
             }
         },
-        "normal_gauntlet": {
+
+        "netherite_gauntlet": {
             "type": "palladium:command",
-            "icon": "infinity:infinity_gauntlet",
-            "title": "Return to Original Gauntlet",
-            "bar_color": "yellow",
+            "icon": "minecraft:netherite_ingot",
+            "title": "Black Hole",
+            "bar_color": "red",
             "hidden": false,
             "hidden_in_bar": false,
             "list_index": 3,
@@ -1410,7 +1449,8 @@
             "first_tick_commands": [],
             "last_tick_commands": [],
             "commands": [
-                "tag @s remove nano_gauntlet"
+                "clear @s minecraft:netherite_ingot",
+                "tag @s add netherite_gauntlet"
             ],
             "conditions": {
                 
@@ -1425,9 +1465,78 @@
                 ],
                 "unlocking": [
                   
-                   {
+                  {
+    "type": "palladium:not",
+    "conditions": [
+        {
+    "type": "palladium:or",
+    "conditions": [
+         {
     "type": "palladium:has_tag",
     "tag": "nano_gauntlet"
+}, {
+    "type": "palladium:has_tag",
+    "tag": "netherite_gauntlet"
+}
+    ]
+}
+    ]
+},
+{
+    "type": "palladium:item_in_slot",
+    "item": {
+        "item": "minecraft:netherite_ingot"
+    },
+    "slot": "mainhand"
+}
+                
+
+          
+                ]
+            }
+        },
+
+        "normal_gauntlet": {
+            "type": "palladium:command",
+            "icon": "infinity:infinity_gauntlet",
+            "title": "Return to Original Gauntlet",
+            "bar_color": "yellow",
+            "hidden": false,
+            "hidden_in_bar": false,
+            "list_index": 3,
+         "gui_position": "null",
+            "description": "The Black Hole sucks and kills entities nearby, as well as eating all blocks around it. It requires both the Space and Power Stones.",
+            "first_tick_commands": [],
+            "last_tick_commands": [],
+            "commands": [
+                "tag @s remove nano_gauntlet",
+                "tag @s remove netherite_gauntlet"
+            ],
+            "conditions": {
+                
+                "enabling": [
+                    {
+                        "type": "palladium:action",
+                        "cooldown": 0,
+                        "key_type": "key_bind",
+                        "needs_empty_hand": false,
+                        "allow_scrolling_when_crouching": true
+                    }
+                ],
+                "unlocking": [
+                  
+                  
+{
+    "type": "palladium:or",
+    "conditions": [
+         {
+    "type": "palladium:has_tag",
+    "tag": "nano_gauntlet"
+}, {
+    "type": "palladium:has_tag",
+    "tag": "netherite_gauntlet"
+}
+    ]
 }
                 
 
