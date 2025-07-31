@@ -1,0 +1,1 @@
+execute as @s run give @s infinity:reality_stone{display:{Name:'{"text":"Reality Stone","color":"red","bold":true,"italic":false}'},Enchantments:[{}],HideFlags:1} 1

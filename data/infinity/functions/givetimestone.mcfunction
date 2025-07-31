@@ -1,0 +1,1 @@
+execute as @s run give @s infinity:time_stone{display:{Name:'{"text":"Time Stone","color":"green","bold":true,"italic":false}'},Enchantments:[{}],HideFlags:1} 1

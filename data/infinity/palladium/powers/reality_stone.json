@@ -679,7 +679,7 @@
     "description": "Remove Reality Stone",
     "commands": [
         "execute as @s run clear @s infinity:aether",
-       "execute as @s run give @s infinity:reality_stone{Enchantments:[{}]}",
+       "execute as @s run function infinity:giverealitystone",
         "execute as @s run give @s infinity:empty_aether"
     ],
     "conditions": {

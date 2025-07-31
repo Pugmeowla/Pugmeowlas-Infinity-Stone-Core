@@ -1,6 +1,6 @@
 {
     "name": "Infinity Gauntlet",
-    "background": "infinity:textures/gui/powers/infinity_window.png",
+    "background": "minecraft:textures/block/Gold_block.png",
     "icon": "infinity:infinity_gauntlet",
     "ability_bar_texture": "infinity:textures/gui/ability_bars/infinity_ability_bar.png",
     "gui_display_type": "tree",
@@ -277,7 +277,7 @@
     "description": "Remove Power Stone",
     "commands": [
         "execute as @s run clear @s infinity:power_stone",
-        "execute as @s run give @s infinity:power_stone{Enchantments:[{}]}",
+        "execute as @s run function infinity:givepowerstone",
         "execute as @s run superpower remove infinity:power_stone_passive @s",
         "scoreboard players set @s power_stone 0"
     ],
@@ -406,7 +406,7 @@
     "description": "Remove Space Stone",
     "commands": [
         "execute as @s run clear @s infinity:space_stone",
-        "execute as @s run give @s infinity:space_stone{Enchantments:[{}]}",
+        "execute as @s run function infinity:givespacestone",
         "execute as @s run superpower remove infinity:space_stone @s",
          "scoreboard players set @s space_stone 0"
     ],
@@ -535,7 +535,7 @@
     "description": "Remove Reality Stone",
     "commands": [
         "execute as @s run clear @s infinity:reality_stone",
-      "execute as @s run give @s infinity:reality_stone{Enchantments:[{}]}",
+      "execute as @s run function infinity:giverealitystone",
         "execute as @s run superpower remove infinity:reality_stone @s",
          "scoreboard players set @s reality_stone 0"
     ],
@@ -663,7 +663,7 @@
     "description": "Remove Time Stone",
     "commands": [
         "execute as @s run clear @s infinity:time_stone",
-       "execute as @s run give @s infinity:time_stone{Enchantments:[{}]}",
+       "execute as @s run function infinity:givetimestone",
         "execute as @s run superpower remove infinity:time_stone @s",
          "scoreboard players set @s time_stone 0"
     ],
@@ -792,7 +792,7 @@
     "description": "Remove Soul Stone",
     "commands": [
         "execute as @s run clear @s infinity:soul_stone",
-        "execute as @s run give @s infinity:soul_stone{Enchantments:[{}]}",
+        "execute as @s run function infinity:givesoulstone",
         "execute as @s run superpower remove infinity:soul_stone @s",
          "scoreboard players set @s soul_stone 0"
     ],
@@ -921,7 +921,7 @@
     "description": "Remove Mind Stone",
     "commands": [
         "execute as @s run clear @s infinity:mind_stone",
-        "execute as @s run give @s infinity:mind_stone{Enchantments:[{}]}",
+        "execute as @s run function infinity:givemindstone",
         "execute as @s run superpower remove infinity:mind_stone @s",
          "scoreboard players set @s mind_stone 0"
     ],
@@ -1477,7 +1477,7 @@
 
         "fantastic_four_skin": {
             "type": "palladium:command",
-            "icon": "palladium:vibranium_flux_capacitor",
+            "icon": "minecraft:shears",
             "title": "Black Hole",
             "bar_color": "red",
             "hidden": false,
@@ -1618,7 +1618,8 @@
             "last_tick_commands": [],
             "commands": [
                 "tag @s remove nano_gauntlet",
-                "tag @s remove netherite_gauntlet"
+                "tag @s remove netherite_gauntlet",
+                "tag @s remove fantastic_four_skin"
             ],
             "conditions": {
                 

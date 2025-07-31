@@ -19,7 +19,7 @@
     "description": "Remove Power Stone",
     "commands": [
         "execute as @s run clear @s infinity:orb",
-       "execute as @s run give @s infinity:power_stone{Enchantments:[{}]}",
+       "execute as @s run function infinity:givepowerstone",
         "execute as @s run give @s infinity:empty_orb"
     ],
     "conditions": {

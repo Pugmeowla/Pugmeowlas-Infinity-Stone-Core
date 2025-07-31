@@ -1,0 +1,1 @@
+execute as @s run give @s infinity:power_stone{display:{Name:'{"text":"Power Stone","color":"purple","bold":true,"italic":false}'},Enchantments:[{}],HideFlags:1} 1

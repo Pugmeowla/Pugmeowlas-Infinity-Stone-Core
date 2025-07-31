@@ -1,0 +1,1 @@
+execute as @s run give @s infinity:mind_stone{display:{Name:'{"text":"Mind Stone","color":"yellow","bold":true,"italic":false}'},Enchantments:[{}],HideFlags:1} 1

@@ -772,7 +772,7 @@
     "description": "Extracts the Space Stone",
     "commands": [
         "execute as @s run clear @s infinity:tesseract",
-       "execute as @s run give @s infinity:space_stone{Enchantments:[{}]}",
+       "execute as @s run function infinity:givespacestone",
         "execute as @s run give @s infinity:empty_tesseract"
     ],
     "conditions": {

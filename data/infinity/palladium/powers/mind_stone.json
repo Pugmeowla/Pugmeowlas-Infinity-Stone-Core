@@ -486,7 +486,7 @@
     "description": "Remove Mind Stone",
     "commands": [
         "execute as @s run clear @s infinity:scepter",
-       "execute as @s run give @s infinity:mind_stone{Enchantments:[{}]}",
+       "execute as @s run function infinity:givemindstone",
         "execute as @s run give @s infinity:empty_scepter"
     ],
     "conditions": {

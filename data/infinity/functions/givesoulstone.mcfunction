@@ -1,0 +1,1 @@
+execute as @s run give @s infinity:soul_stone{display:{Name:'{"text":"Soul Stone","color":"gold","bold":true,"italic":false}'},Enchantments:[{}],HideFlags:1} 1

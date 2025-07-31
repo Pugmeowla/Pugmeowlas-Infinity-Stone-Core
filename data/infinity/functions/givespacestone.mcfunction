@@ -1,0 +1,1 @@
+execute as @s run give @s infinity:space_stone{display:{Name:'{"text":"Space Stone","color":"aqua","bold":true,"italic":false}'},Enchantments:[{}],HideFlags:1} 1
