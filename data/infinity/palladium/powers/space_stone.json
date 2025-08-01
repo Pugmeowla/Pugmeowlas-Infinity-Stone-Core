@@ -15,7 +15,10 @@
             "hidden": false,
             "hidden_in_bar": false,
             "list_index": 0,
-            "gui_position": "null",
+             "gui_position": [
+                0,
+                -1
+            ],
             "description": "Teleport to wherever you look",
             "first_tick_commands": [],
             "last_tick_commands": [],
@@ -25,7 +28,11 @@
             "conditions": {
                 
                 "enabling": [
-                   {
+                    {
+                        "type": "palladium:ability_unlocked",
+                        "power": "null",
+                        "ability": "force_field"
+                    },{
     "type": "palladium:action",
     "cooldown": 0,
     "key_type": "key_bind",
@@ -34,7 +41,11 @@
 }
                 ],
                 "unlocking": [
-                    {
+                     {
+                        "type": "palladium:ability_unlocked",
+                        "power": "null",
+                        "ability": "step_assist"
+                    },{
         "type": "palladium:or",
         "conditions": [
             {
@@ -99,7 +110,10 @@
             "hidden": false,
             "hidden_in_bar": false,
             "list_index": -1,
-            "gui_position": "null",
+            "gui_position": [
+                0,
+                -2
+            ],
             "description": "Lets you use the space_tp command, the format is space_tp x y z example:example",
             "first_tick_commands": [],
             "last_tick_commands": [],
@@ -114,6 +128,12 @@
                     }
                 ],
                 "unlocking": [
+    {
+                        "type": "palladium:ability_unlocked",
+                        "power": "null",
+                        "ability": "teleport"
+                    },
+                    
     {
         "type": "palladium:or",
         "conditions": [
@@ -170,7 +190,7 @@
             }
         },
       
-        "Grab Entity": {
+        "grab_entity": {
             "type": "palladium:command",
             "icon": "infinity:space_stone",
             "title": "Telekinesis",
@@ -178,7 +198,10 @@
             "hidden": false,
             "hidden_in_bar": false,
             "list_index": 1,
-            "gui_position": "null",
+             "gui_position": [
+                2,
+                -1
+            ],
             "description": "Telekinesis, pretty self explanitory",
             "first_tick_commands": ["playsound infinity:space_stone_grab player @a ~ ~ ~"],
             "last_tick_commands": [],
@@ -198,6 +221,11 @@
                     }
                 ],
                 "unlocking": [
+                    {
+                        "type": "palladium:ability_unlocked",
+                        "power": "null",
+                        "ability": "force_field"
+                    },
                     {
         "type": "palladium:or",
         "conditions": [
@@ -266,7 +294,7 @@
           "enabling":[
               {
                   "type": "palladium:ability_enabled",
-                  "ability": "Force Field"
+                  "ability": "force_field"
                  }
           ],
           "unlocking": [
@@ -326,7 +354,7 @@
         }
       },
          
-      "Force Field":{
+      "force_field":{
             "type": "palladium:attribute_modifier",
             "icon": "infinity:textures/icon/force_field.png",
             "title": "Force Field",
@@ -334,7 +362,10 @@
             "hidden": false,
             "hidden_in_bar": false,
             "list_index": 2,
-            "gui_position": "null",
+           "gui_position": [
+                1,
+                0
+            ],
             "description": "Lets you become invlunerable, at the cost of not being able to move",
             "attribute": "minecraft:generic.armor",
             "amount": 2147483647,
@@ -353,6 +384,10 @@
                 ],
                 "unlocking": [
                     {
+                        "type": "palladium:ability_unlocked",
+                        "power": "null",
+                        "ability": "fall_immunity"
+                    },{
         "type": "palladium:or",
         "conditions": [
             {
@@ -426,7 +461,7 @@
                 "enabling": [
                     {
                         "type": "palladium:ability_enabled",
-                        "ability": "Force Field"
+                        "ability": "force_field"
                        }
                 ],
                 "unlocking": [
@@ -501,7 +536,7 @@
                 "enabling": [
                     {
                         "type": "palladium:ability_enabled",
-                        "ability": "Force Field"
+                        "ability": "force_field"
                        }
                 ],
                 "unlocking": [
@@ -568,7 +603,10 @@
             "hidden": false,
             "hidden_in_bar": false,
             "list_index": 3,
-         "gui_position": "null",
+          "gui_position": [
+                2,
+                -2
+            ],
             "description": "The Black Hole sucks and kills entities nearby, as well as eating all blocks around it. It requires both the Space and Power Stones.",
             "first_tick_commands": ["playsound infinity:black_hole player @a ~ ~ ~"],
             "last_tick_commands": [],
@@ -588,7 +626,11 @@
                     }
                 ],
                 "unlocking": [
-                  
+                  {
+                        "type": "palladium:ability_unlocked",
+                        "power": "null",
+                        "ability": "grab_entity"
+                    },
                   {
     "type": "palladium:not",
     "conditions": [
@@ -817,7 +859,10 @@
     "hidden": false,
     "hidden_in_bar": true,
     "list_index": -1,
-    "gui_position": "null",
+    "gui_position": [
+                0,
+                0
+            ],
     "description": "Negates Fall Damage",
     "damage_sources": [
         "minecraft:is_fall"
@@ -826,7 +871,11 @@
                 
                
                 "unlocking": [
-                    
+                     {
+                        "type": "palladium:ability_unlocked",
+                        "power": "null",
+                        "ability": "speed"
+                    },
                     {   
                 "type": "palladium:has_power",
                 "power": "infinity:space_stone"
@@ -901,7 +950,10 @@
             "hidden": false,
             "hidden_in_bar": true,
             "list_index": -1,
-            "gui_position": "null",
+           "gui_position": [
+                -1,
+                0
+            ],
             "description": "Lets you walk up a whole block at once",
             "attribute": "forge:step_height_addition",
             "amount": 0.5,
@@ -911,6 +963,11 @@
                 
                 
                 "unlocking": [
+                     {
+                        "type": "palladium:ability_unlocked",
+                        "power": "null",
+                        "ability": "fall_immunity"
+                    },
                     {
         "type": "palladium:or",
         "conditions": [
@@ -969,12 +1026,15 @@
          "speed":{
             "type": "palladium:attribute_modifier",
             "icon": "infinity:textures/icon/force_field.png",
-            "title": "Step Assist",
+            "title": "Speed",
             "bar_color": "light_blue",
             "hidden": false,
             "hidden_in_bar": true,
             "list_index": -1,
-            "gui_position": "null",
+            "gui_position": [
+                0,
+                1
+            ],
             "description": "Lets you run faster",
             "attribute": "minecraft:generic.movement_speed",
             "amount": 0.05,

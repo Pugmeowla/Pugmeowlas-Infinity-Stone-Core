@@ -961,7 +961,10 @@
             "hidden": false,
             "hidden_in_bar": false,
             "list_index": 0,
-            "gui_position": "null",
+             "gui_position": [
+                -1,
+                -2
+            ],
             "description": "A powerful beam that deals a near infinite amount of damage. It has a range of 100 blocks, smelts blocks and causes fire",
             "time": 1,
             "arm": "off_arm",
@@ -1029,7 +1032,12 @@
     "slot": "curios:hands"
 }
     ]
-}
+},
+ {
+                        "type": "palladium:ability_unlocked",
+                        "power": "null",
+                        "ability": "punch"
+                    }
                     
                 ]
             }
@@ -1105,7 +1113,7 @@
             }
         },
 
-        "Impower": {
+        "impower": {
             "type": "palladium:command",
             "icon": "infinity:textures/icon/impower.png",
             "title": "Impower",
@@ -1113,7 +1121,10 @@
             "hidden": false,
             "hidden_in_bar": false,
             "list_index": 1,
-            "gui_position": "null",
+             "gui_position": [
+                0,
+                0
+            ],
             "description": "It gives the player both health boost and resistance",
             "first_tick_commands": [],
             "last_tick_commands": [],
@@ -1191,7 +1202,10 @@
             "hidden": false,
             "hidden_in_bar": true,
             "list_index": -1,
-            "gui_position": "null",
+           "gui_position": [
+                -1,
+                -1
+            ],
             "description": "It grants the player a near infinite attack damage",
             "attribute": "palladium:punch_damage",
             "amount": 2147483647,
@@ -1238,6 +1252,11 @@
                             }
                             
                         ]
+                    },
+                    {
+                        "type": "palladium:ability_unlocked",
+                        "power": "null",
+                        "ability": "impower"
                     }
             ]
             }
@@ -1245,13 +1264,16 @@
             "knockback": {
             "type": "palladium:attribute_modifier",
             "icon": "infinity:power_stone",
-            "title": "Punch Damage",
+            "title": "Knockback Resistance",
             "bar_color": "purple",
             "hidden": false,
             "hidden_in_bar": true,
             "list_index": -1,
-            "gui_position": "null",
-            "description": "It grants the player a near infinite attack damage",
+            "gui_position": [
+                1,
+                -1
+            ],
+            "description": "It grants the player knockback resistance",
             "attribute": "minecraft:generic.knockback_resistance",
             "amount": 2147483647,
             "operation": 0,
@@ -1297,6 +1319,11 @@
                             }
                             
                         ]
+                    },
+                     {
+                        "type": "palladium:ability_unlocked",
+                        "power": "null",
+                        "ability": "impower"
                     }
             ]
             }

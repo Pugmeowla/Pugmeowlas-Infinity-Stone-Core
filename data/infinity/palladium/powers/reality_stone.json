@@ -9,7 +9,7 @@
       
     
  
-        "Shrink": {
+        "shrink": {
             "type": "palladium:command",
             "icon": "palladium:textures/icon/size.png",
             "title": "Shrink",
@@ -17,7 +17,10 @@
             "hidden": false,
             "hidden_in_bar": false,
             "list_index": 0,
-            "gui_position": "null",
+           "gui_position": [
+                -1,
+                -1
+            ],
             "description": "Shrinks the player to 1/10th scale",
             "commands": [
                  "scale set pehkui:base 0.1"
@@ -35,6 +38,10 @@
                 ],
                 "unlocking": [
                     {
+                        "type": "palladium:ability_unlocked",
+                        "power": "null",
+                        "ability": "effects"
+                    },{
     "type": "palladium:not",
     "conditions": [
         {
@@ -112,7 +119,10 @@
             "hidden": false,
             "hidden_in_bar": false,
             "list_index": 0,
-            "gui_position": "null",
+            "gui_position": [
+                -1,
+                0
+            ],
             "description": "Grows the player to 10x scale",
             "commands": [
                  "scale set pehkui:base 10"
@@ -129,7 +139,11 @@
                     }
                 ],
                 "unlocking": [
-                    {
+                     {
+                        "type": "palladium:ability_unlocked",
+                        "power": "null",
+                        "ability": "shrink"
+                    },{
     "type": "palladium:crouching"
 },
 {
@@ -200,7 +214,10 @@
             "hidden": false,
             "hidden_in_bar": false,
             "list_index": 0,
-            "gui_position": "null",
+            "gui_position": [
+                -2,
+                -1
+            ],
             "description": "Returms the player to 1x scale",
             "commands": [
                  "scale set pehkui:base 1"
@@ -218,6 +235,10 @@
                 ],
                 "unlocking": [
                     {
+                        "type": "palladium:ability_unlocked",
+                        "power": "null",
+                        "ability": "shrink"
+                    }, {
     "type": "palladium:not",
     "conditions": [
         {
@@ -283,7 +304,7 @@
             }
         },
 
-       "Invisibility": {
+       "invisibility": {
             "type": "palladium:invisibility",
             "icon": "palladium:textures/icon/invisibility.png",
             "title": "Invisibility",
@@ -291,7 +312,10 @@
             "hidden": false,
             "hidden_in_bar": false,
             "list_index": 2,
-            "gui_position": "null",
+            "gui_position": [
+                1,
+                -1
+            ],
             "description": "Makes you truly invisible",
             "conditions": {
                 
@@ -306,6 +330,10 @@
                 ],
                 "unlocking": [
                     {
+                        "type": "palladium:ability_unlocked",
+                        "power": "null",
+                        "ability": "effects"
+                    }, {
                         "type": "palladium:or",
                         "conditions": [
                             {
@@ -361,7 +389,7 @@
             }
         },
 
-        "Save Block On": {
+        "save_block_on": {
             "type": "palladium:command",
             "icon": "infinity:reality_stone",
             "title": "Block Duplication On",
@@ -369,7 +397,10 @@
             "hidden": false,
             "hidden_in_bar": false,
             "list_index": 3,
-            "gui_position": "null",
+            "gui_position": [
+                0,
+                -2
+            ],
             "description": "Turns on Block Duplication",
             "first_tick_commands": [],
             "last_tick_commands": [],
@@ -388,7 +419,16 @@
                     }
                 ],
                 "unlocking": [
+                     {
+                        "type": "palladium:ability_unlocked",
+                        "power": "null",
+                        "ability": "shrink"
+                    },
                     {
+                        "type": "palladium:ability_unlocked",
+                        "power": "null",
+                        "ability": "invisibility"
+                    },{
                         "type": "palladium:not",
                         "conditions": [
                             {
@@ -459,7 +499,10 @@
             "hidden": false,
             "hidden_in_bar": false,
             "list_index": 3,
-            "gui_position": "null",
+            "gui_position": [
+                0,
+                -3
+            ],
             "description": "Turns off Block Duplication",
             "first_tick_commands": [],
             "last_tick_commands": [],
@@ -480,6 +523,11 @@
                 "unlocking": [
                     {
                         "type": "palladium:crouching"
+                    },
+                     {
+                        "type": "palladium:ability_unlocked",
+                        "power": "null",
+                        "ability": "save_block_on"
                     },
                    {
                         "type": "palladium:or",
@@ -536,7 +584,7 @@
                 ]
             }
         },
-         "Effects": {
+         "effects": {
             "type": "palladium:command",
             "icon": "minecraft:textures/mob_effect/nausea.png",
             "title": "Effects",
@@ -544,7 +592,10 @@
             "hidden": false,
             "hidden_in_bar": false,
             "list_index": 4,
-            "gui_position": "null",
+             "gui_position": [
+                0,
+                0
+            ],
             "description": "Gives entities nearby blindness, nausea, darkness and slowness",
             "first_tick_commands": [],
             "last_tick_commands": [],
