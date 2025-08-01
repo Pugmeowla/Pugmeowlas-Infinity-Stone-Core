@@ -1,20 +1,20 @@
 {
-  "temperature": 0.6,
+  "temperature": 0.4,
   "downfall": 0,
   "has_precipitation": false,
   "effects": {
-    "sky_color": 6112500,
-    "fog_color": 3948877,
-    "water_color": 2823475,
-    "water_fog_color": 1702433,
+    "sky_color": 4915635,
+    "fog_color": 2883610,
+    "water_color": 3806253,
+    "water_fog_color": 1969944,
     "particle": {
       "options": {
         "type": "minecraft:dust",
         "value": {
-          "r": 0.75,
-          "g": 0.3,
-          "b": 0.55,
-          "scale": 1
+          "r": 0.5,
+          "g": 0.1,
+          "b": 0.2,
+          "scale": 1.5
         }
       },
       "probability": 1

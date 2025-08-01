@@ -1,0 +1,89 @@
+{
+  "planet_data": {
+      "vormir": {
+      "x": 6900,
+      "y": 420,
+      "z": 6900,
+      "yaw": 1,
+      "pitch": 1,
+      "roll": 1,
+      "scale": 400,
+      "texture_id": "vormir",
+      "travel_to":"infinity:vormir",
+      "glowing": false,
+      "ringed": false,
+      "collision": true
+    }
+  },
+  "attached_dimention_id": "infinity:marvel",
+  "skybox_data":{
+     "texture_id": "skybox_solar",
+    "alpha": 255,
+    "yaw": 23,
+    "pitch": 23,
+    "roll": 23
+  },
+   "dimensional_data": {
+    "dimension_type": "space",
+    "weather": false,
+    "clouds": false,
+    "sky_objects": false,
+    "gravity": 0,
+    "air_resistance": 1
+  },
+  "gui_data": {
+    "marvel": {
+      "object_data": {
+	      "vormir": {
+	         "texture_id": "vormir",
+          "scale": 15,
+          "ponder_scale": 59,
+          "yaw": 5,
+          "pitch": -195,
+          "roll": 23,
+          "yaw_speed": 0.45,
+          "pitch_speed": 0,
+          "roll_speed": 0,
+          "travel_x": 6900,
+          "travel_y": 690,
+          "travel_z": 6900,
+          "unlocking_dimension": "cosmos:solar_system",
+          "atmosphere": {
+            "text": "Thin",
+            "color": "light_gray"
+          },
+          "name": {
+            "text": "Vormir",
+            "color": "orange"
+          },
+          "type": {
+            "text": "Desolate",
+            "color": "pink"
+          },
+          "conditions": {
+            "text": "Harsh",
+            "color": "dark_red"
+          },
+          "size": {
+            "text": "Unknown",
+            "color": "gray"
+          },
+          "category": {
+            "text": "Celestial",
+            "color": "pink"
+          },
+          "life": 1,
+          "ringed": false
+	      }
+      },
+      "travel_dimension": "infinity:marvel",
+      "origin_x": 0,
+      "origin_y": 100,
+      "origin_z": 0,
+      "unlocking_dimension": "cosmos:solar_system",
+      "background": "solar_bg",
+      "title": "Marvel",
+      "order": -4
+    }
+  }
+}

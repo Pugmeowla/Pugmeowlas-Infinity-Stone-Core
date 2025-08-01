@@ -1,0 +1,17 @@
+{
+"attached_dimention_id": "infinity:vormir",
+  "dimensional_data": {
+    "dimension_type": "planet",
+    "sky_objects": true,
+    "atmospheric_data": {
+      "atmosphere_y": 560,
+      "travel_to": "infinity:marvel",
+      "origin_x": 6900,
+      "origin_y": 690,
+      "origin_z": 6900,
+      "overlay_texture_id": "earth_bar",
+      "shipbit_y": 24,
+      "ship_min_y": 120
+    }
+  }
+}
