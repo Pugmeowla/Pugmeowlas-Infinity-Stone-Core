@@ -161,7 +161,7 @@
             "hidden_in_bar": true,
             "list_index": 0,
             "gui_position": "null",
-            "description": "null",
+            "description": "Adds the vibrate effect to intangibility",
             "conditions": {
             "enabling": [
                 {
@@ -452,7 +452,7 @@
             "hidden_in_bar": false,
             "list_index": -1,
             "gui_position": "null",
-            "description": "Shoots lazer beam from the Scepter",
+            "description": "Shoots laser beam from the Scepter",
             "time": 1,
             "arm": "main_arm",
             "conditions": {
