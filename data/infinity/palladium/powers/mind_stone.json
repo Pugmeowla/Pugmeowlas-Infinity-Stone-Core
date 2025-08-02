@@ -14,6 +14,10 @@
             "bar_color": "yellow",
             "description": "Gives you flight",
             "attribute": "palladium:flight_speed",
+             "gui_position": [
+                0,
+                -2
+            ],
             "amount": 3,
             "operation": 0,
             "uuid": "498be4fb-af04-42f2-8948-e6ccdc0d99e1",
@@ -82,6 +86,10 @@
             "title": "Intangibility",
             "bar_color": "yellow",
             "description": "Lets you go intangible",
+             "gui_position": [
+                0,
+                -1
+            ],
             "hidden": false,
             "hidden_in_bar": false,
             "list_index": 0,
@@ -228,7 +236,7 @@
 
        
     },
-     "Passive": {
+     "passive": {
             "type": "palladium:command",
             "icon": "minecraft:player_head",
             "title": "Passive",
@@ -236,7 +244,10 @@
             "hidden": false,
             "hidden_in_bar": false,
             "list_index": 1,
-            "gui_position": "null",
+            "gui_position": [
+                0,
+                0
+            ],
             "description": "Pacify hostile mobs around you",
             "first_tick_commands": [],
             "last_tick_commands": [],
@@ -319,12 +330,12 @@
                 ]
             }
         },
-            "Un-Passive": {
+            "un-passive": {
             "type": "palladium:command",
             "icon": "minecraft:zombie_head",
             "title": "Un-Passive",
             "bar_color": "yellow",
-            "hidden": false,
+            "hidden": true,
             "hidden_in_bar": false,
             "list_index": 1,
             "gui_position": "null",
@@ -405,12 +416,12 @@
                 ]
             }
         },
-         "Power Blast": {
+         "power_blast": {
             "type": "palladium:energy_beam",
             "icon": "infinity:textures/icon/power_blast.png",
             "title": "Power Blast",
             "bar_color": "yellow",
-            "hidden": false,
+            "hidden": true,
             "hidden_in_bar": false,
             "list_index": -1,
             "gui_position": "null",

@@ -6,10 +6,8 @@
     "ability_bar_texture": "infinity:textures/gui/ability_bars/infinity_ability_bar.png",
  
     "abilities": {
-      
-    
-       
-    "Glow": {
+
+        "glow": {
     "type": "palladium:entity_glow",
     "icon": "minecraft:textures/mob_effect/glowing.png",
     "title": "Glow",
@@ -19,6 +17,10 @@
     "hidden_in_bar": false,
     "list_index": 1,
     "mode": "others",
+    "gui_position": [
+                0,
+                0
+            ],
     "distance": 100,
             "conditions": {
                 
@@ -73,7 +75,7 @@
                 ]
             }
         },
-         "Immortal": {
+        "immortal": {
    "type": "palladium:immortality",
     "icon": "minecraft:totem_of_undying",
     "title": "null",
@@ -81,12 +83,24 @@
     "hidden": false,
     "hidden_in_bar": true,
     "list_index": -1,
-    "gui_position": "null",
+      "gui_position": [
+                0,
+                -4
+            ],
     "description": "Makes you completly immortal. Requires all stones to be inserted",
             "conditions": {
                 
                  "unlocking": [
                   {
+                        "type": "palladium:ability_unlocked",
+                        "power": "null",
+                        "ability": "health"
+                    },
+                     {
+                        "type": "palladium:ability_unlocked",
+                        "power": "null",
+                        "ability": "enter_soulworld"
+                    },  {
                         "type": "palladium:or",
                         "conditions": [
                             {
@@ -151,7 +165,7 @@
                 ]
             }
         },
-        "Saturation": {
+        "saturation": {
             "type": "palladium:command",
             "icon": "minecraft:textures/mob_effect/glowing.png",
             "title": "Saturation",
@@ -159,7 +173,10 @@
             "hidden": false,
             "hidden_in_bar": true,
             "list_index": -1,
-            "gui_position": "null",
+             "gui_position": [
+                -1,
+                -1
+            ],
             "description": "Gives you infinite saturation",
             "first_tick_commands": ["effect give @s minecraft:saturation infinite 20 true"],
             "last_tick_commands": ["effect give @s minecraft:saturation infinite 20 true"],
@@ -169,7 +186,11 @@
                 
                
                  "unlocking": [
-                   {
+                    {
+                        "type": "palladium:ability_unlocked",
+                        "power": "null",
+                        "ability": "glow"
+                    },{
                         "type": "palladium:or",
                         "conditions": [
                             {
@@ -210,7 +231,7 @@
                 ]
             }
         },
-               "invulnerability": {
+        "invulnerability": {
             
     "type": "palladium:damage_immunity",
     "icon": "minecraft:potion",
@@ -219,7 +240,10 @@
     "hidden": true,
     "hidden_in_bar": true,
     "list_index": -1,
-    "gui_position": "null",
+    "gui_position": [
+                0,
+                -5
+            ],
     "description": "More immortal stuff",
     "damage_sources": [
         "minecraft:bypasses_invulnerability",
@@ -229,7 +253,11 @@
                 
                 
                 "unlocking": [
-                  {
+                   {
+                        "type": "palladium:ability_unlocked",
+                        "power": "null",
+                        "ability": "immortal"
+                    },{
                         "type": "palladium:or",
                         "conditions": [
                             {
@@ -294,15 +322,18 @@
                 ]
             }
         },
-        "Summon_zombie": {
+        "summon_zombie": {
             "type": "palladium:command",
             "icon": "minecraft:zombie_head",
-            "title": "Summon_zombie",
+            "title": "Summon Zombie",
             "bar_color": "orange",
             "hidden": false,
             "hidden_in_bar": false,
             "list_index": 2,
-            "gui_position": "null",
+            "gui_position": [
+                1,
+                -1
+            ],
             "description": "Summons 7 Zombies",
             "first_tick_commands": [],
             "last_tick_commands": [],
@@ -327,7 +358,11 @@
                 ],
                
                  "unlocking": [
-                    {
+                     {
+                        "type": "palladium:ability_unlocked",
+                        "power": "null",
+                        "ability": "glow"
+                    },{
                         "type": "palladium:or",
                         "conditions": [
                             {
@@ -368,7 +403,7 @@
                 ]
             }
         },
-         "Health": {
+        "health": {
              "type": "palladium:attribute_modifier",
     "icon": "minecraft:iron_chestplate",
     "title": "null",
@@ -376,7 +411,10 @@
     "hidden": false,
     "hidden_in_bar": true,
     "list_index": -1,
-    "gui_position": "null",
+     "gui_position": [
+                -1,
+                -3
+            ],
     "description": "Gives you nearly infinite health",
     "attribute": "minecraft:generic.max_health",
     "amount": 2147483647,
@@ -385,6 +423,10 @@
                
                  "unlocking": [
                     {
+                        "type": "palladium:ability_unlocked",
+                        "power": "null",
+                        "ability": "regen"
+                    },  {
                         "type": "palladium:or",
                         "conditions": [
                             {
@@ -433,7 +475,10 @@
             "hidden": false,
             "hidden_in_bar": false,
             "list_index": 0,
-            "gui_position": "null",
+            "gui_position": [
+                1,
+                -3
+            ],
             "description": "Lets you, and entities near you, enter the SoulWorld",
             "first_tick_commands": [],
             "last_tick_commands": [],
@@ -452,7 +497,11 @@
                 ],
                
                  "unlocking": [
-                      {
+                     {
+                        "type": "palladium:ability_unlocked",
+                        "power": "null",
+                        "ability": "summon_zombie"
+                    }, {
                         "type": "palladium:not",
                         "conditions": [
                             {
@@ -501,7 +550,7 @@
                 ]
             }
         },
-         "exit_soulworld": {
+        "exit_soulworld": {
             "type": "palladium:command",
             "icon": "minecraft:barrier",
             "title": "Exit Soulworld",
@@ -509,7 +558,10 @@
             "hidden": false,
             "hidden_in_bar": false,
             "list_index": 0,
-            "gui_position": "null",
+            "gui_position": [
+                2,
+                -3
+            ],
             "description": "Lets you, and entities near you, exit the SoulWorld",
             "first_tick_commands": [],
             "last_tick_commands": [],
@@ -531,6 +583,10 @@
                
                  "unlocking": [
                       {
+                        "type": "palladium:ability_unlocked",
+                        "power": "null",
+                        "ability": "enter_soulworld"
+                    },{
                                 "type": "palladium:crouching"
                             },
                     {
@@ -574,7 +630,7 @@
                 ]
             }
         },
-         "regen": {
+        "regen": {
             "type": "palladium:command",
             "icon": "minecraft:barrier",
             "title": "Regeneration",
@@ -582,7 +638,10 @@
             "hidden": false,
             "hidden_in_bar": true,
             "list_index": -1,
-            "gui_position": "null",
+             "gui_position": [
+                -1,
+                -2
+            ],
             "description": "Gives Regeneration",
             "first_tick_commands": [ "effect give @s minecraft:regeneration infinite 20 true"],
             "last_tick_commands": [ "effect give @s minecraft:regeneration infinite 20 true"],
@@ -592,7 +651,11 @@
             "conditions": {
                 
                  "unlocking": [
-                     
+                    {
+                        "type": "palladium:ability_unlocked",
+                        "power": "null",
+                        "ability": "saturation"
+                    },  
                     {
                         "type": "palladium:or",
                         "conditions": [

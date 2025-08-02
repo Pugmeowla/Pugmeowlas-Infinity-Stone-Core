@@ -7,7 +7,7 @@
  
     "abilities": {
       
-        "Fast Forward": {
+        "fast_forward": {
             "type": "palladium:command",
             "icon": "minecraft:clock",
             "title": "Fast Forward",
@@ -15,7 +15,10 @@
             "hidden": false,
             "hidden_in_bar": false,
             "list_index": 0,
-            "gui_position": "null",
+            "gui_position": [
+                0,
+                1
+            ],
             "description": "Fast forwards daylight cycle",
             "first_tick_commands": [],
             "last_tick_commands": [],
@@ -103,7 +106,7 @@
             }
         },
         
-        "Stop Time": {
+        "stop_time": {
             "type": "palladium:command",
             "icon": "minecraft:barrier",
             "title": "Stop Time",
@@ -111,7 +114,10 @@
             "hidden": false,
             "hidden_in_bar": false,
             "list_index": 1,
-            "gui_position": "null",
+            "gui_position": [
+                0,
+                0
+            ],
             "description": "Stops the daylight cycle",
             "first_tick_commands": [],
             "last_tick_commands": [],
@@ -130,9 +136,11 @@
                     }
                 ],
                 "unlocking": [
-                    {
-                "type": "palladium:crouching"
-            },
+                     {
+                        "type": "palladium:ability_unlocked",
+                        "power": "null",
+                        "ability": "fast_forward"
+                    },
              {
                         "type": "palladium:or",
                         "conditions": [
@@ -202,15 +210,18 @@
                 ]
             }
         },
-        "Start Time": {
+        "start_time": {
             "type": "palladium:command",
             "icon": "infinity:time_stone",
             "title": "Start Time",
             "bar_color": "lime",
-            "hidden": false,
+            "hidden": true,
             "hidden_in_bar": false,
             "list_index": 1,
-            "gui_position": "null",
+            "gui_position": [
+                1,
+                0
+            ],
             "description": "Starts the daylight cycle",
             "first_tick_commands": [],
             "last_tick_commands": [],
@@ -236,6 +247,12 @@
                         "type": "palladium:crouching"
                     }
                 ]
+            },{
+                        "type": "palladium:ability_unlocked",
+                        "power": "null",
+                        "ability": "stop_time"
+                    },{
+                "type": "palladium:crouching"
             },
               {
                         "type": "palladium:or",
@@ -383,7 +400,10 @@
             "hidden": false,
             "hidden_in_bar": false,
             "list_index": 2,
-            "gui_position": "null",
+            "gui_position": [
+                -1,
+                0
+            ],
             "description": "Stops all projectiles around you. When you laeve them, the projectiles will eventually regain momentumn",
             "first_tick_commands": [],
             "last_tick_commands": [],
@@ -402,7 +422,11 @@
                     }
                 ],
                 "unlocking": [
-                    {
+                     {
+                        "type": "palladium:ability_unlocked",
+                        "power": "null",
+                        "ability": "stop_time"
+                    },{
                         "type": "palladium:or",
                         "conditions": [
                             {
@@ -523,12 +547,15 @@
  "time_set": {
            "type": "palladium:dummy",
             "icon": "infinity:textures/icon/teleport.png",
-            "title": "Teleport Command",
+            "title": "Time Command",
             "bar_color": "light_blue",
             "hidden": false,
             "hidden_in_bar": false,
             "list_index": -1,
-            "gui_position": "null",
+            "gui_position": [
+                0,
+                -1
+            ],
             "description": "Lets you use the space_tp command, the format is space_tp x y z example:example",
             "first_tick_commands": [],
             "last_tick_commands": [],
@@ -544,98 +571,10 @@
                 ],
              "unlocking": [
                     {
-                        "type": "palladium:or",
-                        "conditions": [
-                            {
-                                "type": "palladium:has_power",
-                                "power": "infinity:infinity_gauntlet"
-                            },
-                            {
-                                "type": "palladium:item_in_slot",
-                                "item": {
-                                    "item": "infinity:eye_of_agamotto"
-                                },
-                                "slot": "chest"
-                            },
-                            {
-                                "type": "palladium:item_in_slot",
-                                "item": {
-                                    "item": "infinity:eye_of_agamotto"
-                                },
-                                "slot": "curios:necklace"
-                            },
-                            {
-                                "type": "palladium:item_in_slot",
-                                "item": {
-                                    "item": "infinity:time_stone"
-                                },
-                                "slot": "mainhand"
-                            },
-                            {
-                                "type": "palladium:item_in_slot",
-                                "item": {
-                                    "item": "infinity:time_stone"
-                                },
-                                "slot": "offhand"
-                            },
-                            {
-                                "type": "palladium:item_in_slot",
-                                "item": {
-                                    "item": "infinity:eye_of_agamotto"
-                                },
-                                "slot": "mainhand"
-                            },
-                            {
-                                "type": "palladium:item_in_slot",
-                                "item": {
-                                    "item": "infinity:eye_of_agamotto"
-                                },
-                                "slot": "offhand"
-                            },
-                            {
-                                "type": "palladium:item_in_slot",
-                                "item": {
-                                    "item": "infinity:cosmi-rod_time"
-                                },
-                                "slot": "mainhand"
-                            },
-                            {
-                                "type": "palladium:item_in_slot",
-                                "item": {
-                                    "item": "infinity:cosmi-rod_time"
-                                },
-                                "slot": "offhand"
-                            }
-                            
-                        ]
-                    }
-                ]   
-            }
-        },
-         "repair": {
-           "type": "palladium:dummy",
-            "icon": "infinity:textures/icon/teleport.png",
-            "title": "Repair",
-            "bar_color": "light_blue",
-            "hidden": false,
-            "hidden_in_bar": true,
-            "list_index": -1,
-            "gui_position": "null",
-            "description": "Lets you use the space_tp command, the format is space_tp x y z example:example",
-            "first_tick_commands": [],
-            "last_tick_commands": [],
-            "commands": [
-                ""
-            ],
-            "conditions": {
-                
-                "enabling": [
-                    {
-                        "type": "palladium:true"
-                    }
-                ],
-             "unlocking": [
-                    {
+                        "type": "palladium:ability_unlocked",
+                        "power": "null",
+                        "ability": "stop_time"
+                    },{
                         "type": "palladium:or",
                         "conditions": [
                             {
