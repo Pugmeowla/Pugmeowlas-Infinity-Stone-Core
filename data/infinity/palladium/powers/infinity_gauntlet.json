@@ -13,7 +13,7 @@
     "title": "null",
     "bar_color": "light_gray",
     "hidden": true,
-    "hidden_in_bar": true,
+    "hidden_in_bar": false,
     "list_index": -1,
     "gui_position": "null",
     "description": "null",
@@ -108,7 +108,7 @@
     "hidden_in_bar": false,
     "list_index": 0,
     "gui_position": "null",
-    "description": "Removes a stone from the gauntlet",
+    "description": "null",
     "abilities": [
         "remove_power_stone",
          "remove_space_stone",
@@ -174,7 +174,7 @@
     "hidden_in_bar": false,
     "list_index": 0,
     "gui_position": "null",
-    "description": "Inserts the Power Stone",
+    "description": "Power Stone Abilities",
     "commands": [
         "clear @s infinity:power_stone 1",
         "superpower add infinity:power_stone_passive @s",
@@ -274,7 +274,7 @@
     "hidden_in_bar": true,
     "list_index": -1,
     "gui_position": "null",
-    "description": "Removes the Power Stone",
+    "description": "Remove Power Stone",
     "commands": [
         "execute as @s run clear @s infinity:power_stone",
         "execute as @s run function infinity:givepowerstone",
@@ -309,7 +309,7 @@
     "hidden_in_bar": false,
     "list_index": 0,
     "gui_position": "null",
-    "description": "Inserts the Space Stone",
+    "description": "Space Stone Abilities",
     "commands": [
         "clear @s infinity:space_stone 1",
         "superpower add infinity:space_stone @s",
@@ -403,7 +403,7 @@
     "hidden_in_bar": true,
     "list_index": -1,
     "gui_position": "null",
-    "description": "Removes Space Stone",
+    "description": "Remove Space Stone",
     "commands": [
         "execute as @s run clear @s infinity:space_stone",
         "execute as @s run function infinity:givespacestone",
@@ -437,7 +437,7 @@
     "hidden_in_bar": false,
     "list_index": 0,
     "gui_position": "null",
-    "description": "Insert Reality Stone",
+    "description": "Reality Stone Abilities",
     "commands": [
         "clear @s infinity:reality_stone 1",
         "superpower add infinity:reality_stone @s",
@@ -532,7 +532,7 @@
     "hidden_in_bar": true,
     "list_index": -1,
     "gui_position": "null",
-    "description": "Removes Reality Stone",
+    "description": "Remove Reality Stone",
     "commands": [
         "execute as @s run clear @s infinity:reality_stone",
       "execute as @s run function infinity:giverealitystone",
@@ -566,7 +566,7 @@
     "hidden_in_bar": false,
     "list_index": 0,
     "gui_position": "null",
-    "description": "Insert Time Stone",
+    "description": "Time Stone Abilities",
     "commands": [
         "clear @s infinity:time_stone 1",
         "superpower add infinity:time_stone @s",
@@ -660,7 +660,7 @@
     "hidden_in_bar": true,
     "list_index": -1,
     "gui_position": "null",
-    "description": "Removes Time Stone",
+    "description": "Remove Time Stone",
     "commands": [
         "execute as @s run clear @s infinity:time_stone",
        "execute as @s run function infinity:givetimestone",
@@ -694,7 +694,7 @@
     "hidden_in_bar": false,
     "list_index": 0,
     "gui_position": "null",
-    "description": "Insert Soul Stone",
+    "description": "Soul Stone Abilities",
     "commands": [
         "clear @s infinity:soul_stone 1",
         "superpower add infinity:soul_stone @s",
@@ -789,7 +789,7 @@
     "hidden_in_bar": true,
     "list_index": -1,
     "gui_position": "null",
-    "description": "Removes Soul Stone",
+    "description": "Remove Soul Stone",
     "commands": [
         "execute as @s run clear @s infinity:soul_stone",
         "execute as @s run function infinity:givesoulstone",
@@ -918,7 +918,7 @@
     "hidden_in_bar": true,
     "list_index": -1,
     "gui_position": "null",
-    "description": "Removes Mind Stone",
+    "description": "Remove Mind Stone",
     "commands": [
         "execute as @s run clear @s infinity:mind_stone",
         "execute as @s run function infinity:givemindstone",
@@ -952,7 +952,7 @@
     "hidden_in_bar": false,
     "list_index": 1,
     "gui_position": "null",
-    "description": "Kills half of the entities in a 100 block radius",
+    "description": "Snap",
     "commands": [
         "function infinity:snap1",
         "playsound minecraft:block.conduit.activate master @a",
@@ -1008,7 +1008,7 @@
     "hidden_in_bar": false,
     "list_index": 2,
     "gui_position": "null",
-    "description": "Atomises the Stones",
+    "description": "Snap",
     "commands": [
         "superpower remove infinity:power_stone_passive",
         "superpower remove infinity:space_stone",
@@ -1414,13 +1414,13 @@
  "nano_gauntlet": {
             "type": "palladium:command",
             "icon": "palladium:vibranium_flux_capacitor",
-            "title": "Nano Gauntlet",
+            "title": "Black Hole",
             "bar_color": "red",
-            "hidden": true,
+            "hidden": false,
             "hidden_in_bar": false,
             "list_index": 3,
          "gui_position": "null",
-            "description": "Applies the Nano Gauntlet skin onto the gauntlet",
+            "description": "The Black Hole sucks and kills entities nearby, as well as eating all blocks around it. It requires both the Space and Power Stones.",
             "first_tick_commands": [],
             "last_tick_commands": [],
             "commands": [
@@ -1478,13 +1478,13 @@
         "fantastic_four_skin": {
             "type": "palladium:command",
             "icon": "minecraft:shears",
-            "title": "Fantasic Four Skin",
-            "bar_color": "aqua",
+            "title": "Black Hole",
+            "bar_color": "red",
             "hidden": false,
-            "hidden_in_bar": true,
+            "hidden_in_bar": false,
             "list_index": 3,
          "gui_position": "null",
-            "description": "Applies the Fantastic Four Skin",
+            "description": "The Black Hole sucks and kills entities nearby, as well as eating all blocks around it. It requires both the Space and Power Stones.",
             "first_tick_commands": [],
             "last_tick_commands": [],
             "commands": [
@@ -1543,8 +1543,8 @@
         "netherite_gauntlet": {
             "type": "palladium:command",
             "icon": "minecraft:netherite_ingot",
-            "title": "Netherite Gauntlet Skin",
-            "bar_color": "gray",
+            "title": "Black Hole",
+            "bar_color": "red",
             "hidden": false,
             "hidden_in_bar": false,
             "list_index": 3,
