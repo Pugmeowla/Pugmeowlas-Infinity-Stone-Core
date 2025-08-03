@@ -3,12 +3,14 @@
     "background": "minecraft:textures/block/yellow_concrete.png",
     "icon": "infinity:mind_stone",
     "gui_display_type": "tree",
+    "persistent_data": true,
     "ability_bar_texture": "infinity:textures/gui/ability_bars/infinity_ability_bar.png",
  
     "abilities": {
       
         "flight": {
             "type": "palladium:attribute_modifier",
+            "persistent_data": true,
             "icon": "infinity:mind_stone",
             "title": "Flight",
             "bar_color": "yellow",
@@ -82,6 +84,7 @@
         },
          "intangibility": {
             "type": "palladium:intangibility",
+             "persistent_data": true,
             "icon": "infinity:mind_stone",
             "title": "Intangibility",
             "bar_color": "yellow",
@@ -162,6 +165,7 @@
         },
         "vibrate": {
             "type": "palladium:vibrate",
+             "persistent_data": true,
             "icon": "minecraft:blaze_rod",
             "title": "null",
             "bar_color": "light_gray",
@@ -238,6 +242,7 @@
     },
      "passive": {
             "type": "palladium:command",
+             "persistent_data": true,
             "icon": "minecraft:player_head",
             "title": "Passive",
             "bar_color": "yellow",
@@ -332,6 +337,7 @@
         },
             "un-passive": {
             "type": "palladium:command",
+             "persistent_data": true,
             "icon": "minecraft:zombie_head",
             "title": "Un-Passive",
             "bar_color": "yellow",
@@ -418,6 +424,7 @@
         },
          "power_blast": {
             "type": "palladium:energy_beam",
+             "persistent_data": true,
             "icon": "infinity:textures/icon/power_blast.png",
             "title": "Power Blast",
             "bar_color": "yellow",
@@ -456,6 +463,7 @@
         },
          "aim": {
             "type": "palladium:aim",
+             "persistent_data": true,
             "icon": "infinity:textures/icon/power_blast.png",
             "title": "Power Blast",
             "bar_color": "yellow",

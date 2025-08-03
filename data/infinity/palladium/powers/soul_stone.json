@@ -3,6 +3,7 @@
     "background": "minecraft:textures/block/orange_concrete.png",
     "icon": "infinity:soul_stone",
     "gui_display_type": "tree",
+    "persistent_data": true,
     "ability_bar_texture": "infinity:textures/gui/ability_bars/infinity_ability_bar.png",
  
     "abilities": {
@@ -10,6 +11,7 @@
         "glow": {
     "type": "palladium:entity_glow",
     "icon": "minecraft:textures/mob_effect/glowing.png",
+     "persistent_data": true,
     "title": "Glow",
     "bar_color": "orange",
     "description": "Shows all entities around you",
@@ -79,6 +81,7 @@
    "type": "palladium:immortality",
     "icon": "minecraft:totem_of_undying",
     "title": "null",
+     "persistent_data": true,
     "bar_color": "light_gray",
     "hidden": false,
     "hidden_in_bar": true,
@@ -170,6 +173,7 @@
             "icon": "minecraft:textures/mob_effect/glowing.png",
             "title": "Saturation",
             "bar_color": "orange",
+             "persistent_data": true,
             "hidden": false,
             "hidden_in_bar": true,
             "list_index": -1,
@@ -179,7 +183,7 @@
             ],
             "description": "Gives you infinite saturation",
             "first_tick_commands": ["effect give @s minecraft:saturation infinite 20 true"],
-            "last_tick_commands": ["effect give @s minecraft:saturation infinite 20 true"],
+            "last_tick_commands": ["effect clear @s"],
             "commands": [
             ],
             "conditions": {
@@ -236,6 +240,7 @@
     "type": "palladium:damage_immunity",
     "icon": "minecraft:potion",
     "title": "invulnerability",
+     "persistent_data": true,
     "bar_color": "light_gray",
     "hidden": true,
     "hidden_in_bar": true,
@@ -325,6 +330,7 @@
         "summon_zombie": {
             "type": "palladium:command",
             "icon": "minecraft:zombie_head",
+             "persistent_data": true,
             "title": "Summon Zombie",
             "bar_color": "orange",
             "hidden": false,
@@ -407,6 +413,7 @@
              "type": "palladium:attribute_modifier",
     "icon": "minecraft:iron_chestplate",
     "title": "null",
+     "persistent_data": true,
     "bar_color": "orange",
     "hidden": false,
     "hidden_in_bar": true,
@@ -473,6 +480,7 @@
             "title": "Enter Soulworld",
             "bar_color": "orange",
             "hidden": false,
+             "persistent_data": true,
             "hidden_in_bar": false,
             "list_index": 0,
             "gui_position": [
@@ -553,6 +561,7 @@
         "exit_soulworld": {
             "type": "palladium:command",
             "icon": "minecraft:barrier",
+             "persistent_data": true,
             "title": "Exit Soulworld",
             "bar_color": "orange",
             "hidden": false,
@@ -633,6 +642,7 @@
         "regen": {
             "type": "palladium:command",
             "icon": "minecraft:barrier",
+             "persistent_data": true,
             "title": "Regeneration",
             "bar_color": "orange",
             "hidden": false,
@@ -644,9 +654,9 @@
             ],
             "description": "Gives Regeneration",
             "first_tick_commands": [ "effect give @s minecraft:regeneration infinite 20 true"],
-            "last_tick_commands": [ "effect give @s minecraft:regeneration infinite 20 true"],
+            "last_tick_commands": ["effect clear @s"],
             "commands": [
-              
+              "effect give @s minecraft:regeneration infinite 20 true"
             ],
             "conditions": {
                 

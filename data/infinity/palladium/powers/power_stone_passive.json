@@ -3,6 +3,7 @@
     "background": "minecraft:textures/block/purple_concrete.png",
     "icon": "infinity:power_stone",
     "gui_display_type": "tree",
+    "persistent_data": true,
     "ability_bar_texture": "infinity:textures/gui/ability_bars/infinity_ability_bar.png",
  
     "abilities": {
@@ -10,6 +11,7 @@
         
          "power_bast": {
             "type": "palladium:energy_beam",
+             "persistent_data": true,
             "icon": "infinity:textures/icon/power_blast.png",
             "title": "Power Blast",
             "bar_color": "purple",
@@ -90,6 +92,7 @@
         },
          "power_bast_space": {
             "type": "palladium:energy_beam",
+             "persistent_data": true,
             "icon": "infinity:textures/icon/power_blast.png",
             "title": "Power Blast",
             "bar_color": "purple",
@@ -174,6 +177,7 @@
         },
          "power_bast_reality": {
             "type": "palladium:energy_beam",
+             "persistent_data": true,
             "icon": "infinity:textures/icon/power_blast.png",
             "title": "Power Blast",
             "bar_color": "purple",
@@ -258,6 +262,7 @@
         },
          "power_bast_time": {
             "type": "palladium:energy_beam",
+             "persistent_data": true,
             "icon": "infinity:textures/icon/power_blast.png",
             "title": "Power Blast",
             "bar_color": "purple",
@@ -342,6 +347,7 @@
         },
         "power_bast_soul": {
             "type": "palladium:energy_beam",
+             "persistent_data": true,
             "icon": "infinity:textures/icon/power_blast.png",
             "title": "Power Blast",
             "bar_color": "purple",
@@ -424,9 +430,9 @@
             }
             
         },
-
          "power_bast_mind": {
             "type": "palladium:energy_beam",
+             "persistent_data": true,
             "icon": "infinity:textures/icon/power_blast.png",
             "title": "Power Blast",
             "bar_color": "purple",
@@ -509,9 +515,9 @@
             }
             
         },
-
         "power_bast_mainhand": {
             "type": "palladium:energy_beam",
+             "persistent_data": true,
             "icon": "infinity:textures/icon/power_blast.png",
             "title": "Power Blast",
             "bar_color": "purple",
@@ -580,6 +586,7 @@
         },
          "power_bast_space_mainhand": {
             "type": "palladium:energy_beam",
+             "persistent_data": true,
             "icon": "infinity:textures/icon/power_blast.png",
             "title": "Power Blast",
             "bar_color": "purple",
@@ -876,7 +883,6 @@
             }
             
         },
-
          "power_bast_mind_mainhand": {
             "type": "palladium:energy_beam",
             "icon": "infinity:textures/icon/power_blast.png",
@@ -952,11 +958,11 @@
             }
             
         },
-
         "power_blast_aim": {
             "type": "palladium:aim",
             "icon": "infinity:textures/icon/power_blast.png",
             "title": "Power Blast",
+             "persistent_data": true,
             "bar_color": "purple",
             "hidden": false,
             "hidden_in_bar": false,
@@ -1042,11 +1048,11 @@
                 ]
             }
         },
-
         "power_blast_aim_mainhand": {
             "type": "palladium:aim",
             "icon": "infinity:textures/icon/power_blast.png",
             "title": "Power Blast",
+             "persistent_data": true,
             "bar_color": "purple",
             "hidden": true,
             "hidden_in_bar": false,
@@ -1112,9 +1118,9 @@
                 ]
             }
         },
-
         "impower": {
             "type": "palladium:command",
+             "persistent_data": true,
             "icon": "infinity:textures/icon/impower.png",
             "title": "Impower",
             "bar_color": "purple",
@@ -1145,6 +1151,12 @@
                 ],
                 "unlocking": [
              {
+    "type": "palladium:item_buyable",
+    "ingredient": {
+        "item": "minecraft:iron_ingot"
+    },
+    "amount": 1
+}, {
                         "type": "palladium:or",
                         "conditions": [
                             {
@@ -1192,10 +1204,9 @@
         ]
             }
         },
-       
-
         "punch": {
             "type": "palladium:attribute_modifier",
+             "persistent_data": true,
             "icon": "infinity:power_stone",
             "title": "Punch Damage",
             "bar_color": "purple",
@@ -1264,6 +1275,7 @@
             "knockback": {
             "type": "palladium:attribute_modifier",
             "icon": "infinity:power_stone",
+             "persistent_data": true,
             "title": "Knockback Resistance",
             "bar_color": "purple",
             "hidden": false,
@@ -1331,6 +1343,7 @@
         "explosion": {
             "type": "palladium:command",
             "icon": "infinity:textures/icon/teleport.png",
+             "persistent_data": true,
             "title": "Cosmic Explosion",
             "bar_color": "purple",
             "hidden": false,
