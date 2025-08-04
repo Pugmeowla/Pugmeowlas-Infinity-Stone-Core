@@ -3,12 +3,10 @@
     "background": "minecraft:textures/block/purple_concrete.png",
     "icon": "infinity:power_stone",
     "gui_display_type": "tree",
-    "persistent_data": true,
+    "persistent_data": false,
     "ability_bar_texture": "infinity:textures/gui/ability_bars/infinity_ability_bar.png",
  
     "abilities": {
-     
-        
          "power_bast": {
             "type": "palladium:energy_beam",
              "persistent_data": true,
@@ -984,6 +982,12 @@
                 ],
               "unlocking": [
                    {
+    "type": "palladium:item_buyable",
+    "ingredient": {
+        "item": "infinity:aspects_of_existance"
+    },
+    "amount": 1
+},{
                                 "type": "palladium:has_power",
                                 "power": "infinity:infinity_gauntlet"
                             },
@@ -1153,10 +1157,11 @@
              {
     "type": "palladium:item_buyable",
     "ingredient": {
-        "item": "minecraft:iron_ingot"
+        "item": "infinity:aspects_of_existance"
     },
     "amount": 1
-}, {
+},
+{
                         "type": "palladium:or",
                         "conditions": [
                             {
@@ -1225,7 +1230,13 @@
             "conditions": {
             
                 "unlocking": [
-                
+                {
+    "type": "palladium:item_buyable",
+    "ingredient": {
+        "item": "infinity:aspects_of_existance"
+    },
+    "amount": 1
+},
                 {
                         "type": "palladium:or",
                         "conditions": [
@@ -1293,7 +1304,13 @@
             "conditions": {
             
                 "unlocking": [
-                
+                {
+    "type": "palladium:item_buyable",
+    "ingredient": {
+        "item": "infinity:aspects_of_existance"
+    },
+    "amount": 1
+},
                 {
                         "type": "palladium:or",
                         "conditions": [

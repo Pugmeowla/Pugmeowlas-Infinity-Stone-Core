@@ -36,7 +36,13 @@
                     }
                 ],
                  "unlocking": [
-                  {
+                    {
+    "type": "palladium:item_buyable",
+    "ingredient": {
+        "item": "infinity:aspects_of_existance"
+    },
+    "amount": 1
+},{
                         "type": "palladium:or",
                         "conditions": [
                             {
@@ -94,7 +100,13 @@
             "conditions": {
                 
                  "unlocking": [
-                  {
+                    {
+    "type": "palladium:item_buyable",
+    "ingredient": {
+        "item": "infinity:aspects_of_existance"
+    },
+    "amount": 1
+},{
                         "type": "palladium:ability_unlocked",
                         "power": "null",
                         "ability": "health"
@@ -191,6 +203,12 @@
                
                  "unlocking": [
                     {
+    "type": "palladium:item_buyable",
+    "ingredient": {
+        "item": "infinity:aspects_of_existance"
+    },
+    "amount": 1
+},  {
                         "type": "palladium:ability_unlocked",
                         "power": "null",
                         "ability": "glow"
@@ -364,7 +382,13 @@
                 ],
                
                  "unlocking": [
-                     {
+                       {
+    "type": "palladium:item_buyable",
+    "ingredient": {
+        "item": "infinity:aspects_of_existance"
+    },
+    "amount": 1
+},{
                         "type": "palladium:ability_unlocked",
                         "power": "null",
                         "ability": "glow"
@@ -429,7 +453,13 @@
                 
                
                  "unlocking": [
-                    {
+                      {
+    "type": "palladium:item_buyable",
+    "ingredient": {
+        "item": "infinity:aspects_of_existance"
+    },
+    "amount": 1
+},{
                         "type": "palladium:ability_unlocked",
                         "power": "null",
                         "ability": "regen"
@@ -505,7 +535,13 @@
                 ],
                
                  "unlocking": [
-                     {
+                      {
+    "type": "palladium:item_buyable",
+    "ingredient": {
+        "item": "infinity:aspects_of_existance"
+    },
+    "amount": 1
+}, {
                         "type": "palladium:ability_unlocked",
                         "power": "null",
                         "ability": "summon_zombie"
@@ -661,7 +697,13 @@
             "conditions": {
                 
                  "unlocking": [
-                    {
+                      {
+    "type": "palladium:item_buyable",
+    "ingredient": {
+        "item": "infinity:aspects_of_existance"
+    },
+    "amount": 1
+},{
                         "type": "palladium:ability_unlocked",
                         "power": "null",
                         "ability": "saturation"

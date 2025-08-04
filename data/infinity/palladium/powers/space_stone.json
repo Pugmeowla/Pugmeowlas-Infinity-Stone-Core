@@ -43,7 +43,13 @@
 }
                 ],
                 "unlocking": [
-                     {
+                       {
+    "type": "palladium:item_buyable",
+    "ingredient": {
+        "item": "infinity:aspects_of_existance"
+    },
+    "amount": 1
+},{
                         "type": "palladium:ability_unlocked",
                         "power": "null",
                         "ability": "step_assist"
@@ -131,7 +137,13 @@
                     }
                 ],
                 "unlocking": [
-    {
+     {
+    "type": "palladium:item_buyable",
+    "ingredient": {
+        "item": "infinity:aspects_of_existance"
+    },
+    "amount": 1
+}, {
                         "type": "palladium:ability_unlocked",
                         "power": "null",
                         "ability": "teleport"
@@ -225,7 +237,13 @@
                     }
                 ],
                 "unlocking": [
-                    {
+                     {
+    "type": "palladium:item_buyable",
+    "ingredient": {
+        "item": "infinity:aspects_of_existance"
+    },
+    "amount": 1
+}, {
                         "type": "palladium:ability_unlocked",
                         "power": "null",
                         "ability": "force_field"
@@ -389,7 +407,13 @@
                     }
                 ],
                 "unlocking": [
-                    {
+                     {
+    "type": "palladium:item_buyable",
+    "ingredient": {
+        "item": "infinity:aspects_of_existance"
+    },
+    "amount": 1
+}, {
                         "type": "palladium:ability_unlocked",
                         "power": "null",
                         "ability": "fall_immunity"
@@ -635,7 +659,13 @@
                     }
                 ],
                 "unlocking": [
-                  {
+                   {
+    "type": "palladium:item_buyable",
+    "ingredient": {
+        "item": "infinity:aspects_of_existance"
+    },
+    "amount": 1
+}, {
                         "type": "palladium:ability_unlocked",
                         "power": "null",
                         "ability": "grab_entity"
@@ -883,7 +913,13 @@
                 
                
                 "unlocking": [
-                     {
+                       {
+    "type": "palladium:item_buyable",
+    "ingredient": {
+        "item": "infinity:aspects_of_existance"
+    },
+    "amount": 1
+},{
                         "type": "palladium:ability_unlocked",
                         "power": "null",
                         "ability": "speed"
@@ -976,7 +1012,13 @@
                 
                 
                 "unlocking": [
-                     {
+                       {
+    "type": "palladium:item_buyable",
+    "ingredient": {
+        "item": "infinity:aspects_of_existance"
+    },
+    "amount": 1
+},{
                         "type": "palladium:ability_unlocked",
                         "power": "null",
                         "ability": "fall_immunity"
@@ -1058,10 +1100,10 @@
                 
                 
                 "unlocking": [
-                  {
+                    {
     "type": "palladium:item_buyable",
     "ingredient": {
-        "item": "minecraft:iron_ingot"
+        "item": "infinity:aspects_of_existance"
     },
     "amount": 1
 }

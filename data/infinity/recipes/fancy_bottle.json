@@ -1,0 +1,22 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "HG ",
+        "   ",
+        "   "
+    ],
+    "key": {
+        "H": {
+            "item": "minecraft:glass_bottle"
+        },
+        "G": {
+            "item": "minecraft:glowstone_dust"
+        }
+        
+    
+    },
+    "result": {
+        "item": "infinity:fancy_bottle",
+        "count": 1
+    }
+}
