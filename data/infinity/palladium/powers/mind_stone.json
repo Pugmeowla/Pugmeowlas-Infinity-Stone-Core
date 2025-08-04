@@ -34,6 +34,10 @@
     },
     "amount": 1
 },{
+                        "type": "palladium:ability_unlocked",
+                        "power": "null",
+                        "ability": "intangibility"
+                    },{
                         "type": "palladium:or",
                         "conditions": [
                             {
@@ -121,6 +125,10 @@
     },
     "amount": 1
 },{
+                        "type": "palladium:ability_unlocked",
+                        "power": "null",
+                        "ability": "passive"
+                    },{
                         "type": "palladium:or",
                         "conditions": [
                             {

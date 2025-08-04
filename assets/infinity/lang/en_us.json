@@ -53,5 +53,8 @@
     "item.infinity.empty_scepter": "Empty Scepter",
     "item.infinity.empty_orb": "Empty Orb",
     "entity.minecraft.villager.infinity.soul_guardian": "Soul Guardian",
-    "block.infinity.vormir_sand": "Vormir Sand"
+    "block.infinity.vormir_sand": "Vormir Sand",
+    "item.infinity.aspects_of_existance": "Aspects of Existence",
+    "item.infinity.shards_of_existance": "Shards of Existence",
+    "item.infinity.fancy_bottle": "Fancy Bottle"
 }

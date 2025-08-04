@@ -27,7 +27,13 @@
                         "type": "palladium:ability_unlocked",
                         "power": "null",
                         "ability": "shrink_dummy"
-                    },
+                    }, {
+    "type": "palladium:item_buyable",
+    "ingredient": {
+        "item": "infinity:aspects_of_existance"
+    },
+    "amount": 1
+},
                     {
                         "type": "palladium:ability_unlocked",
                         "power": "null",
@@ -56,7 +62,13 @@
                         "type": "palladium:ability_unlocked",
                         "power": "null",
                         "ability": "effects"
-                    }
+                    },{
+    "type": "palladium:item_buyable",
+    "ingredient": {
+        "item": "infinity:aspects_of_existance"
+    },
+    "amount": 1
+}
                 ]
                 }
 },
@@ -386,6 +398,12 @@
                 ],
                 "unlocking": [
                     {
+    "type": "palladium:item_buyable",
+    "ingredient": {
+        "item": "infinity:aspects_of_existance"
+    },
+    "amount": 1
+},{
                         "type": "palladium:ability_unlocked",
                         "power": "null",
                         "ability": "effects"
@@ -677,6 +695,12 @@
                 "unlocking": [
                   
                    {
+    "type": "palladium:item_buyable",
+    "ingredient": {
+        "item": "infinity:aspects_of_existance"
+    },
+    "amount": 1
+},{
                         "type": "palladium:or",
                         "conditions": [
                             {

@@ -1,6 +1,6 @@
 {
     "parent":"minecraft:item/generated",
     "textures":{
-        "layer0":"infinity:item/aspects_of_existance"
+        "layer0":"infinity:item/fancy_bottle"
     }
 }
