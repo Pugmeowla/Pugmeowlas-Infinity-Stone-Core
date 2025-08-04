@@ -1,6 +1,7 @@
 {
     "replace": false,
     "values":[
-        "infinity:eye_of_agamotto"
+        "infinity:eye_of_agamotto",
+        "infinity:empty_eye_of_agamotto"
     ]
 }

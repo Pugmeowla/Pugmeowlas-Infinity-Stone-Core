@@ -1,0 +1,22 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "HG ",
+        "   ",
+        "   "
+    ],
+    "key": {
+        "H": {
+            "item": "infinity:reality_stone"
+        },
+        "G": {
+            "item": "infinity:empty_aether"
+        }
+        
+    
+    },
+    "result": {
+        "item": "infinity:aether",
+        "count": 1
+    }
+}

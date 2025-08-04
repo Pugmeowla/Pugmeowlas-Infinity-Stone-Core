@@ -1,0 +1,22 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "HG ",
+        "   ",
+        "   "
+    ],
+    "key": {
+        "H": {
+            "item": "infinity:space_stone"
+        },
+        "G": {
+            "item": "infinity:empty_tesseract"
+        }
+        
+    
+    },
+    "result": {
+        "item": "infinity:tesseract",
+        "count": 1
+    }
+}

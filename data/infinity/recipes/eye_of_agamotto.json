@@ -1,0 +1,22 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "HG ",
+        "   ",
+        "   "
+    ],
+    "key": {
+        "H": {
+            "item": "infinity:time_stone"
+        },
+        "G": {
+            "item": "infinity:empty_eye_of_agamotto"
+        }
+        
+    
+    },
+    "result": {
+        "item": "infinity:eye_of_agamotto",
+        "count": 1
+    }
+}
