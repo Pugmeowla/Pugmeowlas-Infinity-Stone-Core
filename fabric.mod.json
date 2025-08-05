@@ -4,8 +4,8 @@
     "environment": "*",
     "name": "Pugmeowlas Infinity Stones Core",
     "id": "infinity",
-    "version": "3.2",
-    "description": "Unofficial Successor to Infinity Craft, made by Pugmeowla",
+    "version": "4.0",
+    "description": "An Offical port of Infinity Craft, adds the Infinity Gauntlet and Infinity Stones from Lucraft Core and others",
     "icon": "logo.png",
     "license": "All rights reserved"
   }

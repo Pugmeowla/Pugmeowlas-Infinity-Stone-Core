@@ -6,11 +6,11 @@ license="All rights reserved"
 [[mods]]
 modId="infinity"
 displayName="Pugmeowlas Infinity Stones Core"
-version="3.2"
+version="4.0"
 logoFile = "logo.png"
 logoBlur = false
 description='''
-Unofficial Successor to Infinity Craft, made by Pugmeowla
+An Offical port of Infinity Craft, adds the Infinity Gauntlet and Infinity Stones from Lucraft Core and others
 '''
 
 [[dependencies.test]]
