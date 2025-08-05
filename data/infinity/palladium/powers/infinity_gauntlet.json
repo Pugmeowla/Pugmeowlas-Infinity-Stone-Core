@@ -1414,13 +1414,13 @@
  "nano_gauntlet": {
             "type": "palladium:command",
             "icon": "palladium:vibranium_flux_capacitor",
-            "title": "Black Hole",
+            "title": "Nano Gauntlet",
             "bar_color": "red",
             "hidden": false,
             "hidden_in_bar": false,
             "list_index": 3,
          "gui_position": "null",
-            "description": "The Black Hole sucks and kills entities nearby, as well as eating all blocks around it. It requires both the Space and Power Stones.",
+            "description": "Unlock with Vibranium Flux Capacitor in mainhand",
             "first_tick_commands": [],
             "last_tick_commands": [],
             "commands": [
@@ -1478,13 +1478,13 @@
         "fantastic_four_skin": {
             "type": "palladium:command",
             "icon": "minecraft:shears",
-            "title": "Black Hole",
-            "bar_color": "red",
+            "title": "Fantastic Four Skin",
+            "bar_color": "light_blue",
             "hidden": false,
             "hidden_in_bar": false,
             "list_index": 3,
          "gui_position": "null",
-            "description": "The Black Hole sucks and kills entities nearby, as well as eating all blocks around it. It requires both the Space and Power Stones.",
+            "description": "Unlock with ???",
             "first_tick_commands": [],
             "last_tick_commands": [],
             "commands": [
@@ -1543,13 +1543,13 @@
         "netherite_gauntlet": {
             "type": "palladium:command",
             "icon": "minecraft:netherite_ingot",
-            "title": "Black Hole",
+            "title": "Netherite Gauntlet",
             "bar_color": "red",
             "hidden": false,
             "hidden_in_bar": false,
             "list_index": 3,
          "gui_position": "null",
-            "description": "The Black Hole sucks and kills entities nearby, as well as eating all blocks around it. It requires both the Space and Power Stones.",
+            "description": "Unlock with netherite ingot",
             "first_tick_commands": [],
             "last_tick_commands": [],
             "commands": [
@@ -1613,7 +1613,7 @@
             "hidden_in_bar": false,
             "list_index": 3,
          "gui_position": "null",
-            "description": "The Black Hole sucks and kills entities nearby, as well as eating all blocks around it. It requires both the Space and Power Stones.",
+            "description": "removes applied skin",
             "first_tick_commands": [],
             "last_tick_commands": [],
             "commands": [

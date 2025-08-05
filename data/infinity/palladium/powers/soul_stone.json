@@ -628,10 +628,6 @@
                
                  "unlocking": [
                       {
-                        "type": "palladium:ability_unlocked",
-                        "power": "null",
-                        "ability": "enter_soulworld"
-                    },{
                                 "type": "palladium:crouching"
                             },
                     {
