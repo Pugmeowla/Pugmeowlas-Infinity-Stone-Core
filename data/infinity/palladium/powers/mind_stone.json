@@ -105,7 +105,7 @@
             ],
             "hidden": false,
             "hidden_in_bar": false,
-            "list_index": 0,
+            "list_index": 1,
             "conditions": {
                 
                 "enabling": [
@@ -268,7 +268,7 @@
             "bar_color": "yellow",
             "hidden": false,
             "hidden_in_bar": false,
-            "list_index": 1,
+            "list_index": 0,
             "gui_position": [
                 0,
                 0

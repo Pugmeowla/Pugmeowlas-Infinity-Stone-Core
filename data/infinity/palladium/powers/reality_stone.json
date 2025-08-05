@@ -81,7 +81,7 @@
             "bar_color": "red",
             "hidden": true,
             "hidden_in_bar": false,
-            "list_index": 0,
+            "list_index": 1,
            "gui_position": [
                 -1,
                 -1
@@ -184,7 +184,7 @@
             "bar_color": "red",
             "hidden": true,
             "hidden_in_bar": false,
-            "list_index": 0,
+            "list_index": 1,
             "gui_position": [
                 -1,
                 0
@@ -280,7 +280,7 @@
             "bar_color": "red",
             "hidden": true,
             "hidden_in_bar": false,
-            "list_index": 0,
+            "list_index": 1,
             "gui_position": [
                 -2,
                 -1
@@ -663,7 +663,7 @@
             "bar_color": "red",
             "hidden": false,
             "hidden_in_bar": false,
-            "list_index": 4,
+            "list_index": 0,
              "gui_position": [
                 0,
                 0
