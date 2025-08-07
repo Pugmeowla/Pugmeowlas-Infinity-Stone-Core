@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:block/cube_all",
   "textures": {
-    "all": "infinity:block/morag_soil"
+    "all": "infinity:block/morag_stone"
   }
 }
