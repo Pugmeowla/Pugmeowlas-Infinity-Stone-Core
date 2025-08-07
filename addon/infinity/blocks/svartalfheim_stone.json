@@ -1,11 +1,11 @@
 {
-    "map_color": "minecraft:brown",
+    "map_color": "minecraft:color_brown",
     "sound_type": "minecraft:stone",
-    "destroy_time": 0.75,
+    "destroy_time": 7.5,
     "explosion_resistance": 1,
     "render_type": "solid",
     "no_occlusion": false,
-    "requires_correct_tool_for_drops": false,
+    "requires_correct_tool_for_drops": true,
     "register_item": true,
     "creative_mode_tab": "minecraft:natural_blocks"
 }

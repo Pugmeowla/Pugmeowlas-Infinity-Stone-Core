@@ -1,6 +1,6 @@
 {
-    "map_color": "minecraft:brown",
-    "sound_type": "minecraft:dirt",
+    "map_color": "minecraft:color_purple",
+    "sound_type": "minecraft:sand",
     "destroy_time": 0.75,
     "explosion_resistance": 1,
     "render_type": "solid",
