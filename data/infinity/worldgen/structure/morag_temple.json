@@ -2,7 +2,7 @@
   "type": "minecraft:jigsaw",
   "start_pool": "infinity:morag_temple/morag_temple",
   "size": 1,
- "biomes": "#minecraft:is_end",
+  "biomes": ["minecraft:end_highlands", "minecraft:end_midlands"],
   "step": "surface_structures",
   "max_distance_from_center": 100,
   "terrain_adaptation": "beard_thin",
