@@ -1,0 +1,12 @@
+{
+  "values": [
+    {
+      "id": "kubejs:molten_titanium",
+      "required": false
+    },
+     {
+      "id": "gtceu:titanium",
+      "required": false
+    }
+  ]
+}

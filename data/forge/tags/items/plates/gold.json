@@ -1,0 +1,12 @@
+{
+  "values": [
+    {
+      "id": "infinity:gold_plate",
+      "required": false
+    },
+     {
+      "id": "gtceu:gold_plate",
+      "required": false
+    }
+  ]
+}

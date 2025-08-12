@@ -1,0 +1,52 @@
+{
+  "values": [
+    {
+      "id": "cosmos:titanium_sword",
+      "required": false
+    },
+     {
+      "id": "cosmos:titanium_pickaxe",
+      "required": false
+    },
+    {
+      "id": "cosmos:titanium_axe",
+      "required": false
+    },
+    {
+      "id": "cosmos:titanium_shovel",
+      "required": false
+    },
+    {
+      "id": "cosmos:titanium_hoe",
+      "required": false
+    },
+    {
+      "id": "gtceu:titanium_sword",
+      "required": false
+    },
+     {
+      "id": "gtceu:titanium_pickaxe",
+      "required": false
+    },
+    {
+      "id": "gtceu:titanium_axe",
+      "required": false
+    },
+    {
+      "id": "gtceu:titanium_shovel",
+      "required": false
+    },
+    {
+      "id": "gtceu:titanium_hoe",
+      "required": false
+    },
+    {
+      "id": "arrzenhanced:titanium_axe",
+      "required": false
+    },
+    {
+      "id": "arrzenhanced:titanium_dagger",
+      "required": false
+    }
+  ]
+}

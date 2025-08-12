@@ -1,8 +1,8 @@
 {
   "type": "tconstruct:melting",
-  "ingredient": { "item": "fsang:gold_titanium_ingot" },
+  "ingredient": { "tag": "forge:tools/titanium" },
   "result": {
-    "fluid": "kubejs:molten_gold_titanium_alloy",
+    "fluid": "kubejs:molten_titanium",
     "amount": 144
   },
   "temperature": 275,

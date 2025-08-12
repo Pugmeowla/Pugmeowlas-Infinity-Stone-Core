@@ -1,0 +1,12 @@
+{
+  "values": [
+    {
+      "id": "infinity:titanium_dust",
+      "required": false
+    },
+     {
+      "id": "gtceu:titanium_dust",
+      "required": false
+    }
+  ]
+}

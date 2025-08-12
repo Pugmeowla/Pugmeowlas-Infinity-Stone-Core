@@ -1,0 +1,12 @@
+{
+  "values": [
+    {
+      "id": "grave.core:titanium_nugget",
+      "required": false
+    },
+     {
+      "id": "gtceu:titanium_nugget",
+      "required": false
+    }
+  ]
+}

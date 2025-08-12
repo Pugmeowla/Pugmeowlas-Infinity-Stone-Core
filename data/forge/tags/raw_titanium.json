@@ -1,0 +1,12 @@
+{
+  "values": [
+    {
+      "id": "palladium:raw_titanium",
+      "required": false
+    },
+     {
+      "id": "cosmos:raw_titanium",
+      "required": false
+    }
+  ]
+}

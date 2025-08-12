@@ -1,0 +1,12 @@
+{
+  "values": [
+    {
+      "id": "cosmos:titanium_plate",
+      "required": false
+    },
+     {
+      "id": "gtceu:titanium_plate",
+      "required": false
+    }
+  ]
+}

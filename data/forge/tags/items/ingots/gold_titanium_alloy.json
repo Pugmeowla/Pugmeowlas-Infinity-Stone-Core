@@ -7,6 +7,14 @@
     {
       "id": "fsang:gold_titanium_ingot",
       "required": false
+    },
+    {
+      "id": "dampened:titanium_gold_ingot",
+      "required": false
+    },
+    {
+      "id": "arrzenhanced:titanium_gold_ingot",
+      "required": false
     }
   ]
 }

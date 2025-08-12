@@ -1,0 +1,12 @@
+{
+  "values": [
+    {
+      "id": "palladium:raw_titanium_block",
+      "required": false
+    },
+     {
+      "id": "cosmos:frozen_titaniumore",
+      "required": false
+    }
+  ]
+}

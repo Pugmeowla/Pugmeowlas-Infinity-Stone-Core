@@ -1,6 +1,6 @@
 {
   "type": "tconstruct:melting",
-  "ingredient": { "item": "infinity:gold_titanium_alloy_ingot" },
+  "ingredient": { "tag": "forge:ingots/gold_titanium_alloy" },
   "result": {
     "fluid": "kubejs:molten_gold_titanium_alloy",
     "amount": 144
