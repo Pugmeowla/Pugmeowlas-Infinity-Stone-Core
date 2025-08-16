@@ -1,0 +1,11 @@
+{
+    "map_color": "minecraft:color_black",
+    "sound_type": "minecraft:stone",
+    "destroy_time": 1.5,
+    "explosion_resistance": 6,
+    "render_type": "solid",
+    "no_occlusion": false,
+    "requires_correct_tool_for_drops": false,
+    "register_item": true,
+    "creative_mode_tab": "minecraft:natural_blocks"
+}
