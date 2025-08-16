@@ -31,3 +31,7 @@ execute as @e[type=armor_stand,tag=temp_stand] at @s run particle minecraft:dust
 execute as @e[type=armor_stand,tag=temp_stand] at @s run particle minecraft:dust 0.3 0.7 1 2 ~0.8839 ~0.1161 ~-0.5 0 0 0 0 1 force
 execute as @e[type=armor_stand,tag=temp_stand] at @s run particle minecraft:dust 0.3 0.7 1 2 ~1.0825 ~0.375 ~-0.5 0 0 0 0 1 force
 execute as @e[type=armor_stand,tag=temp_stand] at @s run particle minecraft:dust 0.3 0.7 1 2 ~1.2071 ~0.6764 ~-0.5 0 0 0 0 1 force
+
+execute if entity @e[tag=malekith] run bossbar set minecraft:malekith players @a
+execute store result bossbar minecraft:malekith value run data get entity @e[tag=malekith,limit=1] Health
+execute unless entity @e[tag=malekith,limit=1] run bossbar set minecraft:malekith players test
