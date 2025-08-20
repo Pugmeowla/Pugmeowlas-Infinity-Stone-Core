@@ -13,6 +13,20 @@
       "glowing": false,
       "ringed": false,
       "collision": true
+    },
+     "morag": {
+      "x": 4200,
+      "y": 69,
+      "z": 4200,
+      "yaw": 1,
+      "pitch": 1,
+      "roll": 1,
+      "scale": 400,
+      "texture_id": "morag",
+      "travel_to":"infinity:morag",
+      "glowing": false,
+      "ringed": false,
+      "collision": true
     }
   },
   "attached_dimention_id": "infinity:marvel",
@@ -73,6 +87,47 @@
             "color": "pink"
           },
           "life": 1,
+          "ringed": false
+	      },
+         "morag": {
+	         "texture_id": "morag",
+          "scale": 15,
+          "ponder_scale": 59,
+          "yaw": 5,
+          "pitch": -195,
+          "roll": 23,
+          "yaw_speed": 0.45,
+          "pitch_speed": 0,
+          "roll_speed": 0,
+          "travel_x": 4200,
+          "travel_y": 420,
+          "travel_z": 4200,
+          "unlocking_dimension": "cosmos:solar_system",
+          "atmosphere": {
+            "text": "Thin",
+            "color": "light_gray"
+          },
+          "name": {
+            "text": "Morag",
+            "color": "gray"
+          },
+          "type": {
+            "text": "Abandoned Planet",
+            "color": "white"
+          },
+          "conditions": {
+            "text": "Flood Cycles",
+            "color": "blue"
+          },
+          "size": {
+            "text": "Medium",
+            "color": "gray"
+          },
+          "category": {
+            "text": "Exoplanet",
+            "color": "pink"
+          },
+          "life": 0,
           "ringed": false
 	      }
       },
