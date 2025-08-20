@@ -112,12 +112,12 @@
             "color": "gray"
           },
           "type": {
-            "text": "Abandoned Planet",
+            "text": "Abandoned",
             "color": "white"
           },
           "conditions": {
-            "text": "Flood Cycles",
-            "color": "blue"
+            "text": "Flood",
+            "color": "light_blue"
           },
           "size": {
             "text": "Medium",
