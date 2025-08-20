@@ -1,0 +1,11 @@
+{
+  "dimension": "infinity:morag",
+  "gravity": 9.807,
+  "orbit": "pack_id:orbit_id",
+  "oxygen": true,
+  "solar_power": 16,
+  "solar_system": "infinity:marvel",
+  "temperature": 15,
+  "tier": 4,
+  "additional_launch_dimensions": []
+}
