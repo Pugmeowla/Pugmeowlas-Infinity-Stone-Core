@@ -1,902 +1,848 @@
 {
-    "name": "Power Stone",
-    "background": "minecraft:textures/block/purple_concrete.png",
-    "icon": "infinity:power_stone",
-    "gui_display_type": "tree",
-    "persistent_data": true,
-    "ability_bar_texture": "infinity:textures/gui/ability_bars/infinity_ability_bar.png",
- 
-    "abilities": {
-         "power_bast": {
-            "type": "palladium:energy_beam",
-             "persistent_data": true,
-            "icon": "infinity:textures/icon/power_blast.png",
-            "title": "Power Blast",
-            "bar_color": "purple",
-            "hidden": true,
-            "hidden_in_bar": true,
-            "list_index": -1,
-            "gui_position": "null",
-            "description": "null",
-            "energy_beam": "infinity:gauntlet_beam",
-            "damage": 2147483647,
-            "max_distance": 100,
-            "speed": 1,
-            "set_on_fire_seconds": 1,
-            "cause_fire": true,
-            "smelt_blocks": true,
-            "conditions": {
-               
-                "enabling": [
-                    {
-                        "type": "palladium:ability_enabled",
-                        "ability": "power_blast_aim"
+  "name": "Power Stone",
+  "background": "minecraft:textures/block/purple_concrete.png",
+  "icon": "infinity:power_stone",
+  "gui_display_type": "tree",
+  "persistent_data": true,
+  "ability_bar_texture": "infinity:textures/gui/ability_bars/infinity_ability_bar.png",
+
+  "abilities": {
+    "power_bast": {
+      "type": "palladium:energy_beam",
+      "persistent_data": true,
+      "icon": "infinity:textures/icon/power_blast.png",
+      "title": "Power Blast",
+      "bar_color": "purple",
+      "hidden": true,
+      "hidden_in_bar": true,
+      "list_index": -1,
+      "gui_position": "null",
+      "description": "null",
+      "energy_beam": "infinity:gauntlet_beam",
+      "damage": 2147483647,
+      "max_distance": 100,
+      "speed": 1,
+      "set_on_fire_seconds": 1,
+      "cause_fire": true,
+      "smelt_blocks": true,
+      "conditions": {
+        "enabling": [
+          {
+            "type": "palladium:ability_enabled",
+            "ability": "power_blast_aim"
+          },
+          {
+            "type": "palladium:or",
+            "conditions": [
+              {
+                "type": "palladium:item_in_slot",
+                "item": {
+                  "item": "infinity:infinity_gauntlet"
+                },
+                "slot": "offhand"
+              },
+              {
+                "type": "palladium:item_in_slot",
+                "item": {
+                  "item": "infinity:infinity_gauntlet"
+                },
+                "slot": "curios:hands"
+              }
+            ]
+          }
+        ],
+        "unlocking": [
+          {
+            "type": "palladium:has_power",
+            "power": "infinity:infinity_gauntlet"
+          },
+          {
+            "type": "palladium:not",
+            "conditions": [
+              {
+                "type": "palladium:or",
+                "conditions": [
+                  {
+                    "type": "palladium:item_in_slot",
+                    "item": {
+                      "item": "infinity:power_stone"
                     },
-                    {
-    "type": "palladium:or",
-    "conditions": [
-        {
-    "type": "palladium:item_in_slot",
-    "item": {
-        "item": "infinity:infinity_gauntlet"
-    },
-    "slot": "offhand"
-},
-{
-    "type": "palladium:item_in_slot",
-    "item": {
-        "item": "infinity:infinity_gauntlet"
-    },
-    "slot": "curios:hands"
-}
-    ]
-}
-                ],
-               "unlocking": [
-                    {
-                                "type": "palladium:has_power",
-                                "power": "infinity:infinity_gauntlet"
-                            },
-                     {
-                        "type": "palladium:not",
-                        "conditions": [
-                            {
-                        "type": "palladium:or",
-                        "conditions": [
-                            
-                            {
-                                "type": "palladium:item_in_slot",
-                                "item": {
-                                    "item": "infinity:power_stone"
-                                },
-                                "slot": "mainhand"
-                            },
-                            {
-                                "type": "palladium:item_in_slot",
-                                "item": {
-                                    "item": "infinity:power_stone"
-                                },
-                                "slot": "offhand"
-                            }
-                            
-                        ]
-                    }
-                        ]
+                    "slot": "mainhand"
+                  },
+                  {
+                    "type": "palladium:item_in_slot",
+                    "item": {
+                      "item": "infinity:power_stone"
                     },
-                    {
-                        "type":"palladium:not",
-                        "conditions":[
-                            {
-    "type": "palladium:and",
-    "conditions": [
-{   
-                "type": "palladium:has_power",
-                "power": "infinity:mind_stone"
-            },
-            {   
-                "type": "palladium:has_power",
-                "power": "infinity:power_stone_passive"
-            },
-            {   
-                "type": "palladium:has_power",
-                "power": "infinity:space_stone"
-            },
-            {   
-                "type": "palladium:has_power",
-                "power": "infinity:reality_stone"
-            },
-            {   
-                "type": "palladium:has_power",
-                "power": "infinity:time_stone"
-            },
-            {   
-                "type": "palladium:has_power",
-                "power": "infinity:soul_stone"
-            }
-    ]
-}
-                        
-                        ]
-                    }
-                    
+                    "slot": "offhand"
+                  }
                 ]
-            }
-            
-        },
-   "power_bast_rainbow": {
-            "type": "palladium:energy_beam",
-             "persistent_data": true,
-            "icon": "infinity:textures/icon/power_blast.png",
-            "title": "Power Blast",
-            "bar_color": "purple",
-            "hidden": true,
-            "hidden_in_bar": true,
-            "list_index": -1,
-            "gui_position": "null",
-            "description": "null",
-            "energy_beam": "infinity:gauntlet_beam_rainbow",
-            "damage": 2147483647,
-            "max_distance": 100,
-            "speed": 1,
-            "set_on_fire_seconds": 1,
-            "cause_fire": true,
-            "smelt_blocks": true,
-            "conditions": {
-               
-                "enabling": [
-                    {
-                        "type": "palladium:ability_enabled",
-                        "ability": "power_blast_aim"
-                    },
-                    {
-    "type": "palladium:or",
-    "conditions": [
-        {
-    "type": "palladium:item_in_slot",
-    "item": {
-        "item": "infinity:infinity_gauntlet"
-    },
-    "slot": "offhand"
-},
-{
-    "type": "palladium:item_in_slot",
-    "item": {
-        "item": "infinity:infinity_gauntlet"
-    },
-    "slot": "curios:hands"
-}
-    ]
-}
-                ],
-               "unlocking": [
-                    {
-                                "type": "palladium:has_power",
-                                "power": "infinity:infinity_gauntlet"
-                            }, {   
-                "type": "palladium:has_power",
-                "power": "infinity:mind_stone"
-            },
-            {   
-                "type": "palladium:has_power",
-                "power": "infinity:power_stone_passive"
-            },
-            {   
-                "type": "palladium:has_power",
-                "power": "infinity:space_stone"
-            },
-            {   
-                "type": "palladium:has_power",
-                "power": "infinity:reality_stone"
-            },
-            {   
-                "type": "palladium:has_power",
-                "power": "infinity:time_stone"
-            },
-            {   
-                "type": "palladium:has_power",
-                "power": "infinity:soul_stone"
-            },
-                     {
-                        "type": "palladium:not",
-                        "conditions": [
-                            {
-                        "type": "palladium:or",
-                        "conditions": [
-                            
-                            {
-                                "type": "palladium:item_in_slot",
-                                "item": {
-                                    "item": "infinity:power_stone"
-                                },
-                                "slot": "mainhand"
-                            },
-                            {
-                                "type": "palladium:item_in_slot",
-                                "item": {
-                                    "item": "infinity:power_stone"
-                                },
-                                "slot": "offhand"
-                            }
-                            
-                        ]
-                    }
-                        ]
-                    }
-                    
+              }
+            ]
+          },
+          {
+            "type": "palladium:not",
+            "conditions": [
+              {
+                "type": "palladium:and",
+                "conditions": [
+                  {
+                    "type": "palladium:has_power",
+                    "power": "infinity:mind_stone"
+                  },
+                  {
+                    "type": "palladium:has_power",
+                    "power": "infinity:power_stone_passive"
+                  },
+                  {
+                    "type": "palladium:has_power",
+                    "power": "infinity:space_stone"
+                  },
+                  {
+                    "type": "palladium:has_power",
+                    "power": "infinity:reality_stone"
+                  },
+                  {
+                    "type": "palladium:has_power",
+                    "power": "infinity:time_stone"
+                  },
+                  {
+                    "type": "palladium:has_power",
+                    "power": "infinity:soul_stone"
+                  }
                 ]
-            }
-            
-        },
-        "power_blast_aim": {
-            "type": "palladium:aim",
-            "icon": "infinity:textures/icon/power_blast.png",
-            "title": "Power Blast",
-             "persistent_data": true,
-            "bar_color": "purple",
-            "hidden": false,
-            "hidden_in_bar": false,
-            "list_index": 1,
-             "gui_position": [
-                -1,
-                -2
-            ],
-            "description": "A powerful beam that deals a near infinite amount of damage. It has a range of 100 blocks, smelts blocks and causes fire",
-            "time": 1,
-            "arm": "off_arm",
-            "conditions": {
-                
-                "enabling": [
-                    {
-                        "type": "palladium:held",
-                        "cooldown": 0
-                    }
-                ],
-              "unlocking": [
-                   {
-    "type": "palladium:item_buyable",
-    "ingredient": {
-        "item": "infinity:aspects_of_existance"
-    },
-    "amount": 1
-},{
-                                "type": "palladium:has_power",
-                                "power": "infinity:infinity_gauntlet"
-                            },
-                     {
-                        "type": "palladium:not",
-                        "conditions": [
-                            {
-                        "type": "palladium:or",
-                        "conditions": [
-                            
-                            {
-                                "type": "palladium:item_in_slot",
-                                "item": {
-                                    "item": "infinity:power_stone"
-                                },
-                                "slot": "mainhand"
-                            },
-                            {
-                                "type": "palladium:item_in_slot",
-                                "item": {
-                                    "item": "infinity:power_stone"
-                                },
-                                "slot": "offhand"
-                            },
-                             {
-                                "type": "palladium:item_in_slot",
-                                "item": {
-                                    "item": "infinity:cosmi-rod_power"
-                                },
-                                "slot": "mainhand"
-                            }
-                            
-                        ]
-                    }
-                        ]
-                    },
-                    {
-    "type": "palladium:or",
-    "conditions": [
-        {
-    "type": "palladium:item_in_slot",
-    "item": {
-        "item": "infinity:infinity_gauntlet"
-    },
-    "slot": "offhand"
-},
-{
-    "type": "palladium:item_in_slot",
-    "item": {
-        "item": "infinity:infinity_gauntlet"
-    },
-    "slot": "curios:hands"
-}
-    ]
-},
- {
-                        "type": "palladium:ability_unlocked",
-                        "power": "null",
-                        "ability": "punch"
-                    }
-                    
-                ]
-            }
-        },
-          "power_bast_mainhand": {
-            "type": "palladium:energy_beam",
-             "persistent_data": true,
-            "icon": "infinity:textures/icon/power_blast.png",
-            "title": "Power Blast",
-            "bar_color": "purple",
-            "hidden": true,
-            "hidden_in_bar": true,
-            "list_index": -1,
-            "gui_position": "null",
-            "description": "null",
-            "energy_beam": "infinity:gauntlet_beam_mainhand",
-            "damage": 2147483647,
-            "max_distance": 100,
-            "speed": 1,
-            "set_on_fire_seconds": 1,
-            "cause_fire": true,
-            "smelt_blocks": true,
-            "conditions": {
-               
-                "enabling": [
-                    {
-                        "type": "palladium:ability_enabled",
-                        "ability": "power_blast_aim_mainhand"
-                    },
-                   {
-    "type": "palladium:item_in_slot",
-    "item": {
-        "item": "infinity:infinity_gauntlet"
-    },
-    "slot": "mainhand"
-}
-                ],
-               "unlocking": [
-                    {
-                                "type": "palladium:has_power",
-                                "power": "infinity:infinity_gauntlet"
-                            },
-                     {
-                        "type": "palladium:not",
-                        "conditions": [
-                            {
-                        "type": "palladium:or",
-                        "conditions": [
-                            
-                            {
-                                "type": "palladium:item_in_slot",
-                                "item": {
-                                    "item": "infinity:power_stone"
-                                },
-                                "slot": "mainhand"
-                            },
-                            {
-                                "type": "palladium:item_in_slot",
-                                "item": {
-                                    "item": "infinity:power_stone"
-                                },
-                                "slot": "offhand"
-                            }
-                            
-                        ]
-                    }
-                        ]
-                    },
-                     {
-                        "type":"palladium:not",
-                        "conditions":[
-                            {
-    "type": "palladium:and",
-    "conditions": [
-{   
-                "type": "palladium:has_power",
-                "power": "infinity:mind_stone"
-            },
-            {   
-                "type": "palladium:has_power",
-                "power": "infinity:power_stone_passive"
-            },
-            {   
-                "type": "palladium:has_power",
-                "power": "infinity:space_stone"
-            },
-            {   
-                "type": "palladium:has_power",
-                "power": "infinity:reality_stone"
-            },
-            {   
-                "type": "palladium:has_power",
-                "power": "infinity:time_stone"
-            },
-            {   
-                "type": "palladium:has_power",
-                "power": "infinity:soul_stone"
-            }
-    ]
-}
-                        
-                        ]
-                    }
-                    
-                ]
-            }
-            
-        },
-        "power_bast_rainbow_mainhand": {
-            "type": "palladium:energy_beam",
-             "persistent_data": true,
-            "icon": "infinity:textures/icon/power_blast.png",
-            "title": "Power Blast",
-            "bar_color": "purple",
-            "hidden": true,
-            "hidden_in_bar": true,
-            "list_index": -1,
-            "gui_position": "null",
-            "description": "null",
-            "energy_beam": "infinity:gauntlet_beam_rainbow_mainhand",
-            "damage": 2147483647,
-            "max_distance": 100,
-            "speed": 1,
-            "set_on_fire_seconds": 1,
-            "cause_fire": true,
-            "smelt_blocks": true,
-            "conditions": {
-               
-                "enabling": [
-                    {
-                        "type": "palladium:ability_enabled",
-                        "ability": "power_blast_aim_mainhand"
-                    },
-                     {
-    "type": "palladium:item_in_slot",
-    "item": {
-        "item": "infinity:infinity_gauntlet"
-    },
-    "slot": "mainhand"
-}
-                ],
-               "unlocking": [
-                    {
-                                "type": "palladium:has_power",
-                                "power": "infinity:infinity_gauntlet"
-                            }, {   
-                "type": "palladium:has_power",
-                "power": "infinity:mind_stone"
-            },
-            {   
-                "type": "palladium:has_power",
-                "power": "infinity:power_stone_passive"
-            },
-            {   
-                "type": "palladium:has_power",
-                "power": "infinity:space_stone"
-            },
-            {   
-                "type": "palladium:has_power",
-                "power": "infinity:reality_stone"
-            },
-            {   
-                "type": "palladium:has_power",
-                "power": "infinity:time_stone"
-            },
-            {   
-                "type": "palladium:has_power",
-                "power": "infinity:soul_stone"
-            },
-                     {
-                        "type": "palladium:not",
-                        "conditions": [
-                            {
-                        "type": "palladium:or",
-                        "conditions": [
-                            
-                            {
-                                "type": "palladium:item_in_slot",
-                                "item": {
-                                    "item": "infinity:power_stone"
-                                },
-                                "slot": "mainhand"
-                            },
-                            {
-                                "type": "palladium:item_in_slot",
-                                "item": {
-                                    "item": "infinity:power_stone"
-                                },
-                                "slot": "offhand"
-                            }
-                            
-                        ]
-                    }
-                        ]
-                    }
-                    
-                ]
-            }
-            
-        },
-        "power_blast_aim_mainhand": {
-            "type": "palladium:aim",
-            "icon": "infinity:textures/icon/power_blast.png",
-            "title": "Power Blast",
-             "persistent_data": true,
-            "bar_color": "purple",
-            "hidden": true,
-            "hidden_in_bar": false,
-            "list_index": 1,
-            "gui_position": "null",
-            "description": "A powerful beam that deals a near infinite amount of damage. It has a range of 100 blocks, smelts blocks and causes fire",
-            "time": 1,
-            "arm": "main_arm",
-            "conditions": {
-                
-                "enabling": [
-                    {
-                        "type": "palladium:held",
-                        "cooldown": 0
-                    }
-                ],
-              "unlocking": [
-                   {
-                                "type": "palladium:has_power",
-                                "power": "infinity:infinity_gauntlet"
-                            },
-                     {
-                        "type": "palladium:not",
-                        "conditions": [
-                            {
-                        "type": "palladium:or",
-                        "conditions": [
-                            
-                            {
-                                "type": "palladium:item_in_slot",
-                                "item": {
-                                    "item": "infinity:power_stone"
-                                },
-                                "slot": "mainhand"
-                            },
-                            {
-                                "type": "palladium:item_in_slot",
-                                "item": {
-                                    "item": "infinity:power_stone"
-                                },
-                                "slot": "offhand"
-                            },
-                             {
-                                "type": "palladium:item_in_slot",
-                                "item": {
-                                    "item": "infinity:cosmi-rod_power"
-                                },
-                                "slot": "mainhand"
-                            }
-                            
-                        ]
-                    }
-                        ]
-                    },
-                    {
-    "type": "palladium:item_in_slot",
-    "item": {
-        "item": "infinity:infinity_gauntlet"
-    },
-    "slot": "mainhand"
-}
-                    
-                ]
-            }
-        },
-        "impower": {
-            "type": "palladium:command",
-             "persistent_data": true,
-            "icon": "infinity:textures/icon/impower.png",
-            "title": "Impower",
-            "bar_color": "purple",
-            "hidden": false,
-            "hidden_in_bar": false,
-            "list_index": 0,
-             "gui_position": [
-                0,
-                0
-            ],
-            "description": "It gives the player both health boost and resistance",
-            "first_tick_commands": [],
-            "last_tick_commands": [],
-            "commands": [
-                "effect give @s minecraft:health_boost 90 5 true",
-                "effect give @s minecraft:resistance 90 5 true"
-            ],
-            "conditions": {
-                
-                "enabling": [
-                    {
-                        "type": "palladium:action",
-                        "cooldown": 0,
-                        "key_type": "key_bind",
-                        "needs_empty_hand": false,
-                        "allow_scrolling_when_crouching": true
-                    }
-                ],
-                "unlocking": [
-             {
-    "type": "palladium:item_buyable",
-    "ingredient": {
-        "item": "infinity:aspects_of_existance"
-    },
-    "amount": 1
-},
-{
-                        "type": "palladium:or",
-                        "conditions": [
-                            {
-                                "type": "palladium:has_power",
-                                "power": "infinity:infinity_gauntlet"
-                            },
-                            {
-                                "type": "palladium:item_in_slot",
-                                "item": {
-                                    "item": "infinity:power_stone"
-                                },
-                                "slot": "mainhand"
-                            },
-                            {
-                                "type": "palladium:item_in_slot",
-                                "item": {
-                                    "item": "infinity:cosmi-rod_power"
-                                },
-                                "slot": "offhand"
-                            },
-                            {
-                                "type": "palladium:item_in_slot",
-                                "item": {
-                                    "item": "infinity:cosmi-rod_power"
-                                },
-                                "slot": "mainhand"
-                            },
-                            {
-                                "type": "palladium:item_in_slot",
-                                "item": {
-                                    "item": "infinity:power_stone"
-                                },
-                                "slot": "offhand"
-                            },
-                             {
-                                "type": "palladium:item_in_slot",
-                                "item": {
-                                    "item": "infinity:cosmi-rod_power"
-                                },
-                                "slot": "mainhand"
-                            }
-                            
-                        ]
-                    }
+              }
+            ]
+          }
         ]
-            }
-        },
-        "punch": {
-            "type": "palladium:attribute_modifier",
-             "persistent_data": true,
-            "icon": "infinity:power_stone",
-            "title": "Punch Damage",
-            "bar_color": "purple",
-            "hidden": false,
-            "hidden_in_bar": true,
-            "list_index": -1,
-           "gui_position": [
-                -1,
-                -1
-            ],
-            "description": "It grants the player a near infinite attack damage",
-            "attribute": "palladium:punch_damage",
-            "amount": 2147483647,
-            "operation": 0,
-            "uuid": "498be4fb-af04-42f2-8948-e6ccdc0d99e1",
-            "conditions": {
-            
-                "unlocking": [
-                {
-    "type": "palladium:item_buyable",
-    "ingredient": {
-        "item": "infinity:aspects_of_existance"
+      }
     },
-    "amount": 1
-},
-                {
-                        "type": "palladium:or",
-                        "conditions": [
-                            {
-                                "type": "palladium:has_power",
-                                "power": "infinity:infinity_gauntlet"
-                            },
-                            {
-                                "type": "palladium:item_in_slot",
-                                "item": {
-                                    "item": "infinity:power_stone"
-                                },
-                                "slot": "mainhand"
-                            },
-                            {
-                                "type": "palladium:item_in_slot",
-                                "item": {
-                                    "item": "infinity:cosmi-rod_power"
-                                },
-                                "slot": "offhand"
-                            },
-                            {
-                                "type": "palladium:item_in_slot",
-                                "item": {
-                                    "item": "infinity:cosmi-rod_power"
-                                },
-                                "slot": "mainhand"
-                            },
-                            {
-                                "type": "palladium:item_in_slot",
-                                "item": {
-                                    "item": "infinity:power_stone"
-                                },
-                                "slot": "offhand"
-                            }
-                            
-                        ]
-                    },
-                    {
-                        "type": "palladium:ability_unlocked",
-                        "power": "null",
-                        "ability": "impower"
-                    }
+    "power_bast_rainbow": {
+      "type": "palladium:energy_beam",
+      "persistent_data": true,
+      "icon": "infinity:textures/icon/power_blast.png",
+      "title": "Power Blast",
+      "bar_color": "purple",
+      "hidden": true,
+      "hidden_in_bar": true,
+      "list_index": -1,
+      "gui_position": "null",
+      "description": "null",
+      "energy_beam": "infinity:gauntlet_beam_rainbow",
+      "damage": 2147483647,
+      "max_distance": 100,
+      "speed": 1,
+      "set_on_fire_seconds": 1,
+      "cause_fire": true,
+      "smelt_blocks": true,
+      "conditions": {
+        "enabling": [
+          {
+            "type": "palladium:ability_enabled",
+            "ability": "power_blast_aim"
+          },
+          {
+            "type": "palladium:or",
+            "conditions": [
+              {
+                "type": "palladium:item_in_slot",
+                "item": {
+                  "item": "infinity:infinity_gauntlet"
+                },
+                "slot": "offhand"
+              },
+              {
+                "type": "palladium:item_in_slot",
+                "item": {
+                  "item": "infinity:infinity_gauntlet"
+                },
+                "slot": "curios:hands"
+              }
             ]
-            }
-        },
-            "knockback": {
-            "type": "palladium:attribute_modifier",
-            "icon": "infinity:power_stone",
-             "persistent_data": true,
-            "title": "Knockback Resistance",
-            "bar_color": "purple",
-            "hidden": false,
-            "hidden_in_bar": true,
-            "list_index": -1,
-            "gui_position": [
-                1,
-                -1
-            ],
-            "description": "It grants the player knockback resistance",
-            "attribute": "minecraft:generic.knockback_resistance",
-            "amount": 2147483647,
-            "operation": 0,
-            "uuid": "498be4fb-af04-42f2-8948-e6ccdc0d99e1",
-            "conditions": {
-            
-                "unlocking": [
-                {
-    "type": "palladium:item_buyable",
-    "ingredient": {
-        "item": "infinity:aspects_of_existance"
+          }
+        ],
+        "unlocking": [
+          {
+            "type": "palladium:has_power",
+            "power": "infinity:infinity_gauntlet"
+          },
+          {
+            "type": "palladium:has_power",
+            "power": "infinity:mind_stone"
+          },
+          {
+            "type": "palladium:has_power",
+            "power": "infinity:power_stone_passive"
+          },
+          {
+            "type": "palladium:has_power",
+            "power": "infinity:space_stone"
+          },
+          {
+            "type": "palladium:has_power",
+            "power": "infinity:reality_stone"
+          },
+          {
+            "type": "palladium:has_power",
+            "power": "infinity:time_stone"
+          },
+          {
+            "type": "palladium:has_power",
+            "power": "infinity:soul_stone"
+          },
+          {
+            "type": "palladium:not",
+            "conditions": [
+              {
+                "type": "palladium:or",
+                "conditions": [
+                  {
+                    "type": "palladium:item_in_slot",
+                    "item": {
+                      "item": "infinity:power_stone"
+                    },
+                    "slot": "mainhand"
+                  },
+                  {
+                    "type": "palladium:item_in_slot",
+                    "item": {
+                      "item": "infinity:power_stone"
+                    },
+                    "slot": "offhand"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
     },
-    "amount": 1
-},
-                {
-                        "type": "palladium:or",
-                        "conditions": [
-                            {
-                                "type": "palladium:has_power",
-                                "power": "infinity:infinity_gauntlet"
-                            },
-                            {
-                                "type": "palladium:item_in_slot",
-                                "item": {
-                                    "item": "infinity:power_stone"
-                                },
-                                "slot": "mainhand"
-                            },
-                            {
-                                "type": "palladium:item_in_slot",
-                                "item": {
-                                    "item": "infinity:cosmi-rod_power"
-                                },
-                                "slot": "offhand"
-                            },
-                            {
-                                "type": "palladium:item_in_slot",
-                                "item": {
-                                    "item": "infinity:cosmi-rod_power"
-                                },
-                                "slot": "mainhand"
-                            },
-                            {
-                                "type": "palladium:item_in_slot",
-                                "item": {
-                                    "item": "infinity:power_stone"
-                                },
-                                "slot": "offhand"
-                            }
-                            
-                        ]
+    "power_blast_aim": {
+      "type": "palladium:aim",
+      "icon": "infinity:textures/icon/power_blast.png",
+      "title": "Power Blast",
+      "persistent_data": true,
+      "bar_color": "purple",
+      "hidden": false,
+      "hidden_in_bar": false,
+      "list_index": 1,
+      "gui_position": [-1, -2],
+      "description": "A powerful beam that deals a near infinite amount of damage. It has a range of 100 blocks, smelts blocks and causes fire",
+      "time": 1,
+      "arm": "off_arm",
+      "conditions": {
+        "enabling": [
+          {
+            "type": "palladium:held",
+            "cooldown": 0
+          }
+        ],
+        "unlocking": [
+          {
+            "type": "palladium:item_buyable",
+            "ingredient": {
+              "item": "infinity:aspects_of_existance"
+            },
+            "amount": 1
+          },
+          {
+            "type": "palladium:has_power",
+            "power": "infinity:infinity_gauntlet"
+          },
+          {
+            "type": "palladium:not",
+            "conditions": [
+              {
+                "type": "palladium:or",
+                "conditions": [
+                  {
+                    "type": "palladium:item_in_slot",
+                    "item": {
+                      "item": "infinity:power_stone"
                     },
-                     {
-                        "type": "palladium:ability_unlocked",
-                        "power": "null",
-                        "ability": "impower"
-                    }
+                    "slot": "mainhand"
+                  },
+                  {
+                    "type": "palladium:item_in_slot",
+                    "item": {
+                      "item": "infinity:power_stone"
+                    },
+                    "slot": "offhand"
+                  },
+                  {
+                    "type": "palladium:item_in_slot",
+                    "item": {
+                      "item": "infinity:cosmi-rod_power"
+                    },
+                    "slot": "mainhand"
+                  }
+                ]
+              }
             ]
-            }
-        },
-        "explosion": {
-            "type": "palladium:command",
-            "icon": "infinity:textures/icon/teleport.png",
-             "persistent_data": true,
-            "title": "Cosmic Explosion",
-            "bar_color": "purple",
-            "hidden": false,
-            "hidden_in_bar": true,
-            "list_index": -1,
-            "gui_position": [
-                0,
-                1
-            ],
-            "description": "Without protection, the player is bombarded with cosmic radiation, destroying the environment and user in the process.",
-            "first_tick_commands": [],
-            "last_tick_commands": [],
-            "commands": [
-                "/summon tnt ~8 ~ ~ {Fuse:0}", 
-                "/summon tnt ~-8 ~ ~ {Fuse:0}", 
-                "/summon tnt ~ ~ ~8 {Fuse:0}",  
-                "/summon tnt ~ ~ ~-8 {Fuse:0}",
-                "/summon tnt ~8 ~ ~8 {Fuse:0}",
-                "/summon tnt ~-8 ~ ~-8 {Fuse:0}",
-                "/summon tnt ~8 ~ ~-8 {Fuse:0}",
-                "/summon tnt ~-8 ~ ~8 {Fuse:0}",
-                "/effect give @s minecraft:wither 1 1 true"
-                
-            ],
-             "conditions": {
-            
-                "unlocking": [
-                {
-                        "type": "palladium:not",
-                        "conditions": [
-                            {
-                        "type": "palladium:or",
-                        "conditions": [
-                            {
-                                "type": "palladium:has_power",
-                                "power": "infinity:infinity_gauntlet"
-                            },
-                            
-                            {
-                                "type": "palladium:item_in_slot",
-                                "item": {
-                                    "item": "infinity:cosmi-rod_power"
-                                },
-                                "slot": "offhand"
-                            },
-                            {
-                                "type": "palladium:item_in_slot",
-                                "item": {
-                                    "item": "infinity:cosmi-rod_power"
-                                },
-                                "slot": "mainhand"
-                            }
-                            
-                            
-                        ]
-                    }
-                        ]},
-                        {
-                                "type": "palladium:item_in_slot",
-                                "item": {
-                                    "item": "infinity:power_stone"
-                                },
-                                "slot": "mainhand"
-                            }
+          },
+          {
+            "type": "palladium:or",
+            "conditions": [
+              {
+                "type": "palladium:item_in_slot",
+                "item": {
+                  "item": "infinity:infinity_gauntlet"
+                },
+                "slot": "offhand"
+              },
+              {
+                "type": "palladium:item_in_slot",
+                "item": {
+                  "item": "infinity:infinity_gauntlet"
+                },
+                "slot": "curios:hands"
+              }
             ]
-            }
-        }
-        
-        
-       
+          },
+          {
+            "type": "palladium:ability_unlocked",
+            "power": "null",
+            "ability": "punch"
+          }
+        ]
+      }
+    },
+    "power_bast_mainhand": {
+      "type": "palladium:energy_beam",
+      "persistent_data": true,
+      "icon": "infinity:textures/icon/power_blast.png",
+      "title": "Power Blast",
+      "bar_color": "purple",
+      "hidden": true,
+      "hidden_in_bar": true,
+      "list_index": -1,
+      "gui_position": "null",
+      "description": "null",
+      "energy_beam": "infinity:gauntlet_beam_mainhand",
+      "damage": 2147483647,
+      "max_distance": 100,
+      "speed": 1,
+      "set_on_fire_seconds": 1,
+      "cause_fire": true,
+      "smelt_blocks": true,
+      "conditions": {
+        "enabling": [
+          {
+            "type": "palladium:ability_enabled",
+            "ability": "power_blast_aim_mainhand"
+          },
+          {
+            "type": "palladium:item_in_slot",
+            "item": {
+              "item": "infinity:infinity_gauntlet"
+            },
+            "slot": "mainhand"
+          }
+        ],
+        "unlocking": [
+          {
+            "type": "palladium:has_power",
+            "power": "infinity:infinity_gauntlet"
+          },
+          {
+            "type": "palladium:not",
+            "conditions": [
+              {
+                "type": "palladium:or",
+                "conditions": [
+                  {
+                    "type": "palladium:item_in_slot",
+                    "item": {
+                      "item": "infinity:power_stone"
+                    },
+                    "slot": "mainhand"
+                  },
+                  {
+                    "type": "palladium:item_in_slot",
+                    "item": {
+                      "item": "infinity:power_stone"
+                    },
+                    "slot": "offhand"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "palladium:not",
+            "conditions": [
+              {
+                "type": "palladium:and",
+                "conditions": [
+                  {
+                    "type": "palladium:has_power",
+                    "power": "infinity:mind_stone"
+                  },
+                  {
+                    "type": "palladium:has_power",
+                    "power": "infinity:power_stone_passive"
+                  },
+                  {
+                    "type": "palladium:has_power",
+                    "power": "infinity:space_stone"
+                  },
+                  {
+                    "type": "palladium:has_power",
+                    "power": "infinity:reality_stone"
+                  },
+                  {
+                    "type": "palladium:has_power",
+                    "power": "infinity:time_stone"
+                  },
+                  {
+                    "type": "palladium:has_power",
+                    "power": "infinity:soul_stone"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "power_bast_rainbow_mainhand": {
+      "type": "palladium:energy_beam",
+      "persistent_data": true,
+      "icon": "infinity:textures/icon/power_blast.png",
+      "title": "Power Blast",
+      "bar_color": "purple",
+      "hidden": true,
+      "hidden_in_bar": true,
+      "list_index": -1,
+      "gui_position": "null",
+      "description": "null",
+      "energy_beam": "infinity:gauntlet_beam_rainbow_mainhand",
+      "damage": 2147483647,
+      "max_distance": 100,
+      "speed": 1,
+      "set_on_fire_seconds": 1,
+      "cause_fire": true,
+      "smelt_blocks": true,
+      "conditions": {
+        "enabling": [
+          {
+            "type": "palladium:ability_enabled",
+            "ability": "power_blast_aim_mainhand"
+          },
+          {
+            "type": "palladium:item_in_slot",
+            "item": {
+              "item": "infinity:infinity_gauntlet"
+            },
+            "slot": "mainhand"
+          }
+        ],
+        "unlocking": [
+          {
+            "type": "palladium:has_power",
+            "power": "infinity:infinity_gauntlet"
+          },
+          {
+            "type": "palladium:has_power",
+            "power": "infinity:mind_stone"
+          },
+          {
+            "type": "palladium:has_power",
+            "power": "infinity:power_stone_passive"
+          },
+          {
+            "type": "palladium:has_power",
+            "power": "infinity:space_stone"
+          },
+          {
+            "type": "palladium:has_power",
+            "power": "infinity:reality_stone"
+          },
+          {
+            "type": "palladium:has_power",
+            "power": "infinity:time_stone"
+          },
+          {
+            "type": "palladium:has_power",
+            "power": "infinity:soul_stone"
+          },
+          {
+            "type": "palladium:not",
+            "conditions": [
+              {
+                "type": "palladium:or",
+                "conditions": [
+                  {
+                    "type": "palladium:item_in_slot",
+                    "item": {
+                      "item": "infinity:power_stone"
+                    },
+                    "slot": "mainhand"
+                  },
+                  {
+                    "type": "palladium:item_in_slot",
+                    "item": {
+                      "item": "infinity:power_stone"
+                    },
+                    "slot": "offhand"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "power_blast_aim_mainhand": {
+      "type": "palladium:aim",
+      "icon": "infinity:textures/icon/power_blast.png",
+      "title": "Power Blast",
+      "persistent_data": true,
+      "bar_color": "purple",
+      "hidden": true,
+      "hidden_in_bar": false,
+      "list_index": 1,
+      "gui_position": "null",
+      "description": "A powerful beam that deals a near infinite amount of damage. It has a range of 100 blocks, smelts blocks and causes fire",
+      "time": 1,
+      "arm": "main_arm",
+      "conditions": {
+        "enabling": [
+          {
+            "type": "palladium:held",
+            "cooldown": 0
+          }
+        ],
+        "unlocking": [
+          {
+            "type": "palladium:has_power",
+            "power": "infinity:infinity_gauntlet"
+          },
+          {
+            "type": "palladium:not",
+            "conditions": [
+              {
+                "type": "palladium:or",
+                "conditions": [
+                  {
+                    "type": "palladium:item_in_slot",
+                    "item": {
+                      "item": "infinity:power_stone"
+                    },
+                    "slot": "mainhand"
+                  },
+                  {
+                    "type": "palladium:item_in_slot",
+                    "item": {
+                      "item": "infinity:power_stone"
+                    },
+                    "slot": "offhand"
+                  },
+                  {
+                    "type": "palladium:item_in_slot",
+                    "item": {
+                      "item": "infinity:cosmi-rod_power"
+                    },
+                    "slot": "mainhand"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "palladium:item_in_slot",
+            "item": {
+              "item": "infinity:infinity_gauntlet"
+            },
+            "slot": "mainhand"
+          }
+        ]
+      }
+    },
+    "impower": {
+      "type": "palladium:command",
+      "persistent_data": true,
+      "icon": "infinity:textures/icon/impower.png",
+      "title": "Impower",
+      "bar_color": "purple",
+      "hidden": false,
+      "hidden_in_bar": false,
+      "list_index": 0,
+      "gui_position": [0, 0],
+      "description": "It gives the player both health boost and resistance",
+      "first_tick_commands": [],
+      "last_tick_commands": [],
+      "commands": [
+        "effect give @s minecraft:health_boost 90 5 true",
+        "effect give @s minecraft:resistance 90 5 true"
+      ],
+      "conditions": {
+        "enabling": [
+          {
+            "type": "palladium:action",
+            "cooldown": 0,
+            "key_type": "key_bind",
+            "needs_empty_hand": false,
+            "allow_scrolling_when_crouching": true
+          }
+        ],
+        "unlocking": [
+          {
+            "type": "palladium:item_buyable",
+            "ingredient": {
+              "item": "infinity:aspects_of_existance"
+            },
+            "amount": 1
+          },
+          {
+            "type": "palladium:or",
+            "conditions": [
+              {
+                "type": "palladium:has_power",
+                "power": "infinity:infinity_gauntlet"
+              },
+              {
+                "type": "palladium:item_in_slot",
+                "item": {
+                  "item": "infinity:power_stone"
+                },
+                "slot": "mainhand"
+              },
+              {
+                "type": "palladium:item_in_slot",
+                "item": {
+                  "item": "infinity:cosmi-rod_power"
+                },
+                "slot": "offhand"
+              },
+              {
+                "type": "palladium:item_in_slot",
+                "item": {
+                  "item": "infinity:cosmi-rod_power"
+                },
+                "slot": "mainhand"
+              },
+              {
+                "type": "palladium:item_in_slot",
+                "item": {
+                  "item": "infinity:power_stone"
+                },
+                "slot": "offhand"
+              },
+              {
+                "type": "palladium:item_in_slot",
+                "item": {
+                  "item": "infinity:cosmi-rod_power"
+                },
+                "slot": "mainhand"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "punch": {
+      "type": "palladium:attribute_modifier",
+      "persistent_data": true,
+      "icon": "infinity:power_stone",
+      "title": "Punch Damage",
+      "bar_color": "purple",
+      "hidden": false,
+      "hidden_in_bar": true,
+      "list_index": -1,
+      "gui_position": [-1, -1],
+      "description": "It grants the player a near infinite attack damage",
+      "attribute": "palladium:punch_damage",
+      "amount": 2147483647,
+      "operation": 0,
+      "uuid": "498be4fb-af04-42f2-8948-e6ccdc0d99e1",
+      "conditions": {
+        "unlocking": [
+          {
+            "type": "palladium:item_buyable",
+            "ingredient": {
+              "item": "infinity:aspects_of_existance"
+            },
+            "amount": 1
+          },
+          {
+            "type": "palladium:or",
+            "conditions": [
+              {
+                "type": "palladium:has_power",
+                "power": "infinity:infinity_gauntlet"
+              },
+              {
+                "type": "palladium:item_in_slot",
+                "item": {
+                  "item": "infinity:power_stone"
+                },
+                "slot": "mainhand"
+              },
+              {
+                "type": "palladium:item_in_slot",
+                "item": {
+                  "item": "infinity:cosmi-rod_power"
+                },
+                "slot": "offhand"
+              },
+              {
+                "type": "palladium:item_in_slot",
+                "item": {
+                  "item": "infinity:cosmi-rod_power"
+                },
+                "slot": "mainhand"
+              },
+              {
+                "type": "palladium:item_in_slot",
+                "item": {
+                  "item": "infinity:power_stone"
+                },
+                "slot": "offhand"
+              }
+            ]
+          },
+          {
+            "type": "palladium:ability_unlocked",
+            "power": "null",
+            "ability": "impower"
+          }
+        ]
+      }
+    },
+    "knockback": {
+      "type": "palladium:attribute_modifier",
+      "icon": "infinity:power_stone",
+      "persistent_data": true,
+      "title": "Knockback Resistance",
+      "bar_color": "purple",
+      "hidden": false,
+      "hidden_in_bar": true,
+      "list_index": -1,
+      "gui_position": [1, -1],
+      "description": "It grants the player knockback resistance",
+      "attribute": "minecraft:generic.knockback_resistance",
+      "amount": 2147483647,
+      "operation": 0,
+      "uuid": "498be4fb-af04-42f2-8948-e6ccdc0d99e1",
+      "conditions": {
+        "unlocking": [
+          {
+            "type": "palladium:item_buyable",
+            "ingredient": {
+              "item": "infinity:aspects_of_existance"
+            },
+            "amount": 1
+          },
+          {
+            "type": "palladium:or",
+            "conditions": [
+              {
+                "type": "palladium:has_power",
+                "power": "infinity:infinity_gauntlet"
+              },
+              {
+                "type": "palladium:item_in_slot",
+                "item": {
+                  "item": "infinity:power_stone"
+                },
+                "slot": "mainhand"
+              },
+              {
+                "type": "palladium:item_in_slot",
+                "item": {
+                  "item": "infinity:cosmi-rod_power"
+                },
+                "slot": "offhand"
+              },
+              {
+                "type": "palladium:item_in_slot",
+                "item": {
+                  "item": "infinity:cosmi-rod_power"
+                },
+                "slot": "mainhand"
+              },
+              {
+                "type": "palladium:item_in_slot",
+                "item": {
+                  "item": "infinity:power_stone"
+                },
+                "slot": "offhand"
+              }
+            ]
+          },
+          {
+            "type": "palladium:ability_unlocked",
+            "power": "null",
+            "ability": "impower"
+          }
+        ]
+      }
+    },
+    "explosion": {
+      "type": "palladium:command",
+      "icon": "infinity:textures/icon/teleport.png",
+      "persistent_data": true,
+      "title": "Cosmic Explosion",
+      "bar_color": "purple",
+      "hidden": false,
+      "hidden_in_bar": true,
+      "list_index": -1,
+      "gui_position": [0, 1],
+      "description": "Without protection, the player is bombarded with cosmic radiation, destroying the environment and user in the process.",
+      "first_tick_commands": [],
+      "last_tick_commands": [],
+      "commands": [
+        "/summon tnt ~8 ~ ~ {Fuse:0}",
+        "/summon tnt ~-8 ~ ~ {Fuse:0}",
+        "/summon tnt ~ ~ ~8 {Fuse:0}",
+        "/summon tnt ~ ~ ~-8 {Fuse:0}",
+        "/summon tnt ~8 ~ ~8 {Fuse:0}",
+        "/summon tnt ~-8 ~ ~-8 {Fuse:0}",
+        "/summon tnt ~8 ~ ~-8 {Fuse:0}",
+        "/summon tnt ~-8 ~ ~8 {Fuse:0}",
+        "/effect give @s minecraft:wither 1 1 true"
+      ],
+      "conditions": {
+        "unlocking": [
+          {
+            "type": "palladium:not",
+            "conditions": [
+              {
+                "type": "palladium:or",
+                "conditions": [
+                  {
+                    "type": "palladium:has_power",
+                    "power": "infinity:infinity_gauntlet"
+                  },
+
+                  {
+                    "type": "palladium:item_in_slot",
+                    "item": {
+                      "item": "infinity:cosmi-rod_power"
+                    },
+                    "slot": "offhand"
+                  },
+                  {
+                    "type": "palladium:item_in_slot",
+                    "item": {
+                      "item": "infinity:cosmi-rod_power"
+                    },
+                    "slot": "mainhand"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "palladium:item_in_slot",
+            "item": {
+              "item": "infinity:power_stone"
+            },
+            "slot": "mainhand"
+          }
+        ]
+      }
     }
+  }
 }

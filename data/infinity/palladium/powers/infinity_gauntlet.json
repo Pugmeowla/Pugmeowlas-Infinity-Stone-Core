@@ -1,1015 +1,1041 @@
 {
-    "name": "Infinity Gauntlet",
-    "background": "minecraft:textures/block/gold_block.png",
-    "icon": "infinity:infinity_gauntlet",
-    "ability_bar_texture": "infinity:textures/gui/ability_bars/infinity_ability_bar.png",
-    "gui_display_type": "tree",
-    "persistent_data": true,
-    "abilities": {
-
-"show_offhand":{
-    "type": "palladium:show_both_arms",
-    "icon": "minecraft:blaze_rod",
-    "title": "null",
-    "bar_color": "light_gray",
-    "hidden": true,
-    "hidden_in_bar": false,
-    "list_index": -1,
-    "gui_position": "null",
-    "description": "null",
-    "conditions":{
-        "enabling":[
-           {
-    "type": "palladium:item_in_slot",
-    "item": {
-        "item": "infinity:infinity_gauntlet"
+  "name": "Infinity Gauntlet",
+  "background": "minecraft:textures/block/gold_block.png",
+  "icon": "infinity:infinity_gauntlet",
+  "ability_bar_texture": "infinity:textures/gui/ability_bars/infinity_ability_bar.png",
+  "gui_display_type": "tree",
+  "persistent_data": true,
+  "abilities": {
+    "scoreboards": {
+      "type": "palladium:command",
+      "icon": "infinity:space_stone",
+      "title": "Remove Space Stone",
+      "bar_color": "light_blue",
+      "hidden": true,
+      "hidden_in_bar": true,
+      "list_index": -1,
+      "gui_position": "null",
+      "description": "Remove Space Stone",
+      "first_tick_commands": [
+        "scoreboard objectives add power_stone dummy",
+        "scoreboard objectives add space_stone dummy",
+        "scoreboard objectives add reality_stone dummy",
+        "scoreboard objectives add time_stone dummy",
+        "scoreboard objectives add soul_stone dummy",
+        "scoreboard objectives add mind_stone dummy"
+      ],
+      "commands": []
     },
-    "slot": "curios:hands"
-}
 
-        ]
-    }
-},
-
-"render_layer_gauntlet": {
-     "type": "palladium:render_layer",
-     "hidden": true,
-     "hidden_in_bar": true,
-     "render_layer": "infinity:gauntlet",
-     "conditions":{
-        "enabling":[
-            {
-    "type": "palladium:or",
-    "conditions": [
-        {
-    "type": "palladium:item_in_slot",
-    "item": {
-        "item": "infinity:infinity_gauntlet"
-    },
-    "slot": "offhand"
-},
-{
-    "type": "palladium:item_in_slot",
-    "item": {
-        "item": "infinity:infinity_gauntlet"
-    },
-    "slot": "curios:hands"
-}
-    ]
-},
-{
-    "type": "palladium:not",
-    "conditions": [
-        {
-    "type": "palladium:has_tag",
-    "tag": "nano_gauntlet"
-}
-    ]
-}
-            
-        ]
-     }    
-},
-
-"render_layer_gauntlet_mainhand": {
-     "type": "palladium:render_layer",
-     "hidden": true,
-     "hidden_in_bar": true,
-     "render_layer": "infinity:gauntlet_mainhand",
-     "conditions":{
-        "enabling":[
-         {
-    "type": "palladium:item_in_slot",
-    "item": {
-        "item": "infinity:infinity_gauntlet"
-    },
-    "slot": "mainhand"
-},
-{
-    "type": "palladium:not",
-    "conditions": [
-        {
-    "type": "palladium:has_tag",
-    "tag": "nano_gauntlet"
-}
-    ]
-}
-            
-        ]
-     }    
-},
-
-"remove_stone_wheel":{
-    "type": "palladium:ability_wheel",
-    "icon": "infinity:textures/item/infinity_gauntlet2.png",
-    "title": "remove stones",
-    "bar_color": "light_gray",
-    "hidden": false,
-    "hidden_in_bar": false,
-    "list_index": 0,
-    "gui_position": "null",
-    "description": "null",
-    "abilities": [
-        "remove_power_stone",
-         "remove_space_stone",
-          "remove_reality_stone",
-           "remove_time_stone",
-            "remove_soul_stone",
-             "remove_mind_stone"
-        
-    ],
-    "texture": "null",
-    "conditions": {
+    "show_offhand": {
+      "type": "palladium:show_both_arms",
+      "icon": "minecraft:blaze_rod",
+      "title": "null",
+      "bar_color": "light_gray",
+      "hidden": true,
+      "hidden_in_bar": false,
+      "list_index": -1,
+      "gui_position": "null",
+      "description": "null",
+      "conditions": {
         "enabling": [
-            {
-                "type": "palladium:held",
-                "cooldown": 0,
-                "key_type": "key_bind",
-                "needs_empty_hand": false
-            }
-        ],
-        "unlocking":[
-            {
-                "type": "palladium:crouching"
+          {
+            "type": "palladium:or",
+            "conditions": [
+              {
+                "type": "palladium:item_in_slot",
+                "item": {
+                  "item": "infinity:infinity_gauntlet"
+                },
+                "slot": "curios:hands"
+              },
+              {
+                "type": "palladium:item_in_slot",
+                "item": {
+                  "item": "infinity:infinity_gauntlet"
+                },
+                "slot": "offhand"
+              }
+            ]
+          }
+        ]
+      }
+    },
+
+    "render_layer_gauntlet": {
+      "type": "palladium:render_layer",
+      "hidden": true,
+      "hidden_in_bar": true,
+      "render_layer": "infinity:gauntlet",
+      "conditions": {
+        "enabling": [
+          {
+            "type": "palladium:or",
+            "conditions": [
+              {
+                "type": "palladium:item_in_slot",
+                "item": {
+                  "item": "infinity:infinity_gauntlet"
+                },
+                "slot": "offhand"
+              },
+              {
+                "type": "palladium:item_in_slot",
+                "item": {
+                  "item": "infinity:infinity_gauntlet"
+                },
+                "slot": "curios:hands"
+              }
+            ]
+          },
+          {
+            "type": "palladium:not",
+            "conditions": [
+              {
+                "type": "palladium:has_tag",
+                "tag": "nano_gauntlet"
+              }
+            ]
+          }
+        ]
+      }
+    },
+
+    "render_layer_gauntlet_mainhand": {
+      "type": "palladium:render_layer",
+      "hidden": true,
+      "hidden_in_bar": true,
+      "render_layer": "infinity:gauntlet_mainhand",
+      "conditions": {
+        "enabling": [
+          {
+            "type": "palladium:item_in_slot",
+            "item": {
+              "item": "infinity:infinity_gauntlet"
             },
-            {
-    "type": "palladium:or",
-    "conditions": [
-        {   
+            "slot": "mainhand"
+          },
+          {
+            "type": "palladium:not",
+            "conditions": [
+              {
+                "type": "palladium:has_tag",
+                "tag": "nano_gauntlet"
+              }
+            ]
+          }
+        ]
+      }
+    },
+
+    "remove_stone_wheel": {
+      "type": "palladium:ability_wheel",
+      "icon": "infinity:textures/item/infinity_gauntlet2.png",
+      "title": "remove stones",
+      "bar_color": "light_gray",
+      "hidden": false,
+      "hidden_in_bar": true,
+      "list_index": 0,
+      "gui_position": "null",
+      "description": "null",
+      "abilities": [
+        "remove_power_stone",
+        "remove_space_stone",
+        "remove_reality_stone",
+        "remove_time_stone",
+        "remove_soul_stone",
+        "remove_mind_stone"
+      ],
+      "texture": "null",
+      "conditions": {
+        "enabling": [
+          {
+            "type": "palladium:held",
+            "cooldown": 0,
+            "key_type": "right_click",
+            "needs_empty_hand": false
+          }
+        ],
+        "unlocking": [
+          {
+            "type": "palladium:crouching"
+          },
+          {
+            "type": "palladium:or",
+            "conditions": [
+              {
                 "type": "palladium:has_power",
                 "power": "infinity:mind_stone"
-            },
-            {   
+              },
+              {
                 "type": "palladium:has_power",
                 "power": "infinity:power_stone_passive"
-            },
-            {   
+              },
+              {
                 "type": "palladium:has_power",
                 "power": "infinity:space_stone"
-            },
-            {   
+              },
+              {
                 "type": "palladium:has_power",
                 "power": "infinity:reality_stone"
-            },
-            {   
+              },
+              {
                 "type": "palladium:has_power",
                 "power": "infinity:time_stone"
-            },
-            {   
+              },
+              {
                 "type": "palladium:has_power",
                 "power": "infinity:soul_stone"
-            }
-    ]
-}
+              }
+            ]
+          }
         ]
-    }
-},
+      }
+    },
 
-"insert_power_stone": {
-    "type": "palladium:command",
-    "icon": "infinity:power_stone",
-    "title": "Insert Power Stone",
-    "bar_color": "purple",
-    "hidden": true,
-    "hidden_in_bar": false,
-    "list_index": 0,
-    "gui_position": "null",
-    "description": "Power Stone Abilities",
-    "commands": [
+    "insert_power_stone": {
+      "type": "palladium:command",
+      "icon": "infinity:power_stone",
+      "title": "Insert Power Stone",
+      "bar_color": "purple",
+      "hidden": true,
+      "hidden_in_bar": true,
+      "list_index": 0,
+      "gui_position": "null",
+      "description": "Power Stone Abilities",
+      "commands": [
         "clear @s infinity:power_stone 1",
         "superpower add infinity:power_stone_passive @s",
         "scoreboard players set @s power_stone 1"
-    ],
-    "conditions": {  
+      ],
+      "conditions": {
         "enabling": [
-            {
-                "type": "palladium:toggle",
-                "cooldown": 0,
-                "key_type": "key_bind",
-                "needs_empty_hand": false,
-                "allow_scrolling_when_crouching": true
-            },
+          {
+            "type": "palladium:toggle",
+            "cooldown": 0,
+            "key_type": "right_click",
+            "needs_empty_hand": false,
+            "allow_scrolling_when_crouching": true
+          },
+          {
+            "type": "palladium:item_in_slot",
+            "item": { "item": "infinity:power_stone" },
+            "slot": "mainhand"
+          }
+        ],
+        "unlocking": [
+          {
+            "type": "palladium:item_in_slot",
+            "item": { "item": "infinity:power_stone" },
+            "slot": "mainhand"
+          }
+        ]
+      }
+    },
+
+    "render_layer_power": {
+      "type": "palladium:render_layer",
+      "hidden": true,
+      "hidden_in_bar": true,
+      "render_layer": "infinity:gauntlet_power",
+      "conditions": {
+        "enabling": [
+          {
+            "type": "palladium:objective_score",
+            "objective": "power_stone",
+            "min_score": 1,
+            "max_score": 1
+          },
+          {
+            "type": "palladium:or",
+            "conditions": [
               {
                 "type": "palladium:item_in_slot",
-                "item": {"item": "infinity:power_stone"},
-                "slot": "mainhand"
-            }
-        ], 
-        "unlocking": [
-            {
+                "item": {
+                  "item": "infinity:infinity_gauntlet"
+                },
+                "slot": "offhand"
+              },
+              {
                 "type": "palladium:item_in_slot",
-                "item": {"item": "infinity:power_stone"},
-                "slot": "mainhand"
-            }
+                "item": {
+                  "item": "infinity:infinity_gauntlet"
+                },
+                "slot": "curios:hands"
+              }
+            ]
+          }
         ]
-    }
-},
+      }
+    },
 
-"render_layer_power": {
-    "type": "palladium:render_layer",
-    "hidden": true,
-    "hidden_in_bar": true,
-    "render_layer": "infinity:gauntlet_power",
-    "conditions": {
+    "render_layer_power_mainhand": {
+      "type": "palladium:render_layer",
+      "hidden": true,
+      "hidden_in_bar": true,
+      "render_layer": "infinity:gauntlet_power_mainhand",
+      "conditions": {
         "enabling": [
-            {
-    "type": "palladium:objective_score",
-    "objective": "power_stone",
-    "min_score": 1,
-    "max_score": 1
-},
-{
-    "type": "palladium:or",
-    "conditions": [
-        {
-    "type": "palladium:item_in_slot",
-    "item": {
-        "item": "infinity:infinity_gauntlet"
-    },
-    "slot": "offhand"
-},
-{
-    "type": "palladium:item_in_slot",
-    "item": {
-        "item": "infinity:infinity_gauntlet"
-    },
-    "slot": "curios:hands"
-}
-    ]
-}
+          {
+            "type": "palladium:objective_score",
+            "objective": "power_stone",
+            "min_score": 1,
+            "max_score": 1
+          },
+          {
+            "type": "palladium:item_in_slot",
+            "item": {
+              "item": "infinity:infinity_gauntlet"
+            },
+            "slot": "mainhand"
+          }
         ]
-    }
-},
-
-"render_layer_power_mainhand": {
-    "type": "palladium:render_layer",
-    "hidden": true,
-    "hidden_in_bar": true,
-    "render_layer": "infinity:gauntlet_power_mainhand",
-    "conditions": {
-        "enabling": [
-            {
-    "type": "palladium:objective_score",
-    "objective": "power_stone",
-    "min_score": 1,
-    "max_score": 1
-},
-{
-    "type": "palladium:item_in_slot",
-    "item": {
-        "item": "infinity:infinity_gauntlet"
+      }
     },
-    "slot": "mainhand"
-}
-        ]
-    }
-},
 
-"remove_power_stone": {
-    "type": "palladium:command",
-    "icon": "infinity:power_stone",
-    "title": "Remove Power Stone",
-    "bar_color": "purple",
-    "hidden": true,
-    "hidden_in_bar": true,
-    "list_index": -1,
-    "gui_position": "null",
-    "description": "Remove Power Stone",
-    "commands": [
+    "remove_power_stone": {
+      "type": "palladium:command",
+      "icon": "infinity:power_stone",
+      "title": "Remove Power Stone",
+      "bar_color": "purple",
+      "hidden": true,
+      "hidden_in_bar": true,
+      "list_index": -1,
+      "gui_position": "null",
+      "description": "Remove Power Stone",
+      "commands": [
         "execute as @s run clear @s infinity:power_stone",
         "execute as @s run function infinity:givepowerstone",
         "execute as @s run superpower remove infinity:power_stone_passive @s",
         "scoreboard players set @s power_stone 0"
-    ],
-    "conditions": {
+      ],
+      "conditions": {
         "enabling": [
-            {
-                "type": "palladium:action",
-                "cooldown": 0,
-                "key_type": "key_bind",
-                "needs_empty_hand": false,
-                "allow_scrolling_when_crouching": true
-            }
+          {
+            "type": "palladium:action",
+            "cooldown": 0,
+            "key_type": "key_bind",
+            "needs_empty_hand": false,
+            "allow_scrolling_when_crouching": true
+          }
         ],
         "unlocking": [
-            {   
-                "type": "palladium:has_power",
-                "power": "infinity:power_stone_passive"
-            }
+          {
+            "type": "palladium:has_power",
+            "power": "infinity:power_stone_passive"
+          }
         ]
-    }
-},
+      }
+    },
 
-"insert_space_stone": {
-    "type": "palladium:command",
-    "icon": "infinity:space_stone",
-    "title": "Insert Space Stone",
-    "bar_color": "light_blue",
-    "hidden": true,
-    "hidden_in_bar": false,
-    "list_index": 0,
-    "gui_position": "null",
-    "description": "Space Stone Abilities",
-    "commands": [
+    "insert_space_stone": {
+      "type": "palladium:command",
+      "icon": "infinity:space_stone",
+      "title": "Insert Space Stone",
+      "bar_color": "light_blue",
+      "hidden": true,
+      "hidden_in_bar": true,
+      "list_index": 0,
+      "gui_position": "null",
+      "description": "Space Stone Abilities",
+      "commands": [
         "clear @s infinity:space_stone 1",
         "superpower add infinity:space_stone @s",
         "scoreboard players set @s space_stone 1"
-    ],
-    "conditions": {  
+      ],
+      "conditions": {
         "enabling": [
-            {
-                "type": "palladium:toggle",
-                "cooldown": 0,
-                "key_type": "key_bind",
-                "needs_empty_hand": false,
-                "allow_scrolling_when_crouching": true
-            }
-        ], 
+          {
+            "type": "palladium:toggle",
+            "cooldown": 0,
+            "key_type": "right_click",
+            "needs_empty_hand": false,
+            "allow_scrolling_when_crouching": true
+          }
+        ],
         "unlocking": [
-            {
+          {
+            "type": "palladium:item_in_slot",
+            "item": { "item": "infinity:space_stone" },
+            "slot": "mainhand"
+          }
+        ]
+      }
+    },
+    "render_layer_space": {
+      "type": "palladium:render_layer",
+      "hidden": true,
+      "hidden_in_bar": true,
+      "render_layer": "infinity:gauntlet_space",
+      "conditions": {
+        "enabling": [
+          {
+            "type": "palladium:objective_score",
+            "objective": "space_stone",
+            "min_score": 1,
+            "max_score": 1
+          },
+          {
+            "type": "palladium:or",
+            "conditions": [
+              {
                 "type": "palladium:item_in_slot",
-                "item": {"item": "infinity:space_stone"},
-                "slot": "mainhand"
-            }
+                "item": {
+                  "item": "infinity:infinity_gauntlet"
+                },
+                "slot": "offhand"
+              },
+              {
+                "type": "palladium:item_in_slot",
+                "item": {
+                  "item": "infinity:infinity_gauntlet"
+                },
+                "slot": "curios:hands"
+              }
+            ]
+          }
         ]
-    }
-},
-"render_layer_space": {
-    "type": "palladium:render_layer",
-    "hidden": true,
-    "hidden_in_bar": true,
-    "render_layer": "infinity:gauntlet_space",
-    "conditions": {
-        "enabling": [
-             {
-    "type": "palladium:objective_score",
-    "objective": "space_stone",
-    "min_score": 1,
-    "max_score": 1
-},
-{
-    "type": "palladium:or",
-    "conditions": [
-        {
-    "type": "palladium:item_in_slot",
-    "item": {
-        "item": "infinity:infinity_gauntlet"
+      }
     },
-    "slot": "offhand"
-},
-{
-    "type": "palladium:item_in_slot",
-    "item": {
-        "item": "infinity:infinity_gauntlet"
-    },
-    "slot": "curios:hands"
-}
-    ]
-}
-        ]
-    }
-},
 
-"render_layer_space_mainhand": {
-    "type": "palladium:render_layer",
-    "hidden": true,
-    "hidden_in_bar": true,
-    "render_layer": "infinity:gauntlet_space_mainhand",
-    "conditions": {
+    "render_layer_space_mainhand": {
+      "type": "palladium:render_layer",
+      "hidden": true,
+      "hidden_in_bar": true,
+      "render_layer": "infinity:gauntlet_space_mainhand",
+      "conditions": {
         "enabling": [
-             {
-    "type": "palladium:objective_score",
-    "objective": "space_stone",
-    "min_score": 1,
-    "max_score": 1
-},
-{
-    "type": "palladium:item_in_slot",
-    "item": {
-        "item": "infinity:infinity_gauntlet"
-    },
-    "slot": "mainhand"
-}
+          {
+            "type": "palladium:objective_score",
+            "objective": "space_stone",
+            "min_score": 1,
+            "max_score": 1
+          },
+          {
+            "type": "palladium:item_in_slot",
+            "item": {
+              "item": "infinity:infinity_gauntlet"
+            },
+            "slot": "mainhand"
+          }
         ]
-    }
-},
+      }
+    },
 
-"remove_space_stone": {
-    "type": "palladium:command",
-    "icon": "infinity:space_stone",
-    "title": "Remove Space Stone",
-    "bar_color": "light_blue",
-    "hidden": true,
-    "hidden_in_bar": true,
-    "list_index": -1,
-    "gui_position": "null",
-    "description": "Remove Space Stone",
-    "commands": [
+    "remove_space_stone": {
+      "type": "palladium:command",
+      "icon": "infinity:space_stone",
+      "title": "Remove Space Stone",
+      "bar_color": "light_blue",
+      "hidden": true,
+      "hidden_in_bar": true,
+      "list_index": -1,
+      "gui_position": "null",
+      "description": "Remove Space Stone",
+      "commands": [
         "execute as @s run clear @s infinity:space_stone",
         "execute as @s run function infinity:givespacestone",
         "execute as @s run superpower remove infinity:space_stone @s",
-         "scoreboard players set @s space_stone 0"
-    ],
-    "conditions": {
+        "scoreboard players set @s space_stone 0"
+      ],
+      "conditions": {
         "enabling": [
-            {
-                "type": "palladium:action",
-                "cooldown": 0,
-                "key_type": "key_bind",
-                "needs_empty_hand": false,
-                "allow_scrolling_when_crouching": true
-            }
+          {
+            "type": "palladium:action",
+            "cooldown": 0,
+            "key_type": "key_bind",
+            "needs_empty_hand": false,
+            "allow_scrolling_when_crouching": true
+          }
         ],
         "unlocking": [
-            {   
-                "type": "palladium:has_power",
-                "power": "infinity:space_stone"
-            }
+          {
+            "type": "palladium:has_power",
+            "power": "infinity:space_stone"
+          }
         ]
-    }
-},
-"insert_reality_stone": {
-    "type": "palladium:command",
-    "icon": "infinity:reality_stone",
-    "title": "Insert Reality Stone",
-    "bar_color": "red",
-    "hidden": true,
-    "hidden_in_bar": false,
-    "list_index": 0,
-    "gui_position": "null",
-    "description": "Reality Stone Abilities",
-    "commands": [
+      }
+    },
+    "insert_reality_stone": {
+      "type": "palladium:command",
+      "icon": "infinity:reality_stone",
+      "title": "Insert Reality Stone",
+      "bar_color": "red",
+      "hidden": true,
+      "hidden_in_bar": true,
+      "list_index": 0,
+      "gui_position": "null",
+      "description": "Reality Stone Abilities",
+      "commands": [
         "clear @s infinity:reality_stone 1",
         "superpower add infinity:reality_stone @s",
         "scoreboard players set @s reality_stone 1"
-    ],
-    "conditions": {  
+      ],
+      "conditions": {
         "enabling": [
-            {
-                "type": "palladium:toggle",
-                "cooldown": 0,
-                "key_type": "key_bind",
-                "needs_empty_hand": false,
-                "allow_scrolling_when_crouching": true
-            }
-        ], 
-        "unlocking": [
-            {
-                "type": "palladium:item_in_slot",
-                "item": {"item": "infinity:reality_stone"},
-                "slot": "mainhand"
-            }
-        ]
-    }
-},
-
-"render_layer_reality": {
-    "type": "palladium:render_layer",
-    "hidden": true,
-    "hidden_in_bar": true,
-    "render_layer": "infinity:gauntlet_reality",
-    "conditions": {
-        "enabling": [
-            {
-    "type": "palladium:objective_score",
-    "objective": "reality_stone",
-    "min_score": 1,
-    "max_score": 1
-},
-{
-    "type": "palladium:or",
-    "conditions": [
-        {
-    "type": "palladium:item_in_slot",
-    "item": {
-        "item": "infinity:infinity_gauntlet"
-    },
-    "slot": "offhand"
-},
-{
-    "type": "palladium:item_in_slot",
-    "item": {
-        "item": "infinity:infinity_gauntlet"
-    },
-    "slot": "curios:hands"
-}
-    ]
-}
-        ]
-    }
-},
-
-"render_layer_reality_mainhand": {
-    "type": "palladium:render_layer",
-    "hidden": true,
-    "hidden_in_bar": true,
-    "render_layer": "infinity:gauntlet_reality_mainhand",
-    "conditions": {
-        "enabling": [
-            {
-    "type": "palladium:objective_score",
-    "objective": "reality_stone",
-    "min_score": 1,
-    "max_score": 1
-},
-{
-    "type": "palladium:item_in_slot",
-    "item": {
-        "item": "infinity:infinity_gauntlet"
-    },
-    "slot": "mainhand"
-}
-        ]
-    }
-},
-
-"remove_reality_stone": {
-    "type": "palladium:command",
-    "icon": "infinity:reality_stone",
-    "title": "Remove Reality Stone",
-    "bar_color": "red",
-    "hidden": true,
-    "hidden_in_bar": true,
-    "list_index": -1,
-    "gui_position": "null",
-    "description": "Remove Reality Stone",
-    "commands": [
-        "execute as @s run clear @s infinity:reality_stone",
-      "execute as @s run function infinity:giverealitystone",
-        "execute as @s run superpower remove infinity:reality_stone @s",
-         "scoreboard players set @s reality_stone 0"
-    ],
-    "conditions": {
-        "enabling": [
-            {
-                "type": "palladium:action",
-                "cooldown": 0,
-                "key_type": "key_bind",
-                "needs_empty_hand": false,
-                "allow_scrolling_when_crouching": true
-            }
+          {
+            "type": "palladium:toggle",
+            "cooldown": 0,
+            "key_type": "right_click",
+            "needs_empty_hand": false,
+            "allow_scrolling_when_crouching": true
+          }
         ],
         "unlocking": [
-            {   
-                "type": "palladium:has_power",
-                "power": "infinity:reality_stone"
-            }
+          {
+            "type": "palladium:item_in_slot",
+            "item": { "item": "infinity:reality_stone" },
+            "slot": "mainhand"
+          }
         ]
-    }
-},
-"insert_time_stone": {
-    "type": "palladium:command",
-    "icon": "infinity:time_stone",
-    "title": "Insert Time Stone",
-    "bar_color": "lime",
-    "hidden": true,
-    "hidden_in_bar": false,
-    "list_index": 0,
-    "gui_position": "null",
-    "description": "Time Stone Abilities",
-    "commands": [
+      }
+    },
+
+    "render_layer_reality": {
+      "type": "palladium:render_layer",
+      "hidden": true,
+      "hidden_in_bar": true,
+      "render_layer": "infinity:gauntlet_reality",
+      "conditions": {
+        "enabling": [
+          {
+            "type": "palladium:objective_score",
+            "objective": "reality_stone",
+            "min_score": 1,
+            "max_score": 1
+          },
+          {
+            "type": "palladium:or",
+            "conditions": [
+              {
+                "type": "palladium:item_in_slot",
+                "item": {
+                  "item": "infinity:infinity_gauntlet"
+                },
+                "slot": "offhand"
+              },
+              {
+                "type": "palladium:item_in_slot",
+                "item": {
+                  "item": "infinity:infinity_gauntlet"
+                },
+                "slot": "curios:hands"
+              }
+            ]
+          }
+        ]
+      }
+    },
+
+    "render_layer_reality_mainhand": {
+      "type": "palladium:render_layer",
+      "hidden": true,
+      "hidden_in_bar": true,
+      "render_layer": "infinity:gauntlet_reality_mainhand",
+      "conditions": {
+        "enabling": [
+          {
+            "type": "palladium:objective_score",
+            "objective": "reality_stone",
+            "min_score": 1,
+            "max_score": 1
+          },
+          {
+            "type": "palladium:item_in_slot",
+            "item": {
+              "item": "infinity:infinity_gauntlet"
+            },
+            "slot": "mainhand"
+          }
+        ]
+      }
+    },
+
+    "remove_reality_stone": {
+      "type": "palladium:command",
+      "icon": "infinity:reality_stone",
+      "title": "Remove Reality Stone",
+      "bar_color": "red",
+      "hidden": true,
+      "hidden_in_bar": true,
+      "list_index": -1,
+      "gui_position": "null",
+      "description": "Remove Reality Stone",
+      "commands": [
+        "execute as @s run clear @s infinity:reality_stone",
+        "execute as @s run function infinity:giverealitystone",
+        "execute as @s run superpower remove infinity:reality_stone @s",
+        "scoreboard players set @s reality_stone 0"
+      ],
+      "conditions": {
+        "enabling": [
+          {
+            "type": "palladium:action",
+            "cooldown": 0,
+            "key_type": "key_bind",
+            "needs_empty_hand": false,
+            "allow_scrolling_when_crouching": true
+          }
+        ],
+        "unlocking": [
+          {
+            "type": "palladium:has_power",
+            "power": "infinity:reality_stone"
+          }
+        ]
+      }
+    },
+    "insert_time_stone": {
+      "type": "palladium:command",
+      "icon": "infinity:time_stone",
+      "title": "Insert Time Stone",
+      "bar_color": "lime",
+      "hidden": true,
+      "hidden_in_bar": true,
+      "list_index": 0,
+      "gui_position": "null",
+      "description": "Time Stone Abilities",
+      "commands": [
         "clear @s infinity:time_stone 1",
         "superpower add infinity:time_stone @s",
         "scoreboard players set @s time_stone 1"
-    ],
-    "conditions": {  
+      ],
+      "conditions": {
         "enabling": [
-            {
-                "type": "palladium:toggle",
-                "cooldown": 0,
-                "key_type": "key_bind",
-                "needs_empty_hand": false,
-                "allow_scrolling_when_crouching": true
-            }
-        ], 
-        "unlocking": [
-            {
-                "type": "palladium:item_in_slot",
-                "item": {"item": "infinity:time_stone"},
-                "slot": "mainhand"
-            }
-        ]
-    }
-},
-
-"render_layer_time": {
-    "type": "palladium:render_layer",
-    "hidden": true,
-    "hidden_in_bar": true,
-    "render_layer": "infinity:gauntlet_time",
-    "conditions": {
-        "enabling": [
-             {
-    "type": "palladium:objective_score",
-    "objective": "time_stone",
-    "min_score": 1,
-    "max_score": 1
-},
-{
-    "type": "palladium:or",
-    "conditions": [
-        {
-    "type": "palladium:item_in_slot",
-    "item": {
-        "item": "infinity:infinity_gauntlet"
-    },
-    "slot": "offhand"
-},
-{
-    "type": "palladium:item_in_slot",
-    "item": {
-        "item": "infinity:infinity_gauntlet"
-    },
-    "slot": "curios:hands"
-}
-    ]
-}
-        ]
-    }
-},
-"render_layer_time_mainhand": {
-    "type": "palladium:render_layer",
-    "hidden": true,
-    "hidden_in_bar": true,
-    "render_layer": "infinity:gauntlet_time_mainhand",
-    "conditions": {
-        "enabling": [
-             {
-    "type": "palladium:objective_score",
-    "objective": "time_stone",
-    "min_score": 1,
-    "max_score": 1
-},
-{
-    "type": "palladium:item_in_slot",
-    "item": {
-        "item": "infinity:infinity_gauntlet"
-    },
-    "slot": "mainhand"
-}
-        ]
-    }
-},
-
-"remove_time_stone": {
-    "type": "palladium:command",
-    "icon": "infinity:time_stone",
-    "title": "Remove Time Stone",
-    "bar_color": "lime",
-    "hidden": true,
-    "hidden_in_bar": true,
-    "list_index": -1,
-    "gui_position": "null",
-    "description": "Remove Time Stone",
-    "commands": [
-        "execute as @s run clear @s infinity:time_stone",
-       "execute as @s run function infinity:givetimestone",
-        "execute as @s run superpower remove infinity:time_stone @s",
-         "scoreboard players set @s time_stone 0"
-    ],
-    "conditions": {
-        "enabling": [
-            {
-                "type": "palladium:action",
-                "cooldown": 0,
-                "key_type": "key_bind",
-                "needs_empty_hand": false,
-                "allow_scrolling_when_crouching": true
-            }
+          {
+            "type": "palladium:toggle",
+            "cooldown": 0,
+            "key_type": "right_click",
+            "needs_empty_hand": false,
+            "allow_scrolling_when_crouching": true
+          }
         ],
         "unlocking": [
-            {   
-                "type": "palladium:has_power",
-                "power": "infinity:time_stone"
-            }
+          {
+            "type": "palladium:item_in_slot",
+            "item": { "item": "infinity:time_stone" },
+            "slot": "mainhand"
+          }
         ]
-    }
-},
-"insert_soul_stone": {
-    "type": "palladium:command",
-    "icon": "infinity:soul_stone",
-    "title": "Insert Soul Stone",
-    "bar_color": "orange",
-    "hidden": true,
-    "hidden_in_bar": false,
-    "list_index": 0,
-    "gui_position": "null",
-    "description": "Soul Stone Abilities",
-    "commands": [
+      }
+    },
+
+    "render_layer_time": {
+      "type": "palladium:render_layer",
+      "hidden": true,
+      "hidden_in_bar": true,
+      "render_layer": "infinity:gauntlet_time",
+      "conditions": {
+        "enabling": [
+          {
+            "type": "palladium:objective_score",
+            "objective": "time_stone",
+            "min_score": 1,
+            "max_score": 1
+          },
+          {
+            "type": "palladium:or",
+            "conditions": [
+              {
+                "type": "palladium:item_in_slot",
+                "item": {
+                  "item": "infinity:infinity_gauntlet"
+                },
+                "slot": "offhand"
+              },
+              {
+                "type": "palladium:item_in_slot",
+                "item": {
+                  "item": "infinity:infinity_gauntlet"
+                },
+                "slot": "curios:hands"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "render_layer_time_mainhand": {
+      "type": "palladium:render_layer",
+      "hidden": true,
+      "hidden_in_bar": true,
+      "render_layer": "infinity:gauntlet_time_mainhand",
+      "conditions": {
+        "enabling": [
+          {
+            "type": "palladium:objective_score",
+            "objective": "time_stone",
+            "min_score": 1,
+            "max_score": 1
+          },
+          {
+            "type": "palladium:item_in_slot",
+            "item": {
+              "item": "infinity:infinity_gauntlet"
+            },
+            "slot": "mainhand"
+          }
+        ]
+      }
+    },
+
+    "remove_time_stone": {
+      "type": "palladium:command",
+      "icon": "infinity:time_stone",
+      "title": "Remove Time Stone",
+      "bar_color": "lime",
+      "hidden": true,
+      "hidden_in_bar": true,
+      "list_index": -1,
+      "gui_position": "null",
+      "description": "Remove Time Stone",
+      "commands": [
+        "execute as @s run clear @s infinity:time_stone",
+        "execute as @s run function infinity:givetimestone",
+        "execute as @s run superpower remove infinity:time_stone @s",
+        "scoreboard players set @s time_stone 0"
+      ],
+      "conditions": {
+        "enabling": [
+          {
+            "type": "palladium:action",
+            "cooldown": 0,
+            "key_type": "key_bind",
+            "needs_empty_hand": false,
+            "allow_scrolling_when_crouching": true
+          }
+        ],
+        "unlocking": [
+          {
+            "type": "palladium:has_power",
+            "power": "infinity:time_stone"
+          }
+        ]
+      }
+    },
+    "insert_soul_stone": {
+      "type": "palladium:command",
+      "icon": "infinity:soul_stone",
+      "title": "Insert Soul Stone",
+      "bar_color": "orange",
+      "hidden": true,
+      "hidden_in_bar": true,
+      "list_index": 0,
+      "gui_position": "null",
+      "description": "Soul Stone Abilities",
+      "commands": [
         "clear @s infinity:soul_stone 1",
         "superpower add infinity:soul_stone @s",
         "scoreboard players set @s soul_stone 1"
-    ],
-    "conditions": {  
+      ],
+      "conditions": {
         "enabling": [
-            {
-                "type": "palladium:toggle",
-                "cooldown": 0,
-                "key_type": "key_bind",
-                "needs_empty_hand": false,
-                "allow_scrolling_when_crouching": true
-            }
-        ], 
+          {
+            "type": "palladium:toggle",
+            "cooldown": 0,
+            "key_type": "right_click",
+            "needs_empty_hand": false,
+            "allow_scrolling_when_crouching": true
+          }
+        ],
         "unlocking": [
-            {
+          {
+            "type": "palladium:item_in_slot",
+            "item": { "item": "infinity:soul_stone" },
+            "slot": "mainhand"
+          }
+        ]
+      }
+    },
+
+    "render_layer_soul": {
+      "type": "palladium:render_layer",
+      "hidden": true,
+      "hidden_in_bar": true,
+      "render_layer": "infinity:gauntlet_soul",
+      "conditions": {
+        "enabling": [
+          {
+            "type": "palladium:objective_score",
+            "objective": "soul_stone",
+            "min_score": 1,
+            "max_score": 1
+          },
+          {
+            "type": "palladium:or",
+            "conditions": [
+              {
                 "type": "palladium:item_in_slot",
-                "item": {"item": "infinity:soul_stone"},
-                "slot": "mainhand"
-            }
+                "item": {
+                  "item": "infinity:infinity_gauntlet"
+                },
+                "slot": "offhand"
+              },
+              {
+                "type": "palladium:item_in_slot",
+                "item": {
+                  "item": "infinity:infinity_gauntlet"
+                },
+                "slot": "curios:hands"
+              }
+            ]
+          }
         ]
-    }
-},
+      }
+    },
 
-"render_layer_soul": {
-    "type": "palladium:render_layer",
-    "hidden": true,
-    "hidden_in_bar": true,
-    "render_layer": "infinity:gauntlet_soul",
-    "conditions": {
+    "render_layer_soul_mainhand": {
+      "type": "palladium:render_layer",
+      "hidden": true,
+      "hidden_in_bar": true,
+      "render_layer": "infinity:gauntlet_soul_mainhand",
+      "conditions": {
         "enabling": [
-             {
-    "type": "palladium:objective_score",
-    "objective": "soul_stone",
-    "min_score": 1,
-    "max_score": 1
-},
-{
-    "type": "palladium:or",
-    "conditions": [
-        {
-    "type": "palladium:item_in_slot",
-    "item": {
-        "item": "infinity:infinity_gauntlet"
-    },
-    "slot": "offhand"
-},
-{
-    "type": "palladium:item_in_slot",
-    "item": {
-        "item": "infinity:infinity_gauntlet"
-    },
-    "slot": "curios:hands"
-}
-    ]
-}
+          {
+            "type": "palladium:objective_score",
+            "objective": "soul_stone",
+            "min_score": 1,
+            "max_score": 1
+          },
+          {
+            "type": "palladium:item_in_slot",
+            "item": {
+              "item": "infinity:infinity_gauntlet"
+            },
+            "slot": "mainhand"
+          }
         ]
-    }
-},
-
-"render_layer_soul_mainhand": {
-    "type": "palladium:render_layer",
-    "hidden": true,
-    "hidden_in_bar": true,
-    "render_layer": "infinity:gauntlet_soul_mainhand",
-    "conditions": {
-        "enabling": [
-             {
-    "type": "palladium:objective_score",
-    "objective": "soul_stone",
-    "min_score": 1,
-    "max_score": 1
-},
-{
-    "type": "palladium:item_in_slot",
-    "item": {
-        "item": "infinity:infinity_gauntlet"
+      }
     },
-    "slot": "mainhand"
-}
-        ]
-    }
-},
 
-"remove_soul_stone": {
-    "type": "palladium:command",
-    "icon": "infinity:soul_stone",
-    "title": "Remove Soul Stone",
-    "bar_color": "orange",
-    "hidden": true,
-    "hidden_in_bar": true,
-    "list_index": -1,
-    "gui_position": "null",
-    "description": "Remove Soul Stone",
-    "commands": [
+    "remove_soul_stone": {
+      "type": "palladium:command",
+      "icon": "infinity:soul_stone",
+      "title": "Remove Soul Stone",
+      "bar_color": "orange",
+      "hidden": true,
+      "hidden_in_bar": true,
+      "list_index": -1,
+      "gui_position": "null",
+      "description": "Remove Soul Stone",
+      "commands": [
         "execute as @s run clear @s infinity:soul_stone",
         "execute as @s run function infinity:givesoulstone",
         "execute as @s run superpower remove infinity:soul_stone @s",
-         "scoreboard players set @s soul_stone 0"
-    ],
-    "conditions": {
+        "scoreboard players set @s soul_stone 0"
+      ],
+      "conditions": {
         "enabling": [
-            {
-                "type": "palladium:action",
-                "cooldown": 0,
-                "key_type": "key_bind",
-                "needs_empty_hand": false,
-                "allow_scrolling_when_crouching": true
-            }
+          {
+            "type": "palladium:action",
+            "cooldown": 0,
+            "key_type": "key_bind",
+            "needs_empty_hand": false,
+            "allow_scrolling_when_crouching": true
+          }
         ],
         "unlocking": [
-            {   
-                "type": "palladium:has_power",
-                "power": "infinity:soul_stone"
-            }
+          {
+            "type": "palladium:has_power",
+            "power": "infinity:soul_stone"
+          }
         ]
-    }
-},
-"insert_mind_stone": {
-    "type": "palladium:command",
-    "icon": "infinity:mind_stone",
-    "title": "Insert Mind Stone",
-    "bar_color": "yellow",
-    "hidden": true,
-    "hidden_in_bar": false,
-    "list_index": 0,
-    "gui_position": "null",
-    "description": "Mind Stone Abilities",
-    "commands": [
+      }
+    },
+    "insert_mind_stone": {
+      "type": "palladium:command",
+      "icon": "infinity:mind_stone",
+      "title": "Insert Mind Stone",
+      "bar_color": "yellow",
+      "hidden": true,
+      "hidden_in_bar": true,
+      "list_index": 0,
+      "gui_position": "null",
+      "description": "Mind Stone Abilities",
+      "commands": [
         "clear @s infinity:mind_stone 1",
         "superpower add infinity:mind_stone @s",
         "scoreboard players set @s mind_stone 1"
-    ],
-    "conditions": {  
+      ],
+      "conditions": {
         "enabling": [
-            {
-                "type": "palladium:toggle",
-                "cooldown": 0,
-                "key_type": "key_bind",
-                "needs_empty_hand": false,
-                "allow_scrolling_when_crouching": true
-            }
-        ], 
+          {
+            "type": "palladium:toggle",
+            "cooldown": 0,
+            "key_type": "right_click",
+            "needs_empty_hand": false,
+            "allow_scrolling_when_crouching": true
+          }
+        ],
         "unlocking": [
-            {
+          {
+            "type": "palladium:item_in_slot",
+            "item": { "item": "infinity:mind_stone" },
+            "slot": "mainhand"
+          }
+        ]
+      }
+    },
+
+    "render_layer_mind": {
+      "type": "palladium:render_layer",
+      "hidden": true,
+      "hidden_in_bar": true,
+      "render_layer": "infinity:gauntlet_mind",
+      "conditions": {
+        "enabling": [
+          {
+            "type": "palladium:objective_score",
+            "objective": "mind_stone",
+            "min_score": 1,
+            "max_score": 1
+          },
+          {
+            "type": "palladium:or",
+            "conditions": [
+              {
                 "type": "palladium:item_in_slot",
-                "item": {"item": "infinity:mind_stone"},
-                "slot": "mainhand"
-            }
+                "item": {
+                  "item": "infinity:infinity_gauntlet"
+                },
+                "slot": "offhand"
+              },
+              {
+                "type": "palladium:item_in_slot",
+                "item": {
+                  "item": "infinity:infinity_gauntlet"
+                },
+                "slot": "curios:hands"
+              }
+            ]
+          }
         ]
-    }
-},
-
-"render_layer_mind": {
-    "type": "palladium:render_layer",
-    "hidden": true,
-    "hidden_in_bar": true,
-    "render_layer": "infinity:gauntlet_mind",
-    "conditions": {
+      }
+    },
+    "render_layer_mind_mainhand": {
+      "type": "palladium:render_layer",
+      "hidden": true,
+      "hidden_in_bar": true,
+      "render_layer": "infinity:gauntlet_mind_mainhand",
+      "conditions": {
         "enabling": [
-            {
-    "type": "palladium:objective_score",
-    "objective": "mind_stone",
-    "min_score": 1,
-    "max_score": 1
-},
-{
-    "type": "palladium:or",
-    "conditions": [
-        {
-    "type": "palladium:item_in_slot",
-    "item": {
-        "item": "infinity:infinity_gauntlet"
-    },
-    "slot": "offhand"
-},
-{
-    "type": "palladium:item_in_slot",
-    "item": {
-        "item": "infinity:infinity_gauntlet"
-    },
-    "slot": "curios:hands"
-}
-    ]
-}
+          {
+            "type": "palladium:objective_score",
+            "objective": "mind_stone",
+            "min_score": 1,
+            "max_score": 1
+          },
+          {
+            "type": "palladium:item_in_slot",
+            "item": {
+              "item": "infinity:infinity_gauntlet"
+            },
+            "slot": "mainhand"
+          }
         ]
-    }
-},
-"render_layer_mind_mainhand": {
-    "type": "palladium:render_layer",
-    "hidden": true,
-    "hidden_in_bar": true,
-    "render_layer": "infinity:gauntlet_mind_mainhand",
-    "conditions": {
-        "enabling": [
-            {
-    "type": "palladium:objective_score",
-    "objective": "mind_stone",
-    "min_score": 1,
-    "max_score": 1
-},
- {
-    "type": "palladium:item_in_slot",
-    "item": {
-        "item": "infinity:infinity_gauntlet"
+      }
     },
-    "slot": "mainhand"
-}
-        ]
-    }
-},
 
-
-"remove_mind_stone": {
-    "type": "palladium:command",
-    "icon": "infinity:mind_stone",
-    "title": "Remove Mind Stone",
-    "bar_color": "yellow",
-    "hidden": true,
-    "hidden_in_bar": true,
-    "list_index": -1,
-    "gui_position": "null",
-    "description": "Remove Mind Stone",
-    "commands": [
+    "remove_mind_stone": {
+      "type": "palladium:command",
+      "icon": "infinity:mind_stone",
+      "title": "Remove Mind Stone",
+      "bar_color": "yellow",
+      "hidden": true,
+      "hidden_in_bar": true,
+      "list_index": -1,
+      "gui_position": "null",
+      "description": "Remove Mind Stone",
+      "commands": [
         "execute as @s run clear @s infinity:mind_stone",
         "execute as @s run function infinity:givemindstone",
         "execute as @s run superpower remove infinity:mind_stone @s",
-         "scoreboard players set @s mind_stone 0"
-    ],
-    "conditions": {
+        "scoreboard players set @s mind_stone 0"
+      ],
+      "conditions": {
         "enabling": [
-            {
-                "type": "palladium:action",
-                "cooldown": 0,
-                "key_type": "key_bind",
-                "needs_empty_hand": false,
-                "allow_scrolling_when_crouching": true
-            }
+          {
+            "type": "palladium:action",
+            "cooldown": 0,
+            "key_type": "key_bind",
+            "needs_empty_hand": false,
+            "allow_scrolling_when_crouching": true
+          }
         ],
         "unlocking": [
-            {   
-                "type": "palladium:has_power",
-                "power": "infinity:mind_stone"
-            }
+          {
+            "type": "palladium:has_power",
+            "power": "infinity:mind_stone"
+          }
         ]
-    }
-},
-"snap": {
-    "type": "palladium:command",
-    "icon": "infinity:infinity_gauntlet",
-    "title": "Snap",
-    "bar_color": "yellow",
-    "hidden": true,
-    "hidden_in_bar": false,
-    "list_index": 1,
-    "gui_position": "null",
-    "description": "Snap",
-    "commands": [
+      }
+    },
+    "snap": {
+      "type": "palladium:command",
+      "icon": "infinity:infinity_gauntlet",
+      "title": "Snap",
+      "bar_color": "yellow",
+      "hidden": true,
+      "hidden_in_bar": false,
+      "list_index": 1,
+      "gui_position": "null",
+      "description": "Snap",
+      "commands": [
         "function infinity:snap1",
         "playsound minecraft:block.conduit.activate master @a",
         "playsound minecraft:entity.wither.spawn master @a",
         "playsound minecraft:entity.lightning_bolt.thunder master @a",
         "playsound minecraft:entity.ender_dragon.death master @a"
-    ],
-    "conditions": {
+      ],
+      "conditions": {
         "enabling": [
-            {
-                "type": "palladium:action",
-                "cooldown": 0,
-                "key_type": "key_bind",
-                "needs_empty_hand": false,
-                "allow_scrolling_when_crouching": true
-            }
+          {
+            "type": "palladium:action",
+            "cooldown": 0,
+            "key_type": "key_bind",
+            "needs_empty_hand": false,
+            "allow_scrolling_when_crouching": true
+          }
         ],
         "unlocking": [
-            {   
-                "type": "palladium:has_power",
-                "power": "infinity:mind_stone"
-            },
-            {   
-                "type": "palladium:has_power",
-                "power": "infinity:power_stone_passive"
-            },
-            {   
-                "type": "palladium:has_power",
-                "power": "infinity:space_stone"
-            },
-            {   
-                "type": "palladium:has_power",
-                "power": "infinity:reality_stone"
-            },
-            {   
-                "type": "palladium:has_power",
-                "power": "infinity:time_stone"
-            },
-            {   
-                "type": "palladium:has_power",
-                "power": "infinity:soul_stone"
-            }
-            
+          {
+            "type": "palladium:has_power",
+            "power": "infinity:mind_stone"
+          },
+          {
+            "type": "palladium:has_power",
+            "power": "infinity:power_stone_passive"
+          },
+          {
+            "type": "palladium:has_power",
+            "power": "infinity:space_stone"
+          },
+          {
+            "type": "palladium:has_power",
+            "power": "infinity:reality_stone"
+          },
+          {
+            "type": "palladium:has_power",
+            "power": "infinity:time_stone"
+          },
+          {
+            "type": "palladium:has_power",
+            "power": "infinity:soul_stone"
+          }
         ]
-    }
-},
-"destroy_stones": {
-    "type": "palladium:command",
-    "icon": "infinity:infinity_gauntlet",
-    "title": "Destroy All Stones",
-    "bar_color": "yellow",
-    "hidden": true,
-    "hidden_in_bar": false,
-    "list_index": 2,
-    "gui_position": "null",
-    "description": "Snap",
-    "commands": [
+      }
+    },
+    "destroy_stones": {
+      "type": "palladium:command",
+      "icon": "infinity:infinity_gauntlet",
+      "title": "Destroy All Stones",
+      "bar_color": "yellow",
+      "hidden": true,
+      "hidden_in_bar": false,
+      "list_index": 2,
+      "gui_position": "null",
+      "description": "Snap",
+      "commands": [
         "superpower remove infinity:power_stone_passive",
         "superpower remove infinity:space_stone",
         "superpower remove infinity:reality_stone",
@@ -1020,642 +1046,612 @@
         "playsound minecraft:entity.wither.spawn master @a",
         "playsound minecraft:entity.lightning_bolt.thunder master @a",
         "playsound minecraft:entity.ender_dragon.death master @a"
-    ],
-    "conditions": {
+      ],
+      "conditions": {
         "enabling": [
-            {
-                "type": "palladium:action",
-                "cooldown": 0,
-                "key_type": "key_bind",
-                "needs_empty_hand": false,
-                "allow_scrolling_when_crouching": true
-            }
+          {
+            "type": "palladium:action",
+            "cooldown": 0,
+            "key_type": "key_bind",
+            "needs_empty_hand": false,
+            "allow_scrolling_when_crouching": true
+          }
         ],
         "unlocking": [
-            {   
-                "type": "palladium:has_power",
-                "power": "infinity:mind_stone"
-            },
-            {   
-                "type": "palladium:has_power",
-                "power": "infinity:power_stone_passive"
-            },
-            {   
-                "type": "palladium:has_power",
-                "power": "infinity:space_stone"
-            },
-            {   
-                "type": "palladium:has_power",
-                "power": "infinity:reality_stone"
-            },
-            {   
-                "type": "palladium:has_power",
-                "power": "infinity:time_stone"
-            },
-            {   
-                "type": "palladium:has_power",
-                "power": "infinity:soul_stone"
-            }
-            
+          {
+            "type": "palladium:has_power",
+            "power": "infinity:mind_stone"
+          },
+          {
+            "type": "palladium:has_power",
+            "power": "infinity:power_stone_passive"
+          },
+          {
+            "type": "palladium:has_power",
+            "power": "infinity:space_stone"
+          },
+          {
+            "type": "palladium:has_power",
+            "power": "infinity:reality_stone"
+          },
+          {
+            "type": "palladium:has_power",
+            "power": "infinity:time_stone"
+          },
+          {
+            "type": "palladium:has_power",
+            "power": "infinity:soul_stone"
+          }
         ]
-    }
-},
-"render_layer_power_mark_85": {
-    "type": "palladium:render_layer",
-    "hidden": true,
-    "hidden_in_bar": true,
-    "render_layer": "infinity:gauntlet_power",
-    "conditions": {
+      }
+    },
+    "render_layer_power_mark_85": {
+      "type": "palladium:render_layer",
+      "hidden": true,
+      "hidden_in_bar": true,
+      "render_layer": "infinity:gauntlet_power",
+      "conditions": {
         "enabling": [
-            {
-    "type": "palladium:objective_score",
-    "objective": "power_stone",
-    "min_score": 1,
-    "max_score": 1
-}
+          {
+            "type": "palladium:objective_score",
+            "objective": "power_stone",
+            "min_score": 1,
+            "max_score": 1
+          }
         ],
-         "unlocking": [
-        
+        "unlocking": [
+          {
+            "type": "palladium:or",
+            "conditions": [
+              {
+                "type": "palladium:animation_timer_ability",
+                "power": "fsang:iron_man",
+                "ability": "iron_man_suit_enabled",
+                "min": 9,
+                "max": 10
+              },
+              {
+                "type": "palladium:objective_score",
+                "objective": "satsu.iron.man.armor.actived",
+                "min_score": 1,
+                "max_score": 1
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "render_layer_space_mark_85": {
+      "type": "palladium:render_layer",
+      "hidden": true,
+      "hidden_in_bar": true,
+      "render_layer": "infinity:gauntlet_space",
+      "conditions": {
+        "enabling": [
+          {
+            "type": "palladium:objective_score",
+            "objective": "space_stone",
+            "min_score": 1,
+            "max_score": 1
+          }
+        ],
+        "unlocking": [
+          {
+            "type": "palladium:or",
+            "conditions": [
+              {
+                "type": "palladium:animation_timer_ability",
+                "power": "fsang:iron_man",
+                "ability": "iron_man_suit_enabled",
+                "min": 9,
+                "max": 10
+              },
+              {
+                "type": "palladium:objective_score",
+                "objective": "satsu.iron.man.armor.actived",
+                "min_score": 1,
+                "max_score": 1
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "render_layer_reality_mark_85": {
+      "type": "palladium:render_layer",
+      "hidden": true,
+      "hidden_in_bar": true,
+      "render_layer": "infinity:gauntlet_reality",
+      "conditions": {
+        "enabling": [
+          {
+            "type": "palladium:objective_score",
+            "objective": "reality_stone",
+            "min_score": 1,
+            "max_score": 1
+          }
+        ],
+        "unlocking": [
+          {
+            "type": "palladium:or",
+            "conditions": [
+              {
+                "type": "palladium:animation_timer_ability",
+                "power": "fsang:iron_man",
+                "ability": "iron_man_suit_enabled",
+                "min": 9,
+                "max": 10
+              },
+              {
+                "type": "palladium:objective_score",
+                "objective": "satsu.iron.man.armor.actived",
+                "min_score": 1,
+                "max_score": 1
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "render_layer_time_mark_85": {
+      "type": "palladium:render_layer",
+      "hidden": true,
+      "hidden_in_bar": true,
+      "render_layer": "infinity:gauntlet_time",
+      "conditions": {
+        "enabling": [
+          {
+            "type": "palladium:objective_score",
+            "objective": "time_stone",
+            "min_score": 1,
+            "max_score": 1
+          }
+        ],
+        "unlocking": [
+          {
+            "type": "palladium:or",
+            "conditions": [
+              {
+                "type": "palladium:animation_timer_ability",
+                "power": "fsang:iron_man",
+                "ability": "iron_man_suit_enabled",
+                "min": 9,
+                "max": 10
+              },
+              {
+                "type": "palladium:objective_score",
+                "objective": "satsu.iron.man.armor.actived",
+                "min_score": 1,
+                "max_score": 1
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "render_layer_soul_mark_85": {
+      "type": "palladium:render_layer",
+      "hidden": true,
+      "hidden_in_bar": true,
+      "render_layer": "infinity:gauntlet_soul",
+      "conditions": {
+        "enabling": [
+          {
+            "type": "palladium:objective_score",
+            "objective": "soul_stone",
+            "min_score": 1,
+            "max_score": 1
+          }
+        ],
+        "unlocking": [
+          {
+            "type": "palladium:or",
+            "conditions": [
+              {
+                "type": "palladium:animation_timer_ability",
+                "power": "fsang:iron_man",
+                "ability": "iron_man_suit_enabled",
+                "min": 9,
+                "max": 10
+              },
+              {
+                "type": "palladium:objective_score",
+                "objective": "satsu.iron.man.armor.actived",
+                "min_score": 1,
+                "max_score": 1
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "render_layer_mind_mark_85": {
+      "type": "palladium:render_layer",
+      "hidden": true,
+      "hidden_in_bar": true,
+      "render_layer": "infinity:gauntlet_mind",
+      "conditions": {
+        "enabling": [
+          {
+            "type": "palladium:objective_score",
+            "objective": "mind_stone",
+            "min_score": 1,
+            "max_score": 1
+          }
+        ],
+        "unlocking": [
+          {
+            "type": "palladium:or",
+            "conditions": [
+              {
+                "type": "palladium:animation_timer_ability",
+                "power": "fsang:iron_man",
+                "ability": "iron_man_suit_enabled",
+                "min": 9,
+                "max": 10
+              },
+              {
+                "type": "palladium:objective_score",
+                "objective": "satsu.iron.man.armor.actived",
+                "min_score": 1,
+                "max_score": 1
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "render_layer_nano_gauntlet_mark_85": {
+      "type": "palladium:render_layer",
+      "hidden": true,
+      "hidden_in_bar": true,
+      "render_layer": "infinity:nano_gauntlet",
+      "conditions": {
+        "unlocking": [
+          {
+            "type": "palladium:or",
+            "conditions": [
+              {
+                "type": "palladium:animation_timer_ability",
+                "power": "fsang:iron_man",
+                "ability": "iron_man_suit_enabled",
+                "min": 9,
+                "max": 10
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "render_layer_nano_gauntlet": {
+      "type": "palladium:render_layer",
+      "hidden": true,
+      "hidden_in_bar": true,
+      "render_layer": "infinity:nano_gauntlet",
+      "conditions": {
+        "enabling": [
+          {
+            "type": "palladium:or",
+            "conditions": [
+              {
+                "type": "palladium:item_in_slot",
+                "item": {
+                  "item": "infinity:infinity_gauntlet"
+                },
+                "slot": "offhand"
+              },
+              {
+                "type": "palladium:item_in_slot",
+                "item": {
+                  "item": "infinity:infinity_gauntlet"
+                },
+                "slot": "curios:hands"
+              }
+            ]
+          },
+          {
+            "type": "palladium:has_tag",
+            "tag": "nano_gauntlet"
+          }
+        ]
+      }
+    },
+
+    "render_layer_netherite_gauntlet": {
+      "type": "palladium:render_layer",
+      "hidden": true,
+      "hidden_in_bar": true,
+      "render_layer": "infinity:netherite_gauntlet",
+      "conditions": {
+        "enabling": [
+          {
+            "type": "palladium:or",
+            "conditions": [
+              {
+                "type": "palladium:item_in_slot",
+                "item": {
+                  "item": "infinity:infinity_gauntlet"
+                },
+                "slot": "offhand"
+              },
+              {
+                "type": "palladium:item_in_slot",
+                "item": {
+                  "item": "infinity:infinity_gauntlet"
+                },
+                "slot": "curios:hands"
+              }
+            ]
+          },
+          {
+            "type": "palladium:has_tag",
+            "tag": "netherite_gauntlet"
+          }
+        ]
+      }
+    },
+
+    "render_layer_fantastic_four_skin": {
+      "type": "palladium:render_layer",
+      "hidden": true,
+      "hidden_in_bar": true,
+      "render_layer": "infinity:fantastic_four_skin",
+      "conditions": {
+        "enabling": [
+          {
+            "type": "palladium:or",
+            "conditions": [
+              {
+                "type": "palladium:item_in_slot",
+                "item": {
+                  "item": "infinity:infinity_gauntlet"
+                },
+                "slot": "offhand"
+              },
+              {
+                "type": "palladium:item_in_slot",
+                "item": {
+                  "item": "infinity:infinity_gauntlet"
+                },
+                "slot": "curios:hands"
+              }
+            ]
+          },
+          {
+            "type": "palladium:has_tag",
+            "tag": "fantastic_four_skin"
+          }
+        ]
+      }
+    },
+
+    "nano_gauntlet": {
+      "type": "palladium:command",
+      "icon": "palladium:vibranium_flux_capacitor",
+      "title": "Nano Gauntlet",
+      "bar_color": "red",
+      "hidden": false,
+      "hidden_in_bar": false,
+      "list_index": 3,
+      "gui_position": "null",
+      "description": "Unlock with Vibranium Flux Capacitor in mainhand",
+      "first_tick_commands": [],
+      "last_tick_commands": [],
+      "commands": [
+        "clear @s palladium:vibranium_flux_capacitor",
+        "tag @s add nano_gauntlet"
+      ],
+      "conditions": {
+        "enabling": [
+          {
+            "type": "palladium:action",
+            "cooldown": 0,
+            "key_type": "key_bind",
+            "needs_empty_hand": false,
+            "allow_scrolling_when_crouching": true
+          }
+        ],
+        "unlocking": [
+          {
+            "type": "palladium:not",
+            "conditions": [
+              {
+                "type": "palladium:or",
+                "conditions": [
                   {
-    "type": "palladium:or",
-    "conditions": [
-        {
-                        "type": "palladium:animation_timer_ability",
-                        "power": "fsang:iron_man",
-                        "ability": "iron_man_suit_enabled",
-                        "min": 9,
-                        "max": 10
-                    },
-                     {
-                    "type": "palladium:objective_score",
-                    "objective": "satsu.iron.man.armor.actived",
-                    "min_score": 1,
-                    "max_score": 1
-                  }
-    ]
-}
-                 
-        ]
-    }
-},
-"render_layer_space_mark_85": {
-    "type": "palladium:render_layer",
-    "hidden": true,
-    "hidden_in_bar": true,
-    "render_layer": "infinity:gauntlet_space",
-    "conditions": {
-        "enabling": [
-            {
-    "type": "palladium:objective_score",
-    "objective": "space_stone",
-    "min_score": 1,
-    "max_score": 1
-}
-        ],
-         "unlocking": [
-         {
-    "type": "palladium:or",
-    "conditions": [
-        {
-                        "type": "palladium:animation_timer_ability",
-                        "power": "fsang:iron_man",
-                        "ability": "iron_man_suit_enabled",
-                        "min": 9,
-                        "max": 10
-                    },
-                     {
-                    "type": "palladium:objective_score",
-                    "objective": "satsu.iron.man.armor.actived",
-                    "min_score": 1,
-                    "max_score": 1
-                  }
-    ]
-}
-                 
-        ]
-    }
-},
-"render_layer_reality_mark_85": {
-    "type": "palladium:render_layer",
-    "hidden": true,
-    "hidden_in_bar": true,
-    "render_layer": "infinity:gauntlet_reality",
-    "conditions": {
-        "enabling": [
-            {
-    "type": "palladium:objective_score",
-    "objective": "reality_stone",
-    "min_score": 1,
-    "max_score": 1
-}
-        ],
-         "unlocking": [
-         {
-    "type": "palladium:or",
-    "conditions": [
-        {
-                        "type": "palladium:animation_timer_ability",
-                        "power": "fsang:iron_man",
-                        "ability": "iron_man_suit_enabled",
-                        "min": 9,
-                        "max": 10
-                    },
-                     {
-                    "type": "palladium:objective_score",
-                    "objective": "satsu.iron.man.armor.actived",
-                    "min_score": 1,
-                    "max_score": 1
-                  }
-    ]
-}
-                 
-        ]
-    }
-},
-"render_layer_time_mark_85": {
-    "type": "palladium:render_layer",
-    "hidden": true,
-    "hidden_in_bar": true,
-    "render_layer": "infinity:gauntlet_time",
-    "conditions": {
-        "enabling": [
-            {
-    "type": "palladium:objective_score",
-    "objective": "time_stone",
-    "min_score": 1,
-    "max_score": 1
-}
-        ],
-         "unlocking": [
-         {
-    "type": "palladium:or",
-    "conditions": [
-        {
-                        "type": "palladium:animation_timer_ability",
-                        "power": "fsang:iron_man",
-                        "ability": "iron_man_suit_enabled",
-                        "min": 9,
-                        "max": 10
-                    },
-                     {
-                    "type": "palladium:objective_score",
-                    "objective": "satsu.iron.man.armor.actived",
-                    "min_score": 1,
-                    "max_score": 1
-                  }
-    ]
-}
-                 
-        ]
-    }
-},
-"render_layer_soul_mark_85": {
-    "type": "palladium:render_layer",
-    "hidden": true,
-    "hidden_in_bar": true,
-    "render_layer": "infinity:gauntlet_soul",
-    "conditions": {
-        "enabling": [
-            {
-    "type": "palladium:objective_score",
-    "objective": "soul_stone",
-    "min_score": 1,
-    "max_score": 1
-}
-        ],
-         "unlocking": [
-         {
-    "type": "palladium:or",
-    "conditions": [
-        {
-                        "type": "palladium:animation_timer_ability",
-                        "power": "fsang:iron_man",
-                        "ability": "iron_man_suit_enabled",
-                        "min": 9,
-                        "max": 10
-                    },
-                     {
-                    "type": "palladium:objective_score",
-                    "objective": "satsu.iron.man.armor.actived",
-                    "min_score": 1,
-                    "max_score": 1
-                  }
-    ]
-}
-                 
-        ]
-    }
-},
-"render_layer_mind_mark_85": {
-    "type": "palladium:render_layer",
-    "hidden": true,
-    "hidden_in_bar": true,
-    "render_layer": "infinity:gauntlet_mind",
-    "conditions": {
-        "enabling": [
-            {
-    "type": "palladium:objective_score",
-    "objective": "mind_stone",
-    "min_score": 1,
-    "max_score": 1
-}
-        ],
-         "unlocking": [
-         {
-    "type": "palladium:or",
-    "conditions": [
-        {
-                        "type": "palladium:animation_timer_ability",
-                        "power": "fsang:iron_man",
-                        "ability": "iron_man_suit_enabled",
-                        "min": 9,
-                        "max": 10
-                    },
-                     {
-                    "type": "palladium:objective_score",
-                    "objective": "satsu.iron.man.armor.actived",
-                    "min_score": 1,
-                    "max_score": 1
-                  }
-    ]
-}
-                 
-        ]
-    }
-},
-"render_layer_nano_gauntlet_mark_85": {
-     "type": "palladium:render_layer",
-     "hidden": true,
-     "hidden_in_bar": true,
-     "render_layer": "infinity:nano_gauntlet",
-     "conditions":{
-         "unlocking": [
-         {
-    "type": "palladium:or",
-    "conditions": [
-        {
-                        "type": "palladium:animation_timer_ability",
-                        "power": "fsang:iron_man",
-                        "ability": "iron_man_suit_enabled",
-                        "min": 9,
-                        "max": 10
-                    }
-    ]
-}
-                 
-        ]
-     }
-},
-"render_layer_nano_gauntlet": {
-     "type": "palladium:render_layer",
-     "hidden": true,
-     "hidden_in_bar": true,
-     "render_layer": "infinity:nano_gauntlet",
-     "conditions":{
-        "enabling":[
-            {
-    "type": "palladium:or",
-    "conditions": [
-        {
-    "type": "palladium:item_in_slot",
-    "item": {
-        "item": "infinity:infinity_gauntlet"
-    },
-    "slot": "offhand"
-},
-{
-    "type": "palladium:item_in_slot",
-    "item": {
-        "item": "infinity:infinity_gauntlet"
-    },
-    "slot": "curios:hands"
-}
-    ]
-},
-{
-    "type": "palladium:has_tag",
-    "tag": "nano_gauntlet"
-}
-            
-        ]
-     }    
-},
-
-"render_layer_netherite_gauntlet": {
-     "type": "palladium:render_layer",
-     "hidden": true,
-     "hidden_in_bar": true,
-     "render_layer": "infinity:netherite_gauntlet",
-     "conditions":{
-        "enabling":[
-            {
-    "type": "palladium:or",
-    "conditions": [
-        {
-    "type": "palladium:item_in_slot",
-    "item": {
-        "item": "infinity:infinity_gauntlet"
-    },
-    "slot": "offhand"
-},
-{
-    "type": "palladium:item_in_slot",
-    "item": {
-        "item": "infinity:infinity_gauntlet"
-    },
-    "slot": "curios:hands"
-}
-    ]
-},
-{
-    "type": "palladium:has_tag",
-    "tag": "netherite_gauntlet"
-}
-            
-        ]
-     }    
-},
-
-"render_layer_fantastic_four_skin": {
-     "type": "palladium:render_layer",
-     "hidden": true,
-     "hidden_in_bar": true,
-     "render_layer": "infinity:fantastic_four_skin",
-     "conditions":{
-        "enabling":[
-            {
-    "type": "palladium:or",
-    "conditions": [
-        {
-    "type": "palladium:item_in_slot",
-    "item": {
-        "item": "infinity:infinity_gauntlet"
-    },
-    "slot": "offhand"
-},
-{
-    "type": "palladium:item_in_slot",
-    "item": {
-        "item": "infinity:infinity_gauntlet"
-    },
-    "slot": "curios:hands"
-}
-    ]
-},
-{
-    "type": "palladium:has_tag",
-    "tag": "fantastic_four_skin"
-}
-            
-        ]
-     }    
-},
-
- "nano_gauntlet": {
-            "type": "palladium:command",
-            "icon": "palladium:vibranium_flux_capacitor",
-            "title": "Nano Gauntlet",
-            "bar_color": "red",
-            "hidden": false,
-            "hidden_in_bar": false,
-            "list_index": 3,
-         "gui_position": "null",
-            "description": "Unlock with Vibranium Flux Capacitor in mainhand",
-            "first_tick_commands": [],
-            "last_tick_commands": [],
-            "commands": [
-                "clear @s palladium:vibranium_flux_capacitor",
-                "tag @s add nano_gauntlet"
-            ],
-            "conditions": {
-                
-                "enabling": [
-                    {
-                        "type": "palladium:action",
-                        "cooldown": 0,
-                        "key_type": "key_bind",
-                        "needs_empty_hand": false,
-                        "allow_scrolling_when_crouching": true
-                    }
-                ],
-                "unlocking": [
-                  
+                    "type": "palladium:has_tag",
+                    "tag": "nano_gauntlet"
+                  },
                   {
-    "type": "palladium:not",
-    "conditions": [
-        {
-    "type": "palladium:or",
-    "conditions": [
-         {
-    "type": "palladium:has_tag",
-    "tag": "nano_gauntlet"
-}, {
-    "type": "palladium:has_tag",
-    "tag": "netherite_gauntlet"
-},
-{
-    "type": "palladium:has_tag",
-    "tag": "fantastic_four_skin"
-}
-    ]
-}
-    ]
-},
-{
-    "type": "palladium:item_in_slot",
-    "item": {
-        "item": "palladium:vibranium_flux_capacitor"
-    },
-    "slot": "mainhand"
-}
-                
-
-          
-                ]
-            }
-        },
-
-        "fantastic_four_skin": {
-            "type": "palladium:command",
-            "icon": "minecraft:shears",
-            "title": "Fantastic Four Skin",
-            "bar_color": "light_blue",
-            "hidden": false,
-            "hidden_in_bar": false,
-            "list_index": 3,
-         "gui_position": "null",
-            "description": "Unlock with ???",
-            "first_tick_commands": [],
-            "last_tick_commands": [],
-            "commands": [
-                "clear @s minecraft:shears",
-                "tag @s add fantastic_four_skin"
-            ],
-            "conditions": {
-                
-                "enabling": [
-                    {
-                        "type": "palladium:action",
-                        "cooldown": 0,
-                        "key_type": "key_bind",
-                        "needs_empty_hand": false,
-                        "allow_scrolling_when_crouching": true
-                    }
-                ],
-                "unlocking": [
-                  
+                    "type": "palladium:has_tag",
+                    "tag": "netherite_gauntlet"
+                  },
                   {
-    "type": "palladium:not",
-    "conditions": [
-        {
-    "type": "palladium:or",
-    "conditions": [
-         {
-    "type": "palladium:has_tag",
-    "tag": "nano_gauntlet"
-}, 
-{
-    "type": "palladium:has_tag",
-    "tag": "netherite_gauntlet"
-},
-{
-    "type": "palladium:has_tag",
-    "tag": "fantastic_four_skin"
-}
-    ]
-}
-    ]
-},
-{
-    "type": "palladium:item_in_slot",
-    "item": {
-        "item": "minecraft:shears"
-    },
-    "slot": "mainhand"
-}
-                
-
-          
+                    "type": "palladium:has_tag",
+                    "tag": "fantastic_four_skin"
+                  }
                 ]
-            }
-        },
+              }
+            ]
+          },
+          {
+            "type": "palladium:item_in_slot",
+            "item": {
+              "item": "palladium:vibranium_flux_capacitor"
+            },
+            "slot": "mainhand"
+          }
+        ]
+      }
+    },
 
-        "netherite_gauntlet": {
-            "type": "palladium:command",
-            "icon": "minecraft:netherite_ingot",
-            "title": "Netherite Gauntlet",
-            "bar_color": "red",
-            "hidden": false,
-            "hidden_in_bar": false,
-            "list_index": 3,
-         "gui_position": "null",
-            "description": "Unlock with netherite ingot",
-            "first_tick_commands": [],
-            "last_tick_commands": [],
-            "commands": [
-                "clear @s minecraft:netherite_ingot",
-                "tag @s add netherite_gauntlet"
-            ],
-            "conditions": {
-                
-                "enabling": [
-                    {
-                        "type": "palladium:action",
-                        "cooldown": 0,
-                        "key_type": "key_bind",
-                        "needs_empty_hand": false,
-                        "allow_scrolling_when_crouching": true
-                    }
-                ],
-                "unlocking": [
-                  
+    "fantastic_four_skin": {
+      "type": "palladium:command",
+      "icon": "minecraft:shears",
+      "title": "Fantastic Four Skin",
+      "bar_color": "light_blue",
+      "hidden": false,
+      "hidden_in_bar": false,
+      "list_index": 3,
+      "gui_position": "null",
+      "description": "Unlock with ???",
+      "first_tick_commands": [],
+      "last_tick_commands": [],
+      "commands": [
+        "clear @s minecraft:shears",
+        "tag @s add fantastic_four_skin"
+      ],
+      "conditions": {
+        "enabling": [
+          {
+            "type": "palladium:action",
+            "cooldown": 0,
+            "key_type": "key_bind",
+            "needs_empty_hand": false,
+            "allow_scrolling_when_crouching": true
+          }
+        ],
+        "unlocking": [
+          {
+            "type": "palladium:not",
+            "conditions": [
+              {
+                "type": "palladium:or",
+                "conditions": [
                   {
-    "type": "palladium:not",
-    "conditions": [
-        {
-    "type": "palladium:or",
-    "conditions": [
-         {
-    "type": "palladium:has_tag",
-    "tag": "nano_gauntlet"
-}, {
-    "type": "palladium:has_tag",
-    "tag": "netherite_gauntlet"
-},
-{
-    "type": "palladium:has_tag",
-    "tag": "fantastic_four_skin"
-}
-    ]
-}
-    ]
-},
-{
-    "type": "palladium:item_in_slot",
-    "item": {
-        "item": "minecraft:netherite_ingot"
+                    "type": "palladium:has_tag",
+                    "tag": "nano_gauntlet"
+                  },
+                  {
+                    "type": "palladium:has_tag",
+                    "tag": "netherite_gauntlet"
+                  },
+                  {
+                    "type": "palladium:has_tag",
+                    "tag": "fantastic_four_skin"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "palladium:item_in_slot",
+            "item": {
+              "item": "minecraft:shears"
+            },
+            "slot": "mainhand"
+          }
+        ]
+      }
     },
-    "slot": "mainhand"
-}
-                
 
-          
+    "netherite_gauntlet": {
+      "type": "palladium:command",
+      "icon": "minecraft:netherite_ingot",
+      "title": "Netherite Gauntlet",
+      "bar_color": "red",
+      "hidden": false,
+      "hidden_in_bar": false,
+      "list_index": 3,
+      "gui_position": "null",
+      "description": "Unlock with netherite ingot",
+      "first_tick_commands": [],
+      "last_tick_commands": [],
+      "commands": [
+        "clear @s minecraft:netherite_ingot",
+        "tag @s add netherite_gauntlet"
+      ],
+      "conditions": {
+        "enabling": [
+          {
+            "type": "palladium:action",
+            "cooldown": 0,
+            "key_type": "key_bind",
+            "needs_empty_hand": false,
+            "allow_scrolling_when_crouching": true
+          }
+        ],
+        "unlocking": [
+          {
+            "type": "palladium:not",
+            "conditions": [
+              {
+                "type": "palladium:or",
+                "conditions": [
+                  {
+                    "type": "palladium:has_tag",
+                    "tag": "nano_gauntlet"
+                  },
+                  {
+                    "type": "palladium:has_tag",
+                    "tag": "netherite_gauntlet"
+                  },
+                  {
+                    "type": "palladium:has_tag",
+                    "tag": "fantastic_four_skin"
+                  }
                 ]
-            }
-        },
+              }
+            ]
+          },
+          {
+            "type": "palladium:item_in_slot",
+            "item": {
+              "item": "minecraft:netherite_ingot"
+            },
+            "slot": "mainhand"
+          }
+        ]
+      }
+    },
 
-        "normal_gauntlet": {
-            "type": "palladium:command",
-            "icon": "infinity:infinity_gauntlet",
-            "title": "Return to Original Gauntlet",
-            "bar_color": "yellow",
-            "hidden": false,
-            "hidden_in_bar": false,
-            "list_index": 3,
-         "gui_position": "null",
-            "description": "removes applied skin",
-            "first_tick_commands": [],
-            "last_tick_commands": [],
-            "commands": [
-                "tag @s remove nano_gauntlet",
-                "tag @s remove netherite_gauntlet",
-                "tag @s remove fantastic_four_skin"
-            ],
-            "conditions": {
-                
-                "enabling": [
-                    {
-                        "type": "palladium:action",
-                        "cooldown": 0,
-                        "key_type": "key_bind",
-                        "needs_empty_hand": false,
-                        "allow_scrolling_when_crouching": true
-                    }
-                ],
-                "unlocking": [
-                  
-                  
-{
-    "type": "palladium:or",
-    "conditions": [
-         {
-    "type": "palladium:has_tag",
-    "tag": "nano_gauntlet"
-}, {
-    "type": "palladium:has_tag",
-    "tag": "netherite_gauntlet"
-},
-{
-    "type": "palladium:has_tag",
-    "tag": "fantastic_four_skin"
-}
-    ]
-}
-                
-
-          
-                ]
-            }
-        }
+    "normal_gauntlet": {
+      "type": "palladium:command",
+      "icon": "infinity:infinity_gauntlet",
+      "title": "Return to Original Gauntlet",
+      "bar_color": "yellow",
+      "hidden": false,
+      "hidden_in_bar": false,
+      "list_index": 3,
+      "gui_position": "null",
+      "description": "removes applied skin",
+      "first_tick_commands": [],
+      "last_tick_commands": [],
+      "commands": [
+        "tag @s remove nano_gauntlet",
+        "tag @s remove netherite_gauntlet",
+        "tag @s remove fantastic_four_skin"
+      ],
+      "conditions": {
+        "enabling": [
+          {
+            "type": "palladium:action",
+            "cooldown": 0,
+            "key_type": "key_bind",
+            "needs_empty_hand": false,
+            "allow_scrolling_when_crouching": true
+          }
+        ],
+        "unlocking": [
+          {
+            "type": "palladium:or",
+            "conditions": [
+              {
+                "type": "palladium:has_tag",
+                "tag": "nano_gauntlet"
+              },
+              {
+                "type": "palladium:has_tag",
+                "tag": "netherite_gauntlet"
+              },
+              {
+                "type": "palladium:has_tag",
+                "tag": "fantastic_four_skin"
+              }
+            ]
+          }
+        ]
+      }
     }
+  }
 }
