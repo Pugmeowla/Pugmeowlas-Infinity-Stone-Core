@@ -133,7 +133,7 @@
       "icon": "infinity:textures/item/infinity_gauntlet2.png",
       "title": "remove stones",
       "bar_color": "light_gray",
-      "hidden": false,
+      "hidden": true,
       "hidden_in_bar": true,
       "list_index": 0,
       "gui_position": "null",
@@ -206,7 +206,8 @@
       "commands": [
         "clear @s infinity:power_stone 1",
         "superpower add infinity:power_stone_passive @s",
-        "scoreboard players set @s power_stone 1"
+        "scoreboard players set @s power_stone 1",
+        "playsound infinity:infinity_stone_equip block @s"
       ],
       "conditions": {
         "enabling": [
@@ -341,7 +342,8 @@
       "commands": [
         "clear @s infinity:space_stone 1",
         "superpower add infinity:space_stone @s",
-        "scoreboard players set @s space_stone 1"
+        "scoreboard players set @s space_stone 1",
+        "playsound infinity:infinity_stone_equip block @s"
       ],
       "conditions": {
         "enabling": [
@@ -469,7 +471,8 @@
       "commands": [
         "clear @s infinity:reality_stone 1",
         "superpower add infinity:reality_stone @s",
-        "scoreboard players set @s reality_stone 1"
+        "scoreboard players set @s reality_stone 1",
+        "playsound infinity:infinity_stone_equip block @s"
       ],
       "conditions": {
         "enabling": [
@@ -598,7 +601,8 @@
       "commands": [
         "clear @s infinity:time_stone 1",
         "superpower add infinity:time_stone @s",
-        "scoreboard players set @s time_stone 1"
+        "scoreboard players set @s time_stone 1",
+        "playsound infinity:infinity_stone_equip block @s"
       ],
       "conditions": {
         "enabling": [
@@ -693,7 +697,8 @@
         "execute as @s run clear @s infinity:time_stone",
         "execute as @s run function infinity:givetimestone",
         "execute as @s run superpower remove infinity:time_stone @s",
-        "scoreboard players set @s time_stone 0"
+        "scoreboard players set @s time_stone 0",
+        "clear @s infinity:eye_of_agamotto"
       ],
       "conditions": {
         "enabling": [
@@ -726,7 +731,8 @@
       "commands": [
         "clear @s infinity:soul_stone 1",
         "superpower add infinity:soul_stone @s",
-        "scoreboard players set @s soul_stone 1"
+        "scoreboard players set @s soul_stone 1",
+        "playsound infinity:infinity_stone_equip block @s"
       ],
       "conditions": {
         "enabling": [
@@ -855,7 +861,8 @@
       "commands": [
         "clear @s infinity:mind_stone 1",
         "superpower add infinity:mind_stone @s",
-        "scoreboard players set @s mind_stone 1"
+        "scoreboard players set @s mind_stone 1",
+        "playsound infinity:infinity_stone_equip block @s"
       ],
       "conditions": {
         "enabling": [
@@ -1446,7 +1453,7 @@
           {
             "type": "palladium:action",
             "cooldown": 0,
-            "key_type": "key_bind",
+            "key_type": "right_click",
             "needs_empty_hand": false,
             "allow_scrolling_when_crouching": true
           }
@@ -1652,6 +1659,15 @@
           }
         ]
       }
+    },
+    "gauntlet_anim": {
+      "type": "palladium:animation_timer",
+      "list_index": 1,
+      "max_value": 5,
+      "bar_color": "orange",
+      "title": "test",
+      "hidden": true,
+      "hidden_in_bar": true
     }
   }
 }

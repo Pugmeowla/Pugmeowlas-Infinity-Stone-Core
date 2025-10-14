@@ -1,1164 +1,1133 @@
 {
-    "name": "Space Stone",
-    "background": "minecraft:textures/block/light_blue_concrete.png",
-    "icon": "infinity:space_stone",
-     "persistent_data": true,
-    "gui_display_type": "tree",
-    "ability_bar_texture": "infinity:textures/gui/ability_bars/infinity_ability_bar.png",
- 
-    "abilities": {
-      
-         "teleport": {
-            "type": "palladium:command",
-            "icon": "infinity:textures/icon/teleport.png",
-            "title": "Teleport",
-            "bar_color": "light_blue",
-             "persistent_data": true,
-            "hidden": false,
-            "hidden_in_bar": false,
-            "list_index": 1,
-             "gui_position": [
-                0,
-                -1
-            ],
-            "description": "Teleport to wherever you look",
-            "first_tick_commands": [],
-            "last_tick_commands": [],
-            "commands": [
-                "tag @s add teleport_tag",
-                "function infinity:space_tp_start"
-            ],
-            "conditions": {
-                
-                "enabling": [
-                    {
-                        "type": "palladium:ability_unlocked",
-                        "power": "null",
-                        "ability": "force_field"
-                    },{
-    "type": "palladium:action",
-    "cooldown": 0,
-    "key_type": "key_bind",
-    "needs_empty_hand": false,
-    "allow_scrolling_when_crouching": true
-}
-                ],
-                "unlocking": [
-                       {
-    "type": "palladium:item_buyable",
-    "ingredient": {
-        "item": "infinity:aspects_of_existance"
-    },
-    "amount": 1
-},{
-                        "type": "palladium:ability_unlocked",
-                        "power": "null",
-                        "ability": "step_assist"
-                    },{
-        "type": "palladium:or",
-        "conditions": [
-            {
-                "type": "palladium:has_power",
-                "power": "infinity:infinity_gauntlet"
-            },
-            {
-                "type": "palladium:item_in_slot",
-                "item": {
-                    "item": "infinity:tesseract"
-                },
-                "slot": "mainhand"
-            },
-            {
-                "type": "palladium:item_in_slot",
-                "item": {
-                    "item": "infinity:tesseract"
-                },
-                "slot": "offhand"
-            },
-            {
-                "type": "palladium:item_in_slot",
-                "item": {
-                    "item": "infinity:space_stone"
-                },
-                "slot": "mainhand"
-            },
-            {
-                "type": "palladium:item_in_slot",
-                "item": {
-                    "item": "infinity:space_stone"
-                },
-                "slot": "offhand"
-            },
-             {
-                "type": "palladium:item_in_slot",
-                "item": {
-                    "item": "infinity:cosmi-rod_space"
-                },
-                "slot": "mainhand"
-            },
-            {
-                "type": "palladium:item_in_slot",
-                "item": {
-                    "item": "infinity:cosmi-rod_space"
-                },
-                "slot": "offhand"
-            }
-            
-        ]
-    }
-                ]
-            }
-            
-        },
-        
-         "teleport_command": {
-           "type": "palladium:dummy",
-            "icon": "infinity:textures/icon/teleport.png",
-            "title": "Teleport Command",
-            "bar_color": "light_blue",
-             "persistent_data": true,
-            "hidden": false,
-            "hidden_in_bar": false,
-            "list_index": -1,
-            "gui_position": [
-                0,
-                -2
-            ],
-            "description": "Lets you use the space_tp command, the format is space_tp x y z example:example",
-            "first_tick_commands": [],
-            "last_tick_commands": [],
-            "commands": [
-                ""
-            ],
-            "conditions": {
-                
-                "enabling": [
-                    {
-                        "type": "palladium:true"
-                    }
-                ],
-                "unlocking": [
-     {
-    "type": "palladium:item_buyable",
-    "ingredient": {
-        "item": "infinity:aspects_of_existance"
-    },
-    "amount": 1
-}, {
-                        "type": "palladium:ability_unlocked",
-                        "power": "null",
-                        "ability": "teleport"
-                    },
-                    
-    {
-        "type": "palladium:or",
-        "conditions": [
-            {
-                "type": "palladium:has_power",
-                "power": "infinity:infinity_gauntlet"
-            },
-            {
-                "type": "palladium:item_in_slot",
-                "item": {
-                    "item": "infinity:tesseract"
-                },
-                "slot": "mainhand"
-            },
-            {
-                "type": "palladium:item_in_slot",
-                "item": {
-                    "item": "infinity:tesseract"
-                },
-                "slot": "offhand"
-            },
-            {
-                "type": "palladium:item_in_slot",
-                "item": {
-                    "item": "infinity:space_stone"
-                },
-                "slot": "mainhand"
-            },
-            {
-                "type": "palladium:item_in_slot",
-                "item": {
-                    "item": "infinity:space_stone"
-                },
-                "slot": "offhand"
-            },
-             {
-                "type": "palladium:item_in_slot",
-                "item": {
-                    "item": "infinity:cosmi-rod_space"
-                },
-                "slot": "mainhand"
-            },
-            {
-                "type": "palladium:item_in_slot",
-                "item": {
-                    "item": "infinity:cosmi-rod_space"
-                },
-                "slot": "offhand"
-            }
-            
-        ]
-    }
-]
-            }
-        },
-      
-        "grab_entity": {
-            "type": "palladium:command",
-            "icon": "infinity:space_stone",
-            "title": "Telekinesis",
-            "bar_color": "light_blue",
-             "persistent_data": true,
-            "hidden": false,
-            "hidden_in_bar": false,
-            "list_index": 2,
-             "gui_position": [
-                2,
-                -1
-            ],
-            "description": "Telekinesis, pretty self explanitory",
-            "first_tick_commands": ["playsound infinity:space_stone_grab player @a ~ ~ ~"],
-            "last_tick_commands": [],
-            "commands": [
-                "execute as @s run execute at @s run tp @e[type=!player,type=!item,distance=..7] ^ ^1 ^5",
-                "execute as @s run execute at @s run particle dust 0.345 0.714 0.89 1 ^ ^2 ^5 0.3 0.3 0.3 0 50"
-            ],
-            "conditions": {
-                
-                "enabling": [
-                    {
-                        "type": "palladium:held",
-                        "cooldown": 0
-                    }
-                ],
-                "unlocking": [
-                     {
-    "type": "palladium:item_buyable",
-    "ingredient": {
-        "item": "infinity:aspects_of_existance"
-    },
-    "amount": 1
-}, {
-                        "type": "palladium:ability_unlocked",
-                        "power": "null",
-                        "ability": "force_field"
-                    },
-                    {
-        "type": "palladium:or",
-        "conditions": [
-            {
-                "type": "palladium:has_power",
-                "power": "infinity:infinity_gauntlet"
-            },
-            {
-                "type": "palladium:item_in_slot",
-                "item": {
-                    "item": "infinity:tesseract"
-                },
-                "slot": "mainhand"
-            },
-            {
-                "type": "palladium:item_in_slot",
-                "item": {
-                    "item": "infinity:tesseract"
-                },
-                "slot": "offhand"
-            },
-            {
-                "type": "palladium:item_in_slot",
-                "item": {
-                    "item": "infinity:space_stone"
-                },
-                "slot": "mainhand"
-            },
-            {
-                "type": "palladium:item_in_slot",
-                "item": {
-                    "item": "infinity:space_stone"
-                },
-                "slot": "offhand"
-            },
-             {
-                "type": "palladium:item_in_slot",
-                "item": {
-                    "item": "infinity:cosmi-rod_space"
-                },
-                "slot": "mainhand"
-            },
-            {
-                "type": "palladium:item_in_slot",
-                "item": {
-                    "item": "infinity:cosmi-rod_space"
-                },
-                "slot": "offhand"
-            }
-            
-        ]
-    }
-                ]
-            }
-            
-        },
-       
-       
+  "name": "Space Stone",
+  "background": "minecraft:textures/block/light_blue_concrete.png",
+  "icon": "infinity:space_stone",
+  "persistent_data": true,
+  "gui_display_type": "tree",
+  "ability_bar_texture": "infinity:textures/gui/ability_bars/space_ability_bar.png",
 
-       "render_layer_space_stone_shield": {
-        "type": "palladium:render_layer",
-        "hidden": true,
-        "hidden_in_bar": true,
-         "persistent_data": true,
-        "render_layer": "infinity:space_stone_shield",
-        "conditions": {
-          "enabling":[
-              {
-                  "type": "palladium:ability_enabled",
-                  "ability": "force_field"
-                 }
-          ],
-          "unlocking": [
-            {
-        "type": "palladium:or",
-        "conditions": [
-            {
-                "type": "palladium:has_power",
-                "power": "infinity:infinity_gauntlet"
-            },
-            {
-                "type": "palladium:item_in_slot",
-                "item": {
-                    "item": "infinity:tesseract"
-                },
-                "slot": "mainhand"
-            },
-            {
-                "type": "palladium:item_in_slot",
-                "item": {
-                    "item": "infinity:tesseract"
-                },
-                "slot": "offhand"
-            },
-            {
-                "type": "palladium:item_in_slot",
-                "item": {
-                    "item": "infinity:space_stone"
-                },
-                "slot": "mainhand"
-            },
-            {
-                "type": "palladium:item_in_slot",
-                "item": {
-                    "item": "infinity:space_stone"
-                },
-                "slot": "offhand"
-            },
-             {
-                "type": "palladium:item_in_slot",
-                "item": {
-                    "item": "infinity:cosmi-rod_space"
-                },
-                "slot": "mainhand"
-            },
-            {
-                "type": "palladium:item_in_slot",
-                "item": {
-                    "item": "infinity:cosmi-rod_space"
-                },
-                "slot": "offhand"
-            }
-            
-        ]
-    }
-        ]
-        }
-      },
-         
-      "force_field":{
-            "type": "palladium:attribute_modifier",
-            "icon": "infinity:textures/icon/force_field.png",
-            "title": "Force Field",
-             "persistent_data": true,
-            "bar_color": "light_blue",
-            "hidden": false,
-            "hidden_in_bar": false,
-            "list_index": 0,
-           "gui_position": [
-                1,
-                0
-            ],
-            "description": "Lets you become invlunerable, at the cost of not being able to move",
-            "attribute": "minecraft:generic.armor",
-            "amount": 2147483647,
-            "operation": 0,
-            "uuid": "498be4fb-af04-42f2-8948-e6ccdc0d99e1",
-            "conditions": {
-                
-                "enabling": [
-                    {
-                        "type": "palladium:toggle",
-                        "cooldown": 0,
-                        "key_type": "key_bind",
-                        "needs_empty_hand": false,
-                        "allow_scrolling_when_crouching": true
-                    }
-                ],
-                "unlocking": [
-                     {
-    "type": "palladium:item_buyable",
-    "ingredient": {
-        "item": "infinity:aspects_of_existance"
-    },
-    "amount": 1
-}, {
-                        "type": "palladium:ability_unlocked",
-                        "power": "null",
-                        "ability": "fall_immunity"
-                    },{
-        "type": "palladium:or",
-        "conditions": [
-            {
-                "type": "palladium:has_power",
-                "power": "infinity:infinity_gauntlet"
-            },
-            {
-                "type": "palladium:item_in_slot",
-                "item": {
-                    "item": "infinity:tesseract"
-                },
-                "slot": "mainhand"
-            },
-            {
-                "type": "palladium:item_in_slot",
-                "item": {
-                    "item": "infinity:tesseract"
-                },
-                "slot": "offhand"
-            },
-            {
-                "type": "palladium:item_in_slot",
-                "item": {
-                    "item": "infinity:space_stone"
-                },
-                "slot": "mainhand"
-            },
-            {
-                "type": "palladium:item_in_slot",
-                "item": {
-                    "item": "infinity:space_stone"
-                },
-                "slot": "offhand"
-            },
-             {
-                "type": "palladium:item_in_slot",
-                "item": {
-                    "item": "infinity:cosmi-rod_space"
-                },
-                "slot": "mainhand"
-            },
-            {
-                "type": "palladium:item_in_slot",
-                "item": {
-                    "item": "infinity:cosmi-rod_space"
-                },
-                "slot": "offhand"
-            }
-            
-        ]
-    }
-                ]
-            }
-        },
-        "shield_toughness":{
-            "type": "palladium:attribute_modifier",
-            "icon": "minecraft:iron_chestplate",
-             "persistent_data": true,
-            "title": "Max Health",
-            "bar_color": "orange",
-            "hidden": true,
-            "hidden_in_bar": true,
-            "list_index": -1,
-            "gui_position": "null",
-            "description": "null",
-            "attribute": "minecraft:generic.armor_toughness",
-            "amount": 2147483647,
-            "operation": 0,
-            "uuid": "498be4fb-af04-42f2-8948-e6ccdc0d99e1",
-            "conditions": {
-                
-                "enabling": [
-                    {
-                        "type": "palladium:ability_enabled",
-                        "ability": "force_field"
-                       }
-                ],
-                "unlocking": [
-                    {
-        "type": "palladium:or",
-        "conditions": [
-            {
-                "type": "palladium:has_power",
-                "power": "infinity:infinity_gauntlet"
-            },
-            {
-                "type": "palladium:item_in_slot",
-                "item": {
-                    "item": "infinity:tesseract"
-                },
-                "slot": "mainhand"
-            },
-            {
-                "type": "palladium:item_in_slot",
-                "item": {
-                    "item": "infinity:tesseract"
-                },
-                "slot": "offhand"
-            },
-            {
-                "type": "palladium:item_in_slot",
-                "item": {
-                    "item": "infinity:space_stone"
-                },
-                "slot": "mainhand"
-            },
-            {
-                "type": "palladium:item_in_slot",
-                "item": {
-                    "item": "infinity:space_stone"
-                },
-                "slot": "offhand"
-            },
-             {
-                "type": "palladium:item_in_slot",
-                "item": {
-                    "item": "infinity:cosmi-rod_space"
-                },
-                "slot": "mainhand"
-            },
-            {
-                "type": "palladium:item_in_slot",
-                "item": {
-                    "item": "infinity:cosmi-rod_space"
-                },
-                "slot": "offhand"
-            }
-            
-        ]
-    }
-                ]
-            }
-        },
-      
-        "Shield Block":{
-            "type": "pantheonsent:moon_knight_blocking",
-            "icon": "minecraft:blaze_rod",
-            "title": "null",
-             "persistent_data": true,
-            "bar_color": "light_gray",
-            "hidden": true,
-            "hidden_in_bar": true,
-            "list_index": -1,
-            "gui_position": "null",
-            "description": "null",
-            "conditions": {
-                
-                "enabling": [
-                    {
-                        "type": "palladium:ability_enabled",
-                        "ability": "force_field"
-                       }
-                ],
-                "unlocking": [
-                    {
-        "type": "palladium:or",
-        "conditions": [
-            {
-                "type": "palladium:has_power",
-                "power": "infinity:infinity_gauntlet"
-            },
-            {
-                "type": "palladium:item_in_slot",
-                "item": {
-                    "item": "infinity:tesseract"
-                },
-                "slot": "mainhand"
-            },
-            {
-                "type": "palladium:item_in_slot",
-                "item": {
-                    "item": "infinity:tesseract"
-                },
-                "slot": "offhand"
-            },
-            {
-                "type": "palladium:item_in_slot",
-                "item": {
-                    "item": "infinity:space_stone"
-                },
-                "slot": "mainhand"
-            },
-            {
-                "type": "palladium:item_in_slot",
-                "item": {
-                    "item": "infinity:space_stone"
-                },
-                "slot": "offhand"
-            },
-             {
-                "type": "palladium:item_in_slot",
-                "item": {
-                    "item": "infinity:cosmi-rod_space"
-                },
-                "slot": "mainhand"
-            },
-            {
-                "type": "palladium:item_in_slot",
-                "item": {
-                    "item": "infinity:cosmi-rod_space"
-                },
-                "slot": "offhand"
-            }
-            
-        ]
-    }
-                ]
-            }
-        },
-         "black_hole_on": {
-            "type": "palladium:command",
-            "icon": "infinity:textures/icon/black_hole.png",
-            "title": "Black Hole",
-            "bar_color": "light_blue",
-             "persistent_data": true,
-            "hidden": false,
-            "hidden_in_bar": false,
-            "list_index": 3,
-          "gui_position": [
-                2,
-                -2
-            ],
-            "description": "The Black Hole sucks and kills entities nearby, as well as eating all blocks around it. It requires both the Space and Power Stones.",
-            "first_tick_commands": ["playsound infinity:black_hole player @a ~ ~ ~"],
-            "last_tick_commands": [],
-            "commands": [
-                "tag @a add blackholeon",
-                "function infinity:blackholeon"
-            ],
-            "conditions": {
-                
-                "enabling": [
-                    {
-                        "type": "palladium:action",
-                        "cooldown": 0,
-                        "key_type": "key_bind",
-                        "needs_empty_hand": false,
-                        "allow_scrolling_when_crouching": true
-                    }
-                ],
-                "unlocking": [
-                   {
-    "type": "palladium:item_buyable",
-    "ingredient": {
-        "item": "infinity:aspects_of_existance"
-    },
-    "amount": 1
-}, {
-                        "type": "palladium:ability_unlocked",
-                        "power": "null",
-                        "ability": "grab_entity"
-                    },
-                  {
-    "type": "palladium:not",
-    "conditions": [
-         {
-    "type": "palladium:has_tag",
-    "tag": "blackholeon"
-}
-    ]
-},
-                
-{   
-                "type": "palladium:has_power",
-                "power": "infinity:space_stone"
-            },
-            {   
-                "type": "palladium:has_power",
-                "power": "infinity:power_stone_passive"
-            },
-            
-            {
-        "type": "palladium:or",
-        "conditions": [
-            {
-                "type": "palladium:has_power",
-                "power": "infinity:infinity_gauntlet"
-            },
-            {
-                "type": "palladium:item_in_slot",
-                "item": {
-                    "item": "infinity:tesseract"
-                },
-                "slot": "mainhand"
-            },
-            {
-                "type": "palladium:item_in_slot",
-                "item": {
-                    "item": "infinity:tesseract"
-                },
-                "slot": "offhand"
-            },
-            {
-                "type": "palladium:item_in_slot",
-                "item": {
-                    "item": "infinity:space_stone"
-                },
-                "slot": "mainhand"
-            },
-            {
-                "type": "palladium:item_in_slot",
-                "item": {
-                    "item": "infinity:space_stone"
-                },
-                "slot": "offhand"
-            },
-             {
-                "type": "palladium:item_in_slot",
-                "item": {
-                    "item": "infinity:cosmi-rod_space"
-                },
-                "slot": "mainhand"
-            },
-            {
-                "type": "palladium:item_in_slot",
-                "item": {
-                    "item": "infinity:cosmi-rod_space"
-                },
-                "slot": "offhand"
-            }
-            
-        ]
-    }
-                ]
-            }
-        },
-        "black_hole_off": {
-            "type": "palladium:command",
-            "icon": "minecraft:barrier",
-            "title": "Black Hole Off",
-             "persistent_data": true,
-            "bar_color": "light_blue",
-            "hidden": true,
-            "hidden_in_bar": false,
-            "list_index": 3,
-         "gui_position": "null",
-            "description": "null",
-            "first_tick_commands": [],
-            "last_tick_commands": [],
-            "commands": [
-                "function infinity:blackholeoff",
-                "tag @a remove blackholeon"
-            ],
-            "conditions": {
-                
-                "enabling": [
-                    {
-                        "type": "palladium:action",
-                        "cooldown": 0,
-                        "key_type": "key_bind",
-                        "needs_empty_hand": false,
-                        "allow_scrolling_when_crouching": true
-                    }
-                ],
-                "unlocking": [
-                     {
-    "type": "palladium:has_tag",
-    "tag": "blackholeon"
-},
-                    {   
-                "type": "palladium:has_power",
-                "power": "infinity:space_stone"
-            },
-            {   
-                "type": "palladium:has_power",
-                "power": "infinity:power_stone_passive"
-            },
-            
-            {
-        "type": "palladium:or",
-        "conditions": [
-            {
-                "type": "palladium:has_power",
-                "power": "infinity:infinity_gauntlet"
-            },
-            {
-                "type": "palladium:item_in_slot",
-                "item": {
-                    "item": "infinity:tesseract"
-                },
-                "slot": "mainhand"
-            },
-            {
-                "type": "palladium:item_in_slot",
-                "item": {
-                    "item": "infinity:tesseract"
-                },
-                "slot": "offhand"
-            },
-            {
-                "type": "palladium:item_in_slot",
-                "item": {
-                    "item": "infinity:space_stone"
-                },
-                "slot": "mainhand"
-            },
-            {
-                "type": "palladium:item_in_slot",
-                "item": {
-                    "item": "infinity:space_stone"
-                },
-                "slot": "offhand"
-            },
-             {
-                "type": "palladium:item_in_slot",
-                "item": {
-                    "item": "infinity:cosmi-rod_space"
-                },
-                "slot": "mainhand"
-            },
-            {
-                "type": "palladium:item_in_slot",
-                "item": {
-                    "item": "infinity:cosmi-rod_space"
-                },
-                "slot": "offhand"
-            }
-            
-        ]
-    }
-                ]
-            }
-        },
-       
-         "remove_space_stone": {
-    "type": "palladium:command",
-     "persistent_data": true,
-    "icon": "infinity:space_stone",
-    "title": "Remove Space Stone",
-    "bar_color": "light_blue",
-    "hidden": true,
-    "hidden_in_bar": false,
-    "list_index": -1,
-    "gui_position": "null",
-    "description": "Extracts the Space Stone",
-    "commands": [
-        "execute as @s run clear @s infinity:tesseract",
-       "execute as @s run function infinity:givespacestone",
-        "execute as @s run give @s infinity:empty_tesseract"
-    ],
-    "conditions": {
+  "abilities": {
+    "teleport": {
+      "type": "palladium:command",
+      "icon": "infinity:textures/icon/teleport.png",
+      "title": "Teleport",
+      "bar_color": "light_blue",
+      "persistent_data": true,
+      "hidden": false,
+      "hidden_in_bar": false,
+      "list_index": 1,
+      "gui_position": [0, -1],
+      "description": "Teleport to wherever you look",
+      "first_tick_commands": [],
+      "last_tick_commands": [],
+      "commands": [
+        "tag @s add teleport_tag",
+        "function infinity:space_tp_start"
+      ],
+      "conditions": {
         "enabling": [
-            {
-                "type": "palladium:action",
-                "cooldown": 0,                                              
-                "key_type": "key_bind",
-                "needs_empty_hand": false,
-                "allow_scrolling_when_crouching": true
-            }
+          {
+            "type": "palladium:ability_unlocked",
+            "power": "null",
+            "ability": "force_field"
+          },
+          {
+            "type": "palladium:action",
+            "cooldown": 0,
+            "key_type": "key_bind",
+            "needs_empty_hand": false,
+            "allow_scrolling_when_crouching": true
+          }
         ],
-        "unlocking":[
-             {
-                        "type": "palladium:or",
-                        "conditions": [
-                            {
-                        "type": "palladium:item_in_slot",
-                        "item": {
-                            "item": "infinity:tesseract"
-                        },
-                        "slot": "offhand"
-                    },
-                     {
-                        "type": "palladium:item_in_slot",
-                        "item": {
-                            "item": "infinity:tesseract"
-                        },
-                        "slot": "mainhand"
-                    }
+        "unlocking": [
+          {
+            "type": "palladium:item_buyable",
+            "ingredient": {
+              "item": "infinity:aspects_of_existance"
+            },
+            "amount": 1
+          },
+          {
+            "type": "palladium:ability_unlocked",
+            "power": "null",
+            "ability": "step_assist"
+          },
+          {
+            "type": "palladium:or",
+            "conditions": [
+              {
+                "type": "palladium:has_power",
+                "power": "infinity:infinity_gauntlet"
+              },
+              {
+                "type": "palladium:item_in_slot",
+                "item": {
+                  "item": "infinity:tesseract"
+                },
+                "slot": "mainhand"
+              },
+              {
+                "type": "palladium:item_in_slot",
+                "item": {
+                  "item": "infinity:tesseract"
+                },
+                "slot": "offhand"
+              },
+              {
+                "type": "palladium:item_in_slot",
+                "item": {
+                  "item": "infinity:space_stone"
+                },
+                "slot": "mainhand"
+              },
+              {
+                "type": "palladium:item_in_slot",
+                "item": {
+                  "item": "infinity:space_stone"
+                },
+                "slot": "offhand"
+              },
+              {
+                "type": "palladium:item_in_slot",
+                "item": {
+                  "item": "infinity:cosmi-rod_space"
+                },
+                "slot": "mainhand"
+              },
+              {
+                "type": "palladium:item_in_slot",
+                "item": {
+                  "item": "infinity:cosmi-rod_space"
+                },
+                "slot": "offhand"
+              }
+            ]
+          }
+        ]
+      }
+    },
 
-                        ]
-                    }
-        ]
-    }
-},
-"fall_immunity": {
-"type": "palladium:damage_immunity",
-    "icon": "minecraft:diamond_boots",
-    "title": "Fall Damage Immunity",
-    "bar_color": "light_gray",
-     "persistent_data": true,
-    "hidden": false,
-    "hidden_in_bar": true,
-    "list_index": -1,
-    "gui_position": [
-                0,
-                0
-            ],
-    "description": "Negates Fall Damage",
-    "damage_sources": [
-        "minecraft:is_fall"
-    ],
-    "conditions": {
-                
-               
-                "unlocking": [
-                       {
-    "type": "palladium:item_buyable",
-    "ingredient": {
-        "item": "infinity:aspects_of_existance"
-    },
-    "amount": 1
-},{
-                        "type": "palladium:ability_unlocked",
-                        "power": "null",
-                        "ability": "speed"
-                    },
-                    {   
-                "type": "palladium:has_power",
-                "power": "infinity:space_stone"
+    "teleport_command": {
+      "type": "palladium:dummy",
+      "icon": "infinity:textures/icon/teleport.png",
+      "title": "Teleport Command",
+      "bar_color": "light_blue",
+      "persistent_data": true,
+      "hidden": false,
+      "hidden_in_bar": false,
+      "list_index": -1,
+      "gui_position": [0, -2],
+      "description": "Lets you use the space_tp command, the format is space_tp x y z example:example",
+      "first_tick_commands": [],
+      "last_tick_commands": [],
+      "commands": [""],
+      "conditions": {
+        "enabling": [
+          {
+            "type": "palladium:true"
+          }
+        ],
+        "unlocking": [
+          {
+            "type": "palladium:item_buyable",
+            "ingredient": {
+              "item": "infinity:aspects_of_existance"
             },
-           
-            
-            {
-        "type": "palladium:or",
-        "conditions": [
-            {
-                "type": "palladium:has_power",
-                "power": "infinity:infinity_gauntlet"
-            },
-            {
-                "type": "palladium:item_in_slot",
-                "item": {
-                    "item": "infinity:tesseract"
-                },
-                "slot": "mainhand"
-            },
-            {
-                "type": "palladium:item_in_slot",
-                "item": {
-                    "item": "infinity:tesseract"
-                },
-                "slot": "offhand"
-            },
-            {
-                "type": "palladium:item_in_slot",
-                "item": {
-                    "item": "infinity:space_stone"
-                },
-                "slot": "mainhand"
-            },
-            {
-                "type": "palladium:item_in_slot",
-                "item": {
-                    "item": "infinity:space_stone"
-                },
-                "slot": "offhand"
-            },
-             {
-                "type": "palladium:item_in_slot",
-                "item": {
-                    "item": "infinity:cosmi-rod_space"
-                },
-                "slot": "mainhand"
-            },
-            {
-                "type": "palladium:item_in_slot",
-                "item": {
-                    "item": "infinity:cosmi-rod_space"
-                },
-                "slot": "offhand"
-            }
-            
-        ]
-    }
-                ]
-            }        
-        
-        
-       
+            "amount": 1
+          },
+          {
+            "type": "palladium:ability_unlocked",
+            "power": "null",
+            "ability": "teleport"
+          },
 
-       
-    },
-     "step_assist":{
-            "type": "palladium:attribute_modifier",
-            "icon": "infinity:textures/icon/force_field.png",
-            "title": "Step Assist",
-             "persistent_data": true,
-            "bar_color": "light_blue",
-            "hidden": false,
-            "hidden_in_bar": true,
-            "list_index": -1,
-           "gui_position": [
-                -1,
-                0
-            ],
-            "description": "Lets you walk up a whole block at once",
-            "attribute": "forge:step_height_addition",
-            "amount": 0.5,
-            "operation": 0,
-            "uuid": "498be4fb-af04-42f2-8948-e6ccdc0d99e1",
-            "conditions": {
-                
-                
-                "unlocking": [
-                       {
-    "type": "palladium:item_buyable",
-    "ingredient": {
-        "item": "infinity:aspects_of_existance"
-    },
-    "amount": 1
-},{
-                        "type": "palladium:ability_unlocked",
-                        "power": "null",
-                        "ability": "fall_immunity"
-                    },
-                    {
-        "type": "palladium:or",
-        "conditions": [
-            {
+          {
+            "type": "palladium:or",
+            "conditions": [
+              {
                 "type": "palladium:has_power",
                 "power": "infinity:infinity_gauntlet"
-            },
-            {
+              },
+              {
                 "type": "palladium:item_in_slot",
                 "item": {
-                    "item": "infinity:tesseract"
+                  "item": "infinity:tesseract"
                 },
                 "slot": "mainhand"
-            },
-            {
+              },
+              {
                 "type": "palladium:item_in_slot",
                 "item": {
-                    "item": "infinity:tesseract"
+                  "item": "infinity:tesseract"
                 },
                 "slot": "offhand"
-            },
-            {
+              },
+              {
                 "type": "palladium:item_in_slot",
                 "item": {
-                    "item": "infinity:space_stone"
+                  "item": "infinity:space_stone"
                 },
                 "slot": "mainhand"
-            },
-            {
+              },
+              {
                 "type": "palladium:item_in_slot",
                 "item": {
-                    "item": "infinity:space_stone"
+                  "item": "infinity:space_stone"
                 },
                 "slot": "offhand"
-            },
-             {
+              },
+              {
                 "type": "palladium:item_in_slot",
                 "item": {
-                    "item": "infinity:cosmi-rod_space"
+                  "item": "infinity:cosmi-rod_space"
                 },
                 "slot": "mainhand"
-            },
-            {
+              },
+              {
                 "type": "palladium:item_in_slot",
                 "item": {
-                    "item": "infinity:cosmi-rod_space"
+                  "item": "infinity:cosmi-rod_space"
                 },
                 "slot": "offhand"
-            }
-            
+              }
+            ]
+          }
         ]
-    }
-                ]
-            }
-        },
-         "speed":{
-            "type": "palladium:attribute_modifier",
-            "icon": "infinity:textures/icon/force_field.png",
-            "title": "Speed",
-            "bar_color": "light_blue",
-            "hidden": false,
-             "persistent_data": true,
-            "hidden_in_bar": true,
-            "list_index": -1,
-            "gui_position": [
-                0,
-                1
-            ],
-            "description": "Lets you run faster",
-            "attribute": "minecraft:generic.movement_speed",
-            "amount": 0.05,
-            "operation": 0,
-            "uuid": "498be4fb-af04-42f2-8948-e6ccdc0d99e1",
-            "conditions": {
-                
-                
-                "unlocking": [
-                    {
-    "type": "palladium:item_buyable",
-    "ingredient": {
-        "item": "infinity:aspects_of_existance"
+      }
     },
-    "amount": 1
-}
-, {
-        "type": "palladium:or",
-        "conditions": [
-            {
+
+    "grab_entity": {
+      "type": "palladium:command",
+      "icon": "infinity:space_stone",
+      "title": "Telekinesis",
+      "bar_color": "light_blue",
+      "persistent_data": true,
+      "hidden": true,
+      "hidden_in_bar": true,
+      "list_index": 2,
+      "gui_position": [2, -1],
+      "description": "Telekinesis, pretty self explanitory",
+      "first_tick_commands": [
+        "playsound infinity:use_infinity_gauntlet block @s"
+      ],
+      "last_tick_commands": [],
+      "commands": [
+        "execute as @s run execute at @s run particle dust 0.345 0.714 0.89 1 ^ ^2 ^5 0.3 0.3 0.3 0 50"
+      ],
+      "conditions": {
+        "enabling": [
+          {
+            "type": "palladium:ability_enabled",
+            "power": "null",
+            "ability": "grab_entity2"
+          }
+        ]
+      }
+    },
+    "grab_entity2": {
+      "type": "phantom_pe:telekinesis",
+      "icon": "infinity:space_stone",
+      "title": "Telekinesis",
+      "bar_color": "light_blue",
+      "persistent_data": true,
+      "hidden": false,
+      "hidden_in_bar": false,
+      "list_index": 2,
+      "gui_position": [2, -1],
+      "description": "Telekinesis, pretty self explanitory",
+      "range": 6,
+      "strength_multiplier": 1,
+      "damage_multiplier": 2,
+      "conditions": {
+        "enabling": [
+          {
+            "type": "palladium:held",
+            "cooldown": 0
+          }
+        ],
+        "unlocking": [
+          {
+            "type": "palladium:item_buyable",
+            "ingredient": {
+              "item": "infinity:aspects_of_existance"
+            },
+            "amount": 1
+          },
+          {
+            "type": "palladium:ability_unlocked",
+            "power": "null",
+            "ability": "force_field"
+          },
+          {
+            "type": "palladium:or",
+            "conditions": [
+              {
                 "type": "palladium:has_power",
                 "power": "infinity:infinity_gauntlet"
-            },
-            {
+              },
+              {
                 "type": "palladium:item_in_slot",
                 "item": {
-                    "item": "infinity:tesseract"
+                  "item": "infinity:tesseract"
                 },
                 "slot": "mainhand"
-            },
-            {
+              },
+              {
                 "type": "palladium:item_in_slot",
                 "item": {
-                    "item": "infinity:tesseract"
+                  "item": "infinity:tesseract"
                 },
                 "slot": "offhand"
-            },
-            {
+              },
+              {
                 "type": "palladium:item_in_slot",
                 "item": {
-                    "item": "infinity:space_stone"
+                  "item": "infinity:space_stone"
                 },
                 "slot": "mainhand"
-            },
-            {
+              },
+              {
                 "type": "palladium:item_in_slot",
                 "item": {
-                    "item": "infinity:space_stone"
+                  "item": "infinity:space_stone"
                 },
                 "slot": "offhand"
-            },
-             {
+              },
+              {
                 "type": "palladium:item_in_slot",
                 "item": {
-                    "item": "infinity:cosmi-rod_space"
+                  "item": "infinity:cosmi-rod_space"
                 },
                 "slot": "mainhand"
-            },
-            {
+              },
+              {
                 "type": "palladium:item_in_slot",
                 "item": {
-                    "item": "infinity:cosmi-rod_space"
+                  "item": "infinity:cosmi-rod_space"
                 },
                 "slot": "offhand"
-            }
-            
+              }
+            ]
+          }
         ]
+      }
+    },
+
+    "render_layer_space_stone_shield": {
+      "type": "palladium:render_layer",
+      "hidden": true,
+      "hidden_in_bar": true,
+      "persistent_data": true,
+      "render_layer": "infinity:space_stone_shield",
+      "conditions": {
+        "enabling": [
+          {
+            "type": "palladium:ability_enabled",
+            "ability": "force_field"
+          }
+        ],
+        "unlocking": [
+          {
+            "type": "palladium:or",
+            "conditions": [
+              {
+                "type": "palladium:has_power",
+                "power": "infinity:infinity_gauntlet"
+              },
+              {
+                "type": "palladium:item_in_slot",
+                "item": {
+                  "item": "infinity:tesseract"
+                },
+                "slot": "mainhand"
+              },
+              {
+                "type": "palladium:item_in_slot",
+                "item": {
+                  "item": "infinity:tesseract"
+                },
+                "slot": "offhand"
+              },
+              {
+                "type": "palladium:item_in_slot",
+                "item": {
+                  "item": "infinity:space_stone"
+                },
+                "slot": "mainhand"
+              },
+              {
+                "type": "palladium:item_in_slot",
+                "item": {
+                  "item": "infinity:space_stone"
+                },
+                "slot": "offhand"
+              },
+              {
+                "type": "palladium:item_in_slot",
+                "item": {
+                  "item": "infinity:cosmi-rod_space"
+                },
+                "slot": "mainhand"
+              },
+              {
+                "type": "palladium:item_in_slot",
+                "item": {
+                  "item": "infinity:cosmi-rod_space"
+                },
+                "slot": "offhand"
+              }
+            ]
+          }
+        ]
+      }
+    },
+
+    "force_field": {
+      "type": "palladium:attribute_modifier",
+      "icon": "infinity:textures/icon/force_field.png",
+      "title": "Force Field",
+      "persistent_data": true,
+      "bar_color": "light_blue",
+      "hidden": false,
+      "hidden_in_bar": false,
+      "list_index": 0,
+      "gui_position": [1, 0],
+      "description": "Lets you become invlunerable, at the cost of not being able to move",
+      "attribute": "minecraft:generic.armor",
+      "amount": 2147483647,
+      "operation": 0,
+      "uuid": "498be4fb-af04-42f2-8948-e6ccdc0d99e1",
+      "conditions": {
+        "enabling": [
+          {
+            "type": "palladium:toggle",
+            "cooldown": 0,
+            "key_type": "key_bind",
+            "needs_empty_hand": false,
+            "allow_scrolling_when_crouching": true
+          }
+        ],
+        "unlocking": [
+          {
+            "type": "palladium:item_buyable",
+            "ingredient": {
+              "item": "infinity:aspects_of_existance"
+            },
+            "amount": 1
+          },
+          {
+            "type": "palladium:ability_unlocked",
+            "power": "null",
+            "ability": "fall_immunity"
+          },
+          {
+            "type": "palladium:or",
+            "conditions": [
+              {
+                "type": "palladium:has_power",
+                "power": "infinity:infinity_gauntlet"
+              },
+              {
+                "type": "palladium:item_in_slot",
+                "item": {
+                  "item": "infinity:tesseract"
+                },
+                "slot": "mainhand"
+              },
+              {
+                "type": "palladium:item_in_slot",
+                "item": {
+                  "item": "infinity:tesseract"
+                },
+                "slot": "offhand"
+              },
+              {
+                "type": "palladium:item_in_slot",
+                "item": {
+                  "item": "infinity:space_stone"
+                },
+                "slot": "mainhand"
+              },
+              {
+                "type": "palladium:item_in_slot",
+                "item": {
+                  "item": "infinity:space_stone"
+                },
+                "slot": "offhand"
+              },
+              {
+                "type": "palladium:item_in_slot",
+                "item": {
+                  "item": "infinity:cosmi-rod_space"
+                },
+                "slot": "mainhand"
+              },
+              {
+                "type": "palladium:item_in_slot",
+                "item": {
+                  "item": "infinity:cosmi-rod_space"
+                },
+                "slot": "offhand"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "shield_toughness": {
+      "type": "palladium:attribute_modifier",
+      "icon": "minecraft:iron_chestplate",
+      "persistent_data": true,
+      "title": "Max Health",
+      "bar_color": "orange",
+      "hidden": true,
+      "hidden_in_bar": true,
+      "list_index": -1,
+      "gui_position": "null",
+      "description": "null",
+      "attribute": "minecraft:generic.armor_toughness",
+      "amount": 2147483647,
+      "operation": 0,
+      "uuid": "498be4fb-af04-42f2-8948-e6ccdc0d99e1",
+      "conditions": {
+        "enabling": [
+          {
+            "type": "palladium:ability_enabled",
+            "ability": "force_field"
+          }
+        ],
+        "unlocking": [
+          {
+            "type": "palladium:or",
+            "conditions": [
+              {
+                "type": "palladium:has_power",
+                "power": "infinity:infinity_gauntlet"
+              },
+              {
+                "type": "palladium:item_in_slot",
+                "item": {
+                  "item": "infinity:tesseract"
+                },
+                "slot": "mainhand"
+              },
+              {
+                "type": "palladium:item_in_slot",
+                "item": {
+                  "item": "infinity:tesseract"
+                },
+                "slot": "offhand"
+              },
+              {
+                "type": "palladium:item_in_slot",
+                "item": {
+                  "item": "infinity:space_stone"
+                },
+                "slot": "mainhand"
+              },
+              {
+                "type": "palladium:item_in_slot",
+                "item": {
+                  "item": "infinity:space_stone"
+                },
+                "slot": "offhand"
+              },
+              {
+                "type": "palladium:item_in_slot",
+                "item": {
+                  "item": "infinity:cosmi-rod_space"
+                },
+                "slot": "mainhand"
+              },
+              {
+                "type": "palladium:item_in_slot",
+                "item": {
+                  "item": "infinity:cosmi-rod_space"
+                },
+                "slot": "offhand"
+              }
+            ]
+          }
+        ]
+      }
+    },
+
+    "Shield Block": {
+      "type": "pantheonsent:moon_knight_blocking",
+      "icon": "minecraft:blaze_rod",
+      "title": "null",
+      "persistent_data": true,
+      "bar_color": "light_gray",
+      "hidden": true,
+      "hidden_in_bar": true,
+      "list_index": -1,
+      "gui_position": "null",
+      "description": "null",
+      "conditions": {
+        "enabling": [
+          {
+            "type": "palladium:ability_enabled",
+            "ability": "force_field"
+          }
+        ],
+        "unlocking": [
+          {
+            "type": "palladium:or",
+            "conditions": [
+              {
+                "type": "palladium:has_power",
+                "power": "infinity:infinity_gauntlet"
+              },
+              {
+                "type": "palladium:item_in_slot",
+                "item": {
+                  "item": "infinity:tesseract"
+                },
+                "slot": "mainhand"
+              },
+              {
+                "type": "palladium:item_in_slot",
+                "item": {
+                  "item": "infinity:tesseract"
+                },
+                "slot": "offhand"
+              },
+              {
+                "type": "palladium:item_in_slot",
+                "item": {
+                  "item": "infinity:space_stone"
+                },
+                "slot": "mainhand"
+              },
+              {
+                "type": "palladium:item_in_slot",
+                "item": {
+                  "item": "infinity:space_stone"
+                },
+                "slot": "offhand"
+              },
+              {
+                "type": "palladium:item_in_slot",
+                "item": {
+                  "item": "infinity:cosmi-rod_space"
+                },
+                "slot": "mainhand"
+              },
+              {
+                "type": "palladium:item_in_slot",
+                "item": {
+                  "item": "infinity:cosmi-rod_space"
+                },
+                "slot": "offhand"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "black_hole_on": {
+      "type": "palladium:command",
+      "icon": "infinity:textures/icon/black_hole.png",
+      "title": "Black Hole",
+      "bar_color": "light_blue",
+      "persistent_data": true,
+      "hidden": false,
+      "hidden_in_bar": false,
+      "list_index": 3,
+      "gui_position": [2, -2],
+      "description": "The Black Hole sucks and kills entities nearby, as well as eating all blocks around it. It requires both the Space and Power Stones.",
+      "first_tick_commands": ["playsound infinity:black_hole player @a ~ ~ ~"],
+      "last_tick_commands": [],
+      "commands": ["tag @a add blackholeon", "function infinity:blackholeon"],
+      "conditions": {
+        "enabling": [
+          {
+            "type": "palladium:action",
+            "cooldown": 0,
+            "key_type": "key_bind",
+            "needs_empty_hand": false,
+            "allow_scrolling_when_crouching": true
+          }
+        ],
+        "unlocking": [
+          {
+            "type": "palladium:item_buyable",
+            "ingredient": {
+              "item": "infinity:aspects_of_existance"
+            },
+            "amount": 1
+          },
+          {
+            "type": "palladium:ability_unlocked",
+            "power": "null",
+            "ability": "grab_entity2"
+          },
+          {
+            "type": "palladium:not",
+            "conditions": [
+              {
+                "type": "palladium:has_tag",
+                "tag": "blackholeon"
+              }
+            ]
+          },
+
+          {
+            "type": "palladium:has_power",
+            "power": "infinity:space_stone"
+          },
+          {
+            "type": "palladium:has_power",
+            "power": "infinity:power_stone_passive"
+          },
+
+          {
+            "type": "palladium:or",
+            "conditions": [
+              {
+                "type": "palladium:has_power",
+                "power": "infinity:infinity_gauntlet"
+              },
+              {
+                "type": "palladium:item_in_slot",
+                "item": {
+                  "item": "infinity:tesseract"
+                },
+                "slot": "mainhand"
+              },
+              {
+                "type": "palladium:item_in_slot",
+                "item": {
+                  "item": "infinity:tesseract"
+                },
+                "slot": "offhand"
+              },
+              {
+                "type": "palladium:item_in_slot",
+                "item": {
+                  "item": "infinity:space_stone"
+                },
+                "slot": "mainhand"
+              },
+              {
+                "type": "palladium:item_in_slot",
+                "item": {
+                  "item": "infinity:space_stone"
+                },
+                "slot": "offhand"
+              },
+              {
+                "type": "palladium:item_in_slot",
+                "item": {
+                  "item": "infinity:cosmi-rod_space"
+                },
+                "slot": "mainhand"
+              },
+              {
+                "type": "palladium:item_in_slot",
+                "item": {
+                  "item": "infinity:cosmi-rod_space"
+                },
+                "slot": "offhand"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "black_hole_off": {
+      "type": "palladium:command",
+      "icon": "minecraft:barrier",
+      "title": "Black Hole Off",
+      "persistent_data": true,
+      "bar_color": "light_blue",
+      "hidden": true,
+      "hidden_in_bar": false,
+      "list_index": 3,
+      "gui_position": "null",
+      "description": "null",
+      "first_tick_commands": [],
+      "last_tick_commands": [],
+      "commands": [
+        "function infinity:blackholeoff",
+        "tag @a remove blackholeon"
+      ],
+      "conditions": {
+        "enabling": [
+          {
+            "type": "palladium:action",
+            "cooldown": 0,
+            "key_type": "key_bind",
+            "needs_empty_hand": false,
+            "allow_scrolling_when_crouching": true
+          }
+        ],
+        "unlocking": [
+          {
+            "type": "palladium:has_tag",
+            "tag": "blackholeon"
+          },
+          {
+            "type": "palladium:has_power",
+            "power": "infinity:space_stone"
+          },
+          {
+            "type": "palladium:has_power",
+            "power": "infinity:power_stone_passive"
+          },
+
+          {
+            "type": "palladium:or",
+            "conditions": [
+              {
+                "type": "palladium:has_power",
+                "power": "infinity:infinity_gauntlet"
+              },
+              {
+                "type": "palladium:item_in_slot",
+                "item": {
+                  "item": "infinity:tesseract"
+                },
+                "slot": "mainhand"
+              },
+              {
+                "type": "palladium:item_in_slot",
+                "item": {
+                  "item": "infinity:tesseract"
+                },
+                "slot": "offhand"
+              },
+              {
+                "type": "palladium:item_in_slot",
+                "item": {
+                  "item": "infinity:space_stone"
+                },
+                "slot": "mainhand"
+              },
+              {
+                "type": "palladium:item_in_slot",
+                "item": {
+                  "item": "infinity:space_stone"
+                },
+                "slot": "offhand"
+              },
+              {
+                "type": "palladium:item_in_slot",
+                "item": {
+                  "item": "infinity:cosmi-rod_space"
+                },
+                "slot": "mainhand"
+              },
+              {
+                "type": "palladium:item_in_slot",
+                "item": {
+                  "item": "infinity:cosmi-rod_space"
+                },
+                "slot": "offhand"
+              }
+            ]
+          }
+        ]
+      }
+    },
+
+    "remove_space_stone": {
+      "type": "palladium:command",
+      "persistent_data": true,
+      "icon": "infinity:space_stone",
+      "title": "Remove Space Stone",
+      "bar_color": "light_blue",
+      "hidden": true,
+      "hidden_in_bar": true,
+      "list_index": -1,
+      "gui_position": "null",
+      "description": "Extracts the Space Stone",
+      "commands": [
+        "execute as @s run clear @s infinity:tesseract",
+        "execute as @s run function infinity:givespacestone",
+        "execute as @s run give @s infinity:empty_tesseract"
+      ],
+      "conditions": {
+        "enabling": [
+          {
+            "type": "palladium:action",
+            "cooldown": 0,
+            "key_type": "right_click",
+            "needs_empty_hand": false,
+            "allow_scrolling_when_crouching": true
+          },
+          {
+            "type": "palladium:crouching"
+          }
+        ],
+        "unlocking": [
+          {
+            "type": "palladium:or",
+            "conditions": [
+              {
+                "type": "palladium:item_in_slot",
+                "item": {
+                  "item": "infinity:tesseract"
+                },
+                "slot": "offhand"
+              },
+              {
+                "type": "palladium:item_in_slot",
+                "item": {
+                  "item": "infinity:tesseract"
+                },
+                "slot": "mainhand"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "fall_immunity": {
+      "type": "palladium:damage_immunity",
+      "icon": "minecraft:diamond_boots",
+      "title": "Fall Damage Immunity",
+      "bar_color": "light_gray",
+      "persistent_data": true,
+      "hidden": false,
+      "hidden_in_bar": true,
+      "list_index": -1,
+      "gui_position": [0, 0],
+      "description": "Negates Fall Damage",
+      "damage_sources": ["minecraft:is_fall"],
+      "conditions": {
+        "unlocking": [
+          {
+            "type": "palladium:item_buyable",
+            "ingredient": {
+              "item": "infinity:aspects_of_existance"
+            },
+            "amount": 1
+          },
+          {
+            "type": "palladium:ability_unlocked",
+            "power": "null",
+            "ability": "speed"
+          },
+          {
+            "type": "palladium:has_power",
+            "power": "infinity:space_stone"
+          },
+
+          {
+            "type": "palladium:or",
+            "conditions": [
+              {
+                "type": "palladium:has_power",
+                "power": "infinity:infinity_gauntlet"
+              },
+              {
+                "type": "palladium:item_in_slot",
+                "item": {
+                  "item": "infinity:tesseract"
+                },
+                "slot": "mainhand"
+              },
+              {
+                "type": "palladium:item_in_slot",
+                "item": {
+                  "item": "infinity:tesseract"
+                },
+                "slot": "offhand"
+              },
+              {
+                "type": "palladium:item_in_slot",
+                "item": {
+                  "item": "infinity:space_stone"
+                },
+                "slot": "mainhand"
+              },
+              {
+                "type": "palladium:item_in_slot",
+                "item": {
+                  "item": "infinity:space_stone"
+                },
+                "slot": "offhand"
+              },
+              {
+                "type": "palladium:item_in_slot",
+                "item": {
+                  "item": "infinity:cosmi-rod_space"
+                },
+                "slot": "mainhand"
+              },
+              {
+                "type": "palladium:item_in_slot",
+                "item": {
+                  "item": "infinity:cosmi-rod_space"
+                },
+                "slot": "offhand"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "step_assist": {
+      "type": "palladium:attribute_modifier",
+      "icon": "infinity:textures/icon/force_field.png",
+      "title": "Step Assist",
+      "persistent_data": true,
+      "bar_color": "light_blue",
+      "hidden": false,
+      "hidden_in_bar": true,
+      "list_index": -1,
+      "gui_position": [-1, 0],
+      "description": "Lets you walk up a whole block at once",
+      "attribute": "forge:step_height_addition",
+      "amount": 0.5,
+      "operation": 0,
+      "uuid": "498be4fb-af04-42f2-8948-e6ccdc0d99e1",
+      "conditions": {
+        "unlocking": [
+          {
+            "type": "palladium:item_buyable",
+            "ingredient": {
+              "item": "infinity:aspects_of_existance"
+            },
+            "amount": 1
+          },
+          {
+            "type": "palladium:ability_unlocked",
+            "power": "null",
+            "ability": "fall_immunity"
+          },
+          {
+            "type": "palladium:or",
+            "conditions": [
+              {
+                "type": "palladium:has_power",
+                "power": "infinity:infinity_gauntlet"
+              },
+              {
+                "type": "palladium:item_in_slot",
+                "item": {
+                  "item": "infinity:tesseract"
+                },
+                "slot": "mainhand"
+              },
+              {
+                "type": "palladium:item_in_slot",
+                "item": {
+                  "item": "infinity:tesseract"
+                },
+                "slot": "offhand"
+              },
+              {
+                "type": "palladium:item_in_slot",
+                "item": {
+                  "item": "infinity:space_stone"
+                },
+                "slot": "mainhand"
+              },
+              {
+                "type": "palladium:item_in_slot",
+                "item": {
+                  "item": "infinity:space_stone"
+                },
+                "slot": "offhand"
+              },
+              {
+                "type": "palladium:item_in_slot",
+                "item": {
+                  "item": "infinity:cosmi-rod_space"
+                },
+                "slot": "mainhand"
+              },
+              {
+                "type": "palladium:item_in_slot",
+                "item": {
+                  "item": "infinity:cosmi-rod_space"
+                },
+                "slot": "offhand"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "speed": {
+      "type": "palladium:attribute_modifier",
+      "icon": "infinity:textures/icon/force_field.png",
+      "title": "Speed",
+      "bar_color": "light_blue",
+      "hidden": false,
+      "persistent_data": true,
+      "hidden_in_bar": true,
+      "list_index": -1,
+      "gui_position": [0, 1],
+      "description": "Lets you run faster",
+      "attribute": "minecraft:generic.movement_speed",
+      "amount": 0.05,
+      "operation": 0,
+      "uuid": "498be4fb-af04-42f2-8948-e6ccdc0d99e1",
+      "conditions": {
+        "unlocking": [
+          {
+            "type": "palladium:item_buyable",
+            "ingredient": {
+              "item": "infinity:aspects_of_existance"
+            },
+            "amount": 1
+          },
+          {
+            "type": "palladium:or",
+            "conditions": [
+              {
+                "type": "palladium:has_power",
+                "power": "infinity:infinity_gauntlet"
+              },
+              {
+                "type": "palladium:item_in_slot",
+                "item": {
+                  "item": "infinity:tesseract"
+                },
+                "slot": "mainhand"
+              },
+              {
+                "type": "palladium:item_in_slot",
+                "item": {
+                  "item": "infinity:tesseract"
+                },
+                "slot": "offhand"
+              },
+              {
+                "type": "palladium:item_in_slot",
+                "item": {
+                  "item": "infinity:space_stone"
+                },
+                "slot": "mainhand"
+              },
+              {
+                "type": "palladium:item_in_slot",
+                "item": {
+                  "item": "infinity:space_stone"
+                },
+                "slot": "offhand"
+              },
+              {
+                "type": "palladium:item_in_slot",
+                "item": {
+                  "item": "infinity:cosmi-rod_space"
+                },
+                "slot": "mainhand"
+              },
+              {
+                "type": "palladium:item_in_slot",
+                "item": {
+                  "item": "infinity:cosmi-rod_space"
+                },
+                "slot": "offhand"
+              }
+            ]
+          }
+        ]
+      }
     }
-                ]
-            }
-        }
-}
+  }
 }

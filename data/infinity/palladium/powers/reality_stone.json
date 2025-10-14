@@ -1,857 +1,820 @@
 {
-    "name": "Reality Stone",
-    "background": "minecraft:textures/block/red_concrete.png",
-    "icon": "infinity:reality_stone",
-    "gui_display_type": "tree",
-    "persistent_data": true,
-    "ability_bar_texture": "infinity:textures/gui/ability_bars/infinity_ability_bar.png",
- 
-    "abilities": {
-      
-    "save_dummy":{
-    "type": "palladium:dummy",
-    "icon": "infinity:reality_stone",
-     "persistent_data": true,
-    "title": "Block Saving",
-    "bar_color": "red",
-    "hidden": false,
-    "hidden_in_bar": true,
-    "list_index": -1,
-    "gui_position": [
-                0,
-                -2
-            ],
-    "description": "Any block you look at gets added to your inventory",
-    "conditions":{
-"unlocking":[{
-                        "type": "palladium:ability_unlocked",
-                        "power": "null",
-                        "ability": "shrink_dummy"
-                    }, {
-    "type": "palladium:item_buyable",
-    "ingredient": {
-        "item": "infinity:aspects_of_existance"
-    },
-    "amount": 1
-},
-                    {
-                        "type": "palladium:ability_unlocked",
-                        "power": "null",
-                        "ability": "invisibility"
-                    }
-                ]
-                }
-},
+  "name": "Reality Stone",
+  "background": "minecraft:textures/block/red_concrete.png",
+  "icon": "infinity:reality_stone",
+  "gui_display_type": "tree",
+  "persistent_data": true,
+  "ability_bar_texture": "infinity:textures/gui/ability_bars/reality_ability_bar.png",
 
- "shrink_dummy":{
-    "type": "palladium:dummy",
-     "persistent_data": true,
-    "icon": "palladium:textures/icon/size.png",
-    "title": "null",
-    "bar_color": "red",
-    "hidden": false,
-    "hidden_in_bar": true,
-    "list_index": -1,
-     "gui_position": [
-                -1,
-                -1
-            ],
-    "description": "Allows for size changing",
-    "conditions":{
-"unlocking":[{
-                        "type": "palladium:ability_unlocked",
-                        "power": "null",
-                        "ability": "effects"
-                    },{
-    "type": "palladium:item_buyable",
-    "ingredient": {
-        "item": "infinity:aspects_of_existance"
-    },
-    "amount": 1
-}
-                ]
-                }
-},
- 
-        "shrink": {
-            "type": "palladium:command",
-             "persistent_data": true,
-            "icon": "palladium:textures/icon/size.png",
-            "title": "Shrink",
-            "bar_color": "red",
-            "hidden": true,
-            "hidden_in_bar": false,
-            "list_index": 1,
-           "gui_position": [
-                -1,
-                -1
-            ],
-            "description": "Shrinks the player to 1/10th scale",
-            "commands": [
-                 "scale set pehkui:base 0.1"
-            ],
-            "conditions": {
-                
-                "enabling": [
-                    {
-                        "type": "palladium:action",
-                        "cooldown": 0,
-                        "key_type": "key_bind",
-                        "needs_empty_hand": false,
-                        "allow_scrolling_when_crouching": true
-                    }
-                ],
-                "unlocking": [
-                    {
-                        "type": "palladium:ability_unlocked",
-                        "power": "null",
-                        "ability": "shrink_dummy"
-                    },{
-    "type": "palladium:not",
-    "conditions": [
-        {
-    "type": "palladium:crouching"
-}
-    ]
-},
-
-{
-    "type": "palladium:size",
-    "min": 1,
-    "max": 1
-},
-
-                    {
-                        "type": "palladium:or",
-                        "conditions": [
-                            {
-                                "type": "palladium:has_power",
-                                "power": "infinity:infinity_gauntlet"
-                            },
-                            {
-                                "type": "palladium:item_in_slot",
-                                "item": {
-                                    "item": "infinity:aether"
-                                },
-                                "slot": "mainhand"
-                            },
-                            {
-                                "type": "palladium:item_in_slot",
-                                "item": {
-                                    "item": "infinity:aether"
-                                },
-                                "slot": "offhand"
-                            },
-                            {
-                                "type": "palladium:item_in_slot",
-                                "item": {
-                                    "item": "infinity:reality_stone"
-                                },
-                                "slot": "mainhand"
-                            },
-                            {
-                                "type": "palladium:item_in_slot",
-                                "item": {
-                                    "item": "infinity:reality_stone"
-                                },
-                                "slot": "offhand"
-                            },
-                            {
-                                "type": "palladium:item_in_slot",
-                                "item": {
-                                    "item": "infinity:cosmi-rod_reality"
-                                },
-                                "slot": "mainhand"
-                            },
-                            {
-                                "type": "palladium:item_in_slot",
-                                "item": {
-                                    "item": "infinity:cosmi-rod_reality"
-                                },
-                                "slot": "offhand"
-                            }
-                            
-                        ]
-                    }
-                ]
-            }
-        },
-       "grow": {
-            "type": "palladium:command",
-             "persistent_data": true,
-            "icon": "palladium:textures/icon/size.png",
-            "title": "Grow",
-            "bar_color": "red",
-            "hidden": true,
-            "hidden_in_bar": false,
-            "list_index": 1,
-            "gui_position": [
-                -1,
-                0
-            ],
-            "description": "Grows the player to 10x scale",
-            "commands": [
-                 "scale set pehkui:base 10"
-            ],
-            "conditions": {
-                
-                "enabling": [
-                    {
-                        "type": "palladium:action",
-                        "cooldown": 0,
-                        "key_type": "key_bind",
-                        "needs_empty_hand": false,
-                        "allow_scrolling_when_crouching": true
-                    }
-                ],
-                "unlocking": [
-                     {
-                        "type": "palladium:ability_unlocked",
-                        "power": "null",
-                        "ability": "shrink_dummy"
-                    },{
-    "type": "palladium:crouching"
-},
-{
-    "type": "palladium:size",
-    "min": 1,
-    "max": 1
-},
-{
-                        "type": "palladium:or",
-                        "conditions": [
-                            {
-                                "type": "palladium:has_power",
-                                "power": "infinity:infinity_gauntlet"
-                            },
-                            {
-                                "type": "palladium:item_in_slot",
-                                "item": {
-                                    "item": "infinity:aether"
-                                },
-                                "slot": "mainhand"
-                            },
-                            {
-                                "type": "palladium:item_in_slot",
-                                "item": {
-                                    "item": "infinity:aether"
-                                },
-                                "slot": "offhand"
-                            },
-                            {
-                                "type": "palladium:item_in_slot",
-                                "item": {
-                                    "item": "infinity:reality_stone"
-                                },
-                                "slot": "mainhand"
-                            },
-                            {
-                                "type": "palladium:item_in_slot",
-                                "item": {
-                                    "item": "infinity:reality_stone"
-                                },
-                                "slot": "offhand"
-                            },
-                            {
-                                "type": "palladium:item_in_slot",
-                                "item": {
-                                    "item": "infinity:cosmi-rod_reality"
-                                },
-                                "slot": "mainhand"
-                            },
-                            {
-                                "type": "palladium:item_in_slot",
-                                "item": {
-                                    "item": "infinity:cosmi-rod_reality"
-                                },
-                                "slot": "offhand"
-                            }
-                            
-                        ]
-                    }
-                ]
-            }
-        },
-"normal": {
-            "type": "palladium:command",
-            "icon": "minecraft:barrier",
-             "persistent_data": true,
-            "title": "Normal Scale",
-            "bar_color": "red",
-            "hidden": true,
-            "hidden_in_bar": false,
-            "list_index": 1,
-            "gui_position": [
-                -2,
-                -1
-            ],
-            "description": "Returms the player to 1x scale",
-            "commands": [
-                 "scale set pehkui:base 1"
-            ],
-            "conditions": {
-                
-                "enabling": [
-                    {
-                        "type": "palladium:action",
-                        "cooldown": 0,
-                        "key_type": "key_bind",
-                        "needs_empty_hand": false,
-                        "allow_scrolling_when_crouching": true
-                    }
-                ],
-                "unlocking": [
-                    {
-                        "type": "palladium:ability_unlocked",
-                        "power": "null",
-                        "ability": "shrink_dummy"
-                    }, {
-    "type": "palladium:not",
-    "conditions": [
-        {
-    "type": "palladium:size",
-    "min": 1,
-    "max": 1
-}
-    ]
-},
-                    {
-                        "type": "palladium:or",
-                        "conditions": [
-                            {
-                                "type": "palladium:has_power",
-                                "power": "infinity:infinity_gauntlet"
-                            },
-                            {
-                                "type": "palladium:item_in_slot",
-                                "item": {
-                                    "item": "infinity:aether"
-                                },
-                                "slot": "mainhand"
-                            },
-                            {
-                                "type": "palladium:item_in_slot",
-                                "item": {
-                                    "item": "infinity:aether"
-                                },
-                                "slot": "offhand"
-                            },
-                            {
-                                "type": "palladium:item_in_slot",
-                                "item": {
-                                    "item": "infinity:reality_stone"
-                                },
-                                "slot": "mainhand"
-                            },
-                            {
-                                "type": "palladium:item_in_slot",
-                                "item": {
-                                    "item": "infinity:reality_stone"
-                                },
-                                "slot": "offhand"
-                            },
-                            {
-                                "type": "palladium:item_in_slot",
-                                "item": {
-                                    "item": "infinity:cosmi-rod_reality"
-                                },
-                                "slot": "mainhand"
-                            },
-                            {
-                                "type": "palladium:item_in_slot",
-                                "item": {
-                                    "item": "infinity:cosmi-rod_reality"
-                                },
-                                "slot": "offhand"
-                            }
-                            
-                        ]
-                    }
-                ]
-            }
-        },
-
-       "invisibility": {
-            "type": "palladium:invisibility",
-            "icon": "palladium:textures/icon/invisibility.png",
-            "title": "Invisibility",
-            "bar_color": "red",
-             "persistent_data": true,
-            "hidden": false,
-            "hidden_in_bar": false,
-            "list_index": 2,
-            "gui_position": [
-                1,
-                -1
-            ],
-            "description": "Makes you truly invisible",
-            "conditions": {
-                
-                "enabling": [
-                    {
-                        "type": "palladium:toggle",
-                        "cooldown": 0,
-                        "key_type": "key_bind",
-                        "needs_empty_hand": false,
-                        "allow_scrolling_when_crouching": true
-                    }
-                ],
-                "unlocking": [
-                    {
-    "type": "palladium:item_buyable",
-    "ingredient": {
-        "item": "infinity:aspects_of_existance"
-    },
-    "amount": 1
-},{
-                        "type": "palladium:ability_unlocked",
-                        "power": "null",
-                        "ability": "effects"
-                    }, {
-                        "type": "palladium:or",
-                        "conditions": [
-                            {
-                                "type": "palladium:has_power",
-                                "power": "infinity:infinity_gauntlet"
-                            },
-                            {
-                                "type": "palladium:item_in_slot",
-                                "item": {
-                                    "item": "infinity:aether"
-                                },
-                                "slot": "mainhand"
-                            },
-                            {
-                                "type": "palladium:item_in_slot",
-                                "item": {
-                                    "item": "infinity:aether"
-                                },
-                                "slot": "offhand"
-                            },
-                            {
-                                "type": "palladium:item_in_slot",
-                                "item": {
-                                    "item": "infinity:reality_stone"
-                                },
-                                "slot": "mainhand"
-                            },
-                            {
-                                "type": "palladium:item_in_slot",
-                                "item": {
-                                    "item": "infinity:reality_stone"
-                                },
-                                "slot": "offhand"
-                            },
-                            {
-                                "type": "palladium:item_in_slot",
-                                "item": {
-                                    "item": "infinity:cosmi-rod_reality"
-                                },
-                                "slot": "mainhand"
-                            },
-                            {
-                                "type": "palladium:item_in_slot",
-                                "item": {
-                                    "item": "infinity:cosmi-rod_reality"
-                                },
-                                "slot": "offhand"
-                            }
-                            
-                        ]
-                    }
-                ]
-            }
-        },
-
-        "save_block_on": {
-            "type": "palladium:command",
-            "icon": "infinity:reality_stone",
-             "persistent_data": true,
-            "title": "Block Duplication On",
-            "bar_color": "red",
-            "hidden": true,
-            "hidden_in_bar": false,
-            "list_index": 3,
-            "gui_position": [
-                0,
-                -2
-            ],
-            "description": "Turns on Block Duplication",
-            "first_tick_commands": [],
-            "last_tick_commands": [],
-            "commands": [
-                "tag @s add reality_copy_on"
-            ],
-            "conditions": {
-                
-                "enabling": [
-                    {
-                        "type": "palladium:action",
-                        "cooldown": 0,
-                        "key_type": "key_bind",
-                        "needs_empty_hand": false,
-                        "allow_scrolling_when_crouching": true
-                    }
-                ],
-                "unlocking": [
-                     {
-                        "type": "palladium:ability_unlocked",
-                        "power": "null",
-                        "ability": "save_dummy"
-                    },{
-                        "type": "palladium:not",
-                        "conditions": [
-                            {
-                                "type": "palladium:crouching"
-                            }
-                        ]
-                    },
-                    {
-                        "type": "palladium:or",
-                        "conditions": [
-                            {
-                                "type": "palladium:has_power",
-                                "power": "infinity:infinity_gauntlet"
-                            },
-                            {
-                                "type": "palladium:item_in_slot",
-                                "item": {
-                                    "item": "infinity:aether"
-                                },
-                                "slot": "mainhand"
-                            },
-                            {
-                                "type": "palladium:item_in_slot",
-                                "item": {
-                                    "item": "infinity:aether"
-                                },
-                                "slot": "offhand"
-                            },
-                            {
-                                "type": "palladium:item_in_slot",
-                                "item": {
-                                    "item": "infinity:reality_stone"
-                                },
-                                "slot": "mainhand"
-                            },
-                            {
-                                "type": "palladium:item_in_slot",
-                                "item": {
-                                    "item": "infinity:reality_stone"
-                                },
-                                "slot": "offhand"
-                            },
-                            {
-                                "type": "palladium:item_in_slot",
-                                "item": {
-                                    "item": "infinity:cosmi-rod_reality"
-                                },
-                                "slot": "mainhand"
-                            },
-                            {
-                                "type": "palladium:item_in_slot",
-                                "item": {
-                                    "item": "infinity:cosmi-rod_reality"
-                                },
-                                "slot": "offhand"
-                            }
-                            
-                        ]
-                    }
-                ]
-            }
-        },
-        "Save Block Off": {
-            "type": "palladium:command",
-            "icon": "minecraft:barrier",
-            "title": "Block Duplication Off",
-             "persistent_data": true,
-            "bar_color": "red",
-            "hidden": true,
-            "hidden_in_bar": false,
-            "list_index": 3,
-            "gui_position": [
-                0,
-                -3
-            ],
-            "description": "Turns off Block Duplication",
-            "first_tick_commands": [],
-            "last_tick_commands": [],
-            "commands": [
-                 "tag @s remove reality_copy_on"
-            ],
-            "conditions": {
-                
-                "enabling": [
-                    {
-                        "type": "palladium:action",
-                        "cooldown": 0,
-                        "key_type": "key_bind",
-                        "needs_empty_hand": false,
-                        "allow_scrolling_when_crouching": true
-                    }
-                ],
-                "unlocking": [
-                    {
-                        "type": "palladium:crouching"
-                    },
-                     {
-                        "type": "palladium:ability_unlocked",
-                        "power": "null",
-                        "ability": "save_dummy"
-                    },
-                   {
-                        "type": "palladium:or",
-                        "conditions": [
-                            {
-                                "type": "palladium:has_power",
-                                "power": "infinity:infinity_gauntlet"
-                            },
-                            {
-                                "type": "palladium:item_in_slot",
-                                "item": {
-                                    "item": "infinity:aether"
-                                },
-                                "slot": "mainhand"
-                            },
-                            {
-                                "type": "palladium:item_in_slot",
-                                "item": {
-                                    "item": "infinity:aether"
-                                },
-                                "slot": "offhand"
-                            },
-                            {
-                                "type": "palladium:item_in_slot",
-                                "item": {
-                                    "item": "infinity:reality_stone"
-                                },
-                                "slot": "mainhand"
-                            },
-                            {
-                                "type": "palladium:item_in_slot",
-                                "item": {
-                                    "item": "infinity:reality_stone"
-                                },
-                                "slot": "offhand"
-                            },
-                            {
-                                "type": "palladium:item_in_slot",
-                                "item": {
-                                    "item": "infinity:cosmi-rod_reality"
-                                },
-                                "slot": "mainhand"
-                            },
-                            {
-                                "type": "palladium:item_in_slot",
-                                "item": {
-                                    "item": "infinity:cosmi-rod_reality"
-                                },
-                                "slot": "offhand"
-                            }
-                            
-                        ]
-                    }
-                ]
-            }
-        },
-         "effects": {
-            "type": "palladium:command",
-            "icon": "minecraft:textures/mob_effect/nausea.png",
-            "title": "Effects",
-             "persistent_data": true,
-            "bar_color": "red",
-            "hidden": false,
-            "hidden_in_bar": false,
-            "list_index": 0,
-             "gui_position": [
-                0,
-                0
-            ],
-            "description": "Gives entities nearby blindness, nausea, darkness and slowness",
-            "first_tick_commands": [],
-            "last_tick_commands": [],
-            "commands": [
-                "effect give @e[distance=..100] minecraft:blindness 100 1 true",
-                "effect give @e[distance=..100] minecraft:nausea 100 1 true",
-                "effect give @e[distance=..100] minecraft:darkness 100 1 true",
-                      "effect give @e[distance=..100] minecraft:slowness 100 1 true",
-                "effect clear @s minecraft:blindness",
-                "effect clear @s minecraft:nausea",
-                "effect clear @s minecraft:darkness",
-                "effect clear @s minecraft:slowness"
-            ],
-            "conditions": {
-                
-                "enabling": [
-                    {
-                        "type": "palladium:action",
-                        "cooldown": 0,
-                        "key_type": "key_bind",
-                        "needs_empty_hand": false,
-                        "allow_scrolling_when_crouching": true
-                    }
-                ],
-                "unlocking": [
-                  
-                   {
-    "type": "palladium:item_buyable",
-    "ingredient": {
-        "item": "infinity:aspects_of_existance"
-    },
-    "amount": 1
-},{
-                        "type": "palladium:or",
-                        "conditions": [
-                            {
-                                "type": "palladium:has_power",
-                                "power": "infinity:infinity_gauntlet"
-                            },
-                            {
-                                "type": "palladium:item_in_slot",
-                                "item": {
-                                    "item": "infinity:aether"
-                                },
-                                "slot": "mainhand"
-                            },
-                            {
-                                "type": "palladium:item_in_slot",
-                                "item": {
-                                    "item": "infinity:aether"
-                                },
-                                "slot": "offhand"
-                            },
-                            {
-                                "type": "palladium:item_in_slot",
-                                "item": {
-                                    "item": "infinity:reality_stone"
-                                },
-                                "slot": "mainhand"
-                            },
-                            {
-                                "type": "palladium:item_in_slot",
-                                "item": {
-                                    "item": "infinity:reality_stone"
-                                },
-                                "slot": "offhand"
-                            },
-                            {
-                                "type": "palladium:item_in_slot",
-                                "item": {
-                                    "item": "infinity:cosmi-rod_reality"
-                                },
-                                "slot": "mainhand"
-                            },
-                            {
-                                "type": "palladium:item_in_slot",
-                                "item": {
-                                    "item": "infinity:cosmi-rod_reality"
-                                },
-                                "slot": "offhand"
-                            }
-                            
-                        ]
-                    }
-                ]
-            }
-        },
-         "aim":{
-            "type": "palladium:aim",
-            "hidden": true,
-            "hidden_in_bar": true,
-            "list_index": -1,
-            "time": 10,
-             "persistent_data": true,
-            "arm": "main_arm",
-            "conditions": {
-                
-                "enabling": [
-                    {
-                        "type": "palladium:item_in_slot",
-                        "item": {
-                            "item": "infinity:aether"
-                        },
-                        "slot": "mainhand"
-                    }
-                ]
-            }
-        },
-
-        "aim2":{
-            "type": "palladium:aim",
-            "hidden": true,
-            "hidden_in_bar": true,
-            "list_index": -1,
-             "persistent_data": true,
-            "time": 10,
-            "arm": "off_arm",
-            "conditions": {
-                
-                "enabling": [
-                    {
-                        "type": "palladium:item_in_slot",
-                        "item": {
-                            "item": "infinity:aether"
-                        },
-                        "slot": "offhand"
-                    }
-                ]
-            }
-        },
-       "remove_reality_stone": {
-    "type": "palladium:command",
-    "icon": "infinity:reality_stone",
-    "title": "Remove Reality Stone",
-     "persistent_data": true,
-    "bar_color": "red",
-    "hidden": true,
-    "hidden_in_bar": false,
-    "list_index": -1,
-    "gui_position": "null",
-    "description": "Remove Reality Stone",
-    "commands": [
-        "execute as @s run clear @s infinity:aether",
-       "execute as @s run function infinity:giverealitystone",
-        "execute as @s run give @s infinity:empty_aether"
-    ],
-    "conditions": {
-        "enabling": [
-            {
-                "type": "palladium:action",
-                "cooldown": 0,                                              
-                "key_type": "key_bind",
-                "needs_empty_hand": false,
-                "allow_scrolling_when_crouching": true
-            }
-        ],
-        "unlocking":[
-             {
-                        "type": "palladium:or",
-                        "conditions": [
-                            {
-                        "type": "palladium:item_in_slot",
-                        "item": {
-                            "item": "infinity:aether"
-                        },
-                        "slot": "offhand"
-                    },
-                     {
-                        "type": "palladium:item_in_slot",
-                        "item": {
-                            "item": "infinity:aether"
-                        },
-                        "slot": "mainhand"
-                    }
-
-                        ]
-                    }
+  "abilities": {
+    "save_dummy": {
+      "type": "palladium:dummy",
+      "icon": "infinity:reality_stone",
+      "persistent_data": true,
+      "title": "Block Saving",
+      "bar_color": "red",
+      "hidden": false,
+      "hidden_in_bar": true,
+      "list_index": -1,
+      "gui_position": [0, -2],
+      "description": "Any block you look at gets added to your inventory.",
+      "conditions": {
+        "unlocking": [
+          {
+            "type": "palladium:ability_unlocked",
+            "power": "null",
+            "ability": "shrink_dummy"
+          },
+          {
+            "type": "palladium:item_buyable",
+            "ingredient": {
+              "item": "infinity:aspects_of_existance"
+            },
+            "amount": 1
+          },
+          {
+            "type": "palladium:ability_unlocked",
+            "power": "null",
+            "ability": "invisibility"
+          }
         ]
-    }
-}
-        
-       
-       
+      }
+    },
 
-       
+    "shrink_dummy": {
+      "type": "palladium:dummy",
+      "persistent_data": true,
+      "icon": "palladium:textures/icon/size.png",
+      "title": "null",
+      "bar_color": "red",
+      "hidden": false,
+      "hidden_in_bar": true,
+      "list_index": -1,
+      "gui_position": [-1, -1],
+      "description": "Allows for size changing, press to shrink, shift press to grow, press again to return to original size.",
+      "conditions": {
+        "unlocking": [
+          {
+            "type": "palladium:ability_unlocked",
+            "power": "null",
+            "ability": "effects"
+          },
+          {
+            "type": "palladium:item_buyable",
+            "ingredient": {
+              "item": "infinity:aspects_of_existance"
+            },
+            "amount": 1
+          }
+        ]
+      }
+    },
+
+    "shrink": {
+      "type": "palladium:command",
+      "persistent_data": true,
+      "icon": "palladium:textures/icon/size.png",
+      "title": "Shrink",
+      "bar_color": "red",
+      "hidden": true,
+      "hidden_in_bar": false,
+      "list_index": 1,
+      "gui_position": [-1, -1],
+      "description": "Shrinks the player to 1/10th scale",
+      "commands": ["scale set pehkui:base 0.1"],
+      "conditions": {
+        "enabling": [
+          {
+            "type": "palladium:action",
+            "cooldown": 0,
+            "key_type": "key_bind",
+            "needs_empty_hand": false,
+            "allow_scrolling_when_crouching": true
+          }
+        ],
+        "unlocking": [
+          {
+            "type": "palladium:ability_unlocked",
+            "power": "null",
+            "ability": "shrink_dummy"
+          },
+          {
+            "type": "palladium:not",
+            "conditions": [
+              {
+                "type": "palladium:crouching"
+              }
+            ]
+          },
+
+          {
+            "type": "palladium:size",
+            "min": 1,
+            "max": 1
+          },
+
+          {
+            "type": "palladium:or",
+            "conditions": [
+              {
+                "type": "palladium:has_power",
+                "power": "infinity:infinity_gauntlet"
+              },
+              {
+                "type": "palladium:item_in_slot",
+                "item": {
+                  "item": "infinity:aether"
+                },
+                "slot": "mainhand"
+              },
+              {
+                "type": "palladium:item_in_slot",
+                "item": {
+                  "item": "infinity:aether"
+                },
+                "slot": "offhand"
+              },
+              {
+                "type": "palladium:item_in_slot",
+                "item": {
+                  "item": "infinity:reality_stone"
+                },
+                "slot": "mainhand"
+              },
+              {
+                "type": "palladium:item_in_slot",
+                "item": {
+                  "item": "infinity:reality_stone"
+                },
+                "slot": "offhand"
+              },
+              {
+                "type": "palladium:item_in_slot",
+                "item": {
+                  "item": "infinity:cosmi-rod_reality"
+                },
+                "slot": "mainhand"
+              },
+              {
+                "type": "palladium:item_in_slot",
+                "item": {
+                  "item": "infinity:cosmi-rod_reality"
+                },
+                "slot": "offhand"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "grow": {
+      "type": "palladium:command",
+      "persistent_data": true,
+      "icon": "palladium:textures/icon/size.png",
+      "title": "Grow",
+      "bar_color": "red",
+      "hidden": true,
+      "hidden_in_bar": false,
+      "list_index": 1,
+      "gui_position": [-1, 0],
+      "description": "Grows the player to 10x scale",
+      "commands": ["scale set pehkui:base 10"],
+      "conditions": {
+        "enabling": [
+          {
+            "type": "palladium:action",
+            "cooldown": 0,
+            "key_type": "key_bind",
+            "needs_empty_hand": false,
+            "allow_scrolling_when_crouching": true
+          }
+        ],
+        "unlocking": [
+          {
+            "type": "palladium:ability_unlocked",
+            "power": "null",
+            "ability": "shrink_dummy"
+          },
+          {
+            "type": "palladium:crouching"
+          },
+          {
+            "type": "palladium:size",
+            "min": 1,
+            "max": 1
+          },
+          {
+            "type": "palladium:or",
+            "conditions": [
+              {
+                "type": "palladium:has_power",
+                "power": "infinity:infinity_gauntlet"
+              },
+              {
+                "type": "palladium:item_in_slot",
+                "item": {
+                  "item": "infinity:aether"
+                },
+                "slot": "mainhand"
+              },
+              {
+                "type": "palladium:item_in_slot",
+                "item": {
+                  "item": "infinity:aether"
+                },
+                "slot": "offhand"
+              },
+              {
+                "type": "palladium:item_in_slot",
+                "item": {
+                  "item": "infinity:reality_stone"
+                },
+                "slot": "mainhand"
+              },
+              {
+                "type": "palladium:item_in_slot",
+                "item": {
+                  "item": "infinity:reality_stone"
+                },
+                "slot": "offhand"
+              },
+              {
+                "type": "palladium:item_in_slot",
+                "item": {
+                  "item": "infinity:cosmi-rod_reality"
+                },
+                "slot": "mainhand"
+              },
+              {
+                "type": "palladium:item_in_slot",
+                "item": {
+                  "item": "infinity:cosmi-rod_reality"
+                },
+                "slot": "offhand"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "normal": {
+      "type": "palladium:command",
+      "icon": "minecraft:barrier",
+      "persistent_data": true,
+      "title": "Normal Scale",
+      "bar_color": "red",
+      "hidden": true,
+      "hidden_in_bar": false,
+      "list_index": 1,
+      "gui_position": [-2, -1],
+      "description": "Returms the player to 1x scale",
+      "commands": ["scale set pehkui:base 1"],
+      "conditions": {
+        "enabling": [
+          {
+            "type": "palladium:action",
+            "cooldown": 0,
+            "key_type": "key_bind",
+            "needs_empty_hand": false,
+            "allow_scrolling_when_crouching": true
+          }
+        ],
+        "unlocking": [
+          {
+            "type": "palladium:ability_unlocked",
+            "power": "null",
+            "ability": "shrink_dummy"
+          },
+          {
+            "type": "palladium:not",
+            "conditions": [
+              {
+                "type": "palladium:size",
+                "min": 1,
+                "max": 1
+              }
+            ]
+          },
+          {
+            "type": "palladium:or",
+            "conditions": [
+              {
+                "type": "palladium:has_power",
+                "power": "infinity:infinity_gauntlet"
+              },
+              {
+                "type": "palladium:item_in_slot",
+                "item": {
+                  "item": "infinity:aether"
+                },
+                "slot": "mainhand"
+              },
+              {
+                "type": "palladium:item_in_slot",
+                "item": {
+                  "item": "infinity:aether"
+                },
+                "slot": "offhand"
+              },
+              {
+                "type": "palladium:item_in_slot",
+                "item": {
+                  "item": "infinity:reality_stone"
+                },
+                "slot": "mainhand"
+              },
+              {
+                "type": "palladium:item_in_slot",
+                "item": {
+                  "item": "infinity:reality_stone"
+                },
+                "slot": "offhand"
+              },
+              {
+                "type": "palladium:item_in_slot",
+                "item": {
+                  "item": "infinity:cosmi-rod_reality"
+                },
+                "slot": "mainhand"
+              },
+              {
+                "type": "palladium:item_in_slot",
+                "item": {
+                  "item": "infinity:cosmi-rod_reality"
+                },
+                "slot": "offhand"
+              }
+            ]
+          }
+        ]
+      }
+    },
+
+    "invisibility": {
+      "type": "palladium:invisibility",
+      "icon": "palladium:textures/icon/invisibility.png",
+      "title": "Invisibility",
+      "bar_color": "red",
+      "persistent_data": true,
+      "hidden": false,
+      "hidden_in_bar": false,
+      "list_index": 2,
+      "gui_position": [1, -1],
+      "description": "Makes you truly invisible",
+      "conditions": {
+        "enabling": [
+          {
+            "type": "palladium:toggle",
+            "cooldown": 0,
+            "key_type": "key_bind",
+            "needs_empty_hand": false,
+            "allow_scrolling_when_crouching": true
+          }
+        ],
+        "unlocking": [
+          {
+            "type": "palladium:item_buyable",
+            "ingredient": {
+              "item": "infinity:aspects_of_existance"
+            },
+            "amount": 1
+          },
+          {
+            "type": "palladium:ability_unlocked",
+            "power": "null",
+            "ability": "effects"
+          },
+          {
+            "type": "palladium:or",
+            "conditions": [
+              {
+                "type": "palladium:has_power",
+                "power": "infinity:infinity_gauntlet"
+              },
+              {
+                "type": "palladium:item_in_slot",
+                "item": {
+                  "item": "infinity:aether"
+                },
+                "slot": "mainhand"
+              },
+              {
+                "type": "palladium:item_in_slot",
+                "item": {
+                  "item": "infinity:aether"
+                },
+                "slot": "offhand"
+              },
+              {
+                "type": "palladium:item_in_slot",
+                "item": {
+                  "item": "infinity:reality_stone"
+                },
+                "slot": "mainhand"
+              },
+              {
+                "type": "palladium:item_in_slot",
+                "item": {
+                  "item": "infinity:reality_stone"
+                },
+                "slot": "offhand"
+              },
+              {
+                "type": "palladium:item_in_slot",
+                "item": {
+                  "item": "infinity:cosmi-rod_reality"
+                },
+                "slot": "mainhand"
+              },
+              {
+                "type": "palladium:item_in_slot",
+                "item": {
+                  "item": "infinity:cosmi-rod_reality"
+                },
+                "slot": "offhand"
+              }
+            ]
+          }
+        ]
+      }
+    },
+
+    "save_block_on": {
+      "type": "palladium:command",
+      "icon": "infinity:reality_stone",
+      "persistent_data": true,
+      "title": "Block Duplication On",
+      "bar_color": "red",
+      "hidden": true,
+      "hidden_in_bar": false,
+      "list_index": 3,
+      "gui_position": [0, -2],
+      "description": "Turns on Block Duplication",
+      "first_tick_commands": [],
+      "last_tick_commands": [],
+      "commands": ["tag @s add reality_copy_on"],
+      "conditions": {
+        "enabling": [
+          {
+            "type": "palladium:action",
+            "cooldown": 0,
+            "key_type": "key_bind",
+            "needs_empty_hand": false,
+            "allow_scrolling_when_crouching": true
+          }
+        ],
+        "unlocking": [
+          {
+            "type": "palladium:not",
+            "conditions": [
+              {
+                "type": "palladium:has_tag",
+                "tag": "reality_copy_on"
+              }
+            ]
+          },
+          {
+            "type": "palladium:ability_unlocked",
+            "power": "null",
+            "ability": "save_dummy"
+          },
+          {
+            "type": "palladium:not",
+            "conditions": [
+              {
+                "type": "palladium:crouching"
+              }
+            ]
+          },
+          {
+            "type": "palladium:or",
+            "conditions": [
+              {
+                "type": "palladium:has_power",
+                "power": "infinity:infinity_gauntlet"
+              },
+              {
+                "type": "palladium:item_in_slot",
+                "item": {
+                  "item": "infinity:aether"
+                },
+                "slot": "mainhand"
+              },
+              {
+                "type": "palladium:item_in_slot",
+                "item": {
+                  "item": "infinity:aether"
+                },
+                "slot": "offhand"
+              },
+              {
+                "type": "palladium:item_in_slot",
+                "item": {
+                  "item": "infinity:reality_stone"
+                },
+                "slot": "mainhand"
+              },
+              {
+                "type": "palladium:item_in_slot",
+                "item": {
+                  "item": "infinity:reality_stone"
+                },
+                "slot": "offhand"
+              },
+              {
+                "type": "palladium:item_in_slot",
+                "item": {
+                  "item": "infinity:cosmi-rod_reality"
+                },
+                "slot": "mainhand"
+              },
+              {
+                "type": "palladium:item_in_slot",
+                "item": {
+                  "item": "infinity:cosmi-rod_reality"
+                },
+                "slot": "offhand"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "Save Block Off": {
+      "type": "palladium:command",
+      "icon": "minecraft:barrier",
+      "title": "Block Duplication Off",
+      "persistent_data": true,
+      "bar_color": "red",
+      "hidden": true,
+      "hidden_in_bar": false,
+      "list_index": 3,
+      "gui_position": [0, -3],
+      "description": "Turns off Block Duplication",
+      "first_tick_commands": [],
+      "last_tick_commands": [],
+      "commands": ["tag @s remove reality_copy_on"],
+      "conditions": {
+        "enabling": [
+          {
+            "type": "palladium:action",
+            "cooldown": 0,
+            "key_type": "key_bind",
+            "needs_empty_hand": false,
+            "allow_scrolling_when_crouching": true
+          }
+        ],
+        "unlocking": [
+          {
+            "type": "palladium:has_tag",
+            "tag": "reality_copy_on"
+          },
+          {
+            "type": "palladium:ability_unlocked",
+            "power": "null",
+            "ability": "save_dummy"
+          },
+          {
+            "type": "palladium:or",
+            "conditions": [
+              {
+                "type": "palladium:has_power",
+                "power": "infinity:infinity_gauntlet"
+              },
+              {
+                "type": "palladium:item_in_slot",
+                "item": {
+                  "item": "infinity:aether"
+                },
+                "slot": "mainhand"
+              },
+              {
+                "type": "palladium:item_in_slot",
+                "item": {
+                  "item": "infinity:aether"
+                },
+                "slot": "offhand"
+              },
+              {
+                "type": "palladium:item_in_slot",
+                "item": {
+                  "item": "infinity:reality_stone"
+                },
+                "slot": "mainhand"
+              },
+              {
+                "type": "palladium:item_in_slot",
+                "item": {
+                  "item": "infinity:reality_stone"
+                },
+                "slot": "offhand"
+              },
+              {
+                "type": "palladium:item_in_slot",
+                "item": {
+                  "item": "infinity:cosmi-rod_reality"
+                },
+                "slot": "mainhand"
+              },
+              {
+                "type": "palladium:item_in_slot",
+                "item": {
+                  "item": "infinity:cosmi-rod_reality"
+                },
+                "slot": "offhand"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "effects": {
+      "type": "palladium:command",
+      "icon": "minecraft:textures/mob_effect/nausea.png",
+      "title": "Effects",
+      "persistent_data": true,
+      "bar_color": "red",
+      "hidden": false,
+      "hidden_in_bar": false,
+      "list_index": 0,
+      "gui_position": [0, 0],
+      "description": "Gives entities nearby blindness, nausea, darkness and slowness",
+      "first_tick_commands": [],
+      "last_tick_commands": [],
+      "commands": [
+        "effect give @e[distance=..100] minecraft:blindness 100 1 true",
+        "effect give @e[distance=..100] minecraft:nausea 100 1 true",
+        "effect give @e[distance=..100] minecraft:darkness 100 1 true",
+        "effect give @e[distance=..100] minecraft:slowness 100 1 true",
+        "effect clear @s minecraft:blindness",
+        "effect clear @s minecraft:nausea",
+        "effect clear @s minecraft:darkness",
+        "effect clear @s minecraft:slowness"
+      ],
+      "conditions": {
+        "enabling": [
+          {
+            "type": "palladium:action",
+            "cooldown": 0,
+            "key_type": "key_bind",
+            "needs_empty_hand": false,
+            "allow_scrolling_when_crouching": true
+          }
+        ],
+        "unlocking": [
+          {
+            "type": "palladium:item_buyable",
+            "ingredient": {
+              "item": "infinity:aspects_of_existance"
+            },
+            "amount": 1
+          },
+          {
+            "type": "palladium:or",
+            "conditions": [
+              {
+                "type": "palladium:has_power",
+                "power": "infinity:infinity_gauntlet"
+              },
+              {
+                "type": "palladium:item_in_slot",
+                "item": {
+                  "item": "infinity:aether"
+                },
+                "slot": "mainhand"
+              },
+              {
+                "type": "palladium:item_in_slot",
+                "item": {
+                  "item": "infinity:aether"
+                },
+                "slot": "offhand"
+              },
+              {
+                "type": "palladium:item_in_slot",
+                "item": {
+                  "item": "infinity:reality_stone"
+                },
+                "slot": "mainhand"
+              },
+              {
+                "type": "palladium:item_in_slot",
+                "item": {
+                  "item": "infinity:reality_stone"
+                },
+                "slot": "offhand"
+              },
+              {
+                "type": "palladium:item_in_slot",
+                "item": {
+                  "item": "infinity:cosmi-rod_reality"
+                },
+                "slot": "mainhand"
+              },
+              {
+                "type": "palladium:item_in_slot",
+                "item": {
+                  "item": "infinity:cosmi-rod_reality"
+                },
+                "slot": "offhand"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "aim": {
+      "type": "palladium:aim",
+      "hidden": true,
+      "hidden_in_bar": true,
+      "list_index": -1,
+      "time": 10,
+      "persistent_data": true,
+      "arm": "main_arm",
+      "conditions": {
+        "enabling": [
+          {
+            "type": "palladium:item_in_slot",
+            "item": {
+              "item": "infinity:aether"
+            },
+            "slot": "mainhand"
+          }
+        ]
+      }
+    },
+
+    "aim2": {
+      "type": "palladium:aim",
+      "hidden": true,
+      "hidden_in_bar": true,
+      "list_index": -1,
+      "persistent_data": true,
+      "time": 10,
+      "arm": "off_arm",
+      "conditions": {
+        "enabling": [
+          {
+            "type": "palladium:item_in_slot",
+            "item": {
+              "item": "infinity:aether"
+            },
+            "slot": "offhand"
+          }
+        ]
+      }
+    },
+    "remove_reality_stone": {
+      "type": "palladium:command",
+      "icon": "infinity:reality_stone",
+      "title": "Remove Reality Stone",
+      "persistent_data": true,
+      "bar_color": "red",
+      "hidden": true,
+      "hidden_in_bar": false,
+      "list_index": -1,
+      "gui_position": "null",
+      "description": "Remove Reality Stone",
+      "commands": [
+        "execute as @s run clear @s infinity:aether",
+        "execute as @s run function infinity:giverealitystone",
+        "execute as @s run give @s infinity:empty_aether"
+      ],
+      "conditions": {
+        "enabling": [
+          {
+            "type": "palladium:action",
+            "cooldown": 0,
+            "key_type": "right_click",
+            "needs_empty_hand": false,
+            "allow_scrolling_when_crouching": true
+          },
+          {
+            "type": "palladium:crouching"
+          }
+        ],
+        "unlocking": [
+          {
+            "type": "palladium:or",
+            "conditions": [
+              {
+                "type": "palladium:item_in_slot",
+                "item": {
+                  "item": "infinity:aether"
+                },
+                "slot": "offhand"
+              },
+              {
+                "type": "palladium:item_in_slot",
+                "item": {
+                  "item": "infinity:aether"
+                },
+                "slot": "mainhand"
+              }
+            ]
+          }
+        ]
+      }
     }
+  }
 }

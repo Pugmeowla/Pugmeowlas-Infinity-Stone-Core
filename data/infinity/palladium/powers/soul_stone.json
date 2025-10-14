@@ -1,753 +1,718 @@
 {
-    "name": "Soul Stone",
-    "background": "minecraft:textures/block/orange_concrete.png",
-    "icon": "infinity:soul_stone",
-    "gui_display_type": "tree",
-    "persistent_data": true,
-    "ability_bar_texture": "infinity:textures/gui/ability_bars/infinity_ability_bar.png",
- 
-    "abilities": {
+  "name": "Soul Stone",
+  "background": "minecraft:textures/block/orange_concrete.png",
+  "icon": "infinity:soul_stone",
+  "gui_display_type": "tree",
+  "persistent_data": true,
+  "ability_bar_texture": "infinity:textures/gui/ability_bars/soul_ability_bar.png",
 
-        "glow": {
-    "type": "palladium:entity_glow",
-    "icon": "minecraft:textures/mob_effect/glowing.png",
-     "persistent_data": true,
-    "title": "Glow",
-    "bar_color": "orange",
-    "description": "Shows all entities around you",
-    "hidden": false,
-    "hidden_in_bar": false,
-    "list_index": 0,
-    "mode": "others",
-    "gui_position": [
-                0,
-                0
-            ],
-    "distance": 100,
-            "conditions": {
-                
-                "enabling": [
-                    {
-                        "type": "palladium:toggle",
-                        "cooldown": 0,
-                        "key_type": "key_bind",
-                        "needs_empty_hand": false,
-                        "allow_scrolling_when_crouching": true
-                    }
-                ],
-                 "unlocking": [
-                    {
-    "type": "palladium:item_buyable",
-    "ingredient": {
-        "item": "infinity:aspects_of_existance"
+  "abilities": {
+    "glow": {
+      "type": "palladium:entity_glow",
+      "icon": "minecraft:textures/mob_effect/glowing.png",
+      "persistent_data": true,
+      "title": "Glow",
+      "bar_color": "orange",
+      "description": "Shows all entities around you",
+      "hidden": false,
+      "hidden_in_bar": false,
+      "list_index": 0,
+      "mode": "others",
+      "gui_position": [0, 0],
+      "distance": 100,
+      "conditions": {
+        "enabling": [
+          {
+            "type": "palladium:toggle",
+            "cooldown": 0,
+            "key_type": "key_bind",
+            "needs_empty_hand": false,
+            "allow_scrolling_when_crouching": true
+          }
+        ],
+        "unlocking": [
+          {
+            "type": "palladium:item_buyable",
+            "ingredient": {
+              "item": "infinity:aspects_of_existance"
+            },
+            "amount": 1
+          },
+          {
+            "type": "palladium:or",
+            "conditions": [
+              {
+                "type": "palladium:has_power",
+                "power": "infinity:infinity_gauntlet"
+              },
+              {
+                "type": "palladium:item_in_slot",
+                "item": {
+                  "item": "infinity:soul_stone"
+                },
+                "slot": "mainhand"
+              },
+              {
+                "type": "palladium:item_in_slot",
+                "item": {
+                  "item": "infinity:soul_stone"
+                },
+                "slot": "offhand"
+              },
+              {
+                "type": "palladium:item_in_slot",
+                "item": {
+                  "item": "infinity:cosmi-rod_soul"
+                },
+                "slot": "mainhand"
+              },
+              {
+                "type": "palladium:item_in_slot",
+                "item": {
+                  "item": "infinity:cosmi-rod_soul"
+                },
+                "slot": "offhand"
+              }
+            ]
+          }
+        ]
+      }
     },
-    "amount": 1
-},{
-                        "type": "palladium:or",
-                        "conditions": [
-                            {
-                                "type": "palladium:has_power",
-                                "power": "infinity:infinity_gauntlet"
-                            },
-                            {
-                                "type": "palladium:item_in_slot",
-                                "item": {
-                                    "item": "infinity:soul_stone"
-                                },
-                                "slot": "mainhand"
-                            },
-                            {
-                                "type": "palladium:item_in_slot",
-                                "item": {
-                                    "item": "infinity:soul_stone"
-                                },
-                                "slot": "offhand"
-                            },
-                            {
-                                "type": "palladium:item_in_slot",
-                                "item": {
-                                    "item": "infinity:cosmi-rod_soul"
-                                },
-                                "slot": "mainhand"
-                            },
-                            {
-                                "type": "palladium:item_in_slot",
-                                "item": {
-                                    "item": "infinity:cosmi-rod_soul"
-                                },
-                                "slot": "offhand"
-                            }
-                            
-                        ]
-                    }
-                ]
-            }
-        },
-        "immortal": {
-   "type": "palladium:immortality",
-    "icon": "minecraft:totem_of_undying",
-    "title": "null",
-     "persistent_data": true,
-    "bar_color": "light_gray",
-    "hidden": false,
-    "hidden_in_bar": true,
-    "list_index": -1,
-      "gui_position": [
-                0,
-                -4
-            ],
-    "description": "Makes you completly immortal. Requires all stones to be inserted",
-            "conditions": {
-                
-                 "unlocking": [
-                    {
-    "type": "palladium:item_buyable",
-    "ingredient": {
-        "item": "infinity:aspects_of_existance"
+    "immortal": {
+      "type": "palladium:immortality",
+      "icon": "minecraft:totem_of_undying",
+      "title": "null",
+      "persistent_data": true,
+      "bar_color": "light_gray",
+      "hidden": false,
+      "hidden_in_bar": true,
+      "list_index": -1,
+      "gui_position": [0, -4],
+      "description": "Makes you completly immortal. Requires all stones to be inserted",
+      "conditions": {
+        "unlocking": [
+          {
+            "type": "palladium:item_buyable",
+            "ingredient": {
+              "item": "infinity:aspects_of_existance"
+            },
+            "amount": 1
+          },
+          {
+            "type": "palladium:ability_unlocked",
+            "power": "null",
+            "ability": "health"
+          },
+          {
+            "type": "palladium:ability_unlocked",
+            "power": "null",
+            "ability": "enter_soulworld"
+          },
+          {
+            "type": "palladium:or",
+            "conditions": [
+              {
+                "type": "palladium:has_power",
+                "power": "infinity:infinity_gauntlet"
+              },
+              {
+                "type": "palladium:item_in_slot",
+                "item": {
+                  "item": "infinity:soul_stone"
+                },
+                "slot": "mainhand"
+              },
+              {
+                "type": "palladium:item_in_slot",
+                "item": {
+                  "item": "infinity:soul_stone"
+                },
+                "slot": "offhand"
+              },
+              {
+                "type": "palladium:item_in_slot",
+                "item": {
+                  "item": "infinity:cosmi-rod_soul"
+                },
+                "slot": "mainhand"
+              },
+              {
+                "type": "palladium:item_in_slot",
+                "item": {
+                  "item": "infinity:cosmi-rod_soul"
+                },
+                "slot": "offhand"
+              }
+            ]
+          },
+          {
+            "type": "palladium:has_power",
+            "power": "infinity:mind_stone"
+          },
+          {
+            "type": "palladium:has_power",
+            "power": "infinity:power_stone_passive"
+          },
+          {
+            "type": "palladium:has_power",
+            "power": "infinity:space_stone"
+          },
+          {
+            "type": "palladium:has_power",
+            "power": "infinity:reality_stone"
+          },
+          {
+            "type": "palladium:has_power",
+            "power": "infinity:time_stone"
+          },
+          {
+            "type": "palladium:has_power",
+            "power": "infinity:soul_stone"
+          }
+        ]
+      }
     },
-    "amount": 1
-},{
-                        "type": "palladium:ability_unlocked",
-                        "power": "null",
-                        "ability": "health"
-                    },
-                     {
-                        "type": "palladium:ability_unlocked",
-                        "power": "null",
-                        "ability": "enter_soulworld"
-                    },  {
-                        "type": "palladium:or",
-                        "conditions": [
-                            {
-                                "type": "palladium:has_power",
-                                "power": "infinity:infinity_gauntlet"
-                            },
-                            {
-                                "type": "palladium:item_in_slot",
-                                "item": {
-                                    "item": "infinity:soul_stone"
-                                },
-                                "slot": "mainhand"
-                            },
-                            {
-                                "type": "palladium:item_in_slot",
-                                "item": {
-                                    "item": "infinity:soul_stone"
-                                },
-                                "slot": "offhand"
-                            },
-                            {
-                                "type": "palladium:item_in_slot",
-                                "item": {
-                                    "item": "infinity:cosmi-rod_soul"
-                                },
-                                "slot": "mainhand"
-                            },
-                            {
-                                "type": "palladium:item_in_slot",
-                                "item": {
-                                    "item": "infinity:cosmi-rod_soul"
-                                },
-                                "slot": "offhand"
-                            }
-                            
-                        ]
-                    },
-                     {   
-                "type": "palladium:has_power",
-                "power": "infinity:mind_stone"
+    "saturation": {
+      "type": "palladium:command",
+      "icon": "minecraft:textures/mob_effect/glowing.png",
+      "title": "Saturation",
+      "bar_color": "orange",
+      "persistent_data": true,
+      "hidden": false,
+      "hidden_in_bar": true,
+      "list_index": -1,
+      "gui_position": [-1, -1],
+      "description": "Gives you infinite saturation",
+      "first_tick_commands": [
+        "effect give @s minecraft:saturation infinite 20 true"
+      ],
+      "last_tick_commands": ["effect clear @s"],
+      "commands": [],
+      "conditions": {
+        "unlocking": [
+          {
+            "type": "palladium:item_buyable",
+            "ingredient": {
+              "item": "infinity:aspects_of_existance"
             },
-            {   
+            "amount": 1
+          },
+          {
+            "type": "palladium:ability_unlocked",
+            "power": "null",
+            "ability": "glow"
+          },
+          {
+            "type": "palladium:or",
+            "conditions": [
+              {
                 "type": "palladium:has_power",
-                "power": "infinity:power_stone_passive"
-            },
-            {   
-                "type": "palladium:has_power",
-                "power": "infinity:space_stone"
-            },
-            {   
-                "type": "palladium:has_power",
-                "power": "infinity:reality_stone"
-            },
-            {   
-                "type": "palladium:has_power",
-                "power": "infinity:time_stone"
-            },
-            {   
-                "type": "palladium:has_power",
-                "power": "infinity:soul_stone"
-            }
-                ]
-            }
-        },
-        "saturation": {
-            "type": "palladium:command",
-            "icon": "minecraft:textures/mob_effect/glowing.png",
-            "title": "Saturation",
-            "bar_color": "orange",
-             "persistent_data": true,
-            "hidden": false,
-            "hidden_in_bar": true,
-            "list_index": -1,
-             "gui_position": [
-                -1,
-                -1
-            ],
-            "description": "Gives you infinite saturation",
-            "first_tick_commands": ["effect give @s minecraft:saturation infinite 20 true"],
-            "last_tick_commands": ["effect clear @s"],
-            "commands": [
-            ],
-            "conditions": {
-                
-               
-                 "unlocking": [
-                    {
-    "type": "palladium:item_buyable",
-    "ingredient": {
-        "item": "infinity:aspects_of_existance"
+                "power": "infinity:infinity_gauntlet"
+              },
+              {
+                "type": "palladium:item_in_slot",
+                "item": {
+                  "item": "infinity:soul_stone"
+                },
+                "slot": "mainhand"
+              },
+              {
+                "type": "palladium:item_in_slot",
+                "item": {
+                  "item": "infinity:soul_stone"
+                },
+                "slot": "offhand"
+              },
+              {
+                "type": "palladium:item_in_slot",
+                "item": {
+                  "item": "infinity:cosmi-rod_soul"
+                },
+                "slot": "mainhand"
+              },
+              {
+                "type": "palladium:item_in_slot",
+                "item": {
+                  "item": "infinity:cosmi-rod_soul"
+                },
+                "slot": "offhand"
+              }
+            ]
+          }
+        ]
+      }
     },
-    "amount": 1
-},  {
-                        "type": "palladium:ability_unlocked",
-                        "power": "null",
-                        "ability": "glow"
-                    },{
-                        "type": "palladium:or",
-                        "conditions": [
-                            {
-                                "type": "palladium:has_power",
-                                "power": "infinity:infinity_gauntlet"
-                            },
-                            {
-                                "type": "palladium:item_in_slot",
-                                "item": {
-                                    "item": "infinity:soul_stone"
-                                },
-                                "slot": "mainhand"
-                            },
-                            {
-                                "type": "palladium:item_in_slot",
-                                "item": {
-                                    "item": "infinity:soul_stone"
-                                },
-                                "slot": "offhand"
-                            },
-                            {
-                                "type": "palladium:item_in_slot",
-                                "item": {
-                                    "item": "infinity:cosmi-rod_soul"
-                                },
-                                "slot": "mainhand"
-                            },
-                            {
-                                "type": "palladium:item_in_slot",
-                                "item": {
-                                    "item": "infinity:cosmi-rod_soul"
-                                },
-                                "slot": "offhand"
-                            }
-                            
-                        ]
-                    }
-                ]
-            }
-        },
-        "invulnerability": {
-            
-    "type": "palladium:damage_immunity",
-    "icon": "minecraft:potion",
-    "title": "invulnerability",
-     "persistent_data": true,
-    "bar_color": "light_gray",
-    "hidden": true,
-    "hidden_in_bar": true,
-    "list_index": -1,
-    "gui_position": [
-                0,
-                -5
-            ],
-    "description": "More immortal stuff",
-    "damage_sources": [
+    "invulnerability": {
+      "type": "palladium:damage_immunity",
+      "icon": "minecraft:potion",
+      "title": "invulnerability",
+      "persistent_data": true,
+      "bar_color": "light_gray",
+      "hidden": true,
+      "hidden_in_bar": true,
+      "list_index": -1,
+      "gui_position": [0, -5],
+      "description": "More immortal stuff",
+      "damage_sources": [
         "minecraft:bypasses_invulnerability",
         "minecraft:no_impact"
-    ],
-            "conditions": {
-                
-                
-                "unlocking": [
-                   {
-                        "type": "palladium:ability_unlocked",
-                        "power": "null",
-                        "ability": "immortal"
-                    },{
-                        "type": "palladium:or",
-                        "conditions": [
-                            {
-                                "type": "palladium:has_power",
-                                "power": "infinity:infinity_gauntlet"
-                            },
-                            {
-                                "type": "palladium:item_in_slot",
-                                "item": {
-                                    "item": "infinity:soul_stone"
-                                },
-                                "slot": "mainhand"
-                            },
-                            {
-                                "type": "palladium:item_in_slot",
-                                "item": {
-                                    "item": "infinity:soul_stone"
-                                },
-                                "slot": "offhand"
-                            },
-                            {
-                                "type": "palladium:item_in_slot",
-                                "item": {
-                                    "item": "infinity:cosmi-rod_soul"
-                                },
-                                "slot": "mainhand"
-                            },
-                            {
-                                "type": "palladium:item_in_slot",
-                                "item": {
-                                    "item": "infinity:cosmi-rod_soul"
-                                },
-                                "slot": "offhand"
-                            }
-                            
-                        ]
-                    },
-                     {   
+      ],
+      "conditions": {
+        "unlocking": [
+          {
+            "type": "palladium:ability_unlocked",
+            "power": "null",
+            "ability": "immortal"
+          },
+          {
+            "type": "palladium:or",
+            "conditions": [
+              {
                 "type": "palladium:has_power",
-                "power": "infinity:mind_stone"
-            },
-            {   
-                "type": "palladium:has_power",
-                "power": "infinity:power_stone_passive"
-            },
-            {   
-                "type": "palladium:has_power",
-                "power": "infinity:space_stone"
-            },
-            {   
-                "type": "palladium:has_power",
-                "power": "infinity:reality_stone"
-            },
-            {   
-                "type": "palladium:has_power",
-                "power": "infinity:time_stone"
-            },
-            {   
-                "type": "palladium:has_power",
-                "power": "infinity:soul_stone"
-            }
-                ]
-            }
-        },
-        "summon_zombie": {
-            "type": "palladium:command",
-            "icon": "minecraft:zombie_head",
-             "persistent_data": true,
-            "title": "Summon Zombie",
-            "bar_color": "orange",
-            "hidden": false,
-            "hidden_in_bar": false,
-            "list_index": 1,
-            "gui_position": [
-                1,
-                -1
-            ],
-            "description": "Summons 7 Zombies",
-            "first_tick_commands": [],
-            "last_tick_commands": [],
-            "commands": [
-                "summon minecraft:zombie ~ ~ ~",
-                "summon minecraft:zombie ~ ~ ~",
-                "summon minecraft:zombie ~ ~ ~",
-                "summon minecraft:zombie ~ ~ ~",
-                "summon minecraft:zombie ~ ~ ~",
-                "summon minecraft:zombie ~ ~ ~",
-                "summon minecraft:zombie ~ ~ ~"
-            ],
-            "conditions": {
-                 "enabling": [
-                    {
-                        "type": "palladium:action",
-                        "cooldown": 0,
-                        "key_type": "key_bind",
-                        "needs_empty_hand": false,
-                        "allow_scrolling_when_crouching": true
-                    }
-                ],
-               
-                 "unlocking": [
-                       {
-    "type": "palladium:item_buyable",
-    "ingredient": {
-        "item": "infinity:aspects_of_existance"
+                "power": "infinity:infinity_gauntlet"
+              },
+              {
+                "type": "palladium:item_in_slot",
+                "item": {
+                  "item": "infinity:soul_stone"
+                },
+                "slot": "mainhand"
+              },
+              {
+                "type": "palladium:item_in_slot",
+                "item": {
+                  "item": "infinity:soul_stone"
+                },
+                "slot": "offhand"
+              },
+              {
+                "type": "palladium:item_in_slot",
+                "item": {
+                  "item": "infinity:cosmi-rod_soul"
+                },
+                "slot": "mainhand"
+              },
+              {
+                "type": "palladium:item_in_slot",
+                "item": {
+                  "item": "infinity:cosmi-rod_soul"
+                },
+                "slot": "offhand"
+              }
+            ]
+          },
+          {
+            "type": "palladium:has_power",
+            "power": "infinity:mind_stone"
+          },
+          {
+            "type": "palladium:has_power",
+            "power": "infinity:power_stone_passive"
+          },
+          {
+            "type": "palladium:has_power",
+            "power": "infinity:space_stone"
+          },
+          {
+            "type": "palladium:has_power",
+            "power": "infinity:reality_stone"
+          },
+          {
+            "type": "palladium:has_power",
+            "power": "infinity:time_stone"
+          },
+          {
+            "type": "palladium:has_power",
+            "power": "infinity:soul_stone"
+          }
+        ]
+      }
     },
-    "amount": 1
-},{
-                        "type": "palladium:ability_unlocked",
-                        "power": "null",
-                        "ability": "glow"
-                    },{
-                        "type": "palladium:or",
-                        "conditions": [
-                            {
-                                "type": "palladium:has_power",
-                                "power": "infinity:infinity_gauntlet"
-                            },
-                            {
-                                "type": "palladium:item_in_slot",
-                                "item": {
-                                    "item": "infinity:soul_stone"
-                                },
-                                "slot": "mainhand"
-                            },
-                            {
-                                "type": "palladium:item_in_slot",
-                                "item": {
-                                    "item": "infinity:soul_stone"
-                                },
-                                "slot": "offhand"
-                            },
-                            {
-                                "type": "palladium:item_in_slot",
-                                "item": {
-                                    "item": "infinity:cosmi-rod_soul"
-                                },
-                                "slot": "mainhand"
-                            },
-                            {
-                                "type": "palladium:item_in_slot",
-                                "item": {
-                                    "item": "infinity:cosmi-rod_soul"
-                                },
-                                "slot": "offhand"
-                            }
-                            
-                        ]
-                    }
-                ]
-            }
-        },
-        "health": {
-             "type": "palladium:attribute_modifier",
-    "icon": "minecraft:iron_chestplate",
-    "title": "null",
-     "persistent_data": true,
-    "bar_color": "orange",
-    "hidden": false,
-    "hidden_in_bar": true,
-    "list_index": -1,
-     "gui_position": [
-                -1,
-                -3
-            ],
-    "description": "Gives you nearly infinite health",
-    "attribute": "minecraft:generic.max_health",
-    "amount": 2147483647,
-            "conditions": {
-                
-               
-                 "unlocking": [
-                      {
-    "type": "palladium:item_buyable",
-    "ingredient": {
-        "item": "infinity:aspects_of_existance"
+    "summon_zombie": {
+      "type": "palladium:command",
+      "icon": "minecraft:zombie_head",
+      "persistent_data": true,
+      "title": "Summon Zombie",
+      "bar_color": "orange",
+      "hidden": false,
+      "hidden_in_bar": false,
+      "list_index": 1,
+      "gui_position": [1, -1],
+      "description": "Summons 7 Zombies",
+      "first_tick_commands": [],
+      "last_tick_commands": [],
+      "commands": [
+        "summon minecraft:zombie ~ ~ ~",
+        "summon minecraft:zombie ~ ~ ~",
+        "summon minecraft:zombie ~ ~ ~",
+        "summon minecraft:zombie ~ ~ ~",
+        "summon minecraft:zombie ~ ~ ~",
+        "summon minecraft:zombie ~ ~ ~",
+        "summon minecraft:zombie ~ ~ ~"
+      ],
+      "conditions": {
+        "enabling": [
+          {
+            "type": "palladium:action",
+            "cooldown": 0,
+            "key_type": "key_bind",
+            "needs_empty_hand": false,
+            "allow_scrolling_when_crouching": true
+          }
+        ],
+
+        "unlocking": [
+          {
+            "type": "palladium:item_buyable",
+            "ingredient": {
+              "item": "infinity:aspects_of_existance"
+            },
+            "amount": 1
+          },
+          {
+            "type": "palladium:ability_unlocked",
+            "power": "null",
+            "ability": "glow"
+          },
+          {
+            "type": "palladium:or",
+            "conditions": [
+              {
+                "type": "palladium:has_power",
+                "power": "infinity:infinity_gauntlet"
+              },
+              {
+                "type": "palladium:item_in_slot",
+                "item": {
+                  "item": "infinity:soul_stone"
+                },
+                "slot": "mainhand"
+              },
+              {
+                "type": "palladium:item_in_slot",
+                "item": {
+                  "item": "infinity:soul_stone"
+                },
+                "slot": "offhand"
+              },
+              {
+                "type": "palladium:item_in_slot",
+                "item": {
+                  "item": "infinity:cosmi-rod_soul"
+                },
+                "slot": "mainhand"
+              },
+              {
+                "type": "palladium:item_in_slot",
+                "item": {
+                  "item": "infinity:cosmi-rod_soul"
+                },
+                "slot": "offhand"
+              }
+            ]
+          }
+        ]
+      }
     },
-    "amount": 1
-},{
-                        "type": "palladium:ability_unlocked",
-                        "power": "null",
-                        "ability": "regen"
-                    },  {
-                        "type": "palladium:or",
-                        "conditions": [
-                            {
-                                "type": "palladium:has_power",
-                                "power": "infinity:infinity_gauntlet"
-                            },
-                            {
-                                "type": "palladium:item_in_slot",
-                                "item": {
-                                    "item": "infinity:soul_stone"
-                                },
-                                "slot": "mainhand"
-                            },
-                            {
-                                "type": "palladium:item_in_slot",
-                                "item": {
-                                    "item": "infinity:soul_stone"
-                                },
-                                "slot": "offhand"
-                            },
-                            {
-                                "type": "palladium:item_in_slot",
-                                "item": {
-                                    "item": "infinity:cosmi-rod_soul"
-                                },
-                                "slot": "mainhand"
-                            },
-                            {
-                                "type": "palladium:item_in_slot",
-                                "item": {
-                                    "item": "infinity:cosmi-rod_soul"
-                                },
-                                "slot": "offhand"
-                            }
-                            
-                        ]
-                    }
-                ]
-            }
-        },
-        "enter_soulworld": {
-            "type": "palladium:command",
-            "icon": "infinity:soul_stone",
-            "title": "Enter Soulworld",
-            "bar_color": "orange",
-            "hidden": false,
-             "persistent_data": true,
-            "hidden_in_bar": false,
-            "list_index": 2,
-            "gui_position": [
-                1,
-                -3
-            ],
-            "description": "Lets you, and entities near you, enter the SoulWorld",
-            "first_tick_commands": [],
-            "last_tick_commands": [],
-            "commands": [
-               "execute as @e[distance=..5] run execute in infinity:soulworld run tp @s ~ 72 ~"
-            ],
-            "conditions": {
-                 "enabling": [
-                    {
-                        "type": "palladium:action",
-                        "cooldown": 0,
-                        "key_type": "key_bind",
-                        "needs_empty_hand": false,
-                        "allow_scrolling_when_crouching": true
-                    }
-                ],
-               
-                 "unlocking": [
-                      {
-    "type": "palladium:item_buyable",
-    "ingredient": {
-        "item": "infinity:aspects_of_existance"
+    "health": {
+      "type": "palladium:attribute_modifier",
+      "icon": "minecraft:iron_chestplate",
+      "title": "Health",
+      "persistent_data": true,
+      "bar_color": "orange",
+      "hidden": false,
+      "hidden_in_bar": true,
+      "list_index": -1,
+      "gui_position": [-1, -3],
+      "description": "Gives you nearly infinite health",
+      "attribute": "minecraft:generic.max_health",
+      "amount": 2147483647,
+      "conditions": {
+        "unlocking": [
+          {
+            "type": "palladium:item_buyable",
+            "ingredient": {
+              "item": "infinity:aspects_of_existance"
+            },
+            "amount": 1
+          },
+          {
+            "type": "palladium:ability_unlocked",
+            "power": "null",
+            "ability": "regen"
+          },
+          {
+            "type": "palladium:or",
+            "conditions": [
+              {
+                "type": "palladium:has_power",
+                "power": "infinity:infinity_gauntlet"
+              },
+              {
+                "type": "palladium:item_in_slot",
+                "item": {
+                  "item": "infinity:soul_stone"
+                },
+                "slot": "mainhand"
+              },
+              {
+                "type": "palladium:item_in_slot",
+                "item": {
+                  "item": "infinity:soul_stone"
+                },
+                "slot": "offhand"
+              },
+              {
+                "type": "palladium:item_in_slot",
+                "item": {
+                  "item": "infinity:cosmi-rod_soul"
+                },
+                "slot": "mainhand"
+              },
+              {
+                "type": "palladium:item_in_slot",
+                "item": {
+                  "item": "infinity:cosmi-rod_soul"
+                },
+                "slot": "offhand"
+              }
+            ]
+          }
+        ]
+      }
     },
-    "amount": 1
-}, {
-                        "type": "palladium:ability_unlocked",
-                        "power": "null",
-                        "ability": "summon_zombie"
-                    }, {
-                        "type": "palladium:not",
-                        "conditions": [
-                            {
-                                "type": "palladium:crouching"
-                            }
-                        ]
-                    },
-                    {
-                        "type": "palladium:or",
-                        "conditions": [
-                            {
-                                "type": "palladium:has_power",
-                                "power": "infinity:infinity_gauntlet"
-                            },
-                            {
-                                "type": "palladium:item_in_slot",
-                                "item": {
-                                    "item": "infinity:soul_stone"
-                                },
-                                "slot": "mainhand"
-                            },
-                            {
-                                "type": "palladium:item_in_slot",
-                                "item": {
-                                    "item": "infinity:soul_stone"
-                                },
-                                "slot": "offhand"
-                            },
-                            {
-                                "type": "palladium:item_in_slot",
-                                "item": {
-                                    "item": "infinity:cosmi-rod_soul"
-                                },
-                                "slot": "mainhand"
-                            },
-                            {
-                                "type": "palladium:item_in_slot",
-                                "item": {
-                                    "item": "infinity:cosmi-rod_soul"
-                                },
-                                "slot": "offhand"
-                            }
-                            
-                        ]
-                    }
-                ]
-            }
-        },
-        "exit_soulworld": {
-            "type": "palladium:command",
-            "icon": "minecraft:barrier",
-             "persistent_data": true,
-            "title": "Exit Soulworld",
-            "bar_color": "orange",
-            "hidden": false,
-            "hidden_in_bar": false,
-            "list_index": 2,
-            "gui_position": [
-                2,
-                -3
-            ],
-            "description": "Lets you, and entities near you, exit the SoulWorld",
-            "first_tick_commands": [],
-            "last_tick_commands": [],
-            "commands": [
-                "execute as @e[distance=..5] run effect give @e[distance=..5] minecraft:slow_falling 20 1 true",
-                "effect give @s minecraft:slow_falling 20 1 true",
-               "execute as @e[distance=..5] run execute in minecraft:overworld run tp @s ~ 72 ~"
-            ],
-            "conditions": {
-                 "enabling": [
-                    {
-                        "type": "palladium:action",
-                        "cooldown": 0,
-                        "key_type": "key_bind",
-                        "needs_empty_hand": false,
-                        "allow_scrolling_when_crouching": true
-                    }
-                ],
-               
-                 "unlocking": [
-                      {
-                                "type": "palladium:crouching"
-                            },
-                    {
-                        "type": "palladium:or",
-                        "conditions": [
-                            {
-                                "type": "palladium:has_power",
-                                "power": "infinity:infinity_gauntlet"
-                            },
-                            {
-                                "type": "palladium:item_in_slot",
-                                "item": {
-                                    "item": "infinity:soul_stone"
-                                },
-                                "slot": "mainhand"
-                            },
-                            {
-                                "type": "palladium:item_in_slot",
-                                "item": {
-                                    "item": "infinity:soul_stone"
-                                },
-                                "slot": "offhand"
-                            },
-                            {
-                                "type": "palladium:item_in_slot",
-                                "item": {
-                                    "item": "infinity:cosmi-rod_soul"
-                                },
-                                "slot": "mainhand"
-                            },
-                            {
-                                "type": "palladium:item_in_slot",
-                                "item": {
-                                    "item": "infinity:cosmi-rod_soul"
-                                },
-                                "slot": "offhand"
-                            }
-                            
-                        ]
-                    }
-                ]
-            }
-        },
-        "regen": {
-            "type": "palladium:command",
-            "icon": "minecraft:barrier",
-             "persistent_data": true,
-            "title": "Regeneration",
-            "bar_color": "orange",
-            "hidden": false,
-            "hidden_in_bar": true,
-            "list_index": -1,
-             "gui_position": [
-                -1,
-                -2
-            ],
-            "description": "Gives Regeneration",
-            "first_tick_commands": [ "effect give @s minecraft:regeneration infinite 20 true"],
-            "last_tick_commands": ["effect clear @s"],
-            "commands": [
-              "effect give @s minecraft:regeneration infinite 20 true"
-            ],
-            "conditions": {
-                
-                 "unlocking": [
-                      {
-    "type": "palladium:item_buyable",
-    "ingredient": {
-        "item": "infinity:aspects_of_existance"
+    "enter_soulworld": {
+      "type": "palladium:command",
+      "icon": "infinity:soul_stone",
+      "title": "Enter Soulworld",
+      "bar_color": "orange",
+      "hidden": false,
+      "persistent_data": true,
+      "hidden_in_bar": false,
+      "list_index": 2,
+      "gui_position": [1, -3],
+      "description": "Lets you, and entities near you, enter the SoulWorld",
+      "first_tick_commands": [],
+      "last_tick_commands": [],
+      "commands": [
+        "execute as @e[distance=..5] run execute in infinity:soulworld run tp @s ~ 72 ~"
+      ],
+      "conditions": {
+        "enabling": [
+          {
+            "type": "palladium:action",
+            "cooldown": 0,
+            "key_type": "key_bind",
+            "needs_empty_hand": false,
+            "allow_scrolling_when_crouching": true
+          }
+        ],
+
+        "unlocking": [
+          {
+            "type": "palladium:item_buyable",
+            "ingredient": {
+              "item": "infinity:aspects_of_existance"
+            },
+            "amount": 1
+          },
+          {
+            "type": "palladium:ability_unlocked",
+            "power": "null",
+            "ability": "summon_zombie"
+          },
+          {
+            "type": "palladium:not",
+            "conditions": [
+              {
+                "type": "palladium:crouching"
+              }
+            ]
+          },
+          {
+            "type": "palladium:or",
+            "conditions": [
+              {
+                "type": "palladium:has_power",
+                "power": "infinity:infinity_gauntlet"
+              },
+              {
+                "type": "palladium:item_in_slot",
+                "item": {
+                  "item": "infinity:soul_stone"
+                },
+                "slot": "mainhand"
+              },
+              {
+                "type": "palladium:item_in_slot",
+                "item": {
+                  "item": "infinity:soul_stone"
+                },
+                "slot": "offhand"
+              },
+              {
+                "type": "palladium:item_in_slot",
+                "item": {
+                  "item": "infinity:cosmi-rod_soul"
+                },
+                "slot": "mainhand"
+              },
+              {
+                "type": "palladium:item_in_slot",
+                "item": {
+                  "item": "infinity:cosmi-rod_soul"
+                },
+                "slot": "offhand"
+              }
+            ]
+          }
+        ]
+      }
     },
-    "amount": 1
-},{
-                        "type": "palladium:ability_unlocked",
-                        "power": "null",
-                        "ability": "saturation"
-                    },  
-                    {
-                        "type": "palladium:or",
-                        "conditions": [
-                            {
-                                "type": "palladium:has_power",
-                                "power": "infinity:infinity_gauntlet"
-                            },
-                            {
-                                "type": "palladium:item_in_slot",
-                                "item": {
-                                    "item": "infinity:soul_stone"
-                                },
-                                "slot": "mainhand"
-                            },
-                            {
-                                "type": "palladium:item_in_slot",
-                                "item": {
-                                    "item": "infinity:soul_stone"
-                                },
-                                "slot": "offhand"
-                            },
-                            {
-                                "type": "palladium:item_in_slot",
-                                "item": {
-                                    "item": "infinity:cosmi-rod_soul"
-                                },
-                                "slot": "mainhand"
-                            },
-                            {
-                                "type": "palladium:item_in_slot",
-                                "item": {
-                                    "item": "infinity:cosmi-rod_soul"
-                                },
-                                "slot": "offhand"
-                            }
-                            
-                        ]
-                    }
-                ]
-            }
-        }
+    "exit_soulworld": {
+      "type": "palladium:command",
+      "icon": "minecraft:barrier",
+      "persistent_data": true,
+      "title": "Exit Soulworld",
+      "bar_color": "orange",
+      "hidden": true,
+      "hidden_in_bar": false,
+      "list_index": 2,
+      "gui_position": [2, -3],
+      "description": "Lets you, and entities near you, exit the SoulWorld",
+      "first_tick_commands": [
+        "effect give @s minecraft:slow_falling 20 1 true"
+      ],
+      "last_tick_commands": [],
+      "commands": [
+        "execute as @e[distance=..5] run effect give @e[distance=..5] minecraft:slow_falling 20 1 true",
+        "effect give @s minecraft:slow_falling 20 1 true",
+        "execute as @e[distance=..5] run execute in minecraft:overworld run tp @s ~ 72 ~"
+      ],
+      "conditions": {
+        "enabling": [
+          {
+            "type": "palladium:action",
+            "cooldown": 0,
+            "key_type": "key_bind",
+            "needs_empty_hand": false,
+            "allow_scrolling_when_crouching": true
+          }
+        ],
 
-
-
-
-}
+        "unlocking": [
+          {
+            "type": "palladium:crouching"
+          },
+          {
+            "type": "palladium:or",
+            "conditions": [
+              {
+                "type": "palladium:has_power",
+                "power": "infinity:infinity_gauntlet"
+              },
+              {
+                "type": "palladium:item_in_slot",
+                "item": {
+                  "item": "infinity:soul_stone"
+                },
+                "slot": "mainhand"
+              },
+              {
+                "type": "palladium:item_in_slot",
+                "item": {
+                  "item": "infinity:soul_stone"
+                },
+                "slot": "offhand"
+              },
+              {
+                "type": "palladium:item_in_slot",
+                "item": {
+                  "item": "infinity:cosmi-rod_soul"
+                },
+                "slot": "mainhand"
+              },
+              {
+                "type": "palladium:item_in_slot",
+                "item": {
+                  "item": "infinity:cosmi-rod_soul"
+                },
+                "slot": "offhand"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "regen": {
+      "type": "palladium:command",
+      "icon": "minecraft:barrier",
+      "persistent_data": true,
+      "title": "Regeneration",
+      "bar_color": "orange",
+      "hidden": false,
+      "hidden_in_bar": true,
+      "list_index": -1,
+      "gui_position": [-1, -2],
+      "description": "Gives Regeneration",
+      "first_tick_commands": [
+        "effect give @s minecraft:regeneration infinite 20 true"
+      ],
+      "last_tick_commands": ["effect clear @s"],
+      "commands": ["effect give @s minecraft:regeneration infinite 20 true"],
+      "conditions": {
+        "unlocking": [
+          {
+            "type": "palladium:item_buyable",
+            "ingredient": {
+              "item": "infinity:aspects_of_existance"
+            },
+            "amount": 1
+          },
+          {
+            "type": "palladium:ability_unlocked",
+            "power": "null",
+            "ability": "saturation"
+          },
+          {
+            "type": "palladium:or",
+            "conditions": [
+              {
+                "type": "palladium:has_power",
+                "power": "infinity:infinity_gauntlet"
+              },
+              {
+                "type": "palladium:item_in_slot",
+                "item": {
+                  "item": "infinity:soul_stone"
+                },
+                "slot": "mainhand"
+              },
+              {
+                "type": "palladium:item_in_slot",
+                "item": {
+                  "item": "infinity:soul_stone"
+                },
+                "slot": "offhand"
+              },
+              {
+                "type": "palladium:item_in_slot",
+                "item": {
+                  "item": "infinity:cosmi-rod_soul"
+                },
+                "slot": "mainhand"
+              },
+              {
+                "type": "palladium:item_in_slot",
+                "item": {
+                  "item": "infinity:cosmi-rod_soul"
+                },
+                "slot": "offhand"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  }
 }

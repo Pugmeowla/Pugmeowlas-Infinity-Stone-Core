@@ -4,7 +4,7 @@
   "icon": "infinity:power_stone",
   "gui_display_type": "tree",
   "persistent_data": true,
-  "ability_bar_texture": "infinity:textures/gui/ability_bars/infinity_ability_bar.png",
+  "ability_bar_texture": "infinity:textures/gui/ability_bars/power_ability_bar.png",
 
   "abilities": {
     "power_bast": {
@@ -47,6 +47,13 @@
                   "item": "infinity:infinity_gauntlet"
                 },
                 "slot": "curios:hands"
+              },
+              {
+                "type": "palladium:item_in_slot",
+                "item": {
+                  "item": "satsu_iron_man_addon:marks/mark_85/main"
+                },
+                "slot": "chest"
               }
             ]
           }
@@ -157,6 +164,13 @@
                   "item": "infinity:infinity_gauntlet"
                 },
                 "slot": "curios:hands"
+              },
+              {
+                "type": "palladium:item_in_slot",
+                "item": {
+                  "item": "satsu_iron_man_addon:marks/mark_85/main"
+                },
+                "slot": "chest"
               }
             ]
           }
@@ -296,6 +310,13 @@
                   "item": "infinity:infinity_gauntlet"
                 },
                 "slot": "curios:hands"
+              },
+              {
+                "type": "palladium:item_in_slot",
+                "item": {
+                  "item": "satsu_iron_man_addon:marks/mark_85/main"
+                },
+                "slot": "chest"
               }
             ]
           },
