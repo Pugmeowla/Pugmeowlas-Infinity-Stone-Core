@@ -47,13 +47,6 @@
                   "item": "infinity:infinity_gauntlet"
                 },
                 "slot": "curios:hands"
-              },
-              {
-                "type": "palladium:item_in_slot",
-                "item": {
-                  "item": "satsu_iron_man_addon:marks/mark_85/main"
-                },
-                "slot": "chest"
               }
             ]
           }
@@ -164,13 +157,6 @@
                   "item": "infinity:infinity_gauntlet"
                 },
                 "slot": "curios:hands"
-              },
-              {
-                "type": "palladium:item_in_slot",
-                "item": {
-                  "item": "satsu_iron_man_addon:marks/mark_85/main"
-                },
-                "slot": "chest"
               }
             ]
           }
@@ -310,13 +296,6 @@
                   "item": "infinity:infinity_gauntlet"
                 },
                 "slot": "curios:hands"
-              },
-              {
-                "type": "palladium:item_in_slot",
-                "item": {
-                  "item": "satsu_iron_man_addon:marks/mark_85/main"
-                },
-                "slot": "chest"
               }
             ]
           },

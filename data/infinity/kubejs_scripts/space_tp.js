@@ -11,7 +11,6 @@ ServerEvents.commandRegistry(event => {
                             let y = Arguments.STRING.getResult(ctx, "y")
                             let z = Arguments.STRING.getResult(ctx, "z")
                             let dimension = Arguments.RESOURCE_LOCATION.getResult(ctx, "dimension")
-
                             let server = ctx.source.getServer()
                             let player = ctx.source.player
                             let dim = player.getLevel().getDimension()

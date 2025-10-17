@@ -1052,7 +1052,13 @@
         "playsound minecraft:block.conduit.activate master @a",
         "playsound minecraft:entity.wither.spawn master @a",
         "playsound minecraft:entity.lightning_bolt.thunder master @a",
-        "playsound minecraft:entity.ender_dragon.death master @a"
+        "playsound minecraft:entity.ender_dragon.death master @a",
+        "scoreboard players set @s mind_stone 0",
+        "scoreboard players set @s power_stone 0",
+        "scoreboard players set @s reality_stone 0",
+        "scoreboard players set @s space_stone 0",
+        "scoreboard players set @s time_stone 0",
+        "scoreboard players set @s soul_stone 0"
       ],
       "conditions": {
         "enabling": [
@@ -1498,7 +1504,7 @@
       "title": "Fantastic Four Skin",
       "bar_color": "light_blue",
       "hidden": false,
-      "hidden_in_bar": false,
+      "hidden_in_bar": true,
       "list_index": 3,
       "gui_position": "null",
       "description": "Unlock with ???",
@@ -1513,7 +1519,7 @@
           {
             "type": "palladium:action",
             "cooldown": 0,
-            "key_type": "key_bind",
+            "key_type": "right_click",
             "needs_empty_hand": false,
             "allow_scrolling_when_crouching": true
           }
