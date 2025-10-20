@@ -1,0 +1,15 @@
+{
+  "type": "geckolib:default",
+  "model": "infinity:geo/stone.geo.json",
+  "texture": "infinity:textures/item/mind.png",
+  "render_type": "glow",
+  "enchantment_glint": true,
+  "bones": {
+    "head": "head",
+    "body": "body",
+    "right_arm": "right_arm",
+    "left_arm": "left_arm",
+    "right_leg": "right_leg",
+    "left_leg": "left_leg"
+  }
+}

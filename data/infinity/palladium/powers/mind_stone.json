@@ -53,6 +53,13 @@
               {
                 "type": "palladium:item_in_slot",
                 "item": {
+                  "item": "infinity:mind_stone"
+                },
+                "slot": "curios:head"
+              },
+              {
+                "type": "palladium:item_in_slot",
+                "item": {
                   "item": "infinity:scepter"
                 },
                 "slot": "mainhand"
@@ -130,6 +137,13 @@
             "type": "palladium:or",
             "conditions": [
               {
+                "type": "palladium:item_in_slot",
+                "item": {
+                  "item": "infinity:mind_stone"
+                },
+                "slot": "curios:head"
+              },
+              {
                 "type": "palladium:has_power",
                 "power": "infinity:infinity_gauntlet"
               },
@@ -202,6 +216,13 @@
           {
             "type": "palladium:or",
             "conditions": [
+              {
+                "type": "palladium:item_in_slot",
+                "item": {
+                  "item": "infinity:mind_stone"
+                },
+                "slot": "curios:head"
+              },
               {
                 "type": "palladium:has_power",
                 "power": "infinity:infinity_gauntlet"
@@ -305,6 +326,13 @@
             "type": "palladium:or",
             "conditions": [
               {
+                "type": "palladium:item_in_slot",
+                "item": {
+                  "item": "infinity:mind_stone"
+                },
+                "slot": "curios:head"
+              },
+              {
                 "type": "palladium:has_power",
                 "power": "infinity:infinity_gauntlet"
               },
@@ -389,6 +417,13 @@
           {
             "type": "palladium:or",
             "conditions": [
+              {
+                "type": "palladium:item_in_slot",
+                "item": {
+                  "item": "infinity:mind_stone"
+                },
+                "slot": "curios:head"
+              },
               {
                 "type": "palladium:has_power",
                 "power": "infinity:infinity_gauntlet"

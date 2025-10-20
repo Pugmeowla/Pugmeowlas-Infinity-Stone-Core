@@ -1,8 +1,11 @@
 {
-    "type": "palladium:armor",
-    "slot": "chest",
-    "rarity": "epic",
-    "is_fire_resistant": true,
-    "armor_material": "minecraft:iron",
-    "opening_toggle_sound": "minecraft:item.armor.equip_gold"
+  "type": "palladium:armor",
+  "slot": "chest",
+  "rarity": "epic",
+  "is_fire_resistant": true,
+  "armor_material": "minecraft:iron",
+  "opening_toggle_sound": "minecraft:item.armor.equip_gold",
+  "render_layers": {
+    "curios:necklace": ["infinity:empty_eye_of_agamotto"]
+  }
 }

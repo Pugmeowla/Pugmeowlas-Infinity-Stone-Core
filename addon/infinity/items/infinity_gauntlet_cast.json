@@ -1,9 +1,8 @@
 {
-    "max_stack_size": 1,
-    "creative_mode_tab": {
-        "tab": "infinity:infinity",
-        "before": "infinity:power_stone"
-    },
-    "rarity": "rare",
-    "is_fire_resistant": true
+  "max_stack_size": 1,
+  "creative_mode_tab": {
+    "tab": "infinity:infinity"
+  },
+  "rarity": "rare",
+  "is_fire_resistant": true
 }

@@ -1,6 +1,6 @@
 {
   "planet_data": {
-      "vormir": {
+    "vormir": {
       "x": 6900,
       "y": 420,
       "z": 6900,
@@ -9,12 +9,12 @@
       "roll": 1,
       "scale": 400,
       "texture_id": "vormir",
-      "travel_to":"infinity:vormir",
+      "travel_to": "infinity:vormir",
       "glowing": false,
       "ringed": false,
       "collision": true
     },
-     "morag": {
+    "morag": {
       "x": 4200,
       "y": 69,
       "z": 4200,
@@ -23,21 +23,35 @@
       "roll": 1,
       "scale": 400,
       "texture_id": "morag",
-      "travel_to":"infinity:morag",
+      "travel_to": "infinity:morag",
+      "glowing": false,
+      "ringed": false,
+      "collision": true
+    },
+    "svartelheim": {
+      "x": 670,
+      "y": 69,
+      "z": 410,
+      "yaw": 1,
+      "pitch": 1,
+      "roll": 1,
+      "scale": 400,
+      "texture_id": "svartelheim",
+      "travel_to": "infinity:svartelheim",
       "glowing": false,
       "ringed": false,
       "collision": true
     }
   },
   "attached_dimention_id": "infinity:marvel",
-  "skybox_data":{
-     "texture_id": "skybox_solar",
+  "skybox_data": {
+    "texture_id": "skybox_solar",
     "alpha": 255,
     "yaw": 23,
     "pitch": 23,
     "roll": 23
   },
-   "dimensional_data": {
+  "dimensional_data": {
     "dimension_type": "space",
     "weather": false,
     "clouds": false,
@@ -48,8 +62,8 @@
   "gui_data": {
     "marvel": {
       "object_data": {
-	      "vormir": {
-	         "texture_id": "vormir",
+        "vormir": {
+          "texture_id": "vormir",
           "scale": 15,
           "ponder_scale": 59,
           "yaw": 5,
@@ -88,9 +102,9 @@
           },
           "life": 1,
           "ringed": false
-	      },
-         "morag": {
-	         "texture_id": "morag",
+        },
+        "morag": {
+          "texture_id": "morag",
           "scale": 15,
           "ponder_scale": 59,
           "yaw": 5,
@@ -129,7 +143,48 @@
           },
           "life": 0,
           "ringed": false
-	      }
+        },
+        "svartelheim": {
+          "texture_id": "svartelheim",
+          "scale": 15,
+          "ponder_scale": 59,
+          "yaw": 5,
+          "pitch": -195,
+          "roll": 23,
+          "yaw_speed": 0.45,
+          "pitch_speed": 0,
+          "roll_speed": 0,
+          "travel_x": 670,
+          "travel_y": 300,
+          "travel_z": 410,
+          "unlocking_dimension": "cosmos:solar_system",
+          "atmosphere": {
+            "text": "Ash-Choked",
+            "color": "gray"
+          },
+          "name": {
+            "text": "Svartalfheim",
+            "color": "gray"
+          },
+          "type": {
+            "text": "Desolate",
+            "color": "gray"
+          },
+          "conditions": {
+            "text": "Volcanic",
+            "color": "red"
+          },
+          "size": {
+            "text": "Medium",
+            "color": "gray"
+          },
+          "category": {
+            "text": "Realm",
+            "color": "purple"
+          },
+          "life": 0,
+          "ringed": false
+        }
       },
       "travel_dimension": "infinity:marvel",
       "origin_x": 0,

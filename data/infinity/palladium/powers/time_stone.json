@@ -331,13 +331,6 @@
                   "item": "infinity:eye_of_agamotto"
                 },
                 "slot": "chest"
-              },
-              {
-                "type": "palladium:item_in_slot",
-                "item": {
-                  "item": "infinity:eye_of_agamotto"
-                },
-                "slot": "curios:necklace"
               }
             ]
           }

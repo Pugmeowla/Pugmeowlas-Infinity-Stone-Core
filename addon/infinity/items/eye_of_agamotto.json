@@ -1,12 +1,14 @@
 {
-    "type": "palladium:armor",
-    "creative_mode_tab": {
-        "tab": "infinity:infinity",
-        "before": "infinity:scepter"
-    },
-    "slot": "chest",
-    "rarity": "epic",
-    "is_fire_resistant": true,
-    "armor_material": "minecraft:iron",
-    "opening_toggle_sound": "minecraft:item.armor.equip_gold"
+  "type": "palladium:armor",
+  "creative_mode_tab": {
+    "tab": "infinity:infinity"
+  },
+  "slot": "chest",
+  "rarity": "epic",
+  "is_fire_resistant": true,
+  "armor_material": "minecraft:iron",
+  "opening_toggle_sound": "minecraft:item.armor.equip_gold",
+  "render_layers": {
+    "curios:necklace": ["infinity:eye_of_agamotto"]
+  }
 }

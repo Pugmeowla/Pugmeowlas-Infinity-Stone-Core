@@ -1,9 +1,8 @@
 {
-    "max_stack_size": 1,
-    "rarity": "epic",
-    "is_fire_resistant": true,
-    "creative_mode_tab": {
-        "tab": "infinity:infinity",
-        "after": "infinity:cosmi-rod"
-    }
+  "max_stack_size": 1,
+  "rarity": "epic",
+  "is_fire_resistant": true,
+  "creative_mode_tab": {
+    "tab": "infinity:infinity"
+  }
 }

@@ -1,0 +1,11 @@
+{
+  "replace": false,
+  "values": [
+    "infinity:mind_stone",
+    "infinity:power_stone",
+    "infinity:space_stone",
+    "infinity:reality_stone",
+    "infinity:time_stone",
+    "infinity:soul_stone"
+  ]
+}

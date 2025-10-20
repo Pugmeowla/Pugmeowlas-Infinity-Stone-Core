@@ -2,7 +2,7 @@
   "type": "minecraft:jigsaw",
   "start_pool": "infinity:aether_fake/aether_fake",
   "size": 2,
-  "biomes": ["minecraft:nether_wastes", "minecraft:soul_sand_valley", "minecraft:warped_forest", "minecraft:crimson_forest"],
+  "biomes": ["infinity:svartelheim"],
   "step": "surface_structures",
   "max_distance_from_center": 80,
   "terrain_adaptation": "beard_thin",
@@ -10,7 +10,5 @@
   "start_height": {
     "absolute": 33
   },
-  "spawn_overrides": {
-
-  }
+  "spawn_overrides": {}
 }
