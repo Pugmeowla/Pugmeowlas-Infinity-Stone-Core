@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": ["HHH", "HHH", "HHH"],
+  "key": {
+    "H": {
+      "item": "infinity:steel_block"
+    }
+  },
+  "result": {
+    "item": "infinity:steel_block",
+    "count": 1
+  }
+}

@@ -6,11 +6,11 @@
       "item": "infinity:hammer"
     },
     "G": {
-      "item": "minecraft:iron_ingot"
+      "item": "minecraft:coal"
     }
   },
   "result": {
-    "item": "infinity:iron_dust",
+    "item": "infinity:coal_dust",
     "count": 1
   }
 }

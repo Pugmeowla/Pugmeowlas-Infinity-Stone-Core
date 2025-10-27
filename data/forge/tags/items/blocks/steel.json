@@ -1,0 +1,32 @@
+{
+  "values": [
+    {
+      "id": "infinity:steel_block",
+      "required": false
+    },
+    {
+      "id": "ad_astra:steel_block",
+      "required": false
+    },
+    {
+      "id": "cosmos:steel_block",
+      "required": false
+    },
+    {
+      "id": "satsu_iron_man_addon:steel_block",
+      "required": false
+    },
+    {
+      "id": "tconstruct:steel_block",
+      "required": false
+    },
+    {
+      "id": "thermal:steel_block",
+      "required": false
+    },
+    {
+      "id": "gtceu:steel_block",
+      "required": false
+    }
+  ]
+}

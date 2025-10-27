@@ -1,0 +1,20 @@
+{
+  "values": [
+    {
+      "id": "infinity:iron_dust",
+      "required": false
+    },
+    {
+      "id": "mekanism:dust_iron",
+      "required": false
+    },
+    {
+      "id": "gtceu:iron_dust",
+      "required": false
+    },
+    {
+      "id": "thermal:iron_dust",
+      "required": false
+    }
+  ]
+}

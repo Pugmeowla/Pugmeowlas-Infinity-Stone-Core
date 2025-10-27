@@ -1,0 +1,36 @@
+{
+  "values": [
+    {
+      "id": "infinity:steel_ingot",
+      "required": false
+    },
+    {
+      "id": "mekansium:ingot_steel",
+      "required": false
+    },
+    {
+      "id": "cosmos:steel_ingot",
+      "required": false
+    },
+    {
+      "id": "ad_astra:steel_ingot",
+      "required": false
+    },
+    {
+      "id": "satsu_iron_man_addon:steel_ingot",
+      "required": false
+    },
+    {
+      "id": "gtceu:steel_ingot",
+      "required": false
+    },
+    {
+      "id": "tconstruct:steel_ingot",
+      "required": false
+    },
+    {
+      "id": "thermal:steel_ingot",
+      "required": false
+    }
+  ]
+}

@@ -1,16 +1,16 @@
 {
   "type": "minecraft:crafting_shaped",
-  "pattern": ["HG ", "   ", "   "],
+  "pattern": ["IC ", "   ", "   "],
   "key": {
-    "H": {
+    "I": {
       "item": "infinity:hammer"
     },
-    "G": {
-      "item": "minecraft:iron_ingot"
+    "C": {
+      "tag": "forge:ingots/steel"
     }
   },
   "result": {
-    "item": "infinity:iron_dust",
+    "item": "infinity:steel_dust",
     "count": 1
   }
 }

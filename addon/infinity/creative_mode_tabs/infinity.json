@@ -1,5 +1,5 @@
 {
   "icon": "infinity:infinity_gauntlet",
   "title": "Infinity",
-  "items": []
+  "items": ["infinitygenerator:infinity_generator"]
 }

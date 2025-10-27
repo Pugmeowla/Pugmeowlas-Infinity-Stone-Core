@@ -1,0 +1,16 @@
+{
+  "values": [
+    {
+      "id": "infinity:steel_dust",
+      "required": false
+    },
+    {
+      "id": "mekanism:dust_steel",
+      "required": false
+    },
+    {
+      "id": "gtceu:steel_dust",
+      "required": false
+    }
+  ]
+}
