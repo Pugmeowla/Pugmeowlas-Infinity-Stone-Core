@@ -785,7 +785,7 @@
       "persistent_data": true,
       "title": "Cosmic Explosion",
       "bar_color": "purple",
-      "hidden": false,
+      "hidden": true,
       "hidden_in_bar": true,
       "list_index": -1,
       "gui_position": [0, 1],
@@ -840,6 +840,119 @@
               "item": "infinity:power_stone"
             },
             "slot": "mainhand"
+          }
+        ]
+      }
+    },
+    "explosion2": {
+      "type": "palladium:command",
+      "icon": "infinity:textures/icon/rocket_burst.png",
+      "persistent_data": true,
+      "title": "Cosmic Explosion",
+      "bar_color": "purple",
+      "hidden": false,
+      "hidden_in_bar": false,
+      "list_index": 2,
+      "gui_position": [0, -2],
+      "description": "The player used to be bombarded with cosmic radiation, destroying the environment and user in the process, but it can now be controlled.",
+      "first_tick_commands": [],
+      "last_tick_commands": [],
+      "commands": [
+        "/summon tnt ~8 ~ ~ {Fuse:0}",
+        "/summon tnt ~-8 ~ ~ {Fuse:0}",
+        "/summon tnt ~ ~ ~8 {Fuse:0}",
+        "/summon tnt ~ ~ ~-8 {Fuse:0}",
+        "/summon tnt ~8 ~ ~8 {Fuse:0}",
+        "/summon tnt ~-8 ~ ~-8 {Fuse:0}",
+        "/summon tnt ~8 ~ ~-8 {Fuse:0}",
+        "/summon tnt ~-8 ~ ~8 {Fuse:0}"
+      ],
+      "conditions": {
+        "enabling": [
+          {
+            "type": "palladium:held",
+            "cooldown": 0,
+            "key_type": "key_bind",
+            "needs_empty_hand": false
+          }
+        ],
+        "unlocking": [
+          {
+            "type": "palladium:item_buyable",
+            "ingredient": {
+              "item": "infinity:aspects_of_existance"
+            },
+            "amount": 1
+          },
+          {
+            "type": "palladium:or",
+            "conditions": [
+              {
+                "type": "palladium:has_power",
+                "power": "infinity:infinity_gauntlet"
+              },
+              {
+                "type": "palladium:item_in_slot",
+                "item": {
+                  "item": "infinity:power_stone"
+                },
+                "slot": "mainhand"
+              },
+              {
+                "type": "palladium:item_in_slot",
+                "item": {
+                  "item": "infinity:cosmi-rod_power"
+                },
+                "slot": "offhand"
+              },
+              {
+                "type": "palladium:item_in_slot",
+                "item": {
+                  "item": "infinity:cosmi-rod_power"
+                },
+                "slot": "mainhand"
+              },
+              {
+                "type": "palladium:item_in_slot",
+                "item": {
+                  "item": "infinity:power_stone"
+                },
+                "slot": "offhand"
+              },
+              {
+                "type": "palladium:item_in_slot",
+                "item": {
+                  "item": "infinity:cosmi-rod_power"
+                },
+                "slot": "mainhand"
+              }
+            ]
+          },
+          {
+            "type": "palladium:ability_unlocked",
+            "power": "null",
+            "ability": "impower"
+          }
+        ]
+      }
+    },
+    "explosion3": {
+      "type": "palladium:damage_immunity",
+      "icon": "minecraft:potion",
+      "title": "null",
+      "bar_color": "light_gray",
+      "hidden": true,
+      "hidden_in_bar": true,
+      "list_index": -1,
+      "gui_position": "null",
+      "description": "null",
+      "damage_sources": ["minecraft:is_explosion"],
+      "conditions": {
+        "unlocking": [
+          {
+            "type": "palladium:ability_enabled",
+            "power": "null",
+            "ability": "explosion2"
           }
         ]
       }
