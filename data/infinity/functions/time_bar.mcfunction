@@ -1,0 +1,1 @@
+bossbar add time {"text":"Current Time Speed"}

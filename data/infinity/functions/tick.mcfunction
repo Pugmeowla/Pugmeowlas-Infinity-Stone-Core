@@ -38,3 +38,4 @@ execute as @e[type=armor_stand,tag=temp_stand] at @s run particle minecraft:dust
 execute if entity @e[tag=malekith] run bossbar set minecraft:malekith players @a
 execute store result bossbar minecraft:malekith value run data get entity @e[tag=malekith,limit=1] Health
 execute unless entity @e[tag=malekith,limit=1] run bossbar set minecraft:malekith players test
+

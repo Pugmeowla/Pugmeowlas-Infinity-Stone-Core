@@ -3,7 +3,7 @@
   "pattern": ["HHH", "HHH", "HHH"],
   "key": {
     "H": {
-      "item": "infinity:steel_block"
+      "item": "infinity:steel_ingot"
     }
   },
   "result": {

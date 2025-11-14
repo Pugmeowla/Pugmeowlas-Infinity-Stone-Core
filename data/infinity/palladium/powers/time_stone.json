@@ -7,10 +7,518 @@
   "ability_bar_texture": "infinity:textures/gui/ability_bars/time_ability_bar.png",
 
   "abilities": {
+    "slow_time_dummy": {
+      "type": "palladium:dummy",
+      "persistent_data": true,
+      "icon": "minecraft:clock",
+      "title": "Slow Time",
+      "bar_color": "lime",
+      "hidden": false,
+      "hidden_in_bar": true,
+      "list_index": -1,
+      "gui_position": [2, 1],
+      "description": "Change the speed of time by either scrolling forward or back, a bossbar will be shown to show how fast or slow you have made it.",
+      "conditions": {
+        "unlocking": [
+          {
+            "type": "palladium:item_buyable",
+            "ingredient": { "item": "infinity:aspects_of_existance" },
+            "amount": 5
+          },
+          {
+            "type": "palladium:ability_unlocked",
+            "power": "null",
+            "ability": "fast_forward"
+          },
+          {
+            "type": "palladium:or",
+            "conditions": [
+              {
+                "type": "palladium:has_power",
+                "power": "infinity:infinity_gauntlet"
+              },
+              {
+                "type": "palladium:item_in_slot",
+                "item": { "item": "infinity:eye_of_agamotto" },
+                "slot": "mainhand"
+              },
+              {
+                "type": "palladium:item_in_slot",
+                "item": { "item": "infinity:eye_of_agamotto" },
+                "slot": "offhand"
+              },
+              {
+                "type": "palladium:item_in_slot",
+                "item": { "item": "infinity:eye_of_agamotto" },
+                "slot": "chest"
+              },
+              {
+                "type": "palladium:item_in_slot",
+                "item": { "item": "infinity:eye_of_agamotto" },
+                "slot": "curios:necklace"
+              },
+              {
+                "type": "palladium:item_in_slot",
+                "item": { "item": "infinity:time_stone" },
+                "slot": "mainhand"
+              },
+              {
+                "type": "palladium:item_in_slot",
+                "item": { "item": "infinity:time_stone" },
+                "slot": "offhand"
+              },
+              {
+                "type": "palladium:item_in_slot",
+                "item": { "item": "infinity:cosmi-rod_time" },
+                "slot": "mainhand"
+              },
+              {
+                "type": "palladium:item_in_slot",
+                "item": { "item": "infinity:cosmi-rod_time" },
+                "slot": "offhand"
+              }
+            ]
+          }
+        ]
+      }
+    },
+
+    "slow_time": {
+      "type": "palladium:command",
+      "icon": "minecraft:clock",
+      "title": "Slow Time",
+      "bar_color": "lime",
+      "hidden": true,
+      "hidden_in_bar": true,
+      "persistent_data": true,
+      "list_index": 5,
+      "description": "Slows the flow of Time",
+      "commands": [
+        "bossbar set minecraft:time players @s",
+        "bossbar set minecraft:time color green",
+        "bossbar set minecraft:time max 11",
+        "scoreboard objectives add tickrateCycle dummy",
+        "execute if score @s tickrateCycle matches -5 run timeclock tickrate 40",
+        "execute if score @s tickrateCycle matches -4 run timeclock tickrate 36",
+        "execute if score @s tickrateCycle matches -3 run timeclock tickrate 32",
+        "execute if score @s tickrateCycle matches -2 run timeclock tickrate 28",
+        "execute if score @s tickrateCycle matches -1 run timeclock tickrate 24",
+        "execute if score @s tickrateCycle matches 0 run timeclock tickrate 20",
+        "execute if score @s tickrateCycle matches 1 run timeclock tickrate 16",
+        "execute if score @s tickrateCycle matches 2 run timeclock tickrate 12",
+        "execute if score @s tickrateCycle matches 3 run timeclock tickrate 8",
+        "execute if score @s tickrateCycle matches 4 run timeclock tickrate 4",
+        "execute if score @s tickrateCycle matches 5 run timeclock tickrate 2",
+        "scoreboard players add @s tickrateCycle 1",
+        "execute if score @s tickrateCycle matches 6 run scoreboard players set @s tickrateCycle 5",
+        "execute if score @s tickrateCycle matches -6 run scoreboard players set @s tickrateCycle -5",
+
+        "execute if score @s tickrateCycle matches 1 run effect clear @s minecraft:speed",
+        "execute if score @s tickrateCycle matches 1 run effect give @s minecraft:speed 100 1 true",
+
+        "execute if score @s tickrateCycle matches 2 run effect clear @s minecraft:speed",
+        "execute if score @s tickrateCycle matches 2 run effect give @s minecraft:speed 100 2 true",
+
+        "execute if score @s tickrateCycle matches 3 run effect clear @s minecraft:speed",
+        "execute if score @s tickrateCycle matches 3 run effect give @s minecraft:speed 100 3 true",
+
+        "execute if score @s tickrateCycle matches 4 run effect clear @s minecraft:speed",
+        "execute if score @s tickrateCycle matches 4 run effect give @s minecraft:speed 100 4 true",
+
+        "execute if score @s tickrateCycle matches 5 run effect clear @s minecraft:speed",
+        "execute if score @s tickrateCycle matches 5 run effect give @s minecraft:speed 100 5 true",
+
+        "execute if score @s tickrateCycle matches 6 run effect clear @s minecraft:speed",
+        "execute if score @s tickrateCycle matches 6 run effect give @s minecraft:speed 100 6 true",
+
+        "execute if score @s tickrateCycle matches 7 run effect clear @s minecraft:speed",
+        "execute if score @s tickrateCycle matches 7 run effect give @s minecraft:speed 100 7 true",
+
+        "execute if score @s tickrateCycle matches 1 run effect clear @s minecraft:haste",
+        "execute if score @s tickrateCycle matches 1 run effect give @s minecraft:haste 100 105 true",
+
+        "execute if score @s tickrateCycle matches 2 run effect clear @s minecraft:haste",
+        "execute if score @s tickrateCycle matches 2 run effect give @s minecraft:haste 100 110 true",
+
+        "execute if score @s tickrateCycle matches 3 run effect clear @s minecraft:haste",
+        "execute if score @s tickrateCycle matches 3 run effect give @s minecraft:haste 100 112 true",
+
+        "execute if score @s tickrateCycle matches 4 run effect clear @s minecraft:haste",
+        "execute if score @s tickrateCycle matches 4 run effect give @s minecraft:haste 100 114 true",
+
+        "execute if score @s tickrateCycle matches 5 run effect clear @s minecraft:haste",
+        "execute if score @s tickrateCycle matches 5 run effect give @s minecraft:haste 100 116 true",
+
+        "execute if score @s tickrateCycle matches 6 run effect clear @s minecraft:haste",
+        "execute if score @s tickrateCycle matches 6 run effect give @s minecraft:haste 100 118 true",
+
+        "execute if score @s tickrateCycle matches 7 run effect clear @s minecraft:haste",
+        "execute if score @s tickrateCycle matches 7 run effect give @s minecraft:haste 100 120 true",
+        "execute if score @s tickrateCycle matches -5 run bossbar set minecraft:time value 1",
+        "execute if score @s tickrateCycle matches -4 run bossbar set minecraft:time value 2",
+        "execute if score @s tickrateCycle matches -3 run bossbar set minecraft:time value 3",
+        "execute if score @s tickrateCycle matches -2 run bossbar set minecraft:time value 4",
+        "execute if score @s tickrateCycle matches -1 run bossbar set minecraft:time value 5",
+        "execute if score @s tickrateCycle matches 0 run bossbar set minecraft:time value 6",
+        "execute if score @s tickrateCycle matches 1 run bossbar set minecraft:time value 7",
+        "execute if score @s tickrateCycle matches 2 run bossbar set minecraft:time value 8",
+        "execute if score @s tickrateCycle matches 3 run bossbar set minecraft:time value 9",
+        "execute if score @s tickrateCycle matches 4 run bossbar set minecraft:time value 10",
+        "execute if score @s tickrateCycle matches 5 run bossbar set minecraft:time value 11"
+      ],
+      "first_tick_commands": [
+        "playsound infinity:use_infinity_gauntlet block @s"
+      ],
+      "last_tick_commands": [],
+      "conditions": {
+        "enabling": [
+          {
+            "type": "palladium:action",
+            "cooldown": 0,
+            "key_type": "scroll_down",
+            "needs_empty_hand": true,
+            "allow_scrolling_when_crouching": true
+          },
+          {
+            "type": "palladium:ability_enabled",
+            "power": "null",
+            "ability": "reset_time_speed"
+          }
+        ],
+        "unlocking": [
+          {
+            "type": "palladium:ability_unlocked",
+            "power": "null",
+            "ability": "slow_time_dummy"
+          },
+          {
+            "type": "palladium:ability_enabled",
+            "power": "null",
+            "ability": "reset_time_speed"
+          }
+        ]
+      }
+    },
+
+    "accelerate_time": {
+      "type": "palladium:command",
+      "icon": "minecraft:clock",
+      "title": "Accelerate Time",
+      "bar_color": "lime",
+      "hidden": true,
+      "hidden_in_bar": true,
+      "persistent_data": true,
+      "list_index": 5,
+      "description": "Accelerates the flow of Time",
+      "commands": [
+        "bossbar set minecraft:time players @s",
+        "bossbar set minecraft:time color green",
+        "bossbar set minecraft:time max 11",
+        "scoreboard objectives add tickrateCycle dummy",
+        "execute if score @s tickrateCycle matches -5 run timeclock tickrate 40",
+        "execute if score @s tickrateCycle matches -4 run timeclock tickrate 36",
+        "execute if score @s tickrateCycle matches -3 run timeclock tickrate 32",
+        "execute if score @s tickrateCycle matches -2 run timeclock tickrate 28",
+        "execute if score @s tickrateCycle matches -1 run timeclock tickrate 24",
+        "execute if score @s tickrateCycle matches 0 run timeclock tickrate 20",
+        "execute if score @s tickrateCycle matches 1 run timeclock tickrate 16",
+        "execute if score @s tickrateCycle matches 2 run timeclock tickrate 12",
+        "execute if score @s tickrateCycle matches 3 run timeclock tickrate 8",
+        "execute if score @s tickrateCycle matches 4 run timeclock tickrate 4",
+        "execute if score @s tickrateCycle matches 5 run timeclock tickrate 2",
+        "scoreboard players remove @s tickrateCycle 1",
+        "execute if score @s tickrateCycle matches 6 run scoreboard players set @s tickrateCycle 5",
+        "execute if score @s tickrateCycle matches -6 run scoreboard players set @s tickrateCycle -5",
+
+        "execute if score @s tickrateCycle matches 0 run effect clear @s minecraft:speed",
+        "execute if score @s tickrateCycle matches 0 run effect clear @s minecraft:haste",
+
+        "execute if score @s tickrateCycle matches 1 run effect clear @s minecraft:speed",
+        "execute if score @s tickrateCycle matches 1 run effect give @s minecraft:speed 100 1 true",
+
+        "execute if score @s tickrateCycle matches 2 run effect clear @s minecraft:speed",
+        "execute if score @s tickrateCycle matches 2 run effect give @s minecraft:speed 100 2 true",
+
+        "execute if score @s tickrateCycle matches 3 run effect clear @s minecraft:speed",
+        "execute if score @s tickrateCycle matches 3 run effect give @s minecraft:speed 100 3 true",
+
+        "execute if score @s tickrateCycle matches 4 run effect clear @s minecraft:speed",
+        "execute if score @s tickrateCycle matches 4 run effect give @s minecraft:speed 100 4 true",
+
+        "execute if score @s tickrateCycle matches 5 run effect clear @s minecraft:speed",
+        "execute if score @s tickrateCycle matches 5 run effect give @s minecraft:speed 100 5 true",
+
+        "execute if score @s tickrateCycle matches 6 run effect clear @s minecraft:speed",
+        "execute if score @s tickrateCycle matches 6 run effect give @s minecraft:speed 100 6 true",
+
+        "execute if score @s tickrateCycle matches 7 run effect clear @s minecraft:speed",
+        "execute if score @s tickrateCycle matches 7 run effect give @s minecraft:speed 100 7 true",
+
+        "execute if score @s tickrateCycle matches 1 run effect clear @s minecraft:haste",
+        "execute if score @s tickrateCycle matches 1 run effect give @s minecraft:haste 100 105 true",
+
+        "execute if score @s tickrateCycle matches 2 run effect clear @s minecraft:haste",
+        "execute if score @s tickrateCycle matches 2 run effect give @s minecraft:haste 100 110 true",
+
+        "execute if score @s tickrateCycle matches 3 run effect clear @s minecraft:haste",
+        "execute if score @s tickrateCycle matches 3 run effect give @s minecraft:haste 100 112 true",
+
+        "execute if score @s tickrateCycle matches 4 run effect clear @s minecraft:haste",
+        "execute if score @s tickrateCycle matches 4 run effect give @s minecraft:haste 100 114 true",
+
+        "execute if score @s tickrateCycle matches 5 run effect clear @s minecraft:haste",
+        "execute if score @s tickrateCycle matches 5 run effect give @s minecraft:haste 100 116 true",
+
+        "execute if score @s tickrateCycle matches 6 run effect clear @s minecraft:haste",
+        "execute if score @s tickrateCycle matches 6 run effect give @s minecraft:haste 100 118 true",
+
+        "execute if score @s tickrateCycle matches 7 run effect clear @s minecraft:haste",
+        "execute if score @s tickrateCycle matches 7 run effect give @s minecraft:haste 100 120 true",
+        "execute if score @s tickrateCycle matches -5 run bossbar set minecraft:time value 1",
+        "execute if score @s tickrateCycle matches -4 run bossbar set minecraft:time value 2",
+        "execute if score @s tickrateCycle matches -3 run bossbar set minecraft:time value 3",
+        "execute if score @s tickrateCycle matches -2 run bossbar set minecraft:time value 4",
+        "execute if score @s tickrateCycle matches -1 run bossbar set minecraft:time value 5",
+        "execute if score @s tickrateCycle matches 0 run bossbar set minecraft:time value 6",
+        "execute if score @s tickrateCycle matches 1 run bossbar set minecraft:time value 7",
+        "execute if score @s tickrateCycle matches 2 run bossbar set minecraft:time value 8",
+        "execute if score @s tickrateCycle matches 3 run bossbar set minecraft:time value 9",
+        "execute if score @s tickrateCycle matches 4 run bossbar set minecraft:time value 10",
+        "execute if score @s tickrateCycle matches 5 run bossbar set minecraft:time value 11"
+      ],
+      "first_tick_commands": [
+        "playsound infinity:use_infinity_gauntlet block @s"
+      ],
+      "last_tick_commands": [],
+      "conditions": {
+        "enabling": [
+          {
+            "type": "palladium:action",
+            "cooldown": 0,
+            "key_type": "scroll_up",
+            "needs_empty_hand": true,
+            "allow_scrolling_when_crouching": true
+          },
+          {
+            "type": "palladium:ability_enabled",
+            "power": "null",
+            "ability": "reset_time_speed"
+          }
+        ],
+        "unlocking": [
+          {
+            "type": "palladium:ability_unlocked",
+            "power": "null",
+            "ability": "slow_time_dummy"
+          },
+          {
+            "type": "palladium:ability_enabled",
+            "power": "null",
+            "ability": "reset_time_speed"
+          }
+        ]
+      }
+    },
+
+    "reset_time_speed": {
+      "type": "palladium:command",
+      "icon": "minecraft:clock",
+      "title": "Change Flow of Time",
+      "bar_color": "lime",
+      "hidden": true,
+      "hidden_in_bar": false,
+      "persistent_data": true,
+      "list_index": 3,
+      "description": "Resets the flow of Time",
+      "first_tick_commands": ["function infinity:time_bar"],
+      "commands": [],
+      "last_tick_commands": [
+        "bossbar remove minecraft:time",
+        "timeclock tickrate 20"
+      ],
+      "conditions": {
+        "enabling": [
+          {
+            "type": "palladium:toggle",
+            "cooldown": 0,
+            "key_type": "key_bind",
+            "needs_empty_hand": false,
+            "allow_scrolling_when_crouching": true
+          }
+        ],
+        "unlocking": [
+          {
+            "type": "palladium:ability_unlocked",
+            "power": "null",
+            "ability": "slow_time_dummy"
+          }
+        ]
+      }
+    },
+
+    "time_freeze_dummy": {
+      "type": "palladium:dummy",
+      "persistent_data": true,
+      "icon": "minecraft:blue_ice",
+      "title": "Bend Time Speed",
+      "bar_color": "lime",
+      "hidden": false,
+      "hidden_in_bar": true,
+      "list_index": -1,
+      "gui_position": [2, 2],
+      "description": "Stops time, press to freeze, press again to unfreeze.",
+      "conditions": {
+        "unlocking": [
+          {
+            "type": "palladium:item_buyable",
+            "ingredient": { "item": "infinity:aspects_of_existance" },
+            "amount": 10
+          },
+          {
+            "type": "palladium:ability_unlocked",
+            "power": "null",
+            "ability": "slow_time_dummy"
+          },
+          {
+            "type": "palladium:or",
+            "conditions": [
+              {
+                "type": "palladium:has_power",
+                "power": "infinity:infinity_gauntlet"
+              },
+              {
+                "type": "palladium:item_in_slot",
+                "item": { "item": "infinity:eye_of_agamotto" },
+                "slot": "mainhand"
+              },
+              {
+                "type": "palladium:item_in_slot",
+                "item": { "item": "infinity:eye_of_agamotto" },
+                "slot": "offhand"
+              },
+              {
+                "type": "palladium:item_in_slot",
+                "item": { "item": "infinity:eye_of_agamotto" },
+                "slot": "chest"
+              },
+              {
+                "type": "palladium:item_in_slot",
+                "item": { "item": "infinity:eye_of_agamotto" },
+                "slot": "curios:necklace"
+              },
+              {
+                "type": "palladium:item_in_slot",
+                "item": { "item": "infinity:time_stone" },
+                "slot": "mainhand"
+              },
+              {
+                "type": "palladium:item_in_slot",
+                "item": { "item": "infinity:time_stone" },
+                "slot": "offhand"
+              },
+              {
+                "type": "palladium:item_in_slot",
+                "item": { "item": "infinity:cosmi-rod_time" },
+                "slot": "mainhand"
+              },
+              {
+                "type": "palladium:item_in_slot",
+                "item": { "item": "infinity:cosmi-rod_time" },
+                "slot": "offhand"
+              }
+            ]
+          }
+        ]
+      }
+    },
+
+    "time_freeze": {
+      "type": "palladium:command",
+      "persistent_data": true,
+      "icon": "minecraft:blue_ice",
+      "title": "Time Freeze",
+      "bar_color": "lime",
+      "hidden": true,
+      "hidden_in_bar": false,
+      "list_index": 4,
+      "gui_position": [2, 2],
+      "description": "Freezes time around you.",
+      "first_tick_commands": [
+        "playsound infinity:use_infinity_gauntlet block @s"
+      ],
+      "commands": ["timeclock pauseTime true", "tag @s add pauseTime"],
+      "conditions": {
+        "enabling": [
+          {
+            "type": "palladium:action",
+            "cooldown": 0,
+            "key_type": "key_bind",
+            "needs_empty_hand": false,
+            "allow_scrolling_when_crouching": true
+          }
+        ],
+        "unlocking": [
+          {
+            "type": "palladium:ability_unlocked",
+            "power": "null",
+            "ability": "time_freeze_dummy"
+          },
+          {
+            "type": "palladium:not",
+            "conditions": [
+              {
+                "type": "palladium:has_tag",
+                "tag": "pauseTime"
+              }
+            ]
+          }
+        ]
+      }
+    },
+
+    "time_unfreeze": {
+      "type": "palladium:command",
+      "persistent_data": true,
+      "icon": "minecraft:barrier",
+      "title": "Time Resume",
+      "bar_color": "lime",
+      "hidden": true,
+      "hidden_in_bar": false,
+      "list_index": 4,
+      "gui_position": [2, 3],
+      "description": "Resumes the normal flow of time.",
+      "first_tick_commands": [
+        "playsound infinity:use_infinity_gauntlet block @s"
+      ],
+      "commands": ["timeclock pauseTime false", "tag @s remove pauseTime"],
+      "conditions": {
+        "enabling": [
+          {
+            "type": "palladium:action",
+            "cooldown": 0,
+            "key_type": "key_bind",
+            "needs_empty_hand": false,
+            "allow_scrolling_when_crouching": true
+          }
+        ],
+        "unlocking": [
+          {
+            "type": "palladium:ability_unlocked",
+            "power": "null",
+            "ability": "time_freeze_dummy"
+          },
+          {
+            "type": "palladium:has_tag",
+            "tag": "pauseTime"
+          }
+        ]
+      }
+    },
+
     "fast_forward": {
       "type": "palladium:command",
       "icon": "minecraft:clock",
-      "title": "Fast Forward",
+      "title": "Fast Forward Daylight Cycle",
       "bar_color": "lime",
       "hidden": false,
       "hidden_in_bar": false,
@@ -109,7 +617,7 @@
     "stop_time": {
       "type": "palladium:command",
       "icon": "minecraft:barrier",
-      "title": "Stop Time",
+      "title": "Stop Daylight Cycle",
       "bar_color": "lime",
       "hidden": false,
       "hidden_in_bar": false,
@@ -561,205 +1069,6 @@
             "type": "palladium:ability_unlocked",
             "power": "null",
             "ability": "fast_forward"
-          },
-          {
-            "type": "palladium:or",
-            "conditions": [
-              {
-                "type": "palladium:has_power",
-                "power": "infinity:infinity_gauntlet"
-              },
-              {
-                "type": "palladium:item_in_slot",
-                "item": {
-                  "item": "infinity:eye_of_agamotto"
-                },
-                "slot": "chest"
-              },
-              {
-                "type": "palladium:item_in_slot",
-                "item": {
-                  "item": "infinity:eye_of_agamotto"
-                },
-                "slot": "curios:necklace"
-              },
-              {
-                "type": "palladium:item_in_slot",
-                "item": {
-                  "item": "infinity:time_stone"
-                },
-                "slot": "mainhand"
-              },
-              {
-                "type": "palladium:item_in_slot",
-                "item": {
-                  "item": "infinity:time_stone"
-                },
-                "slot": "offhand"
-              },
-              {
-                "type": "palladium:item_in_slot",
-                "item": {
-                  "item": "infinity:eye_of_agamotto"
-                },
-                "slot": "mainhand"
-              },
-              {
-                "type": "palladium:item_in_slot",
-                "item": {
-                  "item": "infinity:eye_of_agamotto"
-                },
-                "slot": "offhand"
-              },
-              {
-                "type": "palladium:item_in_slot",
-                "item": {
-                  "item": "infinity:cosmi-rod_time"
-                },
-                "slot": "mainhand"
-              },
-              {
-                "type": "palladium:item_in_slot",
-                "item": {
-                  "item": "infinity:cosmi-rod_time"
-                },
-                "slot": "offhand"
-              }
-            ]
-          }
-        ]
-      }
-    },
-    "tick_speed_up": {
-      "type": "palladium:command",
-      "icon": "minecraft:textures/mob_effect/speed.png",
-      "title": "Faster Tick Speed",
-      "bar_color": "lime",
-      "hidden": false,
-      "hidden_in_bar": false,
-      "list_index": 3,
-      "gui_position": [0, 2],
-      "description": "Sets the randomTickSpeed to 100",
-      "first_tick_commands": [],
-      "last_tick_commands": [],
-      "commands": ["gamerule randomTickSpeed 100"],
-      "conditions": {
-        "enabling": [
-          {
-            "type": "palladium:action",
-            "cooldown": 0,
-            "key_type": "key_bind",
-            "needs_empty_hand": false
-          }
-        ],
-        "unlocking": [
-          {
-            "type": "palladium:item_buyable",
-            "ingredient": {
-              "item": "infinity:aspects_of_existance"
-            },
-            "amount": 1
-          },
-          {
-            "type": "palladium:ability_unlocked",
-            "power": "null",
-            "ability": "fast_forward"
-          },
-          {
-            "type": "palladium:or",
-            "conditions": [
-              {
-                "type": "palladium:has_power",
-                "power": "infinity:infinity_gauntlet"
-              },
-              {
-                "type": "palladium:item_in_slot",
-                "item": {
-                  "item": "infinity:eye_of_agamotto"
-                },
-                "slot": "chest"
-              },
-              {
-                "type": "palladium:item_in_slot",
-                "item": {
-                  "item": "infinity:eye_of_agamotto"
-                },
-                "slot": "curios:necklace"
-              },
-              {
-                "type": "palladium:item_in_slot",
-                "item": {
-                  "item": "infinity:time_stone"
-                },
-                "slot": "mainhand"
-              },
-              {
-                "type": "palladium:item_in_slot",
-                "item": {
-                  "item": "infinity:time_stone"
-                },
-                "slot": "offhand"
-              },
-              {
-                "type": "palladium:item_in_slot",
-                "item": {
-                  "item": "infinity:eye_of_agamotto"
-                },
-                "slot": "mainhand"
-              },
-              {
-                "type": "palladium:item_in_slot",
-                "item": {
-                  "item": "infinity:eye_of_agamotto"
-                },
-                "slot": "offhand"
-              },
-              {
-                "type": "palladium:item_in_slot",
-                "item": {
-                  "item": "infinity:cosmi-rod_time"
-                },
-                "slot": "mainhand"
-              },
-              {
-                "type": "palladium:item_in_slot",
-                "item": {
-                  "item": "infinity:cosmi-rod_time"
-                },
-                "slot": "offhand"
-              }
-            ]
-          }
-        ]
-      }
-    },
-    "tick_speed_down": {
-      "type": "palladium:command",
-      "icon": "minecraft:textures/mob_effect/slowness.png",
-      "title": "Reset Tick Speed",
-      "bar_color": "lime",
-      "hidden": true,
-      "hidden_in_bar": false,
-      "list_index": 4,
-      "gui_position": [0, 2],
-      "description": "Sets the randomTickSpeed to default",
-      "first_tick_commands": [],
-      "last_tick_commands": [],
-      "commands": ["gamerule randomTickSpeed 3"],
-      "conditions": {
-        "enabling": [
-          {
-            "type": "palladium:action",
-            "cooldown": 0,
-            "key_type": "key_bind",
-            "needs_empty_hand": false
-          }
-        ],
-        "unlocking": [
-          {
-            "type": "palladium:ability_unlocked",
-            "power": "null",
-            "ability": "tick_speed_up"
           },
           {
             "type": "palladium:or",

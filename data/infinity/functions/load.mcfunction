@@ -18,3 +18,7 @@ team add peaceful
 scoreboard objectives add initCheck dummy
 execute unless score global initCheck matches 2 run function infinity:init_once
 scoreboard players set @a blackholetoggle 0
+
+bossbar add time {"text":"Current Time Speed"}
+bossbar set minecraft:time color green
+bossbar set minecraft:time max 11
