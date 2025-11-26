@@ -1343,12 +1343,71 @@
                 "ability": "iron_man_suit_enabled",
                 "min": 9,
                 "max": 10
+              },
+              {
+                "type": "palladium:objective_score",
+                "objective": "satsu.iron.man.armor.actived",
+                "min_score": 1,
+                "max_score": 1
+              }
+            ]
+          },
+          {
+            "type": "palladium:not",
+            "conditions": [
+              {
+                "type": "palladium:ability_enabled",
+                "ability": "no_nano_gauntlet"
               }
             ]
           }
         ]
       }
     },
+
+    "no_nano_gauntlet": {
+      "type": "palladium:dummy",
+      "icon": "minecraft:blaze_rod",
+      "title": "Remove Nano Gauntlet (Iron Man Suit Enabled)",
+      "bar_color": "red",
+      "hidden": true,
+      "hidden_in_bar": false,
+      "list_index": 4,
+      "gui_position": "null",
+      "description": "null",
+      "conditions": {
+        "enabling": [
+          {
+            "type": "palladium:toggle",
+            "cooldown": 0,
+            "key_type": "key_bind",
+            "needs_empty_hand": false,
+            "allow_scrolling_when_crouching": true
+          }
+        ],
+        "unlocking": [
+          {
+            "type": "palladium:or",
+            "conditions": [
+              {
+                "type": "palladium:animation_timer_ability",
+                "power": "fsang:iron_man",
+                "ability": "iron_man_suit_enabled",
+                "min": 9,
+                "max": 10
+              },
+              {
+                "type": "palladium:objective_score",
+                "objective": "satsu.iron.man.armor.actived",
+                "min_score": 1,
+                "max_score": 1
+              }
+            ]
+          }
+        ]
+      }
+    },
+
     "render_layer_nano_gauntlet": {
       "type": "palladium:render_layer",
       "hidden": true,

@@ -1,0 +1,22 @@
+{
+  "type": "geckolib:default",
+  "model": "infinity:geo/time_rings.geo.json",
+  "animation_file": "infinity:animations/time_rings.animation.json",
+  "render_type": "glow",
+  "animation_controller": [
+    {
+      "name": "time_rings",
+      "transition_tick_time": 0,
+      "animation": "time_rings.animation"
+    }
+  ],
+  "texture": "infinity:textures/models/time_rings.png",
+  "bones": {
+    "head": "head",
+    "body": "body",
+    "right_arm": "right_arm",
+    "left_arm": "left_arm",
+    "right_leg": "right_leg",
+    "left_leg": "left_leg"
+  }
+}

@@ -444,13 +444,20 @@
       "gui_position": [2, 2],
       "description": "Freezes time around you.",
       "first_tick_commands": [
-        "playsound infinity:use_infinity_gauntlet block @s"
+        "playsound infinity:use_infinity_gauntlet block @s",
+        "timeclock pauseTime true",
+        "tag @s add pauseTime"
       ],
-      "commands": ["timeclock pauseTime true", "tag @s add pauseTime"],
+      "commands": [],
+      "last_tick_commands": [
+        "playsound infinity:use_infinity_gauntlet block @s",
+        "timeclock pauseTime false",
+        "tag @s remove pauseTime"
+      ],
       "conditions": {
         "enabling": [
           {
-            "type": "palladium:action",
+            "type": "palladium:toggle",
             "cooldown": 0,
             "key_type": "key_bind",
             "needs_empty_hand": false,
@@ -462,54 +469,6 @@
             "type": "palladium:ability_unlocked",
             "power": "null",
             "ability": "time_freeze_dummy"
-          },
-          {
-            "type": "palladium:not",
-            "conditions": [
-              {
-                "type": "palladium:has_tag",
-                "tag": "pauseTime"
-              }
-            ]
-          }
-        ]
-      }
-    },
-
-    "time_unfreeze": {
-      "type": "palladium:command",
-      "persistent_data": true,
-      "icon": "minecraft:barrier",
-      "title": "Time Resume",
-      "bar_color": "lime",
-      "hidden": true,
-      "hidden_in_bar": false,
-      "list_index": 4,
-      "gui_position": [2, 3],
-      "description": "Resumes the normal flow of time.",
-      "first_tick_commands": [
-        "playsound infinity:use_infinity_gauntlet block @s"
-      ],
-      "commands": ["timeclock pauseTime false", "tag @s remove pauseTime"],
-      "conditions": {
-        "enabling": [
-          {
-            "type": "palladium:action",
-            "cooldown": 0,
-            "key_type": "key_bind",
-            "needs_empty_hand": false,
-            "allow_scrolling_when_crouching": true
-          }
-        ],
-        "unlocking": [
-          {
-            "type": "palladium:ability_unlocked",
-            "power": "null",
-            "ability": "time_freeze_dummy"
-          },
-          {
-            "type": "palladium:has_tag",
-            "tag": "pauseTime"
           }
         ]
       }
@@ -1134,6 +1093,58 @@
                 "slot": "offhand"
               }
             ]
+          }
+        ]
+      }
+    },
+    "render_layer_time2": {
+      "type": "palladium:render_layer",
+      "hidden": true,
+      "hidden_in_bar": true,
+      "render_layer": "infinity:time_rings",
+      "conditions": {
+        "enabling": [
+          {
+            "type": "palladium:or",
+            "conditions": [
+              {
+                "type": "palladium:ability_enabled",
+                "ability": "fast_forward"
+              },
+              {
+                "type": "palladium:ability_enabled",
+                "ability": "projectile_stop"
+              },
+              {
+                "type": "palladium:ability_enabled",
+                "ability": "reset_time_speed"
+              },
+              {
+                "type": "palladium:ability_enabled",
+                "ability": "time_freeze"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "aim3": {
+      "type": "palladium:aim",
+      "icon": "minecraft:blaze_rod",
+      "title": "null",
+      "bar_color": "light_gray",
+      "hidden": true,
+      "hidden_in_bar": true,
+      "list_index": -1,
+      "gui_position": "null",
+      "description": "null",
+      "time": 10,
+      "arm": "off_arm",
+      "conditions": {
+        "enabling": [
+          {
+            "type": "palladium:ability_enabled",
+            "ability": "render_layer_time2"
           }
         ]
       }
