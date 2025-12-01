@@ -5,6 +5,18 @@
   "persistent_data": true,
   "gui_display_type": "tree",
   "ability_bar_texture": "infinity:textures/gui/ability_bars/time_ability_bar.png",
+  "energy_bars": {
+    "test": {
+      "color": "#3dff26",
+      "max": 11,
+      "min": 0,
+      "synced_value": {
+        "type": "score",
+        "objective": "timestonesidebar",
+        "fallback": 0
+      }
+    }
+  },
 
   "abilities": {
     "slow_time_dummy": {
@@ -1145,6 +1157,49 @@
           {
             "type": "palladium:ability_enabled",
             "ability": "render_layer_time2"
+          }
+        ]
+      }
+    },
+    "sidebar_thingies": {
+      "type": "palladium:command",
+      "icon": "minecraft:clock",
+      "title": "Slow Time",
+      "bar_color": "lime",
+      "hidden": true,
+      "hidden_in_bar": true,
+      "persistent_data": true,
+      "list_index": -1,
+      "description": "Slows the flow of Time",
+      "commands": [
+        "scoreboard objectives add timestonesidebar dummy",
+        "execute if score @s tickrateCycle matches -5 run scoreboard players set @s timestonesidebar 1",
+        "execute if score @s tickrateCycle matches -4 run scoreboard players set @s timestonesidebar 2",
+        "execute if score @s tickrateCycle matches -3 run scoreboard players set @s timestonesidebar 3",
+        "execute if score @s tickrateCycle matches -2 run scoreboard players set @s timestonesidebar 4",
+        "execute if score @s tickrateCycle matches -1 run scoreboard players set @s timestonesidebar 5",
+        "execute if score @s tickrateCycle matches 0 run scoreboard players set @s timestonesidebar 6",
+        "execute if score @s tickrateCycle matches 1 run scoreboard players set @s timestonesidebar 7",
+        "execute if score @s tickrateCycle matches 2 run scoreboard players set @s timestonesidebar 8",
+        "execute if score @s tickrateCycle matches 3 run scoreboard players set @s timestonesidebar 9",
+        "execute if score @s tickrateCycle matches 4 run scoreboard players set @s timestonesidebar 10",
+        "execute if score @s tickrateCycle matches 5 run scoreboard players set @s timestonesidebar 11"
+      ],
+      "first_tick_commands": [],
+      "last_tick_commands": [],
+      "conditions": {
+        "enabling": [
+          {
+            "type": "palladium:ability_enabled",
+            "power": "null",
+            "ability": "reset_time_speed"
+          }
+        ],
+        "unlocking": [
+          {
+            "type": "palladium:ability_unlocked",
+            "power": "null",
+            "ability": "slow_time_dummy"
           }
         ]
       }

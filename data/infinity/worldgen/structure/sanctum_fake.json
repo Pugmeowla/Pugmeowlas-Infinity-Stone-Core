@@ -2,7 +2,7 @@
   "type": "minecraft:jigsaw",
   "start_pool": "infinity:sanctum_fake/sanctum_fake",
   "size": 2,
-  "biomes": ["minecraft:plains"],
+  "biomes": "#minecraft:is_overworld",
   "step": "surface_structures",
   "max_distance_from_center": 80,
   "terrain_adaptation": "beard_thin",
@@ -11,7 +11,5 @@
   "start_height": {
     "absolute": 33
   },
-  "spawn_overrides": {
-
-  }
+  "spawn_overrides": {}
 }
