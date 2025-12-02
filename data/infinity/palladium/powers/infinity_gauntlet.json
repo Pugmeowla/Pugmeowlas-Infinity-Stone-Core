@@ -255,6 +255,91 @@
       "conditions": {
         "enabling": [
           {
+            "type": "palladium:not",
+            "conditions": [
+              {
+                "type": "palladium:or",
+                "conditions": [
+                  {
+                    "type": "palladium:ability_enabled",
+                    "power": "infinity:power_stone_passive",
+                    "ability": "explosion2"
+                  },
+                  {
+                    "type": "palladium:ability_enabled",
+                    "power": "infinity:power_stone_passive",
+                    "ability": "power_blast_aim"
+                  },
+                  {
+                    "type": "palladium:ability_enabled",
+                    "power": "infinity:power_stone_passive",
+                    "ability": "power_blast_aim_mainhand"
+                  },
+                  {
+                    "type": "palladium:ability_enabled",
+                    "power": "infinity:power_stone_passive",
+                    "ability": "power_bast_rainbow"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "palladium:objective_score",
+            "objective": "power_stone",
+            "min_score": 1,
+            "max_score": 1
+          },
+          {
+            "type": "palladium:or",
+            "conditions": [
+              {
+                "type": "palladium:item_in_slot",
+                "item": {
+                  "item": "infinity:infinity_gauntlet"
+                },
+                "slot": "offhand"
+              },
+              {
+                "type": "palladium:item_in_slot",
+                "item": {
+                  "item": "infinity:infinity_gauntlet"
+                },
+                "slot": "curios:hands"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "render_layer_power2": {
+      "type": "palladium:render_layer",
+      "hidden": true,
+      "hidden_in_bar": true,
+      "render_layer": "infinity:gauntlet_power_on",
+      "conditions": {
+        "enabling": [
+          {
+            "type": "palladium:or",
+            "conditions": [
+              {
+                "type": "palladium:ability_enabled",
+                "power": "infinity:power_stone_passive",
+                "ability": "explosion2"
+              },
+              {
+                "type": "palladium:ability_enabled",
+                "power": "infinity:power_stone_passive",
+                "ability": "power_blast_aim"
+              },
+              {
+                "type": "palladium:ability_enabled",
+                "power": "infinity:power_stone_passive",
+                "ability": "power_blast_aim_mainhand"
+              }
+            ]
+          },
+          {
             "type": "palladium:objective_score",
             "objective": "power_stone",
             "min_score": 1,
@@ -384,6 +469,86 @@
       "render_layer": "infinity:gauntlet_space",
       "conditions": {
         "enabling": [
+          {
+            "type": "palladium:not",
+            "conditions": [
+              {
+                "type": "palladium:or",
+                "conditions": [
+                  {
+                    "type": "palladium:ability_enabled",
+                    "power": "infinity:space_stone",
+                    "ability": "force_field"
+                  },
+                  {
+                    "type": "palladium:ability_enabled",
+                    "power": "infinity:space_stone",
+                    "ability": "grab_entity2"
+                  },
+                  {
+                    "type": "palladium:ability_enabled",
+                    "power": "infinity:power_stone_passive",
+                    "ability": "power_bast_rainbow"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "palladium:objective_score",
+            "objective": "space_stone",
+            "min_score": 1,
+            "max_score": 1
+          },
+          {
+            "type": "palladium:or",
+            "conditions": [
+              {
+                "type": "palladium:item_in_slot",
+                "item": {
+                  "item": "infinity:infinity_gauntlet"
+                },
+                "slot": "offhand"
+              },
+              {
+                "type": "palladium:item_in_slot",
+                "item": {
+                  "item": "infinity:infinity_gauntlet"
+                },
+                "slot": "curios:hands"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "render_layer_space2": {
+      "type": "palladium:render_layer",
+      "hidden": true,
+      "hidden_in_bar": true,
+      "render_layer": "infinity:gauntlet_space_on",
+      "conditions": {
+        "enabling": [
+          {
+            "type": "palladium:or",
+            "conditions": [
+              {
+                "type": "palladium:ability_enabled",
+                "power": "infinity:space_stone",
+                "ability": "force_field"
+              },
+              {
+                "type": "palladium:ability_enabled",
+                "power": "infinity:space_stone",
+                "ability": "grab_entity2"
+              },
+              {
+                "type": "palladium:ability_enabled",
+                "power": "infinity:power_stone_passive",
+                "ability": "power_bast_rainbow"
+              }
+            ]
+          },
           {
             "type": "palladium:objective_score",
             "objective": "space_stone",
@@ -515,6 +680,76 @@
       "conditions": {
         "enabling": [
           {
+            "type": "palladium:not",
+            "conditions": [
+              {
+                "type": "palladium:or",
+                "conditions": [
+                  {
+                    "type": "palladium:ability_enabled",
+                    "power": "infinity:reality_stone",
+                    "ability": "invisibility"
+                  },
+                  {
+                    "type": "palladium:ability_enabled",
+                    "power": "infinity:power_stone_passive",
+                    "ability": "power_bast_rainbow"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "palladium:objective_score",
+            "objective": "reality_stone",
+            "min_score": 1,
+            "max_score": 1
+          },
+          {
+            "type": "palladium:or",
+            "conditions": [
+              {
+                "type": "palladium:item_in_slot",
+                "item": {
+                  "item": "infinity:infinity_gauntlet"
+                },
+                "slot": "offhand"
+              },
+              {
+                "type": "palladium:item_in_slot",
+                "item": {
+                  "item": "infinity:infinity_gauntlet"
+                },
+                "slot": "curios:hands"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "render_layer_reality2": {
+      "type": "palladium:render_layer",
+      "hidden": true,
+      "hidden_in_bar": true,
+      "render_layer": "infinity:gauntlet_reality_on",
+      "conditions": {
+        "enabling": [
+          {
+            "type": "palladium:or",
+            "conditions": [
+              {
+                "type": "palladium:ability_enabled",
+                "power": "infinity:reality_stone",
+                "ability": "invisibility"
+              },
+              {
+                "type": "palladium:ability_enabled",
+                "power": "infinity:power_stone_passive",
+                "ability": "power_bast_rainbow"
+              }
+            ]
+          },
+          {
             "type": "palladium:objective_score",
             "objective": "reality_stone",
             "min_score": 1,
@@ -644,6 +879,106 @@
       "render_layer": "infinity:gauntlet_time",
       "conditions": {
         "enabling": [
+          {
+            "type": "palladium:not",
+            "conditions": [
+              {
+                "type": "palladium:or",
+                "conditions": [
+                  {
+                    "type": "palladium:ability_enabled",
+                    "power": "infinity:time_stone",
+                    "ability": "fast_forward"
+                  },
+                  {
+                    "type": "palladium:ability_enabled",
+                    "power": "infinity:time_stone",
+                    "ability": "projectile_stop"
+                  },
+                  {
+                    "type": "palladium:ability_enabled",
+                    "power": "infinity:time_stone",
+                    "ability": "reset_time_speed"
+                  },
+                  {
+                    "type": "palladium:ability_enabled",
+                    "power": "infinity:time_stone",
+                    "ability": "time_freeze"
+                  },
+                  {
+                    "type": "palladium:ability_enabled",
+                    "power": "infinity:power_stone_passive",
+                    "ability": "power_bast_rainbow"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "palladium:objective_score",
+            "objective": "time_stone",
+            "min_score": 1,
+            "max_score": 1
+          },
+          {
+            "type": "palladium:or",
+            "conditions": [
+              {
+                "type": "palladium:item_in_slot",
+                "item": {
+                  "item": "infinity:infinity_gauntlet"
+                },
+                "slot": "offhand"
+              },
+              {
+                "type": "palladium:item_in_slot",
+                "item": {
+                  "item": "infinity:infinity_gauntlet"
+                },
+                "slot": "curios:hands"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "render_layer_time2": {
+      "type": "palladium:render_layer",
+      "hidden": true,
+      "hidden_in_bar": true,
+      "render_layer": "infinity:gauntlet_time_on",
+      "conditions": {
+        "enabling": [
+          {
+            "type": "palladium:or",
+            "conditions": [
+              {
+                "type": "palladium:ability_enabled",
+                "power": "infinity:time_stone",
+                "ability": "fast_forward"
+              },
+              {
+                "type": "palladium:ability_enabled",
+                "power": "infinity:time_stone",
+                "ability": "projectile_stop"
+              },
+              {
+                "type": "palladium:ability_enabled",
+                "power": "infinity:time_stone",
+                "ability": "reset_time_speed"
+              },
+              {
+                "type": "palladium:ability_enabled",
+                "power": "infinity:time_stone",
+                "ability": "time_freeze"
+              },
+              {
+                "type": "palladium:ability_enabled",
+                "power": "infinity:power_stone_passive",
+                "ability": "power_bast_rainbow"
+              }
+            ]
+          },
           {
             "type": "palladium:objective_score",
             "objective": "time_stone",
@@ -775,6 +1110,76 @@
       "conditions": {
         "enabling": [
           {
+            "type": "palladium:not",
+            "conditions": [
+              {
+                "type": "palladium:or",
+                "conditions": [
+                  {
+                    "type": "palladium:ability_enabled",
+                    "power": "infinity:soul_stone",
+                    "ability": "glow"
+                  },
+                  {
+                    "type": "palladium:ability_enabled",
+                    "power": "infinity:power_stone_passive",
+                    "ability": "power_bast_rainbow"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "palladium:objective_score",
+            "objective": "soul_stone",
+            "min_score": 1,
+            "max_score": 1
+          },
+          {
+            "type": "palladium:or",
+            "conditions": [
+              {
+                "type": "palladium:item_in_slot",
+                "item": {
+                  "item": "infinity:infinity_gauntlet"
+                },
+                "slot": "offhand"
+              },
+              {
+                "type": "palladium:item_in_slot",
+                "item": {
+                  "item": "infinity:infinity_gauntlet"
+                },
+                "slot": "curios:hands"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "render_layer_soul2": {
+      "type": "palladium:render_layer",
+      "hidden": true,
+      "hidden_in_bar": true,
+      "render_layer": "infinity:gauntlet_soul_on",
+      "conditions": {
+        "enabling": [
+          {
+            "type": "palladium:or",
+            "conditions": [
+              {
+                "type": "palladium:ability_enabled",
+                "power": "infinity:soul_stone",
+                "ability": "glow"
+              },
+              {
+                "type": "palladium:ability_enabled",
+                "power": "infinity:power_stone_passive",
+                "ability": "power_bast_rainbow"
+              }
+            ]
+          },
+          {
             "type": "palladium:objective_score",
             "objective": "soul_stone",
             "min_score": 1,
@@ -904,6 +1309,76 @@
       "render_layer": "infinity:gauntlet_mind",
       "conditions": {
         "enabling": [
+          {
+            "type": "palladium:not",
+            "conditions": [
+              {
+                "type": "palladium:or",
+                "conditions": [
+                  {
+                    "type": "palladium:ability_enabled",
+                    "power": "infinity:mind_stone",
+                    "ability": "intangibility"
+                  },
+                  {
+                    "type": "palladium:ability_enabled",
+                    "power": "infinity:power_stone_passive",
+                    "ability": "power_bast_rainbow"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "palladium:objective_score",
+            "objective": "mind_stone",
+            "min_score": 1,
+            "max_score": 1
+          },
+          {
+            "type": "palladium:or",
+            "conditions": [
+              {
+                "type": "palladium:item_in_slot",
+                "item": {
+                  "item": "infinity:infinity_gauntlet"
+                },
+                "slot": "offhand"
+              },
+              {
+                "type": "palladium:item_in_slot",
+                "item": {
+                  "item": "infinity:infinity_gauntlet"
+                },
+                "slot": "curios:hands"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "render_layer_mind2": {
+      "type": "palladium:render_layer",
+      "hidden": true,
+      "hidden_in_bar": true,
+      "render_layer": "infinity:gauntlet_mind_on",
+      "conditions": {
+        "enabling": [
+          {
+            "type": "palladium:or",
+            "conditions": [
+              {
+                "type": "palladium:ability_enabled",
+                "power": "infinity:mind_stone",
+                "ability": "intangibility"
+              },
+              {
+                "type": "palladium:ability_enabled",
+                "power": "infinity:power_stone_passive",
+                "ability": "power_bast_rainbow"
+              }
+            ]
+          },
           {
             "type": "palladium:objective_score",
             "objective": "mind_stone",

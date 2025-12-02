@@ -381,6 +381,34 @@
         ]
       }
     },
+    "stuck": {
+      "type": "palladium:command",
+      "icon": "minecraft:command_block",
+      "title": "null",
+      "bar_color": "light_gray",
+      "hidden": true,
+      "hidden_in_bar": true,
+      "list_index": -1,
+      "gui_position": "null",
+      "description": "null",
+      "first_tick_commands": [
+        "gamemode adventure @s",
+        "effect give @s minecraft:resistance infinite 255 true"
+      ],
+      "last_tick_commands": [
+        "gamemode survival @s",
+        "effect clear @s minecraft:resistance"
+      ],
+      "commands": ["execute at @s as @s run tp @s @s"],
+      "conditions": {
+        "enabling": [
+          {
+            "type": "palladium:ability_enabled",
+            "ability": "force_field"
+          }
+        ]
+      }
+    },
 
     "force_field": {
       "type": "palladium:attribute_modifier",
@@ -489,80 +517,6 @@
       "amount": 2147483647,
       "operation": 0,
       "uuid": "498be4fb-af04-42f2-8948-e6ccdc0d99e1",
-      "conditions": {
-        "enabling": [
-          {
-            "type": "palladium:ability_enabled",
-            "ability": "force_field"
-          }
-        ],
-        "unlocking": [
-          {
-            "type": "palladium:or",
-            "conditions": [
-              {
-                "type": "palladium:has_power",
-                "power": "infinity:infinity_gauntlet"
-              },
-              {
-                "type": "palladium:item_in_slot",
-                "item": {
-                  "item": "infinity:tesseract"
-                },
-                "slot": "mainhand"
-              },
-              {
-                "type": "palladium:item_in_slot",
-                "item": {
-                  "item": "infinity:tesseract"
-                },
-                "slot": "offhand"
-              },
-              {
-                "type": "palladium:item_in_slot",
-                "item": {
-                  "item": "infinity:space_stone"
-                },
-                "slot": "mainhand"
-              },
-              {
-                "type": "palladium:item_in_slot",
-                "item": {
-                  "item": "infinity:space_stone"
-                },
-                "slot": "offhand"
-              },
-              {
-                "type": "palladium:item_in_slot",
-                "item": {
-                  "item": "infinity:cosmi-rod_space"
-                },
-                "slot": "mainhand"
-              },
-              {
-                "type": "palladium:item_in_slot",
-                "item": {
-                  "item": "infinity:cosmi-rod_space"
-                },
-                "slot": "offhand"
-              }
-            ]
-          }
-        ]
-      }
-    },
-
-    "Shield Block": {
-      "type": "pantheonsent:moon_knight_blocking",
-      "icon": "minecraft:blaze_rod",
-      "title": "null",
-      "persistent_data": true,
-      "bar_color": "light_gray",
-      "hidden": true,
-      "hidden_in_bar": true,
-      "list_index": -1,
-      "gui_position": "null",
-      "description": "null",
       "conditions": {
         "enabling": [
           {

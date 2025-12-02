@@ -1,0 +1,23 @@
+{
+  "format_version": "1.8.0",
+  "animations": {
+    "time_stone.animation": {
+      "loop": true,
+      "animation_length": 2,
+      "bones": {
+        "time": {
+          "rotation": {
+            "0.0": [0, 0, 0],
+            "1.0": [0, 0, 1.1],
+            "2.0": [0, 0, 0]
+          },
+          "scale": {
+            "0.0": [1, 1, 1],
+            "1.0": [1, 1, 1.01],
+            "2.0": [1, 1, 1]
+          }
+        }
+      }
+    }
+  }
+}

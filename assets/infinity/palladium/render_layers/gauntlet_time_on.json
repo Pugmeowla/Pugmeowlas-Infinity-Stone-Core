@@ -1,7 +1,7 @@
 {
   "type": "geckolib:default",
   "model": "infinity:geo/gauntlet.geo.json",
-  "texture": "infinity:textures/models/gauntlet_stone_time.png",
+  "texture": "infinity:textures/models/gauntlet_stone_time_on.png",
   "animation_file": "infinity:animations/time_stone.animation.json",
   "animation_controller": [
     {
@@ -10,6 +10,7 @@
       "animation": "time_stone.animation"
     }
   ],
+  "render_type": "glow",
   "enchantment_glint": true,
   "bones": {
     "head": "head",

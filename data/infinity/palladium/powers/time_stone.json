@@ -29,7 +29,7 @@
       "hidden_in_bar": true,
       "list_index": -1,
       "gui_position": [2, 1],
-      "description": "Change the speed of time by either scrolling forward or back, a bossbar will be shown to show how fast or slow you have made it.",
+      "description": "Change the speed of time by either scrolling forward or back, the side bar will be shown to show how fast or slow you have made it, middle is normal speed.",
       "conditions": {
         "unlocking": [
           {
@@ -106,9 +106,6 @@
       "list_index": 5,
       "description": "Slows the flow of Time",
       "commands": [
-        "bossbar set minecraft:time players @s",
-        "bossbar set minecraft:time color green",
-        "bossbar set minecraft:time max 11",
         "scoreboard objectives add tickrateCycle dummy",
         "execute if score @s tickrateCycle matches -5 run timeclock tickrate 40",
         "execute if score @s tickrateCycle matches -4 run timeclock tickrate 36",
@@ -165,18 +162,7 @@
         "execute if score @s tickrateCycle matches 6 run effect give @s minecraft:haste 100 118 true",
 
         "execute if score @s tickrateCycle matches 7 run effect clear @s minecraft:haste",
-        "execute if score @s tickrateCycle matches 7 run effect give @s minecraft:haste 100 120 true",
-        "execute if score @s tickrateCycle matches -5 run bossbar set minecraft:time value 1",
-        "execute if score @s tickrateCycle matches -4 run bossbar set minecraft:time value 2",
-        "execute if score @s tickrateCycle matches -3 run bossbar set minecraft:time value 3",
-        "execute if score @s tickrateCycle matches -2 run bossbar set minecraft:time value 4",
-        "execute if score @s tickrateCycle matches -1 run bossbar set minecraft:time value 5",
-        "execute if score @s tickrateCycle matches 0 run bossbar set minecraft:time value 6",
-        "execute if score @s tickrateCycle matches 1 run bossbar set minecraft:time value 7",
-        "execute if score @s tickrateCycle matches 2 run bossbar set minecraft:time value 8",
-        "execute if score @s tickrateCycle matches 3 run bossbar set minecraft:time value 9",
-        "execute if score @s tickrateCycle matches 4 run bossbar set minecraft:time value 10",
-        "execute if score @s tickrateCycle matches 5 run bossbar set minecraft:time value 11"
+        "execute if score @s tickrateCycle matches 7 run effect give @s minecraft:haste 100 120 true"
       ],
       "first_tick_commands": [
         "playsound infinity:use_infinity_gauntlet block @s"
@@ -223,9 +209,6 @@
       "list_index": 5,
       "description": "Accelerates the flow of Time",
       "commands": [
-        "bossbar set minecraft:time players @s",
-        "bossbar set minecraft:time color green",
-        "bossbar set minecraft:time max 11",
         "scoreboard objectives add tickrateCycle dummy",
         "execute if score @s tickrateCycle matches -5 run timeclock tickrate 40",
         "execute if score @s tickrateCycle matches -4 run timeclock tickrate 36",
@@ -285,18 +268,7 @@
         "execute if score @s tickrateCycle matches 6 run effect give @s minecraft:haste 100 118 true",
 
         "execute if score @s tickrateCycle matches 7 run effect clear @s minecraft:haste",
-        "execute if score @s tickrateCycle matches 7 run effect give @s minecraft:haste 100 120 true",
-        "execute if score @s tickrateCycle matches -5 run bossbar set minecraft:time value 1",
-        "execute if score @s tickrateCycle matches -4 run bossbar set minecraft:time value 2",
-        "execute if score @s tickrateCycle matches -3 run bossbar set minecraft:time value 3",
-        "execute if score @s tickrateCycle matches -2 run bossbar set minecraft:time value 4",
-        "execute if score @s tickrateCycle matches -1 run bossbar set minecraft:time value 5",
-        "execute if score @s tickrateCycle matches 0 run bossbar set minecraft:time value 6",
-        "execute if score @s tickrateCycle matches 1 run bossbar set minecraft:time value 7",
-        "execute if score @s tickrateCycle matches 2 run bossbar set minecraft:time value 8",
-        "execute if score @s tickrateCycle matches 3 run bossbar set minecraft:time value 9",
-        "execute if score @s tickrateCycle matches 4 run bossbar set minecraft:time value 10",
-        "execute if score @s tickrateCycle matches 5 run bossbar set minecraft:time value 11"
+        "execute if score @s tickrateCycle matches 7 run effect give @s minecraft:haste 100 120 true"
       ],
       "first_tick_commands": [
         "playsound infinity:use_infinity_gauntlet block @s"
@@ -344,10 +316,7 @@
       "description": "Resets the flow of Time",
       "first_tick_commands": ["function infinity:time_bar"],
       "commands": [],
-      "last_tick_commands": [
-        "bossbar remove minecraft:time",
-        "timeclock tickrate 20"
-      ],
+      "last_tick_commands": ["timeclock tickrate 20"],
       "conditions": {
         "enabling": [
           {

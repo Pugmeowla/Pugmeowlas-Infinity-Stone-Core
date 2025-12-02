@@ -12,6 +12,7 @@
       "icon": "minecraft:textures/mob_effect/glowing.png",
       "persistent_data": true,
       "title": "Glow",
+      "color": "#ff8800",
       "bar_color": "orange",
       "description": "Shows all entities around you",
       "hidden": false,
@@ -23,7 +24,7 @@
       "conditions": {
         "enabling": [
           {
-            "type": "palladium:toggle",
+            "type": "palladium:held",
             "cooldown": 0,
             "key_type": "key_bind",
             "needs_empty_hand": false,
@@ -495,7 +496,9 @@
       "first_tick_commands": [],
       "last_tick_commands": [],
       "commands": [
-        "execute as @e[distance=..5] run execute in infinity:soulworld run tp @s ~ 72 ~"
+        "tag @s remove in_soul",
+        "execute as @e[distance=..5] run execute in infinity:soulworld run tp @s ~ 72 ~",
+        "tag @s add in_soul"
       ],
       "conditions": {
         "enabling": [
@@ -525,7 +528,8 @@
             "type": "palladium:not",
             "conditions": [
               {
-                "type": "palladium:crouching"
+                "type": "palladium:has_tag",
+                "tag": "in_soul"
               }
             ]
           },
@@ -587,7 +591,8 @@
       "commands": [
         "execute as @e[distance=..5] run effect give @e[distance=..5] minecraft:slow_falling 20 1 true",
         "effect give @s minecraft:slow_falling 20 1 true",
-        "execute as @e[distance=..5] run execute in minecraft:overworld run tp @s ~ 72 ~"
+        "execute as @e[distance=..5] run execute in minecraft:overworld run tp @s ~ 72 ~",
+        "tag @s remove in_soul"
       ],
       "conditions": {
         "enabling": [
@@ -602,7 +607,8 @@
 
         "unlocking": [
           {
-            "type": "palladium:crouching"
+            "type": "palladium:has_tag",
+            "tag": "in_soul"
           },
           {
             "type": "palladium:or",
