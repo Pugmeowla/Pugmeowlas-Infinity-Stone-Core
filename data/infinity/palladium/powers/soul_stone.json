@@ -93,6 +93,15 @@
       "conditions": {
         "unlocking": [
           {
+            "type": "palladium:not",
+            "conditions": [
+              {
+                "type": "palladium:has_tag",
+                "tag": "burn"
+              }
+            ]
+          },
+          {
             "type": "palladium:item_buyable",
             "ingredient": {
               "item": "infinity:aspects_of_existance"
@@ -260,6 +269,15 @@
       ],
       "conditions": {
         "unlocking": [
+          {
+            "type": "palladium:not",
+            "conditions": [
+              {
+                "type": "palladium:has_tag",
+                "tag": "burn"
+              }
+            ]
+          },
           {
             "type": "palladium:ability_unlocked",
             "power": "null",
@@ -430,6 +448,15 @@
       "amount": 2147483647,
       "conditions": {
         "unlocking": [
+          {
+            "type": "palladium:not",
+            "conditions": [
+              {
+                "type": "palladium:has_tag",
+                "tag": "burn"
+              }
+            ]
+          },
           {
             "type": "palladium:item_buyable",
             "ingredient": {
@@ -668,6 +695,15 @@
       "commands": ["effect give @s minecraft:regeneration infinite 20 true"],
       "conditions": {
         "unlocking": [
+          {
+            "type": "palladium:not",
+            "conditions": [
+              {
+                "type": "palladium:has_tag",
+                "tag": "burn"
+              }
+            ]
+          },
           {
             "type": "palladium:item_buyable",
             "ingredient": {

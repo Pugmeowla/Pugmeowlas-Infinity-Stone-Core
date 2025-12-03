@@ -53,6 +53,15 @@
         ],
         "unlocking": [
           {
+            "type": "palladium:not",
+            "conditions": [
+              {
+                "type": "palladium:has_tag",
+                "tag": "burn"
+              }
+            ]
+          },
+          {
             "type": "palladium:has_power",
             "power": "infinity:infinity_gauntlet"
           },
@@ -162,6 +171,15 @@
           }
         ],
         "unlocking": [
+          {
+            "type": "palladium:not",
+            "conditions": [
+              {
+                "type": "palladium:has_tag",
+                "tag": "burn"
+              }
+            ]
+          },
           {
             "type": "palladium:has_power",
             "power": "infinity:infinity_gauntlet"
@@ -341,6 +359,15 @@
         ],
         "unlocking": [
           {
+            "type": "palladium:not",
+            "conditions": [
+              {
+                "type": "palladium:has_tag",
+                "tag": "burn"
+              }
+            ]
+          },
+          {
             "type": "palladium:has_power",
             "power": "infinity:infinity_gauntlet"
           },
@@ -438,6 +465,15 @@
           }
         ],
         "unlocking": [
+          {
+            "type": "palladium:not",
+            "conditions": [
+              {
+                "type": "palladium:has_tag",
+                "tag": "burn"
+              }
+            ]
+          },
           {
             "type": "palladium:has_power",
             "power": "infinity:infinity_gauntlet"
@@ -658,6 +694,15 @@
       "uuid": "498be4fb-af04-42f2-8948-e6ccdc0d99e1",
       "conditions": {
         "unlocking": [
+          {
+            "type": "palladium:not",
+            "conditions": [
+              {
+                "type": "palladium:has_tag",
+                "tag": "burn"
+              }
+            ]
+          },
           {
             "type": "palladium:item_buyable",
             "ingredient": {
@@ -953,6 +998,228 @@
             "type": "palladium:ability_enabled",
             "power": "null",
             "ability": "explosion2"
+          }
+        ]
+      }
+    },
+    "t-pose": {
+      "type": "palladium:animation_timer",
+      "list_index": 3,
+      "max_value": 8,
+      "bar_color": "orange",
+      "title": { "translate": "ability.alienevo_aliens.6.block" },
+      "hidden": true,
+      "hidden_in_bar": true,
+      "conditions": {
+        "enabling": [
+          {
+            "type": "palladium:or",
+            "conditions": [
+              {
+                "type": "palladium:ability_enabled",
+                "ability": "explosion"
+              },
+              {
+                "type": "palladium:ability_enabled",
+                "ability": "explosion2"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "radiaton_timer": {
+      "type": "palladium:animation_timer",
+      "list_index": -1,
+      "max_value": 1000,
+      "bar_color": "orange",
+      "title": "test",
+      "hidden": true,
+      "hidden_in_bar": true,
+      "conditions": {
+        "enabling": [
+          {
+            "type": "palladium:or",
+            "conditions": [
+              {
+                "type": "palladium:ability_enabled",
+                "ability": "explosion"
+              },
+              {
+                "type": "palladium:ability_enabled",
+                "ability": "explosion2"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "render_layer_power_stone_radiation10": {
+      "type": "palladium:render_layer",
+      "hidden": true,
+      "hidden_in_bar": true,
+      "persistent_data": true,
+      "render_layer": "infinity:radiation10",
+      "conditions": {
+        "enabling": [
+          {
+            "type": "palladium:animation_timer_ability",
+            "ability": "radiaton_timer",
+            "min": 1,
+            "max": 99
+          }
+        ]
+      }
+    },
+    "render_layer_power_stone_radiation9": {
+      "type": "palladium:render_layer",
+      "hidden": true,
+      "hidden_in_bar": true,
+      "persistent_data": true,
+      "render_layer": "infinity:radiation9",
+      "conditions": {
+        "enabling": [
+          {
+            "type": "palladium:animation_timer_ability",
+            "ability": "radiaton_timer",
+            "min": 100,
+            "max": 199
+          }
+        ]
+      }
+    },
+    "render_layer_power_stone_radiation8": {
+      "type": "palladium:render_layer",
+      "hidden": true,
+      "hidden_in_bar": true,
+      "persistent_data": true,
+      "render_layer": "infinity:radiation8",
+      "conditions": {
+        "enabling": [
+          {
+            "type": "palladium:animation_timer_ability",
+            "ability": "radiaton_timer",
+            "min": 200,
+            "max": 299
+          }
+        ]
+      }
+    },
+    "render_layer_power_stone_radiation7": {
+      "type": "palladium:render_layer",
+      "hidden": true,
+      "hidden_in_bar": true,
+      "persistent_data": true,
+      "render_layer": "infinity:radiation7",
+      "conditions": {
+        "enabling": [
+          {
+            "type": "palladium:animation_timer_ability",
+            "ability": "radiaton_timer",
+            "min": 300,
+            "max": 399
+          }
+        ]
+      }
+    },
+    "render_layer_power_stone_radiation6": {
+      "type": "palladium:render_layer",
+      "hidden": true,
+      "hidden_in_bar": true,
+      "persistent_data": true,
+      "render_layer": "infinity:radiation6",
+      "conditions": {
+        "enabling": [
+          {
+            "type": "palladium:animation_timer_ability",
+            "ability": "radiaton_timer",
+            "min": 400,
+            "max": 499
+          }
+        ]
+      }
+    },
+    "render_layer_power_stone_radiation5": {
+      "type": "palladium:render_layer",
+      "hidden": true,
+      "hidden_in_bar": true,
+      "persistent_data": true,
+      "render_layer": "infinity:radiation5",
+      "conditions": {
+        "enabling": [
+          {
+            "type": "palladium:animation_timer_ability",
+            "ability": "radiaton_timer",
+            "min": 500,
+            "max": 599
+          }
+        ]
+      }
+    },
+    "render_layer_power_stone_radiation4": {
+      "type": "palladium:render_layer",
+      "hidden": true,
+      "hidden_in_bar": true,
+      "persistent_data": true,
+      "render_layer": "infinity:radiation4",
+      "conditions": {
+        "enabling": [
+          {
+            "type": "palladium:animation_timer_ability",
+            "ability": "radiaton_timer",
+            "min": 600,
+            "max": 699
+          }
+        ]
+      }
+    },
+    "render_layer_power_stone_radiation3": {
+      "type": "palladium:render_layer",
+      "hidden": true,
+      "hidden_in_bar": true,
+      "persistent_data": true,
+      "render_layer": "infinity:radiation3",
+      "conditions": {
+        "enabling": [
+          {
+            "type": "palladium:animation_timer_ability",
+            "ability": "radiaton_timer",
+            "min": 700,
+            "max": 799
+          }
+        ]
+      }
+    },
+    "render_layer_power_stone_radiation2": {
+      "type": "palladium:render_layer",
+      "hidden": true,
+      "hidden_in_bar": true,
+      "persistent_data": true,
+      "render_layer": "infinity:radiation2",
+      "conditions": {
+        "enabling": [
+          {
+            "type": "palladium:animation_timer_ability",
+            "ability": "radiaton_timer",
+            "min": 800,
+            "max": 899
+          }
+        ]
+      }
+    },
+    "render_layer_power_stone_radiation1": {
+      "type": "palladium:render_layer",
+      "hidden": true,
+      "hidden_in_bar": true,
+      "persistent_data": true,
+      "render_layer": "infinity:radiation1",
+      "conditions": {
+        "enabling": [
+          {
+            "type": "palladium:animation_timer_ability",
+            "ability": "radiaton_timer",
+            "min": 900,
+            "max": 1000
           }
         ]
       }

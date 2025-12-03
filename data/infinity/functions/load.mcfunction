@@ -22,3 +22,5 @@ scoreboard players set @a blackholetoggle 0
 bossbar add time {"text":"Current Time Speed"}
 bossbar set minecraft:time color green
 bossbar set minecraft:time max 11
+
+scoreboard objectives add gauntlet5 dummy

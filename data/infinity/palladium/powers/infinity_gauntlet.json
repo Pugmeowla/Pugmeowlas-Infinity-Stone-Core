@@ -70,6 +70,70 @@
       "conditions": {
         "enabling": [
           {
+            "type": "palladium:not",
+            "conditions": [
+              {
+                "type": "palladium:has_tag",
+                "tag": "burn_texture"
+              }
+            ]
+          },
+          {
+            "type": "palladium:or",
+            "conditions": [
+              {
+                "type": "palladium:item_in_slot",
+                "item": {
+                  "item": "infinity:infinity_gauntlet"
+                },
+                "slot": "offhand"
+              },
+              {
+                "type": "palladium:item_in_slot",
+                "item": {
+                  "item": "infinity:infinity_gauntlet"
+                },
+                "slot": "curios:hands"
+              }
+            ]
+          },
+          {
+            "type": "palladium:not",
+            "conditions": [
+              {
+                "type": "palladium:or",
+                "conditions": [
+                  {
+                    "type": "palladium:has_tag",
+                    "tag": "nano_gauntlet"
+                  },
+                  {
+                    "type": "palladium:has_tag",
+                    "tag": "netherite_gauntlet"
+                  },
+                  {
+                    "type": "palladium:has_tag",
+                    "tag": "fantastic_four_skin"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "render_layer_burnt_gauntlet": {
+      "type": "palladium:render_layer",
+      "hidden": true,
+      "hidden_in_bar": true,
+      "render_layer": "infinity:gauntlet_burn",
+      "conditions": {
+        "enabling": [
+          {
+            "type": "palladium:has_tag",
+            "tag": "burn_texture"
+          },
+          {
             "type": "palladium:or",
             "conditions": [
               {
@@ -336,6 +400,10 @@
                 "type": "palladium:ability_enabled",
                 "power": "infinity:power_stone_passive",
                 "ability": "power_blast_aim_mainhand"
+              },
+              {
+                "type": "palladium:ability_enabled",
+                "ability": "destroy_stones"
               }
             ]
           },
@@ -546,6 +614,10 @@
                 "type": "palladium:ability_enabled",
                 "power": "infinity:power_stone_passive",
                 "ability": "power_bast_rainbow"
+              },
+              {
+                "type": "palladium:ability_enabled",
+                "ability": "destroy_stones"
               }
             ]
           },
@@ -746,6 +818,10 @@
                 "type": "palladium:ability_enabled",
                 "power": "infinity:power_stone_passive",
                 "ability": "power_bast_rainbow"
+              },
+              {
+                "type": "palladium:ability_enabled",
+                "ability": "destroy_stones"
               }
             ]
           },
@@ -976,6 +1052,10 @@
                 "type": "palladium:ability_enabled",
                 "power": "infinity:power_stone_passive",
                 "ability": "power_bast_rainbow"
+              },
+              {
+                "type": "palladium:ability_enabled",
+                "ability": "destroy_stones"
               }
             ]
           },
@@ -1176,6 +1256,10 @@
                 "type": "palladium:ability_enabled",
                 "power": "infinity:power_stone_passive",
                 "ability": "power_bast_rainbow"
+              },
+              {
+                "type": "palladium:ability_enabled",
+                "ability": "destroy_stones"
               }
             ]
           },
@@ -1376,6 +1460,10 @@
                 "type": "palladium:ability_enabled",
                 "power": "infinity:power_stone_passive",
                 "ability": "power_bast_rainbow"
+              },
+              {
+                "type": "palladium:ability_enabled",
+                "ability": "destroy_stones"
               }
             ]
           },
@@ -1465,127 +1553,7 @@
         ]
       }
     },
-    "snap": {
-      "type": "palladium:command",
-      "icon": "infinity:infinity_gauntlet",
-      "title": "Snap",
-      "bar_color": "yellow",
-      "hidden": true,
-      "hidden_in_bar": false,
-      "list_index": 1,
-      "gui_position": "null",
-      "description": "Snap",
-      "commands": [
-        "function infinity:snap1",
-        "playsound minecraft:block.conduit.activate master @a",
-        "playsound minecraft:entity.wither.spawn master @a",
-        "playsound minecraft:entity.lightning_bolt.thunder master @a",
-        "playsound minecraft:entity.ender_dragon.death master @a"
-      ],
-      "conditions": {
-        "enabling": [
-          {
-            "type": "palladium:action",
-            "cooldown": 0,
-            "key_type": "key_bind",
-            "needs_empty_hand": false,
-            "allow_scrolling_when_crouching": true
-          }
-        ],
-        "unlocking": [
-          {
-            "type": "palladium:has_power",
-            "power": "infinity:mind_stone"
-          },
-          {
-            "type": "palladium:has_power",
-            "power": "infinity:power_stone_passive"
-          },
-          {
-            "type": "palladium:has_power",
-            "power": "infinity:space_stone"
-          },
-          {
-            "type": "palladium:has_power",
-            "power": "infinity:reality_stone"
-          },
-          {
-            "type": "palladium:has_power",
-            "power": "infinity:time_stone"
-          },
-          {
-            "type": "palladium:has_power",
-            "power": "infinity:soul_stone"
-          }
-        ]
-      }
-    },
-    "destroy_stones": {
-      "type": "palladium:command",
-      "icon": "infinity:infinity_gauntlet",
-      "title": "Destroy All Stones",
-      "bar_color": "yellow",
-      "hidden": true,
-      "hidden_in_bar": false,
-      "list_index": 2,
-      "gui_position": "null",
-      "description": "Snap",
-      "commands": [
-        "superpower remove infinity:power_stone_passive",
-        "superpower remove infinity:space_stone",
-        "superpower remove infinity:reality_stone",
-        "superpower remove infinity:time_stone",
-        "superpower remove infinity:soul_stone",
-        "superpower remove infinity:mind_stone",
-        "playsound minecraft:block.conduit.activate master @a",
-        "playsound minecraft:entity.wither.spawn master @a",
-        "playsound minecraft:entity.lightning_bolt.thunder master @a",
-        "playsound minecraft:entity.ender_dragon.death master @a",
-        "scoreboard players set @s mind_stone 0",
-        "scoreboard players set @s power_stone 0",
-        "scoreboard players set @s reality_stone 0",
-        "scoreboard players set @s space_stone 0",
-        "scoreboard players set @s time_stone 0",
-        "scoreboard players set @s soul_stone 0"
-      ],
-      "conditions": {
-        "enabling": [
-          {
-            "type": "palladium:action",
-            "cooldown": 0,
-            "key_type": "key_bind",
-            "needs_empty_hand": false,
-            "allow_scrolling_when_crouching": true
-          }
-        ],
-        "unlocking": [
-          {
-            "type": "palladium:has_power",
-            "power": "infinity:mind_stone"
-          },
-          {
-            "type": "palladium:has_power",
-            "power": "infinity:power_stone_passive"
-          },
-          {
-            "type": "palladium:has_power",
-            "power": "infinity:space_stone"
-          },
-          {
-            "type": "palladium:has_power",
-            "power": "infinity:reality_stone"
-          },
-          {
-            "type": "palladium:has_power",
-            "power": "infinity:time_stone"
-          },
-          {
-            "type": "palladium:has_power",
-            "power": "infinity:soul_stone"
-          }
-        ]
-      }
-    },
+
     "render_layer_power_mark_85": {
       "type": "palladium:render_layer",
       "hidden": true,
@@ -2224,6 +2192,511 @@
       "title": "test",
       "hidden": true,
       "hidden_in_bar": true
+    },
+    "wheel": {
+      "type": "palladium:ability_wheel",
+      "icon": "infinity:infinity_gauntlet",
+      "title": "Snap Wheel",
+      "bar_color": "yellow",
+      "hidden": true,
+      "hidden_in_bar": false,
+      "list_index": 1,
+      "gui_position": "null",
+      "description": "null",
+      "abilities": ["kill_half", "kill_player", "destroy_stones"],
+      "texture": "null",
+      "disable_mouse_scrolling": false,
+      "disable_center_icon": false,
+      "conditions": {
+        "enabling": [
+          {
+            "type": "palladium:held",
+            "cooldown": 0,
+            "key_type": "key_bind",
+            "needs_empty_hand": false
+          }
+        ],
+        "unlocking": [
+          {
+            "type": "palladium:not",
+            "conditions": [
+              {
+                "type": "palladium:has_tag",
+                "tag": "burn"
+              }
+            ]
+          },
+          {
+            "type": "palladium:has_power",
+            "power": "infinity:mind_stone"
+          },
+          {
+            "type": "palladium:has_power",
+            "power": "infinity:power_stone_passive"
+          },
+          {
+            "type": "palladium:has_power",
+            "power": "infinity:space_stone"
+          },
+          {
+            "type": "palladium:has_power",
+            "power": "infinity:reality_stone"
+          },
+          {
+            "type": "palladium:has_power",
+            "power": "infinity:time_stone"
+          },
+          {
+            "type": "palladium:has_power",
+            "power": "infinity:soul_stone"
+          }
+        ]
+      }
+    },
+    "kill_half": {
+      "type": "palladium:command",
+      "icon": "infinity:infinity_gauntlet",
+      "title": "Kill Half of All Entities",
+      "bar_color": "yellow",
+      "hidden": true,
+      "hidden_in_bar": true,
+      "list_index": -1,
+      "gui_position": "null",
+      "description": "Snap",
+      "commands": [
+        "function infinity:infinity/snap",
+        "schedule function infinity:clear_burn 1d",
+        "tag @s add burn",
+        "tag @s add burn_texture",
+        "attribute @p minecraft:generic.max_health base set 1",
+        "damage @s 1"
+      ],
+      "conditions": {
+        "enabling": [
+          {
+            "type": "palladium:action",
+            "cooldown": 0,
+            "key_type": "key_bind",
+            "needs_empty_hand": false,
+            "allow_scrolling_when_crouching": true
+          }
+        ],
+        "unlocking": [
+          {
+            "type": "palladium:not",
+            "conditions": [
+              {
+                "type": "palladium:has_tag",
+                "tag": "burn"
+              }
+            ]
+          },
+          {
+            "type": "palladium:has_power",
+            "power": "infinity:mind_stone"
+          },
+          {
+            "type": "palladium:has_power",
+            "power": "infinity:power_stone_passive"
+          },
+          {
+            "type": "palladium:has_power",
+            "power": "infinity:space_stone"
+          },
+          {
+            "type": "palladium:has_power",
+            "power": "infinity:reality_stone"
+          },
+          {
+            "type": "palladium:has_power",
+            "power": "infinity:time_stone"
+          },
+          {
+            "type": "palladium:has_power",
+            "power": "infinity:soul_stone"
+          }
+        ]
+      }
+    },
+    "kill_player": {
+      "type": "palladium:command",
+      "icon": "minecraft:player_head",
+      "title": "Kill Other Players",
+      "bar_color": "yellow",
+      "hidden": true,
+      "hidden_in_bar": true,
+      "list_index": -1,
+      "gui_position": "null",
+      "description": "Snap",
+      "commands": [
+        "tag @s add exclude",
+        "tag @s add burn_texture",
+        "tag @s add burn",
+        "schedule function infinity:clear_burn 1d",
+        "attribute @p minecraft:generic.max_health base set 1",
+        "damage @s 1",
+        "kill @a[tag=!exclude]",
+        "tag @s remove exclude",
+        "playsound minecraft:block.conduit.activate master @a",
+        "playsound minecraft:entity.wither.spawn master @a",
+        "playsound minecraft:entity.lightning_bolt.thunder master @a",
+        "playsound minecraft:entity.ender_dragon.death master @a"
+      ],
+      "conditions": {
+        "enabling": [
+          {
+            "type": "palladium:action",
+            "cooldown": 0,
+            "key_type": "key_bind",
+            "needs_empty_hand": false,
+            "allow_scrolling_when_crouching": true
+          }
+        ],
+        "unlocking": [
+          {
+            "type": "palladium:not",
+            "conditions": [
+              {
+                "type": "palladium:has_tag",
+                "tag": "burn"
+              }
+            ]
+          },
+          {
+            "type": "palladium:has_power",
+            "power": "infinity:mind_stone"
+          },
+          {
+            "type": "palladium:has_power",
+            "power": "infinity:power_stone_passive"
+          },
+          {
+            "type": "palladium:has_power",
+            "power": "infinity:space_stone"
+          },
+          {
+            "type": "palladium:has_power",
+            "power": "infinity:reality_stone"
+          },
+          {
+            "type": "palladium:has_power",
+            "power": "infinity:time_stone"
+          },
+          {
+            "type": "palladium:has_power",
+            "power": "infinity:soul_stone"
+          }
+        ]
+      }
+    },
+    "destroy_stones": {
+      "type": "palladium:animation_timer",
+      "icon": "minecraft:barrier",
+      "list_index": 2,
+      "max_value": 350,
+      "bar_color": "orange",
+      "title": "Destroy Stones",
+      "hidden": true,
+      "hidden_in_bar": true,
+      "conditions": {
+        "enabling": [
+          {
+            "type": "palladium:toggle",
+            "cooldown": 0,
+            "key_type": "key_bind",
+            "needs_empty_hand": false,
+            "allow_scrolling_when_crouching": true
+          }
+        ],
+        "unlocking": [
+          {
+            "type": "palladium:not",
+            "conditions": [
+              {
+                "type": "palladium:has_tag",
+                "tag": "burn"
+              }
+            ]
+          },
+          {
+            "type": "palladium:has_power",
+            "power": "infinity:mind_stone"
+          },
+          {
+            "type": "palladium:has_power",
+            "power": "infinity:power_stone_passive"
+          },
+          {
+            "type": "palladium:has_power",
+            "power": "infinity:space_stone"
+          },
+          {
+            "type": "palladium:has_power",
+            "power": "infinity:reality_stone"
+          },
+          {
+            "type": "palladium:has_power",
+            "power": "infinity:time_stone"
+          },
+          {
+            "type": "palladium:has_power",
+            "power": "infinity:soul_stone"
+          }
+        ]
+      }
+    },
+    "destroy stone effects1": {
+      "type": "palladium:command",
+      "icon": "minecraft:command_block",
+      "title": "null",
+      "bar_color": "light_gray",
+      "hidden": true,
+      "hidden_in_bar": true,
+      "list_index": -1,
+      "gui_position": "null",
+      "description": "null",
+      "first_tick_commands": [],
+      "last_tick_commands": [],
+      "commands": [
+        "playsound block.beacon.ambient master @a ~ ~ ~ 1 1",
+        "particle dust_color_transition 1 0 1 1 1 1 1 ~ ~1 ~ 0.5 0.5 0.5 0 2 force",
+        "particle dust_color_transition 0 0 1 1 1 1 1 ~ ~1 ~ 0.5 0.5 0.5 0 2 force",
+        "particle dust_color_transition 1 0 0 1 1 1 1 ~ ~1 ~ 0.5 0.5 0.5 0 2 force",
+        "particle dust_color_transition 1 0.5 0 1 1 1 1 ~ ~1 ~ 0.5 0.5 0.5 0 2 force",
+        "particle dust_color_transition 0 1 0 1 1 1 1 ~ ~1 ~ 0.5 0.5 0.5 0 2 force",
+        "particle dust_color_transition 1 1 0 1 1 1 1 ~ ~1 ~ 0.5 0.5 0.5 0 2 force",
+        "effect give @s slowness 1 100 true"
+      ],
+      "conditions": {
+        "enabling": [
+          {
+            "type": "palladium:ability_enabled",
+            "power": "null",
+            "ability": "destroy_stones"
+          }
+        ]
+      }
+    },
+    "destroy stone effects2": {
+      "type": "palladium:command",
+      "icon": "minecraft:command_block",
+      "title": "null",
+      "bar_color": "light_gray",
+      "hidden": true,
+      "hidden_in_bar": true,
+      "list_index": -1,
+      "gui_position": "null",
+      "description": "null",
+      "first_tick_commands": [],
+      "last_tick_commands": [],
+      "commands": [
+        "particle dust_color_transition 1 0 1 5 1 1 1 ~ ~1 ~ 1.5 1.5 1.5 0 50 force",
+        "playsound block.respawn_anchor.set_spawn master @a ~ ~ ~ 1 0.16"
+      ],
+      "conditions": {
+        "enabling": [
+          {
+            "type": "palladium:animation_timer_ability",
+            "ability": "destroy_stones",
+            "min": 50,
+            "max": 50
+          }
+        ]
+      }
+    },
+    "destroy stone effects3": {
+      "type": "palladium:command",
+      "icon": "minecraft:command_block",
+      "title": "null",
+      "bar_color": "light_gray",
+      "hidden": true,
+      "hidden_in_bar": true,
+      "list_index": -1,
+      "gui_position": "null",
+      "description": "null",
+      "first_tick_commands": [],
+      "last_tick_commands": [],
+      "commands": [
+        "particle dust_color_transition 0 0 1 5 1 1 1 ~ ~1 ~ 1.5 1.5 1.5 0 50 force",
+        "playsound block.respawn_anchor.set_spawn master @a ~ ~ ~ 2 0.32"
+      ],
+      "conditions": {
+        "enabling": [
+          {
+            "type": "palladium:animation_timer_ability",
+            "ability": "destroy_stones",
+            "min": 100,
+            "max": 100
+          }
+        ]
+      }
+    },
+    "destroy stone effects4": {
+      "type": "palladium:command",
+      "icon": "minecraft:command_block",
+      "title": "null",
+      "bar_color": "light_gray",
+      "hidden": true,
+      "hidden_in_bar": true,
+      "list_index": -1,
+      "gui_position": "null",
+      "description": "null",
+      "first_tick_commands": [],
+      "last_tick_commands": [],
+      "commands": [
+        "particle dust_color_transition 1 0 0 5 1 1 1 ~ ~1 ~ 1.5 1.5 1.5 0 50 force",
+        "playsound block.respawn_anchor.set_spawn master @a ~ ~ ~ 3 0.48"
+      ],
+      "conditions": {
+        "enabling": [
+          {
+            "type": "palladium:animation_timer_ability",
+            "ability": "destroy_stones",
+            "min": 150,
+            "max": 150
+          }
+        ]
+      }
+    },
+    "destroy stone effects5": {
+      "type": "palladium:command",
+      "icon": "minecraft:command_block",
+      "title": "null",
+      "bar_color": "light_gray",
+      "hidden": true,
+      "hidden_in_bar": true,
+      "list_index": -1,
+      "gui_position": "null",
+      "description": "null",
+      "first_tick_commands": [],
+      "last_tick_commands": [],
+      "commands": [
+        "particle dust_color_transition 1 0.5 0 5 1 1 1 ~ ~1 ~ 1.5 1.5 1.5 0 50 force",
+        "playsound block.respawn_anchor.set_spawn master @a ~ ~ ~ 4 0.64"
+      ],
+      "conditions": {
+        "enabling": [
+          {
+            "type": "palladium:animation_timer_ability",
+            "ability": "destroy_stones",
+            "min": 200,
+            "max": 200
+          }
+        ]
+      }
+    },
+    "destroy stone effects6": {
+      "type": "palladium:command",
+      "icon": "minecraft:command_block",
+      "title": "null",
+      "bar_color": "light_gray",
+      "hidden": true,
+      "hidden_in_bar": true,
+      "list_index": -1,
+      "gui_position": "null",
+      "description": "null",
+      "first_tick_commands": [],
+      "last_tick_commands": [],
+      "commands": [
+        "particle dust_color_transition 0 1 0 5 1 1 1 ~ ~1 ~ 1.5 1.5 1.5 0 50 force",
+        "playsound block.respawn_anchor.set_spawn master @a ~ ~ ~ 5 0.8"
+      ],
+      "conditions": {
+        "enabling": [
+          {
+            "type": "palladium:animation_timer_ability",
+            "ability": "destroy_stones",
+            "min": 250,
+            "max": 250
+          }
+        ]
+      }
+    },
+    "destroy stone effects7": {
+      "type": "palladium:command",
+      "icon": "minecraft:command_block",
+      "title": "null",
+      "bar_color": "light_gray",
+      "hidden": true,
+      "hidden_in_bar": true,
+      "list_index": -1,
+      "gui_position": "null",
+      "description": "null",
+      "first_tick_commands": [],
+      "last_tick_commands": [],
+      "commands": [
+        "particle dust_color_transition 1 1 0 5 1 1 1 ~ ~1 ~ 1.5 1.5 1.5 0 50 force",
+        "playsound block.respawn_anchor.set_spawn master @a ~ ~ ~ 6 0.96"
+      ],
+      "conditions": {
+        "enabling": [
+          {
+            "type": "palladium:animation_timer_ability",
+            "ability": "destroy_stones",
+            "min": 300,
+            "max": 300
+          }
+        ]
+      }
+    },
+    "destroy stone effects8": {
+      "type": "palladium:command",
+      "icon": "minecraft:command_block",
+      "title": "null",
+      "bar_color": "light_gray",
+      "hidden": true,
+      "hidden_in_bar": true,
+      "list_index": -1,
+      "gui_position": "null",
+      "description": "null",
+      "first_tick_commands": [],
+      "last_tick_commands": [],
+      "commands": [
+        "tag @s add burn",
+        "tag @s add burn_texture",
+        "attribute @p minecraft:generic.max_health base set 1",
+        "damage @s 1",
+        "playsound minecraft:entity.firework_rocket.blast master @a ~ ~ ~ 1.5 2",
+        "function infinity:infinity/break_stones",
+        "execute in infinity:soulworld run tp @s ~ 72 ~",
+        "superpower remove infinity:power_stone_passive",
+        "superpower remove infinity:space_stone",
+        "superpower remove infinity:reality_stone",
+        "superpower remove infinity:time_stone",
+        "superpower remove infinity:soul_stone",
+        "superpower remove infinity:mind_stone",
+        "scoreboard players set @s mind_stone 0",
+        "scoreboard players set @s power_stone 0",
+        "scoreboard players set @s reality_stone 0",
+        "scoreboard players set @s space_stone 0",
+        "scoreboard players set @s time_stone 0",
+        "scoreboard players set @s soul_stone 0"
+      ],
+      "conditions": {
+        "enabling": [
+          {
+            "type": "palladium:animation_timer_ability",
+            "ability": "destroy_stones",
+            "min": 350,
+            "max": 350
+          }
+        ]
+      }
+    },
+    "render_layer_burn": {
+      "type": "palladium:render_layer",
+      "hidden": true,
+      "hidden_in_bar": true,
+      "persistent_data": true,
+      "render_layer": "infinity:burn",
+      "conditions": {
+        "enabling": [
+          {
+            "type": "palladium:has_tag",
+            "tag": "burn_texture"
+          }
+        ]
+      }
     }
   }
 }
