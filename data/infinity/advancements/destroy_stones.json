@@ -1,0 +1,33 @@
+{
+  "display": {
+    "title": {
+      "text": "The Universes Worst Weapon",
+      "color": "dark_purple",
+      "bold": true
+    },
+    "description": {
+      "text": "Destroy the Stones"
+    },
+    "icon": {
+      "item": "infinity:infinity_gauntlet"
+    },
+    "frame": "challenge",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "power": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": ["infinity:pugmeowla"]
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [["power"]],
+  "parent": "infinity:snap"
+}

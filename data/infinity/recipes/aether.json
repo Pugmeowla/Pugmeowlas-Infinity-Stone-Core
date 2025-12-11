@@ -1,22 +1,19 @@
 {
-    "type": "minecraft:crafting_shaped",
-    "pattern": [
-        "HG ",
-        "   ",
-        "   "
-    ],
-    "key": {
-        "H": {
-            "item": "infinity:reality_stone"
-        },
-        "G": {
-            "item": "infinity:empty_aether"
-        }
-        
-    
+  "type": "minecraft:crafting_shaped",
+  "pattern": ["  N", "IP ", "PI "],
+  "key": {
+    "N": {
+      "item": "minecraft:iron_nugget"
     },
-    "result": {
-        "item": "infinity:aether",
-        "count": 1
+    "I": {
+      "item": "minecraft:iron_ingot"
+    },
+    "P": {
+      "item": "infinity:iron_plate"
     }
+  },
+  "result": {
+    "item": "infinity:injection",
+    "count": 1
+  }
 }

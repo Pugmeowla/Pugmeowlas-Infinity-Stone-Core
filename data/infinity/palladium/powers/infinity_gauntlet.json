@@ -2392,7 +2392,8 @@
         "tag @s add burn",
         "tag @s add burn_texture",
         "attribute @p minecraft:generic.max_health base set 1",
-        "damage @s 1"
+        "damage @s 1",
+        "advancement grant @s only infinity:snap"
       ],
       "conditions": {
         "enabling": [
@@ -2793,7 +2794,8 @@
         "scoreboard players set @s reality_stone 0",
         "scoreboard players set @s space_stone 0",
         "scoreboard players set @s time_stone 0",
-        "scoreboard players set @s soul_stone 0"
+        "scoreboard players set @s soul_stone 0",
+        "advancement grant @s only infinity:destroy_stones"
       ],
       "conditions": {
         "enabling": [

@@ -25,6 +25,7 @@
       "set_on_fire_seconds": 1,
       "cause_fire": true,
       "smelt_blocks": true,
+      "commands_on_block_hit": ["particle minecraft:lava"],
       "conditions": {
         "enabling": [
           {
@@ -144,6 +145,7 @@
       "set_on_fire_seconds": 1,
       "cause_fire": true,
       "smelt_blocks": true,
+      "commands_on_block_hit": ["summon tnt"],
       "conditions": {
         "enabling": [
           {
@@ -450,6 +452,7 @@
       "set_on_fire_seconds": 1,
       "cause_fire": true,
       "smelt_blocks": true,
+      "commands_on_block_hit": ["summon tnt"],
       "conditions": {
         "enabling": [
           {
