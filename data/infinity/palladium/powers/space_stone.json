@@ -579,6 +579,31 @@
         ]
       }
     },
+    "vibrate_sound": {
+      "type": "palladium:command",
+      "persistent_data": true,
+      "icon": "minecraft:player_head",
+      "title": "Passive",
+      "bar_color": "yellow",
+      "hidden": true,
+      "hidden_in_bar": true,
+      "list_index": 0,
+      "gui_position": [0, -1],
+      "description": "Pacify hostile mobs around you",
+      "first_tick_commands": [
+        "playsound infinity:space_stone_forcefield block @s"
+      ],
+      "last_tick_commands": [],
+      "commands": [],
+      "conditions": {
+        "enabling": [
+          {
+            "type": "palladium:ability_enabled",
+            "ability": "force_field"
+          }
+        ]
+      }
+    },
     "black_hole_on": {
       "type": "palladium:command",
       "icon": "infinity:textures/icon/black_hole.png",

@@ -81,6 +81,7 @@
       "list_index": 1,
       "gui_position": [-1, -1],
       "description": "Shrinks the player to 1/10th scale",
+      "first_tick_commands": ["playsound infinity:reality_stone_size block @s"],
       "commands": ["scale set pehkui:base 0.1"],
       "conditions": {
         "enabling": [
@@ -178,6 +179,7 @@
       "list_index": 1,
       "gui_position": [-1, 0],
       "description": "Grows the player to 10x scale",
+      "first_tick_commands": ["playsound infinity:reality_stone_size block @s"],
       "commands": ["scale set pehkui:base 10"],
       "conditions": {
         "enabling": [
@@ -268,6 +270,7 @@
       "list_index": 1,
       "gui_position": [-2, -1],
       "description": "Returms the player to 1x scale",
+      "first_tick_commands": ["playsound infinity:reality_stone_size block @s"],
       "commands": ["scale set pehkui:base 1"],
       "conditions": {
         "enabling": [
@@ -349,7 +352,6 @@
         ]
       }
     },
-
     "invisibility": {
       "type": "palladium:invisibility",
       "icon": "palladium:textures/icon/invisibility.png",
@@ -438,7 +440,31 @@
         ]
       }
     },
-
+    "vibrate_sound": {
+      "type": "palladium:command",
+      "persistent_data": true,
+      "icon": "minecraft:player_head",
+      "title": "Passive",
+      "bar_color": "yellow",
+      "hidden": true,
+      "hidden_in_bar": true,
+      "list_index": 0,
+      "gui_position": [0, -1],
+      "description": "Pacify hostile mobs around you",
+      "first_tick_commands": [
+        "playsound infinity:reality_stone_invis block @s"
+      ],
+      "last_tick_commands": ["playsound infinity:reality_stone_invis block @s"],
+      "commands": [],
+      "conditions": {
+        "enabling": [
+          {
+            "type": "palladium:ability_enabled",
+            "ability": "invisibility"
+          }
+        ]
+      }
+    },
     "save_block_on": {
       "type": "palladium:command",
       "icon": "infinity:reality_stone",
@@ -450,7 +476,7 @@
       "list_index": 3,
       "gui_position": [0, -2],
       "description": "Turns on Block Duplication",
-      "first_tick_commands": [],
+      "first_tick_commands": ["playsound infinity:reality_stone block @s"],
       "last_tick_commands": [],
       "commands": ["tag @s add reality_copy_on"],
       "conditions": {
@@ -544,7 +570,7 @@
       "list_index": 3,
       "gui_position": [0, -3],
       "description": "Turns off Block Duplication",
-      "first_tick_commands": [],
+      "first_tick_commands": ["playsound infinity:reality_stone block @s"],
       "last_tick_commands": [],
       "commands": ["tag @s remove reality_copy_on"],
       "conditions": {
@@ -632,7 +658,7 @@
       "list_index": 0,
       "gui_position": [0, 0],
       "description": "Gives entities nearby blindness, nausea, darkness and slowness",
-      "first_tick_commands": [],
+      "first_tick_commands": ["playsound infinity:reality_stone block @s"],
       "last_tick_commands": [],
       "commands": [
         "effect give @e[distance=..100] minecraft:blindness 100 1 true",
@@ -736,7 +762,6 @@
         ]
       }
     },
-
     "aim2": {
       "type": "palladium:aim",
       "hidden": true,
@@ -820,7 +845,9 @@
       "list_index": 4,
       "gui_position": [0, -3],
       "description": "Turns the block you look at into bubbles (dont stand right next to the block, stand like 2 blocks away)",
-      "first_tick_commands": [],
+      "first_tick_commands": [
+        "playsound infinity:reality_stone_bubble block @s"
+      ],
       "last_tick_commands": [],
       "commands": [
         "execute as @p at @s anchored eyes positioned ^ ^ ^2 run setblock ~ ~ ~ air",

@@ -106,6 +106,7 @@
       "list_index": 5,
       "description": "Slows the flow of Time",
       "commands": [
+        "playsound minecraft:block.comparator.click block @s",
         "scoreboard objectives add tickrateCycle dummy",
         "execute if score @s tickrateCycle matches -5 run timeclock tickrate 40",
         "execute if score @s tickrateCycle matches -4 run timeclock tickrate 36",
@@ -210,6 +211,7 @@
       "description": "Accelerates the flow of Time",
       "commands": [
         "scoreboard objectives add tickrateCycle dummy",
+        "playsound minecraft:block.comparator.click block @s",
         "execute if score @s tickrateCycle matches -5 run timeclock tickrate 40",
         "execute if score @s tickrateCycle matches -4 run timeclock tickrate 36",
         "execute if score @s tickrateCycle matches -3 run timeclock tickrate 32",
@@ -425,13 +427,13 @@
       "gui_position": [2, 2],
       "description": "Freezes time around you.",
       "first_tick_commands": [
-        "playsound infinity:use_infinity_gauntlet block @s",
+        "playsound infinity:time_stone block @s",
         "timeclock pauseTime true",
         "tag @s add pauseTime"
       ],
       "commands": [],
       "last_tick_commands": [
-        "playsound infinity:use_infinity_gauntlet block @s",
+        "playsound infinity:time_stone block @s",
         "timeclock pauseTime false",
         "tag @s remove pauseTime"
       ],
@@ -465,7 +467,7 @@
       "list_index": 0,
       "gui_position": [0, 1],
       "description": "Fast forwards daylight cycle",
-      "first_tick_commands": [],
+      "first_tick_commands": ["playsound infinity:time_stone block @s"],
       "last_tick_commands": [],
       "commands": ["time add 100"],
       "conditions": {
@@ -564,7 +566,7 @@
       "list_index": 1,
       "gui_position": [0, 0],
       "description": "Stops the daylight cycle, press again to restart cycle",
-      "first_tick_commands": [],
+      "first_tick_commands": ["playsound infinity:time_stone block @s"],
       "last_tick_commands": [],
       "commands": ["tag @s add cycle_off", "gamerule doDaylightCycle false"],
       "conditions": {
@@ -677,7 +679,7 @@
       "list_index": 1,
       "gui_position": [1, 0],
       "description": "Starts the daylight cycle",
-      "first_tick_commands": [],
+      "first_tick_commands": ["playsound infinity:time_stone block @s"],
       "last_tick_commands": [],
       "commands": ["gamerule doDaylightCycle true", "tag @s remove cycle_off"],
       "conditions": {
@@ -833,7 +835,7 @@
       "list_index": 2,
       "gui_position": [-1, 1],
       "description": "Stops all projectiles around you. When you leave them, the projectiles will eventually regain momentumn",
-      "first_tick_commands": [],
+      "first_tick_commands": ["playsound infinity:time_stone block @s"],
       "last_tick_commands": [],
       "commands": ["function infinity:stop"],
       "conditions": {

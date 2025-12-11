@@ -274,6 +274,29 @@
         ]
       }
     },
+    "vibrate_sound": {
+      "type": "palladium:command",
+      "persistent_data": true,
+      "icon": "minecraft:player_head",
+      "title": "Passive",
+      "bar_color": "yellow",
+      "hidden": true,
+      "hidden_in_bar": true,
+      "list_index": 0,
+      "gui_position": [0, -1],
+      "description": "Pacify hostile mobs around you",
+      "first_tick_commands": ["playsound infinity:mind_stone_phase block @s"],
+      "last_tick_commands": [],
+      "commands": [],
+      "conditions": {
+        "enabling": [
+          {
+            "type": "palladium:ability_enabled",
+            "ability": "intangibility"
+          }
+        ]
+      }
+    },
     "passive": {
       "type": "palladium:command",
       "persistent_data": true,
@@ -285,7 +308,7 @@
       "list_index": 0,
       "gui_position": [0, -1],
       "description": "Pacify hostile mobs around you",
-      "first_tick_commands": [],
+      "first_tick_commands": ["playsound infinity:mind_stone_phase block @s"],
       "last_tick_commands": [],
       "commands": [
         "team join peaceful",
@@ -394,7 +417,7 @@
       "list_index": 0,
       "gui_position": "null",
       "description": "Un-Pacify hostile mobs around you",
-      "first_tick_commands": [],
+      "first_tick_commands": ["playsound infinity:mind_stone_phase block @s"],
       "last_tick_commands": [],
       "commands": [
         "team leave peaceful",

@@ -598,6 +598,38 @@
         ]
       }
     },
+    "vibrate_sound": {
+      "type": "palladium:command",
+      "persistent_data": true,
+      "icon": "minecraft:player_head",
+      "title": "Passive",
+      "bar_color": "yellow",
+      "hidden": true,
+      "hidden_in_bar": true,
+      "list_index": 0,
+      "gui_position": [0, -1],
+      "description": "Pacify hostile mobs around you",
+      "first_tick_commands": ["playsound infinity:power_stone_beam1 block @s"],
+      "last_tick_commands": [],
+      "commands": [],
+      "conditions": {
+        "enabling": [
+          {
+            "type": "palladium:or",
+            "conditions": [
+              {
+                "type": "palladium:ability_enabled",
+                "ability": "power_blast_aim"
+              },
+              {
+                "type": "palladium:ability_enabled",
+                "ability": "power_blast_aim_mainhand"
+              }
+            ]
+          }
+        ]
+      }
+    },
     "impower": {
       "type": "palladium:command",
       "persistent_data": true,
@@ -609,7 +641,7 @@
       "list_index": 0,
       "gui_position": [0, 0],
       "description": "It gives the player both health boost and resistance",
-      "first_tick_commands": [],
+      "first_tick_commands": ["playsound infinity:reality_stone block @s"],
       "last_tick_commands": [],
       "commands": [
         "effect give @s minecraft:health_boost 90 5 true",
@@ -838,7 +870,9 @@
       "list_index": -1,
       "gui_position": [0, 1],
       "description": "Without protection, the player is bombarded with cosmic radiation, destroying the environment and user in the process.",
-      "first_tick_commands": [],
+      "first_tick_commands": [
+        "playsound infinity:power_stone_explode block @s"
+      ],
       "last_tick_commands": [],
       "commands": [
         "/summon tnt ~8 ~ ~ {Fuse:0}",
@@ -903,7 +937,9 @@
       "list_index": 2,
       "gui_position": [0, -2],
       "description": "The player used to be bombarded with cosmic radiation, destroying the environment and user in the process, but it can now be controlled.",
-      "first_tick_commands": [],
+      "first_tick_commands": [
+        "playsound infinity:power_stone_explode block @s"
+      ],
       "last_tick_commands": [],
       "commands": [
         "/summon tnt ~8 ~ ~ {Fuse:0}",

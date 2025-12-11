@@ -24,7 +24,7 @@
     "sounds": ["infinity:use_infinity_gauntlet"]
   },
   "mind_stone_phase": {
-    "sounds": ["infinity:mind_stone_phase1", "mind_stone_phase2"]
+    "sounds": ["infinity:mind_stone_phase1", "infinity:mind_stone_phase2"]
   },
   "nano_gauntlet": {
     "sounds": ["infinity:nano_gauntlet"]

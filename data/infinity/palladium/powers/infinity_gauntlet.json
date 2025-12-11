@@ -479,6 +479,7 @@
       "gui_position": "null",
       "description": "Remove Power Stone",
       "commands": [
+        "playsound infinity:stone_remove block @s",
         "execute as @s run clear @s infinity:power_stone",
         "execute as @s run function infinity:givepowerstone",
         "execute as @s run superpower remove infinity:power_stone_passive @s",
@@ -693,6 +694,7 @@
       "gui_position": "null",
       "description": "Remove Space Stone",
       "commands": [
+        "playsound infinity:stone_remove block @s",
         "execute as @s run clear @s infinity:space_stone",
         "execute as @s run function infinity:givespacestone",
         "execute as @s run superpower remove infinity:space_stone @s",
@@ -897,6 +899,7 @@
       "gui_position": "null",
       "description": "Remove Reality Stone",
       "commands": [
+        "playsound infinity:stone_remove block @s",
         "execute as @s run clear @s infinity:reality_stone",
         "execute as @s run function infinity:giverealitystone",
         "execute as @s run superpower remove infinity:reality_stone @s",
@@ -1130,6 +1133,7 @@
       "gui_position": "null",
       "description": "Remove Time Stone",
       "commands": [
+        "playsound infinity:stone_remove block @s",
         "execute as @s run clear @s infinity:time_stone",
         "execute as @s run function infinity:givetimestone",
         "execute as @s run superpower remove infinity:time_stone @s",
@@ -1335,6 +1339,7 @@
       "gui_position": "null",
       "description": "Remove Soul Stone",
       "commands": [
+        "playsound infinity:stone_remove block @s",
         "execute as @s run clear @s infinity:soul_stone",
         "execute as @s run function infinity:givesoulstone",
         "execute as @s run superpower remove infinity:soul_stone @s",
@@ -1538,6 +1543,7 @@
       "gui_position": "null",
       "description": "Remove Mind Stone",
       "commands": [
+        "playsound infinity:stone_remove block @s",
         "execute as @s run clear @s infinity:mind_stone",
         "execute as @s run function infinity:givemindstone",
         "execute as @s run superpower remove infinity:mind_stone @s",
@@ -2008,7 +2014,8 @@
       "last_tick_commands": [],
       "commands": [
         "clear @s palladium:vibranium_flux_capacitor",
-        "tag @s add nano_gauntlet"
+        "tag @s add nano_gauntlet",
+        "playsound infinity:nano_gauntlet block @s"
       ],
       "conditions": {
         "enabling": [
