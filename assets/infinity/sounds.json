@@ -22,5 +22,49 @@
   },
   "use_infinity_gauntlet": {
     "sounds": ["infinity:use_infinity_gauntlet"]
+  },
+  "mind_stone_phase": {
+    "sounds": ["infinity:mind_stone_phase1", "mind_stone_phase2"]
+  },
+  "nano_gauntlet": {
+    "sounds": ["infinity:nano_gauntlet"]
+  },
+  "power_stone_beam1": {
+    "sounds": [
+      "infinity:power_stone_beam1",
+      "infinity:power_stone_beam2",
+      "infinity:power_stone_beam3"
+    ]
+  },
+  "power_stone_explode": {
+    "sounds": ["infinity:power_stone_explode"]
+  },
+  "reality_stone_bubble": {
+    "sounds": ["infinity:reality_stone_bubble"]
+  },
+  "reality_stone_invis": {
+    "sounds": ["infinity:reality_stone_invis"]
+  },
+  "reality_stone_size": {
+    "sounds": ["infinity:reality_stone_size"]
+  },
+  "reality_stone": {
+    "sounds": [
+      "infinity:reality_stone1",
+      "infinity:reality_stone2",
+      "infinity:reality_stone3"
+    ]
+  },
+  "soul_stone": {
+    "sounds": ["infinity:soul_stone"]
+  },
+  "space_stone_forcefield": {
+    "sounds": ["infinity:space_stone_forcefield"]
+  },
+  "stone_remove": {
+    "sounds": ["infinity:stone_remove"]
+  },
+  "time_stone": {
+    "sounds": ["infinity:time_stone1", "time_stone2", "time_stone3"]
   }
 }
