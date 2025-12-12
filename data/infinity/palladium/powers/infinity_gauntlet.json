@@ -1,6 +1,6 @@
 {
   "name": "Infinity Gauntlet",
-  "background": "minecraft:textures/block/gold_block.png",
+  "background": "minecraft:textures/block/sculk_sensor_bottom.png",
   "icon": "infinity:infinity_gauntlet",
   "ability_bar_texture": "infinity:textures/gui/ability_bars/infinity_ability_bar.png",
   "gui_display_type": "tree",
@@ -292,7 +292,10 @@
         "clear @s infinity:power_stone 1",
         "superpower add infinity:power_stone_passive @s",
         "scoreboard players set @s power_stone 1",
-        "playsound infinity:infinity_stone_equip block @s"
+        "playsound infinity:infinity_stone_equip block @s",
+        "tag @s add insert_anim",
+        "schedule function infinity:remove_insert_anim 20t",
+        "particle dust_color_transition 1 0 1 5 1 1 1 ~ ~1 ~ 1.5 1.5 1.5 0 50 force"
       ],
       "conditions": {
         "enabling": [
@@ -483,7 +486,10 @@
         "execute as @s run clear @s infinity:power_stone",
         "execute as @s run function infinity:givepowerstone",
         "execute as @s run superpower remove infinity:power_stone_passive @s",
-        "scoreboard players set @s power_stone 0"
+        "scoreboard players set @s power_stone 0",
+        "tag @s add insert_anim",
+        "schedule function infinity:remove_insert_anim 20t",
+        "particle dust_color_transition 1 0 1 5 1 1 1 ~ ~1 ~ 1.5 1.5 1.5 0 50 force"
       ],
       "conditions": {
         "enabling": [
@@ -497,8 +503,10 @@
         ],
         "unlocking": [
           {
-            "type": "palladium:has_power",
-            "power": "infinity:power_stone_passive"
+            "type": "palladium:objective_score",
+            "objective": "power_stone",
+            "min_score": 1,
+            "max_score": 1
           }
         ]
       }
@@ -518,7 +526,10 @@
         "clear @s infinity:space_stone 1",
         "superpower add infinity:space_stone @s",
         "scoreboard players set @s space_stone 1",
-        "playsound infinity:infinity_stone_equip block @s"
+        "playsound infinity:infinity_stone_equip block @s",
+        "tag @s add insert_anim",
+        "schedule function infinity:remove_insert_anim 20t",
+        "particle dust_color_transition 0 0 1 5 1 1 1 ~ ~1 ~ 1.5 1.5 1.5 0 50 force"
       ],
       "conditions": {
         "enabling": [
@@ -698,7 +709,10 @@
         "execute as @s run clear @s infinity:space_stone",
         "execute as @s run function infinity:givespacestone",
         "execute as @s run superpower remove infinity:space_stone @s",
-        "scoreboard players set @s space_stone 0"
+        "scoreboard players set @s space_stone 0",
+        "tag @s add insert_anim",
+        "schedule function infinity:remove_insert_anim 20t",
+        "particle dust_color_transition 0 0 1 5 1 1 1 ~ ~1 ~ 1.5 1.5 1.5 0 50 force"
       ],
       "conditions": {
         "enabling": [
@@ -712,8 +726,10 @@
         ],
         "unlocking": [
           {
-            "type": "palladium:has_power",
-            "power": "infinity:space_stone"
+            "type": "palladium:objective_score",
+            "objective": "space_stone",
+            "min_score": 1,
+            "max_score": 1
           }
         ]
       }
@@ -732,7 +748,10 @@
         "clear @s infinity:reality_stone 1",
         "superpower add infinity:reality_stone @s",
         "scoreboard players set @s reality_stone 1",
-        "playsound infinity:infinity_stone_equip block @s"
+        "playsound infinity:infinity_stone_equip block @s",
+        "tag @s add insert_anim",
+        "schedule function infinity:remove_insert_anim 20t",
+        "particle dust_color_transition 1 0 0 5 1 1 1 ~ ~1 ~ 1.5 1.5 1.5 0 50 force"
       ],
       "conditions": {
         "enabling": [
@@ -903,7 +922,10 @@
         "execute as @s run clear @s infinity:reality_stone",
         "execute as @s run function infinity:giverealitystone",
         "execute as @s run superpower remove infinity:reality_stone @s",
-        "scoreboard players set @s reality_stone 0"
+        "scoreboard players set @s reality_stone 0",
+        "tag @s add insert_anim",
+        "schedule function infinity:remove_insert_anim 20t",
+        "particle dust_color_transition 1 0 0 5 1 1 1 ~ ~1 ~ 1.5 1.5 1.5 0 50 force"
       ],
       "conditions": {
         "enabling": [
@@ -917,8 +939,10 @@
         ],
         "unlocking": [
           {
-            "type": "palladium:has_power",
-            "power": "infinity:reality_stone"
+            "type": "palladium:objective_score",
+            "objective": "reality_stone",
+            "min_score": 1,
+            "max_score": 1
           }
         ]
       }
@@ -937,7 +961,10 @@
         "clear @s infinity:time_stone 1",
         "superpower add infinity:time_stone @s",
         "scoreboard players set @s time_stone 1",
-        "playsound infinity:infinity_stone_equip block @s"
+        "playsound infinity:infinity_stone_equip block @s",
+        "tag @s add insert_anim",
+        "schedule function infinity:remove_insert_anim 20t",
+        "particle dust_color_transition 0 1 0 5 1 1 1 ~ ~1 ~ 1.5 1.5 1.5 0 50 force"
       ],
       "conditions": {
         "enabling": [
@@ -1138,7 +1165,10 @@
         "execute as @s run function infinity:givetimestone",
         "execute as @s run superpower remove infinity:time_stone @s",
         "scoreboard players set @s time_stone 0",
-        "clear @s infinity:eye_of_agamotto"
+        "clear @s infinity:eye_of_agamotto",
+        "tag @s add insert_anim",
+        "schedule function infinity:remove_insert_anim 20t",
+        "particle dust_color_transition 0 1 0 5 1 1 1 ~ ~1 ~ 1.5 1.5 1.5 0 50 force"
       ],
       "conditions": {
         "enabling": [
@@ -1152,8 +1182,10 @@
         ],
         "unlocking": [
           {
-            "type": "palladium:has_power",
-            "power": "infinity:time_stone"
+            "type": "palladium:objective_score",
+            "objective": "time_stone",
+            "min_score": 1,
+            "max_score": 1
           }
         ]
       }
@@ -1172,7 +1204,10 @@
         "clear @s infinity:soul_stone 1",
         "superpower add infinity:soul_stone @s",
         "scoreboard players set @s soul_stone 1",
-        "playsound infinity:infinity_stone_equip block @s"
+        "playsound infinity:infinity_stone_equip block @s",
+        "tag @s add insert_anim",
+        "schedule function infinity:remove_insert_anim 20t",
+        "particle dust_color_transition 1 0.5 0 5 1 1 1 ~ ~1 ~ 1.5 1.5 1.5 0 50 force"
       ],
       "conditions": {
         "enabling": [
@@ -1343,7 +1378,10 @@
         "execute as @s run clear @s infinity:soul_stone",
         "execute as @s run function infinity:givesoulstone",
         "execute as @s run superpower remove infinity:soul_stone @s",
-        "scoreboard players set @s soul_stone 0"
+        "scoreboard players set @s soul_stone 0",
+        "tag @s add insert_anim",
+        "schedule function infinity:remove_insert_anim 20t",
+        "particle dust_color_transition 1 0.5 0 5 1 1 1 ~ ~1 ~ 1.5 1.5 1.5 0 50 force"
       ],
       "conditions": {
         "enabling": [
@@ -1357,8 +1395,10 @@
         ],
         "unlocking": [
           {
-            "type": "palladium:has_power",
-            "power": "infinity:soul_stone"
+            "type": "palladium:objective_score",
+            "objective": "soul_stone",
+            "min_score": 1,
+            "max_score": 1
           }
         ]
       }
@@ -1377,7 +1417,10 @@
         "clear @s infinity:mind_stone 1",
         "superpower add infinity:mind_stone @s",
         "scoreboard players set @s mind_stone 1",
-        "playsound infinity:infinity_stone_equip block @s"
+        "playsound infinity:infinity_stone_equip block @s",
+        "tag @s add insert_anim",
+        "schedule function infinity:remove_insert_anim 20t",
+        "particle dust_color_transition 1 1 0 5 1 1 1 ~ ~1 ~ 1.5 1.5 1.5 0 50 force"
       ],
       "conditions": {
         "enabling": [
@@ -1547,7 +1590,10 @@
         "execute as @s run clear @s infinity:mind_stone",
         "execute as @s run function infinity:givemindstone",
         "execute as @s run superpower remove infinity:mind_stone @s",
-        "scoreboard players set @s mind_stone 0"
+        "scoreboard players set @s mind_stone 0",
+        "tag @s add insert_anim",
+        "schedule function infinity:remove_insert_anim 20t",
+        "particle dust_color_transition 1 1 0 5 1 1 1 ~ ~1 ~ 1.5 1.5 1.5 0 50 force"
       ],
       "conditions": {
         "enabling": [
@@ -1561,8 +1607,10 @@
         ],
         "unlocking": [
           {
-            "type": "palladium:has_power",
-            "power": "infinity:mind_stone"
+            "type": "palladium:objective_score",
+            "objective": "mind_stone",
+            "min_score": 1,
+            "max_score": 1
           }
         ]
       }
@@ -2003,13 +2051,13 @@
     "nano_gauntlet": {
       "type": "palladium:command",
       "icon": "palladium:vibranium_flux_capacitor",
-      "title": "Nano Gauntlet",
+      "title": "Nano Gauntlet Skin",
       "bar_color": "red",
       "hidden": false,
       "hidden_in_bar": false,
       "list_index": 3,
-      "gui_position": "null",
-      "description": "Unlock with Vibranium Flux Capacitor in mainhand",
+      "gui_position": [0.5, 0],
+      "description": "Unlock with Vibranium Flux Capacitor in mainhand, then right click.",
       "first_tick_commands": [],
       "last_tick_commands": [],
       "commands": [
@@ -2073,8 +2121,8 @@
       "hidden": false,
       "hidden_in_bar": true,
       "list_index": 3,
-      "gui_position": "null",
-      "description": "Unlock with ???",
+      "gui_position": [-0.5, 0],
+      "description": "Unlock with ???, then right click.",
       "first_tick_commands": [],
       "last_tick_commands": [],
       "commands": [
@@ -2137,8 +2185,8 @@
       "hidden": false,
       "hidden_in_bar": false,
       "list_index": 3,
-      "gui_position": "null",
-      "description": "Unlock with netherite ingot",
+      "gui_position": [0.5, 1],
+      "description": "Unlock with netherite ingot, then right click.",
       "first_tick_commands": [],
       "last_tick_commands": [],
       "commands": [
@@ -2201,8 +2249,8 @@
       "hidden": false,
       "hidden_in_bar": false,
       "list_index": 3,
-      "gui_position": "null",
-      "description": "Unlock with soul infused netherite ingot",
+      "gui_position": [-0.5, 1],
+      "description": "Unlock with soul infused netherite ingot, then right click.",
       "first_tick_commands": [],
       "last_tick_commands": [],
       "commands": [
@@ -2265,8 +2313,8 @@
       "hidden": false,
       "hidden_in_bar": false,
       "list_index": 3,
-      "gui_position": "null",
-      "description": "removes applied skin",
+      "gui_position": [0, 0.5],
+      "description": "Removes the applied skin, press keybind.",
       "first_tick_commands": [],
       "last_tick_commands": [],
       "commands": [
@@ -2826,6 +2874,23 @@
           {
             "type": "palladium:has_tag",
             "tag": "burn_texture"
+          }
+        ]
+      }
+    },
+    "insert_stone": {
+      "type": "palladium:animation_timer",
+      "list_index": 3,
+      "max_value": 15,
+      "bar_color": "orange",
+      "title": { "translate": "ability.alienevo_aliens.6.block" },
+      "hidden": true,
+      "hidden_in_bar": true,
+      "conditions": {
+        "enabling": [
+          {
+            "type": "palladium:has_tag",
+            "tag": "insert_anim"
           }
         ]
       }

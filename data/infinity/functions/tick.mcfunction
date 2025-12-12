@@ -36,3 +36,15 @@ execute as @e[type=armor_stand,tag=temp_stand] at @s run particle minecraft:dust
 execute as @e[type=armor_stand,tag=temp_stand] at @s run particle minecraft:dust 0.3 0.7 1 2 ~1.2071 ~0.6764 ~-0.5 0 0 0 0 1 force
 
 execute as @e[tag=snap,limit=1] run function infinity:snap
+
+execute as @a if entity @s[nbt={Inventory:[{id:"infinity:reality_stone",Count:2b}]}] run clear @s infinity:reality_stone 1
+execute as @a if entity @s[nbt={Inventory:[{id:"infinity:power_stone",Count:2b}]}] run clear @s infinity:power_stone 1
+execute as @a if entity @s[nbt={Inventory:[{id:"infinity:mind_stone",Count:2b}]}] run clear @s infinity:mind_stone 1
+execute as @a if entity @s[nbt={Inventory:[{id:"infinity:space_stone",Count:2b}]}] run clear @s infinity:space_stone 1
+execute as @a if entity @s[nbt={Inventory:[{id:"infinity:time_stone",Count:2b}]}] run clear @s infinity:time_stone 1
+execute as @a if entity @s[nbt={Inventory:[{id:"infinity:soul_stone",Count:2b}]}] run clear @s infinity:soul_stone 1
+
+execute as @e[type=item,nbt={Item:{id:"infinity:infinity_gauntlet"}}] at @s run setblock ~ ~ ~ infinity:infinity_gauntlet_block
+execute as @e[type=item,nbt={Item:{id:"infinity:infinity_gauntlet"}}] at @s run kill @e[type=item,nbt={Item:{id:"infinity:infinity_gauntlet"}}]
+
+execute if entity @a[tag=kill_gauntlet] run kill @e[type=minecraft:falling_block]

@@ -894,8 +894,10 @@
                 "type": "palladium:or",
                 "conditions": [
                   {
-                    "type": "palladium:has_power",
-                    "power": "infinity:infinity_gauntlet"
+                    "type": "palladium:objective_score",
+                    "objective": "power_stone",
+                    "min_score": 1,
+                    "max_score": 1
                   },
 
                   {
