@@ -1,12 +1,12 @@
 {
   "display": {
     "title": {
-      "text": "I Am Inevitable",
+      "text": "Six Stones, One Gauntlet",
       "color": "dark_purple",
       "bold": true
     },
     "description": {
-      "text": "What did it cost?"
+      "text": "Collect all 6 stones"
     },
     "icon": {
       "item": "infinity:infinity_gauntlet"
@@ -29,5 +29,5 @@
     }
   },
   "requirements": [["power"]],
-  "parent": "infinity:6_stones"
+  "parent": "infinity:gauntlet"
 }

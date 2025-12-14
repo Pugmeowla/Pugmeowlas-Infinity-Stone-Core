@@ -1,0 +1,53 @@
+{
+  "type": "palladium:compound",
+  "layers": [
+    {
+      "type": "palladium:lightning_sparks",
+      "frequency": 0.25,
+      "amount": 10,
+      "core_color": "#ff0000",
+      "glow_color": "#ff8080",
+      "thickness": 0.03
+    },
+    {
+      "type": "palladium:lightning_sparks",
+      "frequency": 0.25,
+      "amount": 10,
+      "core_color": "#ffff00",
+      "glow_color": "#ffff99",
+      "thickness": 0.03
+    },
+    {
+      "type": "palladium:lightning_sparks",
+      "frequency": 0.25,
+      "amount": 10,
+      "core_color": "#00ff00",
+      "glow_color": "#99ff99",
+      "thickness": 0.03
+    },
+    {
+      "type": "palladium:lightning_sparks",
+      "frequency": 0.25,
+      "amount": 10,
+      "core_color": "#00ffff",
+      "glow_color": "#99ffff",
+      "thickness": 0.03
+    },
+    {
+      "type": "palladium:lightning_sparks",
+      "frequency": 0.25,
+      "amount": 10,
+      "core_color": "#0000ff",
+      "glow_color": "#9999ff",
+      "thickness": 0.03
+    },
+    {
+      "type": "palladium:lightning_sparks",
+      "frequency": 0.25,
+      "amount": 10,
+      "core_color": "#ff00ff",
+      "glow_color": "#ff99ff",
+      "thickness": 0.03
+    }
+  ]
+}

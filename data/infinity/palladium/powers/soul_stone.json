@@ -129,7 +129,7 @@
             "ingredient": {
               "item": "infinity:aspects_of_existance"
             },
-            "amount": 1
+            "amount": 128
           },
           {
             "type": "palladium:ability_unlocked",
@@ -486,7 +486,7 @@
             "ingredient": {
               "item": "infinity:aspects_of_existance"
             },
-            "amount": 1
+            "amount": 64
           },
           {
             "type": "palladium:ability_unlocked",
@@ -733,7 +733,7 @@
             "ingredient": {
               "item": "infinity:aspects_of_existance"
             },
-            "amount": 1
+            "amount": 16
           },
           {
             "type": "palladium:ability_unlocked",

@@ -118,6 +118,14 @@
                   {
                     "type": "palladium:has_tag",
                     "tag": "soul_netherite_gauntlet"
+                  },
+                  {
+                    "type": "palladium:has_tag",
+                    "tag": "omni_gauntlet"
+                  },
+                  {
+                    "type": "palladium:has_tag",
+                    "tag": "finger_gauntlet"
                   }
                 ]
               }
@@ -177,6 +185,14 @@
                   {
                     "type": "palladium:has_tag",
                     "tag": "soul_netherite_gauntlet"
+                  },
+                  {
+                    "type": "palladium:has_tag",
+                    "tag": "omni_gauntlet"
+                  },
+                  {
+                    "type": "palladium:has_tag",
+                    "tag": "finger_gauntlet"
                   }
                 ]
               }
@@ -1615,7 +1631,242 @@
         ]
       }
     },
-
+    "all_6": {
+      "type": "palladium:command",
+      "icon": "infinity:space_stone",
+      "title": "Insert Space Stone",
+      "bar_color": "light_blue",
+      "hidden": true,
+      "hidden_in_bar": true,
+      "list_index": 0,
+      "gui_position": "null",
+      "description": "Space Stone Abilities",
+      "first_tick_commands": [
+        "effect give @s minecraft:levitation 2 2 true",
+        "effect give @s minecraft:slow_falling 5 0 true",
+        "advancement grant @s only infinity:6_stones"
+      ],
+      "commands": [],
+      "conditions": {
+        "enabling": [
+          {
+            "type": "palladium:objective_score",
+            "objective": "mind_stone",
+            "min_score": 1,
+            "max_score": 1
+          },
+          {
+            "type": "palladium:objective_score",
+            "objective": "power_stone",
+            "min_score": 1,
+            "max_score": 1
+          },
+          {
+            "type": "palladium:objective_score",
+            "objective": "space_stone",
+            "min_score": 1,
+            "max_score": 1
+          },
+          {
+            "type": "palladium:objective_score",
+            "objective": "reality_stone",
+            "min_score": 1,
+            "max_score": 1
+          },
+          {
+            "type": "palladium:objective_score",
+            "objective": "time_stone",
+            "min_score": 1,
+            "max_score": 1
+          },
+          {
+            "type": "palladium:objective_score",
+            "objective": "soul_stone",
+            "min_score": 1,
+            "max_score": 1
+          }
+        ]
+      }
+    },
+    "transform": {
+      "type": "palladium:animation_timer",
+      "max_value": 33,
+      "icon": "minecraft:barrier",
+      "title": "Open Suit",
+      "bar_color": "light_gray",
+      "hidden": true,
+      "hidden_in_bar": true,
+      "list_index": 0,
+      "gui_position": [0, 1],
+      "description": "Open Black Panther's Suit",
+      "conditions": {
+        "enabling": [
+          {
+            "type": "palladium:objective_score",
+            "objective": "mind_stone",
+            "min_score": 1,
+            "max_score": 1
+          },
+          {
+            "type": "palladium:objective_score",
+            "objective": "power_stone",
+            "min_score": 1,
+            "max_score": 1
+          },
+          {
+            "type": "palladium:objective_score",
+            "objective": "space_stone",
+            "min_score": 1,
+            "max_score": 1
+          },
+          {
+            "type": "palladium:objective_score",
+            "objective": "reality_stone",
+            "min_score": 1,
+            "max_score": 1
+          },
+          {
+            "type": "palladium:objective_score",
+            "objective": "time_stone",
+            "min_score": 1,
+            "max_score": 1
+          },
+          {
+            "type": "palladium:objective_score",
+            "objective": "soul_stone",
+            "min_score": 1,
+            "max_score": 1
+          }
+        ]
+      }
+    },
+    "transform2": {
+      "type": "palladium:animation_timer",
+      "max_value": 60,
+      "icon": "minecraft:barrier",
+      "title": "Open Suit",
+      "bar_color": "light_gray",
+      "hidden": true,
+      "hidden_in_bar": true,
+      "list_index": 0,
+      "gui_position": [0, 1],
+      "description": "Open Black Panther's Suit",
+      "conditions": {
+        "enabling": [
+          {
+            "type": "palladium:objective_score",
+            "objective": "mind_stone",
+            "min_score": 1,
+            "max_score": 1
+          },
+          {
+            "type": "palladium:objective_score",
+            "objective": "power_stone",
+            "min_score": 1,
+            "max_score": 1
+          },
+          {
+            "type": "palladium:objective_score",
+            "objective": "space_stone",
+            "min_score": 1,
+            "max_score": 1
+          },
+          {
+            "type": "palladium:objective_score",
+            "objective": "reality_stone",
+            "min_score": 1,
+            "max_score": 1
+          },
+          {
+            "type": "palladium:objective_score",
+            "objective": "time_stone",
+            "min_score": 1,
+            "max_score": 1
+          },
+          {
+            "type": "palladium:objective_score",
+            "objective": "soul_stone",
+            "min_score": 1,
+            "max_score": 1
+          }
+        ]
+      }
+    },
+    "t-pose": {
+      "type": "palladium:animation_timer",
+      "list_index": 3,
+      "max_value": 30,
+      "bar_color": "orange",
+      "title": { "translate": "ability.alienevo_aliens.6.block" },
+      "hidden": true,
+      "hidden_in_bar": true,
+      "conditions": {
+        "enabling": [
+          {
+            "type": "palladium:animation_timer_ability",
+            "power": "null",
+            "ability": "transform",
+            "min": 1,
+            "max": 32
+          }
+        ]
+      }
+    },
+    "particles": {
+      "type": "palladium:command",
+      "icon": "minecraft:command_block",
+      "title": "null",
+      "bar_color": "light_gray",
+      "hidden": true,
+      "hidden_in_bar": true,
+      "list_index": -1,
+      "gui_position": "null",
+      "description": "null",
+      "first_tick_commands": [],
+      "last_tick_commands": [],
+      "commands": [
+        "execute at @s run particle dust 1 0.549 0 1 ~ ~1 ~ 2 1 2 0 8 force",
+        "execute at @s run particle dust 0.53 0.81 0.92 1 ~ ~1 ~ 2 1 2 0 8 force",
+        "execute at @s run particle dust 0.8 0.2 0.8 1 ~ ~1 ~ 2 1 2 0 8 force",
+        "execute at @s run particle dust 0.0 1.0 0.0 1 ~ ~1 ~ 2 1 2 0 8 force",
+        "execute at @s run particle dust 1.0 0.5 0.0 1 ~ ~1 ~ 2 1 2 0 8 force",
+        "execute at @s run particle dust 1.0 0.0 0.0 1 ~ ~1 ~ 2 1 2 0 8 force"
+      ],
+      "conditions": {
+        "enabling": [
+          {
+            "type": "palladium:animation_timer_ability",
+            "power": "null",
+            "ability": "transform",
+            "min": 1,
+            "max": 32
+          }
+        ]
+      }
+    },
+    "sparks": {
+      "type": "palladium:render_layer",
+      "icon": "minecraft:blaze_rod",
+      "title": "null",
+      "bar_color": "light_gray",
+      "hidden": true,
+      "hidden_in_bar": true,
+      "list_index": -1,
+      "gui_position": "null",
+      "description": "null",
+      "render_layer": "infinity:lightning",
+      "conditions": {
+        "enabling": [
+          {
+            "type": "palladium:animation_timer_ability",
+            "power": "null",
+            "ability": "transform2",
+            "min": 1,
+            "max": 59
+          }
+        ]
+      }
+    },
     "render_layer_power_mark_85": {
       "type": "palladium:render_layer",
       "hidden": true,
@@ -2047,6 +2298,39 @@
         ]
       }
     },
+    "render_layer_finger_gauntlet": {
+      "type": "palladium:render_layer",
+      "hidden": true,
+      "hidden_in_bar": true,
+      "render_layer": "infinity:finger_gauntlet",
+      "conditions": {
+        "enabling": [
+          {
+            "type": "palladium:or",
+            "conditions": [
+              {
+                "type": "palladium:item_in_slot",
+                "item": {
+                  "item": "infinity:infinity_gauntlet"
+                },
+                "slot": "offhand"
+              },
+              {
+                "type": "palladium:item_in_slot",
+                "item": {
+                  "item": "infinity:infinity_gauntlet"
+                },
+                "slot": "curios:hands"
+              }
+            ]
+          },
+          {
+            "type": "palladium:has_tag",
+            "tag": "finger_gauntlet"
+          }
+        ]
+      }
+    },
 
     "nano_gauntlet": {
       "type": "palladium:command",
@@ -2097,6 +2381,14 @@
                   {
                     "type": "palladium:has_tag",
                     "tag": "fantastic_four_skin"
+                  },
+                  {
+                    "type": "palladium:has_tag",
+                    "tag": "omni_gauntlet"
+                  },
+                  {
+                    "type": "palladium:has_tag",
+                    "tag": "finger_gauntlet"
                   }
                 ]
               }
@@ -2161,6 +2453,14 @@
                   {
                     "type": "palladium:has_tag",
                     "tag": "fantastic_four_skin"
+                  },
+                  {
+                    "type": "palladium:has_tag",
+                    "tag": "omni_gauntlet"
+                  },
+                  {
+                    "type": "palladium:has_tag",
+                    "tag": "finger_gauntlet"
                   }
                 ]
               }
@@ -2225,6 +2525,14 @@
                   {
                     "type": "palladium:has_tag",
                     "tag": "fantastic_four_skin"
+                  },
+                  {
+                    "type": "palladium:has_tag",
+                    "tag": "omni_gauntlet"
+                  },
+                  {
+                    "type": "palladium:has_tag",
+                    "tag": "finger_gauntlet"
                   }
                 ]
               }
@@ -2289,6 +2597,14 @@
                   {
                     "type": "palladium:has_tag",
                     "tag": "soul_netherite_gauntlet"
+                  },
+                  {
+                    "type": "palladium:has_tag",
+                    "tag": "omni_gauntlet"
+                  },
+                  {
+                    "type": "palladium:has_tag",
+                    "tag": "finger_gauntlet"
                   }
                 ]
               }
@@ -2298,6 +2614,74 @@
             "type": "palladium:item_in_slot",
             "item": {
               "item": "infinity:soul_infused_netherite_ingot"
+            },
+            "slot": "mainhand"
+          }
+        ]
+      }
+    },
+    "finger_gauntlet": {
+      "type": "palladium:command",
+      "icon": "minecraft:chicken",
+      "title": "Gauntlet with Fingers",
+      "bar_color": "black",
+      "hidden": false,
+      "hidden_in_bar": false,
+      "list_index": 3,
+      "gui_position": [-0.5, 2],
+      "description": "Unlock with a piece of raw chicken, then right click. It's Finger Lickin' Good.",
+      "first_tick_commands": [],
+      "last_tick_commands": [],
+      "commands": ["clear @s minecraft:chicken", "tag @s add finger_gauntlet"],
+      "conditions": {
+        "enabling": [
+          {
+            "type": "palladium:action",
+            "cooldown": 0,
+            "key_type": "right_click",
+            "needs_empty_hand": false,
+            "allow_scrolling_when_crouching": true
+          }
+        ],
+        "unlocking": [
+          {
+            "type": "palladium:not",
+            "conditions": [
+              {
+                "type": "palladium:or",
+                "conditions": [
+                  {
+                    "type": "palladium:has_tag",
+                    "tag": "nano_gauntlet"
+                  },
+                  {
+                    "type": "palladium:has_tag",
+                    "tag": "netherite_gauntlet"
+                  },
+                  {
+                    "type": "palladium:has_tag",
+                    "tag": "fantastic_four_skin"
+                  },
+                  {
+                    "type": "palladium:has_tag",
+                    "tag": "soul_netherite_gauntlet"
+                  },
+                  {
+                    "type": "palladium:has_tag",
+                    "tag": "omni_gauntlet"
+                  },
+                  {
+                    "type": "palladium:has_tag",
+                    "tag": "finger_gauntlet"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "palladium:item_in_slot",
+            "item": {
+              "item": "minecraft:chicken"
             },
             "slot": "mainhand"
           }
@@ -2322,10 +2706,12 @@
         "execute if entity @s[tag=nano_gauntlet] run give @s palladium:vibranium_flux_capacitor",
         "execute if entity @s[tag=fantastic_four_skin] run give @s shears",
         "execute if entity @s[tag=soul_netherite_gauntlet] run give @s infinity:soul_infused_netherite_ingot",
+        "execute if entity @s[tag=finger_gauntlet] run give @s minecraft:chicken",
         "tag @s remove nano_gauntlet",
         "tag @s remove netherite_gauntlet",
         "tag @s remove fantastic_four_skin",
-        "tag @s remove soul_netherite_gauntlet"
+        "tag @s remove soul_netherite_gauntlet",
+        "tag @s remove finger_gauntlet"
       ],
       "conditions": {
         "enabling": [
@@ -2356,11 +2742,30 @@
               {
                 "type": "palladium:has_tag",
                 "tag": "fantastic_four_skin"
+              },
+              {
+                "type": "palladium:has_tag",
+                "tag": "omni_gauntlet"
+              },
+              {
+                "type": "palladium:has_tag",
+                "tag": "finger_gauntlet"
               }
             ]
           }
         ]
       }
+    },
+    "omni_desc": {
+      "type": "palladium:dummy",
+      "icon": "infinity:textures/icon/omnitrix_main_default.png",
+      "title": "Omni-Gauntlet",
+      "bar_color": "light_gray",
+      "hidden": false,
+      "hidden_in_bar": false,
+      "list_index": -1,
+      "gui_position": [0, 1.5],
+      "description": "If you equip both the Prototype Omnitrix from Alien Evo, and the gauntlet, you will get a special skin that makes the omnitrix easier to use."
     },
     "gauntlet_anim": {
       "type": "palladium:animation_timer",

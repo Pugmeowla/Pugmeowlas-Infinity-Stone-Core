@@ -1,15 +1,15 @@
 {
   "display": {
     "title": {
-      "text": "I Am Inevitable",
+      "text": "1.5 Trillion Aspects",
       "color": "dark_purple",
       "bold": true
     },
     "description": {
-      "text": "What did it cost?"
+      "text": "How did you pull this off?!"
     },
     "icon": {
-      "item": "infinity:infinity_gauntlet"
+      "item": "infinity:power_stone"
     },
     "frame": "challenge",
     "show_toast": true,
@@ -29,5 +29,5 @@
     }
   },
   "requirements": [["power"]],
-  "parent": "infinity:6_stones"
+  "parent": "infinity:power"
 }

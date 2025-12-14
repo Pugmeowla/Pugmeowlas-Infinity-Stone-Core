@@ -1,15 +1,15 @@
 {
   "display": {
     "title": {
-      "text": "I Am Inevitable",
+      "text": "It's called the Universal Weapon. Oh, really? I was gonna call it Cosmi-Rod.",
       "color": "dark_purple",
       "bold": true
     },
     "description": {
-      "text": "What did it cost?"
+      "text": "Obtain the Cosmi-Rod"
     },
     "icon": {
-      "item": "infinity:infinity_gauntlet"
+      "item": "infinity:cosmi-rod"
     },
     "frame": "challenge",
     "show_toast": true,
@@ -22,12 +22,12 @@
       "conditions": {
         "items": [
           {
-            "items": ["infinity:pugmeowla"]
+            "items": ["infinity:cosmi-rod"]
           }
         ]
       }
     }
   },
   "requirements": [["power"]],
-  "parent": "infinity:6_stones"
+  "parent": "infinity:root"
 }
