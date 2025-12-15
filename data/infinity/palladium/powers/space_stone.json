@@ -106,6 +106,91 @@
         ]
       }
     },
+    "water_breathing": {
+      "type": "palladium:command",
+      "icon": "infinity:textures/icon/teleport.png",
+      "title": "Water Breathing",
+      "bar_color": "light_blue",
+      "persistent_data": true,
+      "hidden": false,
+      "hidden_in_bar": false,
+      "list_index": 1,
+      "gui_position": [-2, 0],
+      "description": "You can now breath under water",
+      "first_tick_commands": [
+        "effect give @s minecraft:water_breathing infinite 0 true"
+      ],
+      "last_tick_commands": ["effect clear @s minecraft:water_breathing"],
+      "commands": [],
+      "conditions": {
+        "enabling": [],
+        "unlocking": [
+          {
+            "type": "palladium:item_buyable",
+            "ingredient": {
+              "item": "infinity:aspects_of_existance"
+            },
+            "amount": 1
+          },
+          {
+            "type": "palladium:ability_unlocked",
+            "power": "null",
+            "ability": "step_assist"
+          },
+          {
+            "type": "palladium:or",
+            "conditions": [
+              {
+                "type": "palladium:has_power",
+                "power": "infinity:infinity_gauntlet"
+              },
+              {
+                "type": "palladium:item_in_slot",
+                "item": {
+                  "item": "infinity:tesseract"
+                },
+                "slot": "mainhand"
+              },
+              {
+                "type": "palladium:item_in_slot",
+                "item": {
+                  "item": "infinity:tesseract"
+                },
+                "slot": "offhand"
+              },
+              {
+                "type": "palladium:item_in_slot",
+                "item": {
+                  "item": "infinity:space_stone"
+                },
+                "slot": "mainhand"
+              },
+              {
+                "type": "palladium:item_in_slot",
+                "item": {
+                  "item": "infinity:space_stone"
+                },
+                "slot": "offhand"
+              },
+              {
+                "type": "palladium:item_in_slot",
+                "item": {
+                  "item": "infinity:cosmi-rod_space"
+                },
+                "slot": "mainhand"
+              },
+              {
+                "type": "palladium:item_in_slot",
+                "item": {
+                  "item": "infinity:cosmi-rod_space"
+                },
+                "slot": "offhand"
+              }
+            ]
+          }
+        ]
+      }
+    },
 
     "teleport_command": {
       "type": "palladium:dummy",

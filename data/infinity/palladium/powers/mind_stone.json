@@ -718,7 +718,6 @@
       "gui_position": [-1, -1],
       "description": "The people love you",
       "first_tick_commands": [
-        "recipe give @s *",
         "effect give @s minecraft:hero_of_the_village infinite 5 true"
       ],
       "last_tick_commands": ["effect clear @s minecraft:hero_of_the_village"],
@@ -737,6 +736,98 @@
             "type": "palladium:ability_unlocked",
             "power": "null",
             "ability": "passive"
+          },
+          {
+            "type": "palladium:or",
+            "conditions": [
+              {
+                "type": "palladium:item_in_slot",
+                "item": {
+                  "item": "infinity:mind_stone"
+                },
+                "slot": "curios:head"
+              },
+              {
+                "type": "palladium:has_power",
+                "power": "infinity:infinity_gauntlet"
+              },
+              {
+                "type": "palladium:item_in_slot",
+                "item": {
+                  "item": "infinity:scepter"
+                },
+                "slot": "mainhand"
+              },
+              {
+                "type": "palladium:item_in_slot",
+                "item": {
+                  "item": "infinity:scepter"
+                },
+                "slot": "offhand"
+              },
+              {
+                "type": "palladium:item_in_slot",
+                "item": {
+                  "item": "infinity:mind_stone"
+                },
+                "slot": "mainhand"
+              },
+              {
+                "type": "palladium:item_in_slot",
+                "item": {
+                  "item": "infinity:mind_stone"
+                },
+                "slot": "offhand"
+              },
+              {
+                "type": "palladium:item_in_slot",
+                "item": {
+                  "item": "infinity:cosmi-rod_mind"
+                },
+                "slot": "mainhand"
+              },
+              {
+                "type": "palladium:item_in_slot",
+                "item": {
+                  "item": "infinity:cosmi-rod_mind"
+                },
+                "slot": "offhand"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "night_vision": {
+      "type": "palladium:command",
+      "persistent_data": true,
+      "icon": "minecraft:textures/mob_effect/night_vision.png",
+      "title": "Night Vision",
+      "bar_color": "yellow",
+      "hidden": false,
+      "hidden_in_bar": false,
+      "list_index": 0,
+      "gui_position": [-1, 0],
+      "description": "You can sense your surroundings, you can see in the dark.",
+      "first_tick_commands": [
+        "effect give @s minecraft:night_vision infinite 5 true"
+      ],
+      "last_tick_commands": ["effect clear @s minecraft:night_vision"],
+      "commands": [""],
+      "conditions": {
+        "enabling": [],
+        "unlocking": [
+          {
+            "type": "palladium:item_buyable",
+            "ingredient": {
+              "item": "infinity:aspects_of_existance"
+            },
+            "amount": 1
+          },
+          {
+            "type": "palladium:ability_unlocked",
+            "power": "null",
+            "ability": "intangibility"
           },
           {
             "type": "palladium:or",

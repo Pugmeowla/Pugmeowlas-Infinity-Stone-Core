@@ -236,7 +236,6 @@
         ]
       }
     },
-
     "remove_stone_wheel": {
       "type": "palladium:ability_wheel",
       "icon": "infinity:textures/item/infinity_gauntlet2.png",
@@ -2339,6 +2338,39 @@
         ]
       }
     },
+    "render_layer_hand_of_terror": {
+      "type": "palladium:render_layer",
+      "hidden": true,
+      "hidden_in_bar": true,
+      "render_layer": "infinity:hand_of_terror",
+      "conditions": {
+        "enabling": [
+          {
+            "type": "palladium:or",
+            "conditions": [
+              {
+                "type": "palladium:item_in_slot",
+                "item": {
+                  "item": "infinity:infinity_gauntlet"
+                },
+                "slot": "offhand"
+              },
+              {
+                "type": "palladium:item_in_slot",
+                "item": {
+                  "item": "infinity:infinity_gauntlet"
+                },
+                "slot": "curios:hands"
+              }
+            ]
+          },
+          {
+            "type": "palladium:has_tag",
+            "tag": "hand_of_terror"
+          }
+        ]
+      }
+    },
 
     "nano_gauntlet": {
       "type": "palladium:command",
@@ -2725,7 +2757,7 @@
       "hidden_in_bar": false,
       "list_index": 3,
       "gui_position": [0.5, 2],
-      "description": "Unlock with an object that has the remnant of power, then right click. Skin requested by Terror.",
+      "description": "Unlock with an object that has remnants of power, then right click. Skin requested by Terror.",
       "first_tick_commands": [],
       "last_tick_commands": [],
       "commands": ["clear @s infinity:empty_orb", "tag @s add hand_of_terror"],
@@ -2868,6 +2900,17 @@
       "list_index": -1,
       "gui_position": [0, 1.5],
       "description": "If you equip both the Prototype Omnitrix from Alien Evo, and the gauntlet, you will get a special skin that makes the omnitrix easier to use."
+    },
+    "offhand_desc": {
+      "type": "palladium:dummy",
+      "icon": "infinity:infinity_gauntlet",
+      "title": "Use Hands Curios Slot",
+      "bar_color": "light_gray",
+      "hidden": false,
+      "hidden_in_bar": false,
+      "list_index": -1,
+      "gui_position": [0, -0.5],
+      "description": "Please use the infinity gauntlet in the hand slot of the curios menu, or the offhand. The mainhand 'works', but some features do not work. You won't be able to see the infinity gauntlet in first person if you use the offhand, only the curios slot."
     },
     "gauntlet_anim": {
       "type": "palladium:animation_timer",
