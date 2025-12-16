@@ -4,16 +4,20 @@
       "id": "infinity:titanium_ingot",
       "required": false
     },
-     {
+    {
       "id": "cosmos:titanium_ingot",
       "required": false
     },
-     {
+    {
       "id": "gtceu:hot_titanium_ingot",
       "required": false
     },
-     {
+    {
       "id": "gtceu:titanium_ingot",
+      "required": false
+    },
+    {
+      "id": "palladium:titanium_ingot",
       "required": false
     }
   ]

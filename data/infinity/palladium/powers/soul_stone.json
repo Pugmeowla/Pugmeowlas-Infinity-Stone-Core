@@ -207,7 +207,7 @@
     },
     "saturation": {
       "type": "palladium:command",
-      "icon": "minecraft:textures/mob_effect/glowing.png",
+      "icon": "minecraft:textures/mob_effect/saturation.png",
       "title": "Saturation",
       "bar_color": "orange",
       "persistent_data": true,
@@ -234,6 +234,86 @@
             "type": "palladium:ability_unlocked",
             "power": "null",
             "ability": "glow"
+          },
+          {
+            "type": "palladium:or",
+            "conditions": [
+              {
+                "type": "palladium:has_power",
+                "power": "infinity:infinity_gauntlet"
+              },
+              {
+                "type": "palladium:item_in_slot",
+                "item": {
+                  "item": "infinity:soul_stone"
+                },
+                "slot": "mainhand"
+              },
+              {
+                "type": "palladium:item_in_slot",
+                "item": {
+                  "item": "infinity:soul_stone"
+                },
+                "slot": "offhand"
+              },
+              {
+                "type": "palladium:item_in_slot",
+                "item": {
+                  "item": "infinity:cosmi-rod_soul"
+                },
+                "slot": "mainhand"
+              },
+              {
+                "type": "palladium:item_in_slot",
+                "item": {
+                  "item": "infinity:cosmi-rod_soul"
+                },
+                "slot": "offhand"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "effect_immune": {
+      "type": "palladium:command",
+      "icon": "minecraft:barrier",
+      "title": "Effect Immunity",
+      "bar_color": "orange",
+      "persistent_data": true,
+      "hidden": false,
+      "hidden_in_bar": true,
+      "list_index": -1,
+      "gui_position": [-2, -1],
+      "description": "Gives you immunity to most negative effects",
+      "first_tick_commands": [],
+      "last_tick_commands": [],
+      "commands": [
+        "effect clear @s minecraft:bad_luck",
+        "effect clear @s minecraft:bad_omen",
+        "effect clear @s minecraft:blindness",
+        "effect clear @s minecraft:darkness",
+        "effect clear @s minecraft:hunger",
+        "effect clear @s minecraft:mining_fatigue",
+        "effect clear @s minecraft:nausea",
+        "effect clear @s minecraft:poison",
+        "effect clear @s minecraft:slowness",
+        "effect clear @s minecraft:weakness",
+        "effect clear @s minecraft:wither"
+      ],
+      "conditions": {
+        "unlocking": [
+          {
+            "type": "palladium:item_buyable",
+            "ingredient": {
+              "item": "infinity:aspects_of_existance"
+            },
+            "amount": 1
+          },
+          {
+            "type": "palladium:ability_unlocked",
+            "power": "null",
+            "ability": "saturation"
           },
           {
             "type": "palladium:or",
@@ -391,7 +471,11 @@
         "summon minecraft:zombie ~ ~ ~",
         "summon minecraft:zombie ~ ~ ~",
         "summon minecraft:zombie ~ ~ ~",
-        "summon minecraft:zombie ~ ~ ~"
+        "summon minecraft:zombie ~ ~ ~",
+        "team join peaceful",
+        "execute as @e[distance=..5] run team join peaceful",
+        "execute as @e[distance=..5,type=zombie] run superpower add infinity:thanos_classic @s",
+        "execute as @e[distance=..5,type=zombie,limit=1] run superpower add infinity:pugmeowla_zombie @s"
       ],
       "conditions": {
         "enabling": [
@@ -459,7 +543,7 @@
     },
     "health": {
       "type": "palladium:attribute_modifier",
-      "icon": "minecraft:iron_chestplate",
+      "icon": "minecraft:textures/mob_effect/health_boost.png",
       "title": "Health",
       "persistent_data": true,
       "bar_color": "orange",
@@ -703,7 +787,7 @@
     },
     "regen": {
       "type": "palladium:command",
-      "icon": "minecraft:barrier",
+      "icon": "minecraft:textures/mob_effect/regeneration.png",
       "persistent_data": true,
       "title": "Regeneration",
       "bar_color": "orange",

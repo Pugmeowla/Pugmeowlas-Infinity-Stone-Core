@@ -22,7 +22,7 @@
     "slow_time_dummy": {
       "type": "palladium:dummy",
       "persistent_data": true,
-      "icon": "minecraft:clock",
+      "icon": "infinity:textures/icon/hourglass.png",
       "title": "Slow Time",
       "bar_color": "lime",
       "hidden": false,
@@ -97,7 +97,7 @@
 
     "slow_time": {
       "type": "palladium:command",
-      "icon": "minecraft:clock",
+      "icon": "infinity:textures/icon/blue_ice.png",
       "title": "Slow Time",
       "bar_color": "lime",
       "hidden": true,
@@ -342,7 +342,7 @@
     "time_freeze_dummy": {
       "type": "palladium:dummy",
       "persistent_data": true,
-      "icon": "minecraft:blue_ice",
+      "icon": "infinity:textures/icon/stop.png",
       "title": "Bend Time Speed",
       "bar_color": "lime",
       "hidden": false,
@@ -418,7 +418,7 @@
     "time_freeze": {
       "type": "palladium:command",
       "persistent_data": true,
-      "icon": "minecraft:blue_ice",
+      "icon": "infinity:textures/icon/stop.png",
       "title": "Time Freeze",
       "bar_color": "lime",
       "hidden": true,

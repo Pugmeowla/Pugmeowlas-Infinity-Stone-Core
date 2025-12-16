@@ -1,22 +1,16 @@
 {
-    "type": "minecraft:crafting_shaped",
-    "pattern": [
-        "HG ",
-        "   ",
-        "   "
-    ],
-    "key": {
-        "H": {
-            "item": "infinity:hammer"
-        },
-        "G": {
-            "item": "infinity:titanium_ingot"
-        }
-        
-    
+  "type": "minecraft:crafting_shaped",
+  "pattern": ["HG ", "   ", "   "],
+  "key": {
+    "H": {
+      "item": "infinity:hammer"
     },
-    "result": {
-        "item": "infinity:titanium_dust",
-        "count": 1
+    "G": {
+      "tag": "forge:ingots/titanium"
     }
+  },
+  "result": {
+    "item": "infinity:titanium_dust",
+    "count": 1
+  }
 }

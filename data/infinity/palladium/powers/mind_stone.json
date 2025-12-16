@@ -10,10 +10,10 @@
     "flight": {
       "type": "palladium:attribute_modifier",
       "persistent_data": true,
-      "icon": "infinity:mind_stone",
+      "icon": "infinity:textures/icon/fly.png",
       "title": "Flight",
       "bar_color": "yellow",
-      "description": "Gives you flight. togglable in case you would want to turn it off.",
+      "description": "Gives you flight. It is togglable, in case you would want to turn it off for another form of flight from another mod.",
       "list_index": 2,
       "attribute": "palladium:flight_speed",
       "gui_position": [0, -2],
@@ -21,16 +21,17 @@
       "operation": 0,
       "uuid": "498be4fb-af04-42f2-8948-e6ccdc0d99e1",
       "conditions": {
-        "enabling": [
-          {
-            "type": "palladium:toggle",
-            "cooldown": 0,
-            "key_type": "key_bind",
-            "needs_empty_hand": false,
-            "allow_scrolling_when_crouching": true
-          }
-        ],
+        "enabling": [],
         "unlocking": [
+          {
+            "type": "palladium:not",
+            "conditions": [
+              {
+                "type": "palladium:has_tag",
+                "tag": "no_fly"
+              }
+            ]
+          },
           {
             "type": "palladium:item_buyable",
             "ingredient": {
@@ -100,6 +101,87 @@
                 "slot": "offhand"
               }
             ]
+          }
+        ]
+      }
+    },
+    "flight_stuff": {
+      "type": "palladium:command",
+      "icon": "minecraft:barrier",
+      "title": "Flight Off",
+      "bar_color": "red",
+      "list_index": 2,
+      "hidden": true,
+      "first_tick_commands": ["tag @s add no_fly"],
+      "last_tick_commands": [],
+      "commands": [],
+      "conditions": {
+        "enabling": [
+          {
+            "type": "palladium:toggle",
+            "cooldown": 0,
+            "key_type": "key_bind",
+            "needs_empty_hand": false,
+            "allow_scrolling_when_crouching": true
+          }
+        ],
+        "unlocking": [
+          {
+            "type": "palladium:ability_unlocked",
+            "power": "null",
+            "ability": "flight"
+          }
+        ]
+      }
+    },
+    "flight_stuff3": {
+      "icon": "infinity:mind_stone",
+      "type": "palladium:command",
+      "bar_color": "yellow",
+      "title": "Flight On",
+      "list_index": 2,
+      "hidden": true,
+      "first_tick_commands": ["tag @s remove no_fly"],
+      "last_tick_commands": [],
+      "commands": [],
+      "conditions": {
+        "enabling": [
+          {
+            "type": "palladium:toggle",
+            "cooldown": 0,
+            "key_type": "key_bind",
+            "needs_empty_hand": false,
+            "allow_scrolling_when_crouching": true
+          }
+        ],
+        "unlocking": [
+          {
+            "type": "palladium:not",
+            "conditions": [
+              {
+                "type": "palladium:ability_unlocked",
+                "power": "null",
+                "ability": "flight"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "flight_stuff2": {
+      "type": "palladium:command",
+      "bar_color": "black",
+      "list_index": 2,
+      "hidden": true,
+      "first_tick_commands": ["tag @s add unlocked_fly"],
+      "last_tick_commands": [],
+      "commands": [],
+      "conditions": {
+        "unlocking": [
+          {
+            "type": "palladium:ability_unlocked",
+            "power": "null",
+            "ability": "flight"
           }
         ]
       }
@@ -190,6 +272,67 @@
                 "slot": "offhand"
               }
             ]
+          }
+        ]
+      }
+    },
+    "intangibility_effects": {
+      "type": "palladium:command",
+      "bar_color": "black",
+      "list_index": 4,
+      "hidden": true,
+      "first_tick_commands": [
+        "scale set pehkui:reach -1",
+        "scale set pehkui:hitbox_height 0.1",
+        "scale set pehkui:hitbox_width 0.1"
+      ],
+      "last_tick_commands": [
+        "scale set pehkui:reach 1",
+        "scale set pehkui:hitbox_height 1",
+        "scale set pehkui:hitbox_width 1"
+      ],
+      "commands": [""],
+      "conditions": {
+        "enabling": [
+          {
+            "type": "palladium:ability_enabled",
+            "power": "null",
+            "ability": "intangibility"
+          }
+        ]
+      }
+    },
+    "intangibility_flight": {
+      "type": "palladium:intangibility",
+      "hidden": true,
+      "vertical": true,
+      "whitelist": "null",
+      "blacklist": "palladium:prevents_intangibility",
+      "conditions": {
+        "enabling": [
+          {
+            "type": "palladium:ability_enabled",
+            "power": "null",
+            "ability": "intangibility"
+          },
+          {
+            "type": "palladium:is_hovering_or_flying"
+          }
+        ]
+      }
+    },
+    "intangibility_ground": {
+      "type": "palladium:intangibility",
+      "hidden": true,
+      "vertical": false,
+      "whitelist": "null",
+      "blacklist": "palladium:prevents_intangibility",
+      "conditions": {
+        "enabling": [
+          {
+            "type": "palladium:ability_enabled",
+            "power": "null",
+            "ability": "intangibility"
           }
         ]
       }
@@ -716,7 +859,7 @@
       "hidden_in_bar": false,
       "list_index": 0,
       "gui_position": [-1, -1],
-      "description": "The people love you",
+      "description": "The people love you.",
       "first_tick_commands": [
         "effect give @s minecraft:hero_of_the_village infinite 5 true"
       ],

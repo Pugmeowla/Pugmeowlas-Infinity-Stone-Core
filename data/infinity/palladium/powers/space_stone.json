@@ -108,7 +108,7 @@
     },
     "water_breathing": {
       "type": "palladium:command",
-      "icon": "infinity:textures/icon/teleport.png",
+      "icon": "minecraft:textures/mob_effect/water_breathing.png",
       "title": "Water Breathing",
       "bar_color": "light_blue",
       "persistent_data": true,
@@ -1034,7 +1034,7 @@
     },
     "step_assist": {
       "type": "palladium:attribute_modifier",
-      "icon": "infinity:textures/icon/force_field.png",
+      "icon": "infinity:textures/icon/step.png",
       "title": "Step Assist",
       "persistent_data": true,
       "bar_color": "light_blue",
@@ -1117,7 +1117,7 @@
     },
     "speed": {
       "type": "palladium:attribute_modifier",
-      "icon": "infinity:textures/icon/force_field.png",
+      "icon": "minecraft:textures/mob_effect/speed.png",
       "title": "Speed",
       "bar_color": "light_blue",
       "hidden": false,

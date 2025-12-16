@@ -138,6 +138,7 @@
         ]
       }
     },
+
     "render_layer_burnt_gauntlet": {
       "type": "palladium:render_layer",
       "hidden": true,
