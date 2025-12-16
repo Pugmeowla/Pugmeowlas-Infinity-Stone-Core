@@ -1,7 +1,7 @@
 execute at @e[type=minecraft:armor_stand,tag=blackhole] as @e[tag=!blackholeon,type=!minecraft:armor_stand,distance=..7] at @s facing entity @e[type=minecraft:armor_stand,tag=blackhole,sort=nearest,limit=1] feet run tp @s ^ ^ ^0.2
 execute as @e[tag=blackhole] at @s run damage @e[distance=..1,type=!armor_stand,limit=1,sort=nearest,tag=!blackholeon] 20 minecraft:generic_kill
 execute as @e[tag=blackholeon] run execute at @s run tp @e[type=!player,type=!item,distance=..7,tag=blackhole] ^ ^1 ^5
-execute as @e[type=armor_stand,tag=blackhole] at @s run tp @s ~ ~ ~ ~5 ~
+execute as @e[type=armor_stand,tag=blackhole] at @s run tp @s ~ ~ ~ ~60 ~
 execute as @e[tag=blackhole] at @s run fill ~-1 ~-1 ~-1 ~1 ~1 ~1 air replace
 execute anchored eyes as @e[tag=blackhole] at @s run particle minecraft:end_rod ~ ~1 ~ 1 0 1 0.03 1
 

@@ -1,0 +1,11 @@
+{
+  "type": "palladium:armor",
+  "slot": "boots",
+  "rarity": "epic",
+  "is_fire_resistant": true,
+  "armor_material": "minecraft:netherite",
+  "opening_toggle_sound": "minecraft:item.armor.equip_gold",
+  "render_layers": {
+    "feet": ["infinity:thanos_classic_boots"]
+  }
+}

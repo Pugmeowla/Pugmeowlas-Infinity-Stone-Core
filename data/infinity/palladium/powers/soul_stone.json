@@ -463,20 +463,7 @@
       "description": "Summons 7 Zombies, when paired with the mind stones passify ability, can create a pretty nice army.",
       "first_tick_commands": [],
       "last_tick_commands": [],
-      "commands": [
-        "playsound minecraft:entity.panda.sneeze block @s",
-        "summon minecraft:zombie ~ ~ ~",
-        "summon minecraft:zombie ~ ~ ~",
-        "summon minecraft:zombie ~ ~ ~",
-        "summon minecraft:zombie ~ ~ ~",
-        "summon minecraft:zombie ~ ~ ~",
-        "summon minecraft:zombie ~ ~ ~",
-        "summon minecraft:zombie ~ ~ ~",
-        "team join peaceful",
-        "execute as @e[distance=..5] run team join peaceful",
-        "execute as @e[distance=..5,type=zombie] run superpower add infinity:thanos_classic @s",
-        "execute as @e[distance=..5,type=zombie,limit=1] run superpower add infinity:pugmeowla_zombie @s"
-      ],
+      "commands": ["function infinity:zombies"],
       "conditions": {
         "enabling": [
           {

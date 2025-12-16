@@ -77,5 +77,10 @@
   "item.infinity.titanium_nugget": "Titanium Nugget",
   "item.infinity.steel_plate": "Steel Plate",
   "item.infinity.injection": "Injection",
-  "item.infinity.soul_infused_netherite_ingot": "Soul-Infused Netherite Ingot"
+  "item.infinity.soul_infused_netherite_ingot": "Soul-Infused Netherite Ingot",
+  "item.infinity.thanos_classic_helmet": "Thanos' Helmet (Classic)",
+  "item.infinity.thanos_classic_chestplate": "Thanos' Chestplate (Classic)",
+  "item.infinity.thanos_classic_leggings": "Thanos' Leggings (Classic)",
+  "item.infinity.thanos_classic_boots": "Thanos' Boots (Classic)",
+  "palladium.tailoring_recipe.category.minecraft.infinity": "Pugmeowla's Infinity Stone Core"
 }

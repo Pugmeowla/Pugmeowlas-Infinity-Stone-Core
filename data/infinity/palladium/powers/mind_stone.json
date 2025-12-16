@@ -164,6 +164,64 @@
                 "ability": "flight"
               }
             ]
+          },
+          {
+            "type": "palladium:or",
+            "conditions": [
+              {
+                "type": "palladium:has_power",
+                "power": "infinity:infinity_gauntlet"
+              },
+              {
+                "type": "palladium:item_in_slot",
+                "item": {
+                  "item": "infinity:mind_stone"
+                },
+                "slot": "curios:head"
+              },
+              {
+                "type": "palladium:item_in_slot",
+                "item": {
+                  "item": "infinity:scepter"
+                },
+                "slot": "mainhand"
+              },
+              {
+                "type": "palladium:item_in_slot",
+                "item": {
+                  "item": "infinity:scepter"
+                },
+                "slot": "offhand"
+              },
+              {
+                "type": "palladium:item_in_slot",
+                "item": {
+                  "item": "infinity:mind_stone"
+                },
+                "slot": "mainhand"
+              },
+              {
+                "type": "palladium:item_in_slot",
+                "item": {
+                  "item": "infinity:mind_stone"
+                },
+                "slot": "offhand"
+              },
+              {
+                "type": "palladium:item_in_slot",
+                "item": {
+                  "item": "infinity:cosmi-rod_mind"
+                },
+                "slot": "mainhand"
+              },
+              {
+                "type": "palladium:item_in_slot",
+                "item": {
+                  "item": "infinity:cosmi-rod_mind"
+                },
+                "slot": "offhand"
+              }
+            ]
           }
         ]
       }
@@ -450,7 +508,7 @@
       "hidden_in_bar": false,
       "list_index": 0,
       "gui_position": [0, -1],
-      "description": "Pacify hostile mobs around you",
+      "description": "Pacify hostile mobs around you. Shift to Un-Passify.",
       "first_tick_commands": ["playsound infinity:mind_stone_phase block @s"],
       "last_tick_commands": [],
       "commands": [
