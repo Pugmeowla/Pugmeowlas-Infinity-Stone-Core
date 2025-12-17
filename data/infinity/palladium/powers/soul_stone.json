@@ -289,7 +289,7 @@
       "first_tick_commands": [],
       "last_tick_commands": [],
       "commands": [
-        "effect clear @s minecraft:bad_luck",
+        "effect clear @s minecraft:unluck",
         "effect clear @s minecraft:bad_omen",
         "effect clear @s minecraft:blindness",
         "effect clear @s minecraft:darkness",

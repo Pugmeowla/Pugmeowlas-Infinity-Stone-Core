@@ -1,39 +1,33 @@
 {
-    "display": {
-        "title": {
-            "text": "Hammer",
-            "color": "gray",
-            "bold": true
-        },
-        "description": {
-            "text": "hammer :3"
-        },
-        "icon": {
-            "item": "infinity:hammer"
-        },
-        "frame": "task",
-        "show_toast": true,
-        "announce_to_chat": true,
-        "hidden": false
+  "display": {
+    "title": {
+      "text": "It's Clobberin' Time!",
+      "color": "gray",
+      "bold": true
     },
-    "criteria": {
-        "power": {
-            "trigger": "minecraft:inventory_changed",
-            "conditions": {
-                "items": [
-                    {
-                        "items": [
-                            "infinity:hammer"
-                        ]
-                    }
-                ]
-            }
-        }
+    "description": {
+      "text": "Obtain a hammer (Your gonna need a lot of these)"
     },
-    "requirements": [
-        [
-            "power"
+    "icon": {
+      "item": "infinity:hammer"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "power": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": ["infinity:hammer"]
+          }
         ]
-    ],
-    "parent": "infinity:root"
+      }
+    }
+  },
+  "requirements": [["power"]],
+  "parent": "infinity:root"
 }

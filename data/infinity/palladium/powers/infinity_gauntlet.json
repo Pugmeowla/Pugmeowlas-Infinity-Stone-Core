@@ -2388,7 +2388,8 @@
       "commands": [
         "clear @s palladium:vibranium_flux_capacitor",
         "tag @s add nano_gauntlet",
-        "playsound infinity:nano_gauntlet block @s"
+        "playsound infinity:nano_gauntlet block @s",
+        "schedule function infinity:remove_burn_texture 1d"
       ],
       "conditions": {
         "enabling": [
@@ -2846,7 +2847,8 @@
         "tag @s remove fantastic_four_skin",
         "tag @s remove soul_netherite_gauntlet",
         "tag @s remove finger_gauntlet",
-        "tag @s remove hand_of_terror"
+        "tag @s remove hand_of_terror",
+        "schedule clear infinity:remove_burn_texture"
       ],
       "conditions": {
         "enabling": [
