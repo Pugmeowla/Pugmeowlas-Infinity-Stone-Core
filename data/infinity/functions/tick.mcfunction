@@ -48,3 +48,19 @@ execute as @e[type=item,nbt={Item:{id:"infinity:infinity_gauntlet"}}] at @s run 
 execute as @e[type=item,nbt={Item:{id:"infinity:infinity_gauntlet"}}] at @s run kill @e[type=item,nbt={Item:{id:"infinity:infinity_gauntlet"}}]
 
 execute if entity @a[tag=kill_gauntlet] run kill @e[type=minecraft:falling_block]
+
+execute as @e[type=tnt] at @s run particle large_smoke ~ ~ ~ 0.5 0.5 0.5 0 20 force @a[distance=..50]
+
+function infinity:impact
+
+# Fire + Smoke (reduced)
+execute as @e[tag=meteorite] at @s run particle flame ~ ~ ~ 0.15 0.15 0.15 0 10 force @a[distance=..50]
+execute as @e[tag=meteorite] at @s run particle campfire_cosy_smoke ~ ~ ~ 0.15 0.15 0.15 0.02 5 force @a[distance=..50]
+
+# Blue/Purple Glow (reduced)
+execute as @e[tag=meteorite] at @s run particle minecraft:dragon_breath ~ ~ ~ 0.2 0.2 0.2 0 8 force @a[distance=..50]
+execute as @e[tag=meteorite] at @s run particle minecraft:enchanted_hit ~ ~ ~ 0.08 0.08 0.08 0 5 force @a[distance=..50]
+execute as @e[tag=meteorite] at @s run particle minecraft:happy_villager ~ ~ ~ 0.1 0.1 0.1 0 6 force @a[distance=..50]
+
+# Lava sparks (reduced)
+execute as @e[tag=meteorite] at @s run particle minecraft:lava ~ ~ ~ 0.08 0.08 0.08 0 5 force @a[distance=..50]

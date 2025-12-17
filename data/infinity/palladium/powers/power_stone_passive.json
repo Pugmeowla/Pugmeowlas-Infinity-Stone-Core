@@ -3,11 +3,11 @@
   "background": "minecraft:textures/block/purple_concrete.png",
   "icon": "infinity:power_stone",
   "gui_display_type": "tree",
-  "persistent_data": true,
+  "persistent_data": false,
   "ability_bar_texture": "infinity:textures/gui/ability_bars/power_ability_bar.png",
 
   "abilities": {
-    "power_bast": {
+    "power_bast6": {
       "type": "palladium:energy_beam",
       "persistent_data": true,
       "icon": "infinity:textures/icon/power_blast.png",
@@ -29,8 +29,24 @@
       "conditions": {
         "enabling": [
           {
-            "type": "palladium:ability_enabled",
-            "ability": "power_blast_aim"
+            "type": "palladium:or",
+            "conditions": [
+              {
+                "type": "palladium:ability_enabled",
+                "power": "infinity:power_stone_passive",
+                "ability": "power_blast_aim"
+              },
+              {
+                "type": "palladium:ability_enabled",
+                "power": "infinity:infinity_gauntlet",
+                "ability": "power_blast_aim"
+              }
+            ]
+          },
+          {
+            "type": "palladium:ability_unlocked",
+            "power": "null",
+            "ability": "punch6"
           },
           {
             "type": "palladium:or",
@@ -47,12 +63,861 @@
                 "item": {
                   "item": "infinity:infinity_gauntlet"
                 },
+                "slot": "mainhand"
+              },
+              {
+                "type": "palladium:item_in_slot",
+                "item": {
+                  "item": "infinity:infinity_gauntlet"
+                },
                 "slot": "curios:hands"
               }
             ]
           }
         ],
         "unlocking": [
+          {
+            "type": "palladium:not",
+            "conditions": [
+              {
+                "type": "palladium:has_tag",
+                "tag": "burn"
+              }
+            ]
+          },
+          {
+            "type": "palladium:has_power",
+            "power": "infinity:infinity_gauntlet"
+          },
+          {
+            "type": "palladium:not",
+            "conditions": [
+              {
+                "type": "palladium:or",
+                "conditions": [
+                  {
+                    "type": "palladium:item_in_slot",
+                    "item": {
+                      "item": "infinity:power_stone"
+                    },
+                    "slot": "mainhand"
+                  },
+                  {
+                    "type": "palladium:item_in_slot",
+                    "item": {
+                      "item": "infinity:power_stone"
+                    },
+                    "slot": "offhand"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "palladium:not",
+            "conditions": [
+              {
+                "type": "palladium:and",
+                "conditions": [
+                  {
+                    "type": "palladium:has_power",
+                    "power": "infinity:mind_stone"
+                  },
+                  {
+                    "type": "palladium:has_power",
+                    "power": "infinity:power_stone_passive"
+                  },
+                  {
+                    "type": "palladium:has_power",
+                    "power": "infinity:space_stone"
+                  },
+                  {
+                    "type": "palladium:has_power",
+                    "power": "infinity:reality_stone"
+                  },
+                  {
+                    "type": "palladium:has_power",
+                    "power": "infinity:time_stone"
+                  },
+                  {
+                    "type": "palladium:has_power",
+                    "power": "infinity:soul_stone"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "power_bast1": {
+      "type": "palladium:energy_beam",
+      "persistent_data": true,
+      "icon": "infinity:textures/icon/power_blast.png",
+      "title": "Power Blast",
+      "bar_color": "purple",
+      "hidden": true,
+      "hidden_in_bar": true,
+      "list_index": -1,
+      "gui_position": "null",
+      "description": "null",
+      "energy_beam": "infinity:gauntlet_beam",
+      "damage": 30,
+      "max_distance": 100,
+      "speed": 1,
+      "set_on_fire_seconds": 1,
+      "cause_fire": true,
+      "smelt_blocks": true,
+      "commands_on_block_hit": ["particle minecraft:lava"],
+      "conditions": {
+        "enabling": [
+          {
+            "type": "palladium:or",
+            "conditions": [
+              {
+                "type": "palladium:ability_enabled",
+                "power": "infinity:power_stone_passive",
+                "ability": "power_blast_aim"
+              },
+              {
+                "type": "palladium:ability_enabled",
+                "power": "infinity:infinity_gauntlet",
+                "ability": "power_blast_aim"
+              }
+            ]
+          },
+          {
+            "type": "palladium:ability_unlocked",
+            "power": "null",
+            "ability": "punch"
+          },
+          {
+            "type": "palladium:or",
+            "conditions": [
+              {
+                "type": "palladium:item_in_slot",
+                "item": {
+                  "item": "infinity:infinity_gauntlet"
+                },
+                "slot": "offhand"
+              },
+              {
+                "type": "palladium:item_in_slot",
+                "item": {
+                  "item": "infinity:infinity_gauntlet"
+                },
+                "slot": "mainhand"
+              },
+              {
+                "type": "palladium:item_in_slot",
+                "item": {
+                  "item": "infinity:infinity_gauntlet"
+                },
+                "slot": "curios:hands"
+              }
+            ]
+          }
+        ],
+        "unlocking": [
+          {
+            "type": "palladium:not",
+            "conditions": [
+              {
+                "type": "palladium:or",
+                "conditions": [
+                  {
+                    "type": "palladium:ability_unlocked",
+                    "power": "null",
+                    "ability": "punch6"
+                  },
+                  {
+                    "type": "palladium:ability_unlocked",
+                    "power": "null",
+                    "ability": "punch5"
+                  },
+                  {
+                    "type": "palladium:ability_unlocked",
+                    "power": "null",
+                    "ability": "punch4"
+                  },
+                  {
+                    "type": "palladium:ability_unlocked",
+                    "power": "null",
+                    "ability": "punch3"
+                  },
+                  {
+                    "type": "palladium:ability_unlocked",
+                    "power": "null",
+                    "ability": "punch2"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "palladium:not",
+            "conditions": [
+              {
+                "type": "palladium:has_tag",
+                "tag": "burn"
+              }
+            ]
+          },
+          {
+            "type": "palladium:has_power",
+            "power": "infinity:infinity_gauntlet"
+          },
+          {
+            "type": "palladium:not",
+            "conditions": [
+              {
+                "type": "palladium:or",
+                "conditions": [
+                  {
+                    "type": "palladium:item_in_slot",
+                    "item": {
+                      "item": "infinity:power_stone"
+                    },
+                    "slot": "mainhand"
+                  },
+                  {
+                    "type": "palladium:item_in_slot",
+                    "item": {
+                      "item": "infinity:power_stone"
+                    },
+                    "slot": "offhand"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "palladium:not",
+            "conditions": [
+              {
+                "type": "palladium:and",
+                "conditions": [
+                  {
+                    "type": "palladium:has_power",
+                    "power": "infinity:mind_stone"
+                  },
+                  {
+                    "type": "palladium:has_power",
+                    "power": "infinity:power_stone_passive"
+                  },
+                  {
+                    "type": "palladium:has_power",
+                    "power": "infinity:space_stone"
+                  },
+                  {
+                    "type": "palladium:has_power",
+                    "power": "infinity:reality_stone"
+                  },
+                  {
+                    "type": "palladium:has_power",
+                    "power": "infinity:time_stone"
+                  },
+                  {
+                    "type": "palladium:has_power",
+                    "power": "infinity:soul_stone"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "power_bast2": {
+      "type": "palladium:energy_beam",
+      "persistent_data": true,
+      "icon": "infinity:textures/icon/power_blast.png",
+      "title": "Power Blast",
+      "bar_color": "purple",
+      "hidden": true,
+      "hidden_in_bar": true,
+      "list_index": -1,
+      "gui_position": "null",
+      "description": "null",
+      "energy_beam": "infinity:gauntlet_beam",
+      "damage": 70,
+      "max_distance": 100,
+      "speed": 1,
+      "set_on_fire_seconds": 1,
+      "cause_fire": true,
+      "smelt_blocks": true,
+      "commands_on_block_hit": ["particle minecraft:lava"],
+      "conditions": {
+        "enabling": [
+          {
+            "type": "palladium:or",
+            "conditions": [
+              {
+                "type": "palladium:ability_enabled",
+                "power": "infinity:power_stone_passive",
+                "ability": "power_blast_aim"
+              },
+              {
+                "type": "palladium:ability_enabled",
+                "power": "infinity:infinity_gauntlet",
+                "ability": "power_blast_aim"
+              }
+            ]
+          },
+          {
+            "type": "palladium:ability_unlocked",
+            "power": "null",
+            "ability": "punch2"
+          },
+          {
+            "type": "palladium:or",
+            "conditions": [
+              {
+                "type": "palladium:item_in_slot",
+                "item": {
+                  "item": "infinity:infinity_gauntlet"
+                },
+                "slot": "offhand"
+              },
+              {
+                "type": "palladium:item_in_slot",
+                "item": {
+                  "item": "infinity:infinity_gauntlet"
+                },
+                "slot": "mainhand"
+              },
+              {
+                "type": "palladium:item_in_slot",
+                "item": {
+                  "item": "infinity:infinity_gauntlet"
+                },
+                "slot": "curios:hands"
+              }
+            ]
+          }
+        ],
+        "unlocking": [
+          {
+            "type": "palladium:not",
+            "conditions": [
+              {
+                "type": "palladium:or",
+                "conditions": [
+                  {
+                    "type": "palladium:ability_unlocked",
+                    "power": "null",
+                    "ability": "punch6"
+                  },
+                  {
+                    "type": "palladium:ability_unlocked",
+                    "power": "null",
+                    "ability": "punch5"
+                  },
+                  {
+                    "type": "palladium:ability_unlocked",
+                    "power": "null",
+                    "ability": "punch4"
+                  },
+                  {
+                    "type": "palladium:ability_unlocked",
+                    "power": "null",
+                    "ability": "punch3"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "palladium:not",
+            "conditions": [
+              {
+                "type": "palladium:has_tag",
+                "tag": "burn"
+              }
+            ]
+          },
+          {
+            "type": "palladium:has_power",
+            "power": "infinity:infinity_gauntlet"
+          },
+          {
+            "type": "palladium:not",
+            "conditions": [
+              {
+                "type": "palladium:or",
+                "conditions": [
+                  {
+                    "type": "palladium:item_in_slot",
+                    "item": {
+                      "item": "infinity:power_stone"
+                    },
+                    "slot": "mainhand"
+                  },
+                  {
+                    "type": "palladium:item_in_slot",
+                    "item": {
+                      "item": "infinity:power_stone"
+                    },
+                    "slot": "offhand"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "palladium:not",
+            "conditions": [
+              {
+                "type": "palladium:and",
+                "conditions": [
+                  {
+                    "type": "palladium:has_power",
+                    "power": "infinity:mind_stone"
+                  },
+                  {
+                    "type": "palladium:has_power",
+                    "power": "infinity:power_stone_passive"
+                  },
+                  {
+                    "type": "palladium:has_power",
+                    "power": "infinity:space_stone"
+                  },
+                  {
+                    "type": "palladium:has_power",
+                    "power": "infinity:reality_stone"
+                  },
+                  {
+                    "type": "palladium:has_power",
+                    "power": "infinity:time_stone"
+                  },
+                  {
+                    "type": "palladium:has_power",
+                    "power": "infinity:soul_stone"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "power_bast3": {
+      "type": "palladium:energy_beam",
+      "persistent_data": true,
+      "icon": "infinity:textures/icon/power_blast.png",
+      "title": "Power Blast",
+      "bar_color": "purple",
+      "hidden": true,
+      "hidden_in_bar": true,
+      "list_index": -1,
+      "gui_position": "null",
+      "description": "null",
+      "energy_beam": "infinity:gauntlet_beam",
+      "damage": 100,
+      "max_distance": 100,
+      "speed": 1,
+      "set_on_fire_seconds": 1,
+      "cause_fire": true,
+      "smelt_blocks": true,
+      "commands_on_block_hit": ["particle minecraft:lava"],
+      "conditions": {
+        "enabling": [
+          {
+            "type": "palladium:or",
+            "conditions": [
+              {
+                "type": "palladium:ability_enabled",
+                "power": "infinity:power_stone_passive",
+                "ability": "power_blast_aim"
+              },
+              {
+                "type": "palladium:item_in_slot",
+                "item": {
+                  "item": "infinity:infinity_gauntlet"
+                },
+                "slot": "mainhand"
+              },
+              {
+                "type": "palladium:ability_enabled",
+                "power": "infinity:infinity_gauntlet",
+                "ability": "power_blast_aim"
+              }
+            ]
+          },
+          {
+            "type": "palladium:ability_unlocked",
+            "power": "null",
+            "ability": "punch3"
+          },
+          {
+            "type": "palladium:or",
+            "conditions": [
+              {
+                "type": "palladium:item_in_slot",
+                "item": {
+                  "item": "infinity:infinity_gauntlet"
+                },
+                "slot": "offhand"
+              },
+              {
+                "type": "palladium:item_in_slot",
+                "item": {
+                  "item": "infinity:infinity_gauntlet"
+                },
+                "slot": "mainhand"
+              },
+              {
+                "type": "palladium:item_in_slot",
+                "item": {
+                  "item": "infinity:infinity_gauntlet"
+                },
+                "slot": "curios:hands"
+              }
+            ]
+          }
+        ],
+        "unlocking": [
+          {
+            "type": "palladium:not",
+            "conditions": [
+              {
+                "type": "palladium:or",
+                "conditions": [
+                  {
+                    "type": "palladium:ability_unlocked",
+                    "power": "null",
+                    "ability": "punch6"
+                  },
+                  {
+                    "type": "palladium:ability_unlocked",
+                    "power": "null",
+                    "ability": "punch5"
+                  },
+                  {
+                    "type": "palladium:ability_unlocked",
+                    "power": "null",
+                    "ability": "punch4"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "palladium:not",
+            "conditions": [
+              {
+                "type": "palladium:has_tag",
+                "tag": "burn"
+              }
+            ]
+          },
+          {
+            "type": "palladium:has_power",
+            "power": "infinity:infinity_gauntlet"
+          },
+          {
+            "type": "palladium:not",
+            "conditions": [
+              {
+                "type": "palladium:or",
+                "conditions": [
+                  {
+                    "type": "palladium:item_in_slot",
+                    "item": {
+                      "item": "infinity:power_stone"
+                    },
+                    "slot": "mainhand"
+                  },
+                  {
+                    "type": "palladium:item_in_slot",
+                    "item": {
+                      "item": "infinity:power_stone"
+                    },
+                    "slot": "offhand"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "palladium:not",
+            "conditions": [
+              {
+                "type": "palladium:and",
+                "conditions": [
+                  {
+                    "type": "palladium:has_power",
+                    "power": "infinity:mind_stone"
+                  },
+                  {
+                    "type": "palladium:has_power",
+                    "power": "infinity:power_stone_passive"
+                  },
+                  {
+                    "type": "palladium:has_power",
+                    "power": "infinity:space_stone"
+                  },
+                  {
+                    "type": "palladium:has_power",
+                    "power": "infinity:reality_stone"
+                  },
+                  {
+                    "type": "palladium:has_power",
+                    "power": "infinity:time_stone"
+                  },
+                  {
+                    "type": "palladium:has_power",
+                    "power": "infinity:soul_stone"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "power_bast4": {
+      "type": "palladium:energy_beam",
+      "persistent_data": true,
+      "icon": "infinity:textures/icon/power_blast.png",
+      "title": "Power Blast",
+      "bar_color": "purple",
+      "hidden": true,
+      "hidden_in_bar": true,
+      "list_index": -1,
+      "gui_position": "null",
+      "description": "null",
+      "energy_beam": "infinity:gauntlet_beam",
+      "damage": 300,
+      "max_distance": 100,
+      "speed": 1,
+      "set_on_fire_seconds": 1,
+      "cause_fire": true,
+      "smelt_blocks": true,
+      "commands_on_block_hit": ["particle minecraft:lava"],
+      "conditions": {
+        "enabling": [
+          {
+            "type": "palladium:or",
+            "conditions": [
+              {
+                "type": "palladium:ability_enabled",
+                "power": "infinity:power_stone_passive",
+                "ability": "power_blast_aim"
+              },
+              {
+                "type": "palladium:ability_enabled",
+                "power": "infinity:infinity_gauntlet",
+                "ability": "power_blast_aim"
+              }
+            ]
+          },
+          {
+            "type": "palladium:ability_unlocked",
+            "power": "null",
+            "ability": "punch4"
+          },
+          {
+            "type": "palladium:or",
+            "conditions": [
+              {
+                "type": "palladium:item_in_slot",
+                "item": {
+                  "item": "infinity:infinity_gauntlet"
+                },
+                "slot": "offhand"
+              },
+              {
+                "type": "palladium:item_in_slot",
+                "item": {
+                  "item": "infinity:infinity_gauntlet"
+                },
+                "slot": "mainhand"
+              },
+              {
+                "type": "palladium:item_in_slot",
+                "item": {
+                  "item": "infinity:infinity_gauntlet"
+                },
+                "slot": "curios:hands"
+              }
+            ]
+          }
+        ],
+        "unlocking": [
+          {
+            "type": "palladium:not",
+            "conditions": [
+              {
+                "type": "palladium:or",
+                "conditions": [
+                  {
+                    "type": "palladium:ability_unlocked",
+                    "power": "null",
+                    "ability": "punch6"
+                  },
+                  {
+                    "type": "palladium:ability_unlocked",
+                    "power": "null",
+                    "ability": "punch5"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "palladium:not",
+            "conditions": [
+              {
+                "type": "palladium:has_tag",
+                "tag": "burn"
+              }
+            ]
+          },
+          {
+            "type": "palladium:has_power",
+            "power": "infinity:infinity_gauntlet"
+          },
+          {
+            "type": "palladium:not",
+            "conditions": [
+              {
+                "type": "palladium:or",
+                "conditions": [
+                  {
+                    "type": "palladium:item_in_slot",
+                    "item": {
+                      "item": "infinity:power_stone"
+                    },
+                    "slot": "mainhand"
+                  },
+                  {
+                    "type": "palladium:item_in_slot",
+                    "item": {
+                      "item": "infinity:power_stone"
+                    },
+                    "slot": "offhand"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "palladium:not",
+            "conditions": [
+              {
+                "type": "palladium:and",
+                "conditions": [
+                  {
+                    "type": "palladium:has_power",
+                    "power": "infinity:mind_stone"
+                  },
+                  {
+                    "type": "palladium:has_power",
+                    "power": "infinity:power_stone_passive"
+                  },
+                  {
+                    "type": "palladium:has_power",
+                    "power": "infinity:space_stone"
+                  },
+                  {
+                    "type": "palladium:has_power",
+                    "power": "infinity:reality_stone"
+                  },
+                  {
+                    "type": "palladium:has_power",
+                    "power": "infinity:time_stone"
+                  },
+                  {
+                    "type": "palladium:has_power",
+                    "power": "infinity:soul_stone"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "power_bast5": {
+      "type": "palladium:energy_beam",
+      "persistent_data": true,
+      "icon": "infinity:textures/icon/power_blast.png",
+      "title": "Power Blast",
+      "bar_color": "purple",
+      "hidden": true,
+      "hidden_in_bar": true,
+      "list_index": -1,
+      "gui_position": "null",
+      "description": "null",
+      "energy_beam": "infinity:gauntlet_beam",
+      "damage": 3000,
+      "max_distance": 100,
+      "speed": 1,
+      "set_on_fire_seconds": 1,
+      "cause_fire": true,
+      "smelt_blocks": true,
+      "commands_on_block_hit": ["particle minecraft:lava"],
+      "conditions": {
+        "enabling": [
+          {
+            "type": "palladium:or",
+            "conditions": [
+              {
+                "type": "palladium:ability_enabled",
+                "power": "infinity:power_stone_passive",
+                "ability": "power_blast_aim"
+              },
+              {
+                "type": "palladium:ability_enabled",
+                "power": "infinity:infinity_gauntlet",
+                "ability": "power_blast_aim"
+              }
+            ]
+          },
+          {
+            "type": "palladium:ability_unlocked",
+            "power": "null",
+            "ability": "punch5"
+          },
+          {
+            "type": "palladium:or",
+            "conditions": [
+              {
+                "type": "palladium:item_in_slot",
+                "item": {
+                  "item": "infinity:infinity_gauntlet"
+                },
+                "slot": "offhand"
+              },
+              {
+                "type": "palladium:item_in_slot",
+                "item": {
+                  "item": "infinity:infinity_gauntlet"
+                },
+                "slot": "mainhand"
+              },
+              {
+                "type": "palladium:item_in_slot",
+                "item": {
+                  "item": "infinity:infinity_gauntlet"
+                },
+                "slot": "curios:hands"
+              }
+            ]
+          }
+        ],
+        "unlocking": [
+          {
+            "type": "palladium:not",
+            "conditions": [
+              {
+                "type": "palladium:ability_unlocked",
+                "power": "null",
+                "ability": "punch6"
+              }
+            ]
+          },
           {
             "type": "palladium:not",
             "conditions": [
@@ -149,8 +1014,24 @@
       "conditions": {
         "enabling": [
           {
-            "type": "palladium:ability_enabled",
-            "ability": "power_blast_aim"
+            "type": "palladium:or",
+            "conditions": [
+              {
+                "type": "palladium:ability_enabled",
+                "power": "infinity:power_stone_passive",
+                "ability": "power_blast_aim"
+              },
+              {
+                "type": "palladium:ability_enabled",
+                "power": "infinity:infinity_gauntlet",
+                "ability": "power_blast_aim"
+              }
+            ]
+          },
+          {
+            "type": "palladium:ability_unlocked",
+            "power": "null",
+            "ability": "punch6"
           },
           {
             "type": "palladium:or",
@@ -161,6 +1042,13 @@
                   "item": "infinity:infinity_gauntlet"
                 },
                 "slot": "offhand"
+              },
+              {
+                "type": "palladium:item_in_slot",
+                "item": {
+                  "item": "infinity:infinity_gauntlet"
+                },
+                "slot": "mainhand"
               },
               {
                 "type": "palladium:item_in_slot",
@@ -179,6 +1067,145 @@
               {
                 "type": "palladium:has_tag",
                 "tag": "burn"
+              }
+            ]
+          },
+          {
+            "type": "palladium:has_power",
+            "power": "infinity:infinity_gauntlet"
+          },
+          {
+            "type": "palladium:has_power",
+            "power": "infinity:mind_stone"
+          },
+          {
+            "type": "palladium:has_power",
+            "power": "infinity:power_stone_passive"
+          },
+          {
+            "type": "palladium:has_power",
+            "power": "infinity:space_stone"
+          },
+          {
+            "type": "palladium:has_power",
+            "power": "infinity:reality_stone"
+          },
+          {
+            "type": "palladium:has_power",
+            "power": "infinity:time_stone"
+          },
+          {
+            "type": "palladium:has_power",
+            "power": "infinity:soul_stone"
+          },
+          {
+            "type": "palladium:not",
+            "conditions": [
+              {
+                "type": "palladium:or",
+                "conditions": [
+                  {
+                    "type": "palladium:item_in_slot",
+                    "item": {
+                      "item": "infinity:power_stone"
+                    },
+                    "slot": "mainhand"
+                  },
+                  {
+                    "type": "palladium:item_in_slot",
+                    "item": {
+                      "item": "infinity:power_stone"
+                    },
+                    "slot": "offhand"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "power_bast_rainbow2": {
+      "type": "palladium:energy_beam",
+      "persistent_data": true,
+      "icon": "infinity:textures/icon/power_blast.png",
+      "title": "Power Blast",
+      "bar_color": "purple",
+      "hidden": true,
+      "hidden_in_bar": true,
+      "list_index": -1,
+      "gui_position": "null",
+      "description": "null",
+      "energy_beam": "infinity:gauntlet_beam_rainbow",
+      "damage": 3000,
+      "max_distance": 100,
+      "speed": 1,
+      "set_on_fire_seconds": 1,
+      "cause_fire": true,
+      "smelt_blocks": true,
+      "commands_on_block_hit": ["summon tnt"],
+      "conditions": {
+        "enabling": [
+          {
+            "type": "palladium:or",
+            "conditions": [
+              {
+                "type": "palladium:ability_enabled",
+                "power": "infinity:power_stone_passive",
+                "ability": "power_blast_aim"
+              },
+              {
+                "type": "palladium:ability_enabled",
+                "power": "infinity:infinity_gauntlet",
+                "ability": "power_blast_aim"
+              }
+            ]
+          },
+
+          {
+            "type": "palladium:or",
+            "conditions": [
+              {
+                "type": "palladium:item_in_slot",
+                "item": {
+                  "item": "infinity:infinity_gauntlet"
+                },
+                "slot": "offhand"
+              },
+              {
+                "type": "palladium:item_in_slot",
+                "item": {
+                  "item": "infinity:infinity_gauntlet"
+                },
+                "slot": "mainhand"
+              },
+              {
+                "type": "palladium:item_in_slot",
+                "item": {
+                  "item": "infinity:infinity_gauntlet"
+                },
+                "slot": "curios:hands"
+              }
+            ]
+          }
+        ],
+        "unlocking": [
+          {
+            "type": "palladium:not",
+            "conditions": [
+              {
+                "type": "palladium:has_tag",
+                "tag": "burn"
+              }
+            ]
+          },
+          {
+            "type": "palladium:not",
+            "conditions": [
+              {
+                "type": "palladium:ability_unlocked",
+                "power": "null",
+                "ability": "power_bast_rainbow"
               }
             ]
           },
@@ -247,7 +1274,7 @@
       "hidden_in_bar": false,
       "list_index": 1,
       "gui_position": [-2, 0],
-      "description": "A powerful beam that deals a near infinite amount of damage. It has a range of 100 blocks, smelts blocks and causes fire. It will turn rainbow and do explosion damage if all 6 stones are collected.",
+      "description": "A powerful beam that gets stronger the more punch upgrade you unlock. It has a range of 100 blocks, smelts blocks and causes fire. It will turn rainbow and do explosion damage if all 6 stones are collected. Does not work with other suits, only the gauntlet.",
       "time": 1,
       "arm": "off_arm",
       "conditions": {
@@ -315,6 +1342,20 @@
                 "item": {
                   "item": "infinity:infinity_gauntlet"
                 },
+                "slot": "mainhand"
+              },
+              {
+                "type": "palladium:item_in_slot",
+                "item": {
+                  "item": "infinity:infinity_gauntlet"
+                },
+                "slot": "mainhand"
+              },
+              {
+                "type": "palladium:item_in_slot",
+                "item": {
+                  "item": "infinity:infinity_gauntlet"
+                },
                 "slot": "curios:hands"
               }
             ]
@@ -322,278 +1363,7 @@
           {
             "type": "palladium:ability_unlocked",
             "power": "null",
-            "ability": "punch6"
-          }
-        ]
-      }
-    },
-    "power_bast_mainhand": {
-      "type": "palladium:energy_beam",
-      "persistent_data": true,
-      "icon": "infinity:textures/icon/power_blast.png",
-      "title": "Power Blast",
-      "bar_color": "purple",
-      "hidden": true,
-      "hidden_in_bar": true,
-      "list_index": -1,
-      "gui_position": "null",
-      "description": "null",
-      "energy_beam": "infinity:gauntlet_beam_mainhand",
-      "damage": 2147483647,
-      "max_distance": 100,
-      "speed": 1,
-      "set_on_fire_seconds": 1,
-      "cause_fire": true,
-      "smelt_blocks": true,
-      "conditions": {
-        "enabling": [
-          {
-            "type": "palladium:ability_enabled",
-            "ability": "power_blast_aim_mainhand"
-          },
-          {
-            "type": "palladium:item_in_slot",
-            "item": {
-              "item": "infinity:infinity_gauntlet"
-            },
-            "slot": "mainhand"
-          }
-        ],
-        "unlocking": [
-          {
-            "type": "palladium:not",
-            "conditions": [
-              {
-                "type": "palladium:has_tag",
-                "tag": "burn"
-              }
-            ]
-          },
-          {
-            "type": "palladium:has_power",
-            "power": "infinity:infinity_gauntlet"
-          },
-          {
-            "type": "palladium:not",
-            "conditions": [
-              {
-                "type": "palladium:or",
-                "conditions": [
-                  {
-                    "type": "palladium:item_in_slot",
-                    "item": {
-                      "item": "infinity:power_stone"
-                    },
-                    "slot": "mainhand"
-                  },
-                  {
-                    "type": "palladium:item_in_slot",
-                    "item": {
-                      "item": "infinity:power_stone"
-                    },
-                    "slot": "offhand"
-                  }
-                ]
-              }
-            ]
-          },
-          {
-            "type": "palladium:not",
-            "conditions": [
-              {
-                "type": "palladium:and",
-                "conditions": [
-                  {
-                    "type": "palladium:has_power",
-                    "power": "infinity:mind_stone"
-                  },
-                  {
-                    "type": "palladium:has_power",
-                    "power": "infinity:power_stone_passive"
-                  },
-                  {
-                    "type": "palladium:has_power",
-                    "power": "infinity:space_stone"
-                  },
-                  {
-                    "type": "palladium:has_power",
-                    "power": "infinity:reality_stone"
-                  },
-                  {
-                    "type": "palladium:has_power",
-                    "power": "infinity:time_stone"
-                  },
-                  {
-                    "type": "palladium:has_power",
-                    "power": "infinity:soul_stone"
-                  }
-                ]
-              }
-            ]
-          }
-        ]
-      }
-    },
-    "power_bast_rainbow_mainhand": {
-      "type": "palladium:energy_beam",
-      "persistent_data": true,
-      "icon": "infinity:textures/icon/power_blast.png",
-      "title": "Power Blast",
-      "bar_color": "purple",
-      "hidden": true,
-      "hidden_in_bar": true,
-      "list_index": -1,
-      "gui_position": "null",
-      "description": "null",
-      "energy_beam": "infinity:gauntlet_beam_rainbow_mainhand",
-      "damage": 2147483647,
-      "max_distance": 100,
-      "speed": 1,
-      "set_on_fire_seconds": 1,
-      "cause_fire": true,
-      "smelt_blocks": true,
-      "commands_on_block_hit": ["summon tnt"],
-      "conditions": {
-        "enabling": [
-          {
-            "type": "palladium:ability_enabled",
-            "ability": "power_blast_aim_mainhand"
-          },
-          {
-            "type": "palladium:item_in_slot",
-            "item": {
-              "item": "infinity:infinity_gauntlet"
-            },
-            "slot": "mainhand"
-          }
-        ],
-        "unlocking": [
-          {
-            "type": "palladium:not",
-            "conditions": [
-              {
-                "type": "palladium:has_tag",
-                "tag": "burn"
-              }
-            ]
-          },
-          {
-            "type": "palladium:has_power",
-            "power": "infinity:infinity_gauntlet"
-          },
-          {
-            "type": "palladium:has_power",
-            "power": "infinity:mind_stone"
-          },
-          {
-            "type": "palladium:has_power",
-            "power": "infinity:power_stone_passive"
-          },
-          {
-            "type": "palladium:has_power",
-            "power": "infinity:space_stone"
-          },
-          {
-            "type": "palladium:has_power",
-            "power": "infinity:reality_stone"
-          },
-          {
-            "type": "palladium:has_power",
-            "power": "infinity:time_stone"
-          },
-          {
-            "type": "palladium:has_power",
-            "power": "infinity:soul_stone"
-          },
-          {
-            "type": "palladium:not",
-            "conditions": [
-              {
-                "type": "palladium:or",
-                "conditions": [
-                  {
-                    "type": "palladium:item_in_slot",
-                    "item": {
-                      "item": "infinity:power_stone"
-                    },
-                    "slot": "mainhand"
-                  },
-                  {
-                    "type": "palladium:item_in_slot",
-                    "item": {
-                      "item": "infinity:power_stone"
-                    },
-                    "slot": "offhand"
-                  }
-                ]
-              }
-            ]
-          }
-        ]
-      }
-    },
-    "power_blast_aim_mainhand": {
-      "type": "palladium:aim",
-      "icon": "infinity:textures/icon/power_blast.png",
-      "title": "Power Blast",
-      "persistent_data": true,
-      "bar_color": "purple",
-      "hidden": true,
-      "hidden_in_bar": false,
-      "list_index": 1,
-      "gui_position": "null",
-      "description": "A powerful beam that deals a near infinite amount of damage. It has a range of 100 blocks, smelts blocks and causes fire",
-      "time": 1,
-      "arm": "main_arm",
-      "conditions": {
-        "enabling": [
-          {
-            "type": "palladium:held",
-            "cooldown": 0
-          }
-        ],
-        "unlocking": [
-          {
-            "type": "palladium:has_power",
-            "power": "infinity:infinity_gauntlet"
-          },
-          {
-            "type": "palladium:not",
-            "conditions": [
-              {
-                "type": "palladium:or",
-                "conditions": [
-                  {
-                    "type": "palladium:item_in_slot",
-                    "item": {
-                      "item": "infinity:power_stone"
-                    },
-                    "slot": "mainhand"
-                  },
-                  {
-                    "type": "palladium:item_in_slot",
-                    "item": {
-                      "item": "infinity:power_stone"
-                    },
-                    "slot": "offhand"
-                  },
-                  {
-                    "type": "palladium:item_in_slot",
-                    "item": {
-                      "item": "infinity:cosmi-rod_power"
-                    },
-                    "slot": "mainhand"
-                  }
-                ]
-              }
-            ]
-          },
-          {
-            "type": "palladium:item_in_slot",
-            "item": {
-              "item": "infinity:infinity_gauntlet"
-            },
-            "slot": "mainhand"
+            "ability": "punch"
           }
         ]
       }
@@ -1712,6 +2482,107 @@
             "type": "palladium:ability_enabled",
             "power": "null",
             "ability": "explosion2"
+          }
+        ]
+      }
+    },
+    "meteor_storm": {
+      "type": "palladium:command",
+      "icon": "infinity:textures/icon/meteor.png",
+      "title": "Meteor Storm",
+      "bar_color": "purple",
+      "persistent_data": true,
+      "hidden": false,
+      "hidden_in_bar": false,
+      "list_index": 3,
+      "gui_position": [0, -3],
+      "description": "The Power Stone shatters a distant moon, while the Space Stone pulls the fragments toward the target. Using them together creates a devastating, large-scale attack that requires both stones. (Don't spam, it might cause lag)",
+      "first_tick_commands": [],
+      "last_tick_commands": [],
+      "commands": ["function infinity:meteor"],
+      "conditions": {
+        "enabling": [
+          {
+            "type": "palladium:action",
+            "cooldown": 0,
+            "key_type": "key_bind",
+            "needs_empty_hand": false,
+            "allow_scrolling_when_crouching": true
+          }
+        ],
+        "unlocking": [
+          {
+            "type": "palladium:item_buyable",
+            "ingredient": {
+              "item": "infinity:aspects_of_existance"
+            },
+            "amount": 1
+          },
+          {
+            "type": "palladium:ability_unlocked",
+            "power": "null",
+            "ability": "explosion2"
+          },
+
+          {
+            "type": "palladium:has_power",
+            "power": "infinity:space_stone"
+          },
+          {
+            "type": "palladium:has_power",
+            "power": "infinity:power_stone_passive"
+          },
+
+          {
+            "type": "palladium:or",
+            "conditions": [
+              {
+                "type": "palladium:has_power",
+                "power": "infinity:infinity_gauntlet"
+              },
+              {
+                "type": "palladium:item_in_slot",
+                "item": {
+                  "item": "infinity:tesseract"
+                },
+                "slot": "mainhand"
+              },
+              {
+                "type": "palladium:item_in_slot",
+                "item": {
+                  "item": "infinity:tesseract"
+                },
+                "slot": "offhand"
+              },
+              {
+                "type": "palladium:item_in_slot",
+                "item": {
+                  "item": "infinity:space_stone"
+                },
+                "slot": "mainhand"
+              },
+              {
+                "type": "palladium:item_in_slot",
+                "item": {
+                  "item": "infinity:space_stone"
+                },
+                "slot": "offhand"
+              },
+              {
+                "type": "palladium:item_in_slot",
+                "item": {
+                  "item": "infinity:cosmi-rod_space"
+                },
+                "slot": "mainhand"
+              },
+              {
+                "type": "palladium:item_in_slot",
+                "item": {
+                  "item": "infinity:cosmi-rod_space"
+                },
+                "slot": "offhand"
+              }
+            ]
           }
         ]
       }

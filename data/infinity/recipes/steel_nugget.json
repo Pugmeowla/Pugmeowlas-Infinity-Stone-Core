@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": ["G  ", "   ", "   "],
+  "key": {
+    "G": {
+      "tag": "forge:ingots/steel"
+    }
+  },
+  "result": {
+    "item": "infinity:steel_nugget",
+    "count": 9
+  }
+}

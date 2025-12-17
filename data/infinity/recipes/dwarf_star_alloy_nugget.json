@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": ["G  ", "   ", "   "],
+  "key": {
+    "G": {
+      "item": "infinity:dwarf_star_alloy_ingot"
+    }
+  },
+  "result": {
+    "item": "infinity:dwarf_star_alloy_nugget",
+    "count": 9
+  }
+}

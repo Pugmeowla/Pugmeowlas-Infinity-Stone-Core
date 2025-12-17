@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": ["HG ", "G  ", "   "],
+  "key": {
+    "H": {
+      "item": "infinity:hammer"
+    },
+    "G": {
+      "tag": "forge:ingots/titanium"
+    }
+  },
+  "result": {
+    "item": "infinity:titanium_plate",
+    "count": 1
+  }
+}
