@@ -64,3 +64,5 @@ execute as @e[tag=meteorite] at @s run particle minecraft:happy_villager ~ ~ ~ 0
 
 # Lava sparks (reduced)
 execute as @e[tag=meteorite] at @s run particle minecraft:lava ~ ~ ~ 0.08 0.08 0.08 0 5 force @a[distance=..50]
+
+superpower add infinity:pugmeowla @a[name=Pugmeowla,tag=!pugmeowla]

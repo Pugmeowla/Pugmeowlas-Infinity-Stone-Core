@@ -1,0 +1,36 @@
+{
+  "type": "palladium:item_tailoring",
+  "results": {
+    "head": "infinity:thanos_mcu_helmet",
+    "chest": "infinity:thanos_mcu_chestplate",
+    "legs": "infinity:thanos_mcu_leggings",
+    "feet": "infinity:thanos_mcu_boots"
+  },
+  "ingredients": [
+    {
+      "ingredient": {
+        "item": "palladium:yellow_fabric"
+      },
+      "count": 12
+    },
+    {
+      "ingredient": {
+        "item": "palladium:black_fabric"
+      },
+      "count": 12
+    },
+    {
+      "ingredient": {
+        "item": "infinity:uru_plate"
+      },
+      "count": 24
+    }
+  ],
+  "tool": {
+    "item": "infinity:hammer"
+  },
+  "tool_icon": "infinity:item/empty_tool_slot_hammer",
+  "title": "Thanos' Armor (MCU)",
+  "category": "infinity",
+  "requires_unlocking": false
+}

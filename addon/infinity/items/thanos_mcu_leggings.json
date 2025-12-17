@@ -1,0 +1,14 @@
+{
+  "type": "palladium:armor",
+  "slot": "leggings",
+  "rarity": "epic",
+  "is_fire_resistant": true,
+  "armor_material": "minecraft:netherite",
+  "opening_toggle_sound": "minecraft:item.armor.equip_gold",
+  "creative_mode_tab": {
+    "tab": "infinity:infinity"
+  },
+  "render_layers": {
+    "legs": ["infinity:thanos_mcu_leggings"]
+  }
+}
