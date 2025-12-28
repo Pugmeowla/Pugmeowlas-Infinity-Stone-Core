@@ -83,5 +83,10 @@
   "item.infinity.thanos_classic_leggings": "Thanos' Leggings (Classic)",
   "item.infinity.thanos_classic_boots": "Thanos' Boots (Classic)",
   "palladium.tailoring_recipe.category.minecraft.infinity": "Pugmeowla's Infinity Stone Core",
-  "block.infinity.uru_ore": "Uru Ore"
+  "block.infinity.uru_ore": "Uru Ore",
+  "item.infinity.endosym_ingot": "Endosymbiotic Ingot",
+  "item.infinity.thanos_mcu_helmet": "Thanos' Helmet (MCU)",
+  "item.infinity.thanos_mcu_chestplate": "Thanos' Chestplate (MCU)",
+  "item.infinity.thanos_mcu_leggings": "Thanos' Leggings (MCU)",
+  "item.infinity.thanos_mcu_boots": "Thanos' Boots (MCU)"
 }

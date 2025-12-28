@@ -1,0 +1,13 @@
+{
+  "type": "geckolib:default",
+  "model": "infinity:geo/gauntlet.geo.json",
+  "texture": "infinity:textures/models/rose_gauntlet.png",
+  "bones": {
+    "head": "head",
+    "body": "body",
+    "right_arm": "right_arm",
+    "left_arm": "left_arm",
+    "right_leg": "right_leg",
+    "left_leg": "left_leg"
+  }
+}

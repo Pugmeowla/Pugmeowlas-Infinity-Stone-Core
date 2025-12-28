@@ -108,7 +108,7 @@
     "flight_stuff": {
       "type": "palladium:command",
       "icon": "minecraft:barrier",
-      "title": "Flight Off",
+      "title": "Flight Off (Only works if you bought flight)",
       "bar_color": "red",
       "list_index": 2,
       "hidden": true,
@@ -138,7 +138,7 @@
       "icon": "infinity:mind_stone",
       "type": "palladium:command",
       "bar_color": "yellow",
-      "title": "Flight On",
+      "title": "Flight On (Only works if you bought flight)",
       "list_index": 2,
       "hidden": true,
       "first_tick_commands": ["tag @s remove no_fly"],

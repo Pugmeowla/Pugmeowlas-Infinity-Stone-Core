@@ -130,6 +130,19 @@
                   {
                     "type": "palladium:has_tag",
                     "tag": "hand_of_terror"
+                  },
+
+                  {
+                    "type": "palladium:has_tag",
+                    "tag": "sith_gauntlet"
+                  },
+                  {
+                    "type": "palladium:has_tag",
+                    "tag": "endosym_gauntlet"
+                  },
+                  {
+                    "type": "palladium:has_tag",
+                    "tag": "rose_gauntlet"
                   }
                 ]
               }
@@ -202,6 +215,18 @@
                   {
                     "type": "palladium:has_tag",
                     "tag": "hand_of_terror"
+                  },
+                  {
+                    "type": "palladium:has_tag",
+                    "tag": "sith_gauntlet"
+                  },
+                  {
+                    "type": "palladium:has_tag",
+                    "tag": "endosym_gauntlet"
+                  },
+                  {
+                    "type": "palladium:has_tag",
+                    "tag": "rose_gauntlet"
                   }
                 ]
               }
@@ -2372,6 +2397,105 @@
         ]
       }
     },
+    "render_layer_sith_gauntlet": {
+      "type": "palladium:render_layer",
+      "hidden": true,
+      "hidden_in_bar": true,
+      "render_layer": "infinity:sith_gauntlet",
+      "conditions": {
+        "enabling": [
+          {
+            "type": "palladium:or",
+            "conditions": [
+              {
+                "type": "palladium:item_in_slot",
+                "item": {
+                  "item": "infinity:infinity_gauntlet"
+                },
+                "slot": "offhand"
+              },
+              {
+                "type": "palladium:item_in_slot",
+                "item": {
+                  "item": "infinity:infinity_gauntlet"
+                },
+                "slot": "curios:hands"
+              }
+            ]
+          },
+          {
+            "type": "palladium:has_tag",
+            "tag": "sith_gauntlet"
+          }
+        ]
+      }
+    },
+    "render_layer_endosym_gauntlet": {
+      "type": "palladium:render_layer",
+      "hidden": true,
+      "hidden_in_bar": true,
+      "render_layer": "infinity:endosym_gauntlet",
+      "conditions": {
+        "enabling": [
+          {
+            "type": "palladium:or",
+            "conditions": [
+              {
+                "type": "palladium:item_in_slot",
+                "item": {
+                  "item": "infinity:infinity_gauntlet"
+                },
+                "slot": "offhand"
+              },
+              {
+                "type": "palladium:item_in_slot",
+                "item": {
+                  "item": "infinity:infinity_gauntlet"
+                },
+                "slot": "curios:hands"
+              }
+            ]
+          },
+          {
+            "type": "palladium:has_tag",
+            "tag": "endosym_gauntlet"
+          }
+        ]
+      }
+    },
+    "render_layer_rose_gauntlet": {
+      "type": "palladium:render_layer",
+      "hidden": true,
+      "hidden_in_bar": true,
+      "render_layer": "infinity:rose_gauntlet",
+      "conditions": {
+        "enabling": [
+          {
+            "type": "palladium:or",
+            "conditions": [
+              {
+                "type": "palladium:item_in_slot",
+                "item": {
+                  "item": "infinity:infinity_gauntlet"
+                },
+                "slot": "offhand"
+              },
+              {
+                "type": "palladium:item_in_slot",
+                "item": {
+                  "item": "infinity:infinity_gauntlet"
+                },
+                "slot": "curios:hands"
+              }
+            ]
+          },
+          {
+            "type": "palladium:has_tag",
+            "tag": "rose_gauntlet"
+          }
+        ]
+      }
+    },
 
     "nano_gauntlet": {
       "type": "palladium:command",
@@ -2435,6 +2559,18 @@
                   {
                     "type": "palladium:has_tag",
                     "tag": "hand_of_terror"
+                  },
+                  {
+                    "type": "palladium:has_tag",
+                    "tag": "sith_gauntlet"
+                  },
+                  {
+                    "type": "palladium:has_tag",
+                    "tag": "endosym_gauntlet"
+                  },
+                  {
+                    "type": "palladium:has_tag",
+                    "tag": "rose_gauntlet"
                   }
                 ]
               }
@@ -2465,7 +2601,8 @@
       "last_tick_commands": [],
       "commands": [
         "clear @s minecraft:shears",
-        "tag @s add fantastic_four_skin"
+        "tag @s add fantastic_four_skin",
+        "playsound minecraft:block.anvil.land block @s"
       ],
       "conditions": {
         "enabling": [
@@ -2511,6 +2648,18 @@
                   {
                     "type": "palladium:has_tag",
                     "tag": "hand_of_terror"
+                  },
+                  {
+                    "type": "palladium:has_tag",
+                    "tag": "sith_gauntlet"
+                  },
+                  {
+                    "type": "palladium:has_tag",
+                    "tag": "endosym_gauntlet"
+                  },
+                  {
+                    "type": "palladium:has_tag",
+                    "tag": "rose_gauntlet"
                   }
                 ]
               }
@@ -2541,7 +2690,8 @@
       "last_tick_commands": [],
       "commands": [
         "clear @s minecraft:netherite_ingot",
-        "tag @s add netherite_gauntlet"
+        "tag @s add netherite_gauntlet",
+        "playsound minecraft:block.anvil.land block @s"
       ],
       "conditions": {
         "enabling": [
@@ -2587,6 +2737,18 @@
                   {
                     "type": "palladium:has_tag",
                     "tag": "hand_of_terror"
+                  },
+                  {
+                    "type": "palladium:has_tag",
+                    "tag": "sith_gauntlet"
+                  },
+                  {
+                    "type": "palladium:has_tag",
+                    "tag": "endosym_gauntlet"
+                  },
+                  {
+                    "type": "palladium:has_tag",
+                    "tag": "rose_gauntlet"
                   }
                 ]
               }
@@ -2617,7 +2779,8 @@
       "last_tick_commands": [],
       "commands": [
         "clear @s infinity:soul_infused_netherite_ingot",
-        "tag @s add soul_netherite_gauntlet"
+        "tag @s add soul_netherite_gauntlet",
+        "playsound minecraft:block.anvil.land block @s"
       ],
       "conditions": {
         "enabling": [
@@ -2663,6 +2826,18 @@
                   {
                     "type": "palladium:has_tag",
                     "tag": "hand_of_terror"
+                  },
+                  {
+                    "type": "palladium:has_tag",
+                    "tag": "sith_gauntlet"
+                  },
+                  {
+                    "type": "palladium:has_tag",
+                    "tag": "endosym_gauntlet"
+                  },
+                  {
+                    "type": "palladium:has_tag",
+                    "tag": "rose_gauntlet"
                   }
                 ]
               }
@@ -2687,10 +2862,14 @@
       "hidden_in_bar": false,
       "list_index": 3,
       "gui_position": [-0.5, 2],
-      "description": "Unlock with a piece of raw chicken, just hold it to use. It's Finger Lickin' Good.",
+      "description": "Unlock with a piece of raw chicken, just hold it to use. It's just that Finger Lickin' Good.",
       "first_tick_commands": [],
       "last_tick_commands": [],
-      "commands": ["clear @s minecraft:chicken", "tag @s add finger_gauntlet"],
+      "commands": [
+        "clear @s minecraft:chicken",
+        "tag @s add finger_gauntlet",
+        "playsound minecraft:entity.generic.eat block @s ~ ~ ~ 1 1"
+      ],
       "conditions": {
         "enabling": [],
         "unlocking": [
@@ -2727,6 +2906,18 @@
                   {
                     "type": "palladium:has_tag",
                     "tag": "hand_of_terror"
+                  },
+                  {
+                    "type": "palladium:has_tag",
+                    "tag": "sith_gauntlet"
+                  },
+                  {
+                    "type": "palladium:has_tag",
+                    "tag": "endosym_gauntlet"
+                  },
+                  {
+                    "type": "palladium:has_tag",
+                    "tag": "rose_gauntlet"
                   }
                 ]
               }
@@ -2754,7 +2945,11 @@
       "description": "Unlock with an object that has remnants of power, then right click. Skin requested by Terror.",
       "first_tick_commands": [],
       "last_tick_commands": [],
-      "commands": ["clear @s infinity:empty_orb", "tag @s add hand_of_terror"],
+      "commands": [
+        "clear @s infinity:empty_orb",
+        "tag @s add hand_of_terror",
+        "playsound minecraft:block.anvil.land block @s"
+      ],
       "conditions": {
         "enabling": [
           {
@@ -2799,6 +2994,18 @@
                   {
                     "type": "palladium:has_tag",
                     "tag": "hand_of_terror"
+                  },
+                  {
+                    "type": "palladium:has_tag",
+                    "tag": "sith_gauntlet"
+                  },
+                  {
+                    "type": "palladium:has_tag",
+                    "tag": "endosym_gauntlet"
+                  },
+                  {
+                    "type": "palladium:has_tag",
+                    "tag": "rose_gauntlet"
                   }
                 ]
               }
@@ -2808,6 +3015,270 @@
             "type": "palladium:item_in_slot",
             "item": {
               "item": "infinity:empty_orb"
+            },
+            "slot": "mainhand"
+          }
+        ]
+      }
+    },
+    "sith_gauntlet": {
+      "type": "palladium:command",
+      "icon": "infinity:uru_ingot",
+      "title": "Sith Gauntlet",
+      "bar_color": "black",
+      "hidden": false,
+      "hidden_in_bar": false,
+      "list_index": 3,
+      "gui_position": [0.5, 3],
+      "description": "Unlock with an Uru Ingot, then right click.",
+      "first_tick_commands": [],
+      "last_tick_commands": [],
+      "commands": [
+        "clear @s infinity:uru_ingot",
+        "tag @s add sith_gauntlet",
+        "playsound minecraft:block.anvil.land block @s"
+      ],
+      "conditions": {
+        "enabling": [
+          {
+            "type": "palladium:action",
+            "cooldown": 0,
+            "key_type": "right_click",
+            "needs_empty_hand": false,
+            "allow_scrolling_when_crouching": true
+          }
+        ],
+        "unlocking": [
+          {
+            "type": "palladium:not",
+            "conditions": [
+              {
+                "type": "palladium:or",
+                "conditions": [
+                  {
+                    "type": "palladium:has_tag",
+                    "tag": "nano_gauntlet"
+                  },
+                  {
+                    "type": "palladium:has_tag",
+                    "tag": "netherite_gauntlet"
+                  },
+                  {
+                    "type": "palladium:has_tag",
+                    "tag": "fantastic_four_skin"
+                  },
+                  {
+                    "type": "palladium:has_tag",
+                    "tag": "soul_netherite_gauntlet"
+                  },
+                  {
+                    "type": "palladium:has_tag",
+                    "tag": "omni_gauntlet"
+                  },
+                  {
+                    "type": "palladium:has_tag",
+                    "tag": "finger_gauntlet"
+                  },
+                  {
+                    "type": "palladium:has_tag",
+                    "tag": "hand_of_terror"
+                  },
+                  {
+                    "type": "palladium:has_tag",
+                    "tag": "sith_gauntlet"
+                  },
+                  {
+                    "type": "palladium:has_tag",
+                    "tag": "endosym_gauntlet"
+                  },
+                  {
+                    "type": "palladium:has_tag",
+                    "tag": "rose_gauntlet"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "palladium:item_in_slot",
+            "item": {
+              "item": "infinity:uru_ingot"
+            },
+            "slot": "mainhand"
+          }
+        ]
+      }
+    },
+    "endosym_gauntlet": {
+      "type": "palladium:command",
+      "icon": "infinity:endosym_ingot",
+      "title": "Endosymbiotic Gauntlet",
+      "bar_color": "black",
+      "hidden": false,
+      "hidden_in_bar": false,
+      "list_index": 3,
+      "gui_position": [-0.5, 3],
+      "description": "Unlock with a Endosymbiotic Ingot, then right click.",
+      "first_tick_commands": [],
+      "last_tick_commands": [],
+      "commands": [
+        "clear @s infinity:endosym_ingot",
+        "tag @s add endosym_gauntlet",
+        "playsound minecraft:block.anvil.land block @s"
+      ],
+      "conditions": {
+        "enabling": [
+          {
+            "type": "palladium:action",
+            "cooldown": 0,
+            "key_type": "right_click",
+            "needs_empty_hand": false,
+            "allow_scrolling_when_crouching": true
+          }
+        ],
+        "unlocking": [
+          {
+            "type": "palladium:not",
+            "conditions": [
+              {
+                "type": "palladium:or",
+                "conditions": [
+                  {
+                    "type": "palladium:has_tag",
+                    "tag": "nano_gauntlet"
+                  },
+                  {
+                    "type": "palladium:has_tag",
+                    "tag": "netherite_gauntlet"
+                  },
+                  {
+                    "type": "palladium:has_tag",
+                    "tag": "fantastic_four_skin"
+                  },
+                  {
+                    "type": "palladium:has_tag",
+                    "tag": "soul_netherite_gauntlet"
+                  },
+                  {
+                    "type": "palladium:has_tag",
+                    "tag": "omni_gauntlet"
+                  },
+                  {
+                    "type": "palladium:has_tag",
+                    "tag": "finger_gauntlet"
+                  },
+                  {
+                    "type": "palladium:has_tag",
+                    "tag": "hand_of_terror"
+                  },
+                  {
+                    "type": "palladium:has_tag",
+                    "tag": "sith_gauntlet"
+                  },
+                  {
+                    "type": "palladium:has_tag",
+                    "tag": "endosym_gauntlet"
+                  },
+                  {
+                    "type": "palladium:has_tag",
+                    "tag": "rose_gauntlet"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "palladium:item_in_slot",
+            "item": {
+              "item": "infinity:endosym_ingot"
+            },
+            "slot": "mainhand"
+          }
+        ]
+      }
+    },
+    "rose_gauntlet": {
+      "type": "palladium:command",
+      "icon": "minecraft:cherry_planks",
+      "title": "Rose-Gold Gauntlet",
+      "bar_color": "black",
+      "hidden": false,
+      "hidden_in_bar": false,
+      "list_index": 3,
+      "gui_position": [0, 2.5],
+      "description": "Unlock with Cherry Planks, then right click.",
+      "first_tick_commands": [],
+      "last_tick_commands": [],
+      "commands": [
+        "clear @s minecraft:cherry_planks",
+        "tag @s add rose_gauntlet",
+        "playsound minecraft:block.anvil.land block @s"
+      ],
+      "conditions": {
+        "enabling": [
+          {
+            "type": "palladium:action",
+            "cooldown": 0,
+            "key_type": "right_click",
+            "needs_empty_hand": false,
+            "allow_scrolling_when_crouching": true
+          }
+        ],
+        "unlocking": [
+          {
+            "type": "palladium:not",
+            "conditions": [
+              {
+                "type": "palladium:or",
+                "conditions": [
+                  {
+                    "type": "palladium:has_tag",
+                    "tag": "nano_gauntlet"
+                  },
+                  {
+                    "type": "palladium:has_tag",
+                    "tag": "netherite_gauntlet"
+                  },
+                  {
+                    "type": "palladium:has_tag",
+                    "tag": "fantastic_four_skin"
+                  },
+                  {
+                    "type": "palladium:has_tag",
+                    "tag": "soul_netherite_gauntlet"
+                  },
+                  {
+                    "type": "palladium:has_tag",
+                    "tag": "omni_gauntlet"
+                  },
+                  {
+                    "type": "palladium:has_tag",
+                    "tag": "finger_gauntlet"
+                  },
+                  {
+                    "type": "palladium:has_tag",
+                    "tag": "hand_of_terror"
+                  },
+                  {
+                    "type": "palladium:has_tag",
+                    "tag": "sith_gauntlet"
+                  },
+                  {
+                    "type": "palladium:has_tag",
+                    "tag": "endosym_gauntlet"
+                  },
+                  {
+                    "type": "palladium:has_tag",
+                    "tag": "rose_gauntlet"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "palladium:item_in_slot",
+            "item": {
+              "item": "minecraft:cherry_planks"
             },
             "slot": "mainhand"
           }
@@ -2834,13 +3305,20 @@
         "execute if entity @s[tag=soul_netherite_gauntlet] run give @s infinity:soul_infused_netherite_ingot",
         "execute if entity @s[tag=finger_gauntlet] run give @s minecraft:chicken",
         "execute if entity @s[tag=hand_of_terror] run give @s infinity:empty_orb",
+        "execute if entity @s[tag=sith_gauntlet] run give @s infinity:uru_ingot",
+        "execute if entity @s[tag=endosym_gauntlet] run give @s infinity:endosym_ingot",
+        "execute if entity @s[tag=rose_gauntlet] run give @s minecraft:cherry_planks",
         "tag @s remove nano_gauntlet",
         "tag @s remove netherite_gauntlet",
         "tag @s remove fantastic_four_skin",
         "tag @s remove soul_netherite_gauntlet",
         "tag @s remove finger_gauntlet",
         "tag @s remove hand_of_terror",
-        "schedule clear infinity:remove_burn_texture"
+        "tag @s remove sith_gauntlet",
+        "tag @s remove endosym_gauntlet",
+        "tag @s remove rose_gauntlet",
+        "schedule clear infinity:remove_burn_texture",
+        "playsound minecraft:block.grindstone.use block @s"
       ],
       "conditions": {
         "enabling": [
@@ -2879,6 +3357,22 @@
               {
                 "type": "palladium:has_tag",
                 "tag": "finger_gauntlet"
+              },
+              {
+                "type": "palladium:has_tag",
+                "tag": "hand_of_terror"
+              },
+              {
+                "type": "palladium:has_tag",
+                "tag": "sith_gauntlet"
+              },
+              {
+                "type": "palladium:has_tag",
+                "tag": "endosym_gauntlet"
+              },
+              {
+                "type": "palladium:has_tag",
+                "tag": "rose_gauntlet"
               }
             ]
           }
@@ -2937,7 +3431,12 @@
       "list_index": 1,
       "gui_position": "null",
       "description": "null",
-      "abilities": ["kill_half", "kill_player", "destroy_stones"],
+      "abilities": [
+        "kill_half",
+        "kill_player",
+        "destroy_stones",
+        "kill_hostile"
+      ],
       "texture": "null",
       "disable_mouse_scrolling": false,
       "disable_center_icon": false,
@@ -3077,6 +3576,123 @@
         "playsound minecraft:entity.lightning_bolt.thunder master @a",
         "playsound minecraft:entity.ender_dragon.death master @a"
       ],
+      "conditions": {
+        "enabling": [
+          {
+            "type": "palladium:action",
+            "cooldown": 0,
+            "key_type": "key_bind",
+            "needs_empty_hand": false,
+            "allow_scrolling_when_crouching": true
+          }
+        ],
+        "unlocking": [
+          {
+            "type": "palladium:not",
+            "conditions": [
+              {
+                "type": "palladium:has_tag",
+                "tag": "burn"
+              }
+            ]
+          },
+          {
+            "type": "palladium:has_power",
+            "power": "infinity:mind_stone"
+          },
+          {
+            "type": "palladium:has_power",
+            "power": "infinity:power_stone_passive"
+          },
+          {
+            "type": "palladium:has_power",
+            "power": "infinity:space_stone"
+          },
+          {
+            "type": "palladium:has_power",
+            "power": "infinity:reality_stone"
+          },
+          {
+            "type": "palladium:has_power",
+            "power": "infinity:time_stone"
+          },
+          {
+            "type": "palladium:has_power",
+            "power": "infinity:soul_stone"
+          }
+        ]
+      }
+    },
+    "kill_hostile": {
+      "type": "palladium:command",
+      "icon": "minecraft:zombie_head",
+      "title": "Kill All Hostile",
+      "bar_color": "yellow",
+      "hidden": true,
+      "hidden_in_bar": true,
+      "list_index": -1,
+      "gui_position": "null",
+      "description": "Snap",
+      "commands": [
+        "tag @s add exclude",
+        "tag @s add burn_texture",
+        "tag @s add burn",
+        "schedule function infinity:clear_burn 1d",
+        "attribute @p minecraft:generic.max_health base set 1",
+        "damage @s 1",
+        "kill @e[type=minecraft:silverfish,tag=!exclude]",
+        "kill @e[type=minecraft:endermite,tag=!exclude]",
+
+        "kill @e[type=minecraft:zombie,tag=!exclude]",
+        "kill @e[type=minecraft:husk,tag=!exclude]",
+        "kill @e[type=minecraft:drowned,tag=!exclude]",
+        "kill @e[type=minecraft:zombie_villager,tag=!exclude]",
+        "kill @e[type=minecraft:skeleton,tag=!exclude]",
+        "kill @e[type=minecraft:stray,tag=!exclude]",
+        "kill @e[type=minecraft:wither_skeleton,tag=!exclude]",
+
+        "kill @e[type=minecraft:creeper,tag=!exclude]",
+        "kill @e[type=minecraft:spider,tag=!exclude]",
+        "kill @e[type=minecraft:cave_spider,tag=!exclude]",
+
+        "kill @e[type=minecraft:enderman,tag=!exclude]",
+        "kill @e[type=minecraft:witch,tag=!exclude]",
+
+        "kill @e[type=minecraft:slime,tag=!exclude]",
+        "kill @e[type=minecraft:magma_cube,tag=!exclude]",
+
+        "kill @e[type=minecraft:phantom,tag=!exclude]",
+        "kill @e[type=minecraft:blaze,tag=!exclude]",
+        "kill @e[type=minecraft:ghast,tag=!exclude]",
+
+        "kill @e[type=minecraft:guardian,tag=!exclude]",
+        "kill @e[type=minecraft:elder_guardian,tag=!exclude]",
+
+        "kill @e[type=minecraft:shulker,tag=!exclude]",
+
+        "kill @e[type=minecraft:vindicator,tag=!exclude]",
+        "kill @e[type=minecraft:evoker,tag=!exclude]",
+        "kill @e[type=minecraft:vex,tag=!exclude]",
+        "kill @e[type=minecraft:pillager,tag=!exclude]",
+        "kill @e[type=minecraft:ravager,tag=!exclude]",
+        "kill @e[type=minecraft:illusioner,tag=!exclude]",
+
+        "kill @e[type=minecraft:hoglin,tag=!exclude]",
+        "kill @e[type=minecraft:zoglin,tag=!exclude]",
+        "kill @e[type=minecraft:piglin_brute,tag=!exclude]",
+
+        "kill @e[type=minecraft:warden,tag=!exclude]",
+
+        "kill @e[type=minecraft:wither,tag=!exclude]",
+        "kill @e[type=minecraft:ender_dragon,tag=!exclude]",
+
+        "tag @s remove exclude",
+        "playsound minecraft:block.conduit.activate master @a",
+        "playsound minecraft:entity.wither.spawn master @a",
+        "playsound minecraft:entity.lightning_bolt.thunder master @a",
+        "playsound minecraft:entity.ender_dragon.death master @a"
+      ],
+
       "conditions": {
         "enabling": [
           {

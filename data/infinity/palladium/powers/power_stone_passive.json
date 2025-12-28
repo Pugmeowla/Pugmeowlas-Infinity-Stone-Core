@@ -3,7 +3,7 @@
   "background": "minecraft:textures/block/purple_concrete.png",
   "icon": "infinity:power_stone",
   "gui_display_type": "tree",
-  "persistent_data": false,
+  "persistent_data": true,
   "ability_bar_texture": "infinity:textures/gui/ability_bars/power_ability_bar.png",
 
   "abilities": {
@@ -1147,19 +1147,9 @@
       "conditions": {
         "enabling": [
           {
-            "type": "palladium:or",
-            "conditions": [
-              {
-                "type": "palladium:ability_enabled",
-                "power": "infinity:power_stone_passive",
-                "ability": "power_blast_aim"
-              },
-              {
-                "type": "palladium:ability_enabled",
-                "power": "infinity:infinity_gauntlet",
-                "ability": "power_blast_aim"
-              }
-            ]
+            "type": "palladium:ability_enabled",
+            "power": "infinity:power_stone_passive",
+            "ability": "power_blast_aim"
           },
 
           {

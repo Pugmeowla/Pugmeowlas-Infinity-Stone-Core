@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": ["HG ", "   ", "   "],
+  "key": {
+    "H": {
+      "item": "palladium:vibranium_ingot"
+    },
+    "G": {
+      "item": "minecraft:egg"
+    }
+  },
+  "result": {
+    "item": "infinity:endosym_ingot",
+    "count": 1
+  }
+}

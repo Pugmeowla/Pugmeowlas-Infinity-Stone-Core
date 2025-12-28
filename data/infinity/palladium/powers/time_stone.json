@@ -97,7 +97,7 @@
 
     "slow_time": {
       "type": "palladium:command",
-      "icon": "infinity:textures/icon/blue_ice.png",
+      "icon": "infinity:textures/icon/hourglass.png",
       "title": "Slow Time",
       "bar_color": "lime",
       "hidden": true,
@@ -308,7 +308,7 @@
 
     "reset_time_speed": {
       "type": "palladium:command",
-      "icon": "minecraft:clock",
+      "icon": "infinity:textures/icon/hourglass.png",
       "title": "Change Flow of Time",
       "bar_color": "lime",
       "hidden": true,
@@ -1111,6 +1111,49 @@
         ]
       }
     },
+    "gui": {
+      "type": "palladium:gui_overlay",
+      "icon": "minecraft:blaze_rod",
+      "title": "null",
+      "bar_color": "light_gray",
+      "hidden": true,
+      "hidden_in_bar": true,
+      "list_index": -1,
+      "gui_position": "null",
+      "description": "null",
+      "texture": "infinity:textures/gui/time.png",
+      "texture_width": 200,
+      "texture_height": 200,
+      "translate": [0, 0, 0],
+      "rotate": [0, 0, 0],
+      "scale": [1, 1, 1],
+      "alignment": "stretch",
+      "conditions": {
+        "enabling": [
+          {
+            "type": "palladium:or",
+            "conditions": [
+              {
+                "type": "palladium:ability_enabled",
+                "ability": "fast_forward"
+              },
+              {
+                "type": "palladium:ability_enabled",
+                "ability": "projectile_stop"
+              },
+              {
+                "type": "palladium:ability_enabled",
+                "ability": "reset_time_speed"
+              },
+              {
+                "type": "palladium:ability_enabled",
+                "ability": "time_freeze"
+              }
+            ]
+          }
+        ]
+      }
+    },
     "aim3": {
       "type": "palladium:aim",
       "icon": "minecraft:blaze_rod",
@@ -1134,7 +1177,7 @@
     },
     "sidebar_thingies": {
       "type": "palladium:command",
-      "icon": "minecraft:clock",
+      "icon": "infinity:textures/icon/hourglass.png",
       "title": "Slow Time",
       "bar_color": "lime",
       "hidden": true,

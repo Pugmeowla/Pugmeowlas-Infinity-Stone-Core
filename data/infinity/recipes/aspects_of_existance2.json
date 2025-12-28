@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": ["HG ", "   ", "   "],
+  "key": {
+    "H": {
+      "item": "infinity:shards_of_existance"
+    },
+    "G": {
+      "item": "create:experience_nugget"
+    }
+  },
+  "result": {
+    "item": "infinity:aspects_of_existance",
+    "count": 1
+  }
+}
