@@ -158,5 +158,5 @@
   "ability.infinity.time_stone.start_time.description": "Restarts the daylight cycle.",
   "ability.infinity.time_stone.projectile_stop.description": "Stops all projectiles in midair. Once you leave the area, they will eventually regain momentum.",
   "ability.infinity.time_stone.time_set.description": "Grants access to the time_set command, allowing direct control over the world's time.",
-  "ability.infinity.time_stone.remove_time_stone.description": "Removes the Time Stone from the Eye of Agamotto."
+  "ability.infinity.time_stone.remove_time_stone.description": "Removes the Time Stone from the Eye of Agamotto. (Shift Left Click from Eye of Agamotto)"
 }
