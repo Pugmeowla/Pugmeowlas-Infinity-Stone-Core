@@ -13,7 +13,9 @@
       "icon": "infinity:textures/icon/fly.png",
       "title": "Flight",
       "bar_color": "yellow",
-      "description": "Gives you flight. It is togglable, in case you would want to turn it off for another form of flight from another mod.",
+      "description": {
+        "translate": "ability.infinity.mind_stone.flight.description"
+      },
       "list_index": 2,
       "attribute": "palladium:flight_speed",
       "gui_position": [0, -2],
@@ -250,7 +252,9 @@
       "icon": "infinity:mind_stone",
       "title": "Intangibility",
       "bar_color": "yellow",
-      "description": "Lets you go intangible",
+      "description": {
+        "translate": "ability.infinity.mind_stone.intangibility.description"
+      },
       "gui_position": [0, 0],
       "hidden": false,
       "hidden_in_bar": false,
@@ -508,7 +512,9 @@
       "hidden_in_bar": false,
       "list_index": 0,
       "gui_position": [0, -1],
-      "description": "Pacify hostile mobs around you. Shift to Un-Passify.",
+      "description": {
+        "translate": "ability.infinity.mind_stone.passive.description"
+      },
       "first_tick_commands": ["playsound infinity:mind_stone_phase block @s"],
       "last_tick_commands": [],
       "commands": [
@@ -617,7 +623,9 @@
       "hidden_in_bar": false,
       "list_index": 0,
       "gui_position": "null",
-      "description": "Un-Pacify hostile mobs around you",
+      "description": {
+        "translate": "ability.infinity.mind_stone.un_passive.description"
+      },
       "first_tick_commands": ["playsound infinity:mind_stone_phase block @s"],
       "last_tick_commands": [],
       "commands": [
@@ -709,7 +717,9 @@
       "hidden_in_bar": false,
       "list_index": -1,
       "gui_position": "null",
-      "description": "Shoots lazer beam from the Scepter",
+      "description": {
+        "translate": "ability.infinity.mind_stone.power_blast.description"
+      },
       "energy_beam": "infinity:scepter_beam",
       "damage": 20,
       "max_distance": 50,
@@ -745,7 +755,9 @@
       "hidden_in_bar": false,
       "list_index": -1,
       "gui_position": "null",
-      "description": "Shoots laser beam from the Scepter",
+      "description": {
+        "translate": "ability.infinity.mind_stone.power_blast.description"
+      },
       "time": 1,
       "arm": "main_arm",
       "conditions": {
@@ -775,7 +787,9 @@
       "hidden_in_bar": true,
       "list_index": -1,
       "gui_position": "null",
-      "description": "Remove Mind Stone",
+      "description": {
+        "translate": "ability.infinity.mind_stone.remove_mind_stone.description"
+      },
       "commands": [
         "execute as @s run clear @s infinity:scepter",
         "execute as @s run function infinity:givemindstone",
@@ -827,7 +841,9 @@
       "hidden_in_bar": false,
       "list_index": 0,
       "gui_position": [1, -1],
-      "description": "Gain mass knowledge and have access to all recipes",
+      "description": {
+        "translate": "ability.infinity.mind_stone.recipe.description"
+      },
       "first_tick_commands": ["recipe give @s *"],
       "last_tick_commands": [],
       "commands": [""],
@@ -917,7 +933,9 @@
       "hidden_in_bar": false,
       "list_index": 0,
       "gui_position": [-1, -1],
-      "description": "The people love you.",
+      "description": {
+        "translate": "ability.infinity.mind_stone.hero.description"
+      },
       "first_tick_commands": [
         "effect give @s minecraft:hero_of_the_village infinite 5 true"
       ],
@@ -1009,7 +1027,9 @@
       "hidden_in_bar": false,
       "list_index": 0,
       "gui_position": [-1, 0],
-      "description": "You can sense your surroundings, you can see in the dark.",
+      "description": {
+        "translate": "ability.infinity.mind_stone.night_vision.description"
+      },
       "first_tick_commands": [
         "effect give @s minecraft:night_vision infinite 5 true"
       ],

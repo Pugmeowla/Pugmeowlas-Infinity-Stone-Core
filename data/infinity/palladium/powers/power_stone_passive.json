@@ -1264,7 +1264,9 @@
       "hidden_in_bar": false,
       "list_index": 1,
       "gui_position": [-2, 0],
-      "description": "A powerful beam that gets stronger the more punch upgrade you unlock. It has a range of 100 blocks, smelts blocks and causes fire. It will turn rainbow and do explosion damage if all 6 stones are collected. Does not work with other suits, only the gauntlet.",
+      "description": {
+        "translate": "ability.infinity.power_stone.power_blast_aim.description"
+      },
       "time": 1,
       "arm": "off_arm",
       "conditions": {
@@ -1436,7 +1438,9 @@
       "hidden_in_bar": false,
       "list_index": 0,
       "gui_position": [0, 0],
-      "description": "It gives the player both health boost and resistance",
+      "description": {
+        "translate": "ability.infinity.power_stone.impower.description"
+      },
       "first_tick_commands": ["playsound infinity:reality_stone block @s"],
       "last_tick_commands": [],
       "commands": [
@@ -1517,7 +1521,9 @@
       "hidden_in_bar": false,
       "list_index": -1,
       "gui_position": [-1, -1],
-      "description": "It grants the player 30 attack damage",
+      "description": {
+        "translate": "ability.infinity.power_stone.punch.description"
+      },
       "conditions": {
         "unlocking": [
           {
@@ -1590,7 +1596,9 @@
       "hidden_in_bar": false,
       "list_index": -1,
       "gui_position": [-1, -2],
-      "description": "It grants the player 70 attack damage",
+      "description": {
+        "translate": "ability.infinity.power_stone.punch2.description"
+      },
       "conditions": {
         "unlocking": [
           {
@@ -1663,7 +1671,9 @@
       "hidden_in_bar": false,
       "list_index": -1,
       "gui_position": [-1, -3],
-      "description": "It grants the player 100 attack damage",
+      "description": {
+        "translate": "ability.infinity.power_stone.punch3.description"
+      },
       "conditions": {
         "unlocking": [
           {
@@ -1736,7 +1746,9 @@
       "hidden_in_bar": false,
       "list_index": -1,
       "gui_position": [-2, -3],
-      "description": "It grants the player 300 attack damage",
+      "description": {
+        "translate": "ability.infinity.power_stone.punch4.description"
+      },
       "conditions": {
         "unlocking": [
           {
@@ -1809,7 +1821,9 @@
       "hidden_in_bar": false,
       "list_index": -1,
       "gui_position": [-2, -2],
-      "description": "It grants the player 3000 attack damage",
+      "description": {
+        "translate": "ability.infinity.power_stone.punch5.description"
+      },
       "conditions": {
         "unlocking": [
           {
@@ -1882,7 +1896,9 @@
       "hidden_in_bar": false,
       "list_index": -1,
       "gui_position": [-2, -1],
-      "description": "It grants the player a near infinite attack damage",
+      "description": {
+        "translate": "ability.infinity.power_stone.punch6.description"
+      },
       "conditions": {
         "unlocking": [
           {
@@ -2233,7 +2249,9 @@
       "hidden_in_bar": true,
       "list_index": -1,
       "gui_position": [1, -1],
-      "description": "It grants the player knockback resistance",
+      "description": {
+        "translate": "ability.infinity.power_stone.knockback.description"
+      },
       "attribute": "minecraft:generic.knockback_resistance",
       "amount": 2147483647,
       "operation": 0,
@@ -2302,7 +2320,9 @@
       "hidden_in_bar": true,
       "list_index": -1,
       "gui_position": [0, 1],
-      "description": "Without protection, the player is bombarded with cosmic radiation, destroying the environment and user in the process.",
+      "description": {
+        "translate": "ability.infinity.power_stone.explosion.description"
+      },
       "first_tick_commands": [
         "playsound infinity:power_stone_explode block @s"
       ],
@@ -2371,7 +2391,9 @@
       "hidden_in_bar": false,
       "list_index": 2,
       "gui_position": [0, -2],
-      "description": "The player used to be bombarded with cosmic radiation, destroying the environment and user in the process, but it can now be controlled.",
+      "description": {
+        "translate": "ability.infinity.power_stone.explosion2.description"
+      },
       "first_tick_commands": [
         "playsound infinity:power_stone_explode block @s"
       ],
@@ -2486,7 +2508,9 @@
       "hidden_in_bar": false,
       "list_index": 3,
       "gui_position": [0, -3],
-      "description": "The Power Stone shatters a distant moon, while the Space Stone pulls the fragments toward the target. Using them together creates a devastating, large-scale attack that requires both stones. (Don't spam, it might cause lag)",
+      "description": {
+        "translate": "ability.infinity.power_stone.meteor_storm.description"
+      },
       "first_tick_commands": [],
       "last_tick_commands": [],
       "commands": ["function infinity:meteor"],

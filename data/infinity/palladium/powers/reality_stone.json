@@ -17,7 +17,9 @@
       "hidden_in_bar": true,
       "list_index": -1,
       "gui_position": [0, -2],
-      "description": "Any block you look at gets added to your inventory.",
+      "description": {
+        "translate": "ability.infinity.reality_stone.save_dummy.description"
+      },
       "conditions": {
         "unlocking": [
           {
@@ -51,7 +53,9 @@
       "hidden_in_bar": true,
       "list_index": -1,
       "gui_position": [-1, -1],
-      "description": "Allows for size changing, press to shrink, shift press to grow, press again to return to original size.",
+      "description": {
+        "translate": "ability.infinity.reality_stone.shrink_dummy.description"
+      },
       "conditions": {
         "unlocking": [
           {
@@ -80,7 +84,9 @@
       "hidden_in_bar": false,
       "list_index": 1,
       "gui_position": [-1, -1],
-      "description": "Shrinks the player to 1/10th scale",
+      "description": {
+        "translate": "ability.infinity.reality_stone.shrink.description"
+      },
       "first_tick_commands": ["playsound infinity:reality_stone_size block @s"],
       "commands": ["scale set pehkui:base 0.1"],
       "conditions": {
@@ -178,7 +184,9 @@
       "hidden_in_bar": false,
       "list_index": 1,
       "gui_position": [-1, 0],
-      "description": "Grows the player to 10x scale",
+      "description": {
+        "translate": "ability.infinity.reality_stone.grow.description"
+      },
       "first_tick_commands": ["playsound infinity:reality_stone_size block @s"],
       "commands": ["scale set pehkui:base 10"],
       "conditions": {
@@ -269,7 +277,9 @@
       "hidden_in_bar": false,
       "list_index": 1,
       "gui_position": [-2, -1],
-      "description": "Returms the player to 1x scale",
+      "description": {
+        "translate": "ability.infinity.reality_stone.normal.description"
+      },
       "first_tick_commands": ["playsound infinity:reality_stone_size block @s"],
       "commands": ["scale set pehkui:base 1"],
       "conditions": {
@@ -362,7 +372,9 @@
       "hidden_in_bar": false,
       "list_index": 2,
       "gui_position": [1, -1],
-      "description": "Makes you truly invisible",
+      "description": {
+        "translate": "ability.infinity.reality_stone.invisibility.description"
+      },
       "conditions": {
         "enabling": [
           {
@@ -450,7 +462,9 @@
       "hidden_in_bar": true,
       "list_index": 0,
       "gui_position": [0, -1],
-      "description": "Pacify hostile mobs around you",
+      "description": {
+        "translate": "ability.infinity.reality_stone.vibrate_sound.description"
+      },
       "first_tick_commands": [
         "playsound infinity:reality_stone_invis block @s"
       ],
@@ -475,7 +489,9 @@
       "hidden_in_bar": false,
       "list_index": 3,
       "gui_position": [0, -2],
-      "description": "Turns on Block Duplication",
+      "description": {
+        "translate": "ability.infinity.reality_stone.save_block_on.description"
+      },
       "first_tick_commands": ["playsound infinity:reality_stone block @s"],
       "last_tick_commands": [],
       "commands": ["tag @s add reality_copy_on"],
@@ -569,7 +585,9 @@
       "hidden_in_bar": false,
       "list_index": 3,
       "gui_position": [0, -3],
-      "description": "Turns off Block Duplication",
+      "description": {
+        "translate": "ability.infinity.reality_stone.save_block_off.description"
+      },
       "first_tick_commands": ["playsound infinity:reality_stone block @s"],
       "last_tick_commands": [],
       "commands": ["tag @s remove reality_copy_on"],
@@ -657,7 +675,9 @@
       "hidden_in_bar": false,
       "list_index": 0,
       "gui_position": [0, 0],
-      "description": "Gives entities nearby blindness, nausea, darkness and slowness",
+      "description": {
+        "translate": "ability.infinity.reality_stone.effects.description"
+      },
       "first_tick_commands": ["playsound infinity:reality_stone block @s"],
       "last_tick_commands": [],
       "commands": [
@@ -792,7 +812,9 @@
       "hidden_in_bar": false,
       "list_index": -1,
       "gui_position": "null",
-      "description": "Remove Reality Stone",
+      "description": {
+        "translate": "ability.infinity.reality_stone.remove_reality_stone.description"
+      },
       "commands": [
         "execute as @s run clear @s infinity:aether",
         "execute as @s run function infinity:giverealitystone",
@@ -844,7 +866,9 @@
       "hidden_in_bar": false,
       "list_index": 4,
       "gui_position": [0, -3],
-      "description": "Turns the block you look at into bubbles (dont stand right next to the block, stand like 2 blocks away)",
+      "description": {
+        "translate": "ability.infinity.reality_stone.bubble.description"
+      },
       "first_tick_commands": [
         "playsound infinity:reality_stone_bubble block @s"
       ],
