@@ -158,5 +158,19 @@
   "ability.infinity.time_stone.start_time.description": "Restarts the daylight cycle.",
   "ability.infinity.time_stone.projectile_stop.description": "Stops all projectiles in midair. Once you leave the area, they will eventually regain momentum.",
   "ability.infinity.time_stone.time_set.description": "Grants access to the time_set command, allowing direct control over the world's time.",
-  "ability.infinity.time_stone.remove_time_stone.description": "Removes the Time Stone from the Eye of Agamotto. (Shift Left Click from Eye of Agamotto)"
+  "ability.infinity.time_stone.remove_time_stone.description": "Removes the Time Stone from the Eye of Agamotto. (Shift Left Click from Eye of Agamotto)",
+
+  "ability.infinity.gauntlet.nano_gauntlet.description": "Unlock by right-clicking with a Vibranium Flux Capacitor in your main hand. Equip this skin and keep it on for one full in-game day to heal the burn damage caused by the Snap.",
+  "ability.infinity.gauntlet.fantastic_four_skin.description": "Unlock by right-clicking with an unknown item. A special skin inspired by the Fantastic Four.",
+  "ability.infinity.gauntlet.netherite_gauntlet.description": "Unlock by right-clicking with a Netherite Ingot in your main hand. Applies a reinforced Netherite Gauntlet skin.",
+  "ability.infinity.gauntlet.soul_netherite_gauntlet.description": "Unlock by right-clicking with a Soul-Infused Netherite Ingot in your main hand. A darker, more powerful evolution of the Netherite Gauntlet.",
+  "ability.infinity.gauntlet.finger_gauntlet.description": "Unlock by holding a piece of raw chicken. A questionable gauntlet variant that is, quite literally, finger-lickin’ good.",
+  "ability.infinity.gauntlet.hand_of_terror.description": "Unlock by right-clicking with an object that still holds remnants of power. A custom gauntlet skin requested by Terror.",
+  "ability.infinity.gauntlet.sith_gauntlet.description": "Unlock by right-clicking with an Uru Ingot in your main hand. A gauntlet forged with dark influence.",
+  "ability.infinity.gauntlet.endosym_gauntlet.description": "Unlock by right-clicking with an Endosymbiotic Ingot in your main hand. A living, adaptive gauntlet skin.",
+  "ability.infinity.gauntlet.rose_gauntlet.description": "Unlock by right-clicking with Cherry Planks in your main hand. A refined Rose-Gold styled gauntlet.",
+  "ability.infinity.gauntlet.normal_gauntlet.description": "Removes the currently applied gauntlet skin and restores the original Infinity Gauntlet. Any consumed unlock items will be returned.",
+  "ability.infinity.gauntlet.omni_desc.description": "Equipping both the Prototype Omnitrix from Alien Evo and the Infinity Gauntlet grants access to a special Omni-Gauntlet skin that improves Omnitrix usability.",
+  "ability.infinity.gauntlet.offhand_desc.description": "For best results, equip the Infinity Gauntlet in the Hands Curios slot or the offhand. Using the main hand may limit functionality. The gauntlet will not be visible in first person when placed in the offhand.",
+  "ability.infinity.gauntlet.snap_desc.description": "After performing the Snap, you will be severely weakened and burned. Your health is reduced to half a heart, and several stone abilities are disabled. You must wait one full in-game day before snapping again. Equip the Nano Gauntlet skin to heal the burn damage."
 }
