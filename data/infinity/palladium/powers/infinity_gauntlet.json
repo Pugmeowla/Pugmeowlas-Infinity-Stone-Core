@@ -143,6 +143,10 @@
                   {
                     "type": "palladium:has_tag",
                     "tag": "rose_gauntlet"
+                  },
+                  {
+                    "type": "palladium:has_tag",
+                    "tag": "ftg_gauntlet"
                   }
                 ]
               }
@@ -227,6 +231,10 @@
                   {
                     "type": "palladium:has_tag",
                     "tag": "rose_gauntlet"
+                  },
+                  {
+                    "type": "palladium:has_tag",
+                    "tag": "ftg_gauntlet"
                   }
                 ]
               }
@@ -2496,6 +2504,39 @@
         ]
       }
     },
+    "render_layer_ftg_gauntlet": {
+      "type": "palladium:render_layer",
+      "hidden": true,
+      "hidden_in_bar": true,
+      "render_layer": "infinity:ftg_gauntlet",
+      "conditions": {
+        "enabling": [
+          {
+            "type": "palladium:or",
+            "conditions": [
+              {
+                "type": "palladium:item_in_slot",
+                "item": {
+                  "item": "infinity:infinity_gauntlet"
+                },
+                "slot": "offhand"
+              },
+              {
+                "type": "palladium:item_in_slot",
+                "item": {
+                  "item": "infinity:infinity_gauntlet"
+                },
+                "slot": "curios:hands"
+              }
+            ]
+          },
+          {
+            "type": "palladium:has_tag",
+            "tag": "ftg_gauntlet"
+          }
+        ]
+      }
+    },
 
     "nano_gauntlet": {
       "type": "palladium:command",
@@ -2573,6 +2614,10 @@
                   {
                     "type": "palladium:has_tag",
                     "tag": "rose_gauntlet"
+                  },
+                  {
+                    "type": "palladium:has_tag",
+                    "tag": "ftg_gauntlet"
                   }
                 ]
               }
@@ -2664,6 +2709,10 @@
                   {
                     "type": "palladium:has_tag",
                     "tag": "rose_gauntlet"
+                  },
+                  {
+                    "type": "palladium:has_tag",
+                    "tag": "ftg_gauntlet"
                   }
                 ]
               }
@@ -2755,6 +2804,10 @@
                   {
                     "type": "palladium:has_tag",
                     "tag": "rose_gauntlet"
+                  },
+                  {
+                    "type": "palladium:has_tag",
+                    "tag": "ftg_gauntlet"
                   }
                 ]
               }
@@ -2846,6 +2899,10 @@
                   {
                     "type": "palladium:has_tag",
                     "tag": "rose_gauntlet"
+                  },
+                  {
+                    "type": "palladium:has_tag",
+                    "tag": "ftg_gauntlet"
                   }
                 ]
               }
@@ -2928,6 +2985,10 @@
                   {
                     "type": "palladium:has_tag",
                     "tag": "rose_gauntlet"
+                  },
+                  {
+                    "type": "palladium:has_tag",
+                    "tag": "ftg_gauntlet"
                   }
                 ]
               }
@@ -3018,6 +3079,10 @@
                   {
                     "type": "palladium:has_tag",
                     "tag": "rose_gauntlet"
+                  },
+                  {
+                    "type": "palladium:has_tag",
+                    "tag": "ftg_gauntlet"
                   }
                 ]
               }
@@ -3108,6 +3173,10 @@
                   {
                     "type": "palladium:has_tag",
                     "tag": "rose_gauntlet"
+                  },
+                  {
+                    "type": "palladium:has_tag",
+                    "tag": "ftg_gauntlet"
                   }
                 ]
               }
@@ -3198,6 +3267,10 @@
                   {
                     "type": "palladium:has_tag",
                     "tag": "rose_gauntlet"
+                  },
+                  {
+                    "type": "palladium:has_tag",
+                    "tag": "ftg_gauntlet"
                   }
                 ]
               }
@@ -3288,6 +3361,10 @@
                   {
                     "type": "palladium:has_tag",
                     "tag": "rose_gauntlet"
+                  },
+                  {
+                    "type": "palladium:has_tag",
+                    "tag": "ftg_gauntlet"
                   }
                 ]
               }
@@ -3297,6 +3374,101 @@
             "type": "palladium:item_in_slot",
             "item": {
               "item": "minecraft:cherry_planks"
+            },
+            "slot": "mainhand"
+          }
+        ]
+      }
+    },
+
+    "ftg_gauntlet": {
+      "type": "palladium:command",
+      "icon": "infinity:ferro-titanium-gold_alloy_ingot",
+      "title": "Ferro-Titanium-Gold Alloy Gauntlet",
+      "bar_color": "black",
+      "hidden": false,
+      "hidden_in_bar": false,
+      "list_index": 3,
+      "gui_position": [0, 3.5],
+      "description": {
+        "translate": "ability.infinity.gauntlet.ftg_gauntlet.description"
+      },
+      "first_tick_commands": [],
+      "last_tick_commands": [],
+      "commands": [
+        "clear @s infinity:ferro-titanium-gold_alloy_ingot",
+        "tag @s add ftg_gauntlet",
+        "playsound minecraft:block.anvil.land block @s"
+      ],
+      "conditions": {
+        "enabling": [
+          {
+            "type": "palladium:action",
+            "cooldown": 0,
+            "key_type": "right_click",
+            "needs_empty_hand": false,
+            "allow_scrolling_when_crouching": true
+          }
+        ],
+        "unlocking": [
+          {
+            "type": "palladium:not",
+            "conditions": [
+              {
+                "type": "palladium:or",
+                "conditions": [
+                  {
+                    "type": "palladium:has_tag",
+                    "tag": "nano_gauntlet"
+                  },
+                  {
+                    "type": "palladium:has_tag",
+                    "tag": "netherite_gauntlet"
+                  },
+                  {
+                    "type": "palladium:has_tag",
+                    "tag": "fantastic_four_skin"
+                  },
+                  {
+                    "type": "palladium:has_tag",
+                    "tag": "soul_netherite_gauntlet"
+                  },
+                  {
+                    "type": "palladium:has_tag",
+                    "tag": "omni_gauntlet"
+                  },
+                  {
+                    "type": "palladium:has_tag",
+                    "tag": "finger_gauntlet"
+                  },
+                  {
+                    "type": "palladium:has_tag",
+                    "tag": "hand_of_terror"
+                  },
+                  {
+                    "type": "palladium:has_tag",
+                    "tag": "sith_gauntlet"
+                  },
+                  {
+                    "type": "palladium:has_tag",
+                    "tag": "endosym_gauntlet"
+                  },
+                  {
+                    "type": "palladium:has_tag",
+                    "tag": "rose_gauntlet"
+                  },
+                  {
+                    "type": "palladium:has_tag",
+                    "tag": "ftg_gauntlet"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "palladium:item_in_slot",
+            "item": {
+              "item": "infinity:ferro-titanium-gold_alloy_ingot"
             },
             "slot": "mainhand"
           }
@@ -3328,6 +3500,7 @@
         "execute if entity @s[tag=sith_gauntlet] run give @s infinity:uru_ingot",
         "execute if entity @s[tag=endosym_gauntlet] run give @s infinity:endosym_ingot",
         "execute if entity @s[tag=rose_gauntlet] run give @s minecraft:cherry_planks",
+        "execute if entity @s[tag=ftg_gauntlet] run give @s infinity:ferro-titanium-gold_alloy_ingot",
         "tag @s remove nano_gauntlet",
         "tag @s remove netherite_gauntlet",
         "tag @s remove fantastic_four_skin",
@@ -3337,6 +3510,7 @@
         "tag @s remove sith_gauntlet",
         "tag @s remove endosym_gauntlet",
         "tag @s remove rose_gauntlet",
+        "tag @s remove ftg_gauntlet",
         "schedule clear infinity:remove_burn_texture",
         "playsound minecraft:block.grindstone.use block @s"
       ],
@@ -3393,6 +3567,10 @@
               {
                 "type": "palladium:has_tag",
                 "tag": "rose_gauntlet"
+              },
+              {
+                "type": "palladium:has_tag",
+                "tag": "ftg_gauntlet"
               }
             ]
           }
