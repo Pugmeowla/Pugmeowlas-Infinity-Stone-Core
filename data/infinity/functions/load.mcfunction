@@ -25,5 +25,6 @@ bossbar set minecraft:time max 11
 
 scoreboard objectives add gauntlet5 dummy
 
+execute in infinity:soulworld run forceload add -2 -2 2 2
 execute in infinity:soulworld run fill -2 75 2 2 -128 -2 air
 execute in infinity:soulworld run fill 2 -128 -2 -2 -128 2 minecraft:end_portal
