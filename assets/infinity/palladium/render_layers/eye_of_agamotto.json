@@ -1,4 +1,13 @@
 {
-  "model_layer": "infinity:eye_of_agamotto",
-  "texture": "infinity:textures/models/eye_of_agamotto.png"
+  "type": "geckolib:default",
+  "model": "infinity:geo/eye_of_agamotto.geo.json",
+  "texture": "infinity:textures/models/eye_of_agamotto.png",
+  "bones": {
+    "head": "head",
+    "body": "body",
+    "right_arm": "right_arm",
+    "left_arm": "left_arm",
+    "right_leg": "right_leg",
+    "left_leg": "left_leg"
+  }
 }
