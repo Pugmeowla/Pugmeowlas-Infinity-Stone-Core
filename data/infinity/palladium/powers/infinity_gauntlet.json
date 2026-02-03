@@ -2556,7 +2556,8 @@
         "clear @s palladium:vibranium_flux_capacitor",
         "tag @s add nano_gauntlet",
         "playsound infinity:nano_gauntlet block @s",
-        "schedule function infinity:remove_burn_texture 1d"
+        "schedule function infinity:remove_burn_texture 1d",
+        "function infinity:remove_burn_texture"
       ],
       "conditions": {
         "enabling": [
