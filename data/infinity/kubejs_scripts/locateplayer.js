@@ -7,8 +7,6 @@ ServerEvents.commandRegistry(event => {
                 .executes(ctx => {
                     let player = ctx.source.player;
                     let server = ctx.source.server;
-
-                    // Soul Stone ability check
                     if (abilityUtil.isEnabled(player, 'infinity:soul_stone', 'locateplayer_command')) {
                         let target = Arguments.PLAYER.getResult(ctx, "target");
                         let pos = target.blockPosition();
@@ -19,7 +17,7 @@ ServerEvents.commandRegistry(event => {
                             false
                         );
                     } else {
-                        // Message if player doesn’t have permission
+
                         ctx.source.sendFailure(
                             Component.literal("You are not worthy to use the Soul Stone’s locate ability.")
                         );
