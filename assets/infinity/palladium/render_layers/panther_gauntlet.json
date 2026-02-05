@@ -1,0 +1,32 @@
+{
+  "type": "palladium:compound",
+  "layers": [
+    {
+      "type": "geckolib:default",
+      "model": "infinity:geo/panther_gauntlet.geo.json",
+      "texture": "infinity:textures/models/panther_gauntlet.png",
+      "bones": {
+        "head": "head",
+        "body": "body",
+        "right_arm": "right_arm",
+        "left_arm": "left_arm",
+        "right_leg": "right_leg",
+        "left_leg": "left_leg"
+      }
+    },
+    {
+      "type": "geckolib:default",
+      "model": "infinity:geo/panther_gauntlet.geo.json",
+      "texture": "infinity:textures/models/panther_gauntlet_glow.png",
+      "render_type": "glow",
+      "bones": {
+        "head": "head",
+        "body": "body",
+        "right_arm": "right_arm",
+        "left_arm": "left_arm",
+        "right_leg": "right_leg",
+        "left_leg": "left_leg"
+      }
+    }
+  ]
+}
