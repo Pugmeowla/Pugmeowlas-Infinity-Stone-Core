@@ -147,6 +147,22 @@
                   {
                     "type": "palladium:has_tag",
                     "tag": "ftg_gauntlet"
+                  },
+                  {
+                    "type": "palladium:has_tag",
+                    "tag": "midnight"
+                  },
+                  {
+                    "type": "palladium:has_tag",
+                    "tag": "ultron_gauntlet"
+                  },
+                  {
+                    "type": "palladium:has_tag",
+                    "tag": "panther_gauntlet"
+                  },
+                  {
+                    "type": "palladium:has_tag",
+                    "tag": "cartoon_gauntlet"
                   }
                 ]
               }
@@ -235,6 +251,22 @@
                   {
                     "type": "palladium:has_tag",
                     "tag": "ftg_gauntlet"
+                  },
+                  {
+                    "type": "palladium:has_tag",
+                    "tag": "midnight"
+                  },
+                  {
+                    "type": "palladium:has_tag",
+                    "tag": "ultron_gauntlet"
+                  },
+                  {
+                    "type": "palladium:has_tag",
+                    "tag": "panther_gauntlet"
+                  },
+                  {
+                    "type": "palladium:has_tag",
+                    "tag": "cartoon_gauntlet"
                   }
                 ]
               }
@@ -2537,6 +2569,174 @@
         ]
       }
     },
+    "render_layer_midnight": {
+      "type": "palladium:render_layer",
+      "hidden": true,
+      "hidden_in_bar": true,
+      "render_layer": "infinity:midnight",
+      "conditions": {
+        "enabling": [
+          {
+            "type": "palladium:or",
+            "conditions": [
+              {
+                "type": "palladium:item_in_slot",
+                "item": {
+                  "item": "infinity:infinity_gauntlet"
+                },
+                "slot": "offhand"
+              },
+              {
+                "type": "palladium:item_in_slot",
+                "item": {
+                  "item": "infinity:infinity_gauntlet"
+                },
+                "slot": "curios:hands"
+              }
+            ]
+          },
+          {
+            "type": "palladium:has_tag",
+            "tag": "midnight"
+          }
+        ]
+      }
+    },
+    "render_layer_midnight_glow": {
+      "type": "palladium:render_layer",
+      "hidden": true,
+      "hidden_in_bar": true,
+      "render_layer": "infinity:midnight_glow",
+      "conditions": {
+        "enabling": [
+          {
+            "type": "palladium:night"
+          },
+          {
+            "type": "palladium:or",
+            "conditions": [
+              {
+                "type": "palladium:item_in_slot",
+                "item": {
+                  "item": "infinity:infinity_gauntlet"
+                },
+                "slot": "offhand"
+              },
+              {
+                "type": "palladium:item_in_slot",
+                "item": {
+                  "item": "infinity:infinity_gauntlet"
+                },
+                "slot": "curios:hands"
+              }
+            ]
+          },
+          {
+            "type": "palladium:has_tag",
+            "tag": "midnight"
+          }
+        ]
+      }
+    },
+    "render_layer_ultron_gauntlet": {
+      "type": "palladium:render_layer",
+      "hidden": true,
+      "hidden_in_bar": true,
+      "render_layer": "infinity:ultron_gauntlet",
+      "conditions": {
+        "enabling": [
+          {
+            "type": "palladium:or",
+            "conditions": [
+              {
+                "type": "palladium:item_in_slot",
+                "item": {
+                  "item": "infinity:infinity_gauntlet"
+                },
+                "slot": "offhand"
+              },
+              {
+                "type": "palladium:item_in_slot",
+                "item": {
+                  "item": "infinity:infinity_gauntlet"
+                },
+                "slot": "curios:hands"
+              }
+            ]
+          },
+          {
+            "type": "palladium:has_tag",
+            "tag": "ultron_gauntlet"
+          }
+        ]
+      }
+    },
+    "render_layer_panther_gauntlet": {
+      "type": "palladium:render_layer",
+      "hidden": true,
+      "hidden_in_bar": true,
+      "render_layer": "infinity:panther_gauntlet",
+      "conditions": {
+        "enabling": [
+          {
+            "type": "palladium:or",
+            "conditions": [
+              {
+                "type": "palladium:item_in_slot",
+                "item": {
+                  "item": "infinity:infinity_gauntlet"
+                },
+                "slot": "offhand"
+              },
+              {
+                "type": "palladium:item_in_slot",
+                "item": {
+                  "item": "infinity:infinity_gauntlet"
+                },
+                "slot": "curios:hands"
+              }
+            ]
+          },
+          {
+            "type": "palladium:has_tag",
+            "tag": "panther_gauntlet"
+          }
+        ]
+      }
+    },
+    "render_layer_cartoon_gauntlet": {
+      "type": "palladium:render_layer",
+      "hidden": true,
+      "hidden_in_bar": true,
+      "render_layer": "infinity:cartoon_gauntlet",
+      "conditions": {
+        "enabling": [
+          {
+            "type": "palladium:or",
+            "conditions": [
+              {
+                "type": "palladium:item_in_slot",
+                "item": {
+                  "item": "infinity:infinity_gauntlet"
+                },
+                "slot": "offhand"
+              },
+              {
+                "type": "palladium:item_in_slot",
+                "item": {
+                  "item": "infinity:infinity_gauntlet"
+                },
+                "slot": "curios:hands"
+              }
+            ]
+          },
+          {
+            "type": "palladium:has_tag",
+            "tag": "cartoon_gauntlet"
+          }
+        ]
+      }
+    },
 
     "nano_gauntlet": {
       "type": "palladium:command",
@@ -2619,6 +2819,22 @@
                   {
                     "type": "palladium:has_tag",
                     "tag": "ftg_gauntlet"
+                  },
+                  {
+                    "type": "palladium:has_tag",
+                    "tag": "midnight"
+                  },
+                  {
+                    "type": "palladium:has_tag",
+                    "tag": "ultron_gauntlet"
+                  },
+                  {
+                    "type": "palladium:has_tag",
+                    "tag": "panther_gauntlet"
+                  },
+                  {
+                    "type": "palladium:has_tag",
+                    "tag": "cartoon_gauntlet"
                   }
                 ]
               }
@@ -2714,6 +2930,22 @@
                   {
                     "type": "palladium:has_tag",
                     "tag": "ftg_gauntlet"
+                  },
+                  {
+                    "type": "palladium:has_tag",
+                    "tag": "midnight"
+                  },
+                  {
+                    "type": "palladium:has_tag",
+                    "tag": "ultron_gauntlet"
+                  },
+                  {
+                    "type": "palladium:has_tag",
+                    "tag": "panther_gauntlet"
+                  },
+                  {
+                    "type": "palladium:has_tag",
+                    "tag": "cartoon_gauntlet"
                   }
                 ]
               }
@@ -2809,6 +3041,22 @@
                   {
                     "type": "palladium:has_tag",
                     "tag": "ftg_gauntlet"
+                  },
+                  {
+                    "type": "palladium:has_tag",
+                    "tag": "midnight"
+                  },
+                  {
+                    "type": "palladium:has_tag",
+                    "tag": "ultron_gauntlet"
+                  },
+                  {
+                    "type": "palladium:has_tag",
+                    "tag": "panther_gauntlet"
+                  },
+                  {
+                    "type": "palladium:has_tag",
+                    "tag": "cartoon_gauntlet"
                   }
                 ]
               }
@@ -2904,6 +3152,22 @@
                   {
                     "type": "palladium:has_tag",
                     "tag": "ftg_gauntlet"
+                  },
+                  {
+                    "type": "palladium:has_tag",
+                    "tag": "midnight"
+                  },
+                  {
+                    "type": "palladium:has_tag",
+                    "tag": "ultron_gauntlet"
+                  },
+                  {
+                    "type": "palladium:has_tag",
+                    "tag": "panther_gauntlet"
+                  },
+                  {
+                    "type": "palladium:has_tag",
+                    "tag": "cartoon_gauntlet"
                   }
                 ]
               }
@@ -2990,6 +3254,22 @@
                   {
                     "type": "palladium:has_tag",
                     "tag": "ftg_gauntlet"
+                  },
+                  {
+                    "type": "palladium:has_tag",
+                    "tag": "midnight"
+                  },
+                  {
+                    "type": "palladium:has_tag",
+                    "tag": "ultron_gauntlet"
+                  },
+                  {
+                    "type": "palladium:has_tag",
+                    "tag": "panther_gauntlet"
+                  },
+                  {
+                    "type": "palladium:has_tag",
+                    "tag": "cartoon_gauntlet"
                   }
                 ]
               }
@@ -3084,6 +3364,22 @@
                   {
                     "type": "palladium:has_tag",
                     "tag": "ftg_gauntlet"
+                  },
+                  {
+                    "type": "palladium:has_tag",
+                    "tag": "midnight"
+                  },
+                  {
+                    "type": "palladium:has_tag",
+                    "tag": "ultron_gauntlet"
+                  },
+                  {
+                    "type": "palladium:has_tag",
+                    "tag": "panther_gauntlet"
+                  },
+                  {
+                    "type": "palladium:has_tag",
+                    "tag": "cartoon_gauntlet"
                   }
                 ]
               }
@@ -3178,6 +3474,22 @@
                   {
                     "type": "palladium:has_tag",
                     "tag": "ftg_gauntlet"
+                  },
+                  {
+                    "type": "palladium:has_tag",
+                    "tag": "midnight"
+                  },
+                  {
+                    "type": "palladium:has_tag",
+                    "tag": "ultron_gauntlet"
+                  },
+                  {
+                    "type": "palladium:has_tag",
+                    "tag": "panther_gauntlet"
+                  },
+                  {
+                    "type": "palladium:has_tag",
+                    "tag": "cartoon_gauntlet"
                   }
                 ]
               }
@@ -3272,6 +3584,22 @@
                   {
                     "type": "palladium:has_tag",
                     "tag": "ftg_gauntlet"
+                  },
+                  {
+                    "type": "palladium:has_tag",
+                    "tag": "midnight"
+                  },
+                  {
+                    "type": "palladium:has_tag",
+                    "tag": "ultron_gauntlet"
+                  },
+                  {
+                    "type": "palladium:has_tag",
+                    "tag": "panther_gauntlet"
+                  },
+                  {
+                    "type": "palladium:has_tag",
+                    "tag": "cartoon_gauntlet"
                   }
                 ]
               }
@@ -3366,6 +3694,22 @@
                   {
                     "type": "palladium:has_tag",
                     "tag": "ftg_gauntlet"
+                  },
+                  {
+                    "type": "palladium:has_tag",
+                    "tag": "midnight"
+                  },
+                  {
+                    "type": "palladium:has_tag",
+                    "tag": "ultron_gauntlet"
+                  },
+                  {
+                    "type": "palladium:has_tag",
+                    "tag": "panther_gauntlet"
+                  },
+                  {
+                    "type": "palladium:has_tag",
+                    "tag": "cartoon_gauntlet"
                   }
                 ]
               }
@@ -3461,6 +3805,22 @@
                   {
                     "type": "palladium:has_tag",
                     "tag": "ftg_gauntlet"
+                  },
+                  {
+                    "type": "palladium:has_tag",
+                    "tag": "midnight"
+                  },
+                  {
+                    "type": "palladium:has_tag",
+                    "tag": "ultron_gauntlet"
+                  },
+                  {
+                    "type": "palladium:has_tag",
+                    "tag": "panther_gauntlet"
+                  },
+                  {
+                    "type": "palladium:has_tag",
+                    "tag": "cartoon_gauntlet"
                   }
                 ]
               }
@@ -3470,6 +3830,446 @@
             "type": "palladium:item_in_slot",
             "item": {
               "item": "infinity:ferro-titanium-gold_alloy_ingot"
+            },
+            "slot": "mainhand"
+          }
+        ]
+      }
+    },
+    "midnight": {
+      "type": "palladium:command",
+      "icon": "minecraft:black_dye",
+      "title": "Midnight",
+      "bar_color": "black",
+      "hidden": false,
+      "hidden_in_bar": false,
+      "list_index": 3,
+      "gui_position": [0, 4.5],
+      "description": {
+        "translate": "ability.infinity.gauntlet.midnight.description"
+      },
+      "first_tick_commands": [],
+      "last_tick_commands": [],
+      "commands": [
+        "clear @s minecraft:black_dye",
+        "tag @s add midnight",
+        "playsound minecraft:block.anvil.land block @s"
+      ],
+      "conditions": {
+        "enabling": [
+          {
+            "type": "palladium:action",
+            "cooldown": 0,
+            "key_type": "right_click",
+            "needs_empty_hand": false,
+            "allow_scrolling_when_crouching": true
+          }
+        ],
+        "unlocking": [
+          {
+            "type": "palladium:not",
+            "conditions": [
+              {
+                "type": "palladium:or",
+                "conditions": [
+                  {
+                    "type": "palladium:has_tag",
+                    "tag": "nano_gauntlet"
+                  },
+                  {
+                    "type": "palladium:has_tag",
+                    "tag": "netherite_gauntlet"
+                  },
+                  {
+                    "type": "palladium:has_tag",
+                    "tag": "fantastic_four_skin"
+                  },
+                  {
+                    "type": "palladium:has_tag",
+                    "tag": "soul_netherite_gauntlet"
+                  },
+                  {
+                    "type": "palladium:has_tag",
+                    "tag": "omni_gauntlet"
+                  },
+                  {
+                    "type": "palladium:has_tag",
+                    "tag": "finger_gauntlet"
+                  },
+                  {
+                    "type": "palladium:has_tag",
+                    "tag": "hand_of_terror"
+                  },
+                  {
+                    "type": "palladium:has_tag",
+                    "tag": "sith_gauntlet"
+                  },
+                  {
+                    "type": "palladium:has_tag",
+                    "tag": "endosym_gauntlet"
+                  },
+                  {
+                    "type": "palladium:has_tag",
+                    "tag": "rose_gauntlet"
+                  },
+                  {
+                    "type": "palladium:has_tag",
+                    "tag": "ftg_gauntlet"
+                  },
+                  {
+                    "type": "palladium:has_tag",
+                    "tag": "midnight"
+                  },
+                  {
+                    "type": "palladium:has_tag",
+                    "tag": "ultron_gauntlet"
+                  },
+                  {
+                    "type": "palladium:has_tag",
+                    "tag": "panther_gauntlet"
+                  },
+                  {
+                    "type": "palladium:has_tag",
+                    "tag": "cartoon_gauntlet"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "palladium:item_in_slot",
+            "item": {
+              "item": "minecraft:black_dye"
+            },
+            "slot": "mainhand"
+          }
+        ]
+      }
+    },
+    "ultron_gauntlet": {
+      "type": "palladium:command",
+      "icon": "palladium:vibranium_circuit",
+      "title": "Ultron Gauntlet",
+      "bar_color": "black",
+      "hidden": false,
+      "hidden_in_bar": false,
+      "list_index": 3,
+      "gui_position": [0.5, 4],
+      "description": {
+        "translate": "ability.infinity.gauntlet.ultron_gauntlet.description"
+      },
+      "first_tick_commands": [],
+      "last_tick_commands": [],
+      "commands": [
+        "clear @s palladium:vibranium_circuit",
+        "tag @s add ultron_gauntlet",
+        "playsound minecraft:block.anvil.land block @s"
+      ],
+      "conditions": {
+        "enabling": [
+          {
+            "type": "palladium:action",
+            "cooldown": 0,
+            "key_type": "right_click",
+            "needs_empty_hand": false,
+            "allow_scrolling_when_crouching": true
+          }
+        ],
+        "unlocking": [
+          {
+            "type": "palladium:not",
+            "conditions": [
+              {
+                "type": "palladium:or",
+                "conditions": [
+                  {
+                    "type": "palladium:has_tag",
+                    "tag": "nano_gauntlet"
+                  },
+                  {
+                    "type": "palladium:has_tag",
+                    "tag": "netherite_gauntlet"
+                  },
+                  {
+                    "type": "palladium:has_tag",
+                    "tag": "fantastic_four_skin"
+                  },
+                  {
+                    "type": "palladium:has_tag",
+                    "tag": "soul_netherite_gauntlet"
+                  },
+                  {
+                    "type": "palladium:has_tag",
+                    "tag": "omni_gauntlet"
+                  },
+                  {
+                    "type": "palladium:has_tag",
+                    "tag": "finger_gauntlet"
+                  },
+                  {
+                    "type": "palladium:has_tag",
+                    "tag": "hand_of_terror"
+                  },
+                  {
+                    "type": "palladium:has_tag",
+                    "tag": "sith_gauntlet"
+                  },
+                  {
+                    "type": "palladium:has_tag",
+                    "tag": "endosym_gauntlet"
+                  },
+                  {
+                    "type": "palladium:has_tag",
+                    "tag": "rose_gauntlet"
+                  },
+                  {
+                    "type": "palladium:has_tag",
+                    "tag": "ftg_gauntlet"
+                  },
+                  {
+                    "type": "palladium:has_tag",
+                    "tag": "midnight"
+                  },
+                  {
+                    "type": "palladium:has_tag",
+                    "tag": "ultron_gauntlet"
+                  },
+                  {
+                    "type": "palladium:has_tag",
+                    "tag": "panther_gauntlet"
+                  },
+                  {
+                    "type": "palladium:has_tag",
+                    "tag": "cartoon_gauntlet"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "palladium:item_in_slot",
+            "item": {
+              "item": "palladium:vibranium_circuit"
+            },
+            "slot": "mainhand"
+          }
+        ]
+      }
+    },
+    "panther_gauntlet": {
+      "type": "palladium:command",
+      "icon": "palladium:vibranium_ingot",
+      "title": "Panther Gauntlet",
+      "bar_color": "black",
+      "hidden": false,
+      "hidden_in_bar": false,
+      "list_index": 3,
+      "gui_position": [-0.5, 4],
+      "description": {
+        "translate": "ability.infinity.gauntlet.panther_gauntlet.description"
+      },
+      "first_tick_commands": [],
+      "last_tick_commands": [],
+      "commands": [
+        "clear @s palladium:vibranium_ingot",
+        "tag @s add panther_gauntlet",
+        "playsound minecraft:block.anvil.land block @s"
+      ],
+      "conditions": {
+        "enabling": [
+          {
+            "type": "palladium:action",
+            "cooldown": 0,
+            "key_type": "right_click",
+            "needs_empty_hand": false,
+            "allow_scrolling_when_crouching": true
+          }
+        ],
+        "unlocking": [
+          {
+            "type": "palladium:not",
+            "conditions": [
+              {
+                "type": "palladium:or",
+                "conditions": [
+                  {
+                    "type": "palladium:has_tag",
+                    "tag": "nano_gauntlet"
+                  },
+                  {
+                    "type": "palladium:has_tag",
+                    "tag": "netherite_gauntlet"
+                  },
+                  {
+                    "type": "palladium:has_tag",
+                    "tag": "fantastic_four_skin"
+                  },
+                  {
+                    "type": "palladium:has_tag",
+                    "tag": "soul_netherite_gauntlet"
+                  },
+                  {
+                    "type": "palladium:has_tag",
+                    "tag": "omni_gauntlet"
+                  },
+                  {
+                    "type": "palladium:has_tag",
+                    "tag": "finger_gauntlet"
+                  },
+                  {
+                    "type": "palladium:has_tag",
+                    "tag": "hand_of_terror"
+                  },
+                  {
+                    "type": "palladium:has_tag",
+                    "tag": "sith_gauntlet"
+                  },
+                  {
+                    "type": "palladium:has_tag",
+                    "tag": "endosym_gauntlet"
+                  },
+                  {
+                    "type": "palladium:has_tag",
+                    "tag": "rose_gauntlet"
+                  },
+                  {
+                    "type": "palladium:has_tag",
+                    "tag": "ftg_gauntlet"
+                  },
+                  {
+                    "type": "palladium:has_tag",
+                    "tag": "midnight"
+                  },
+                  {
+                    "type": "palladium:has_tag",
+                    "tag": "ultron_gauntlet"
+                  },
+                  {
+                    "type": "palladium:has_tag",
+                    "tag": "panther_gauntlet"
+                  },
+                  {
+                    "type": "palladium:has_tag",
+                    "tag": "cartoon_gauntlet"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "palladium:item_in_slot",
+            "item": {
+              "item": "palladium:vibranium_ingot"
+            },
+            "slot": "mainhand"
+          }
+        ]
+      }
+    },
+    "cartoon_gauntlet": {
+      "type": "palladium:command",
+      "icon": "minecraft:white_wool",
+      "title": "Cartoon Gauntlet",
+      "bar_color": "black",
+      "hidden": false,
+      "hidden_in_bar": false,
+      "list_index": 3,
+      "gui_position": [0.5, 5],
+      "description": {
+        "translate": "ability.infinity.gauntlet.cartoon_gauntlet.description"
+      },
+      "first_tick_commands": [],
+      "last_tick_commands": [],
+      "commands": [
+        "clear @s minecraft:white_wool",
+        "tag @s add cartoon_gauntlet",
+        "playsound minecraft:block.anvil.land block @s"
+      ],
+      "conditions": {
+        "enabling": [
+          {
+            "type": "palladium:action",
+            "cooldown": 0,
+            "key_type": "right_click",
+            "needs_empty_hand": false,
+            "allow_scrolling_when_crouching": true
+          }
+        ],
+        "unlocking": [
+          {
+            "type": "palladium:not",
+            "conditions": [
+              {
+                "type": "palladium:or",
+                "conditions": [
+                  {
+                    "type": "palladium:has_tag",
+                    "tag": "nano_gauntlet"
+                  },
+                  {
+                    "type": "palladium:has_tag",
+                    "tag": "netherite_gauntlet"
+                  },
+                  {
+                    "type": "palladium:has_tag",
+                    "tag": "fantastic_four_skin"
+                  },
+                  {
+                    "type": "palladium:has_tag",
+                    "tag": "soul_netherite_gauntlet"
+                  },
+                  {
+                    "type": "palladium:has_tag",
+                    "tag": "omni_gauntlet"
+                  },
+                  {
+                    "type": "palladium:has_tag",
+                    "tag": "finger_gauntlet"
+                  },
+                  {
+                    "type": "palladium:has_tag",
+                    "tag": "hand_of_terror"
+                  },
+                  {
+                    "type": "palladium:has_tag",
+                    "tag": "sith_gauntlet"
+                  },
+                  {
+                    "type": "palladium:has_tag",
+                    "tag": "endosym_gauntlet"
+                  },
+                  {
+                    "type": "palladium:has_tag",
+                    "tag": "rose_gauntlet"
+                  },
+                  {
+                    "type": "palladium:has_tag",
+                    "tag": "ftg_gauntlet"
+                  },
+                  {
+                    "type": "palladium:has_tag",
+                    "tag": "midnight"
+                  },
+                  {
+                    "type": "palladium:has_tag",
+                    "tag": "ultron_gauntlet"
+                  },
+                  {
+                    "type": "palladium:has_tag",
+                    "tag": "panther_gauntlet"
+                  },
+                  {
+                    "type": "palladium:has_tag",
+                    "tag": "cartoon_gauntlet"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "palladium:item_in_slot",
+            "item": {
+              "item": "minecraft:white_wool"
             },
             "slot": "mainhand"
           }
@@ -3502,6 +4302,10 @@
         "execute if entity @s[tag=endosym_gauntlet] run give @s infinity:endosym_ingot",
         "execute if entity @s[tag=rose_gauntlet] run give @s minecraft:cherry_planks",
         "execute if entity @s[tag=ftg_gauntlet] run give @s infinity:ferro-titanium-gold_alloy_ingot",
+        "execute if entity @s[tag=midnight] run give @s black_dye",
+        "execute if entity @s[tag=panther_gauntlet] run give @s palladium:vibranium_ingot",
+        "execute if entity @s[tag=cartoon_gauntlet] run give @s minecraft:white_wool",
+        "execute if entity @s[tag=ultron_gauntlet] run give @s palladium:vibranium_circuit",
         "tag @s remove nano_gauntlet",
         "tag @s remove netherite_gauntlet",
         "tag @s remove fantastic_four_skin",
@@ -3512,6 +4316,10 @@
         "tag @s remove endosym_gauntlet",
         "tag @s remove rose_gauntlet",
         "tag @s remove ftg_gauntlet",
+        "tag @s remove midnight",
+        "tag @s remove panther_gauntlet",
+        "tag @s remove cartoon_gauntlet",
+        "tag @s remove ultron_gauntlet",
         "schedule clear infinity:remove_burn_texture",
         "playsound minecraft:block.grindstone.use block @s"
       ],
@@ -3572,6 +4380,22 @@
               {
                 "type": "palladium:has_tag",
                 "tag": "ftg_gauntlet"
+              },
+              {
+                "type": "palladium:has_tag",
+                "tag": "midnight"
+              },
+              {
+                "type": "palladium:has_tag",
+                "tag": "ultron_gauntlet"
+              },
+              {
+                "type": "palladium:has_tag",
+                "tag": "panther_gauntlet"
+              },
+              {
+                "type": "palladium:has_tag",
+                "tag": "cartoon_gauntlet"
               }
             ]
           }
