@@ -175,5 +175,12 @@
   "ability.infinity.gauntlet.snap_desc.description": "After performing the Snap, you will be severely weakened and burned. Your health is reduced to half a heart, and several stone abilities are disabled. You must wait one full in-game day before snapping again. Equip the Nano Gauntlet skin to heal the burn damage.",
 
   "ability.infinity.gauntlet.ftg_gauntlet.description": "Unlock by right-clicking with Ferro-Titanium-Gold Alloy Ingot in your main hand.",
-  "item.infinity.ferro-titanium-gold_alloy_ingot": "Ferro-Titanium-Gold Alloy Ingot"
+  "item.infinity.ferro-titanium-gold_alloy_ingot": "Ferro-Titanium-Gold Alloy Ingot",
+
+  "item.infinity.52-d_unit": "NP-Λ52 Unit",
+  "ability.infinity.gauntlet.panther_gauntlet.description": "Unlock by right-clicking with Vibranium Ingot in your main hand.",
+  "ability.infinity.gauntlet.ultron_gauntlet.description": "Unlock by right-clicking with Vibranium Circuit in your main hand.",
+  "ability.infinity.gauntlet.cartoon_gauntlet.description": "Unlock by right-clicking with White Wool in your main hand.",
+  "ability.infinity.gauntlet.midnight.description": "Unlock by right-clicking with Black Dye in your main hand.",
+  "ability.infinity.gauntlet.52-d_gauntlet.description": "Unlock by right-clicking with an (NP-Λ52) Unit in your main hand. An enhanced gauntlet with NP-Λ52, capable of stabilizing and channeling the energy of the Infinity Stones, fully compatible with the Mark 52-D."
 }
