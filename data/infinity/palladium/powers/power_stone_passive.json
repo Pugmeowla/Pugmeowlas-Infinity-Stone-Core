@@ -33,7 +33,7 @@
             "conditions": [
               {
                 "type": "palladium:ability_enabled",
-                "power": "infinity:power_stone_passive",
+                "power": "infinity:infinity_gauntlet",
                 "ability": "power_blast_aim"
               },
               {
@@ -1360,7 +1360,6 @@
         ]
       }
     },
-
     "aim_command": {
       "type": "palladium:command",
       "persistent_data": true,
