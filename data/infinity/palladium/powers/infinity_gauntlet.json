@@ -2104,7 +2104,6 @@
         ]
       }
     },
-
     "render_layer_netherite_gauntlet": {
       "type": "palladium:render_layer",
       "hidden": true,
@@ -2138,7 +2137,6 @@
         ]
       }
     },
-
     "render_layer_fantastic_four_skin": {
       "type": "palladium:render_layer",
       "hidden": true,
@@ -2622,6 +2620,7 @@
       "commands": [
         "clear @s palladium:vibranium_flux_capacitor",
         "tag @s add nano_gauntlet",
+        "tag @s add skin_on",
         "playsound infinity:nano_gauntlet block @s",
         "schedule function infinity:remove_burn_texture 1d",
         "function infinity:remove_burn_texture"
@@ -2641,73 +2640,8 @@
             "type": "palladium:not",
             "conditions": [
               {
-                "type": "palladium:or",
-                "conditions": [
-                  {
-                    "type": "palladium:has_tag",
-                    "tag": "soul_netherite_gauntlet"
-                  },
-                  {
-                    "type": "palladium:has_tag",
-                    "tag": "nano_gauntlet"
-                  },
-                  {
-                    "type": "palladium:has_tag",
-                    "tag": "netherite_gauntlet"
-                  },
-                  {
-                    "type": "palladium:has_tag",
-                    "tag": "fantastic_four_skin"
-                  },
-                  {
-                    "type": "palladium:has_tag",
-                    "tag": "omni_gauntlet"
-                  },
-                  {
-                    "type": "palladium:has_tag",
-                    "tag": "finger_gauntlet"
-                  },
-                  {
-                    "type": "palladium:has_tag",
-                    "tag": "hand_of_terror"
-                  },
-                  {
-                    "type": "palladium:has_tag",
-                    "tag": "sith_gauntlet"
-                  },
-                  {
-                    "type": "palladium:has_tag",
-                    "tag": "endosym_gauntlet"
-                  },
-                  {
-                    "type": "palladium:has_tag",
-                    "tag": "rose_gauntlet"
-                  },
-                  {
-                    "type": "palladium:has_tag",
-                    "tag": "ftg_gauntlet"
-                  },
-                  {
-                    "type": "palladium:has_tag",
-                    "tag": "midnight"
-                  },
-                  {
-                    "type": "palladium:has_tag",
-                    "tag": "ultron_gauntlet"
-                  },
-                  {
-                    "type": "palladium:has_tag",
-                    "tag": "panther_gauntlet"
-                  },
-                  {
-                    "type": "palladium:has_tag",
-                    "tag": "cartoon_gauntlet"
-                  },
-                  {
-                    "type": "palladium:has_tag",
-                    "tag": "52-d_gauntlet"
-                  }
-                ]
+                "type": "palladium:has_tag",
+                "tag": "skin_on"
               }
             ]
           },
@@ -2721,7 +2655,6 @@
         ]
       }
     },
-
     "fantastic_four_skin": {
       "type": "palladium:command",
       "icon": "minecraft:shears",
@@ -2739,6 +2672,7 @@
       "commands": [
         "clear @s minecraft:shears",
         "tag @s add fantastic_four_skin",
+        "tag @s add skin_on",
         "playsound minecraft:block.anvil.land block @s"
       ],
       "conditions": {
@@ -2756,73 +2690,8 @@
             "type": "palladium:not",
             "conditions": [
               {
-                "type": "palladium:or",
-                "conditions": [
-                  {
-                    "type": "palladium:has_tag",
-                    "tag": "soul_netherite_gauntlet"
-                  },
-                  {
-                    "type": "palladium:has_tag",
-                    "tag": "nano_gauntlet"
-                  },
-                  {
-                    "type": "palladium:has_tag",
-                    "tag": "netherite_gauntlet"
-                  },
-                  {
-                    "type": "palladium:has_tag",
-                    "tag": "fantastic_four_skin"
-                  },
-                  {
-                    "type": "palladium:has_tag",
-                    "tag": "omni_gauntlet"
-                  },
-                  {
-                    "type": "palladium:has_tag",
-                    "tag": "finger_gauntlet"
-                  },
-                  {
-                    "type": "palladium:has_tag",
-                    "tag": "hand_of_terror"
-                  },
-                  {
-                    "type": "palladium:has_tag",
-                    "tag": "sith_gauntlet"
-                  },
-                  {
-                    "type": "palladium:has_tag",
-                    "tag": "endosym_gauntlet"
-                  },
-                  {
-                    "type": "palladium:has_tag",
-                    "tag": "rose_gauntlet"
-                  },
-                  {
-                    "type": "palladium:has_tag",
-                    "tag": "ftg_gauntlet"
-                  },
-                  {
-                    "type": "palladium:has_tag",
-                    "tag": "midnight"
-                  },
-                  {
-                    "type": "palladium:has_tag",
-                    "tag": "ultron_gauntlet"
-                  },
-                  {
-                    "type": "palladium:has_tag",
-                    "tag": "panther_gauntlet"
-                  },
-                  {
-                    "type": "palladium:has_tag",
-                    "tag": "cartoon_gauntlet"
-                  },
-                  {
-                    "type": "palladium:has_tag",
-                    "tag": "52-d_gauntlet"
-                  }
-                ]
+                "type": "palladium:has_tag",
+                "tag": "skin_on"
               }
             ]
           },
@@ -2836,7 +2705,6 @@
         ]
       }
     },
-
     "netherite_gauntlet": {
       "type": "palladium:command",
       "icon": "minecraft:netherite_ingot",
@@ -2854,6 +2722,7 @@
       "commands": [
         "clear @s minecraft:netherite_ingot",
         "tag @s add netherite_gauntlet",
+        "tag @s add skin_on",
         "playsound minecraft:block.anvil.land block @s"
       ],
       "conditions": {
@@ -2871,73 +2740,8 @@
             "type": "palladium:not",
             "conditions": [
               {
-                "type": "palladium:or",
-                "conditions": [
-                  {
-                    "type": "palladium:has_tag",
-                    "tag": "soul_netherite_gauntlet"
-                  },
-                  {
-                    "type": "palladium:has_tag",
-                    "tag": "nano_gauntlet"
-                  },
-                  {
-                    "type": "palladium:has_tag",
-                    "tag": "netherite_gauntlet"
-                  },
-                  {
-                    "type": "palladium:has_tag",
-                    "tag": "fantastic_four_skin"
-                  },
-                  {
-                    "type": "palladium:has_tag",
-                    "tag": "omni_gauntlet"
-                  },
-                  {
-                    "type": "palladium:has_tag",
-                    "tag": "finger_gauntlet"
-                  },
-                  {
-                    "type": "palladium:has_tag",
-                    "tag": "hand_of_terror"
-                  },
-                  {
-                    "type": "palladium:has_tag",
-                    "tag": "sith_gauntlet"
-                  },
-                  {
-                    "type": "palladium:has_tag",
-                    "tag": "endosym_gauntlet"
-                  },
-                  {
-                    "type": "palladium:has_tag",
-                    "tag": "rose_gauntlet"
-                  },
-                  {
-                    "type": "palladium:has_tag",
-                    "tag": "ftg_gauntlet"
-                  },
-                  {
-                    "type": "palladium:has_tag",
-                    "tag": "midnight"
-                  },
-                  {
-                    "type": "palladium:has_tag",
-                    "tag": "ultron_gauntlet"
-                  },
-                  {
-                    "type": "palladium:has_tag",
-                    "tag": "panther_gauntlet"
-                  },
-                  {
-                    "type": "palladium:has_tag",
-                    "tag": "cartoon_gauntlet"
-                  },
-                  {
-                    "type": "palladium:has_tag",
-                    "tag": "52-d_gauntlet"
-                  }
-                ]
+                "type": "palladium:has_tag",
+                "tag": "skin_on"
               }
             ]
           },
@@ -2951,7 +2755,6 @@
         ]
       }
     },
-
     "soul_netherite_gauntlet": {
       "type": "palladium:command",
       "icon": "infinity:soul_infused_netherite_ingot",
@@ -2969,6 +2772,7 @@
       "commands": [
         "clear @s infinity:soul_infused_netherite_ingot",
         "tag @s add soul_netherite_gauntlet",
+        "tag @s add skin_on",
         "playsound minecraft:block.anvil.land block @s"
       ],
       "conditions": {
@@ -2986,73 +2790,8 @@
             "type": "palladium:not",
             "conditions": [
               {
-                "type": "palladium:or",
-                "conditions": [
-                  {
-                    "type": "palladium:has_tag",
-                    "tag": "nano_gauntlet"
-                  },
-                  {
-                    "type": "palladium:has_tag",
-                    "tag": "netherite_gauntlet"
-                  },
-                  {
-                    "type": "palladium:has_tag",
-                    "tag": "fantastic_four_skin"
-                  },
-                  {
-                    "type": "palladium:has_tag",
-                    "tag": "soul_netherite_gauntlet"
-                  },
-                  {
-                    "type": "palladium:has_tag",
-                    "tag": "omni_gauntlet"
-                  },
-                  {
-                    "type": "palladium:has_tag",
-                    "tag": "finger_gauntlet"
-                  },
-                  {
-                    "type": "palladium:has_tag",
-                    "tag": "hand_of_terror"
-                  },
-                  {
-                    "type": "palladium:has_tag",
-                    "tag": "sith_gauntlet"
-                  },
-                  {
-                    "type": "palladium:has_tag",
-                    "tag": "endosym_gauntlet"
-                  },
-                  {
-                    "type": "palladium:has_tag",
-                    "tag": "rose_gauntlet"
-                  },
-                  {
-                    "type": "palladium:has_tag",
-                    "tag": "ftg_gauntlet"
-                  },
-                  {
-                    "type": "palladium:has_tag",
-                    "tag": "midnight"
-                  },
-                  {
-                    "type": "palladium:has_tag",
-                    "tag": "ultron_gauntlet"
-                  },
-                  {
-                    "type": "palladium:has_tag",
-                    "tag": "panther_gauntlet"
-                  },
-                  {
-                    "type": "palladium:has_tag",
-                    "tag": "cartoon_gauntlet"
-                  },
-                  {
-                    "type": "palladium:has_tag",
-                    "tag": "52-d_gauntlet"
-                  }
-                ]
+                "type": "palladium:has_tag",
+                "tag": "skin_on"
               }
             ]
           },
@@ -3083,6 +2822,7 @@
       "commands": [
         "clear @s minecraft:chicken",
         "tag @s add finger_gauntlet",
+        "tag @s add skin_on",
         "playsound minecraft:entity.generic.eat block @s ~ ~ ~ 1 1"
       ],
       "conditions": {
@@ -3092,73 +2832,8 @@
             "type": "palladium:not",
             "conditions": [
               {
-                "type": "palladium:or",
-                "conditions": [
-                  {
-                    "type": "palladium:has_tag",
-                    "tag": "nano_gauntlet"
-                  },
-                  {
-                    "type": "palladium:has_tag",
-                    "tag": "netherite_gauntlet"
-                  },
-                  {
-                    "type": "palladium:has_tag",
-                    "tag": "fantastic_four_skin"
-                  },
-                  {
-                    "type": "palladium:has_tag",
-                    "tag": "soul_netherite_gauntlet"
-                  },
-                  {
-                    "type": "palladium:has_tag",
-                    "tag": "omni_gauntlet"
-                  },
-                  {
-                    "type": "palladium:has_tag",
-                    "tag": "finger_gauntlet"
-                  },
-                  {
-                    "type": "palladium:has_tag",
-                    "tag": "hand_of_terror"
-                  },
-                  {
-                    "type": "palladium:has_tag",
-                    "tag": "sith_gauntlet"
-                  },
-                  {
-                    "type": "palladium:has_tag",
-                    "tag": "endosym_gauntlet"
-                  },
-                  {
-                    "type": "palladium:has_tag",
-                    "tag": "rose_gauntlet"
-                  },
-                  {
-                    "type": "palladium:has_tag",
-                    "tag": "ftg_gauntlet"
-                  },
-                  {
-                    "type": "palladium:has_tag",
-                    "tag": "midnight"
-                  },
-                  {
-                    "type": "palladium:has_tag",
-                    "tag": "ultron_gauntlet"
-                  },
-                  {
-                    "type": "palladium:has_tag",
-                    "tag": "panther_gauntlet"
-                  },
-                  {
-                    "type": "palladium:has_tag",
-                    "tag": "cartoon_gauntlet"
-                  },
-                  {
-                    "type": "palladium:has_tag",
-                    "tag": "52-d_gauntlet"
-                  }
-                ]
+                "type": "palladium:has_tag",
+                "tag": "skin_on"
               }
             ]
           },
@@ -3189,6 +2864,7 @@
       "commands": [
         "clear @s infinity:empty_orb",
         "tag @s add hand_of_terror",
+        "tag @s add skin_on",
         "playsound minecraft:block.anvil.land block @s"
       ],
       "conditions": {
@@ -3206,73 +2882,8 @@
             "type": "palladium:not",
             "conditions": [
               {
-                "type": "palladium:or",
-                "conditions": [
-                  {
-                    "type": "palladium:has_tag",
-                    "tag": "nano_gauntlet"
-                  },
-                  {
-                    "type": "palladium:has_tag",
-                    "tag": "netherite_gauntlet"
-                  },
-                  {
-                    "type": "palladium:has_tag",
-                    "tag": "fantastic_four_skin"
-                  },
-                  {
-                    "type": "palladium:has_tag",
-                    "tag": "soul_netherite_gauntlet"
-                  },
-                  {
-                    "type": "palladium:has_tag",
-                    "tag": "omni_gauntlet"
-                  },
-                  {
-                    "type": "palladium:has_tag",
-                    "tag": "finger_gauntlet"
-                  },
-                  {
-                    "type": "palladium:has_tag",
-                    "tag": "hand_of_terror"
-                  },
-                  {
-                    "type": "palladium:has_tag",
-                    "tag": "sith_gauntlet"
-                  },
-                  {
-                    "type": "palladium:has_tag",
-                    "tag": "endosym_gauntlet"
-                  },
-                  {
-                    "type": "palladium:has_tag",
-                    "tag": "rose_gauntlet"
-                  },
-                  {
-                    "type": "palladium:has_tag",
-                    "tag": "ftg_gauntlet"
-                  },
-                  {
-                    "type": "palladium:has_tag",
-                    "tag": "midnight"
-                  },
-                  {
-                    "type": "palladium:has_tag",
-                    "tag": "ultron_gauntlet"
-                  },
-                  {
-                    "type": "palladium:has_tag",
-                    "tag": "panther_gauntlet"
-                  },
-                  {
-                    "type": "palladium:has_tag",
-                    "tag": "cartoon_gauntlet"
-                  },
-                  {
-                    "type": "palladium:has_tag",
-                    "tag": "52-d_gauntlet"
-                  }
-                ]
+                "type": "palladium:has_tag",
+                "tag": "skin_on"
               }
             ]
           },
@@ -3303,6 +2914,7 @@
       "commands": [
         "clear @s infinity:uru_ingot",
         "tag @s add sith_gauntlet",
+        "tag @s add skin_on",
         "playsound minecraft:block.anvil.land block @s"
       ],
       "conditions": {
@@ -3320,73 +2932,8 @@
             "type": "palladium:not",
             "conditions": [
               {
-                "type": "palladium:or",
-                "conditions": [
-                  {
-                    "type": "palladium:has_tag",
-                    "tag": "nano_gauntlet"
-                  },
-                  {
-                    "type": "palladium:has_tag",
-                    "tag": "netherite_gauntlet"
-                  },
-                  {
-                    "type": "palladium:has_tag",
-                    "tag": "fantastic_four_skin"
-                  },
-                  {
-                    "type": "palladium:has_tag",
-                    "tag": "soul_netherite_gauntlet"
-                  },
-                  {
-                    "type": "palladium:has_tag",
-                    "tag": "omni_gauntlet"
-                  },
-                  {
-                    "type": "palladium:has_tag",
-                    "tag": "finger_gauntlet"
-                  },
-                  {
-                    "type": "palladium:has_tag",
-                    "tag": "hand_of_terror"
-                  },
-                  {
-                    "type": "palladium:has_tag",
-                    "tag": "sith_gauntlet"
-                  },
-                  {
-                    "type": "palladium:has_tag",
-                    "tag": "endosym_gauntlet"
-                  },
-                  {
-                    "type": "palladium:has_tag",
-                    "tag": "rose_gauntlet"
-                  },
-                  {
-                    "type": "palladium:has_tag",
-                    "tag": "ftg_gauntlet"
-                  },
-                  {
-                    "type": "palladium:has_tag",
-                    "tag": "midnight"
-                  },
-                  {
-                    "type": "palladium:has_tag",
-                    "tag": "ultron_gauntlet"
-                  },
-                  {
-                    "type": "palladium:has_tag",
-                    "tag": "panther_gauntlet"
-                  },
-                  {
-                    "type": "palladium:has_tag",
-                    "tag": "cartoon_gauntlet"
-                  },
-                  {
-                    "type": "palladium:has_tag",
-                    "tag": "52-d_gauntlet"
-                  }
-                ]
+                "type": "palladium:has_tag",
+                "tag": "skin_on"
               }
             ]
           },
@@ -3417,6 +2964,7 @@
       "commands": [
         "clear @s infinity:endosym_ingot",
         "tag @s add endosym_gauntlet",
+        "tag @s add skin_on",
         "playsound minecraft:block.anvil.land block @s"
       ],
       "conditions": {
@@ -3434,73 +2982,8 @@
             "type": "palladium:not",
             "conditions": [
               {
-                "type": "palladium:or",
-                "conditions": [
-                  {
-                    "type": "palladium:has_tag",
-                    "tag": "nano_gauntlet"
-                  },
-                  {
-                    "type": "palladium:has_tag",
-                    "tag": "netherite_gauntlet"
-                  },
-                  {
-                    "type": "palladium:has_tag",
-                    "tag": "fantastic_four_skin"
-                  },
-                  {
-                    "type": "palladium:has_tag",
-                    "tag": "soul_netherite_gauntlet"
-                  },
-                  {
-                    "type": "palladium:has_tag",
-                    "tag": "omni_gauntlet"
-                  },
-                  {
-                    "type": "palladium:has_tag",
-                    "tag": "finger_gauntlet"
-                  },
-                  {
-                    "type": "palladium:has_tag",
-                    "tag": "hand_of_terror"
-                  },
-                  {
-                    "type": "palladium:has_tag",
-                    "tag": "sith_gauntlet"
-                  },
-                  {
-                    "type": "palladium:has_tag",
-                    "tag": "endosym_gauntlet"
-                  },
-                  {
-                    "type": "palladium:has_tag",
-                    "tag": "rose_gauntlet"
-                  },
-                  {
-                    "type": "palladium:has_tag",
-                    "tag": "ftg_gauntlet"
-                  },
-                  {
-                    "type": "palladium:has_tag",
-                    "tag": "midnight"
-                  },
-                  {
-                    "type": "palladium:has_tag",
-                    "tag": "ultron_gauntlet"
-                  },
-                  {
-                    "type": "palladium:has_tag",
-                    "tag": "panther_gauntlet"
-                  },
-                  {
-                    "type": "palladium:has_tag",
-                    "tag": "cartoon_gauntlet"
-                  },
-                  {
-                    "type": "palladium:has_tag",
-                    "tag": "52-d_gauntlet"
-                  }
-                ]
+                "type": "palladium:has_tag",
+                "tag": "skin_on"
               }
             ]
           },
@@ -3531,6 +3014,7 @@
       "commands": [
         "clear @s minecraft:cherry_planks",
         "tag @s add rose_gauntlet",
+        "tag @s add skin_on",
         "playsound minecraft:block.anvil.land block @s"
       ],
       "conditions": {
@@ -3548,73 +3032,8 @@
             "type": "palladium:not",
             "conditions": [
               {
-                "type": "palladium:or",
-                "conditions": [
-                  {
-                    "type": "palladium:has_tag",
-                    "tag": "nano_gauntlet"
-                  },
-                  {
-                    "type": "palladium:has_tag",
-                    "tag": "netherite_gauntlet"
-                  },
-                  {
-                    "type": "palladium:has_tag",
-                    "tag": "fantastic_four_skin"
-                  },
-                  {
-                    "type": "palladium:has_tag",
-                    "tag": "soul_netherite_gauntlet"
-                  },
-                  {
-                    "type": "palladium:has_tag",
-                    "tag": "omni_gauntlet"
-                  },
-                  {
-                    "type": "palladium:has_tag",
-                    "tag": "finger_gauntlet"
-                  },
-                  {
-                    "type": "palladium:has_tag",
-                    "tag": "hand_of_terror"
-                  },
-                  {
-                    "type": "palladium:has_tag",
-                    "tag": "sith_gauntlet"
-                  },
-                  {
-                    "type": "palladium:has_tag",
-                    "tag": "endosym_gauntlet"
-                  },
-                  {
-                    "type": "palladium:has_tag",
-                    "tag": "rose_gauntlet"
-                  },
-                  {
-                    "type": "palladium:has_tag",
-                    "tag": "ftg_gauntlet"
-                  },
-                  {
-                    "type": "palladium:has_tag",
-                    "tag": "midnight"
-                  },
-                  {
-                    "type": "palladium:has_tag",
-                    "tag": "ultron_gauntlet"
-                  },
-                  {
-                    "type": "palladium:has_tag",
-                    "tag": "panther_gauntlet"
-                  },
-                  {
-                    "type": "palladium:has_tag",
-                    "tag": "cartoon_gauntlet"
-                  },
-                  {
-                    "type": "palladium:has_tag",
-                    "tag": "52-d_gauntlet"
-                  }
-                ]
+                "type": "palladium:has_tag",
+                "tag": "skin_on"
               }
             ]
           },
@@ -3628,7 +3047,6 @@
         ]
       }
     },
-
     "ftg_gauntlet": {
       "type": "palladium:command",
       "icon": "infinity:ferro-titanium-gold_alloy_ingot",
@@ -3646,6 +3064,7 @@
       "commands": [
         "clear @s infinity:ferro-titanium-gold_alloy_ingot",
         "tag @s add ftg_gauntlet",
+        "tag @s add skin_on",
         "playsound minecraft:block.anvil.land block @s"
       ],
       "conditions": {
@@ -3663,73 +3082,8 @@
             "type": "palladium:not",
             "conditions": [
               {
-                "type": "palladium:or",
-                "conditions": [
-                  {
-                    "type": "palladium:has_tag",
-                    "tag": "nano_gauntlet"
-                  },
-                  {
-                    "type": "palladium:has_tag",
-                    "tag": "netherite_gauntlet"
-                  },
-                  {
-                    "type": "palladium:has_tag",
-                    "tag": "fantastic_four_skin"
-                  },
-                  {
-                    "type": "palladium:has_tag",
-                    "tag": "soul_netherite_gauntlet"
-                  },
-                  {
-                    "type": "palladium:has_tag",
-                    "tag": "omni_gauntlet"
-                  },
-                  {
-                    "type": "palladium:has_tag",
-                    "tag": "finger_gauntlet"
-                  },
-                  {
-                    "type": "palladium:has_tag",
-                    "tag": "hand_of_terror"
-                  },
-                  {
-                    "type": "palladium:has_tag",
-                    "tag": "sith_gauntlet"
-                  },
-                  {
-                    "type": "palladium:has_tag",
-                    "tag": "endosym_gauntlet"
-                  },
-                  {
-                    "type": "palladium:has_tag",
-                    "tag": "rose_gauntlet"
-                  },
-                  {
-                    "type": "palladium:has_tag",
-                    "tag": "ftg_gauntlet"
-                  },
-                  {
-                    "type": "palladium:has_tag",
-                    "tag": "midnight"
-                  },
-                  {
-                    "type": "palladium:has_tag",
-                    "tag": "ultron_gauntlet"
-                  },
-                  {
-                    "type": "palladium:has_tag",
-                    "tag": "panther_gauntlet"
-                  },
-                  {
-                    "type": "palladium:has_tag",
-                    "tag": "cartoon_gauntlet"
-                  },
-                  {
-                    "type": "palladium:has_tag",
-                    "tag": "52-d_gauntlet"
-                  }
-                ]
+                "type": "palladium:has_tag",
+                "tag": "skin_on"
               }
             ]
           },
@@ -3760,6 +3114,7 @@
       "commands": [
         "clear @s minecraft:black_dye",
         "tag @s add midnight",
+        "tag @s add skin_on",
         "playsound minecraft:block.anvil.land block @s"
       ],
       "conditions": {
@@ -3777,73 +3132,8 @@
             "type": "palladium:not",
             "conditions": [
               {
-                "type": "palladium:or",
-                "conditions": [
-                  {
-                    "type": "palladium:has_tag",
-                    "tag": "nano_gauntlet"
-                  },
-                  {
-                    "type": "palladium:has_tag",
-                    "tag": "netherite_gauntlet"
-                  },
-                  {
-                    "type": "palladium:has_tag",
-                    "tag": "fantastic_four_skin"
-                  },
-                  {
-                    "type": "palladium:has_tag",
-                    "tag": "soul_netherite_gauntlet"
-                  },
-                  {
-                    "type": "palladium:has_tag",
-                    "tag": "omni_gauntlet"
-                  },
-                  {
-                    "type": "palladium:has_tag",
-                    "tag": "finger_gauntlet"
-                  },
-                  {
-                    "type": "palladium:has_tag",
-                    "tag": "hand_of_terror"
-                  },
-                  {
-                    "type": "palladium:has_tag",
-                    "tag": "sith_gauntlet"
-                  },
-                  {
-                    "type": "palladium:has_tag",
-                    "tag": "endosym_gauntlet"
-                  },
-                  {
-                    "type": "palladium:has_tag",
-                    "tag": "rose_gauntlet"
-                  },
-                  {
-                    "type": "palladium:has_tag",
-                    "tag": "ftg_gauntlet"
-                  },
-                  {
-                    "type": "palladium:has_tag",
-                    "tag": "midnight"
-                  },
-                  {
-                    "type": "palladium:has_tag",
-                    "tag": "ultron_gauntlet"
-                  },
-                  {
-                    "type": "palladium:has_tag",
-                    "tag": "panther_gauntlet"
-                  },
-                  {
-                    "type": "palladium:has_tag",
-                    "tag": "cartoon_gauntlet"
-                  },
-                  {
-                    "type": "palladium:has_tag",
-                    "tag": "52-d_gauntlet"
-                  }
-                ]
+                "type": "palladium:has_tag",
+                "tag": "skin_on"
               }
             ]
           },
@@ -3874,6 +3164,7 @@
       "commands": [
         "clear @s palladium:vibranium_circuit",
         "tag @s add ultron_gauntlet",
+        "tag @s add skin_on",
         "playsound minecraft:block.anvil.land block @s"
       ],
       "conditions": {
@@ -3891,73 +3182,8 @@
             "type": "palladium:not",
             "conditions": [
               {
-                "type": "palladium:or",
-                "conditions": [
-                  {
-                    "type": "palladium:has_tag",
-                    "tag": "nano_gauntlet"
-                  },
-                  {
-                    "type": "palladium:has_tag",
-                    "tag": "netherite_gauntlet"
-                  },
-                  {
-                    "type": "palladium:has_tag",
-                    "tag": "fantastic_four_skin"
-                  },
-                  {
-                    "type": "palladium:has_tag",
-                    "tag": "soul_netherite_gauntlet"
-                  },
-                  {
-                    "type": "palladium:has_tag",
-                    "tag": "omni_gauntlet"
-                  },
-                  {
-                    "type": "palladium:has_tag",
-                    "tag": "finger_gauntlet"
-                  },
-                  {
-                    "type": "palladium:has_tag",
-                    "tag": "hand_of_terror"
-                  },
-                  {
-                    "type": "palladium:has_tag",
-                    "tag": "sith_gauntlet"
-                  },
-                  {
-                    "type": "palladium:has_tag",
-                    "tag": "endosym_gauntlet"
-                  },
-                  {
-                    "type": "palladium:has_tag",
-                    "tag": "rose_gauntlet"
-                  },
-                  {
-                    "type": "palladium:has_tag",
-                    "tag": "ftg_gauntlet"
-                  },
-                  {
-                    "type": "palladium:has_tag",
-                    "tag": "midnight"
-                  },
-                  {
-                    "type": "palladium:has_tag",
-                    "tag": "ultron_gauntlet"
-                  },
-                  {
-                    "type": "palladium:has_tag",
-                    "tag": "panther_gauntlet"
-                  },
-                  {
-                    "type": "palladium:has_tag",
-                    "tag": "cartoon_gauntlet"
-                  },
-                  {
-                    "type": "palladium:has_tag",
-                    "tag": "52-d_gauntlet"
-                  }
-                ]
+                "type": "palladium:has_tag",
+                "tag": "skin_on"
               }
             ]
           },
@@ -3988,6 +3214,7 @@
       "commands": [
         "clear @s palladium:vibranium_ingot",
         "tag @s add panther_gauntlet",
+        "tag @s add skin_on",
         "playsound minecraft:block.anvil.land block @s"
       ],
       "conditions": {
@@ -4005,73 +3232,8 @@
             "type": "palladium:not",
             "conditions": [
               {
-                "type": "palladium:or",
-                "conditions": [
-                  {
-                    "type": "palladium:has_tag",
-                    "tag": "nano_gauntlet"
-                  },
-                  {
-                    "type": "palladium:has_tag",
-                    "tag": "netherite_gauntlet"
-                  },
-                  {
-                    "type": "palladium:has_tag",
-                    "tag": "fantastic_four_skin"
-                  },
-                  {
-                    "type": "palladium:has_tag",
-                    "tag": "soul_netherite_gauntlet"
-                  },
-                  {
-                    "type": "palladium:has_tag",
-                    "tag": "omni_gauntlet"
-                  },
-                  {
-                    "type": "palladium:has_tag",
-                    "tag": "finger_gauntlet"
-                  },
-                  {
-                    "type": "palladium:has_tag",
-                    "tag": "hand_of_terror"
-                  },
-                  {
-                    "type": "palladium:has_tag",
-                    "tag": "sith_gauntlet"
-                  },
-                  {
-                    "type": "palladium:has_tag",
-                    "tag": "endosym_gauntlet"
-                  },
-                  {
-                    "type": "palladium:has_tag",
-                    "tag": "rose_gauntlet"
-                  },
-                  {
-                    "type": "palladium:has_tag",
-                    "tag": "ftg_gauntlet"
-                  },
-                  {
-                    "type": "palladium:has_tag",
-                    "tag": "midnight"
-                  },
-                  {
-                    "type": "palladium:has_tag",
-                    "tag": "ultron_gauntlet"
-                  },
-                  {
-                    "type": "palladium:has_tag",
-                    "tag": "panther_gauntlet"
-                  },
-                  {
-                    "type": "palladium:has_tag",
-                    "tag": "cartoon_gauntlet"
-                  },
-                  {
-                    "type": "palladium:has_tag",
-                    "tag": "52-d_gauntlet"
-                  }
-                ]
+                "type": "palladium:has_tag",
+                "tag": "skin_on"
               }
             ]
           },
@@ -4102,6 +3264,7 @@
       "commands": [
         "clear @s minecraft:white_wool",
         "tag @s add cartoon_gauntlet",
+        "tag @s add skin_on",
         "playsound minecraft:block.anvil.land block @s"
       ],
       "conditions": {
@@ -4119,73 +3282,8 @@
             "type": "palladium:not",
             "conditions": [
               {
-                "type": "palladium:or",
-                "conditions": [
-                  {
-                    "type": "palladium:has_tag",
-                    "tag": "nano_gauntlet"
-                  },
-                  {
-                    "type": "palladium:has_tag",
-                    "tag": "netherite_gauntlet"
-                  },
-                  {
-                    "type": "palladium:has_tag",
-                    "tag": "fantastic_four_skin"
-                  },
-                  {
-                    "type": "palladium:has_tag",
-                    "tag": "soul_netherite_gauntlet"
-                  },
-                  {
-                    "type": "palladium:has_tag",
-                    "tag": "omni_gauntlet"
-                  },
-                  {
-                    "type": "palladium:has_tag",
-                    "tag": "finger_gauntlet"
-                  },
-                  {
-                    "type": "palladium:has_tag",
-                    "tag": "hand_of_terror"
-                  },
-                  {
-                    "type": "palladium:has_tag",
-                    "tag": "sith_gauntlet"
-                  },
-                  {
-                    "type": "palladium:has_tag",
-                    "tag": "endosym_gauntlet"
-                  },
-                  {
-                    "type": "palladium:has_tag",
-                    "tag": "rose_gauntlet"
-                  },
-                  {
-                    "type": "palladium:has_tag",
-                    "tag": "ftg_gauntlet"
-                  },
-                  {
-                    "type": "palladium:has_tag",
-                    "tag": "midnight"
-                  },
-                  {
-                    "type": "palladium:has_tag",
-                    "tag": "ultron_gauntlet"
-                  },
-                  {
-                    "type": "palladium:has_tag",
-                    "tag": "panther_gauntlet"
-                  },
-                  {
-                    "type": "palladium:has_tag",
-                    "tag": "cartoon_gauntlet"
-                  },
-                  {
-                    "type": "palladium:has_tag",
-                    "tag": "52-d_gauntlet"
-                  }
-                ]
+                "type": "palladium:has_tag",
+                "tag": "skin_on"
               }
             ]
           },
@@ -4216,6 +3314,7 @@
       "commands": [
         "clear @s infinity:52-d_unit",
         "tag @s add 52-d_gauntlet",
+        "tag @s add skin_on",
         "playsound minecraft:block.anvil.land block @s"
       ],
       "conditions": {
@@ -4233,73 +3332,8 @@
             "type": "palladium:not",
             "conditions": [
               {
-                "type": "palladium:or",
-                "conditions": [
-                  {
-                    "type": "palladium:has_tag",
-                    "tag": "nano_gauntlet"
-                  },
-                  {
-                    "type": "palladium:has_tag",
-                    "tag": "netherite_gauntlet"
-                  },
-                  {
-                    "type": "palladium:has_tag",
-                    "tag": "fantastic_four_skin"
-                  },
-                  {
-                    "type": "palladium:has_tag",
-                    "tag": "soul_netherite_gauntlet"
-                  },
-                  {
-                    "type": "palladium:has_tag",
-                    "tag": "omni_gauntlet"
-                  },
-                  {
-                    "type": "palladium:has_tag",
-                    "tag": "finger_gauntlet"
-                  },
-                  {
-                    "type": "palladium:has_tag",
-                    "tag": "hand_of_terror"
-                  },
-                  {
-                    "type": "palladium:has_tag",
-                    "tag": "sith_gauntlet"
-                  },
-                  {
-                    "type": "palladium:has_tag",
-                    "tag": "endosym_gauntlet"
-                  },
-                  {
-                    "type": "palladium:has_tag",
-                    "tag": "rose_gauntlet"
-                  },
-                  {
-                    "type": "palladium:has_tag",
-                    "tag": "ftg_gauntlet"
-                  },
-                  {
-                    "type": "palladium:has_tag",
-                    "tag": "midnight"
-                  },
-                  {
-                    "type": "palladium:has_tag",
-                    "tag": "ultron_gauntlet"
-                  },
-                  {
-                    "type": "palladium:has_tag",
-                    "tag": "panther_gauntlet"
-                  },
-                  {
-                    "type": "palladium:has_tag",
-                    "tag": "cartoon_gauntlet"
-                  },
-                  {
-                    "type": "palladium:has_tag",
-                    "tag": "52-d_gauntlet"
-                  }
-                ]
+                "type": "palladium:has_tag",
+                "tag": "skin_on"
               }
             ]
           },
@@ -4359,6 +3393,7 @@
         "tag @s remove cartoon_gauntlet",
         "tag @s remove ultron_gauntlet",
         "tag @s remove 52-d_gauntlet",
+        "tag @s remove skin_on",
         "schedule clear infinity:remove_burn_texture",
         "playsound minecraft:block.grindstone.use block @s"
       ],
@@ -4374,77 +3409,13 @@
         ],
         "unlocking": [
           {
-            "type": "palladium:or",
-            "conditions": [
-              {
-                "type": "palladium:has_tag",
-                "tag": "soul_netherite_gauntlet"
-              },
-              {
-                "type": "palladium:has_tag",
-                "tag": "nano_gauntlet"
-              },
-              {
-                "type": "palladium:has_tag",
-                "tag": "netherite_gauntlet"
-              },
-              {
-                "type": "palladium:has_tag",
-                "tag": "fantastic_four_skin"
-              },
-              {
-                "type": "palladium:has_tag",
-                "tag": "omni_gauntlet"
-              },
-              {
-                "type": "palladium:has_tag",
-                "tag": "finger_gauntlet"
-              },
-              {
-                "type": "palladium:has_tag",
-                "tag": "hand_of_terror"
-              },
-              {
-                "type": "palladium:has_tag",
-                "tag": "sith_gauntlet"
-              },
-              {
-                "type": "palladium:has_tag",
-                "tag": "endosym_gauntlet"
-              },
-              {
-                "type": "palladium:has_tag",
-                "tag": "rose_gauntlet"
-              },
-              {
-                "type": "palladium:has_tag",
-                "tag": "ftg_gauntlet"
-              },
-              {
-                "type": "palladium:has_tag",
-                "tag": "midnight"
-              },
-              {
-                "type": "palladium:has_tag",
-                "tag": "ultron_gauntlet"
-              },
-              {
-                "type": "palladium:has_tag",
-                "tag": "panther_gauntlet"
-              },
-              {
-                "type": "palladium:has_tag",
-                "tag": "cartoon_gauntlet"
-              },
-              {
-                "type": "palladium:has_tag",
-                "tag": "52-d_gauntlet"
-              }
-            ]
+            "type": "palladium:has_tag",
+            "tag": "skin_on"
           }
         ]
       }
     },
+
     "omni_desc": {
       "type": "palladium:dummy",
       "icon": "infinity:textures/icon/omnitrix_main_default.png",
@@ -4484,15 +3455,15 @@
         "translate": "ability.infinity.gauntlet.snap_desc.description"
       }
     },
+
     "gauntlet_anim": {
       "type": "palladium:animation_timer",
       "list_index": 1,
       "max_value": 5,
-      "bar_color": "orange",
-      "title": "test",
       "hidden": true,
       "hidden_in_bar": true
     },
+
     "wheel": {
       "type": "palladium:ability_wheel",
       "icon": "infinity:infinity_gauntlet",
@@ -4509,9 +3480,6 @@
         "destroy_stones",
         "kill_hostile"
       ],
-      "texture": "null",
-      "disable_mouse_scrolling": false,
-      "disable_center_icon": false,
       "conditions": {
         "enabling": [
           {
@@ -4565,9 +3533,6 @@
       "bar_color": "yellow",
       "hidden": true,
       "hidden_in_bar": true,
-      "list_index": -1,
-      "gui_position": "null",
-      "description": "Snap",
       "commands": [
         "function infinity:infinity/snap",
         "schedule function infinity:clear_burn 1d",
@@ -4631,9 +3596,6 @@
       "bar_color": "yellow",
       "hidden": true,
       "hidden_in_bar": true,
-      "list_index": -1,
-      "gui_position": "null",
-      "description": "Snap",
       "commands": [
         "tag @s add exclude",
         "tag @s add burn_texture",
@@ -4702,9 +3664,6 @@
       "bar_color": "yellow",
       "hidden": true,
       "hidden_in_bar": true,
-      "list_index": -1,
-      "gui_position": "null",
-      "description": "Snap",
       "commands": [
         "tag @s add exclude",
         "tag @s add burn_texture",
@@ -4812,6 +3771,7 @@
         ]
       }
     },
+
     "destroy_stones": {
       "type": "palladium:animation_timer",
       "icon": "minecraft:barrier",
@@ -4875,11 +3835,6 @@
       "bar_color": "light_gray",
       "hidden": true,
       "hidden_in_bar": true,
-      "list_index": -1,
-      "gui_position": "null",
-      "description": "null",
-      "first_tick_commands": [],
-      "last_tick_commands": [],
       "commands": [
         "playsound block.beacon.ambient master @a ~ ~ ~ 1 1",
         "particle dust_color_transition 1 0 1 1 1 1 1 ~ ~1 ~ 0.5 0.5 0.5 0 2 force",
@@ -4907,11 +3862,6 @@
       "bar_color": "light_gray",
       "hidden": true,
       "hidden_in_bar": true,
-      "list_index": -1,
-      "gui_position": "null",
-      "description": "null",
-      "first_tick_commands": [],
-      "last_tick_commands": [],
       "commands": [
         "particle dust_color_transition 1 0 1 5 1 1 1 ~ ~1 ~ 1.5 1.5 1.5 0 50 force",
         "playsound block.respawn_anchor.set_spawn master @a ~ ~ ~ 1 0.16"
@@ -4934,11 +3884,6 @@
       "bar_color": "light_gray",
       "hidden": true,
       "hidden_in_bar": true,
-      "list_index": -1,
-      "gui_position": "null",
-      "description": "null",
-      "first_tick_commands": [],
-      "last_tick_commands": [],
       "commands": [
         "particle dust_color_transition 0 0 1 5 1 1 1 ~ ~1 ~ 1.5 1.5 1.5 0 50 force",
         "playsound block.respawn_anchor.set_spawn master @a ~ ~ ~ 2 0.32"
@@ -4961,11 +3906,6 @@
       "bar_color": "light_gray",
       "hidden": true,
       "hidden_in_bar": true,
-      "list_index": -1,
-      "gui_position": "null",
-      "description": "null",
-      "first_tick_commands": [],
-      "last_tick_commands": [],
       "commands": [
         "particle dust_color_transition 1 0 0 5 1 1 1 ~ ~1 ~ 1.5 1.5 1.5 0 50 force",
         "playsound block.respawn_anchor.set_spawn master @a ~ ~ ~ 3 0.48"
@@ -4988,11 +3928,6 @@
       "bar_color": "light_gray",
       "hidden": true,
       "hidden_in_bar": true,
-      "list_index": -1,
-      "gui_position": "null",
-      "description": "null",
-      "first_tick_commands": [],
-      "last_tick_commands": [],
       "commands": [
         "particle dust_color_transition 1 0.5 0 5 1 1 1 ~ ~1 ~ 1.5 1.5 1.5 0 50 force",
         "playsound block.respawn_anchor.set_spawn master @a ~ ~ ~ 4 0.64"
@@ -5015,11 +3950,6 @@
       "bar_color": "light_gray",
       "hidden": true,
       "hidden_in_bar": true,
-      "list_index": -1,
-      "gui_position": "null",
-      "description": "null",
-      "first_tick_commands": [],
-      "last_tick_commands": [],
       "commands": [
         "particle dust_color_transition 0 1 0 5 1 1 1 ~ ~1 ~ 1.5 1.5 1.5 0 50 force",
         "playsound block.respawn_anchor.set_spawn master @a ~ ~ ~ 5 0.8"
@@ -5042,11 +3972,6 @@
       "bar_color": "light_gray",
       "hidden": true,
       "hidden_in_bar": true,
-      "list_index": -1,
-      "gui_position": "null",
-      "description": "null",
-      "first_tick_commands": [],
-      "last_tick_commands": [],
       "commands": [
         "particle dust_color_transition 1 1 0 5 1 1 1 ~ ~1 ~ 1.5 1.5 1.5 0 50 force",
         "playsound block.respawn_anchor.set_spawn master @a ~ ~ ~ 6 0.96"
@@ -5069,11 +3994,6 @@
       "bar_color": "light_gray",
       "hidden": true,
       "hidden_in_bar": true,
-      "list_index": -1,
-      "gui_position": "null",
-      "description": "null",
-      "first_tick_commands": [],
-      "last_tick_commands": [],
       "commands": [
         "tag @s add burn",
         "tag @s add burn_texture",
@@ -5107,6 +4027,7 @@
         ]
       }
     },
+
     "render_layer_burn": {
       "type": "palladium:render_layer",
       "hidden": true,
@@ -5122,6 +4043,7 @@
         ]
       }
     },
+
     "insert_stone": {
       "type": "palladium:animation_timer",
       "list_index": 3,
