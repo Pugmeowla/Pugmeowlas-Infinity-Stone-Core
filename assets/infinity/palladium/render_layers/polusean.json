@@ -1,29 +1,64 @@
 {
-  "type": "geckolib:default",
-  "model": "infinity:geo/polusean.geo.json",
-  "texture": "infinity:textures/models/polusean.png",
-  "bones": {
-    "head": "head",
-    "body": "body",
-    "right_arm": "right_arm",
-    "left_arm": "left_arm",
-    "right_leg": "right_leg",
-    "left_leg": "left_leg"
-  },
-  "animation_file": "infinity:animations/polusean.animation.json",
-  "animation_controller": [
+  "type": "palladium:compound",
+  "layers": [
     {
-      "name": "idle",
-      "transition_tick_time": 5,
-      "animation": "animation.polusean.idle"
+      "type": "geckolib:default",
+      "model": "infinity:geo/polusean.geo.json",
+      "texture": "infinity:textures/models/polusean.png",
+      "bones": {
+        "head": "head",
+        "body": "body",
+        "right_arm": "right_arm",
+        "left_arm": "left_arm",
+        "right_leg": "right_leg",
+        "left_leg": "left_leg"
+      },
+      "animation_file": "infinity:animations/polusean.animation.json",
+      "animation_controller": [
+        {
+          "name": "idle",
+          "transition_tick_time": 5,
+          "animation": "animation.polusean.idle"
+        },
+        {
+          "name": "polusean_run",
+          "transition_tick_time": 5,
+          "triggers": {
+            "polusean_run": "animation.polusean.run",
+            "polusean_run_not": "animation.polusean.run_not"
+          }
+        }
+      ]
     },
     {
-      "name": "polusean_run",
-      "transition_tick_time": 5,
-      "triggers": {
-        "polusean_run": "animation.polusean.run",
-        "polusean_run_not": "animation.polusean.run_not"
-      }
+      "type": "geckolib:default",
+      "model": "infinity:geo/polusean.geo.json",
+      "texture": "infinity:textures/models/polusean_glow.png",
+      "render_type": "glow",
+      "bones": {
+        "head": "head",
+        "body": "body",
+        "right_arm": "right_arm",
+        "left_arm": "left_arm",
+        "right_leg": "right_leg",
+        "left_leg": "left_leg"
+      },
+      "animation_file": "infinity:animations/polusean.animation.json",
+      "animation_controller": [
+        {
+          "name": "idle",
+          "transition_tick_time": 5,
+          "animation": "animation.polusean.idle"
+        },
+        {
+          "name": "polusean_run",
+          "transition_tick_time": 5,
+          "triggers": {
+            "polusean_run": "animation.polusean.run",
+            "polusean_run_not": "animation.polusean.run_not"
+          }
+        }
+      ]
     }
   ]
 }
