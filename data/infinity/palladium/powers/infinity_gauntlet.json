@@ -1557,11 +1557,7 @@
       "list_index": 0,
       "gui_position": "null",
       "description": "Space Stone Abilities",
-      "first_tick_commands": [
-        "effect give @s minecraft:levitation 2 2 true",
-        "effect give @s minecraft:slow_falling 5 0 true",
-        "advancement grant @s only infinity:6_stones"
-      ],
+      "first_tick_commands": ["advancement grant @s only infinity:6_stones"],
       "commands": [],
       "conditions": {
         "enabling": [
@@ -1658,7 +1654,7 @@
     },
     "transform2": {
       "type": "palladium:animation_timer",
-      "max_value": 60,
+      "max_value": 33,
       "icon": "minecraft:barrier",
       "title": "Open Suit",
       "bar_color": "light_gray",
@@ -1704,26 +1700,6 @@
             "objective": "soul_stone",
             "min_score": 1,
             "max_score": 1
-          }
-        ]
-      }
-    },
-    "t-pose": {
-      "type": "palladium:animation_timer",
-      "list_index": 3,
-      "max_value": 30,
-      "bar_color": "orange",
-      "title": { "translate": "ability.alienevo_aliens.6.block" },
-      "hidden": true,
-      "hidden_in_bar": true,
-      "conditions": {
-        "enabling": [
-          {
-            "type": "palladium:animation_timer_ability",
-            "power": "null",
-            "ability": "transform",
-            "min": 1,
-            "max": 32
           }
         ]
       }
@@ -1778,7 +1754,7 @@
             "power": "null",
             "ability": "transform2",
             "min": 1,
-            "max": 59
+            "max": 32
           }
         ]
       }
@@ -3562,8 +3538,6 @@
         "schedule function infinity:clear_burn 1d",
         "tag @s add burn",
         "tag @s add burn_texture",
-        "attribute @p minecraft:generic.max_health base set 1",
-        "damage @s 1",
         "advancement grant @s only infinity:snap"
       ],
       "conditions": {
@@ -3625,8 +3599,6 @@
         "tag @s add burn_texture",
         "tag @s add burn",
         "schedule function infinity:clear_burn 1d",
-        "attribute @p minecraft:generic.max_health base set 1",
-        "damage @s 1",
         "kill @a[tag=!exclude]",
         "tag @s remove exclude",
         "playsound minecraft:block.conduit.activate master @a",
@@ -3693,8 +3665,6 @@
         "tag @s add burn_texture",
         "tag @s add burn",
         "schedule function infinity:clear_burn 1d",
-        "attribute @p minecraft:generic.max_health base set 1",
-        "damage @s 1",
         "kill @e[type=minecraft:silverfish,tag=!exclude]",
         "kill @e[type=minecraft:endermite,tag=!exclude]",
 
@@ -4021,8 +3991,6 @@
       "commands": [
         "tag @s add burn",
         "tag @s add burn_texture",
-        "attribute @p minecraft:generic.max_health base set 1",
-        "damage @s 1",
         "playsound minecraft:entity.firework_rocket.blast master @a ~ ~ ~ 1.5 2",
         "function infinity:infinity/break_stones",
         "execute in infinity:soulworld run tp @s ~ 72 ~",

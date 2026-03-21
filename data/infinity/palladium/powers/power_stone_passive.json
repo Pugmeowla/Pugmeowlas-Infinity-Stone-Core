@@ -7,6 +7,69 @@
   "ability_bar_texture": "infinity:textures/gui/ability_bars/power_ability_bar.png",
 
   "abilities": {
+    "tick": {
+      "type": "palladium:command",
+      "persistent_data": true,
+      "icon": "minecraft:player_head",
+      "title": "Passive",
+      "bar_color": "yellow",
+      "hidden": true,
+      "hidden_in_bar": true,
+      "list_index": 0,
+      "gui_position": [0, -1],
+      "description": "Pacify hostile mobs around you",
+      "first_tick_commands": [],
+      "last_tick_commands": [],
+      "commands": [
+        "execute as @e[tag=meteorite] at @s run particle flame ~ ~ ~ 0.15 0.15 0.15 0 10 force @a[distance=..50]",
+        "execute as @e[tag=meteorite] at @s run particle campfire_cosy_smoke ~ ~ ~ 0.15 0.15 0.15 0.02 5 force @a[distance=..50]",
+        "execute as @e[tag=meteorite] at @s run particle minecraft:dragon_breath ~ ~ ~ 0.2 0.2 0.2 0 8 force @a[distance=..50]",
+        "execute as @e[tag=meteorite] at @s run particle minecraft:enchanted_hit ~ ~ ~ 0.08 0.08 0.08 0 5 force @a[distance=..50]",
+        "execute as @e[tag=meteorite] at @s run particle minecraft:happy_villager ~ ~ ~ 0.1 0.1 0.1 0 6 force @a[distance=..50]",
+        "execute as @e[tag=meteorite] at @s run particle minecraft:lava ~ ~ ~ 0.08 0.08 0.08 0 5 force @a[distance=..50]"
+      ],
+      "conditions": {
+        "enabling": [
+          {
+            "type": "palladium:or",
+            "conditions": [
+              {
+                "type": "palladium:has_power",
+                "power": "infinity:infinity_gauntlet"
+              },
+              {
+                "type": "palladium:item_in_slot",
+                "item": {
+                  "item": "infinity:power_stone"
+                },
+                "slot": "mainhand"
+              },
+              {
+                "type": "palladium:item_in_slot",
+                "item": {
+                  "item": "infinity:cosmi-rod_power"
+                },
+                "slot": "offhand"
+              },
+              {
+                "type": "palladium:item_in_slot",
+                "item": {
+                  "item": "infinity:cosmi-rod_power"
+                },
+                "slot": "mainhand"
+              },
+              {
+                "type": "palladium:item_in_slot",
+                "item": {
+                  "item": "infinity:power_stone"
+                },
+                "slot": "offhand"
+              }
+            ]
+          }
+        ]
+      }
+    },
     "power_bast6": {
       "type": "palladium:energy_beam",
       "persistent_data": true,
