@@ -4,5 +4,13 @@
     "description": "An Offical port of Infinity Craft, adds the Infinity Gauntlet and Infinity Stones from Lucraft Core and others",
     "pack_format": 15,
     "version": "6.2"
+  },
+  "custom": {
+    "curios": {
+      "head": true,
+      "necklace": true,
+      "body": true,
+      "hands": true
+    }
   }
 }

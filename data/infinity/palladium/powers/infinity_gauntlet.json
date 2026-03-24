@@ -16,7 +16,22 @@
         "scoreboard objectives add reality_stone dummy",
         "scoreboard objectives add time_stone dummy",
         "scoreboard objectives add soul_stone dummy",
-        "scoreboard objectives add mind_stone dummy"
+        "scoreboard objectives add mind_stone dummy",
+
+        "execute as @a[scores={space_stone=1}] run superpower add infinity:space_stone @s",
+        "execute as @a[scores={reality_stone=1}] run superpower add infinity:reality_stone @s",
+        "execute as @a[scores={time_stone=1}] run superpower add infinity:time_stone @s",
+        "execute as @a[scores={soul_stone=1}] run superpower add infinity:soul_stone @s",
+        "execute as @a[scores={mind_stone=1}] run superpower add infinity:mind_stone @s",
+        "execute as @a[scores={power_stone=1}] run superpower add infinity:power_stone_passive @s"
+      ],
+      "last_tick_commands": [
+        "execute as @a[scores={space_stone=1}] run superpower remove infinity:space_stone @s",
+        "execute as @a[scores={reality_stone=1}] run superpower remove infinity:reality_stone @s",
+        "execute as @a[scores={time_stone=1}] run superpower remove infinity:time_stone @s",
+        "execute as @a[scores={soul_stone=1}] run superpower remove infinity:soul_stone @s",
+        "execute as @a[scores={mind_stone=1}] run superpower remove infinity:mind_stone @s",
+        "execute as @a[scores={power_stone=1}] run superpower remove infinity:power_stone_passive @s"
       ],
       "commands": []
     },
@@ -3317,7 +3332,7 @@
         "clear @s infinity:52-d_unit",
         "tag @s add 52-d_gauntlet",
         "tag @s add skin_on",
-        "playsound minecraft:block.anvil.land block @s"
+        "playsound infinity:np52 block @s"
       ],
       "conditions": {
         "enabling": [
@@ -3420,7 +3435,7 @@
     "omni_desc": {
       "type": "palladium:dummy",
       "icon": "infinity:textures/icon/omnitrix_main_default.png",
-      "title": "Omni-Gauntlet",
+      "title": "Pugmeowla's Infintrix",
       "bar_color": "light_gray",
       "hidden": false,
       "hidden_in_bar": false,

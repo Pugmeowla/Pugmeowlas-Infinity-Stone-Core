@@ -96,7 +96,7 @@
             "conditions": [
               {
                 "type": "palladium:ability_enabled",
-                "power": "infinity:infinity_gauntlet",
+                "power": "infinity:power_stone_passive",
                 "ability": "power_blast_aim"
               },
               {
@@ -594,13 +594,6 @@
                 "ability": "power_blast_aim"
               },
               {
-                "type": "palladium:item_in_slot",
-                "item": {
-                  "item": "infinity:infinity_gauntlet"
-                },
-                "slot": "mainhand"
-              },
-              {
                 "type": "palladium:ability_enabled",
                 "power": "infinity:infinity_gauntlet",
                 "ability": "power_blast_aim"
@@ -1090,11 +1083,6 @@
                 "ability": "power_blast_aim"
               }
             ]
-          },
-          {
-            "type": "palladium:ability_unlocked",
-            "power": "null",
-            "ability": "punch6"
           },
           {
             "type": "palladium:or",

@@ -452,7 +452,7 @@
         ]
       }
     },
-    "vibrate_sound": {
+    "invisibility_effect + sound": {
       "type": "palladium:command",
       "persistent_data": true,
       "icon": "minecraft:player_head",
@@ -466,9 +466,13 @@
         "translate": "ability.infinity.reality_stone.vibrate_sound.description"
       },
       "first_tick_commands": [
-        "playsound infinity:reality_stone_invis block @s"
+        "playsound infinity:reality_stone_invis block @s",
+        "effect give @s minecraft:invisibility infinite 0 true"
       ],
-      "last_tick_commands": ["playsound infinity:reality_stone_invis block @s"],
+      "last_tick_commands": [
+        "playsound infinity:reality_stone_invis block @s",
+        "effect clear @s minecraft:invisibility"
+      ],
       "commands": [],
       "conditions": {
         "enabling": [

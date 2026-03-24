@@ -66,5 +66,8 @@
   },
   "time_stone": {
     "sounds": ["infinity:time_stone1", "time_stone2", "time_stone3"]
+  },
+  "np52": {
+    "sounds": ["infinity:np52"]
   }
 }
