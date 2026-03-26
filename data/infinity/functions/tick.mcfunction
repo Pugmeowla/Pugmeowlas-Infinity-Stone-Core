@@ -1,3 +1,13 @@
+scoreboard players set @a hasGauntletItem 0
+
+function infintrix:gauntlet_providers
+function infinity_protocol:gauntlet_providers
+
+execute as @a[scores={hasGauntletItem=1}] run superpower add infinity:infinity_gauntlet @s
+execute as @a[scores={hasGauntletItem=1}] run superpower add infintrix:infintrix @s
+execute as @a[scores={hasGauntletItem=0}] run superpower remove infinity:infinity_gauntlet @s
+execute as @a[scores={hasGauntletItem=0}] run superpower remove infintrix:infintrix @s
+
 tag @e[type=minecraft:wolf,nbt={Sitting:1b}] add tamed_wolf
 execute as @e[tag=snap,limit=1] run function infinity:snap
 execute as @a if entity @s[nbt={Inventory:[{id:"infinity:reality_stone",Count:2b}]}] run clear @s infinity:reality_stone 1
