@@ -1,0 +1,9 @@
+{
+  "criteria": {
+    "iron_plate": {
+      "trigger": "minecraft:recipe_crafted",
+      "conditions": { "recipe_id": "infinity:gold_titanium_alloy_plate" }
+    }
+  },
+  "rewards": { "function": "infinity:give_hammer" }
+}
