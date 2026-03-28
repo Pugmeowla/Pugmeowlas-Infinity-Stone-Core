@@ -491,7 +491,7 @@
       "bar_color": "red",
       "hidden": true,
       "hidden_in_bar": false,
-      "list_index": 3,
+      "list_index": 4,
       "gui_position": [0, -2],
       "description": {
         "translate": "ability.infinity.reality_stone.save_block_on.description"
@@ -587,7 +587,7 @@
       "bar_color": "red",
       "hidden": true,
       "hidden_in_bar": false,
-      "list_index": 3,
+      "list_index": 4,
       "gui_position": [0, -3],
       "description": {
         "translate": "ability.infinity.reality_stone.save_block_off.description"
@@ -860,28 +860,56 @@
         ]
       }
     },
-    "bubble": {
+    "weather_wheel": {
+      "type": "palladium:ability_wheel",
+      "icon": "minecraft:blaze_rod",
+      "title": "Change the Weather",
+      "bar_color": "red",
+      "hidden": false,
+      "hidden_in_bar": false,
+      "list_index": 3,
+      "gui_position": [0, -1.5],
+      "description": "null",
+      "abilities": ["clear", "rain", "thunder"],
+      "texture": "null",
+      "disable_mouse_scrolling": false,
+      "disable_center_icon": false,
+      "conditions": {
+        "enabling": [
+          {
+            "type": "palladium:held",
+            "cooldown": 0,
+            "key_type": "key_bind",
+            "needs_empty_hand": false
+          }
+        ],
+        "unlocking": [
+          {
+            "type": "palladium:ability_unlocked",
+            "power": "null",
+            "ability": "effects"
+          },
+          {
+            "type": "palladium:item_buyable",
+            "ingredient": {
+              "item": "infinity:aspects_of_existance"
+            },
+            "amount": 1
+          }
+        ]
+      }
+    },
+    "rain": {
       "type": "palladium:command",
-      "icon": "minecraft:textures/particle/bubble.png",
+      "icon": "minecraft:barrier",
+      "title": "Rain",
       "persistent_data": true,
-      "title": "Bubble",
       "bar_color": "red",
       "hidden": true,
-      "hidden_in_bar": false,
-      "list_index": 4,
-      "gui_position": [0, -3],
-      "description": {
-        "translate": "ability.infinity.reality_stone.bubble.description"
-      },
-      "first_tick_commands": [
-        "playsound infinity:reality_stone_bubble block @s"
-      ],
+      "hidden_in_bar": true,
+      "first_tick_commands": ["weather rain"],
       "last_tick_commands": [],
-      "commands": [
-        "execute as @p at @s anchored eyes positioned ^ ^ ^2 run setblock ~ ~ ~ air",
-        "execute as @p at @s anchored eyes positioned ^ ^ ^2 run particle minecraft:bubble_column_up ~ ~ ~ 0.5 0.5 0.5 0.1 150 force",
-        "execute as @p at @s anchored eyes positioned ^ ^ ^2 run particle minecraft:bubble_pop ~ ~ ~ 0.5 0.5 0.5 0.05 60 force"
-      ],
+      "commands": [""],
       "conditions": {
         "enabling": [
           {
@@ -894,10 +922,157 @@
         ],
         "unlocking": [
           {
-            "type": "palladium:ability_unlocked",
-            "power": "null",
-            "ability": "save_dummy"
-          },
+            "type": "palladium:or",
+            "conditions": [
+              {
+                "type": "palladium:has_power",
+                "power": "infinity:infinity_gauntlet"
+              },
+              {
+                "type": "palladium:item_in_slot",
+                "item": {
+                  "item": "infinity:aether"
+                },
+                "slot": "mainhand"
+              },
+              {
+                "type": "palladium:item_in_slot",
+                "item": {
+                  "item": "infinity:aether"
+                },
+                "slot": "offhand"
+              },
+              {
+                "type": "palladium:item_in_slot",
+                "item": {
+                  "item": "infinity:reality_stone"
+                },
+                "slot": "mainhand"
+              },
+              {
+                "type": "palladium:item_in_slot",
+                "item": {
+                  "item": "infinity:reality_stone"
+                },
+                "slot": "offhand"
+              },
+              {
+                "type": "palladium:item_in_slot",
+                "item": {
+                  "item": "infinity:cosmi-rod_reality"
+                },
+                "slot": "mainhand"
+              },
+              {
+                "type": "palladium:item_in_slot",
+                "item": {
+                  "item": "infinity:cosmi-rod_reality"
+                },
+                "slot": "offhand"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "clear": {
+      "type": "palladium:command",
+      "icon": "minecraft:barrier",
+      "title": "Clear",
+      "persistent_data": true,
+      "bar_color": "red",
+      "hidden": true,
+      "hidden_in_bar": true,
+      "first_tick_commands": ["weather clear"],
+      "last_tick_commands": [],
+      "commands": [""],
+      "conditions": {
+        "enabling": [
+          {
+            "type": "palladium:action",
+            "cooldown": 0,
+            "key_type": "key_bind",
+            "needs_empty_hand": false,
+            "allow_scrolling_when_crouching": true
+          }
+        ],
+        "unlocking": [
+          {
+            "type": "palladium:or",
+            "conditions": [
+              {
+                "type": "palladium:has_power",
+                "power": "infinity:infinity_gauntlet"
+              },
+              {
+                "type": "palladium:item_in_slot",
+                "item": {
+                  "item": "infinity:aether"
+                },
+                "slot": "mainhand"
+              },
+              {
+                "type": "palladium:item_in_slot",
+                "item": {
+                  "item": "infinity:aether"
+                },
+                "slot": "offhand"
+              },
+              {
+                "type": "palladium:item_in_slot",
+                "item": {
+                  "item": "infinity:reality_stone"
+                },
+                "slot": "mainhand"
+              },
+              {
+                "type": "palladium:item_in_slot",
+                "item": {
+                  "item": "infinity:reality_stone"
+                },
+                "slot": "offhand"
+              },
+              {
+                "type": "palladium:item_in_slot",
+                "item": {
+                  "item": "infinity:cosmi-rod_reality"
+                },
+                "slot": "mainhand"
+              },
+              {
+                "type": "palladium:item_in_slot",
+                "item": {
+                  "item": "infinity:cosmi-rod_reality"
+                },
+                "slot": "offhand"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "thunder": {
+      "type": "palladium:command",
+      "icon": "minecraft:barrier",
+      "title": "Thunder",
+      "persistent_data": true,
+      "bar_color": "red",
+      "hidden": true,
+      "hidden_in_bar": true,
+      "first_tick_commands": ["weather thunder"],
+      "last_tick_commands": [],
+      "commands": [""],
+      "conditions": {
+        "enabling": [
+          {
+            "type": "palladium:action",
+            "cooldown": 0,
+            "key_type": "key_bind",
+            "needs_empty_hand": false,
+            "allow_scrolling_when_crouching": true
+          }
+        ],
+        "unlocking": [
           {
             "type": "palladium:or",
             "conditions": [

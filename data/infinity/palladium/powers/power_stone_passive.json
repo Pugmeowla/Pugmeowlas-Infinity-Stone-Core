@@ -1834,47 +1834,6 @@
       }
     },
 
-    "punch_command": {
-      "type": "palladium:command",
-      "icon": "minecraft:command_block",
-      "title": "null",
-      "bar_color": "light_gray",
-      "hidden": true,
-      "hidden_in_bar": true,
-      "list_index": -1,
-      "gui_position": "null",
-      "description": "null",
-      "first_tick_commands": ["tag @s add punch_effect"],
-      "last_tick_commands": [],
-      "commands": [],
-      "conditions": {
-        "enabling": {
-          "type": "palladium:ability_unlocked",
-          "power": "null",
-          "ability": "punch"
-        }
-      }
-    },
-    "punch_render": {
-      "type": "palladium:render_layer",
-      "icon": "minecraft:blaze_rod",
-      "title": "null",
-      "bar_color": "light_gray",
-      "hidden": true,
-      "hidden_in_bar": true,
-      "list_index": -1,
-      "gui_position": "null",
-      "description": "null",
-      "render_layer": "infinity:radiation_hand",
-      "conditions": {
-        "enabling": [
-          {
-            "type": "palladium:has_tag",
-            "tag": "purple_punch"
-          }
-        ]
-      }
-    },
     "knockback": {
       "type": "palladium:attribute_modifier",
       "icon": "infinity:power_stone",

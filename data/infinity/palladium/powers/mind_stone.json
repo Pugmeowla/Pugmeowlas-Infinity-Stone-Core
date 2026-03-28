@@ -7,33 +7,21 @@
   "ability_bar_texture": "infinity:textures/gui/ability_bars/mind_ability_bar.png",
 
   "abilities": {
-    "flight": {
-      "type": "palladium:attribute_modifier",
-      "persistent_data": true,
-      "icon": "infinity:textures/icon/fly.png",
+    "flight-dummy": {
+      "type": "palladium:command",
+      "hidden": false,
       "title": "Flight",
-      "bar_color": "yellow",
       "description": {
         "translate": "ability.infinity.mind_stone.flight.description"
       },
-      "list_index": 2,
-      "attribute": "palladium:flight_speed",
+      "icon": "infinity:textures/icon/fly.png",
       "gui_position": [0, -2],
-      "amount": 3,
-      "operation": 0,
-      "uuid": "498be4fb-af04-42f2-8948-e6ccdc0d99e1",
+      "first_tick_commands": [],
+      "last_tick_commands": [],
+      "commands": [],
       "conditions": {
         "enabling": [],
         "unlocking": [
-          {
-            "type": "palladium:not",
-            "conditions": [
-              {
-                "type": "palladium:has_tag",
-                "tag": "no_fly"
-              }
-            ]
-          },
           {
             "type": "palladium:item_buyable",
             "ingredient": {
@@ -107,141 +95,70 @@
         ]
       }
     },
-    "flight_stuff": {
-      "type": "palladium:command",
-      "icon": "minecraft:barrier",
-      "title": "Flight Off (Only works if you bought flight)",
-      "bar_color": "red",
-      "list_index": 2,
+    "flight": {
+      "type": "palladium:attribute_modifier",
       "hidden": true,
-      "first_tick_commands": ["tag @s add no_fly"],
-      "last_tick_commands": [],
-      "commands": [],
-      "conditions": {
-        "enabling": [
-          {
-            "type": "palladium:toggle",
-            "cooldown": 0,
-            "key_type": "key_bind",
-            "needs_empty_hand": false,
-            "allow_scrolling_when_crouching": true
-          }
-        ],
-        "unlocking": [
-          {
-            "type": "palladium:ability_unlocked",
-            "power": "null",
-            "ability": "flight"
-          }
-        ]
-      }
-    },
-    "flight_stuff3": {
-      "icon": "infinity:mind_stone",
-      "type": "palladium:command",
+      "hidden_in_bar": true,
+      "persistent_data": true,
       "bar_color": "yellow",
-      "title": "Flight On (Only works if you bought flight)",
-      "list_index": 2,
-      "hidden": true,
-      "first_tick_commands": ["tag @s remove no_fly"],
-      "last_tick_commands": [],
-      "commands": [],
+      "attribute": "palladium:flight_speed",
+      "amount": 3,
+      "operation": 0,
+      "uuid": "498be4fb-af04-42f2-8948-e6ccdc0d99e1",
       "conditions": {
-        "enabling": [
-          {
-            "type": "palladium:toggle",
-            "cooldown": 0,
-            "key_type": "key_bind",
-            "needs_empty_hand": false,
-            "allow_scrolling_when_crouching": true
-          }
-        ],
+        "enabling": [],
         "unlocking": [
           {
             "type": "palladium:not",
             "conditions": [
               {
-                "type": "palladium:ability_unlocked",
-                "power": "null",
-                "ability": "flight"
+                "type": "palladium:has_tag",
+                "tag": "no_fly"
               }
             ]
           },
           {
-            "type": "palladium:or",
-            "conditions": [
-              {
-                "type": "palladium:has_power",
-                "power": "infinity:infinity_gauntlet"
-              },
-              {
-                "type": "palladium:item_in_slot",
-                "item": {
-                  "item": "infinity:mind_stone"
-                },
-                "slot": "curios:head"
-              },
-              {
-                "type": "palladium:item_in_slot",
-                "item": {
-                  "item": "infinity:scepter"
-                },
-                "slot": "mainhand"
-              },
-              {
-                "type": "palladium:item_in_slot",
-                "item": {
-                  "item": "infinity:scepter"
-                },
-                "slot": "offhand"
-              },
-              {
-                "type": "palladium:item_in_slot",
-                "item": {
-                  "item": "infinity:mind_stone"
-                },
-                "slot": "mainhand"
-              },
-              {
-                "type": "palladium:item_in_slot",
-                "item": {
-                  "item": "infinity:mind_stone"
-                },
-                "slot": "offhand"
-              },
-              {
-                "type": "palladium:item_in_slot",
-                "item": {
-                  "item": "infinity:cosmi-rod_mind"
-                },
-                "slot": "mainhand"
-              },
-              {
-                "type": "palladium:item_in_slot",
-                "item": {
-                  "item": "infinity:cosmi-rod_mind"
-                },
-                "slot": "offhand"
-              }
-            ]
+            "type": "palladium:ability_unlocked",
+            "power": "null",
+            "ability": "flight-dummy"
           }
         ]
       }
     },
-    "flight_stuff2": {
+    "flight_toggle": {
       "type": "palladium:command",
-      "bar_color": "black",
-      "list_index": 2,
-      "hidden": true,
-      "first_tick_commands": ["tag @s add unlocked_fly"],
+      "icon": "minecraft:command_block",
+      "persistent_data": false,
+      "title": "Flight Toggle",
+      "bar_color": "light_gray",
+      "hidden": false,
+      "hidden_in_bar": true,
+      "list_index": 1,
+      "gui_position": [1, -2],
+      "description": {
+        "translate": "ability.infinity.mind_stone.flight_toggle.description"
+      },
+      "first_tick_commands": [
+        "scoreboard objectives add flightToggle dummy",
+        "execute if score @s flightToggle matches 0 run tag @s add no_fly",
+        "execute if score @s flightToggle matches 1 run tag @s remove no_fly",
+        "scoreboard players add @s flightToggle 1",
+        "execute if score @s flightToggle matches 2 run scoreboard players set @s flightToggle 0",
+        "ability lock @s infinity:mind_stone flight_toggle"
+      ],
       "last_tick_commands": [],
       "commands": [],
       "conditions": {
         "unlocking": [
           {
+            "type": "palladium:experience_level_buyable",
+            "xp_level": 0,
+            "flat_levels": true
+          },
+          {
             "type": "palladium:ability_unlocked",
             "power": "null",
-            "ability": "flight"
+            "ability": "flight-dummy"
           }
         ]
       }

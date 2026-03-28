@@ -1,5 +1,20 @@
 JEIEvents.information(event => {
-  event.addItem('infinity:infinity_gauntlet_cast', [
-    "You can find this cast in the chest of a weaponsmith in a village."
-  ])
+  event.addItem('infinity:space_stone', ['The Space Stone grants control over space, allowing teleportation and the manipulation of distances. It was hidden within the Tesseract in a Norwegian church.'])
+  event.addItem('infinity:mind_stone', ['The Mind Stone enhances intelligence and grants control over thoughts and consciousness. It is ultimately found on Sanctuary, tied to Thanos’s domain.'])
+  event.addItem('infinity:reality_stone', ['The Reality Stone allows the user to alter reality itself, bending matter and physics at will. It exists as the Aether and can be found in an Aether Chamber on Svartalfheim.'])
+  event.addItem('infinity:power_stone', ['The Power Stone contains immense destructive energy capable of wiping out entire planets. It is sealed within an Orb in a submerged temple on Morag.'])
+  event.addItem('infinity:time_stone', ['The Time Stone grants control over time, including looping and reversing events. It is housed within the Sanctum Sanctorum.'])
+  event.addItem('infinity:soul_stone', ['The Soul Stone holds dominion over souls and has a mysterious connection to life and death. It lies on Vormir at the "centre of the universe".'])
+
+  event.addItem('infinity:tesseract', ['A powerful cube that contains and stabilizes the Space Stone’s energy. It was hidden in a Norwegian church on the Overworld.'])
+  event.addItem('infinity:scepter', ['A weapon used to channel the Mind Stone’s power, capable of controlling minds and projecting energy. It is associated with Thanos and his forces on Sanctuary.'])
+  event.addItem('infinity:aether', ['A fluid-like substance that serves as the host form of the Reality Stone. It is contained within an Aether Chamber on Svartalfheim.'])
+  event.addItem('infinity:orb', ['A protective shell designed to contain the volatile Power Stone. It is located in an underwater temple on Morag.'])
+  event.addItem('infinity:eye_of_agamotto', ['An ancient relic that houses the Time Stone and allows safe manipulation of temporal forces. It is kept within the Sanctum Sanctorum.'])
+
+  event.addItem('infinity:infinity_gauntlet_cast', ['You can find this cast in the chest of a weaponsmith in a village.'])
+   event.addItem('infinity:shards_of_existance', ['You can find this in infinity temples scattered throughout the Overworld.'])
+  event.addItem('infinity:raw_uru', ['Obtained by breaking Uru Ore'])
+  event.addItem('infinity:uru_ore', ['Found on Svartalfheim, in meteor crators.'])
+  event.addItem('infinity:dwarf_star_meteor', ['Obtained in the Overworld in meteor crators.'])
 })
