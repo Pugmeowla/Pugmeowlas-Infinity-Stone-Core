@@ -12,10 +12,3 @@ logoBlur = false
 description='''
 A fully reimagined and expanded Infinity Craft experience for Palladium, featuring the Infinity Gauntlet, all Infinity Stones, and extensively revamped content inspired by Lucraft Core.
 '''
-
-[[dependencies.test]]
-modId = "palladium"
-mandatory = true
-versionRange = ""
-ordering = "NONE"
-side = "BOTH"
