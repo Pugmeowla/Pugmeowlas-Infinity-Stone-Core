@@ -862,7 +862,7 @@
     },
     "weather_wheel": {
       "type": "palladium:ability_wheel",
-      "icon": "minecraft:blaze_rod",
+      "icon": "infinity:textures/icon/weather_wheel.png",
       "title": "Change the Weather",
       "bar_color": "red",
       "hidden": false,
@@ -901,7 +901,7 @@
     },
     "rain": {
       "type": "palladium:command",
-      "icon": "minecraft:barrier",
+      "icon": "infinity:textures/icon/rain_icon.png",
       "title": "Rain",
       "persistent_data": true,
       "bar_color": "red",
@@ -977,7 +977,7 @@
     },
     "clear": {
       "type": "palladium:command",
-      "icon": "minecraft:barrier",
+      "icon": "infinity:textures/icon/sun_icon.png",
       "title": "Clear",
       "persistent_data": true,
       "bar_color": "red",
@@ -1053,7 +1053,7 @@
     },
     "thunder": {
       "type": "palladium:command",
-      "icon": "minecraft:barrier",
+      "icon": "infinity:textures/icon/thunder_icon.png",
       "title": "Thunder",
       "persistent_data": true,
       "bar_color": "red",
