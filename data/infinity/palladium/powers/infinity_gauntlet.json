@@ -2329,7 +2329,7 @@
       "icon": "palladium:vibranium_flux_capacitor",
       "title": "Nano Gauntlet Skin",
       "bar_color": "red",
-      "hidden": false,
+      "hidden": true,
       "hidden_in_bar": false,
       "list_index": 3,
       "gui_position": [0.5, 0],
@@ -2381,7 +2381,7 @@
       "icon": "minecraft:shears",
       "title": "Fantastic Four Skin",
       "bar_color": "light_blue",
-      "hidden": false,
+      "hidden": true,
       "hidden_in_bar": true,
       "list_index": 3,
       "gui_position": [-0.5, 0],
@@ -2431,7 +2431,7 @@
       "icon": "minecraft:netherite_ingot",
       "title": "Netherite Gauntlet",
       "bar_color": "black",
-      "hidden": false,
+      "hidden": true,
       "hidden_in_bar": false,
       "list_index": 3,
       "gui_position": [0.5, 1],
@@ -2481,7 +2481,7 @@
       "icon": "infinity:soul_infused_netherite_ingot",
       "title": "Soul Infused Netherite Gauntlet",
       "bar_color": "black",
-      "hidden": false,
+      "hidden": true,
       "hidden_in_bar": false,
       "list_index": 3,
       "gui_position": [-0.5, 1],
@@ -2531,7 +2531,7 @@
       "icon": "minecraft:chicken",
       "title": "Gauntlet with Fingers",
       "bar_color": "black",
-      "hidden": false,
+      "hidden": true,
       "hidden_in_bar": false,
       "list_index": 3,
       "gui_position": [-0.5, 2],
@@ -2573,7 +2573,7 @@
       "icon": "infinity:empty_orb",
       "title": "Hand of Terror",
       "bar_color": "black",
-      "hidden": false,
+      "hidden": true,
       "hidden_in_bar": false,
       "list_index": 3,
       "gui_position": [0.5, 2],
@@ -2623,7 +2623,7 @@
       "icon": "infinity:uru_ingot",
       "title": "Sith Gauntlet",
       "bar_color": "black",
-      "hidden": false,
+      "hidden": true,
       "hidden_in_bar": false,
       "list_index": 3,
       "gui_position": [0.5, 3],
@@ -2673,7 +2673,7 @@
       "icon": "infinity:endosym_ingot",
       "title": "Endosymbiotic Gauntlet",
       "bar_color": "black",
-      "hidden": false,
+      "hidden": true,
       "hidden_in_bar": false,
       "list_index": 3,
       "gui_position": [-0.5, 3],
@@ -2723,7 +2723,7 @@
       "icon": "minecraft:cherry_planks",
       "title": "Rose-Gold Gauntlet",
       "bar_color": "black",
-      "hidden": false,
+      "hidden": true,
       "hidden_in_bar": false,
       "list_index": 3,
       "gui_position": [0, 2.5],
@@ -2773,7 +2773,7 @@
       "icon": "infinity:ferro-titanium-gold_alloy_ingot",
       "title": "Ferro-Titanium-Gold Alloy Gauntlet",
       "bar_color": "black",
-      "hidden": false,
+      "hidden": true,
       "hidden_in_bar": false,
       "list_index": 3,
       "gui_position": [0, 3.5],
@@ -2823,7 +2823,7 @@
       "icon": "minecraft:black_dye",
       "title": "Midnight",
       "bar_color": "black",
-      "hidden": false,
+      "hidden": true,
       "hidden_in_bar": false,
       "list_index": 3,
       "gui_position": [0, 4.5],
@@ -2873,7 +2873,7 @@
       "icon": "palladium:vibranium_circuit",
       "title": "Ultron Gauntlet",
       "bar_color": "black",
-      "hidden": false,
+      "hidden": true,
       "hidden_in_bar": false,
       "list_index": 3,
       "gui_position": [0.5, 4],
@@ -2923,7 +2923,7 @@
       "icon": "palladium:vibranium_ingot",
       "title": "Panther Gauntlet",
       "bar_color": "black",
-      "hidden": false,
+      "hidden": true,
       "hidden_in_bar": false,
       "list_index": 3,
       "gui_position": [-0.5, 4],
@@ -2973,7 +2973,7 @@
       "icon": "minecraft:white_wool",
       "title": "Cartoon Gauntlet",
       "bar_color": "black",
-      "hidden": false,
+      "hidden": true,
       "hidden_in_bar": false,
       "list_index": 3,
       "gui_position": [0.5, 5],
@@ -3023,7 +3023,7 @@
       "icon": "infinity:52-d_unit",
       "title": "(NP-Λ52) Enchanced Gauntlet",
       "bar_color": "black",
-      "hidden": false,
+      "hidden": true,
       "hidden_in_bar": false,
       "list_index": 3,
       "gui_position": [-0.5, 5],
@@ -3074,7 +3074,7 @@
       "icon": "infinity:infinity_gauntlet",
       "title": "Return to Original Gauntlet",
       "bar_color": "yellow",
-      "hidden": false,
+      "hidden": true,
       "hidden_in_bar": false,
       "list_index": 3,
       "gui_position": [0, 0.5],
@@ -3134,6 +3134,202 @@
             "tag": "skin_on"
           }
         ]
+      }
+    },
+
+    "nano_gauntlet_dummy": {
+      "type": "palladium:dummy",
+      "icon": "minecraft:blaze_rod",
+      "title": "Nano Gauntlet Skin",
+      "bar_color": "light_gray",
+      "hidden": false,
+      "hidden_in_bar": true,
+      "list_index": -1,
+      "gui_position": [-1, 2.5],
+      "description": {
+        "translate": "ability.infinity.gauntlet.nano_gauntlet.description"
+      }
+    },
+    "fantastic_four_skin_dummy": {
+      "type": "palladium:dummy",
+      "icon": "minecraft:blaze_rod",
+      "title": "Fantastic Four Skin",
+      "bar_color": "light_gray",
+      "hidden": false,
+      "hidden_in_bar": true,
+      "list_index": -1,
+      "gui_position": [-0.5, 2.5],
+      "description": {
+        "translate": "ability.infinity.gauntlet.fantastic_four_skin.description"
+      }
+    },
+    "netherite_gauntlet_dummy": {
+      "type": "palladium:dummy",
+      "icon": "minecraft:blaze_rod",
+      "title": "Netherite Gauntlet",
+      "bar_color": "light_gray",
+      "hidden": false,
+      "hidden_in_bar": true,
+      "list_index": -1,
+      "gui_position": [0, 2.5],
+      "description": {
+        "translate": "ability.infinity.gauntlet.netherite_gauntlet.description"
+      }
+    },
+    "soul_netherite_gauntlet_dummy": {
+      "type": "palladium:dummy",
+      "icon": "minecraft:blaze_rod",
+      "title": "Soul Infused Netherite Gauntlet",
+      "bar_color": "light_gray",
+      "hidden": false,
+      "hidden_in_bar": true,
+      "list_index": -1,
+      "gui_position": [0.5, 2.5],
+      "description": {
+        "translate": "ability.infinity.gauntlet.soul_netherite_gauntlet.description"
+      }
+    },
+    "finger_gauntlet_dummy": {
+      "type": "palladium:dummy",
+      "icon": "minecraft:blaze_rod",
+      "title": "Gauntlet with Fingers",
+      "bar_color": "light_gray",
+      "hidden": false,
+      "hidden_in_bar": true,
+      "list_index": -1,
+      "gui_position": [1, 2.5],
+      "description": {
+        "translate": "ability.infinity.gauntlet.finger_gauntlet.description"
+      }
+    },
+    "hand_of_terror_dummy": {
+      "type": "palladium:dummy",
+      "icon": "minecraft:blaze_rod",
+      "title": "Hand of Terror",
+      "bar_color": "light_gray",
+      "hidden": false,
+      "hidden_in_bar": true,
+      "list_index": -1,
+      "gui_position": [-1, 3],
+      "description": {
+        "translate": "ability.infinity.gauntlet.hand_of_terror.description"
+      }
+    },
+    "sith_gauntlet_dummy": {
+      "type": "palladium:dummy",
+      "icon": "minecraft:blaze_rod",
+      "title": "Sith Gauntlet",
+      "bar_color": "light_gray",
+      "hidden": false,
+      "hidden_in_bar": true,
+      "list_index": -1,
+      "gui_position": [-0.5, 3],
+      "description": {
+        "translate": "ability.infinity.gauntlet.sith_gauntlet.description"
+      }
+    },
+    "endosym_gauntlet_dummy": {
+      "type": "palladium:dummy",
+      "icon": "minecraft:blaze_rod",
+      "title": "Endosymbiotic Gauntlet",
+      "bar_color": "light_gray",
+      "hidden": false,
+      "hidden_in_bar": true,
+      "list_index": -1,
+      "gui_position": [0, 3],
+      "description": {
+        "translate": "ability.infinity.gauntlet.endosym_gauntlet.description"
+      }
+    },
+    "rose_gauntlet_dummy": {
+      "type": "palladium:dummy",
+      "icon": "minecraft:blaze_rod",
+      "title": "Rose-Gold Gauntlet",
+      "bar_color": "light_gray",
+      "hidden": false,
+      "hidden_in_bar": true,
+      "list_index": -1,
+      "gui_position": [0.5, 3],
+      "description": {
+        "translate": "ability.infinity.gauntlet.rose_gauntlet.description"
+      }
+    },
+    "ftg_gauntlet_dummy": {
+      "type": "palladium:dummy",
+      "icon": "minecraft:blaze_rod",
+      "title": "Ferro-Titanium-Gold Alloy Gauntlet",
+      "bar_color": "light_gray",
+      "hidden": false,
+      "hidden_in_bar": true,
+      "list_index": -1,
+      "gui_position": [1, 3],
+      "description": {
+        "translate": "ability.infinity.gauntlet.ftg_gauntlet.description"
+      }
+    },
+    "midnight_dummy": {
+      "type": "palladium:dummy",
+      "icon": "minecraft:blaze_rod",
+      "title": "Midnight",
+      "bar_color": "light_gray",
+      "hidden": false,
+      "hidden_in_bar": true,
+      "list_index": -1,
+      "gui_position": [-1, 3.5],
+      "description": {
+        "translate": "ability.infinity.gauntlet.midnight.description"
+      }
+    },
+    "ultron_gauntlet_dummy": {
+      "type": "palladium:dummy",
+      "icon": "minecraft:blaze_rod",
+      "title": "Ultron Gauntlet",
+      "bar_color": "light_gray",
+      "hidden": false,
+      "hidden_in_bar": true,
+      "list_index": -1,
+      "gui_position": [-0.5, 3.5],
+      "description": {
+        "translate": "ability.infinity.gauntlet.ultron_gauntlet.description"
+      }
+    },
+    "panther_gauntlet_dummy": {
+      "type": "palladium:dummy",
+      "icon": "minecraft:blaze_rod",
+      "title": "Panther Gauntlet",
+      "bar_color": "light_gray",
+      "hidden": false,
+      "hidden_in_bar": true,
+      "list_index": -1,
+      "gui_position": [0, 3.5],
+      "description": {
+        "translate": "ability.infinity.gauntlet.panther_gauntlet.description"
+      }
+    },
+    "cartoon_gauntlet_dummy": {
+      "type": "palladium:dummy",
+      "icon": "minecraft:blaze_rod",
+      "title": "Cartoon Gauntlet",
+      "bar_color": "light_gray",
+      "hidden": false,
+      "hidden_in_bar": true,
+      "list_index": -1,
+      "gui_position": [0.5, 3.5],
+      "description": {
+        "translate": "ability.infinity.gauntlet.cartoon_gauntlet.description"
+      }
+    },
+    "52-d_gauntlet_dummy": {
+      "type": "palladium:dummy",
+      "icon": "minecraft:blaze_rod",
+      "title": "(NP-Λ52) Enchanced Gauntlet",
+      "bar_color": "light_gray",
+      "hidden": false,
+      "hidden_in_bar": true,
+      "list_index": -1,
+      "gui_position": [1, 3.5],
+      "description": {
+        "translate": "ability.infinity.gauntlet.52-d_gauntlet.description"
       }
     },
     "omni_desc": {
