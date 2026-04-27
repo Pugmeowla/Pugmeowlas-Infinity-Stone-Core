@@ -184,5 +184,7 @@
   "ability.infinity.gauntlet.midnight.description": "Unlock by right-clicking with Black Dye in your main hand.",
   "ability.infinity.gauntlet.52-d_gauntlet.description": "Unlock by right-clicking with an (NP-Λ52) Unit in your main hand. An enhanced gauntlet with NP-Λ52, capable of stabilizing and channeling the energy of the Infinity Stones, fully compatible with the Mark 52-D.",
 
-  "ability.infinity.mind_stone.flight_toggle.description": "Unlock this to toggle mind stone flight on and off, incase you want to use another form of flight."
+  "ability.infinity.mind_stone.flight_toggle.description": "Unlock this to toggle mind stone flight on and off, incase you want to use another form of flight.",
+
+  "item.infinity_tracker.infinity_tracker": "Infinity Tracker"
 }
