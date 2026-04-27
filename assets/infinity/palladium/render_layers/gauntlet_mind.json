@@ -2,6 +2,7 @@
   "type": "geckolib:default",
   "model": "infinity:geo/gauntlet.geo.json",
   "texture": "infinity:textures/models/gauntlet_stone_mind.png",
+  "render_type": "glow",
   "enchantment_glint": true,
   "bones": {
     "head": "head",
