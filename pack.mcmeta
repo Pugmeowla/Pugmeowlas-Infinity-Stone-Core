@@ -10,7 +10,8 @@
       "head": true,
       "necklace": true,
       "body": true,
-      "hands": true
+      "hands": true,
+      "charm": true
     }
   }
 }
