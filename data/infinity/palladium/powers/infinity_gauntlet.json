@@ -3363,7 +3363,7 @@
 
     "nano_gauntlet_dummy": {
       "type": "palladium:dummy",
-      "icon": "minecraft:blaze_rod",
+      "icon": "palladium:vibranium_flux_capacitor",
       "title": "Nano Gauntlet Skin",
       "bar_color": "light_gray",
       "hidden": false,
@@ -3376,7 +3376,7 @@
     },
     "fantastic_four_skin_dummy": {
       "type": "palladium:dummy",
-      "icon": "minecraft:blaze_rod",
+      "icon": "minecraft:barrier",
       "title": "Fantastic Four Skin",
       "bar_color": "light_gray",
       "hidden": false,
@@ -3389,7 +3389,7 @@
     },
     "netherite_gauntlet_dummy": {
       "type": "palladium:dummy",
-      "icon": "minecraft:blaze_rod",
+      "icon": "minecraft:netherite_ingot",
       "title": "Netherite Gauntlet",
       "bar_color": "light_gray",
       "hidden": false,
@@ -3402,7 +3402,7 @@
     },
     "soul_netherite_gauntlet_dummy": {
       "type": "palladium:dummy",
-      "icon": "minecraft:blaze_rod",
+      "icon": "infinity:soul_infused_netherite_ingot",
       "title": "Soul Infused Netherite Gauntlet",
       "bar_color": "light_gray",
       "hidden": false,
@@ -3415,7 +3415,7 @@
     },
     "finger_gauntlet_dummy": {
       "type": "palladium:dummy",
-      "icon": "minecraft:blaze_rod",
+      "icon": "minecraft:chicken",
       "title": "Gauntlet with Fingers",
       "bar_color": "light_gray",
       "hidden": false,
@@ -3428,7 +3428,7 @@
     },
     "hand_of_terror_dummy": {
       "type": "palladium:dummy",
-      "icon": "minecraft:blaze_rod",
+      "icon": "infinity:empty_orb",
       "title": "Hand of Terror",
       "bar_color": "light_gray",
       "hidden": false,
@@ -3441,7 +3441,7 @@
     },
     "sith_gauntlet_dummy": {
       "type": "palladium:dummy",
-      "icon": "minecraft:blaze_rod",
+      "icon": "infinity:uru_ingot",
       "title": "Sith Gauntlet",
       "bar_color": "light_gray",
       "hidden": false,
@@ -3454,7 +3454,7 @@
     },
     "endosym_gauntlet_dummy": {
       "type": "palladium:dummy",
-      "icon": "minecraft:blaze_rod",
+      "icon": "infinity:endosym_ingot",
       "title": "Endosymbiotic Gauntlet",
       "bar_color": "light_gray",
       "hidden": false,
@@ -3467,7 +3467,7 @@
     },
     "rose_gauntlet_dummy": {
       "type": "palladium:dummy",
-      "icon": "minecraft:blaze_rod",
+      "icon": "minecraft:cherry_planks",
       "title": "Rose-Gold Gauntlet",
       "bar_color": "light_gray",
       "hidden": false,
@@ -3480,7 +3480,7 @@
     },
     "ftg_gauntlet_dummy": {
       "type": "palladium:dummy",
-      "icon": "minecraft:blaze_rod",
+      "icon": "infinity:ferro-titanium-gold_alloy_ingot",
       "title": "Ferro-Titanium-Gold Alloy Gauntlet",
       "bar_color": "light_gray",
       "hidden": false,
@@ -3493,7 +3493,7 @@
     },
     "midnight_dummy": {
       "type": "palladium:dummy",
-      "icon": "minecraft:blaze_rod",
+      "icon": "minecraft:black_dye",
       "title": "Midnight",
       "bar_color": "light_gray",
       "hidden": false,
@@ -3506,7 +3506,7 @@
     },
     "ultron_gauntlet_dummy": {
       "type": "palladium:dummy",
-      "icon": "minecraft:blaze_rod",
+      "icon": "palladium:vibranium_circuit",
       "title": "Ultron Gauntlet",
       "bar_color": "light_gray",
       "hidden": false,
@@ -3519,7 +3519,7 @@
     },
     "panther_gauntlet_dummy": {
       "type": "palladium:dummy",
-      "icon": "minecraft:blaze_rod",
+      "icon": "palladium:vibranium_ingot",
       "title": "Panther Gauntlet",
       "bar_color": "light_gray",
       "hidden": false,
@@ -3532,7 +3532,7 @@
     },
     "cartoon_gauntlet_dummy": {
       "type": "palladium:dummy",
-      "icon": "minecraft:blaze_rod",
+      "icon": "minecraft:white_wool",
       "title": "Cartoon Gauntlet",
       "bar_color": "light_gray",
       "hidden": false,
@@ -3545,7 +3545,7 @@
     },
     "52-d_gauntlet_dummy": {
       "type": "palladium:dummy",
-      "icon": "minecraft:blaze_rod",
+      "icon": "infinity:52-d_unit",
       "title": "(NP-Λ52) Enchanced Gauntlet",
       "bar_color": "light_gray",
       "hidden": false,
