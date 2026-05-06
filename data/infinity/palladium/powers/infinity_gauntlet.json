@@ -3480,7 +3480,7 @@
     },
     "ftg_gauntlet_dummy": {
       "type": "palladium:dummy",
-      "icon": "infinity:ferro-titanium-gold_alloy_ingot",
+      "icon": "infinity:textures/icon/skins/ftg_gauntlet.png",
       "title": "Ferro-Titanium-Gold Alloy Gauntlet",
       "bar_color": "light_gray",
       "hidden": false,
@@ -3506,7 +3506,7 @@
     },
     "ultron_gauntlet_dummy": {
       "type": "palladium:dummy",
-      "icon": "palladium:vibranium_circuit",
+      "icon": "infinity:textures/icon/skins/ultron_gauntlet.png",
       "title": "Ultron Gauntlet",
       "bar_color": "light_gray",
       "hidden": false,
@@ -3519,7 +3519,7 @@
     },
     "panther_gauntlet_dummy": {
       "type": "palladium:dummy",
-      "icon": "palladium:vibranium_ingot",
+      "icon": "infinity:textures/icon/skins/panther_gauntlet.png",
       "title": "Panther Gauntlet",
       "bar_color": "light_gray",
       "hidden": false,
