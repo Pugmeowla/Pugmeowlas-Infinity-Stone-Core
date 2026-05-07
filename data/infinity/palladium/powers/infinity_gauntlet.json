@@ -1,6 +1,6 @@
 {
   "name": "Infinity Gauntlet",
-  "background": "minecraft:textures/block/sculk_sensor_bottom.png",
+  "background": "infinity:textures/block/gold_titanium_alloy_block.png",
   "icon": "infinity:infinity_gauntlet",
   "ability_bar_texture": "infinity:textures/gui/ability_bars/infinity_ability_bar.png",
   "gui_display_type": "tree",
@@ -3545,7 +3545,7 @@
     },
     "52-d_gauntlet_dummy": {
       "type": "palladium:dummy",
-      "icon": "infinity:52-d_unit",
+      "icon": "infinity:textures/icon/skins/52-d_gauntlet.png",
       "title": "(NP-Λ52) Enchanced Gauntlet",
       "bar_color": "light_gray",
       "hidden": false,
