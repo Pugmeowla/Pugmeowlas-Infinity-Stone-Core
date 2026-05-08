@@ -188,5 +188,5 @@
 
   "item.infinity_tracker.infinity_tracker": "Infinity Tracker",
 
-  "ability.infinity.space_stone.portal_gui.description": "When CoreWithStuff is downloaded, the Space Stone grants access to a teleportation GUI."
+  "ability.infinity.space_stone.portal_gui.description": "Locked permanently when CoreWithStuff is not present."
 }

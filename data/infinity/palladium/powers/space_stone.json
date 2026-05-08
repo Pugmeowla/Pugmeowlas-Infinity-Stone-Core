@@ -1383,17 +1383,19 @@
     },
     "teleport_gui": {
       "type": "palladium:command",
-      "icon": "minecraft:blaze_rod",
-      "title": "null",
-      "bar_color": "light_gray",
+      "icon": "infinity:textures/icon/teleport.png",
+      "title": "Teleport GUI",
+      "bar_color": "light_blue",
       "hidden": false,
       "hidden_in_bar": false,
       "list_index": 4,
       "first_tick_commands": [],
       "last_tick_commands": [],
       "commands": ["superpower add infinity:space_stone_gui @s"],
-      "gui_position": "null",
-      "description": "null",
+      "gui_position": [0, -2],
+      "description": {
+        "translate": "ability.infinity.space_stone.portal_gui.description"
+      },
       "conditions": {
         "enabling": [
           {
@@ -1405,6 +1407,22 @@
           }
         ],
         "unlocking": [
+          {
+            "type": "palladium:mod_loaded",
+            "mod_id": "corewithstuff"
+          },
+          {
+            "type": "palladium:ability_unlocked",
+            "power": "null",
+            "ability": "teleport"
+          },
+          {
+            "type": "palladium:item_buyable",
+            "ingredient": {
+              "item": "infinity:aspects_of_existance"
+            },
+            "amount": 1
+          },
           {
             "type": "palladium:or",
             "conditions": [
