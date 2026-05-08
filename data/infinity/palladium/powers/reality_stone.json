@@ -7,6 +7,33 @@
   "ability_bar_texture": "infinity:textures/gui/ability_bars/reality_ability_bar.png",
 
   "abilities": {
+    "tick": {
+      "type": "palladium:command",
+      "hidden": true,
+      "hidden_in_bar": true,
+      "first_tick_commands": ["scoreboard objectives add SizeCycle dummy"],
+      "last_tick_commands": [],
+      "commands": [
+        "execute if score @s SizeCycle matches -4 run scale set pehkui:base 5",
+        "execute if score @s SizeCycle matches -3 run scale set pehkui:base 4",
+        "execute if score @s SizeCycle matches -2 run scale set pehkui:base 3",
+        "execute if score @s SizeCycle matches -1 run scale set pehkui:base 2",
+        "execute if score @s SizeCycle matches 0 run scale set pehkui:base 1",
+        "execute if score @s SizeCycle matches 1 run scale set pehkui:base 0.9",
+        "execute if score @s SizeCycle matches 2 run scale set pehkui:base 0.8",
+        "execute if score @s SizeCycle matches 3 run scale set pehkui:base 0.7",
+        "execute if score @s SizeCycle matches 4 run scale set pehkui:base 0.6",
+        "execute if score @s SizeCycle matches 5 run scale set pehkui:base 0.5",
+        "execute if score @s SizeCycle matches 6 run scale set pehkui:base 0.4",
+        "execute if score @s SizeCycle matches 7 run scale set pehkui:base 0.3",
+        "execute if score @s SizeCycle matches 8 run scale set pehkui:base 0.2",
+        "execute if score @s SizeCycle matches 9 run scale set pehkui:base 0.1",
+
+        "execute if score @s SizeCycle matches 10 run scoreboard players set @s SizeCycle 9",
+        "execute if score @s SizeCycle matches -5 run scoreboard players set @s SizeCycle -4"
+      ],
+      "conditions": {}
+    },
     "save_dummy": {
       "type": "palladium:dummy",
       "icon": "infinity:reality_stone",
@@ -74,218 +101,103 @@
       }
     },
 
-    "shrink": {
+    "slow_time": {
       "type": "palladium:command",
-      "persistent_data": true,
-      "icon": "palladium:textures/icon/size.png",
-      "title": "Shrink",
-      "bar_color": "red",
+      "icon": "infinity:textures/icon/hourglass.png",
+      "title": "Slow Time",
+      "bar_color": "lime",
       "hidden": true,
-      "hidden_in_bar": false,
-      "list_index": 1,
-      "gui_position": [-1, -1],
+      "hidden_in_bar": true,
+      "persistent_data": true,
+      "list_index": 5,
       "description": {
-        "translate": "ability.infinity.reality_stone.shrink.description"
+        "translate": "ability.infinity.time_stone.slow_time_dummy.description"
       },
-      "first_tick_commands": ["playsound infinity:reality_stone_size block @s"],
-      "commands": ["scale set pehkui:base 0.1"],
+      "commands": [
+        "playsound minecraft:block.comparator.click block @s",
+        "scoreboard players add @s SizeCycle 1"
+      ],
+      "first_tick_commands": [],
+      "last_tick_commands": [],
       "conditions": {
         "enabling": [
           {
             "type": "palladium:action",
             "cooldown": 0,
-            "key_type": "key_bind",
-            "needs_empty_hand": false,
+            "key_type": "scroll_down",
+            "needs_empty_hand": true,
             "allow_scrolling_when_crouching": true
           }
         ],
         "unlocking": [
           {
-            "type": "palladium:ability_unlocked",
+            "type": "palladium:ability_enabled",
             "power": "null",
-            "ability": "shrink_dummy"
-          },
+            "ability": "size_toggle"
+          }
+        ]
+      }
+    },
+    "slow_time2": {
+      "type": "palladium:command",
+      "icon": "infinity:textures/icon/hourglass.png",
+      "title": "Slow Time",
+      "bar_color": "lime",
+      "hidden": true,
+      "hidden_in_bar": true,
+      "persistent_data": true,
+      "list_index": 5,
+      "description": {
+        "translate": "ability.infinity.time_stone.slow_time_dummy.description"
+      },
+      "commands": [
+        "playsound minecraft:block.comparator.click block @s",
+        "scoreboard players remove @s SizeCycle 1"
+      ],
+      "first_tick_commands": [],
+      "last_tick_commands": [],
+      "conditions": {
+        "enabling": [
           {
-            "type": "palladium:not",
-            "conditions": [
-              {
-                "type": "palladium:crouching"
-              }
-            ]
-          },
+            "type": "palladium:action",
+            "cooldown": 0,
+            "key_type": "scroll_up",
+            "needs_empty_hand": true,
+            "allow_scrolling_when_crouching": true
+          }
+        ],
+        "unlocking": [
+          {
+            "type": "palladium:ability_enabled",
+            "power": "null",
+            "ability": "size_toggle"
+          }
+        ]
+      }
+    },
 
-          {
-            "type": "palladium:size",
-            "min": 1,
-            "max": 1
-          },
-
-          {
-            "type": "palladium:or",
-            "conditions": [
-              {
-                "type": "palladium:has_power",
-                "power": "infinity:infinity_gauntlet"
-              },
-              {
-                "type": "palladium:item_in_slot",
-                "item": {
-                  "item": "infinity:aether"
-                },
-                "slot": "mainhand"
-              },
-              {
-                "type": "palladium:item_in_slot",
-                "item": {
-                  "item": "infinity:aether"
-                },
-                "slot": "offhand"
-              },
-              {
-                "type": "palladium:item_in_slot",
-                "item": {
-                  "item": "infinity:reality_stone"
-                },
-                "slot": "mainhand"
-              },
-              {
-                "type": "palladium:item_in_slot",
-                "item": {
-                  "item": "infinity:reality_stone"
-                },
-                "slot": "offhand"
-              },
-              {
-                "type": "palladium:item_in_slot",
-                "item": {
-                  "item": "infinity:cosmi-rod_reality"
-                },
-                "slot": "mainhand"
-              },
-              {
-                "type": "palladium:item_in_slot",
-                "item": {
-                  "item": "infinity:cosmi-rod_reality"
-                },
-                "slot": "offhand"
-              }
-            ]
-          }
-        ]
-      }
-    },
-    "grow": {
+    "size_toggle": {
       "type": "palladium:command",
-      "persistent_data": true,
       "icon": "palladium:textures/icon/size.png",
-      "title": "Grow",
+      "title": "Size Control",
       "bar_color": "red",
       "hidden": true,
       "hidden_in_bar": false,
-      "list_index": 1,
-      "gui_position": [-1, 0],
-      "description": {
-        "translate": "ability.infinity.reality_stone.grow.description"
-      },
-      "first_tick_commands": ["playsound infinity:reality_stone_size block @s"],
-      "commands": ["scale set pehkui:base 10"],
-      "conditions": {
-        "enabling": [
-          {
-            "type": "palladium:action",
-            "cooldown": 0,
-            "key_type": "key_bind",
-            "needs_empty_hand": false,
-            "allow_scrolling_when_crouching": true
-          }
-        ],
-        "unlocking": [
-          {
-            "type": "palladium:ability_unlocked",
-            "power": "null",
-            "ability": "shrink_dummy"
-          },
-          {
-            "type": "palladium:crouching"
-          },
-          {
-            "type": "palladium:size",
-            "min": 1,
-            "max": 1
-          },
-          {
-            "type": "palladium:or",
-            "conditions": [
-              {
-                "type": "palladium:has_power",
-                "power": "infinity:infinity_gauntlet"
-              },
-              {
-                "type": "palladium:item_in_slot",
-                "item": {
-                  "item": "infinity:aether"
-                },
-                "slot": "mainhand"
-              },
-              {
-                "type": "palladium:item_in_slot",
-                "item": {
-                  "item": "infinity:aether"
-                },
-                "slot": "offhand"
-              },
-              {
-                "type": "palladium:item_in_slot",
-                "item": {
-                  "item": "infinity:reality_stone"
-                },
-                "slot": "mainhand"
-              },
-              {
-                "type": "palladium:item_in_slot",
-                "item": {
-                  "item": "infinity:reality_stone"
-                },
-                "slot": "offhand"
-              },
-              {
-                "type": "palladium:item_in_slot",
-                "item": {
-                  "item": "infinity:cosmi-rod_reality"
-                },
-                "slot": "mainhand"
-              },
-              {
-                "type": "palladium:item_in_slot",
-                "item": {
-                  "item": "infinity:cosmi-rod_reality"
-                },
-                "slot": "offhand"
-              }
-            ]
-          }
-        ]
-      }
-    },
-    "normal": {
-      "type": "palladium:command",
-      "icon": "minecraft:barrier",
       "persistent_data": true,
-      "title": "Normal Scale",
-      "bar_color": "red",
-      "hidden": true,
-      "hidden_in_bar": false,
       "list_index": 1,
-      "gui_position": [-2, -1],
       "description": {
-        "translate": "ability.infinity.reality_stone.normal.description"
+        "translate": "ability.infinity.time_stone.reset_time_speed.description"
       },
-      "first_tick_commands": ["playsound infinity:reality_stone_size block @s"],
-      "commands": ["scale set pehkui:base 1"],
+      "first_tick_commands": [],
+      "commands": [],
+      "last_tick_commands": [
+        "scoreboard players set @s SizeCycle 0",
+        "scale set pehkui:base 1"
+      ],
       "conditions": {
         "enabling": [
           {
-            "type": "palladium:action",
+            "type": "palladium:toggle",
             "cooldown": 0,
             "key_type": "key_bind",
             "needs_empty_hand": false,
@@ -297,71 +209,11 @@
             "type": "palladium:ability_unlocked",
             "power": "null",
             "ability": "shrink_dummy"
-          },
-          {
-            "type": "palladium:not",
-            "conditions": [
-              {
-                "type": "palladium:size",
-                "min": 1,
-                "max": 1
-              }
-            ]
-          },
-          {
-            "type": "palladium:or",
-            "conditions": [
-              {
-                "type": "palladium:has_power",
-                "power": "infinity:infinity_gauntlet"
-              },
-              {
-                "type": "palladium:item_in_slot",
-                "item": {
-                  "item": "infinity:aether"
-                },
-                "slot": "mainhand"
-              },
-              {
-                "type": "palladium:item_in_slot",
-                "item": {
-                  "item": "infinity:aether"
-                },
-                "slot": "offhand"
-              },
-              {
-                "type": "palladium:item_in_slot",
-                "item": {
-                  "item": "infinity:reality_stone"
-                },
-                "slot": "mainhand"
-              },
-              {
-                "type": "palladium:item_in_slot",
-                "item": {
-                  "item": "infinity:reality_stone"
-                },
-                "slot": "offhand"
-              },
-              {
-                "type": "palladium:item_in_slot",
-                "item": {
-                  "item": "infinity:cosmi-rod_reality"
-                },
-                "slot": "mainhand"
-              },
-              {
-                "type": "palladium:item_in_slot",
-                "item": {
-                  "item": "infinity:cosmi-rod_reality"
-                },
-                "slot": "offhand"
-              }
-            ]
           }
         ]
       }
     },
+
     "invisibility": {
       "type": "palladium:invisibility",
       "icon": "palladium:textures/icon/invisibility.png",

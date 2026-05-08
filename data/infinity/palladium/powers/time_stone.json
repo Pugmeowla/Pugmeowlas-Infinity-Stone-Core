@@ -105,6 +105,39 @@
         "translate": "ability.infinity.time_stone.remove_time_stone.description"
       }
     },
+    "screen_toggle": {
+      "type": "palladium:command",
+      "icon": "minecraft:command_block",
+      "persistent_data": false,
+      "title": "Screen Toggle",
+      "bar_color": "light_gray",
+      "hidden": false,
+      "hidden_in_bar": true,
+      "list_index": 1,
+      "gui_position": [-1, -0.5],
+      "description": {
+        "translate": "ability.infinity.time_stone.screen_toggle.description"
+      },
+      "first_tick_commands": [
+        "scoreboard objectives add screen_toggle dummy",
+        "execute if score @s screen_toggle matches 0 run tag @s add no_time_screen",
+        "execute if score @s screen_toggle matches 1 run tag @s remove no_time_screen",
+        "scoreboard players add @s screen_toggle 1",
+        "execute if score @s screen_toggle matches 2 run scoreboard players set @s screen_toggle 0",
+        "ability lock @s infinity:time_stone screen_toggle"
+      ],
+      "last_tick_commands": [],
+      "commands": [],
+      "conditions": {
+        "unlocking": [
+          {
+            "type": "palladium:experience_level_buyable",
+            "xp_level": 0,
+            "flat_levels": true
+          }
+        ]
+      }
+    },
     "slow_time_dummy": {
       "type": "palladium:dummy",
       "persistent_data": true,
@@ -1258,6 +1291,17 @@
               {
                 "type": "palladium:ability_enabled",
                 "ability": "time_freeze"
+              }
+            ]
+          }
+        ],
+        "unlocking": [
+          {
+            "type": "palladium:not",
+            "conditions": [
+              {
+                "type": "palladium:has_tag",
+                "tag": "no_time_screen"
               }
             ]
           }

@@ -146,7 +146,7 @@
       "hidden": false,
       "hidden_in_bar": false,
       "list_index": 1,
-      "gui_position": [0, -1],
+      "gui_position": [0, 0],
       "description": {
         "translate": "ability.infinity.space_stone.teleport.description"
       },
@@ -247,7 +247,7 @@
       "hidden": false,
       "hidden_in_bar": false,
       "list_index": 1,
-      "gui_position": [0.5, 0.5],
+      "gui_position": [0.5, 1],
       "description": {
         "translate": "ability.infinity.space_stone.water_breathing.description"
       },
@@ -335,7 +335,7 @@
       "hidden": false,
       "hidden_in_bar": false,
       "list_index": -1,
-      "gui_position": [-0.5, -1.5],
+      "gui_position": [-0.5, -0.5],
       "description": {
         "translate": "ability.infinity.space_stone.teleport_command.description"
       },
@@ -426,7 +426,7 @@
       "hidden": true,
       "hidden_in_bar": true,
       "list_index": 2,
-      "gui_position": [0.5, -1.5],
+      "gui_position": [0.5, -0.5],
       "description": {
         "translate": "ability.infinity.space_stone.telekinesis.description"
       },
@@ -456,7 +456,7 @@
       "hidden": false,
       "hidden_in_bar": false,
       "list_index": 2,
-      "gui_position": [0.5, -1.5],
+      "gui_position": [0.5, -0.5],
       "description": {
         "translate": "ability.infinity.space_stone.telekinesis.description"
       },
@@ -657,7 +657,7 @@
       "hidden": false,
       "hidden_in_bar": false,
       "list_index": 0,
-      "gui_position": [0.5, -0.5],
+      "gui_position": [0.5, 0.5],
       "description": {
         "translate": "ability.infinity.space_stone.force_field.description"
       },
@@ -853,7 +853,7 @@
       "hidden": false,
       "hidden_in_bar": false,
       "list_index": 3,
-      "gui_position": [1, -1.5],
+      "gui_position": [0.5, -1],
       "description": {
         "translate": "ability.infinity.space_stone.black_hole_on.description"
       },
@@ -1117,7 +1117,7 @@
       "hidden": false,
       "hidden_in_bar": true,
       "list_index": -1,
-      "gui_position": [0, 0],
+      "gui_position": [0, 1],
       "description": {
         "translate": "ability.infinity.space_stone.fall_immunity.description"
       },
@@ -1204,7 +1204,7 @@
       "hidden": false,
       "hidden_in_bar": true,
       "list_index": -1,
-      "gui_position": [-0.5, -0.5],
+      "gui_position": [-0.5, 0.5],
       "description": {
         "translate": "ability.infinity.space_stone.step_assist.description"
       },
@@ -1289,7 +1289,7 @@
       "persistent_data": true,
       "hidden_in_bar": true,
       "list_index": -1,
-      "gui_position": [0, 0.5],
+      "gui_position": [-0.5, 1],
       "description": {
         "translate": "ability.infinity.space_stone.speed.description"
       },
@@ -1392,7 +1392,7 @@
       "first_tick_commands": [],
       "last_tick_commands": [],
       "commands": ["superpower add infinity:space_stone_gui @s"],
-      "gui_position": [0, -2],
+      "gui_position": [0, -1],
       "description": {
         "translate": "ability.infinity.space_stone.portal_gui.description"
       },
