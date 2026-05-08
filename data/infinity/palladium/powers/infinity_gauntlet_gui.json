@@ -1,0 +1,394 @@
+{
+  "name": "Infinity Gauntlet",
+  "background": "infinity:textures/block/gold_titanium_alloy_block.png",
+  "icon": "infinity:infinity_gauntlet",
+  "ability_bar_texture": "infinity:textures/gui/ability_bars/infinity_ability_bar.png",
+  "gui_display_type": "tree",
+  "persistent_data": true,
+  "abilities": {
+    "gui": {
+      "type": "corewithstuff:open_cws_gui",
+      "icon": "minecraft:blaze_rod",
+      "title": "null",
+      "bar_color": "light_gray",
+      "hidden": true,
+      "hidden_in_bar": true,
+      "list_index": 2,
+      "gui_position": "null",
+      "description": "null",
+      "gui_id": "infinity:infinity_gauntlet",
+      "conditions": {
+        "enabling": [
+          {
+            "type": "palladium:action",
+            "cooldown": 0,
+            "key_type": "right_click",
+            "needs_empty_hand": false,
+            "allow_scrolling_when_crouching": true
+          },
+          {
+            "type": "palladium:item_in_slot",
+            "item": {
+              "item": "infinity:infinity_gauntlet"
+            },
+            "slot": "mainhand"
+          }
+        ]
+      }
+    },
+    "insert_power_stone": {
+      "type": "palladium:command",
+      "icon": "infinity:power_stone",
+      "title": "Insert Power Stone",
+      "bar_color": "purple",
+      "hidden": true,
+      "hidden_in_bar": true,
+      "list_index": 0,
+      "gui_position": "null",
+      "description": "Insert Power Stone",
+      "commands": [
+        "execute if entity @s[palladium.power=!infinity:power_stone_passive] run superpower add infinity:power_stone_passive @s",
+        "execute if entity @s[palladium.power=!infinity:power_stone_passive] run scoreboard players set @s power_stone 1",
+        "execute if entity @s[palladium.power=!infinity:power_stone_passive] run playsound infinity:infinity_stone_equip block @s",
+        "execute if entity @s[palladium.power=!infinity:power_stone_passive] run tag @s add insert_anim",
+        "execute if entity @s[palladium.power=!infinity:power_stone_passive] run schedule function infinity:remove_insert_anim 20t",
+        "execute if entity @s[palladium.power=!infinity:power_stone_passive] run particle dust_color_transition 1 0 1 5 1 1 1 ~ ~1 ~ 1.5 1.5 1.5 0 50 force"
+      ],
+      "conditions": {
+        "enabling": [
+          {
+            "type": "corewithstuff:slot_item_first",
+            "gui": "infinity:infinity_gauntlet",
+            "slot": "slot_3_stone",
+            "item": "infinity:power_stone"
+          }
+        ]
+      }
+    },
+    "remove_power_stone": {
+      "type": "palladium:command",
+      "icon": "infinity:power_stone",
+      "title": "Remove Power Stone",
+      "bar_color": "purple",
+      "hidden": true,
+      "hidden_in_bar": true,
+      "list_index": -1,
+      "gui_position": "null",
+      "description": "Remove Power Stone",
+      "commands": [
+        "playsound infinity:stone_remove block @s",
+        "execute as @s run superpower remove infinity:power_stone_passive @s",
+        "scoreboard players set @s power_stone 0",
+        "tag @s add insert_anim",
+        "schedule function infinity:remove_insert_anim 20t",
+        "particle dust_color_transition 1 0 1 5 1 1 1 ~ ~1 ~ 1.5 1.5 1.5 0 50 force"
+      ],
+      "conditions": {
+        "enabling": [
+          {
+            "type": "corewithstuff:slot_item_last",
+            "gui": "infinity:infinity_gauntlet",
+            "slot": "slot_3_stone",
+            "item": "infinity:power_stone"
+          }
+        ]
+      }
+    },
+
+    "insert_space_stone": {
+      "type": "palladium:command",
+      "icon": "infinity:space_stone",
+      "title": "Insert Space Stone",
+      "bar_color": "light_blue",
+      "hidden": true,
+      "hidden_in_bar": true,
+      "list_index": 0,
+      "gui_position": "null",
+      "description": "Insert Space Stone",
+      "commands": [
+        "execute if entity @s[palladium.power=!infinity:space_stone] run superpower add infinity:space_stone @s",
+        "execute if entity @s[palladium.power=!infinity:space_stone] run scoreboard players set @s space_stone 1",
+        "execute if entity @s[palladium.power=!infinity:space_stone] run playsound infinity:infinity_stone_equip block @s",
+        "execute if entity @s[palladium.power=!infinity:space_stone] run tag @s add insert_anim",
+        "execute if entity @s[palladium.power=!infinity:space_stone] run schedule function infinity:remove_insert_anim 20t",
+        "execute if entity @s[palladium.power=!infinity:space_stone] run particle dust_color_transition 0 0 1 5 1 1 1 ~ ~1 ~ 1.5 1.5 1.5 0 50 force"
+      ],
+      "conditions": {
+        "enabling": [
+          {
+            "type": "corewithstuff:slot_item_first",
+            "gui": "infinity:infinity_gauntlet",
+            "slot": "slot_2_stone",
+            "item": "infinity:space_stone"
+          }
+        ]
+      }
+    },
+    "remove_space_stone": {
+      "type": "palladium:command",
+      "icon": "infinity:space_stone",
+      "title": "Remove Space Stone",
+      "bar_color": "light_blue",
+      "hidden": true,
+      "hidden_in_bar": true,
+      "list_index": -1,
+      "gui_position": "null",
+      "description": "Remove Space Stone",
+      "commands": [
+        "playsound infinity:stone_remove block @s",
+        "execute as @s run superpower remove infinity:space_stone @s",
+        "scoreboard players set @s space_stone 0",
+        "tag @s add insert_anim",
+        "schedule function infinity:remove_insert_anim 20t",
+        "particle dust_color_transition 0 0 1 5 1 1 1 ~ ~1 ~ 1.5 1.5 1.5 0 50 force"
+      ],
+      "conditions": {
+        "enabling": [
+          {
+            "type": "corewithstuff:slot_item_last",
+            "gui": "infinity:infinity_gauntlet",
+            "slot": "slot_2_stone",
+            "item": "infinity:space_stone"
+          }
+        ]
+      }
+    },
+
+    "insert_reality_stone": {
+      "type": "palladium:command",
+      "icon": "infinity:reality_stone",
+      "title": "Insert Reality Stone",
+      "bar_color": "red",
+      "hidden": true,
+      "hidden_in_bar": true,
+      "list_index": 0,
+      "gui_position": "null",
+      "description": "Insert Reality Stone",
+      "commands": [
+        "execute if entity @s[palladium.power=!infinity:reality_stone] run superpower add infinity:reality_stone @s",
+        "execute if entity @s[palladium.power=!infinity:reality_stone] run scoreboard players set @s reality_stone 1",
+        "execute if entity @s[palladium.power=!infinity:reality_stone] run playsound infinity:infinity_stone_equip block @s",
+        "execute if entity @s[palladium.power=!infinity:reality_stone] run tag @s add insert_anim",
+        "execute if entity @s[palladium.power=!infinity:reality_stone] run schedule function infinity:remove_insert_anim 20t",
+        "execute if entity @s[palladium.power=!infinity:reality_stone] run particle dust_color_transition 1 0 0 5 1 1 1 ~ ~1 ~ 1.5 1.5 1.5 0 50 force"
+      ],
+      "conditions": {
+        "enabling": [
+          {
+            "type": "corewithstuff:slot_item_first",
+            "gui": "infinity:infinity_gauntlet",
+            "slot": "slot_1_stone",
+            "item": "infinity:reality_stone"
+          }
+        ]
+      }
+    },
+    "remove_reality_stone": {
+      "type": "palladium:command",
+      "icon": "infinity:reality_stone",
+      "title": "Remove Reality Stone",
+      "bar_color": "red",
+      "hidden": true,
+      "hidden_in_bar": true,
+      "list_index": -1,
+      "gui_position": "null",
+      "description": "Remove Reality Stone",
+      "commands": [
+        "playsound infinity:stone_remove block @s",
+        "execute as @s run superpower remove infinity:reality_stone @s",
+        "scoreboard players set @s reality_stone 0",
+        "tag @s add insert_anim",
+        "schedule function infinity:remove_insert_anim 20t",
+        "particle dust_color_transition 1 0 0 5 1 1 1 ~ ~1 ~ 1.5 1.5 1.5 0 50 force"
+      ],
+      "conditions": {
+        "enabling": [
+          {
+            "type": "corewithstuff:slot_item_last",
+            "gui": "infinity:infinity_gauntlet",
+            "slot": "slot_1_stone",
+            "item": "infinity:reality_stone"
+          }
+        ]
+      }
+    },
+
+    "insert_time_stone": {
+      "type": "palladium:command",
+      "icon": "infinity:time_stone",
+      "title": "Insert Time Stone",
+      "bar_color": "lime",
+      "hidden": true,
+      "hidden_in_bar": true,
+      "list_index": 0,
+      "gui_position": "null",
+      "description": "Insert Time Stone",
+      "commands": [
+        "execute if entity @s[palladium.power=!infinity:time_stone] run superpower add infinity:time_stone @s",
+        "execute if entity @s[palladium.power=!infinity:time_stone] run scoreboard players set @s time_stone 1",
+        "execute if entity @s[palladium.power=!infinity:time_stone] run playsound infinity:infinity_stone_equip block @s",
+        "execute if entity @s[palladium.power=!infinity:time_stone] run tag @s add insert_anim",
+        "execute if entity @s[palladium.power=!infinity:time_stone] run schedule function infinity:remove_insert_anim 20t",
+        "execute if entity @s[palladium.power=!infinity:time_stone] run particle dust_color_transition 0 1 0 5 1 1 1 ~ ~1 ~ 1.5 1.5 1.5 0 50 force"
+      ],
+      "conditions": {
+        "enabling": [
+          {
+            "type": "corewithstuff:slot_item_first",
+            "gui": "infinity:infinity_gauntlet",
+            "slot": "slot_4_stone",
+            "item": "infinity:time_stone"
+          }
+        ]
+      }
+    },
+    "remove_time_stone": {
+      "type": "palladium:command",
+      "icon": "infinity:time_stone",
+      "title": "Remove Time Stone",
+      "bar_color": "lime",
+      "hidden": true,
+      "hidden_in_bar": true,
+      "list_index": -1,
+      "gui_position": "null",
+      "description": "Remove Time Stone",
+      "commands": [
+        "playsound infinity:stone_remove block @s",
+        "execute as @s run superpower remove infinity:time_stone @s",
+        "scoreboard players set @s time_stone 0",
+        "clear @s infinity:eye_of_agamotto",
+        "tag @s add insert_anim",
+        "schedule function infinity:remove_insert_anim 20t",
+        "particle dust_color_transition 0 1 0 5 1 1 1 ~ ~1 ~ 1.5 1.5 1.5 0 50 force"
+      ],
+      "conditions": {
+        "enabling": [
+          {
+            "type": "corewithstuff:slot_item_last",
+            "gui": "infinity:infinity_gauntlet",
+            "slot": "slot_4_stone",
+            "item": "infinity:time_stone"
+          }
+        ]
+      }
+    },
+
+    "insert_soul_stone": {
+      "type": "palladium:command",
+      "icon": "infinity:soul_stone",
+      "title": "Insert Soul Stone",
+      "bar_color": "orange",
+      "hidden": true,
+      "hidden_in_bar": true,
+      "list_index": 0,
+      "gui_position": "null",
+      "description": "Insert Soul Stone",
+      "commands": [
+        "execute if entity @s[palladium.power=!infinity:soul_stone] run superpower add infinity:soul_stone @s",
+        "execute if entity @s[palladium.power=!infinity:soul_stone] run scoreboard players set @s soul_stone 1",
+        "execute if entity @s[palladium.power=!infinity:soul_stone] run playsound infinity:infinity_stone_equip block @s",
+        "execute if entity @s[palladium.power=!infinity:soul_stone] run tag @s add insert_anim",
+        "execute if entity @s[palladium.power=!infinity:soul_stone] run schedule function infinity:remove_insert_anim 20t",
+        "execute if entity @s[palladium.power=!infinity:soul_stone] run particle dust_color_transition 1 0.5 0 5 1 1 1 ~ ~1 ~ 1.5 1.5 1.5 0 50 force"
+      ],
+      "conditions": {
+        "enabling": [
+          {
+            "type": "corewithstuff:slot_item_first",
+            "gui": "infinity:infinity_gauntlet",
+            "slot": "slot_0_stone",
+            "item": "infinity:soul_stone"
+          }
+        ]
+      }
+    },
+    "remove_soul_stone": {
+      "type": "palladium:command",
+      "icon": "infinity:soul_stone",
+      "title": "Remove Soul Stone",
+      "bar_color": "orange",
+      "hidden": true,
+      "hidden_in_bar": true,
+      "list_index": -1,
+      "gui_position": "null",
+      "description": "Remove Soul Stone",
+      "commands": [
+        "playsound infinity:stone_remove block @s",
+        "execute as @s run superpower remove infinity:soul_stone @s",
+        "scoreboard players set @s soul_stone 0",
+        "tag @s add insert_anim",
+        "schedule function infinity:remove_insert_anim 20t",
+        "particle dust_color_transition 1 0.5 0 5 1 1 1 ~ ~1 ~ 1.5 1.5 1.5 0 50 force"
+      ],
+      "conditions": {
+        "enabling": [
+          {
+            "type": "corewithstuff:slot_item_last",
+            "gui": "infinity:infinity_gauntlet",
+            "slot": "slot_0_stone",
+            "item": "infinity:soul_stone"
+          }
+        ]
+      }
+    },
+
+    "insert_mind_stone": {
+      "type": "palladium:command",
+      "icon": "infinity:mind_stone",
+      "title": "Insert Mind Stone",
+      "bar_color": "yellow",
+      "hidden": true,
+      "hidden_in_bar": true,
+      "list_index": 0,
+      "gui_position": "null",
+      "description": "Insert Mind Stone",
+      "commands": [
+        "execute if entity @s[palladium.power=!infinity:mind_stone] run superpower add infinity:mind_stone @s",
+        "execute if entity @s[palladium.power=!infinity:mind_stone] run scoreboard players set @s mind_stone 1",
+        "execute if entity @s[palladium.power=!infinity:mind_stone] run playsound infinity:infinity_stone_equip block @s",
+        "execute if entity @s[palladium.power=!infinity:mind_stone] run tag @s add insert_anim",
+        "execute if entity @s[palladium.power=!infinity:mind_stone] run schedule function infinity:remove_insert_anim 20t",
+        "execute if entity @s[palladium.power=!infinity:mind_stone] run particle dust_color_transition 1 1 0 5 1 1 1 ~ ~1 ~ 1.5 1.5 1.5 0 50 force"
+      ],
+      "conditions": {
+        "enabling": [
+          {
+            "type": "corewithstuff:slot_item_first",
+            "gui": "infinity:infinity_gauntlet",
+            "slot": "slot_5_stone",
+            "item": "infinity:mind_stone"
+          }
+        ]
+      }
+    },
+    "remove_mind_stone": {
+      "type": "palladium:command",
+      "icon": "infinity:mind_stone",
+      "title": "Remove Mind Stone",
+      "bar_color": "yellow",
+      "hidden": true,
+      "hidden_in_bar": true,
+      "list_index": -1,
+      "gui_position": "null",
+      "description": "Remove Mind Stone",
+      "commands": [
+        "playsound infinity:stone_remove block @s",
+        "execute as @s run superpower remove infinity:mind_stone @s",
+        "scoreboard players set @s mind_stone 0",
+        "tag @s add insert_anim",
+        "schedule function infinity:remove_insert_anim 20t",
+        "particle dust_color_transition 1 1 0 5 1 1 1 ~ ~1 ~ 1.5 1.5 1.5 0 50 force"
+      ],
+      "conditions": {
+        "enabling": [
+          {
+            "type": "corewithstuff:slot_item_last",
+            "gui": "infinity:infinity_gauntlet",
+            "slot": "slot_5_stone",
+            "item": "infinity:mind_stone"
+          }
+        ]
+      }
+    }
+  }
+}

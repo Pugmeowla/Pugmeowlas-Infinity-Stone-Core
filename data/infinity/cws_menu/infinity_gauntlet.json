@@ -1,0 +1,56 @@
+{
+  "background": "infinity:textures/gui/infinity_gauntlet.png",
+  "width": 256,
+  "height": 256,
+  "type": "custom",
+  "store_items": true,
+  "show_title": false,
+  "show_inventory_title": false,
+  "per_player": true,
+  "player_inventory": {
+    "show_main": true,
+    "main_pos": [48, 153],
+    "show_hotbar": true,
+    "hotbar_pos": [48, 211]
+  },
+  "slots": {
+    "slot_0_stone": {
+      "x": 78,
+      "y": 52,
+      "limit_items": true,
+      "items": ["infinity:soul_stone"]
+    },
+    "slot_1_stone": {
+      "x": 99,
+      "y": 52,
+      "limit_items": true,
+      "items": ["infinity:reality_stone"]
+    },
+    "slot_2_stone": {
+      "x": 120,
+      "y": 52,
+      "limit_items": true,
+      "items": ["infinity:space_stone"]
+    },
+    "slot_3_stone": {
+      "x": 141,
+      "y": 52,
+      "limit_items": true,
+      "items": ["infinity:power_stone"]
+    },
+    "slot_4_stone": {
+      "x": 169,
+      "y": 62,
+      "limit_items": true,
+      "items": ["infinity:time_stone"]
+    },
+    "slot_5_stone": {
+      "x": 109,
+      "y": 82,
+      "limit_items": true,
+      "items": ["infinity:mind_stone"]
+    }
+  },
+  "render_entity": false,
+  "entity_settings": {}
+}
