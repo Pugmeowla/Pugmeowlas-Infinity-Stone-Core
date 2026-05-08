@@ -186,5 +186,7 @@
 
   "ability.infinity.mind_stone.flight_toggle.description": "Unlock this to toggle mind stone flight on and off, incase you want to use another form of flight.",
 
-  "item.infinity_tracker.infinity_tracker": "Infinity Tracker"
+  "item.infinity_tracker.infinity_tracker": "Infinity Tracker",
+
+  "ability.infinity.space_stone.portal_gui.description": "When CoreWithStuff is downloaded, the Space Stone grants access to a teleportation GUI."
 }
