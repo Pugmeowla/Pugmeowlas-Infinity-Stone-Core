@@ -7,6 +7,54 @@
   "ability_bar_texture": "infinity:textures/gui/ability_bars/mind_ability_bar.png",
 
   "abilities": {
+    "dummy1": {
+      "type": "palladium:dummy",
+      "icon": "infinity:textures/icon/nothing.png",
+      "title": " ",
+      "hidden": false,
+      "hidden_in_bar": true,
+      "gui_position": [0, 2]
+    },
+    "dummy2": {
+      "type": "palladium:dummy",
+      "icon": "infinity:textures/icon/nothing.png",
+      "title": " ",
+      "hidden": false,
+      "hidden_in_bar": true,
+      "gui_position": [2, 2]
+    },
+    "dummy3": {
+      "type": "palladium:dummy",
+      "icon": "infinity:textures/icon/nothing.png",
+      "title": " ",
+      "hidden": false,
+      "hidden_in_bar": true,
+      "gui_position": [2, 1.5]
+    },
+    "dummy4": {
+      "type": "palladium:dummy",
+      "icon": "infinity:textures/icon/nothing.png",
+      "title": " ",
+      "hidden": false,
+      "hidden_in_bar": true,
+      "gui_position": [2, 1]
+    },
+    "dummy5": {
+      "type": "palladium:dummy",
+      "icon": "infinity:textures/icon/nothing.png",
+      "title": " ",
+      "hidden": false,
+      "hidden_in_bar": true,
+      "gui_position": [2, 0.5]
+    },
+    "dummy6": {
+      "type": "palladium:dummy",
+      "icon": "infinity:textures/icon/nothing.png",
+      "title": " ",
+      "hidden": false,
+      "hidden_in_bar": true,
+      "gui_position": [2, 0]
+    },
     "flight-dummy": {
       "type": "palladium:command",
       "hidden": false,
@@ -15,7 +63,7 @@
         "translate": "ability.infinity.mind_stone.flight.description"
       },
       "icon": "infinity:textures/icon/fly.png",
-      "gui_position": [0, -2],
+      "gui_position": [1, 1],
       "first_tick_commands": [],
       "last_tick_commands": [],
       "commands": [],
@@ -28,11 +76,6 @@
               "item": "infinity:aspects_of_existance"
             },
             "amount": 1
-          },
-          {
-            "type": "palladium:ability_unlocked",
-            "power": "null",
-            "ability": "intangibility"
           },
           {
             "type": "palladium:or",
@@ -134,7 +177,7 @@
       "hidden": false,
       "hidden_in_bar": true,
       "list_index": 1,
-      "gui_position": [1, -2],
+      "gui_position": [1.5, 0.5],
       "description": {
         "translate": "ability.infinity.mind_stone.flight_toggle.description"
       },
@@ -172,7 +215,7 @@
       "description": {
         "translate": "ability.infinity.mind_stone.intangibility.description"
       },
-      "gui_position": [0, 0],
+      "gui_position": [0, 0.5],
       "hidden": false,
       "hidden_in_bar": false,
       "list_index": 1,
@@ -428,7 +471,7 @@
       "hidden": false,
       "hidden_in_bar": false,
       "list_index": 0,
-      "gui_position": [0, -1],
+      "gui_position": [0, 1],
       "description": {
         "translate": "ability.infinity.mind_stone.passive.description"
       },
@@ -757,7 +800,7 @@
       "hidden": false,
       "hidden_in_bar": false,
       "list_index": 0,
-      "gui_position": [1, -1],
+      "gui_position": [0.5, 0.5],
       "description": {
         "translate": "ability.infinity.mind_stone.recipe.description"
       },
@@ -773,11 +816,6 @@
               "item": "infinity:aspects_of_existance"
             },
             "amount": 1
-          },
-          {
-            "type": "palladium:ability_unlocked",
-            "power": "null",
-            "ability": "passive"
           },
           {
             "type": "palladium:or",
@@ -849,7 +887,7 @@
       "hidden": false,
       "hidden_in_bar": false,
       "list_index": 0,
-      "gui_position": [-1, -1],
+      "gui_position": [0, 1.5],
       "description": {
         "translate": "ability.infinity.mind_stone.hero.description"
       },
@@ -943,7 +981,7 @@
       "hidden": false,
       "hidden_in_bar": false,
       "list_index": 0,
-      "gui_position": [-1, 0],
+      "gui_position": [0, 0],
       "description": {
         "translate": "ability.infinity.mind_stone.night_vision.description"
       },

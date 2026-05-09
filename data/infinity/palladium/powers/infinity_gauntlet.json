@@ -246,15 +246,6 @@
             "type": "palladium:item_in_slot",
             "item": { "item": "infinity:power_stone" },
             "slot": "mainhand"
-          },
-          {
-            "type": "palladium:not",
-            "conditions": [
-              {
-                "type": "palladium:mod_loaded",
-                "mod_id": "corewithstuff"
-              }
-            ]
           }
         ]
       }
@@ -491,15 +482,6 @@
         ],
         "unlocking": [
           {
-            "type": "palladium:not",
-            "conditions": [
-              {
-                "type": "palladium:mod_loaded",
-                "mod_id": "corewithstuff"
-              }
-            ]
-          },
-          {
             "type": "palladium:item_in_slot",
             "item": { "item": "infinity:space_stone" },
             "slot": "mainhand"
@@ -734,15 +716,6 @@
         ],
         "unlocking": [
           {
-            "type": "palladium:not",
-            "conditions": [
-              {
-                "type": "palladium:mod_loaded",
-                "mod_id": "corewithstuff"
-              }
-            ]
-          },
-          {
             "type": "palladium:item_in_slot",
             "item": { "item": "infinity:reality_stone" },
             "slot": "mainhand"
@@ -966,15 +939,6 @@
           }
         ],
         "unlocking": [
-          {
-            "type": "palladium:not",
-            "conditions": [
-              {
-                "type": "palladium:mod_loaded",
-                "mod_id": "corewithstuff"
-              }
-            ]
-          },
           {
             "type": "palladium:item_in_slot",
             "item": { "item": "infinity:time_stone" },
@@ -1231,15 +1195,6 @@
         ],
         "unlocking": [
           {
-            "type": "palladium:not",
-            "conditions": [
-              {
-                "type": "palladium:mod_loaded",
-                "mod_id": "corewithstuff"
-              }
-            ]
-          },
-          {
             "type": "palladium:item_in_slot",
             "item": { "item": "infinity:soul_stone" },
             "slot": "mainhand"
@@ -1464,15 +1419,6 @@
         ],
         "unlocking": [
           {
-            "type": "palladium:not",
-            "conditions": [
-              {
-                "type": "palladium:mod_loaded",
-                "mod_id": "corewithstuff"
-              }
-            ]
-          },
-          {
             "type": "palladium:item_in_slot",
             "item": { "item": "infinity:mind_stone" },
             "slot": "mainhand"
@@ -1693,15 +1639,6 @@
           }
         ],
         "unlocking": [
-          {
-            "type": "palladium:not",
-            "conditions": [
-              {
-                "type": "palladium:mod_loaded",
-                "mod_id": "corewithstuff"
-              }
-            ]
-          },
           {
             "type": "palladium:crouching"
           },
@@ -3627,35 +3564,48 @@
       "hidden": false,
       "hidden_in_bar": false,
       "list_index": -1,
-      "gui_position": [0, 1.5],
+      "gui_position": [0.5, 2],
       "description": {
         "translate": "ability.infinity.gauntlet.omni_desc.description"
       }
     },
     "cws_desc": {
       "type": "palladium:dummy",
-      "icon": "infinity:textures/icon/omnitrix_main_default.png",
+      "icon": "infinity:textures/icon/cws.png",
       "title": "Core With Stuff",
       "bar_color": "light_gray",
       "hidden": false,
       "hidden_in_bar": false,
       "list_index": -1,
-      "gui_position": [0, 2],
+      "gui_position": [1, 2],
       "description": {
         "translate": "ability.infinity.gauntlet.cws_desc.description"
       }
     },
     "offhand_desc": {
       "type": "palladium:dummy",
-      "icon": "infinity:infinity_gauntlet",
+      "icon": "infinity:textures/icon/curios.png",
       "title": "Use Hands Curios Slot",
       "bar_color": "light_gray",
       "hidden": false,
       "hidden_in_bar": false,
       "list_index": -1,
-      "gui_position": [-1, 1.5],
+      "gui_position": [-1, 2],
       "description": {
         "translate": "ability.infinity.gauntlet.offhand_desc.description"
+      }
+    },
+    "offhand_des2": {
+      "type": "palladium:dummy",
+      "icon": "infinity:textures/icon/trinkets.png",
+      "title": "Use Glove Trinkets Slot",
+      "bar_color": "light_gray",
+      "hidden": false,
+      "hidden_in_bar": false,
+      "list_index": -1,
+      "gui_position": [-0.5, 2],
+      "description": {
+        "translate": "ability.infinity.gauntlet.trinkets_desc.description"
       }
     },
     "snap_desc": {
@@ -3666,7 +3616,7 @@
       "hidden": false,
       "hidden_in_bar": false,
       "list_index": -1,
-      "gui_position": [1, 1.5],
+      "gui_position": [0, 1.5],
       "description": {
         "translate": "ability.infinity.gauntlet.snap_desc.description"
       }

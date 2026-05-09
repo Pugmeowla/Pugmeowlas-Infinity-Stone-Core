@@ -7,6 +7,30 @@
   "ability_bar_texture": "infinity:textures/gui/ability_bars/space_ability_bar.png",
 
   "abilities": {
+    "dummy1": {
+      "type": "palladium:dummy",
+      "icon": "infinity:textures/icon/nothing.png",
+      "title": " ",
+      "hidden": false,
+      "hidden_in_bar": true,
+      "gui_position": [-1, -0.5]
+    },
+    "dummy2": {
+      "type": "palladium:dummy",
+      "icon": "infinity:textures/icon/nothing.png",
+      "title": " ",
+      "hidden": false,
+      "hidden_in_bar": true,
+      "gui_position": [-0.5, 0]
+    },
+    "dummy3": {
+      "type": "palladium:dummy",
+      "icon": "infinity:textures/icon/nothing.png",
+      "title": " ",
+      "hidden": false,
+      "hidden_in_bar": true,
+      "gui_position": [1, -1]
+    },
     "tick": {
       "type": "palladium:command",
       "icon": "infinity:textures/icon/teleport.png",
@@ -159,11 +183,6 @@
       "conditions": {
         "enabling": [
           {
-            "type": "palladium:ability_unlocked",
-            "power": "null",
-            "ability": "force_field"
-          },
-          {
             "type": "palladium:action",
             "cooldown": 0,
             "key_type": "key_bind",
@@ -173,16 +192,16 @@
         ],
         "unlocking": [
           {
+            "type": "palladium:ability_unlocked",
+            "power": "null",
+            "ability": "grab_entity2"
+          },
+          {
             "type": "palladium:item_buyable",
             "ingredient": {
               "item": "infinity:aspects_of_existance"
             },
             "amount": 1
-          },
-          {
-            "type": "palladium:ability_unlocked",
-            "power": "null",
-            "ability": "step_assist"
           },
           {
             "type": "palladium:or",
@@ -247,7 +266,7 @@
       "hidden": false,
       "hidden_in_bar": false,
       "list_index": 1,
-      "gui_position": [0.5, 1],
+      "gui_position": [1, 0.5],
       "description": {
         "translate": "ability.infinity.space_stone.water_breathing.description"
       },
@@ -335,7 +354,7 @@
       "hidden": false,
       "hidden_in_bar": false,
       "list_index": -1,
-      "gui_position": [-0.5, -0.5],
+      "gui_position": [-0.5, -1],
       "description": {
         "translate": "ability.infinity.space_stone.teleport_command.description"
       },
@@ -426,7 +445,7 @@
       "hidden": true,
       "hidden_in_bar": true,
       "list_index": 2,
-      "gui_position": [0.5, -0.5],
+      "gui_position": [0.5, 0],
       "description": {
         "translate": "ability.infinity.space_stone.telekinesis.description"
       },
@@ -456,7 +475,7 @@
       "hidden": false,
       "hidden_in_bar": false,
       "list_index": 2,
-      "gui_position": [0.5, -0.5],
+      "gui_position": [0.5, 0],
       "description": {
         "translate": "ability.infinity.space_stone.telekinesis.description"
       },
@@ -657,7 +676,7 @@
       "hidden": false,
       "hidden_in_bar": false,
       "list_index": 0,
-      "gui_position": [0.5, 0.5],
+      "gui_position": [0.5, 1],
       "description": {
         "translate": "ability.infinity.space_stone.force_field.description"
       },
@@ -1134,7 +1153,7 @@
           {
             "type": "palladium:ability_unlocked",
             "power": "null",
-            "ability": "speed"
+            "ability": "step_assist"
           },
           {
             "type": "palladium:has_power",
@@ -1204,7 +1223,7 @@
       "hidden": false,
       "hidden_in_bar": true,
       "list_index": -1,
-      "gui_position": [-0.5, 0.5],
+      "gui_position": [-0.5, 1],
       "description": {
         "translate": "ability.infinity.space_stone.step_assist.description"
       },
@@ -1224,7 +1243,7 @@
           {
             "type": "palladium:ability_unlocked",
             "power": "null",
-            "ability": "fall_immunity"
+            "ability": "speed"
           },
           {
             "type": "palladium:or",
@@ -1289,7 +1308,7 @@
       "persistent_data": true,
       "hidden_in_bar": true,
       "list_index": -1,
-      "gui_position": [-0.5, 1],
+      "gui_position": [-1, 1],
       "description": {
         "translate": "ability.infinity.space_stone.speed.description"
       },

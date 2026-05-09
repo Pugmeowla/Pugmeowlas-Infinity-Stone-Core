@@ -7,6 +7,38 @@
   "ability_bar_texture": "infinity:textures/gui/ability_bars/soul_ability_bar.png",
 
   "abilities": {
+    "dummy1": {
+      "type": "palladium:dummy",
+      "icon": "infinity:textures/icon/nothing.png",
+      "title": " ",
+      "hidden": false,
+      "hidden_in_bar": true,
+      "gui_position": [0.5, -2]
+    },
+    "dummy2": {
+      "type": "palladium:dummy",
+      "icon": "infinity:textures/icon/nothing.png",
+      "title": " ",
+      "hidden": false,
+      "hidden_in_bar": true,
+      "gui_position": [1, -2]
+    },
+    "dummy3": {
+      "type": "palladium:dummy",
+      "icon": "infinity:textures/icon/nothing.png",
+      "title": " ",
+      "hidden": false,
+      "hidden_in_bar": true,
+      "gui_position": [1.5, -2]
+    },
+    "dummy4": {
+      "type": "palladium:dummy",
+      "icon": "infinity:textures/icon/nothing.png",
+      "title": " ",
+      "hidden": false,
+      "hidden_in_bar": true,
+      "gui_position": [2, -2]
+    },
     "glow": {
       "type": "palladium:entity_glow",
       "icon": "minecraft:textures/mob_effect/glowing.png",
@@ -21,7 +53,7 @@
       "hidden_in_bar": false,
       "list_index": 0,
       "mode": "others",
-      "gui_position": [0, 0],
+      "gui_position": [1, 0],
       "distance": 100,
       "conditions": {
         "enabling": [
@@ -113,7 +145,7 @@
       "hidden": false,
       "hidden_in_bar": true,
       "list_index": -1,
-      "gui_position": [0, -4],
+      "gui_position": [0.5, -1],
       "description": {
         "translate": "ability.infinity.soul_stone.immortal.description"
       },
@@ -139,11 +171,6 @@
             "type": "palladium:ability_unlocked",
             "power": "null",
             "ability": "health"
-          },
-          {
-            "type": "palladium:ability_unlocked",
-            "power": "null",
-            "ability": "enter_soulworld"
           },
           {
             "type": "palladium:or",
@@ -218,7 +245,7 @@
       "hidden": false,
       "hidden_in_bar": true,
       "list_index": -1,
-      "gui_position": [-1, -1],
+      "gui_position": [1.5, 0],
       "description": {
         "translate": "ability.infinity.soul_stone.saturation.description"
       },
@@ -290,7 +317,7 @@
       "hidden": false,
       "hidden_in_bar": true,
       "list_index": -1,
-      "gui_position": [-2, -1],
+      "gui_position": [2, -0.5],
       "description": {
         "translate": "ability.infinity.soul_stone.effect_immune.description"
       },
@@ -469,7 +496,7 @@
       "hidden": false,
       "hidden_in_bar": false,
       "list_index": 1,
-      "gui_position": [1, -1],
+      "gui_position": [0, 0],
       "description": {
         "translate": "ability.infinity.soul_stone.summon_zombie.description"
       },
@@ -494,11 +521,6 @@
               "item": "infinity:aspects_of_existance"
             },
             "amount": 1
-          },
-          {
-            "type": "palladium:ability_unlocked",
-            "power": "null",
-            "ability": "glow"
           },
           {
             "type": "palladium:or",
@@ -549,7 +571,7 @@
       "hidden": false,
       "hidden_in_bar": true,
       "list_index": -1,
-      "gui_position": [-1, -3],
+      "gui_position": [1, -1],
       "description": {
         "translate": "ability.infinity.soul_stone.health.description"
       },
@@ -627,7 +649,7 @@
       "persistent_data": true,
       "hidden_in_bar": false,
       "list_index": 2,
-      "gui_position": [1, -3],
+      "gui_position": [0, -1.5],
       "description": {
         "translate": "ability.infinity.soul_stone.enter_soulworld.description"
       },
@@ -656,11 +678,6 @@
               "item": "infinity:aspects_of_existance"
             },
             "amount": 1
-          },
-          {
-            "type": "palladium:ability_unlocked",
-            "power": "null",
-            "ability": "summon_zombie"
           },
           {
             "type": "palladium:not",
@@ -799,7 +816,7 @@
       "hidden": false,
       "hidden_in_bar": true,
       "list_index": -1,
-      "gui_position": [-1, -2],
+      "gui_position": [1.5, -1],
       "description": {
         "translate": "ability.infinity.soul_stone.regen.description"
       },
@@ -880,7 +897,7 @@
       "hidden": false,
       "hidden_in_bar": true,
       "list_index": -1,
-      "gui_position": [1, 0],
+      "gui_position": [0.5, 0],
       "description": {
         "translate": "ability.infinity.soul_stone.locateplayer_command.description"
       },

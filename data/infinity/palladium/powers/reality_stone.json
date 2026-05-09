@@ -7,6 +7,78 @@
   "ability_bar_texture": "infinity:textures/gui/ability_bars/reality_ability_bar.png",
 
   "abilities": {
+    "dummy1": {
+      "type": "palladium:dummy",
+      "icon": "infinity:textures/icon/nothing.png",
+      "title": " ",
+      "hidden": false,
+      "hidden_in_bar": true,
+      "gui_position": [0.5, -2]
+    },
+    "dummy2": {
+      "type": "palladium:dummy",
+      "icon": "infinity:textures/icon/nothing.png",
+      "title": " ",
+      "hidden": false,
+      "hidden_in_bar": true,
+      "gui_position": [1, -2]
+    },
+    "dummy3": {
+      "type": "palladium:dummy",
+      "icon": "infinity:textures/icon/nothing.png",
+      "title": " ",
+      "hidden": false,
+      "hidden_in_bar": true,
+      "gui_position": [1.5, -2]
+    },
+    "dummy4": {
+      "type": "palladium:dummy",
+      "icon": "infinity:textures/icon/nothing.png",
+      "title": " ",
+      "hidden": false,
+      "hidden_in_bar": true,
+      "gui_position": [2, -1.5]
+    },
+    "dummy5": {
+      "type": "palladium:dummy",
+      "icon": "infinity:textures/icon/nothing.png",
+      "title": " ",
+      "hidden": false,
+      "hidden_in_bar": true,
+      "gui_position": [0.5, -1]
+    },
+    "dummy6": {
+      "type": "palladium:dummy",
+      "icon": "infinity:textures/icon/nothing.png",
+      "title": " ",
+      "hidden": false,
+      "hidden_in_bar": true,
+      "gui_position": [1, -1]
+    },
+    "dummy7": {
+      "type": "palladium:dummy",
+      "icon": "infinity:textures/icon/nothing.png",
+      "title": " ",
+      "hidden": false,
+      "hidden_in_bar": true,
+      "gui_position": [1.5, -1]
+    },
+    "dummy8": {
+      "type": "palladium:dummy",
+      "icon": "infinity:textures/icon/nothing.png",
+      "title": " ",
+      "hidden": false,
+      "hidden_in_bar": true,
+      "gui_position": [1.5, -0.5]
+    },
+    "dummy9": {
+      "type": "palladium:dummy",
+      "icon": "infinity:textures/icon/nothing.png",
+      "title": " ",
+      "hidden": false,
+      "hidden_in_bar": true,
+      "gui_position": [2, 0]
+    },
     "tick": {
       "type": "palladium:command",
       "hidden": true,
@@ -50,21 +122,11 @@
       "conditions": {
         "unlocking": [
           {
-            "type": "palladium:ability_unlocked",
-            "power": "null",
-            "ability": "shrink_dummy"
-          },
-          {
             "type": "palladium:item_buyable",
             "ingredient": {
               "item": "infinity:aspects_of_existance"
             },
             "amount": 128
-          },
-          {
-            "type": "palladium:ability_unlocked",
-            "power": "null",
-            "ability": "invisibility"
           }
         ]
       }
@@ -79,17 +141,12 @@
       "hidden": false,
       "hidden_in_bar": true,
       "list_index": -1,
-      "gui_position": [-1, -1],
+      "gui_position": [0, -0.5],
       "description": {
         "translate": "ability.infinity.reality_stone.shrink_dummy.description"
       },
       "conditions": {
         "unlocking": [
-          {
-            "type": "palladium:ability_unlocked",
-            "power": "null",
-            "ability": "effects"
-          },
           {
             "type": "palladium:item_buyable",
             "ingredient": {
@@ -223,7 +280,7 @@
       "hidden": false,
       "hidden_in_bar": false,
       "list_index": 2,
-      "gui_position": [1, -1],
+      "gui_position": [0, -1],
       "description": {
         "translate": "ability.infinity.reality_stone.invisibility.description"
       },
@@ -245,11 +302,7 @@
             },
             "amount": 1
           },
-          {
-            "type": "palladium:ability_unlocked",
-            "power": "null",
-            "ability": "effects"
-          },
+
           {
             "type": "palladium:or",
             "conditions": [
@@ -736,11 +789,6 @@
           }
         ],
         "unlocking": [
-          {
-            "type": "palladium:ability_unlocked",
-            "power": "null",
-            "ability": "effects"
-          },
           {
             "type": "palladium:item_buyable",
             "ingredient": {

@@ -188,5 +188,8 @@
 
   "item.infinity_tracker.infinity_tracker": "Infinity Tracker",
 
-  "ability.infinity.space_stone.portal_gui.description": "Locked permanently when CoreWithStuff is not present."
+  "ability.infinity.space_stone.portal_gui.description": "Locked permanently when CoreWithStuff is not present.",
+  "ability.infinity.gauntlet.trinkets_desc.description": "Same as Curios, but Trinkets for Fabric.",
+  "ability.infinity.gauntlet.cws_desc.description": "When CoreWithStuff is downloaded, it provides a custom GUI. Hold the infinity gauntlet in main hand, and right click to open. There is still an option to use the default insert system, but that might cause issues with syncing.",
+  "ability.infinity.time_stone.screen_toggle.description": "Toggles on and off the green screen overlay."
 }
