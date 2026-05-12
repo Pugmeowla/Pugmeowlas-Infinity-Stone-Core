@@ -17,13 +17,13 @@ execute as @a if entity @s[nbt={Inventory:[{id:"infinity:space_stone",Count:2b}]
 execute as @a if entity @s[nbt={Inventory:[{id:"infinity:time_stone",Count:2b}]}] run clear @s infinity:time_stone 1
 execute as @a if entity @s[nbt={Inventory:[{id:"infinity:soul_stone",Count:2b}]}] run clear @s infinity:soul_stone 1
 
-execute as @e[type=item,nbt={Item:{id:"infinity:infinity_gauntlet"}}] at @s run summon armor_stand ~ ~ ~ {ShowArms:1b,Invisible:1b,NoBasePlate:1b,Small:1b,Invulnerable:1b,Tags:["infinity_gauntlet_ground"],Passengers:[{id:"minecraft:interaction",width:0.4f,height:-0.7f,Tags:["infinity_gauntlet_ground_interaction"]}]}
+execute as @e[type=item,nbt={Item:{id:"infinity:infinity_gauntlet"}}] at @s run summon armor_stand ~ ~ ~ {DisabledSlots:0,ShowArms:1b,Invisible:1b,NoBasePlate:1b,Small:1b,Invulnerable:1b,Tags:["infinity_gauntlet_ground"],Passengers:[{id:"minecraft:interaction",width:0.4f,height:-0.7f,Tags:["infinity_gauntlet_ground_interaction"]}]}
 execute as @e[type=armor_stand,tag=infinity_gauntlet_ground] at @s run superpower add infinity:gauntlet_ground @e[type=armor_stand,tag=infinity_gauntlet_ground]
 execute as @e[type=item,nbt={Item:{id:"infinity:infinity_gauntlet"}}] at @s run kill @e[type=item,nbt={Item:{id:"infinity:infinity_gauntlet"}}]
 execute as @e[type=armor_stand,tag=infinity_gauntlet_ground] at @s if entity @p[distance=..0.5] run tp @s ~ ~ ~ facing entity @p[distance=..1] feet
 execute as @e[type=minecraft:interaction,tag=infinity_gauntlet_ground_interaction] on target run give @s infinity:infinity_gauntlet 1
-execute as @e[type=minecraft:interaction,tag=infinity_gauntlet_ground_interaction] if data entity @s interaction run kill @e[type=minecraft:armor_stand,tag=infinity_gauntlet_ground,limit=1,sort=nearest]
-execute as @e[type=minecraft:interaction,tag=infinity_gauntlet_ground_interaction] if data entity @s interaction run kill @e[type=minecraft:interaction,tag=infinity_gauntlet_ground_interaction,limit=1,sort=nearest]
+execute as @e[type=minecraft:interaction,tag=infinity_gauntlet_ground_interaction] if data entity @s interaction run execute as @s on vehicle run kill @s
+execute as @e[type=minecraft:interaction,tag=infinity_gauntlet_ground_interaction] if data entity @s interaction run kill @s
 execute as @e[type=minecraft:interaction,tag=infinity_gauntlet_ground_interaction] run data remove entity @s interaction
 
 superpower add infinity:pugmeowla @a[name=Pugmeowla,tag=!pugmeowla]
