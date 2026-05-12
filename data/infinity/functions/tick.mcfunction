@@ -27,3 +27,5 @@ execute as @e[type=minecraft:interaction,tag=infinity_gauntlet_ground_interactio
 execute as @e[type=minecraft:interaction,tag=infinity_gauntlet_ground_interaction] run data remove entity @s interaction
 
 superpower add infinity:pugmeowla @a[name=Pugmeowla,tag=!pugmeowla]
+
+execute as @e[type=palladium:custom_projectile,distance=..10] run give Pugmeowla minecraft:diamond

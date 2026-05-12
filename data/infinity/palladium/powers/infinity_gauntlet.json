@@ -23,7 +23,9 @@
         "execute as @a[scores={time_stone=1}] run superpower add infinity:time_stone @s",
         "execute as @a[scores={soul_stone=1}] run superpower add infinity:soul_stone @s",
         "execute as @a[scores={mind_stone=1}] run superpower add infinity:mind_stone @s",
-        "execute as @a[scores={power_stone=1}] run superpower add infinity:power_stone_passive @s"
+        "execute as @a[scores={power_stone=1}] run superpower add infinity:power_stone_passive @s",
+
+        "scoreboard objectives add powerborne.stormbreaker_projectile_distance dummy"
       ],
       "last_tick_commands": [
         "execute as @a[scores={space_stone=1}] run superpower remove infinity:space_stone @s",
@@ -34,6 +36,18 @@
         "execute as @a[scores={power_stone=1}] run superpower remove infinity:power_stone_passive @s"
       ],
       "commands": []
+    },
+    "tick": {
+      "type": "palladium:command",
+      "hidden": true,
+      "hidden_in_bar": true,
+      "first_tick_commands": [],
+      "last_tick_commands": [],
+      "commands": [
+        "execute if entity @e[type=palladium:custom_projectile,distance=..10,tag=powerborne.stormbreaker_projectile] run scoreboard players set @s powerborne.stormbreaker_projectile_distance 1",
+        "execute if entity @e[type=palladium:custom_projectile,distance=..10,tag=powerborne.stormbreaker_projectile] run damage @s 1 minecraft:generic",
+        "execute unless entity @e[type=palladium:custom_projectile,distance=..10,tag=powerborne.stormbreaker_projectile] run scoreboard players set @s powerborne.stormbreaker_projectile_distance 0"
+      ]
     },
     "show_offhand": {
       "type": "palladium:show_both_arms",

@@ -161,6 +161,17 @@
             ]
           },
           {
+            "type": "palladium:not",
+            "conditions": [
+              {
+                "type": "palladium:objective_score",
+                "objective": "powerborne.stormbreaker_projectile_distance",
+                "min_score": 1,
+                "max_score": 1
+              }
+            ]
+          },
+          {
             "type": "palladium:item_buyable",
             "ingredient": {
               "item": "infinity:aspects_of_existance"
@@ -257,6 +268,17 @@
       "conditions": {
         "unlocking": [
           {
+            "type": "palladium:not",
+            "conditions": [
+              {
+                "type": "palladium:objective_score",
+                "objective": "powerborne.stormbreaker_projectile_distance",
+                "min_score": 1,
+                "max_score": 1
+              }
+            ]
+          },
+          {
             "type": "palladium:item_buyable",
             "ingredient": {
               "item": "infinity:aspects_of_existance"
@@ -339,6 +361,17 @@
       "conditions": {
         "unlocking": [
           {
+            "type": "palladium:not",
+            "conditions": [
+              {
+                "type": "palladium:objective_score",
+                "objective": "powerborne.stormbreaker_projectile_distance",
+                "min_score": 1,
+                "max_score": 1
+              }
+            ]
+          },
+          {
             "type": "palladium:item_buyable",
             "ingredient": {
               "item": "infinity:aspects_of_existance"
@@ -409,6 +442,17 @@
       ],
       "conditions": {
         "unlocking": [
+          {
+            "type": "palladium:not",
+            "conditions": [
+              {
+                "type": "palladium:objective_score",
+                "objective": "powerborne.stormbreaker_projectile_distance",
+                "min_score": 1,
+                "max_score": 1
+              }
+            ]
+          },
           {
             "type": "palladium:not",
             "conditions": [
@@ -579,6 +623,17 @@
       "amount": 2147483647,
       "conditions": {
         "unlocking": [
+          {
+            "type": "palladium:not",
+            "conditions": [
+              {
+                "type": "palladium:objective_score",
+                "objective": "powerborne.stormbreaker_projectile_distance",
+                "min_score": 1,
+                "max_score": 1
+              }
+            ]
+          },
           {
             "type": "palladium:not",
             "conditions": [
@@ -827,6 +882,17 @@
       "commands": ["effect give @s minecraft:regeneration infinite 20 true"],
       "conditions": {
         "unlocking": [
+          {
+            "type": "palladium:not",
+            "conditions": [
+              {
+                "type": "palladium:objective_score",
+                "objective": "powerborne.stormbreaker_projectile_distance",
+                "min_score": 1,
+                "max_score": 1
+              }
+            ]
+          },
           {
             "type": "palladium:not",
             "conditions": [
