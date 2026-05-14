@@ -29,6 +29,10 @@
           {
             "type": "palladium:mod_loaded",
             "mod_id": "corewithstuff"
+          },
+          {
+            "type": "palladium:has_power",
+            "power": "infinity:space_stone"
           }
         ]
       }
