@@ -1,8 +1,6 @@
 {
   "type": "palladium:armor",
-  "creative_mode_tab": {
-    "tab": "infinity:infinity"
-  },
+
   "slot": "chest",
   "rarity": "epic",
   "is_fire_resistant": true,

@@ -1,0 +1,40 @@
+{
+  "category_name": "Infinity Stone Core",
+  "category_header": "corewithstuff:textures/gui/infinity_header.png",
+  "color_text_bg": "#88000000",
+  "items": [
+    { "slot": 0, "item": "infinity:power_stone" },
+    { "slot": 1, "item": "infinity:space_stone" },
+    { "slot": 2, "item": "infinity:reality_stone" },
+    { "slot": 3, "item": "infinity:soul_stone" },
+    { "slot": 4, "item": "infinity:time_stone" },
+    { "slot": 5, "item": "infinity:mind_stone" },
+
+    { "slot": 9, "item": "infinity:orb" },
+    { "slot": 10, "item": "infinity:tesseract" },
+    { "slot": 11, "item": "infinity:aether" },
+    { "slot": 12, "item": "infinity:best_friends_soul" },
+    { "slot": 13, "item": "infinity:eye_of_agamotto" },
+    { "slot": 14, "item": "infinity:scepter" },
+
+    { "slot": 18, "item": "infinity:infinity_gauntlet" },
+    { "slot": 19, "item": "infinity:infinity_gauntlet_cast" },
+    { "slot": 20, "item": "infinity:cosmi-rod" },
+    { "slot": 21, "item": "infinity:aspects_of_existance" },
+    { "slot": 22, "item": "infinity:shards_of_existance" },
+
+    { "slot": 27, "item": "infinity:thanos_classic_helmet" },
+    { "slot": 28, "item": "infinity:thanos_classic_chestplate" },
+    { "slot": 29, "item": "infinity:thanos_classic_leggings" },
+    { "slot": 30, "item": "infinity:thanos_classic_boots" },
+    { "slot": 32, "item": "infinity:thanos_mcu_helmet" },
+    { "slot": 33, "item": "infinity:thanos_mcu_chestplate" },
+    { "slot": 34, "item": "infinity:thanos_mcu_leggings" },
+    { "slot": 35, "item": "infinity:thanos_mcu_boots" },
+
+    { "slot": 36, "item": "infinity:fancy_bottle" },
+    { "slot": 37, "item": "infinitygenerator:infinity_generator" },
+    { "slot": 38, "item": "infinity_tracker:infinity_tracker" },
+    { "slot": 39, "item": "ultron:ultron_boots" }
+  ]
+}

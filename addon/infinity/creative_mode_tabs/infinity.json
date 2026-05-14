@@ -1,5 +1,35 @@
 {
   "icon": "infinity:infinity_gauntlet",
-  "title": "Infinity",
-  "items": ["infinitygenerator:infinity_generator"]
+  "title": "Infinity Stone Core",
+  "items": [
+    "infinity:power_stone",
+    "infinity:space_stone",
+    "infinity:reality_stone",
+    "infinity:soul_stone",
+    "infinity:time_stone",
+    "infinity:mind_stone",
+    "infinity:orb",
+    "infinity:tesseract",
+    "infinity:aether",
+    "infinity:best_friends_soul",
+    "infinity:eye_of_agamotto",
+    "infinity:scepter",
+    "infinity:infinity_gauntlet",
+    "infinity:infinity_gauntlet_cast",
+    "infinity:cosmi-rod",
+    "infinity:aspects_of_existance",
+    "infinity:shards_of_existance",
+    "infinity:thanos_classic_helmet",
+    "infinity:thanos_classic_chestplate",
+    "infinity:thanos_classic_leggings",
+    "infinity:thanos_classic_boots",
+    "infinity:thanos_mcu_helmet",
+    "infinity:thanos_mcu_chestplate",
+    "infinity:thanos_mcu_leggings",
+    "infinity:thanos_mcu_boots",
+    "ultron:ultron_boots",
+    "infinitygenerator:infinity_generator",
+    "infinity:fancy_bottle",
+    "infinity_tracker:infinity_tracker"
+  ]
 }

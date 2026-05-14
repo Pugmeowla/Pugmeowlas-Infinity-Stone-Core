@@ -1,8 +1,6 @@
 {
-    "max_stack_size": 64,
-    "creative_mode_tab": {
-        "tab": "infinity:infinity"
-    },
-    "rarity": "epic",
-    "is_fire_resistant": true
+  "max_stack_size": 64,
+
+  "rarity": "epic",
+  "is_fire_resistant": true
 }

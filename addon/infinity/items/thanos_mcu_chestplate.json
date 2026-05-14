@@ -5,9 +5,7 @@
   "is_fire_resistant": true,
   "armor_material": "minecraft:netherite",
   "opening_toggle_sound": "minecraft:item.armor.equip_gold",
-  "creative_mode_tab": {
-    "tab": "infinity:infinity"
-  },
+
   "render_layers": {
     "chest": ["infinity:thanos_mcu_chestplate"]
   }
