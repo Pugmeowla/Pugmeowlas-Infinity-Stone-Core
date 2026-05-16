@@ -1,0 +1,3 @@
+data modify entity @e[type=minecraft:villager,nbt={VillagerData:{profession:"infinity:soul_guardian"}},limit=1] Offers.Recipes insert 1 value {priceMultiplier:0.08f,rewardExp:5b,maxUses:1,buy:{id:"minecraft:clock",Count:1b},buyB:{id:"infinity:aspects_of_existance",Count:16b},sell:{id:"minecraft:map",Count:1b,tag:{display:{Name:'{"text":"Sanctum Explorer Map"}'},sanctummap:1b}}}
+
+tag @s add giveninfinitymaps
