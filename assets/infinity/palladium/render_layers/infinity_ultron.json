@@ -1,0 +1,52 @@
+{
+  "type": "palladium:compound",
+  "layers": [
+    {
+      "type": "geckolib:default",
+      "model": "infinity:geo/infinity_ultron.geo.json",
+      "texture": "infinity:textures/models/infinity_ultron.png",
+      "bones": {
+        "head": "head",
+        "body": "body",
+        "right_arm": "right_arm",
+        "left_arm": "left_arm",
+        "right_leg": "right_leg",
+        "left_leg": "left_leg"
+      }
+    },
+    {
+      "type": "geckolib:default",
+      "model": "infinity:geo/infinity_ultron_ears.geo.json",
+      "texture": "infinity:textures/models/infinity_ultron_ears.png",
+      "bones": {
+        "head": "head",
+        "body": "body",
+        "right_arm": "right_arm",
+        "left_arm": "left_arm",
+        "right_leg": "right_leg",
+        "left_leg": "left_leg"
+      }
+    },
+    {
+      "type": "geckolib:default",
+      "model": "infinity:geo/infinity_ultron.geo.json",
+      "texture": "infinity:textures/models/infinity_ultron_glow.png",
+      "render_type": "glow",
+      "enchantment_glint": true,
+      "bones": {
+        "head": "head",
+        "body": "body",
+        "right_arm": "right_arm",
+        "left_arm": "left_arm",
+        "right_leg": "right_leg",
+        "left_leg": "left_leg"
+      }
+    },
+    {
+      "model_layer": "infinity:humanoid#cape_2nd",
+      "render_type": "minecraft:cutout",
+      "model_type": "palladium:caped_humanoid",
+      "texture": "infinity:textures/models/infinity_ultron_cape.png"
+    }
+  ]
+}

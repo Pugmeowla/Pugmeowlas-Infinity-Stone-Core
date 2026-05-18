@@ -1,0 +1,53 @@
+{
+	"format_version": "1.12.0",
+	"minecraft:geometry": [
+		{
+			"description": {
+				"identifier": "geometry.minecraft:player#main",
+				"texture_width": 64,
+				"texture_height": 64,
+				"visible_bounds_width": 2,
+				"visible_bounds_height": 3.5,
+				"visible_bounds_offset": [0, 1.25, 0]
+			},
+			"bones": [
+				{
+					"name": "body",
+					"pivot": [0, 24, 0.1]
+				},
+				{
+					"name": "cape2",
+					"parent": "body",
+					"pivot": [0, 23.5, 2.15],
+					"cubes": [
+						{
+							"origin": [-7, -0.4, 2.15],
+							"size": [14, 24, 0.375],
+							"uv": {
+								"north": {"uv": [1, 1], "uv_size": [14, 24]},
+								"east": {"uv": [0, 1], "uv_size": [1, 24]},
+								"south": {"uv": [16, 1], "uv_size": [14, 24]},
+								"west": {"uv": [15, 1], "uv_size": [1, 24]},
+								"up": {"uv": [1, 0], "uv_size": [14, 1]},
+								"down": {"uv": [15, 1], "uv_size": [14, -1]}
+							}
+						},
+						{
+							"origin": [-7, -0.4, 2.275],
+							"size": [14, 24, 0.125],
+							"inflate": 0.5,
+							"uv": {
+								"north": {"uv": [1, 26], "uv_size": [14, 24]},
+								"east": {"uv": [0, 26], "uv_size": [1, 24]},
+								"south": {"uv": [16, 26], "uv_size": [14, 24]},
+								"west": {"uv": [15, 26], "uv_size": [1, 24]},
+								"up": {"uv": [1, 25], "uv_size": [14, 1]},
+								"down": {"uv": [15, 26], "uv_size": [14, -1]}
+							}
+						}
+					]
+				}
+			]
+		}
+	]
+}

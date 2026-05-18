@@ -30,4 +30,5 @@ superpower add infinity:pugmeowla @a[name=Pugmeowla,tag=!pugmeowla]
 
 execute as @e[type=minecraft:villager,tag=!giveninfinitymaps] run function infinity:map_give
 
-execute if entity @p[nbt={Inventory:[{id:"minecraft:map",tag:{sanctummap:1b}}]}] run function infinity:map_replace
+execute if entity @p[nbt={Inventory:[{id:"minecraft:map",tag:{sanctummap:1b}}]}] run function infinity:map_replace_sanctum
+execute if entity @p[nbt={Inventory:[{id:"minecraft:map",tag:{norsemap:1b}}]}] run function infinity:map_replace_norse

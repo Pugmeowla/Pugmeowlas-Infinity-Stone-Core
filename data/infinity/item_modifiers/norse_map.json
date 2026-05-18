@@ -1,0 +1,8 @@
+{
+  "function": "minecraft:exploration_map",
+  "destination": "infinity:norse_village",
+  "decoration": "target_x",
+  "zoom": 3,
+  "search_radius": 1000,
+  "skip_existing_chunks": false
+}
