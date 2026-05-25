@@ -1,6 +1,6 @@
 {
   "function": "minecraft:exploration_map",
-  "destination": "infinity:morag_temple",
+  "destination": "infinity:sanctuary",
   "decoration": "target_x",
   "zoom": 3,
   "search_radius": 1000,
