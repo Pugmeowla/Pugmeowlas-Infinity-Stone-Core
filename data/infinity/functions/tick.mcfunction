@@ -26,8 +26,6 @@ execute as @e[type=minecraft:interaction,tag=infinity_gauntlet_ground_interactio
 execute as @e[type=minecraft:interaction,tag=infinity_gauntlet_ground_interaction] if data entity @s interaction run kill @s
 execute as @e[type=minecraft:interaction,tag=infinity_gauntlet_ground_interaction] run data remove entity @s interaction
 
-superpower add infinity:pugmeowla @a[name=Pugmeowla,tag=!pugmeowla]
-
 execute as @e[type=minecraft:villager,tag=!giveninfinitymaps] run function infinity:map_give
 
 execute if entity @p[nbt={Inventory:[{id:"minecraft:map",tag:{sanctummap:1b}}]}] run function infinity:map_replace_sanctum
