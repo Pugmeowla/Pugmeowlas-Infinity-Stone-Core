@@ -97,7 +97,7 @@
       "cause_fire": true,
       "smelt_blocks": true,
       "commands_on_block_hit": ["particle minecraft:lava"],
-      "damage_type": "power_stone_beam",
+
       "conditions": {
         "enabling": [
           {
@@ -205,7 +205,7 @@
       "cause_fire": true,
       "smelt_blocks": true,
       "commands_on_block_hit": ["particle minecraft:lava"],
-      "damage_type": "power_stone_beam",
+
       "conditions": {
         "enabling": [
           {
@@ -348,7 +348,7 @@
       "cause_fire": true,
       "smelt_blocks": true,
       "commands_on_block_hit": ["particle minecraft:lava"],
-      "damage_type": "power_stone_beam",
+
       "conditions": {
         "enabling": [
           {
@@ -486,7 +486,7 @@
       "cause_fire": true,
       "smelt_blocks": true,
       "commands_on_block_hit": ["particle minecraft:lava"],
-      "damage_type": "power_stone_beam",
+
       "conditions": {
         "enabling": [
           {
@@ -619,7 +619,7 @@
       "cause_fire": true,
       "smelt_blocks": true,
       "commands_on_block_hit": ["particle minecraft:lava"],
-      "damage_type": "power_stone_beam",
+
       "conditions": {
         "enabling": [
           {
@@ -747,7 +747,7 @@
       "cause_fire": true,
       "smelt_blocks": true,
       "commands_on_block_hit": ["particle minecraft:lava"],
-      "damage_type": "power_stone_beam",
+
       "conditions": {
         "enabling": [
           {
@@ -865,7 +865,7 @@
       "cause_fire": true,
       "smelt_blocks": true,
       "commands_on_block_hit": ["summon tnt"],
-      "damage_type": "power_stone_beam",
+
       "conditions": {
         "enabling": [
           {
