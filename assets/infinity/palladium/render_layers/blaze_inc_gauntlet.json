@@ -1,0 +1,13 @@
+{
+  "type": "geckolib:default",
+  "model": "infinity:geo/blaze_inc_gauntlet.geo.json",
+  "texture": "infinity:textures/models/blaze_inc_gauntlet.png",
+  "bones": {
+    "head": "head",
+    "body": "body",
+    "right_arm": "right_arm",
+    "left_arm": "left_arm",
+    "right_leg": "right_leg",
+    "left_leg": "left_leg"
+  }
+}

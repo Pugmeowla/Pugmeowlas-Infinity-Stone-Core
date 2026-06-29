@@ -2595,6 +2595,86 @@
         ]
       }
     },
+    "render_layer_blaze_inc_gauntlet": {
+      "type": "palladium:render_layer",
+      "hidden": true,
+      "hidden_in_bar": true,
+      "render_layer": "infinity:blaze_inc_gauntlet",
+      "conditions": {
+        "enabling": [
+          {
+            "type": "palladium:or",
+            "conditions": [
+              {
+                "type": "palladium:item_in_slot",
+                "item": {
+                  "item": "infinity:infinity_gauntlet"
+                },
+                "slot": "offhand"
+              },
+              {
+                "type": "palladium:item_in_slot",
+                "item": {
+                  "item": "infinity:infinity_gauntlet"
+                },
+                "slot": "curios:hands"
+              },
+              {
+                "type": "palladium:item_in_slot",
+                "item": {
+                  "item": "infinity:infinity_gauntlet"
+                },
+                "slot": "trinkets:offhand/glove"
+              }
+            ]
+          },
+          {
+            "type": "palladium:has_tag",
+            "tag": "blaze_inc_gauntlet"
+          }
+        ]
+      }
+    },
+    "render_layer_dragon_gauntlet": {
+      "type": "palladium:render_layer",
+      "hidden": true,
+      "hidden_in_bar": true,
+      "render_layer": "infinity:dragon_gauntlet",
+      "conditions": {
+        "enabling": [
+          {
+            "type": "palladium:or",
+            "conditions": [
+              {
+                "type": "palladium:item_in_slot",
+                "item": {
+                  "item": "infinity:infinity_gauntlet"
+                },
+                "slot": "offhand"
+              },
+              {
+                "type": "palladium:item_in_slot",
+                "item": {
+                  "item": "infinity:infinity_gauntlet"
+                },
+                "slot": "curios:hands"
+              },
+              {
+                "type": "palladium:item_in_slot",
+                "item": {
+                  "item": "infinity:infinity_gauntlet"
+                },
+                "slot": "trinkets:offhand/glove"
+              }
+            ]
+          },
+          {
+            "type": "palladium:has_tag",
+            "tag": "dragon_gauntlet"
+          }
+        ]
+      }
+    },
 
     "nano_gauntlet": {
       "type": "palladium:command",
@@ -3341,6 +3421,106 @@
         ]
       }
     },
+    "blaze_inc_gauntlet": {
+      "type": "palladium:command",
+      "icon": "palladium:quartz_flux_capacitor",
+      "title": "Blaze Inc Gauntlet",
+      "bar_color": "white",
+      "hidden": true,
+      "hidden_in_bar": false,
+      "list_index": 3,
+      "gui_position": [-0.5, 5],
+      "description": {
+        "translate": "ability.infinity.gauntlet.blaze_inc_gauntlet.description"
+      },
+      "first_tick_commands": [],
+      "last_tick_commands": [],
+      "commands": [
+        "clear @s palladium:quartz_flux_capacitor",
+        "tag @s add blaze_inc_gauntlet",
+        "tag @s add skin_on",
+        "playsound minecraft:block.anvil.land block @s"
+      ],
+      "conditions": {
+        "enabling": [
+          {
+            "type": "palladium:action",
+            "cooldown": 0,
+            "key_type": "right_click",
+            "needs_empty_hand": false,
+            "allow_scrolling_when_crouching": true
+          }
+        ],
+        "unlocking": [
+          {
+            "type": "palladium:not",
+            "conditions": [
+              {
+                "type": "palladium:has_tag",
+                "tag": "skin_on"
+              }
+            ]
+          },
+          {
+            "type": "palladium:item_in_slot",
+            "item": {
+              "item": "palladium:quartz_flux_capacitor"
+            },
+            "slot": "mainhand"
+          }
+        ]
+      }
+    },
+    "dragon_gauntlet": {
+      "type": "palladium:command",
+      "icon": "minecraft:dragon_head",
+      "title": "Dragon Gauntlet",
+      "bar_color": "purple",
+      "hidden": true,
+      "hidden_in_bar": false,
+      "list_index": 3,
+      "gui_position": [-0.5, 5],
+      "description": {
+        "translate": "ability.infinity.gauntlet.dragon_gauntlet.description"
+      },
+      "first_tick_commands": [],
+      "last_tick_commands": [],
+      "commands": [
+        "clear @s minecraft:dragon_head",
+        "tag @s add dragon_gauntlet",
+        "tag @s add skin_on",
+        "playsound minecraft:block.anvil.land block @s"
+      ],
+      "conditions": {
+        "enabling": [
+          {
+            "type": "palladium:action",
+            "cooldown": 0,
+            "key_type": "right_click",
+            "needs_empty_hand": false,
+            "allow_scrolling_when_crouching": true
+          }
+        ],
+        "unlocking": [
+          {
+            "type": "palladium:not",
+            "conditions": [
+              {
+                "type": "palladium:has_tag",
+                "tag": "skin_on"
+              }
+            ]
+          },
+          {
+            "type": "palladium:item_in_slot",
+            "item": {
+              "item": "minecraft:dragon_head"
+            },
+            "slot": "mainhand"
+          }
+        ]
+      }
+    },
 
     "normal_gauntlet": {
       "type": "palladium:command",
@@ -3372,6 +3552,8 @@
         "execute if entity @s[tag=cartoon_gauntlet] run give @s minecraft:white_wool",
         "execute if entity @s[tag=ultron_gauntlet] run give @s palladium:vibranium_circuit",
         "execute if entity @s[tag=52-d_gauntlet] run give @s infinity:52-d_unit",
+        "execute if entity @s[tag=blaze_inc_gauntlet] run give @s palladium:quartz_flux_capacitor",
+        "execute if entity @s[tag=dragon_gauntlet] run give @s minecraft:dragon_head",
         "tag @s remove nano_gauntlet",
         "tag @s remove netherite_gauntlet",
         "tag @s remove fantastic_four_skin",
@@ -3387,6 +3569,8 @@
         "tag @s remove cartoon_gauntlet",
         "tag @s remove ultron_gauntlet",
         "tag @s remove 52-d_gauntlet",
+        "tag @s remove blaze_inc_gauntlet",
+        "tag @s remove dragon_gauntlet",
         "tag @s remove skin_on",
         "schedule clear infinity:remove_burn_texture",
         "playsound minecraft:block.grindstone.use block @s"
@@ -3603,6 +3787,32 @@
       "gui_position": [1, 3.5],
       "description": {
         "translate": "ability.infinity.gauntlet.52-d_gauntlet.description"
+      }
+    },
+    "blaze_inc_gauntlet_dummy": {
+      "type": "palladium:dummy",
+      "icon": "infinity:textures/icon/skins/blaze_inc_gauntlet.png",
+      "title": "Blaze Inc Gauntlet",
+      "bar_color": "light_gray",
+      "hidden": false,
+      "hidden_in_bar": true,
+      "list_index": -1,
+      "gui_position": [1, 4],
+      "description": {
+        "translate": "ability.infinity.gauntlet.blaze_inc_gauntlet.description"
+      }
+    },
+    "dragon_gauntlet_dummy": {
+      "type": "palladium:dummy",
+      "icon": "infinity:textures/icon/skins/dragon_gauntlet.png",
+      "title": "Dragon Gauntlet",
+      "bar_color": "light_gray",
+      "hidden": false,
+      "hidden_in_bar": true,
+      "list_index": -1,
+      "gui_position": [-1, 4],
+      "description": {
+        "translate": "ability.infinity.gauntlet.dragon_gauntlet.description"
       }
     },
     "omni_desc": {

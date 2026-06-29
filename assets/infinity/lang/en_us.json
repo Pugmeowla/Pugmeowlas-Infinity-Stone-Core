@@ -199,5 +199,7 @@
   "block.infinity.uru_block": "Uru Block",
   "item.infinity.gold_titanium_alloy_nugget": "Gold Titanium Alloy Nugget",
   "item.infinity.uru_dust": "Uru Dust",
-  "item.infinity.uru_nugget": "Uru Nugget"
+  "item.infinity.uru_nugget": "Uru Nugget",
+  "ability.infinity.gauntlet.blaze_inc_gauntlet.description": "Unlock by right-clicking with a Quartz Flux Capacitor in your main hand. Dedicated to Blaze Inc, this gauntlet skin is a tribute to their contributions to the palladium community :)",
+  "ability.infinity.gauntlet.dragon_gauntlet.description": "Unlock by right-clicking with a Dragon Head in your main hand."
 }
