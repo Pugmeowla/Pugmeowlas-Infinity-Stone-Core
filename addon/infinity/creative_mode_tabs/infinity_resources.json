@@ -1,0 +1,45 @@
+{
+  "icon": "infinity:hammer",
+  "title": "Infinity Stone Core Resources",
+  "items": [
+    "infinity:hammer",
+    "infinity:injection",
+
+    "infinity:coal_dust",
+
+    "infinity:dwarf_star_alloy_dust",
+    "infinity:dwarf_star_alloy_ingot",
+    "infinity:dwarf_star_alloy_nugget",
+    "infinity:dwarf_star_alloy_plate",
+
+    "infinity:gold_dust",
+    "infinity:gold_plate",
+    "infinity:gold_titanium_alloy_dust",
+    "infinity:gold_titanium_alloy_handle",
+    "infinity:gold_titanium_alloy_ingot",
+    "infinity:gold_titanium_alloy_plate",
+
+    "infinity:iron_dust",
+    "infinity:iron_plate",
+
+    "infinity:steel_dust",
+    "infinity:steel_ingot",
+    "infinity:steel_nugget",
+    "infinity:steel_plate",
+
+    "infinity:titanium_dust",
+    "infinity:titanium_ingot",
+    "infinity:titanium_nugget",
+    "infinity:titanium_plate",
+
+    "infinity:raw_uru",
+    "infinity:uru_blade",
+    "infinity:uru_ingot",
+    "infinity:uru_plate",
+
+    "infinity:52-d_unit",
+    "infinity:endosym_ingot",
+    "infinity:ferro-titanium-gold_alloy_ingot",
+    "infinity:soul_infused_netherite_ingot"
+  ]
+}
