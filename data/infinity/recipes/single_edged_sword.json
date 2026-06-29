@@ -1,22 +1,12 @@
 {
-    "type": "minecraft:crafting_shaped",
-    "pattern": [
-        "  B",
-        " H ",
-        "   "
-    ],
-    "key": {
-        "B": {
-            "item": "infinity:uru_blade"
-        },
-        "H": {
-            "item": "infinity:gold_titanium_alloy_handle"
-        }
-        
-    
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "infinity:uru_blade"
     },
-    "result": {
-        "item": "infinity:single_edged_sword",
-        "count": 1
+    {
+      "item": "infinity:gold_titanium_alloy_handle"
     }
+  ],
+  "result": { "item": "infinity:single_edged_sword", "count": 1 }
 }

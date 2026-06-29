@@ -1,16 +1,12 @@
 {
-  "type": "minecraft:crafting_shaped",
-  "pattern": ["HG ", "   ", "   "],
-  "key": {
-    "H": {
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
       "item": "infinity:hammer"
     },
-    "G": {
+    {
       "item": "minecraft:coal"
     }
-  },
-  "result": {
-    "item": "infinity:coal_dust",
-    "count": 1
-  }
+  ],
+  "result": { "item": "infinity:coal_dust", "count": 1 }
 }

@@ -1,16 +1,12 @@
 {
-  "type": "minecraft:crafting_shaped",
-  "pattern": ["HG ", "   ", "   "],
-  "key": {
-    "H": {
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
       "item": "infinity:hammer"
     },
-    "G": {
+    {
       "item": "infinity:dwarf_star_alloy_ingot"
     }
-  },
-  "result": {
-    "item": "infinity:dwarf_star_alloy_dust",
-    "count": 1
-  }
+  ],
+  "result": { "item": "infinity:dwarf_star_alloy_dust", "count": 1 }
 }

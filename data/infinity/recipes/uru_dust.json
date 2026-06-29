@@ -5,8 +5,8 @@
       "item": "infinity:hammer"
     },
     {
-      "tag": "forge:ingots/titanium"
+      "item": "infinity:uru_ingot"
     }
   ],
-  "result": { "item": "infinity:titanium_dust", "count": 1 }
+  "result": { "item": "infinity:uru_dust", "count": 1 }
 }

@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "infinity:gold_titanium_alloy_ingot"
+    }
+  ],
+  "result": { "item": "infinity:gold_titanium_alloy_nugget", "count": 9 }
+}

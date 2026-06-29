@@ -1,16 +1,12 @@
 {
-  "type": "minecraft:crafting_shaped",
-  "pattern": ["IC ", "   ", "   "],
-  "key": {
-    "I": {
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
       "item": "infinity:hammer"
     },
-    "C": {
+    {
       "tag": "forge:ingots/steel"
     }
-  },
-  "result": {
-    "item": "infinity:steel_dust",
-    "count": 1
-  }
+  ],
+  "result": { "item": "infinity:steel_dust", "count": 1 }
 }

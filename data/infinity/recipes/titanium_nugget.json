@@ -1,13 +1,9 @@
 {
-  "type": "minecraft:crafting_shaped",
-  "pattern": ["G  ", "   ", "   "],
-  "key": {
-    "G": {
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
       "tag": "forge:ingots/titanium"
     }
-  },
-  "result": {
-    "item": "infinity:titanium_nugget",
-    "count": 9
-  }
+  ],
+  "result": { "item": "infinity:titanium_nugget", "count": 9 }
 }

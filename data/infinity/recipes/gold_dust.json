@@ -1,22 +1,12 @@
 {
-    "type": "minecraft:crafting_shaped",
-    "pattern": [
-        "HG ",
-        "   ",
-        "   "
-    ],
-    "key": {
-        "H": {
-            "item": "infinity:hammer"
-        },
-        "G": {
-            "item": "minecraft:gold_ingot"
-        }
-        
-    
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "infinity:hammer"
     },
-    "result": {
-        "item": "infinity:gold_dust",
-        "count": 1
+    {
+      "item": "minecraft:gold_ingot"
     }
+  ],
+  "result": { "item": "infinity:gold_dust", "count": 1 }
 }

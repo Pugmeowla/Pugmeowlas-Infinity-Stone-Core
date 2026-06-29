@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "infinity:uru_block"
+    }
+  ],
+  "result": { "item": "infinity:uru_ingot", "count": 9 }
+}
