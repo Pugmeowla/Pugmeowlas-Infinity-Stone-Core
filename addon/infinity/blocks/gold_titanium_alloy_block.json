@@ -1,5 +1,5 @@
 {
-  "map_color": "minecraft:color_black",
+  "map_color": "minecraft:color_yellow",
   "sound_type": "minecraft:netherite_block",
   "destroy_time": 1.5,
   "explosion_resistance": 6,

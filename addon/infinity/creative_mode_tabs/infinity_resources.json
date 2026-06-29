@@ -7,17 +7,21 @@
 
     "infinity:coal_dust",
 
+    "infinity:dwarf_star_meteor",
     "infinity:dwarf_star_alloy_dust",
     "infinity:dwarf_star_alloy_ingot",
     "infinity:dwarf_star_alloy_nugget",
     "infinity:dwarf_star_alloy_plate",
+    "infinity:dwarf_star_alloy_block",
 
     "infinity:gold_dust",
     "infinity:gold_plate",
     "infinity:gold_titanium_alloy_dust",
     "infinity:gold_titanium_alloy_handle",
     "infinity:gold_titanium_alloy_ingot",
+    "infinity:gold_titanium_alloy_nugget",
     "infinity:gold_titanium_alloy_plate",
+    "infinity:gold_titanium_alloy_block",
 
     "infinity:iron_dust",
     "infinity:iron_plate",
@@ -26,16 +30,28 @@
     "infinity:steel_ingot",
     "infinity:steel_nugget",
     "infinity:steel_plate",
+    "infinity:steel_block",
 
     "infinity:titanium_dust",
     "infinity:titanium_ingot",
     "infinity:titanium_nugget",
     "infinity:titanium_plate",
+    "infinity:titanium_block",
 
+    "infinity:uru_ore",
     "infinity:raw_uru",
     "infinity:uru_blade",
+    "infinity:uru_dust",
     "infinity:uru_ingot",
+    "infinity:uru_nugget",
     "infinity:uru_plate",
+    "infinity:uru_block",
+
+    "infinity:morag_stone",
+    "infinity:svartelheim_sand",
+    "infinity:svartelheim_stone",
+    "infinity:vormir_sand",
+    "infinity:vormir_stone",
 
     "infinity:52-d_unit",
     "infinity:endosym_ingot",
