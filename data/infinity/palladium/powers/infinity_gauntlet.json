@@ -251,8 +251,46 @@
             "type": "palladium:not",
             "conditions": [
               {
-                "type": "palladium:mod_loaded",
-                "mod_id": "corewithstuff"
+                "type": "palladium:and",
+                "conditions": [
+                  {
+                    "type": "palladium:mod_loaded",
+                    "mod_id": "corewithstuff"
+                  },
+                  {
+                    "type": "palladium:or",
+                    "conditions": [
+                      {
+                        "type": "palladium:item_in_slot",
+                        "item": {
+                          "item": "infinity:infinity_gauntlet"
+                        },
+                        "slot": "mainhand"
+                      },
+                      {
+                        "type": "palladium:item_in_slot",
+                        "item": {
+                          "item": "infinity:infinity_gauntlet"
+                        },
+                        "slot": "offhand"
+                      },
+                      {
+                        "type": "palladium:item_in_slot",
+                        "item": {
+                          "item": "infinity:infinity_gauntlet"
+                        },
+                        "slot": "trinkets:offhand/glove"
+                      },
+                      {
+                        "type": "palladium:item_in_slot",
+                        "item": {
+                          "item": "infinity:infinity_gauntlet"
+                        },
+                        "slot": "curios:hands"
+                      }
+                    ]
+                  }
+                ]
               }
             ]
           }
@@ -499,8 +537,46 @@
             "type": "palladium:not",
             "conditions": [
               {
-                "type": "palladium:mod_loaded",
-                "mod_id": "corewithstuff"
+                "type": "palladium:and",
+                "conditions": [
+                  {
+                    "type": "palladium:mod_loaded",
+                    "mod_id": "corewithstuff"
+                  },
+                  {
+                    "type": "palladium:or",
+                    "conditions": [
+                      {
+                        "type": "palladium:item_in_slot",
+                        "item": {
+                          "item": "infinity:infinity_gauntlet"
+                        },
+                        "slot": "mainhand"
+                      },
+                      {
+                        "type": "palladium:item_in_slot",
+                        "item": {
+                          "item": "infinity:infinity_gauntlet"
+                        },
+                        "slot": "offhand"
+                      },
+                      {
+                        "type": "palladium:item_in_slot",
+                        "item": {
+                          "item": "infinity:infinity_gauntlet"
+                        },
+                        "slot": "trinkets:offhand/glove"
+                      },
+                      {
+                        "type": "palladium:item_in_slot",
+                        "item": {
+                          "item": "infinity:infinity_gauntlet"
+                        },
+                        "slot": "curios:hands"
+                      }
+                    ]
+                  }
+                ]
               }
             ]
           }
@@ -742,8 +818,46 @@
             "type": "palladium:not",
             "conditions": [
               {
-                "type": "palladium:mod_loaded",
-                "mod_id": "corewithstuff"
+                "type": "palladium:and",
+                "conditions": [
+                  {
+                    "type": "palladium:mod_loaded",
+                    "mod_id": "corewithstuff"
+                  },
+                  {
+                    "type": "palladium:or",
+                    "conditions": [
+                      {
+                        "type": "palladium:item_in_slot",
+                        "item": {
+                          "item": "infinity:infinity_gauntlet"
+                        },
+                        "slot": "mainhand"
+                      },
+                      {
+                        "type": "palladium:item_in_slot",
+                        "item": {
+                          "item": "infinity:infinity_gauntlet"
+                        },
+                        "slot": "offhand"
+                      },
+                      {
+                        "type": "palladium:item_in_slot",
+                        "item": {
+                          "item": "infinity:infinity_gauntlet"
+                        },
+                        "slot": "trinkets:offhand/glove"
+                      },
+                      {
+                        "type": "palladium:item_in_slot",
+                        "item": {
+                          "item": "infinity:infinity_gauntlet"
+                        },
+                        "slot": "curios:hands"
+                      }
+                    ]
+                  }
+                ]
               }
             ]
           }
@@ -975,8 +1089,46 @@
             "type": "palladium:not",
             "conditions": [
               {
-                "type": "palladium:mod_loaded",
-                "mod_id": "corewithstuff"
+                "type": "palladium:and",
+                "conditions": [
+                  {
+                    "type": "palladium:mod_loaded",
+                    "mod_id": "corewithstuff"
+                  },
+                  {
+                    "type": "palladium:or",
+                    "conditions": [
+                      {
+                        "type": "palladium:item_in_slot",
+                        "item": {
+                          "item": "infinity:infinity_gauntlet"
+                        },
+                        "slot": "mainhand"
+                      },
+                      {
+                        "type": "palladium:item_in_slot",
+                        "item": {
+                          "item": "infinity:infinity_gauntlet"
+                        },
+                        "slot": "offhand"
+                      },
+                      {
+                        "type": "palladium:item_in_slot",
+                        "item": {
+                          "item": "infinity:infinity_gauntlet"
+                        },
+                        "slot": "trinkets:offhand/glove"
+                      },
+                      {
+                        "type": "palladium:item_in_slot",
+                        "item": {
+                          "item": "infinity:infinity_gauntlet"
+                        },
+                        "slot": "curios:hands"
+                      }
+                    ]
+                  }
+                ]
               }
             ]
           }
@@ -1239,8 +1391,46 @@
             "type": "palladium:not",
             "conditions": [
               {
-                "type": "palladium:mod_loaded",
-                "mod_id": "corewithstuff"
+                "type": "palladium:and",
+                "conditions": [
+                  {
+                    "type": "palladium:mod_loaded",
+                    "mod_id": "corewithstuff"
+                  },
+                  {
+                    "type": "palladium:or",
+                    "conditions": [
+                      {
+                        "type": "palladium:item_in_slot",
+                        "item": {
+                          "item": "infinity:infinity_gauntlet"
+                        },
+                        "slot": "mainhand"
+                      },
+                      {
+                        "type": "palladium:item_in_slot",
+                        "item": {
+                          "item": "infinity:infinity_gauntlet"
+                        },
+                        "slot": "offhand"
+                      },
+                      {
+                        "type": "palladium:item_in_slot",
+                        "item": {
+                          "item": "infinity:infinity_gauntlet"
+                        },
+                        "slot": "trinkets:offhand/glove"
+                      },
+                      {
+                        "type": "palladium:item_in_slot",
+                        "item": {
+                          "item": "infinity:infinity_gauntlet"
+                        },
+                        "slot": "curios:hands"
+                      }
+                    ]
+                  }
+                ]
               }
             ]
           }
@@ -1472,8 +1662,46 @@
             "type": "palladium:not",
             "conditions": [
               {
-                "type": "palladium:mod_loaded",
-                "mod_id": "corewithstuff"
+                "type": "palladium:and",
+                "conditions": [
+                  {
+                    "type": "palladium:mod_loaded",
+                    "mod_id": "corewithstuff"
+                  },
+                  {
+                    "type": "palladium:or",
+                    "conditions": [
+                      {
+                        "type": "palladium:item_in_slot",
+                        "item": {
+                          "item": "infinity:infinity_gauntlet"
+                        },
+                        "slot": "mainhand"
+                      },
+                      {
+                        "type": "palladium:item_in_slot",
+                        "item": {
+                          "item": "infinity:infinity_gauntlet"
+                        },
+                        "slot": "offhand"
+                      },
+                      {
+                        "type": "palladium:item_in_slot",
+                        "item": {
+                          "item": "infinity:infinity_gauntlet"
+                        },
+                        "slot": "trinkets:offhand/glove"
+                      },
+                      {
+                        "type": "palladium:item_in_slot",
+                        "item": {
+                          "item": "infinity:infinity_gauntlet"
+                        },
+                        "slot": "curios:hands"
+                      }
+                    ]
+                  }
+                ]
               }
             ]
           }

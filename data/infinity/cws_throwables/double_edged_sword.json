@@ -1,0 +1,11 @@
+{
+  "item": "infinity:double_edged_sword",
+  "velocity": 1.0,
+  "damage": 20.0,
+  "gravity": 0.04,
+  "returns_to_sender": true,
+  "draw_speed": 15,
+  "hide_command_output": false,
+  "command_on_block_hit": " ",
+  "command_on_entity_hit": " "
+}

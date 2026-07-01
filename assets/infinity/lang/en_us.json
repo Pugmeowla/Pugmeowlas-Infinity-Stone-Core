@@ -112,7 +112,7 @@
   "ability.infinity.power_stone.power_blast_aim.description": "A powerful beam that gets stronger the more punch upgrade you unlock. It has a range of 100 blocks, smelts blocks and causes fire. It will turn rainbow and do explosion damage if all 6 stones are collected. Does not work with other suits, only the gauntlet.",
 
   "ability.infinity.reality_stone.save_dummy.description": "Any block you look at gets added to your inventory",
-  "ability.infinity.reality_stone.shrink_dummy.description": "Allows for size changing, press to shrink, shift press to grow, press again to return to original size",
+
   "ability.infinity.reality_stone.shrink.description": "Shrinks the player to 1/10th scale",
   "ability.infinity.reality_stone.grow.description": "Grows the player to 10x scale",
   "ability.infinity.reality_stone.normal.description": "Returns the player to normal scale",
@@ -203,5 +203,6 @@
   "ability.infinity.gauntlet.blaze_inc_gauntlet.description": "Unlock by right-clicking with a Quartz Flux Capacitor in your main hand. Dedicated to Blaze Inc, this gauntlet skin is a tribute to their contributions to the palladium community :)",
   "ability.infinity.gauntlet.dragon_gauntlet.description": "Unlock by right-clicking with a Dragon Head in your main hand.",
   "ability.infinity.gauntlet.cosmi-rod_desc.description": "To insert a stone, hold the Cosmi-Rod in your main hand and right-click with the stone in your offhand.",
-  "ability.infinity.gauntlet.cosmi-rod_desc2.description": "To remove a stone, hold the Cosmi-Rod in your main hand and shift-right-click."
+  "ability.infinity.gauntlet.cosmi-rod_desc2.description": "To remove a stone, hold the Cosmi-Rod in your main hand and shift-right-click.",
+  "ability.infinity.reality_stone.shrink_dummy.description": "Allows for size changing, scroll when toggled on."
 }

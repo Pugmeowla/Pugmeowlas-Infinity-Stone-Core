@@ -372,11 +372,13 @@
       },
       "first_tick_commands": [
         "playsound infinity:reality_stone_invis block @s",
-        "effect give @s minecraft:invisibility infinite 0 true"
+        "effect give @s minecraft:invisibility infinite 0 true",
+        "particle minecraft:dust 1.0 0.0 0.0 1.5 ~ ~1 ~ 0.3 0.5 0.3 0 200 force"
       ],
       "last_tick_commands": [
         "playsound infinity:reality_stone_invis block @s",
-        "effect clear @s minecraft:invisibility"
+        "effect clear @s minecraft:invisibility",
+        "particle minecraft:dust 1.0 0.0 0.0 1.5 ~ ~1 ~ 0.3 0.5 0.3 0 200 force"
       ],
       "commands": [],
       "conditions": {
@@ -587,13 +589,18 @@
       "description": {
         "translate": "ability.infinity.reality_stone.effects.description"
       },
-      "first_tick_commands": ["playsound infinity:reality_stone block @s"],
+      "first_tick_commands": [
+        "playsound infinity:reality_stone block @s",
+        "tag @s add reality_source"
+      ],
       "last_tick_commands": [],
       "commands": [
         "effect give @e[distance=..100] minecraft:blindness 100 1 true",
         "effect give @e[distance=..100] minecraft:nausea 100 1 true",
         "effect give @e[distance=..100] minecraft:darkness 100 1 true",
         "effect give @e[distance=..100] minecraft:slowness 100 1 true",
+        "execute at @e[distance=..100,tag=!source] run particle minecraft:dust 1.0 0.1 0.1 2.0 ~ ~1 ~ 0.5 1.0 0.5 0 15 force",
+        "tag @s remove reality_source",
         "effect clear @s minecraft:blindness",
         "effect clear @s minecraft:nausea",
         "effect clear @s minecraft:darkness",
