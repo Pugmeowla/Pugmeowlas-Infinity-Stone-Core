@@ -1,22 +1,12 @@
 {
-    "type": "minecraft:crafting_shaped",
-    "pattern": [
-        "HG ",
-        "   ",
-        "   "
-    ],
-    "key": {
-        "H": {
-            "item": "infinity:mind_stone"
-        },
-        "G": {
-            "item": "infinity:empty_scepter"
-        }
-        
-    
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "infinity:mind_stone"
     },
-    "result": {
-        "item": "infinity:scepter",
-        "count": 1
+    {
+      "item": "infinity:empty_scepter"
     }
+  ],
+  "result": { "item": "infinity:scepter", "count": 1 }
 }

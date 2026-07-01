@@ -5,40 +5,5 @@
   "gui_display_type": "tree",
   "ability_bar_texture": "infinity:textures/gui/ability_bars/infinity_ability_bar.png",
 
-  "abilities": {
-    "test": {
-      "type": "palladium:render_layer",
-      "hidden": true,
-      "hidden_in_bar": true,
-      "render_layer": "infinity:tesseract",
-      "conditions": {
-        "enabling": [
-          {
-            "type": "palladium:item_in_slot",
-            "item": {
-              "item": "infinity:tesseract"
-            },
-            "slot": "offhand"
-          }
-        ]
-      }
-    },
-    "test2": {
-      "type": "palladium:render_layer",
-      "hidden": true,
-      "hidden_in_bar": true,
-      "render_layer": "infinity:tesseract2",
-      "conditions": {
-        "enabling": [
-          {
-            "type": "palladium:item_in_slot",
-            "item": {
-              "item": "infinity:tesseract"
-            },
-            "slot": "mainhand"
-          }
-        ]
-      }
-    }
-  }
+  "abilities": {}
 }

@@ -670,9 +670,9 @@
     "power_blast": {
       "type": "palladium:energy_beam",
       "persistent_data": true,
-      "icon": "infinity:textures/icon/power_blast.png",
+      "icon": "infinity:textures/icon/power_blast_blue.png",
       "title": "Power Blast",
-      "bar_color": "yellow",
+      "bar_color": "light_blue",
       "hidden": true,
       "hidden_in_bar": false,
       "list_index": -1,
@@ -708,7 +708,7 @@
     "aim": {
       "type": "palladium:aim",
       "persistent_data": true,
-      "icon": "infinity:textures/icon/power_blast.png",
+      "icon": "infinity:textures/icon/power_blast_blue.png",
       "title": "Power Blast",
       "bar_color": "yellow",
       "hidden": true,

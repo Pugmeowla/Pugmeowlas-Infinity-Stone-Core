@@ -737,9 +737,6 @@
             "key_type": "right_click",
             "needs_empty_hand": false,
             "allow_scrolling_when_crouching": true
-          },
-          {
-            "type": "palladium:crouching"
           }
         ],
         "unlocking": [
@@ -761,6 +758,9 @@
                 "slot": "mainhand"
               }
             ]
+          },
+          {
+            "type": "palladium:crouching"
           }
         ]
       }

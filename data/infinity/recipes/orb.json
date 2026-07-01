@@ -1,22 +1,12 @@
 {
-    "type": "minecraft:crafting_shaped",
-    "pattern": [
-        "HG ",
-        "   ",
-        "   "
-    ],
-    "key": {
-        "H": {
-            "item": "infinity:power_stone"
-        },
-        "G": {
-            "item": "infinity:empty_orb"
-        }
-        
-    
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "infinity:power_stone"
     },
-    "result": {
-        "item": "infinity:orb",
-        "count": 1
+    {
+      "item": "infinity:empty_orb"
     }
+  ],
+  "result": { "item": "infinity:orb", "count": 1 }
 }

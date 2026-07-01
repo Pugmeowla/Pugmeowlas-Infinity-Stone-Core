@@ -1,6 +1,6 @@
 {
   "type": "geckolib:default",
-  "model": "infinity:geo/thanos_classic.geo.json",
+  "model": "infinity:geo/thanos_mcu.geo.json",
   "texture": "infinity:textures/models/thanos_mcu.png",
   "bones": {
     "head": "head",
