@@ -1092,7 +1092,10 @@
       "description": {
         "translate": "ability.infinity.power_stone.impower.description"
       },
-      "first_tick_commands": ["playsound infinity:reality_stone block @s"],
+      "first_tick_commands": [
+        "playsound infinity:reality_stone block @s",
+        "particle minecraft:dust 0.6 0.0 1.0 1.5 ~ ~1 ~ 0.3 0.5 0.3 0 200 force"
+      ],
       "last_tick_commands": [],
       "commands": [
         "effect give @s minecraft:health_boost 90 5 true",
