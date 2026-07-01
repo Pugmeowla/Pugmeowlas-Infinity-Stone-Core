@@ -246,6 +246,15 @@
             "type": "palladium:item_in_slot",
             "item": { "item": "infinity:power_stone" },
             "slot": "mainhand"
+          },
+          {
+            "type": "palladium:not",
+            "conditions": [
+              {
+                "type": "palladium:mod_loaded",
+                "mod_id": "corewithstuff"
+              }
+            ]
           }
         ]
       }
@@ -485,6 +494,15 @@
             "type": "palladium:item_in_slot",
             "item": { "item": "infinity:space_stone" },
             "slot": "mainhand"
+          },
+          {
+            "type": "palladium:not",
+            "conditions": [
+              {
+                "type": "palladium:mod_loaded",
+                "mod_id": "corewithstuff"
+              }
+            ]
           }
         ]
       }
@@ -719,6 +737,15 @@
             "type": "palladium:item_in_slot",
             "item": { "item": "infinity:reality_stone" },
             "slot": "mainhand"
+          },
+          {
+            "type": "palladium:not",
+            "conditions": [
+              {
+                "type": "palladium:mod_loaded",
+                "mod_id": "corewithstuff"
+              }
+            ]
           }
         ]
       }
@@ -943,6 +970,15 @@
             "type": "palladium:item_in_slot",
             "item": { "item": "infinity:time_stone" },
             "slot": "mainhand"
+          },
+          {
+            "type": "palladium:not",
+            "conditions": [
+              {
+                "type": "palladium:mod_loaded",
+                "mod_id": "corewithstuff"
+              }
+            ]
           }
         ]
       }
@@ -1198,6 +1234,15 @@
             "type": "palladium:item_in_slot",
             "item": { "item": "infinity:soul_stone" },
             "slot": "mainhand"
+          },
+          {
+            "type": "palladium:not",
+            "conditions": [
+              {
+                "type": "palladium:mod_loaded",
+                "mod_id": "corewithstuff"
+              }
+            ]
           }
         ]
       }
@@ -1422,6 +1467,15 @@
             "type": "palladium:item_in_slot",
             "item": { "item": "infinity:mind_stone" },
             "slot": "mainhand"
+          },
+          {
+            "type": "palladium:not",
+            "conditions": [
+              {
+                "type": "palladium:mod_loaded",
+                "mod_id": "corewithstuff"
+              }
+            ]
           }
         ]
       }
