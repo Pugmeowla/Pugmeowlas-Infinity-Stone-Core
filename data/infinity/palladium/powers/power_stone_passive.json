@@ -2435,60 +2435,6 @@
           }
         ]
       }
-    },
-    "remove_power_stone": {
-      "type": "palladium:command",
-      "icon": "infinity:power_stone",
-      "title": "Remove Power Stone",
-      "persistent_data": true,
-      "bar_color": "purple",
-      "hidden": true,
-      "hidden_in_bar": false,
-      "list_index": -1,
-      "gui_position": "null",
-      "description": {
-        "translate": "ability.infinity.power_stone.remove_power_stone.description"
-      },
-      "commands": [
-        "execute as @s run clear @s infinity:orb",
-        "execute as @s run function infinity:givepowerstone",
-        "execute as @s run give @s infinity:empty_orb"
-      ],
-      "conditions": {
-        "enabling": [
-          {
-            "type": "palladium:action",
-            "cooldown": 0,
-            "key_type": "right_click",
-            "needs_empty_hand": false,
-            "allow_scrolling_when_crouching": true
-          }
-        ],
-        "unlocking": [
-          {
-            "type": "palladium:crouching"
-          },
-          {
-            "type": "palladium:or",
-            "conditions": [
-              {
-                "type": "palladium:item_in_slot",
-                "item": {
-                  "item": "infinity:orb"
-                },
-                "slot": "offhand"
-              },
-              {
-                "type": "palladium:item_in_slot",
-                "item": {
-                  "item": "infinity:orb"
-                },
-                "slot": "mainhand"
-              }
-            ]
-          }
-        ]
-      }
     }
   }
 }

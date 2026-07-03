@@ -1,0 +1,28 @@
+{
+  "type": "geckolib:default",
+  "model": "infinity:geo/orb.geo.json",
+  "texture": "infinity:textures/models/orb_render_layer.png",
+  "animation_file": "infinity:animations/orb.animation.json",
+  "bones": {
+    "head": "head",
+    "body": "body",
+    "right_arm": "right_arm",
+    "left_arm": "left_arm",
+    "right_leg": "right_leg",
+    "left_leg": "left_leg"
+  },
+  "animation_controller": [
+    {
+      "name": "orb",
+      "transition_tick_time": 1,
+      "triggers": {
+        "open": "open",
+        "close": "close",
+        "rotate_left": "rotate_left",
+        "rotate_right": "rotate_right",
+        "first_tick2": "rotate_left",
+        "spin": "spin"
+      }
+    }
+  ]
+}

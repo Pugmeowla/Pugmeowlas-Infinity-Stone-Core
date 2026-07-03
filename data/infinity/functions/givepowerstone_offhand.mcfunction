@@ -1,0 +1,1 @@
+execute as @s run item replace entity @s weapon.offhand with infinity:power_stone{display:{Name:'{"text":"Power Stone","color":"purple","bold":true,"italic":false}'},HideFlags:1}

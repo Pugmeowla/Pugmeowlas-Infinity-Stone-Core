@@ -29,3 +29,10 @@ scoreboard objectives add gauntlet5 dummy
 execute in infinity:soulworld run forceload add -2 -2 2 2
 execute in infinity:soulworld run fill -2 75 2 2 -128 -2 air
 execute in infinity:soulworld run fill 2 -128 -2 -2 -128 2 minecraft:end_portal
+
+execute in infinity:soulworld run forceload add 1000 1000 1000 1000
+execute in infinity:soulworld run fill 996 75 996 1004 83 1004 minecraft:bedrock outline
+execute in infinity:soulworld run fill 1003 76 1003 997 82 997 minecraft:light
+execute in infinity:soulworld run setblock 1000 76 1004 minecraft:oak_door[half=lower,facing=north,hinge=left]
+execute in infinity:soulworld run setblock 1000 77 1004 minecraft:oak_door[half=upper,facing=north,hinge=left]
+execute in infinity:soulworld run setblock 1000 76 1003 minecraft:oak_sign[rotation=0]{back_text:{messages:['"Do not let mobs"','"out of this chunk"','"if they are to be"','"snapped back"']}}
