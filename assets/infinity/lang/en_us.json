@@ -204,5 +204,6 @@
   "ability.infinity.gauntlet.dragon_gauntlet.description": "Unlock by right-clicking with a Dragon Head in your main hand.",
   "ability.infinity.gauntlet.cosmi-rod_desc.description": "To insert a stone, hold the Cosmi-Rod in your main hand and right-click with the stone in your offhand.",
   "ability.infinity.gauntlet.cosmi-rod_desc2.description": "To remove a stone, hold the Cosmi-Rod in your main hand and shift-right-click.",
-  "ability.infinity.reality_stone.shrink_dummy.description": "Allows for size changing, scroll when toggled on."
+  "ability.infinity.reality_stone.shrink_dummy.description": "Allows for size changing, scroll when toggled on.",
+  "ability.infinity.power_stone.radiation_texture_toggle.description": "Toggles on and off the radiation texture overlay."
 }

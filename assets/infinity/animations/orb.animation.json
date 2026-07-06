@@ -171,6 +171,21 @@
 					}
 				}
 			}
+		},
+		"reset": {
+			"loop": "hold_on_last_frame",
+			"bones": {
+				"bone": {
+					"rotation": [15, 0, 0],
+					"position": [-0.5, -1, 0]
+				},
+				"New": {
+					"rotation": [0, 0, 0]
+				},
+				"group": {
+					"rotation": [0, 0, 0]
+				}
+			}
 		}
 	}
 }

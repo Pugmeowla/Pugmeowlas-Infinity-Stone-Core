@@ -36,3 +36,9 @@ execute in infinity:soulworld run fill 1003 76 1003 997 82 997 minecraft:light
 execute in infinity:soulworld run setblock 1000 76 1004 minecraft:oak_door[half=lower,facing=north,hinge=left]
 execute in infinity:soulworld run setblock 1000 77 1004 minecraft:oak_door[half=upper,facing=north,hinge=left]
 execute in infinity:soulworld run setblock 1000 76 1003 minecraft:oak_sign[rotation=0]{back_text:{messages:['"Do not let mobs"','"out of this chunk"','"if they are to be"','"snapped back"']}}
+
+scoreboard objectives add power_stone_open_stage dummy
+scoreboard objectives add orb_opened dummy
+scoreboard players set @a power_stone_open_stage 0
+
+execute in infinity:morag run forceload add 69420 69420 69420 69420

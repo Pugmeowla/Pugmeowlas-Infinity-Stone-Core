@@ -7,13 +7,38 @@
   "ability_bar_texture": "infinity:textures/gui/ability_bars/power_ability_bar.png",
 
   "abilities": {
-    "dummy1": {
-      "type": "palladium:dummy",
-      "icon": "infinity:textures/icon/nothing.png",
-      "title": " ",
+    "radiation_texture_toggle": {
+      "type": "palladium:command",
+      "icon": "minecraft:command_block",
+      "persistent_data": false,
+      "title": "Radiation Texture Toggle",
+      "bar_color": "light_gray",
       "hidden": false,
       "hidden_in_bar": true,
-      "gui_position": [0, 0]
+      "list_index": 1,
+      "gui_position": [0, 0],
+      "description": {
+        "translate": "ability.infinity.power_stone.radiation_texture_toggle.description"
+      },
+      "first_tick_commands": [
+        "scoreboard objectives add radiationTextureToggle dummy",
+        "execute if score @s radiationTextureToggle matches 0 run tag @s add no_radiation_texture",
+        "execute if score @s radiationTextureToggle matches 1 run tag @s remove no_radiation_texture",
+        "scoreboard players add @s radiationTextureToggle 1",
+        "execute if score @s radiationTextureToggle matches 2 run scoreboard players set @s radiationTextureToggle 0",
+        "ability lock @s infinity:power_stone_passive radiation_texture_toggle"
+      ],
+      "last_tick_commands": [],
+      "commands": [],
+      "conditions": {
+        "unlocking": [
+          {
+            "type": "palladium:experience_level_buyable",
+            "xp_level": 0,
+            "flat_levels": true
+          }
+        ]
+      }
     },
     "tick": {
       "type": "palladium:command",
@@ -2279,6 +2304,17 @@
             "ability": "radiaton_timer",
             "min": 1,
             "max": 99
+          },
+          {
+            "type": "palladium:not",
+            "conditions": [
+              {
+                "type": "palladium:objective_score",
+                "objective": "radiationTextureToggle",
+                "min_score": 0,
+                "max_score": 0
+              }
+            ]
           }
         ]
       }
@@ -2296,6 +2332,17 @@
             "ability": "radiaton_timer",
             "min": 100,
             "max": 199
+          },
+          {
+            "type": "palladium:not",
+            "conditions": [
+              {
+                "type": "palladium:objective_score",
+                "objective": "radiationTextureToggle",
+                "min_score": 0,
+                "max_score": 0
+              }
+            ]
           }
         ]
       }
@@ -2313,6 +2360,17 @@
             "ability": "radiaton_timer",
             "min": 200,
             "max": 299
+          },
+          {
+            "type": "palladium:not",
+            "conditions": [
+              {
+                "type": "palladium:objective_score",
+                "objective": "radiationTextureToggle",
+                "min_score": 0,
+                "max_score": 0
+              }
+            ]
           }
         ]
       }
@@ -2330,6 +2388,17 @@
             "ability": "radiaton_timer",
             "min": 300,
             "max": 399
+          },
+          {
+            "type": "palladium:not",
+            "conditions": [
+              {
+                "type": "palladium:objective_score",
+                "objective": "radiationTextureToggle",
+                "min_score": 0,
+                "max_score": 0
+              }
+            ]
           }
         ]
       }
@@ -2347,6 +2416,17 @@
             "ability": "radiaton_timer",
             "min": 400,
             "max": 499
+          },
+          {
+            "type": "palladium:not",
+            "conditions": [
+              {
+                "type": "palladium:objective_score",
+                "objective": "radiationTextureToggle",
+                "min_score": 0,
+                "max_score": 0
+              }
+            ]
           }
         ]
       }
@@ -2364,6 +2444,17 @@
             "ability": "radiaton_timer",
             "min": 500,
             "max": 599
+          },
+          {
+            "type": "palladium:not",
+            "conditions": [
+              {
+                "type": "palladium:objective_score",
+                "objective": "radiationTextureToggle",
+                "min_score": 0,
+                "max_score": 0
+              }
+            ]
           }
         ]
       }
@@ -2381,6 +2472,17 @@
             "ability": "radiaton_timer",
             "min": 600,
             "max": 699
+          },
+          {
+            "type": "palladium:not",
+            "conditions": [
+              {
+                "type": "palladium:objective_score",
+                "objective": "radiationTextureToggle",
+                "min_score": 0,
+                "max_score": 0
+              }
+            ]
           }
         ]
       }
@@ -2398,6 +2500,17 @@
             "ability": "radiaton_timer",
             "min": 700,
             "max": 799
+          },
+          {
+            "type": "palladium:not",
+            "conditions": [
+              {
+                "type": "palladium:objective_score",
+                "objective": "radiationTextureToggle",
+                "min_score": 0,
+                "max_score": 0
+              }
+            ]
           }
         ]
       }
@@ -2415,6 +2528,17 @@
             "ability": "radiaton_timer",
             "min": 800,
             "max": 899
+          },
+          {
+            "type": "palladium:not",
+            "conditions": [
+              {
+                "type": "palladium:objective_score",
+                "objective": "radiationTextureToggle",
+                "min_score": 0,
+                "max_score": 0
+              }
+            ]
           }
         ]
       }
@@ -2432,6 +2556,17 @@
             "ability": "radiaton_timer",
             "min": 900,
             "max": 1000
+          },
+          {
+            "type": "palladium:not",
+            "conditions": [
+              {
+                "type": "palladium:objective_score",
+                "objective": "radiationTextureToggle",
+                "min_score": 0,
+                "max_score": 0
+              }
+            ]
           }
         ]
       }

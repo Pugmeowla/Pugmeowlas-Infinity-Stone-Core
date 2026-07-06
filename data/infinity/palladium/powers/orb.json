@@ -52,6 +52,14 @@
             "needs_empty_hand": false,
             "allow_scrolling_when_crouching": true
           }
+        ],
+        "unlocking": [
+          {
+            "type": "palladium:objective_score",
+            "objective": "power_stone_open_stage",
+            "min_score": 15,
+            "max_score": 15
+          }
         ]
       }
     },
@@ -302,19 +310,22 @@
         ]
       }
     },
-    "first_tick2": {
+    "rotate_left2": {
       "type": "geckolib:render_layer_animation",
+      "title": "Rotate Left",
+      "bar_color": "purple",
       "hidden": true,
-      "hidden_in_bar": true,
-      "render_layer": "infinity:power_stone_orb",
-      "controller": "power_stone_orb",
-      "animation_trigger": "shrink",
+      "hidden_in_bar": false,
+      "list_index": 0,
+      "render_layer": "infinity:orb",
+      "controller": "orb",
+      "animation_trigger": "reset",
       "conditions": {
         "enabling": [
           {
             "type": "palladium:ability_first_tick",
             "power": "null",
-            "ability": "first_tick"
+            "ability": "render_layer_orb"
           }
         ]
       }
@@ -335,7 +346,8 @@
       },
       "commands": [
         "execute as @s run function infinity:givepowerstone",
-        "execute as @s run tag @s add power_stone_removed"
+        "execute as @s run tag @s add power_stone_removed",
+        "execute in infinity:morag run setblock 69420 -64 69420 barrier"
       ],
       "conditions": {
         "enabling": [
@@ -387,7 +399,8 @@
       },
       "commands": [
         "execute as @s run function infinity:givepowerstone",
-        "execute as @s run tag @s add power_stone_removed"
+        "execute as @s run tag @s add power_stone_removed",
+        "execute in infinity:morag run setblock 69420 -64 69420 barrier"
       ],
       "conditions": {
         "enabling": [
@@ -439,6 +452,7 @@
       },
       "commands": [
         "execute as @s run clear @s infinity:power_stone",
+        "execute in infinity:morag run setblock 69420 -64 69420 minecraft:bedrock",
         "execute as @s run tag @s remove power_stone_removed"
       ],
       "conditions": {
@@ -486,6 +500,7 @@
       },
       "commands": [
         "execute as @s run clear @s infinity:power_stone",
+        "execute in infinity:morag run setblock 69420 -64 69420 minecraft:bedrock",
         "execute as @s run tag @s remove power_stone_removed"
       ],
       "conditions": {
@@ -538,6 +553,170 @@
       "list_index": -1,
       "gui_position": "null",
       "description": "null"
+    },
+
+    "left_command": {
+      "type": "palladium:command",
+      "icon": "minecraft:command_block",
+      "title": "null",
+      "bar_color": "light_gray",
+      "hidden": true,
+      "hidden_in_bar": true,
+      "list_index": -1,
+      "gui_position": "null",
+      "description": "null",
+      "first_tick_commands": [
+        "playsound minecraft:block.lever.click block @s",
+        "execute if score @s power_stone_open_stage matches 14 run scoreboard players set @s power_stone_open_stage 15",
+        "execute if score @s power_stone_open_stage matches 15 run playsound minecraft:block.iron_door.open block @s",
+        "execute if score @s power_stone_open_stage matches 15 run particle minecraft:crit ~ ~1 ~ 0.15 0.15 0.15 0.05 10 force",
+        "execute if score @s power_stone_open_stage matches 13 run scoreboard players set @s power_stone_open_stage -1",
+        "execute if score @s power_stone_open_stage matches 12 run scoreboard players set @s power_stone_open_stage -1",
+        "execute if score @s power_stone_open_stage matches 11 run scoreboard players set @s power_stone_open_stage 12",
+        "execute if score @s power_stone_open_stage matches 10 run scoreboard players set @s power_stone_open_stage -1",
+        "execute if score @s power_stone_open_stage matches 9 run scoreboard players set @s power_stone_open_stage 10",
+        "execute if score @s power_stone_open_stage matches 8 run scoreboard players set @s power_stone_open_stage -1",
+        "execute if score @s power_stone_open_stage matches 7 run scoreboard players set @s power_stone_open_stage -1",
+        "execute if score @s power_stone_open_stage matches 6 run scoreboard players set @s power_stone_open_stage 7",
+        "execute if score @s power_stone_open_stage matches 5 run scoreboard players set @s power_stone_open_stage 6",
+        "execute if score @s power_stone_open_stage matches 4 run scoreboard players set @s power_stone_open_stage -1",
+        "execute if score @s power_stone_open_stage matches 3 run scoreboard players set @s power_stone_open_stage 4",
+        "execute if score @s power_stone_open_stage matches 2 run scoreboard players set @s power_stone_open_stage -1",
+        "execute if score @s power_stone_open_stage matches 1 run scoreboard players set @s power_stone_open_stage -1",
+        "execute if score @s power_stone_open_stage matches 0 run scoreboard players set @s power_stone_open_stage 1"
+      ],
+      "last_tick_commands": [],
+      "commands": [],
+      "conditions": {
+        "enabling": [
+          {
+            "type": "palladium:ability_enabled",
+            "ability": "rotate_left"
+          }
+        ]
+      }
+    },
+    "right_command": {
+      "type": "palladium:command",
+      "icon": "minecraft:command_block",
+      "title": "null",
+      "bar_color": "light_gray",
+      "hidden": true,
+      "hidden_in_bar": true,
+      "list_index": -1,
+      "gui_position": "null",
+      "description": "null",
+      "first_tick_commands": [
+        "playsound minecraft:block.lever.click block @s",
+        "execute if score @s power_stone_open_stage matches 14 run scoreboard players set @s power_stone_open_stage -1",
+        "execute if score @s power_stone_open_stage matches 13 run scoreboard players set @s power_stone_open_stage 14",
+        "execute if score @s power_stone_open_stage matches 12 run scoreboard players set @s power_stone_open_stage 13",
+        "execute if score @s power_stone_open_stage matches 11 run scoreboard players set @s power_stone_open_stage -1",
+        "execute if score @s power_stone_open_stage matches 10 run scoreboard players set @s power_stone_open_stage 11",
+        "execute if score @s power_stone_open_stage matches 9 run scoreboard players set @s power_stone_open_stage -1",
+        "execute if score @s power_stone_open_stage matches 8 run scoreboard players set @s power_stone_open_stage 9",
+        "execute if score @s power_stone_open_stage matches 7 run scoreboard players set @s power_stone_open_stage 8",
+        "execute if score @s power_stone_open_stage matches 6 run scoreboard players set @s power_stone_open_stage -1",
+        "execute if score @s power_stone_open_stage matches 5 run scoreboard players set @s power_stone_open_stage -1",
+        "execute if score @s power_stone_open_stage matches 4 run scoreboard players set @s power_stone_open_stage 5",
+        "execute if score @s power_stone_open_stage matches 3 run scoreboard players set @s power_stone_open_stage -1",
+        "execute if score @s power_stone_open_stage matches 2 run scoreboard players set @s power_stone_open_stage 3",
+        "execute if score @s power_stone_open_stage matches 1 run scoreboard players set @s power_stone_open_stage 2",
+        "execute if score @s power_stone_open_stage matches 0 run scoreboard players set @s power_stone_open_stage -1"
+      ],
+      "last_tick_commands": [],
+      "commands": [],
+      "conditions": {
+        "enabling": [
+          {
+            "type": "palladium:ability_enabled",
+            "ability": "rotate_right"
+          }
+        ]
+      }
+    },
+    "open_command": {
+      "type": "palladium:command",
+      "icon": "minecraft:command_block",
+      "title": "null",
+      "bar_color": "light_gray",
+      "hidden": true,
+      "hidden_in_bar": true,
+      "list_index": -1,
+      "gui_position": "null",
+      "description": "null",
+      "first_tick_commands": ["playsound infinity:reality_stone block @s"],
+      "last_tick_commands": ["playsound infinity:reality_stone_size block @s"],
+      "commands": [],
+      "conditions": {
+        "enabling": [
+          {
+            "type": "palladium:ability_enabled",
+            "ability": "open_close_dummy"
+          }
+        ]
+      }
+    },
+    "command": {
+      "type": "palladium:command",
+      "icon": "minecraft:command_block",
+      "title": "null",
+      "bar_color": "light_gray",
+      "hidden": true,
+      "hidden_in_bar": true,
+      "list_index": -1,
+      "gui_position": "null",
+      "description": "null",
+      "first_tick_commands": [
+        "scoreboard players set @a power_stone_open_stage 0"
+      ],
+      "last_tick_commands": [],
+      "commands": [
+        "execute if score @s power_stone_open_stage matches -1 run playsound minecraft:block.note_block.bass block @s",
+        "execute if score @s power_stone_open_stage matches -1 run particle minecraft:smoke ~ ~0.5 ~ 0.2 0.2 0.2 0.01 8 force",
+        "execute if score @s power_stone_open_stage matches -1 run scoreboard players set @s power_stone_open_stage 0",
+        "execute if score @s power_stone_open_stage matches 14 run scoreboard players set @s orb_opened 1",
+        "execute if score @s orb_opened matches 1 run scoreboard players set @s power_stone_open_stage 15",
+        "execute in infinity:morag run execute if block 69420 -64 69420 minecraft:barrier run tag @a add power_stone_removed",
+        "execute in infinity:morag run execute if block 69420 -64 69420 minecraft:bedrock run tag @a remove power_stone_removed"
+      ]
+    },
+    "reset_progress": {
+      "type": "palladium:command",
+      "icon": "minecraft:command_block",
+      "title": "null",
+      "bar_color": "purple",
+      "hidden": true,
+      "hidden_in_bar": false,
+      "list_index": 3,
+      "gui_position": "null",
+      "description": "null",
+      "first_tick_commands": [],
+      "last_tick_commands": [],
+      "commands": [
+        "playsound minecraft:block.iron_door.close block @s",
+        "scoreboard players set @s power_stone_open_stage 0",
+        "scoreboard players set @s orb_opened 0"
+      ],
+      "conditions": {
+        "enabling": [
+          {
+            "type": "palladium:action",
+            "cooldown": 10,
+            "key_type": "key_bind",
+            "needs_empty_hand": false,
+            "allow_scrolling_when_crouching": true
+          }
+        ],
+        "unlocking": [
+          {
+            "type": "palladium:objective_score",
+            "objective": "power_stone_open_stage",
+            "min_score": 15,
+            "max_score": 15
+          }
+        ]
+      }
     }
   }
 }

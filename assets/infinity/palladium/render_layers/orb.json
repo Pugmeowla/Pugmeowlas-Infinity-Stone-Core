@@ -20,8 +20,9 @@
         "close": "close",
         "rotate_left": "rotate_left",
         "rotate_right": "rotate_right",
-        "first_tick2": "rotate_left",
-        "spin": "spin"
+        "first_tick": "rotate_left",
+        "spin": "spin",
+        "reset": "reset"
       }
     }
   ]
