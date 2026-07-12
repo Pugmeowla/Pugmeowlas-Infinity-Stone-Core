@@ -234,6 +234,562 @@
       }
     },
 
+    "unlock1_dummy": {
+      "type": "palladium:dummy",
+      "icon": "infinity:power_stone",
+      "title": "Unlock 2 attack damage",
+      "bar_color": "light_gray",
+      "hidden": false,
+      "hidden_in_bar": true,
+      "list_index": -1,
+      "gui_position": [0.5, -1],
+      "conditions": {
+        "unlocking": [
+          {
+            "type": "palladium:item_buyable",
+            "ingredient": {
+              "item": "infinity:aspects_of_existance"
+            },
+            "amount": 2
+          }
+        ]
+      }
+    },
+    "unlock2_dummy": {
+      "type": "palladium:dummy",
+      "icon": "infinity:power_stone",
+      "title": "Unlock 4 attack damage",
+      "bar_color": "light_gray",
+      "hidden": false,
+      "hidden_in_bar": true,
+      "list_index": -1,
+      "gui_position": [1.0, -1],
+      "conditions": {
+        "unlocking": [
+          {
+            "type": "palladium:item_buyable",
+            "ingredient": {
+              "item": "infinity:aspects_of_existance"
+            },
+            "amount": 4
+          },
+          {
+            "type": "palladium:ability_unlocked",
+            "power": "null",
+            "ability": "unlock1_dummy"
+          }
+        ]
+      }
+    },
+    "unlock3_dummy": {
+      "type": "palladium:dummy",
+      "icon": "infinity:power_stone",
+      "title": "Unlock 8 attack damage",
+      "bar_color": "light_gray",
+      "hidden": false,
+      "hidden_in_bar": true,
+      "list_index": -1,
+      "gui_position": [1.5, -1],
+      "conditions": {
+        "unlocking": [
+          {
+            "type": "palladium:item_buyable",
+            "ingredient": {
+              "item": "infinity:aspects_of_existance"
+            },
+            "amount": 8
+          },
+          {
+            "type": "palladium:ability_unlocked",
+            "power": "null",
+            "ability": "unlock2_dummy"
+          }
+        ]
+      }
+    },
+    "unlock4_dummy": {
+      "type": "palladium:dummy",
+      "icon": "infinity:power_stone",
+      "title": "Unlock 16 attack damage",
+      "bar_color": "light_gray",
+      "hidden": false,
+      "hidden_in_bar": true,
+      "list_index": -1,
+      "gui_position": [2.0, -1],
+      "conditions": {
+        "unlocking": [
+          {
+            "type": "palladium:item_buyable",
+            "ingredient": {
+              "item": "infinity:aspects_of_existance"
+            },
+            "amount": 12
+          },
+          {
+            "type": "palladium:ability_unlocked",
+            "power": "null",
+            "ability": "unlock3_dummy"
+          }
+        ]
+      }
+    },
+    "unlock5_dummy": {
+      "type": "palladium:dummy",
+      "icon": "infinity:power_stone",
+      "title": "Unlock 32 attack damage",
+      "bar_color": "light_gray",
+      "hidden": false,
+      "hidden_in_bar": true,
+      "list_index": -1,
+      "gui_position": [2.0, -1.5],
+      "conditions": {
+        "unlocking": [
+          {
+            "type": "palladium:item_buyable",
+            "ingredient": {
+              "item": "infinity:aspects_of_existance"
+            },
+            "amount": 18
+          },
+          {
+            "type": "palladium:ability_unlocked",
+            "power": "null",
+            "ability": "unlock4_dummy"
+          }
+        ]
+      }
+    },
+    "unlock6_dummy": {
+      "type": "palladium:dummy",
+      "icon": "infinity:power_stone",
+      "title": "Unlock 64 attack damage",
+      "bar_color": "light_gray",
+      "hidden": false,
+      "hidden_in_bar": true,
+      "list_index": -1,
+      "gui_position": [2.0, -2],
+      "conditions": {
+        "unlocking": [
+          {
+            "type": "palladium:item_buyable",
+            "ingredient": {
+              "item": "infinity:aspects_of_existance"
+            },
+            "amount": 26
+          },
+          {
+            "type": "palladium:ability_unlocked",
+            "power": "null",
+            "ability": "unlock5_dummy"
+          }
+        ]
+      }
+    },
+    "unlock7_dummy": {
+      "type": "palladium:dummy",
+      "icon": "infinity:power_stone",
+      "title": "Unlock 128 attack damage",
+      "bar_color": "light_gray",
+      "hidden": false,
+      "hidden_in_bar": true,
+      "list_index": -1,
+      "gui_position": [2.0, -2.5],
+      "conditions": {
+        "unlocking": [
+          {
+            "type": "palladium:item_buyable",
+            "ingredient": {
+              "item": "infinity:aspects_of_existance"
+            },
+            "amount": 36
+          },
+          {
+            "type": "palladium:ability_unlocked",
+            "power": "null",
+            "ability": "unlock6_dummy"
+          }
+        ]
+      }
+    },
+    "unlock8_dummy": {
+      "type": "palladium:dummy",
+      "icon": "infinity:power_stone",
+      "title": "Unlock 256 attack damage",
+      "bar_color": "light_gray",
+      "hidden": false,
+      "hidden_in_bar": true,
+      "list_index": -1,
+      "gui_position": [1.5, -2.5],
+      "conditions": {
+        "unlocking": [
+          {
+            "type": "palladium:item_buyable",
+            "ingredient": {
+              "item": "infinity:aspects_of_existance"
+            },
+            "amount": 48
+          },
+          {
+            "type": "palladium:ability_unlocked",
+            "power": "null",
+            "ability": "unlock7_dummy"
+          }
+        ]
+      }
+    },
+    "unlock9_dummy": {
+      "type": "palladium:dummy",
+      "icon": "infinity:power_stone",
+      "title": "Unlock 512 attack damage",
+      "bar_color": "light_gray",
+      "hidden": false,
+      "hidden_in_bar": true,
+      "list_index": -1,
+      "gui_position": [1, -2.5],
+      "conditions": {
+        "unlocking": [
+          {
+            "type": "palladium:item_buyable",
+            "ingredient": {
+              "item": "infinity:aspects_of_existance"
+            },
+            "amount": 64
+          },
+          {
+            "type": "palladium:ability_unlocked",
+            "power": "null",
+            "ability": "unlock8_dummy"
+          }
+        ]
+      }
+    },
+    "unlock10_dummy": {
+      "type": "palladium:dummy",
+      "icon": "infinity:power_stone",
+      "title": "Unlock 1024 attack damage",
+      "bar_color": "light_gray",
+      "hidden": false,
+      "hidden_in_bar": true,
+      "list_index": -1,
+      "gui_position": [0.5, -2.5],
+      "conditions": {
+        "unlocking": [
+          {
+            "type": "palladium:item_buyable",
+            "ingredient": {
+              "item": "infinity:aspects_of_existance"
+            },
+            "amount": 88
+          },
+          {
+            "type": "palladium:ability_unlocked",
+            "power": "null",
+            "ability": "unlock9_dummy"
+          }
+        ]
+      }
+    },
+    "unlock11_dummy": {
+      "type": "palladium:dummy",
+      "icon": "infinity:power_stone",
+      "title": "Unlock 2048 attack damage",
+      "bar_color": "light_gray",
+      "hidden": false,
+      "hidden_in_bar": true,
+      "list_index": -1,
+      "gui_position": [0, -2.5],
+      "conditions": {
+        "unlocking": [
+          {
+            "type": "palladium:item_buyable",
+            "ingredient": {
+              "item": "infinity:aspects_of_existance"
+            },
+            "amount": 128
+          },
+          {
+            "type": "palladium:ability_unlocked",
+            "power": "null",
+            "ability": "unlock10_dummy"
+          }
+        ]
+      }
+    },
+    "dummy": {
+      "type": "palladium:dummy",
+      "icon": "infinity:textures/icon/nothing.png",
+      "title": " ",
+      "bar_color": "light_gray",
+      "hidden": false,
+      "hidden_in_bar": true,
+      "list_index": -1,
+      "gui_position": [0, -2]
+    },
+    "unlock1": {
+      "type": "palladium:command",
+      "hidden": true,
+      "hidden_in_bar": true,
+      "first_tick_commands": ["scoreboard objectives add DamageCycle dummy"],
+      "last_tick_commands": [],
+      "commands": [
+        "execute if score @s DamageCycle matches 1 run scoreboard players set @s DamageCycle 0"
+      ],
+      "conditions": {
+        "enabling": [
+          {
+            "type": "palladium:not",
+            "conditions": [
+              {
+                "type": "palladium:ability_enabled",
+                "power": "infinity:power_stone_passive",
+                "ability": "unlock1_dummy"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "unlock2": {
+      "type": "palladium:command",
+      "hidden": true,
+      "hidden_in_bar": true,
+      "first_tick_commands": ["scoreboard objectives add DamageCycle dummy"],
+      "last_tick_commands": [],
+      "commands": [
+        "execute if score @s DamageCycle matches 2 run scoreboard players set @s DamageCycle 1"
+      ],
+      "conditions": {
+        "enabling": [
+          {
+            "type": "palladium:not",
+            "conditions": [
+              {
+                "type": "palladium:ability_enabled",
+                "power": "infinity:power_stone_passive",
+                "ability": "unlock2_dummy"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "unlock3": {
+      "type": "palladium:command",
+      "hidden": true,
+      "hidden_in_bar": true,
+      "first_tick_commands": ["scoreboard objectives add DamageCycle dummy"],
+      "last_tick_commands": [],
+      "commands": [
+        "execute if score @s DamageCycle matches 3 run scoreboard players set @s DamageCycle 2"
+      ],
+      "conditions": {
+        "enabling": [
+          {
+            "type": "palladium:not",
+            "conditions": [
+              {
+                "type": "palladium:ability_enabled",
+                "power": "infinity:power_stone_passive",
+                "ability": "unlock3_dummy"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "unlock4": {
+      "type": "palladium:command",
+      "hidden": true,
+      "hidden_in_bar": true,
+      "first_tick_commands": ["scoreboard objectives add DamageCycle dummy"],
+      "last_tick_commands": [],
+      "commands": [
+        "execute if score @s DamageCycle matches 4 run scoreboard players set @s DamageCycle 3"
+      ],
+      "conditions": {
+        "enabling": [
+          {
+            "type": "palladium:not",
+            "conditions": [
+              {
+                "type": "palladium:ability_enabled",
+                "power": "infinity:power_stone_passive",
+                "ability": "unlock4_dummy"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "unlock5": {
+      "type": "palladium:command",
+      "hidden": true,
+      "hidden_in_bar": true,
+      "first_tick_commands": ["scoreboard objectives add DamageCycle dummy"],
+      "last_tick_commands": [],
+      "commands": [
+        "execute if score @s DamageCycle matches 5 run scoreboard players set @s DamageCycle 4"
+      ],
+      "conditions": {
+        "enabling": [
+          {
+            "type": "palladium:not",
+            "conditions": [
+              {
+                "type": "palladium:ability_enabled",
+                "power": "infinity:power_stone_passive",
+                "ability": "unlock5_dummy"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "unlock6": {
+      "type": "palladium:command",
+      "hidden": true,
+      "hidden_in_bar": true,
+      "first_tick_commands": ["scoreboard objectives add DamageCycle dummy"],
+      "last_tick_commands": [],
+      "commands": [
+        "execute if score @s DamageCycle matches 6 run scoreboard players set @s DamageCycle 5"
+      ],
+      "conditions": {
+        "enabling": [
+          {
+            "type": "palladium:not",
+            "conditions": [
+              {
+                "type": "palladium:ability_enabled",
+                "power": "infinity:power_stone_passive",
+                "ability": "unlock6_dummy"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "unlock7": {
+      "type": "palladium:command",
+      "hidden": true,
+      "hidden_in_bar": true,
+      "first_tick_commands": ["scoreboard objectives add DamageCycle dummy"],
+      "last_tick_commands": [],
+      "commands": [
+        "execute if score @s DamageCycle matches 7 run scoreboard players set @s DamageCycle 6"
+      ],
+      "conditions": {
+        "enabling": [
+          {
+            "type": "palladium:not",
+            "conditions": [
+              {
+                "type": "palladium:ability_enabled",
+                "power": "infinity:power_stone_passive",
+                "ability": "unlock7_dummy"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "unlock8": {
+      "type": "palladium:command",
+      "hidden": true,
+      "hidden_in_bar": true,
+      "first_tick_commands": ["scoreboard objectives add DamageCycle dummy"],
+      "last_tick_commands": [],
+      "commands": [
+        "execute if score @s DamageCycle matches 8 run scoreboard players set @s DamageCycle 7"
+      ],
+      "conditions": {
+        "enabling": [
+          {
+            "type": "palladium:not",
+            "conditions": [
+              {
+                "type": "palladium:ability_enabled",
+                "power": "infinity:power_stone_passive",
+                "ability": "unlock8_dummy"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "unlock9": {
+      "type": "palladium:command",
+      "hidden": true,
+      "hidden_in_bar": true,
+      "first_tick_commands": ["scoreboard objectives add DamageCycle dummy"],
+      "last_tick_commands": [],
+      "commands": [
+        "execute if score @s DamageCycle matches 9 run scoreboard players set @s DamageCycle 8"
+      ],
+      "conditions": {
+        "enabling": [
+          {
+            "type": "palladium:not",
+            "conditions": [
+              {
+                "type": "palladium:ability_enabled",
+                "power": "infinity:power_stone_passive",
+                "ability": "unlock9_dummy"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "unlock10": {
+      "type": "palladium:command",
+      "hidden": true,
+      "hidden_in_bar": true,
+      "first_tick_commands": ["scoreboard objectives add DamageCycle dummy"],
+      "last_tick_commands": [],
+      "commands": [
+        "execute if score @s DamageCycle matches 10 run scoreboard players set @s DamageCycle 9"
+      ],
+      "conditions": {
+        "enabling": [
+          {
+            "type": "palladium:not",
+            "conditions": [
+              {
+                "type": "palladium:ability_enabled",
+                "power": "infinity:power_stone_passive",
+                "ability": "unlock10_dummy"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "unlock11": {
+      "type": "palladium:command",
+      "hidden": true,
+      "hidden_in_bar": true,
+      "first_tick_commands": ["scoreboard objectives add DamageCycle dummy"],
+      "last_tick_commands": [],
+      "commands": [
+        "execute if score @s DamageCycle matches 11 run scoreboard players set @s DamageCycle 10"
+      ],
+      "conditions": {
+        "enabling": [
+          {
+            "type": "palladium:not",
+            "conditions": [
+              {
+                "type": "palladium:ability_enabled",
+                "power": "infinity:power_stone_passive",
+                "ability": "unlock11_dummy"
+              }
+            ]
+          }
+        ]
+      }
+    },
+
     "power_blast_aim": {
       "type": "palladium:aim",
       "icon": "infinity:textures/icon/power_blast.png",
@@ -243,7 +799,7 @@
       "hidden": false,
       "hidden_in_bar": false,
       "list_index": 1,
-      "gui_position": [0.5, -2],
+      "gui_position": [0, -0.5],
       "description": {
         "translate": "ability.infinity.power_stone.power_blast_aim.description"
       },
@@ -263,6 +819,11 @@
               "item": "infinity:aspects_of_existance"
             },
             "amount": 1
+          },
+          {
+            "type": "palladium:ability_unlocked",
+            "power": "null",
+            "ability": "impower"
           }
         ]
       }
@@ -806,7 +1367,7 @@
       "hidden": false,
       "hidden_in_bar": false,
       "list_index": 0,
-      "gui_position": [0, -1],
+      "gui_position": [0.5, -0.5],
       "description": {
         "translate": "ability.infinity.power_stone.impower.description"
       },
@@ -893,7 +1454,7 @@
       "hidden": false,
       "hidden_in_bar": true,
       "list_index": -1,
-      "gui_position": [0, -0.5],
+      "gui_position": [0.5, 0],
       "description": {
         "translate": "ability.infinity.power_stone.knockback.description"
       },
@@ -955,34 +1516,18 @@
         ]
       }
     },
-    "explosion": {
-      "type": "palladium:command",
-      "icon": "infinity:textures/icon/teleport.png",
-      "persistent_data": true,
-      "title": "Cosmic Explosion",
-      "bar_color": "purple",
+    "explosion_timer": {
+      "type": "palladium:animation_timer",
+      "icon": "minecraft:blaze_rod",
+      "title": "null",
+      "bar_color": "light_gray",
       "hidden": true,
       "hidden_in_bar": true,
       "list_index": -1,
-      "gui_position": [0, -1.5],
-      "description": {
-        "translate": "ability.infinity.power_stone.explosion.description"
-      },
-      "first_tick_commands": [
-        "playsound infinity:power_stone_explode block @s"
-      ],
-      "last_tick_commands": [],
-      "commands": [
-        "/summon tnt ~8 ~ ~ {Fuse:0}",
-        "/summon tnt ~-8 ~ ~ {Fuse:0}",
-        "/summon tnt ~ ~ ~8 {Fuse:0}",
-        "/summon tnt ~ ~ ~-8 {Fuse:0}",
-        "/summon tnt ~8 ~ ~8 {Fuse:0}",
-        "/summon tnt ~-8 ~ ~-8 {Fuse:0}",
-        "/summon tnt ~8 ~ ~-8 {Fuse:0}",
-        "/summon tnt ~-8 ~ ~8 {Fuse:0}",
-        "/effect give @s minecraft:wither 1 1 true"
-      ],
+      "gui_position": "null",
+      "description": "null",
+      "start_value": 0,
+      "max_value": 10,
       "conditions": {
         "unlocking": [
           {
@@ -1026,6 +1571,80 @@
         ]
       }
     },
+    "explosion": {
+      "type": "palladium:command",
+      "icon": "infinity:textures/icon/teleport.png",
+      "persistent_data": true,
+      "title": "Cosmic Explosion",
+      "bar_color": "purple",
+      "hidden": true,
+      "hidden_in_bar": true,
+      "list_index": -1,
+      "gui_position": [0, -1],
+      "description": {
+        "translate": "ability.infinity.power_stone.explosion.description"
+      },
+      "first_tick_commands": [
+        "playsound infinity:power_stone_explode block @s"
+      ],
+      "last_tick_commands": [],
+      "commands": [
+        "/summon tnt ~8 ~ ~ {Fuse:0}",
+        "/summon tnt ~-8 ~ ~ {Fuse:0}",
+        "/summon tnt ~ ~ ~8 {Fuse:0}",
+        "/summon tnt ~ ~ ~-8 {Fuse:0}",
+        "/summon tnt ~8 ~ ~8 {Fuse:0}",
+        "/summon tnt ~-8 ~ ~-8 {Fuse:0}",
+        "/summon tnt ~8 ~ ~-8 {Fuse:0}",
+        "/summon tnt ~-8 ~ ~8 {Fuse:0}",
+        "/effect give @s minecraft:wither 1 1 true"
+      ],
+      "conditions": {
+        "unlocking": [
+          {
+            "type": "palladium:animation_timer_ability",
+            "power": "null",
+            "ability": "explosion_timer",
+            "min": 10,
+            "max": 10
+          }
+        ]
+      }
+    },
+    "pre_explosion": {
+      "type": "palladium:command",
+      "icon": "infinity:textures/icon/teleport.png",
+      "persistent_data": true,
+      "title": "Cosmic Explosion",
+      "bar_color": "purple",
+      "hidden": true,
+      "hidden_in_bar": true,
+      "list_index": -1,
+      "gui_position": [0, -1.5],
+      "description": {
+        "translate": "ability.infinity.power_stone.explosion.description"
+      },
+      "first_tick_commands": [],
+      "last_tick_commands": [
+        "particle minecraft:dragon_breath ~ ~1 ~ 0.8 0.8 0.8 0.05 150 force",
+        "particle minecraft:end_rod ~ ~1 ~ 0.6 0.6 0.6 0.08 40 force"
+      ],
+      "commands": [
+        "particle minecraft:dust 0.78 0.28 0.90 1.5 ~ ~1 ~ 0.3 0.5 0.3 0 10 force",
+        "particle minecraft:dragon_breath ~ ~1 ~ 0.3 0.5 0.3 0.01 10 force"
+      ],
+      "conditions": {
+        "unlocking": [
+          {
+            "type": "palladium:animation_timer_ability",
+            "power": "null",
+            "ability": "explosion_timer",
+            "min": 1,
+            "max": 9
+          }
+        ]
+      }
+    },
     "explosion2": {
       "type": "palladium:command",
       "icon": "infinity:textures/icon/rocket_burst.png",
@@ -1035,7 +1654,7 @@
       "hidden": false,
       "hidden_in_bar": false,
       "list_index": 2,
-      "gui_position": [0, -2],
+      "gui_position": [0, -1],
       "description": {
         "translate": "ability.infinity.power_stone.explosion2.description"
       },
@@ -1117,7 +1736,7 @@
           {
             "type": "palladium:ability_unlocked",
             "power": "null",
-            "ability": "impower"
+            "ability": "power_blast_aim"
           }
         ]
       }

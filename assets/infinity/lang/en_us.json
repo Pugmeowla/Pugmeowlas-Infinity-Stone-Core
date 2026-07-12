@@ -205,5 +205,6 @@
   "ability.infinity.gauntlet.cosmi-rod_desc.description": "To insert a stone, hold the Cosmi-Rod in your main hand and right-click with the stone in your offhand.",
   "ability.infinity.gauntlet.cosmi-rod_desc2.description": "To remove a stone, hold the Cosmi-Rod in your main hand and shift-right-click.",
   "ability.infinity.reality_stone.shrink_dummy.description": "Allows for size changing, scroll when toggled on.",
-  "ability.infinity.power_stone.radiation_texture_toggle.description": "Toggles on and off the radiation texture overlay."
+  "ability.infinity.power_stone.radiation_texture_toggle.description": "Toggles on and off the radiation texture overlay.",
+  "ability.infinity.orb.reset_progress.description": "Resets the Orb's unlock progress, allowing you to unlock it again if you wish."
 }
