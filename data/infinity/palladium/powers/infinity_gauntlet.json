@@ -4184,7 +4184,8 @@
         "kill_half",
         "kill_player",
         "destroy_stones",
-        "kill_hostile"
+        "kill_hostile",
+        "bring_back_snapped"
       ],
       "conditions": {
         "enabling": [
@@ -4235,7 +4236,7 @@
     "kill_half": {
       "type": "palladium:command",
       "icon": "infinity:infinity_gauntlet",
-      "title": "Kill Half of All Entities",
+      "title": "Kill Half of All Entities (Sent to Soulworld)",
       "bar_color": "yellow",
       "hidden": true,
       "hidden_in_bar": true,
@@ -4246,6 +4247,69 @@
         "tag @s add burn",
         "tag @s add burn_texture",
         "advancement grant @s only infinity:snap"
+      ],
+      "conditions": {
+        "enabling": [
+          {
+            "type": "palladium:action",
+            "cooldown": 0,
+            "key_type": "key_bind",
+            "needs_empty_hand": false,
+            "allow_scrolling_when_crouching": true
+          }
+        ],
+        "unlocking": [
+          {
+            "type": "palladium:not",
+            "conditions": [
+              {
+                "type": "palladium:has_tag",
+                "tag": "burn"
+              }
+            ]
+          },
+          {
+            "type": "palladium:has_power",
+            "power": "infinity:mind_stone"
+          },
+          {
+            "type": "palladium:has_power",
+            "power": "infinity:power_stone_passive"
+          },
+          {
+            "type": "palladium:has_power",
+            "power": "infinity:space_stone"
+          },
+          {
+            "type": "palladium:has_power",
+            "power": "infinity:reality_stone"
+          },
+          {
+            "type": "palladium:has_power",
+            "power": "infinity:time_stone"
+          },
+          {
+            "type": "palladium:has_power",
+            "power": "infinity:soul_stone"
+          }
+        ]
+      }
+    },
+    "bring_back_snapped": {
+      "type": "palladium:command",
+      "icon": "infinity:infinity_gauntlet",
+      "title": "Bring back the snapped (All entities in Soulworld)",
+      "bar_color": "yellow",
+      "hidden": true,
+      "hidden_in_bar": true,
+      "commands": [
+        "tp @e[tag=snap_soulworld] @s",
+        "tag @e remove snap_soulworld",
+        "superpower add infinity:burn @s",
+        "schedule function infinity:clear_burn 1d",
+        "tag @s add burn",
+        "tag @s add burn_texture",
+        "team remove soulworld"
       ],
       "conditions": {
         "enabling": [
@@ -4307,7 +4371,7 @@
         "tag @s add burn_texture",
         "tag @s add burn",
         "schedule function infinity:clear_burn 1d",
-        "kill @a[tag=!exclude]",
+        "execute in infinity:soulworld run tp @a[tag=!exclude] 1000 78 1000",
         "tag @s remove exclude",
         "playsound minecraft:block.conduit.activate master @a",
         "playsound minecraft:entity.wither.spawn master @a",
@@ -4374,51 +4438,108 @@
         "tag @s add burn_texture",
         "tag @s add burn",
         "schedule function infinity:clear_burn 1d",
-        "kill @e[type=minecraft:silverfish,tag=!exclude]",
-        "kill @e[type=minecraft:endermite,tag=!exclude]",
 
-        "kill @e[type=minecraft:zombie,tag=!exclude]",
-        "kill @e[type=minecraft:husk,tag=!exclude]",
-        "kill @e[type=minecraft:drowned,tag=!exclude]",
-        "kill @e[type=minecraft:zombie_villager,tag=!exclude]",
-        "kill @e[type=minecraft:skeleton,tag=!exclude]",
-        "kill @e[type=minecraft:stray,tag=!exclude]",
-        "kill @e[type=minecraft:wither_skeleton,tag=!exclude]",
+        "execute as @e[type=minecraft:silverfish,tag=!exclude] run tag @s add snap_soulworld",
+        "execute as @e[type=minecraft:silverfish,tag=!exclude] in infinity:soulworld run tp @s 1000 78 1000",
 
-        "kill @e[type=minecraft:creeper,tag=!exclude]",
-        "kill @e[type=minecraft:spider,tag=!exclude]",
-        "kill @e[type=minecraft:cave_spider,tag=!exclude]",
+        "execute as @e[type=minecraft:endermite,tag=!exclude] run tag @s add snap_soulworld",
+        "execute as @e[type=minecraft:endermite,tag=!exclude] in infinity:soulworld run tp @s 1000 78 1000",
 
-        "kill @e[type=minecraft:enderman,tag=!exclude]",
-        "kill @e[type=minecraft:witch,tag=!exclude]",
+        "execute as @e[type=minecraft:zombie,tag=!exclude] run tag @s add snap_soulworld",
+        "execute as @e[type=minecraft:zombie,tag=!exclude] in infinity:soulworld run tp @s 1000 78 1000",
 
-        "kill @e[type=minecraft:slime,tag=!exclude]",
-        "kill @e[type=minecraft:magma_cube,tag=!exclude]",
+        "execute as @e[type=minecraft:husk,tag=!exclude] run tag @s add snap_soulworld",
+        "execute as @e[type=minecraft:husk,tag=!exclude] in infinity:soulworld run tp @s 1000 78 1000",
 
-        "kill @e[type=minecraft:phantom,tag=!exclude]",
-        "kill @e[type=minecraft:blaze,tag=!exclude]",
-        "kill @e[type=minecraft:ghast,tag=!exclude]",
+        "execute as @e[type=minecraft:drowned,tag=!exclude] run tag @s add snap_soulworld",
+        "execute as @e[type=minecraft:drowned,tag=!exclude] in infinity:soulworld run tp @s 1000 78 1000",
 
-        "kill @e[type=minecraft:guardian,tag=!exclude]",
-        "kill @e[type=minecraft:elder_guardian,tag=!exclude]",
+        "execute as @e[type=minecraft:zombie_villager,tag=!exclude] run tag @s add snap_soulworld",
+        "execute as @e[type=minecraft:zombie_villager,tag=!exclude] in infinity:soulworld run tp @s 1000 78 1000",
 
-        "kill @e[type=minecraft:shulker,tag=!exclude]",
+        "execute as @e[type=minecraft:skeleton,tag=!exclude] run tag @s add snap_soulworld",
+        "execute as @e[type=minecraft:skeleton,tag=!exclude] in infinity:soulworld run tp @s 1000 78 1000",
 
-        "kill @e[type=minecraft:vindicator,tag=!exclude]",
-        "kill @e[type=minecraft:evoker,tag=!exclude]",
-        "kill @e[type=minecraft:vex,tag=!exclude]",
-        "kill @e[type=minecraft:pillager,tag=!exclude]",
-        "kill @e[type=minecraft:ravager,tag=!exclude]",
-        "kill @e[type=minecraft:illusioner,tag=!exclude]",
+        "execute as @e[type=minecraft:stray,tag=!exclude] run tag @s add snap_soulworld",
+        "execute as @e[type=minecraft:stray,tag=!exclude] in infinity:soulworld run tp @s 1000 78 1000",
 
-        "kill @e[type=minecraft:hoglin,tag=!exclude]",
-        "kill @e[type=minecraft:zoglin,tag=!exclude]",
-        "kill @e[type=minecraft:piglin_brute,tag=!exclude]",
+        "execute as @e[type=minecraft:wither_skeleton,tag=!exclude] run tag @s add snap_soulworld",
+        "execute as @e[type=minecraft:wither_skeleton,tag=!exclude] in infinity:soulworld run tp @s 1000 78 1000",
 
-        "kill @e[type=minecraft:warden,tag=!exclude]",
+        "execute as @e[type=minecraft:creeper,tag=!exclude] run tag @s add snap_soulworld",
+        "execute as @e[type=minecraft:creeper,tag=!exclude] in infinity:soulworld run tp @s 1000 78 1000",
 
-        "kill @e[type=minecraft:wither,tag=!exclude]",
-        "kill @e[type=minecraft:ender_dragon,tag=!exclude]",
+        "execute as @e[type=minecraft:spider,tag=!exclude] run tag @s add snap_soulworld",
+        "execute as @e[type=minecraft:spider,tag=!exclude] in infinity:soulworld run tp @s 1000 78 1000",
+
+        "execute as @e[type=minecraft:cave_spider,tag=!exclude] run tag @s add snap_soulworld",
+        "execute as @e[type=minecraft:cave_spider,tag=!exclude] in infinity:soulworld run tp @s 1000 78 1000",
+
+        "execute as @e[type=minecraft:enderman,tag=!exclude] run tag @s add snap_soulworld",
+        "execute as @e[type=minecraft:enderman,tag=!exclude] in infinity:soulworld run tp @s 1000 78 1000",
+
+        "execute as @e[type=minecraft:witch,tag=!exclude] run tag @s add snap_soulworld",
+        "execute as @e[type=minecraft:witch,tag=!exclude] in infinity:soulworld run tp @s 1000 78 1000",
+
+        "execute as @e[type=minecraft:slime,tag=!exclude] run tag @s add snap_soulworld",
+        "execute as @e[type=minecraft:slime,tag=!exclude] in infinity:soulworld run tp @s 1000 78 1000",
+
+        "execute as @e[type=minecraft:magma_cube,tag=!exclude] run tag @s add snap_soulworld",
+        "execute as @e[type=minecraft:magma_cube,tag=!exclude] in infinity:soulworld run tp @s 1000 78 1000",
+
+        "execute as @e[type=minecraft:phantom,tag=!exclude] run tag @s add snap_soulworld",
+        "execute as @e[type=minecraft:phantom,tag=!exclude] in infinity:soulworld run tp @s 1000 78 1000",
+
+        "execute as @e[type=minecraft:blaze,tag=!exclude] run tag @s add snap_soulworld",
+        "execute as @e[type=minecraft:blaze,tag=!exclude] in infinity:soulworld run tp @s 1000 78 1000",
+
+        "execute as @e[type=minecraft:ghast,tag=!exclude] run tag @s add snap_soulworld",
+        "execute as @e[type=minecraft:ghast,tag=!exclude] in infinity:soulworld run tp @s 1000 78 1000",
+
+        "execute as @e[type=minecraft:guardian,tag=!exclude] run tag @s add snap_soulworld",
+        "execute as @e[type=minecraft:guardian,tag=!exclude] in infinity:soulworld run tp @s 1000 78 1000",
+
+        "execute as @e[type=minecraft:elder_guardian,tag=!exclude] run tag @s add snap_soulworld",
+        "execute as @e[type=minecraft:elder_guardian,tag=!exclude] in infinity:soulworld run tp @s 1000 78 1000",
+
+        "execute as @e[type=minecraft:shulker,tag=!exclude] run tag @s add snap_soulworld",
+        "execute as @e[type=minecraft:shulker,tag=!exclude] in infinity:soulworld run tp @s 1000 78 1000",
+
+        "execute as @e[type=minecraft:vindicator,tag=!exclude] run tag @s add snap_soulworld",
+        "execute as @e[type=minecraft:vindicator,tag=!exclude] in infinity:soulworld run tp @s 1000 78 1000",
+
+        "execute as @e[type=minecraft:evoker,tag=!exclude] run tag @s add snap_soulworld",
+        "execute as @e[type=minecraft:evoker,tag=!exclude] in infinity:soulworld run tp @s 1000 78 1000",
+
+        "execute as @e[type=minecraft:vex,tag=!exclude] run tag @s add snap_soulworld",
+        "execute as @e[type=minecraft:vex,tag=!exclude] in infinity:soulworld run tp @s 1000 78 1000",
+
+        "execute as @e[type=minecraft:pillager,tag=!exclude] run tag @s add snap_soulworld",
+        "execute as @e[type=minecraft:pillager,tag=!exclude] in infinity:soulworld run tp @s 1000 78 1000",
+
+        "execute as @e[type=minecraft:ravager,tag=!exclude] run tag @s add snap_soulworld",
+        "execute as @e[type=minecraft:ravager,tag=!exclude] in infinity:soulworld run tp @s 1000 78 1000",
+
+        "execute as @e[type=minecraft:illusioner,tag=!exclude] run tag @s add snap_soulworld",
+        "execute as @e[type=minecraft:illusioner,tag=!exclude] in infinity:soulworld run tp @s 1000 78 1000",
+
+        "execute as @e[type=minecraft:hoglin,tag=!exclude] run tag @s add snap_soulworld",
+        "execute as @e[type=minecraft:hoglin,tag=!exclude] in infinity:soulworld run tp @s 1000 78 1000",
+
+        "execute as @e[type=minecraft:zoglin,tag=!exclude] run tag @s add snap_soulworld",
+        "execute as @e[type=minecraft:zoglin,tag=!exclude] in infinity:soulworld run tp @s 1000 78 1000",
+
+        "execute as @e[type=minecraft:piglin_brute,tag=!exclude] run tag @s add snap_soulworld",
+        "execute as @e[type=minecraft:piglin_brute,tag=!exclude] in infinity:soulworld run tp @s 1000 78 1000",
+
+        "execute as @e[type=minecraft:warden,tag=!exclude] run tag @s add snap_soulworld",
+        "execute as @e[type=minecraft:warden,tag=!exclude] in infinity:soulworld run tp @s 1000 78 1000",
+
+        "execute as @e[type=minecraft:wither,tag=!exclude] run tag @s add snap_soulworld",
+        "execute as @e[type=minecraft:wither,tag=!exclude] in infinity:soulworld run tp @s 1000 78 1000",
+
+        "execute as @e[type=minecraft:ender_dragon,tag=!exclude] run tag @s add snap_soulworld",
+        "execute as @e[type=minecraft:ender_dragon,tag=!exclude] in infinity:soulworld run tp @s 1000 78 1000",
 
         "tag @s remove exclude",
         "playsound minecraft:block.conduit.activate master @a",

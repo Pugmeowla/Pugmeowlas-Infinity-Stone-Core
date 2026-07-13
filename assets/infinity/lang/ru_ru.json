@@ -160,7 +160,7 @@
   "ability.infinity.time_stone.time_set.description": "Даёт доступ к команде time_set, позволяя устанавливать время мира самостоятельно.",
   "ability.infinity.time_stone.remove_time_stone.description": "Вытащить Камень Времени из Глаза Агамотто.(Присесть и ЛКМ)",
 
-  "ability.infinity.gauntlet.nano_gauntlet.description": "Окрывается нажатием ПКМ с Vibranium Flux Capacitor в руке. Наденьте этот скин и носите один игровой день чтобы избавиться от эффектов после Щелчка.",
+  "ability.infinity.gauntlet.nano_gauntlet.description": "Окрывается нажатием ПКМ с Вибраниумовым конденсатором потока в руке. Наденьте этот скин и носите один игровой день чтобы избавиться от эффектов после Щелчка.",
   "ability.infinity.gauntlet.fantastic_four_skin.description": "Открывается нажатием ПКМ с неизвестным предметом в руке. Специальный скин вдохновлённый Фантастической Четвёркой.",
   "ability.infinity.gauntlet.netherite_gauntlet.description": "Открывается нажатием ПКМ с Незеритовым Слитком в руке. Применяет укреплённый Незеритом Скин на Перчатку.",
   "ability.infinity.gauntlet.soul_netherite_gauntlet.description": "Открывается нажатием ПКИ с Наполненным-Душой Слитком Незерита в руке. Темное, более мощное улучшение для Незеритовой Перчатки.",
@@ -178,8 +178,8 @@
   "item.infinity.ferro-titanium-gold_alloy_ingot": "Слиток Ферро-Золото-Титаниумового Сплава",
 
   "item.infinity.52-d_unit": "Ячейка NP-Λ52",
-  "ability.infinity.gauntlet.panther_gauntlet.description": "Открывается ПКМ с Vibranium Ingot в основной руке.",
-  "ability.infinity.gauntlet.ultron_gauntlet.description": "Открывается ПКМ с Vibranium Circuit в основной руке.",
+  "ability.infinity.gauntlet.panther_gauntlet.description": "Открывается ПКМ с Вибраниумовым слитком в основной руке.",
+  "ability.infinity.gauntlet.ultron_gauntlet.description": "Открывается ПКМ с Вибраниумовой Схемой в основной руке.",
   "ability.infinity.gauntlet.cartoon_gauntlet.description": "Открывается ПКМ с Белой Шерстью в основной руке.",
   "ability.infinity.gauntlet.midnight.description": "Открывается ПКМ с Чёрным Красителем в основной руке.",
   "ability.infinity.gauntlet.52-d_gauntlet.description": "Открывается ПКМ с Ячейкой (NP-Λ52) в основной руке. Перчатка улучшенная NP-Λ52, способна стабилизировать и проводить через себя энергию Камней Бесконечности, полностью совместима с Mark 52-D.",
@@ -191,7 +191,20 @@
   "ability.infinity.space_stone.portal_gui.description": "Закрыто пока не установлен CoreWithStuff.",
   "ability.infinity.gauntlet.trinkets_desc.description": "Тоже что и Curios, но Trinkets для Fabric.",
   "ability.infinity.gauntlet.cws_desc.description": "Когда CoreWithStuff установлен, даёт кастомное GUI. Держите Перчатку Бесконечности в основной руке, и нажмите ПКМ чтобы открыть. Есть опция чтобы использовать старую систему установки камней, но это может создать проблемы с синхронизацией.",
-  "ability.infinity.time_stone.screen_toggle.description": "Включает и выключает оверлей с зелёным экраном от камня Времени."
+  "ability.infinity.time_stone.screen_toggle.description": "Включает и выключает оверлей с зелёным экраном от камня Времени.",
+
+  "block.infinity.dwarf_star_alloy_block": "Блок сплава Карликовой звезды",
+  "block.infinity.gold_titanium_alloy_block": "Блок Золото-Титаниумового Сплава",
+  "block.infinity.titanium_block": "Блок Титаниума",
+  "block.infinity.uru_block": "Блок Уру",
+  "item.infinity.gold_titanium_alloy_nugget": "Кусочек Золото-Титаниумового сплава",
+  "item.infinity.uru_dust": "Пыль Уру",
+  "item.infinity.uru_nugget": "Кусочек Уру",
+  "ability.infinity.gauntlet.blaze_inc_gauntlet.description": "Открывается ПКМ с Кварцевый конденсатор потока в основной руке. Посвящено Blaze Inc, этот скин для перчатки отдаёт дань уважения их вкладу в сообщество Palladium :)",
+  "ability.infinity.gauntlet.dragon_gauntlet.description": "Открывается ПКМ с Головой Дракона в основной руке.",
+  "ability.infinity.gauntlet.cosmi-rod_desc.description": "Чтобы вставить камень, держите Cosmi-Rod в основной руке и кликните ПКМ с камнем во второй руке.",
+  "ability.infinity.gauntlet.cosmi-rod_desc2.description": "Чтобы вытащить камень, держите Cosmi-Rod в основной руке и нажмите Шифт + ПКМ.",
+  "ability.infinity.reality_stone.shrink_dummy.description": "Позволяет менять рост, крутите колесико мыши пока включено.",
+  "ability.infinity.power_stone.radiation_texture_toggle.description": "Включает и выключает радиационный оверлей.",
+  "ability.infinity.orb.reset_progress.description": "Сбрасывает прогресс открытия Шара, позволяя открыть его снова по желанию."
 }
-
-
