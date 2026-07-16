@@ -1,0 +1,33 @@
+{
+  "type": "palladium:compound",
+  "layers": [
+    {
+      "type": "geckolib:default",
+      "model": "infinity:geo/scepter_ground.geo.json",
+      "texture": "infinity:textures/item/scepter.png",
+      "bones": {
+        "head": "head",
+        "body": "body",
+        "right_arm": "right_arm",
+        "left_arm": "left_arm",
+        "right_leg": "right_leg",
+        "left_leg": "left_leg"
+      }
+    },
+    {
+      "type": "geckolib:default",
+      "model": "infinity:geo/scepter_ground.geo.json",
+      "texture": "infinity:textures/item/scepter_e.png",
+      "render_type": "glow",
+      "enchantment_glint": true,
+      "bones": {
+        "head": "head",
+        "body": "body",
+        "right_arm": "right_arm",
+        "left_arm": "left_arm",
+        "right_leg": "right_leg",
+        "left_leg": "left_leg"
+      }
+    }
+  ]
+}

@@ -1,12 +1,19 @@
 {
-  "type": "minecraft:crafting_shapeless",
-  "ingredients": [
-    {
+  "type": "minecraft:crafting_shaped",
+  "pattern": ["GGG", "UHU", "GGG"],
+  "key": {
+    "H": {
       "item": "infinity:reality_stone"
     },
-    {
-      "item": "infinity:empty_aether"
+    "G": {
+      "item": "infinity:gold_titanium_alloy_plate"
+    },
+    "U": {
+      "item": "infinity:uru_ingot"
     }
-  ],
-  "result": { "item": "infinity:aether", "count": 1 }
+  },
+  "result": {
+    "item": "infinity:aether",
+    "count": 1
+  }
 }

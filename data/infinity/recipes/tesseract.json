@@ -1,12 +1,16 @@
 {
-  "type": "minecraft:crafting_shapeless",
-  "ingredients": [
-    {
+  "type": "minecraft:crafting_shaped",
+  "pattern": ["GGG", "GHG", "GGG"],
+  "key": {
+    "H": {
       "item": "infinity:space_stone"
     },
-    {
-      "item": "infinity:empty_tesseract"
+    "G": {
+      "item": "minecraft:light_blue_stained_glass"
     }
-  ],
-  "result": { "item": "infinity:tesseract", "count": 1 }
+  },
+  "result": {
+    "item": "infinity:tesseract",
+    "count": 1
+  }
 }

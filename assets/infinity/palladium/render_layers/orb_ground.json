@@ -1,0 +1,13 @@
+{
+  "type": "geckolib:default",
+  "model": "infinity:geo/orb_ground.geo.json",
+  "texture": "infinity:textures/item/orb.png",
+  "bones": {
+    "head": "head",
+    "body": "body",
+    "right_arm": "right_arm",
+    "left_arm": "left_arm",
+    "right_leg": "right_leg",
+    "left_leg": "left_leg"
+  }
+}

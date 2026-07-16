@@ -1,12 +1,19 @@
 {
-  "type": "minecraft:crafting_shapeless",
-  "ingredients": [
-    {
+  "type": "minecraft:crafting_shaped",
+  "pattern": ["S S", "GHG", " G "],
+  "key": {
+    "H": {
       "item": "infinity:time_stone"
     },
-    {
-      "item": "infinity:empty_eye_of_agamotto"
+    "G": {
+      "item": "infinity:gold_titanium_alloy_plate"
+    },
+    "S": {
+      "item": "minecraft:string"
     }
-  ],
-  "result": { "item": "infinity:eye_of_agamotto", "count": 1 }
+  },
+  "result": {
+    "item": "infinity:eye_of_agamotto",
+    "count": 1
+  }
 }

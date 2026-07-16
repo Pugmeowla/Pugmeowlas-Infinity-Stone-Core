@@ -3205,7 +3205,7 @@
     },
     "hand_of_terror": {
       "type": "palladium:command",
-      "icon": "infinity:empty_orb",
+      "icon": "infinity:orb",
       "title": "Hand of Terror",
       "bar_color": "black",
       "hidden": true,
@@ -3218,7 +3218,7 @@
       "first_tick_commands": [],
       "last_tick_commands": [],
       "commands": [
-        "clear @s infinity:empty_orb",
+        "clear @s infinity:orb",
         "tag @s add hand_of_terror",
         "tag @s add skin_on",
         "playsound minecraft:block.anvil.land block @s"
@@ -3246,7 +3246,7 @@
           {
             "type": "palladium:item_in_slot",
             "item": {
-              "item": "infinity:empty_orb"
+              "item": "infinity:orb"
             },
             "slot": "mainhand"
           }
@@ -3824,7 +3824,7 @@
         "execute if entity @s[tag=fantastic_four_skin] run give @s shears",
         "execute if entity @s[tag=soul_netherite_gauntlet] run give @s infinity:soul_infused_netherite_ingot",
         "execute if entity @s[tag=finger_gauntlet] run give @s minecraft:chicken",
-        "execute if entity @s[tag=hand_of_terror] run give @s infinity:empty_orb",
+        "execute if entity @s[tag=hand_of_terror] run give @s infinity:orb",
         "execute if entity @s[tag=sith_gauntlet] run give @s infinity:uru_ingot",
         "execute if entity @s[tag=endosym_gauntlet] run give @s infinity:endosym_ingot",
         "execute if entity @s[tag=rose_gauntlet] run give @s minecraft:cherry_planks",
