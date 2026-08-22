@@ -64,7 +64,10 @@
       "gui_position": [0, -1],
       "description": "Pacify hostile mobs around you",
       "first_tick_commands": ["scoreboard objectives add DamageCycle dummy"],
-      "last_tick_commands": [],
+      "last_tick_commands": [
+        "scoreboard players set @s DamageCycle 0",
+        "attribute @s minecraft:generic.attack_damage base set 1"
+      ],
       "commands": [
         "execute as @e[tag=meteorite] at @s run particle flame ~ ~ ~ 0.15 0.15 0.15 0 10 force @a[distance=..50]",
         "execute as @e[tag=meteorite] at @s run particle campfire_cosy_smoke ~ ~ ~ 0.15 0.15 0.15 0.02 5 force @a[distance=..50]",
@@ -72,19 +75,6 @@
         "execute as @e[tag=meteorite] at @s run particle minecraft:enchanted_hit ~ ~ ~ 0.08 0.08 0.08 0 5 force @a[distance=..50]",
         "execute as @e[tag=meteorite] at @s run particle minecraft:happy_villager ~ ~ ~ 0.1 0.1 0.1 0 6 force @a[distance=..50]",
         "execute as @e[tag=meteorite] at @s run particle minecraft:lava ~ ~ ~ 0.08 0.08 0.08 0 5 force @a[distance=..50]",
-
-        "execute if score @s DamageCycle matches 0 run attribute @s minecraft:generic.attack_damage base set 1",
-        "execute if score @s DamageCycle matches 1 run attribute @s minecraft:generic.attack_damage base set 2",
-        "execute if score @s DamageCycle matches 2 run attribute @s minecraft:generic.attack_damage base set 4",
-        "execute if score @s DamageCycle matches 3 run attribute @s minecraft:generic.attack_damage base set 8",
-        "execute if score @s DamageCycle matches 4 run attribute @s minecraft:generic.attack_damage base set 16",
-        "execute if score @s DamageCycle matches 5 run attribute @s minecraft:generic.attack_damage base set 32",
-        "execute if score @s DamageCycle matches 6 run attribute @s minecraft:generic.attack_damage base set 64",
-        "execute if score @s DamageCycle matches 7 run attribute @s minecraft:generic.attack_damage base set 128",
-        "execute if score @s DamageCycle matches 8 run attribute @s minecraft:generic.attack_damage base set 256",
-        "execute if score @s DamageCycle matches 9 run attribute @s minecraft:generic.attack_damage base set 512",
-        "execute if score @s DamageCycle matches 10 run attribute @s minecraft:generic.attack_damage base set 1024",
-        "execute if score @s DamageCycle matches 11 run attribute @s minecraft:generic.attack_damage base set 2048",
 
         "execute if score @s DamageCycle matches 12 run scoreboard players set @s DamageCycle 11",
         "execute if score @s DamageCycle matches -1 run scoreboard players set @s DamageCycle 0"
@@ -176,7 +166,20 @@
         "scoreboard players add @s DamageCycle 1"
       ],
       "first_tick_commands": [],
-      "last_tick_commands": [],
+      "last_tick_commands": [
+        "execute if score @s DamageCycle matches 0 run attribute @s minecraft:generic.attack_damage base set 1",
+        "execute if score @s DamageCycle matches 1 run attribute @s minecraft:generic.attack_damage base set 2",
+        "execute if score @s DamageCycle matches 2 run attribute @s minecraft:generic.attack_damage base set 4",
+        "execute if score @s DamageCycle matches 3 run attribute @s minecraft:generic.attack_damage base set 8",
+        "execute if score @s DamageCycle matches 4 run attribute @s minecraft:generic.attack_damage base set 16",
+        "execute if score @s DamageCycle matches 5 run attribute @s minecraft:generic.attack_damage base set 32",
+        "execute if score @s DamageCycle matches 6 run attribute @s minecraft:generic.attack_damage base set 64",
+        "execute if score @s DamageCycle matches 7 run attribute @s minecraft:generic.attack_damage base set 128",
+        "execute if score @s DamageCycle matches 8 run attribute @s minecraft:generic.attack_damage base set 256",
+        "execute if score @s DamageCycle matches 9 run attribute @s minecraft:generic.attack_damage base set 512",
+        "execute if score @s DamageCycle matches 10 run attribute @s minecraft:generic.attack_damage base set 1024",
+        "execute if score @s DamageCycle matches 11 run attribute @s minecraft:generic.attack_damage base set 2048"
+      ],
       "conditions": {
         "enabling": [
           {
@@ -213,7 +216,20 @@
         "scoreboard players remove @s DamageCycle 1"
       ],
       "first_tick_commands": [],
-      "last_tick_commands": [],
+      "last_tick_commands": [
+        "execute if score @s DamageCycle matches 0 run attribute @s minecraft:generic.attack_damage base set 1",
+        "execute if score @s DamageCycle matches 1 run attribute @s minecraft:generic.attack_damage base set 2",
+        "execute if score @s DamageCycle matches 2 run attribute @s minecraft:generic.attack_damage base set 4",
+        "execute if score @s DamageCycle matches 3 run attribute @s minecraft:generic.attack_damage base set 8",
+        "execute if score @s DamageCycle matches 4 run attribute @s minecraft:generic.attack_damage base set 16",
+        "execute if score @s DamageCycle matches 5 run attribute @s minecraft:generic.attack_damage base set 32",
+        "execute if score @s DamageCycle matches 6 run attribute @s minecraft:generic.attack_damage base set 64",
+        "execute if score @s DamageCycle matches 7 run attribute @s minecraft:generic.attack_damage base set 128",
+        "execute if score @s DamageCycle matches 8 run attribute @s minecraft:generic.attack_damage base set 256",
+        "execute if score @s DamageCycle matches 9 run attribute @s minecraft:generic.attack_damage base set 512",
+        "execute if score @s DamageCycle matches 10 run attribute @s minecraft:generic.attack_damage base set 1024",
+        "execute if score @s DamageCycle matches 11 run attribute @s minecraft:generic.attack_damage base set 2048"
+      ],
       "conditions": {
         "enabling": [
           {
@@ -1397,50 +1413,6 @@
               "item": "infinity:aspects_of_existance"
             },
             "amount": 1
-          },
-          {
-            "type": "palladium:or",
-            "conditions": [
-              {
-                "type": "palladium:has_power",
-                "power": "infinity:infinity_gauntlet"
-              },
-              {
-                "type": "palladium:item_in_slot",
-                "item": {
-                  "item": "infinity:power_stone"
-                },
-                "slot": "mainhand"
-              },
-              {
-                "type": "palladium:item_in_slot",
-                "item": {
-                  "item": "infinity:cosmi-rod_power"
-                },
-                "slot": "offhand"
-              },
-              {
-                "type": "palladium:item_in_slot",
-                "item": {
-                  "item": "infinity:cosmi-rod_power"
-                },
-                "slot": "mainhand"
-              },
-              {
-                "type": "palladium:item_in_slot",
-                "item": {
-                  "item": "infinity:power_stone"
-                },
-                "slot": "offhand"
-              },
-              {
-                "type": "palladium:item_in_slot",
-                "item": {
-                  "item": "infinity:cosmi-rod_power"
-                },
-                "slot": "mainhand"
-              }
-            ]
           }
         ]
       }
@@ -1470,43 +1442,6 @@
               "item": "infinity:aspects_of_existance"
             },
             "amount": 1
-          },
-          {
-            "type": "palladium:or",
-            "conditions": [
-              {
-                "type": "palladium:has_power",
-                "power": "infinity:infinity_gauntlet"
-              },
-              {
-                "type": "palladium:item_in_slot",
-                "item": {
-                  "item": "infinity:power_stone"
-                },
-                "slot": "mainhand"
-              },
-              {
-                "type": "palladium:item_in_slot",
-                "item": {
-                  "item": "infinity:cosmi-rod_power"
-                },
-                "slot": "offhand"
-              },
-              {
-                "type": "palladium:item_in_slot",
-                "item": {
-                  "item": "infinity:cosmi-rod_power"
-                },
-                "slot": "mainhand"
-              },
-              {
-                "type": "palladium:item_in_slot",
-                "item": {
-                  "item": "infinity:power_stone"
-                },
-                "slot": "offhand"
-              }
-            ]
           },
           {
             "type": "palladium:ability_unlocked",
@@ -1542,7 +1477,6 @@
                     "min_score": 1,
                     "max_score": 1
                   },
-
                   {
                     "type": "palladium:item_in_slot",
                     "item": {

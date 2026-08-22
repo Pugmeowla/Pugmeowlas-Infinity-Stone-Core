@@ -79,80 +79,8 @@
         "execute as @e[type=armor_stand,tag=temp_stand] at @s run particle minecraft:dust 0.3 0.7 1 2 ~0.625 ~-0.0825 ~-0.5 0 0 0 0 1 force",
         "execute as @e[type=armor_stand,tag=temp_stand] at @s run particle minecraft:dust 0.3 0.7 1 2 ~0.8839 ~0.1161 ~-0.5 0 0 0 0 1 force",
         "execute as @e[type=armor_stand,tag=temp_stand] at @s run particle minecraft:dust 0.3 0.7 1 2 ~1.0825 ~0.375 ~-0.5 0 0 0 0 1 force",
-        "execute as @e[type=armor_stand,tag=temp_stand] at @s run particle minecraft:dust 0.3 0.7 1 2 ~1.2071 ~0.6764 ~-0.5 0 0 0 0 1 force"
-      ],
-      "conditions": {
-        "unlocking": [
-          {
-            "type": "palladium:or",
-            "conditions": [
-              {
-                "type": "palladium:has_power",
-                "power": "infinity:infinity_gauntlet"
-              },
-              {
-                "type": "palladium:item_in_slot",
-                "item": {
-                  "item": "infinity:tesseract"
-                },
-                "slot": "mainhand"
-              },
-              {
-                "type": "palladium:item_in_slot",
-                "item": {
-                  "item": "infinity:tesseract"
-                },
-                "slot": "offhand"
-              },
-              {
-                "type": "palladium:item_in_slot",
-                "item": {
-                  "item": "infinity:space_stone"
-                },
-                "slot": "mainhand"
-              },
-              {
-                "type": "palladium:item_in_slot",
-                "item": {
-                  "item": "infinity:space_stone"
-                },
-                "slot": "offhand"
-              },
-              {
-                "type": "palladium:item_in_slot",
-                "item": {
-                  "item": "infinity:cosmi-rod_space"
-                },
-                "slot": "mainhand"
-              },
-              {
-                "type": "palladium:item_in_slot",
-                "item": {
-                  "item": "infinity:cosmi-rod_space"
-                },
-                "slot": "offhand"
-              }
-            ]
-          }
-        ]
-      }
-    },
-    "tick2": {
-      "type": "palladium:command",
-      "icon": "infinity:textures/icon/teleport.png",
-      "title": "Teleport",
-      "bar_color": "light_blue",
-      "persistent_data": true,
-      "hidden": true,
-      "hidden_in_bar": true,
-      "list_index": 1,
-      "gui_position": [0, -1],
-      "description": {
-        "translate": "ability.infinity.space_stone.teleport.description"
-      },
-      "first_tick_commands": [],
-      "last_tick_commands": [],
-      "commands": [
+        "execute as @e[type=armor_stand,tag=temp_stand] at @s run particle minecraft:dust 0.3 0.7 1 2 ~1.2071 ~0.6764 ~-0.5 0 0 0 0 1 force",
+
         "execute as @e[type=corewithstuff:wormhole,tag=infinity_wormwhole] at @s run particle minecraft:dust 0.3 0.7 1 2 ~1.25 ~1.0 ~-0.5 0 0 0 0 1 force",
         "execute as @e[type=corewithstuff:wormhole,tag=infinity_wormwhole] at @s run particle minecraft:dust 0.3 0.7 1 2 ~1.2071 ~1.3236 ~-0.5 0 0 0 0 1 force",
         "execute as @e[type=corewithstuff:wormhole,tag=infinity_wormwhole] at @s run particle minecraft:dust 0.3 0.7 1 2 ~1.0825 ~1.625 ~-0.5 0 0 0 0 1 force",
@@ -177,63 +105,9 @@
         "execute as @e[type=corewithstuff:wormhole,tag=infinity_wormwhole] at @s run particle minecraft:dust 0.3 0.7 1 2 ~0.8839 ~0.1161 ~-0.5 0 0 0 0 1 force",
         "execute as @e[type=corewithstuff:wormhole,tag=infinity_wormwhole] at @s run particle minecraft:dust 0.3 0.7 1 2 ~1.0825 ~0.375 ~-0.5 0 0 0 0 1 force",
         "execute as @e[type=corewithstuff:wormhole,tag=infinity_wormwhole] at @s run particle minecraft:dust 0.3 0.7 1 2 ~1.2071 ~0.6764 ~-0.5 0 0 0 0 1 force"
-      ],
-      "conditions": {
-        "unlocking": [
-          {
-            "type": "palladium:or",
-            "conditions": [
-              {
-                "type": "palladium:has_power",
-                "power": "infinity:infinity_gauntlet"
-              },
-              {
-                "type": "palladium:item_in_slot",
-                "item": {
-                  "item": "infinity:tesseract"
-                },
-                "slot": "mainhand"
-              },
-              {
-                "type": "palladium:item_in_slot",
-                "item": {
-                  "item": "infinity:tesseract"
-                },
-                "slot": "offhand"
-              },
-              {
-                "type": "palladium:item_in_slot",
-                "item": {
-                  "item": "infinity:space_stone"
-                },
-                "slot": "mainhand"
-              },
-              {
-                "type": "palladium:item_in_slot",
-                "item": {
-                  "item": "infinity:space_stone"
-                },
-                "slot": "offhand"
-              },
-              {
-                "type": "palladium:item_in_slot",
-                "item": {
-                  "item": "infinity:cosmi-rod_space"
-                },
-                "slot": "mainhand"
-              },
-              {
-                "type": "palladium:item_in_slot",
-                "item": {
-                  "item": "infinity:cosmi-rod_space"
-                },
-                "slot": "offhand"
-              }
-            ]
-          }
-        ]
-      }
+      ]
     },
+
     "teleport": {
       "type": "palladium:command",
       "icon": "infinity:textures/icon/teleport.png",
@@ -275,57 +149,6 @@
               "item": "infinity:aspects_of_existance"
             },
             "amount": 1
-          },
-          {
-            "type": "palladium:or",
-            "conditions": [
-              {
-                "type": "palladium:has_power",
-                "power": "infinity:infinity_gauntlet"
-              },
-              {
-                "type": "palladium:item_in_slot",
-                "item": {
-                  "item": "infinity:tesseract"
-                },
-                "slot": "mainhand"
-              },
-              {
-                "type": "palladium:item_in_slot",
-                "item": {
-                  "item": "infinity:tesseract"
-                },
-                "slot": "offhand"
-              },
-              {
-                "type": "palladium:item_in_slot",
-                "item": {
-                  "item": "infinity:space_stone"
-                },
-                "slot": "mainhand"
-              },
-              {
-                "type": "palladium:item_in_slot",
-                "item": {
-                  "item": "infinity:space_stone"
-                },
-                "slot": "offhand"
-              },
-              {
-                "type": "palladium:item_in_slot",
-                "item": {
-                  "item": "infinity:cosmi-rod_space"
-                },
-                "slot": "mainhand"
-              },
-              {
-                "type": "palladium:item_in_slot",
-                "item": {
-                  "item": "infinity:cosmi-rod_space"
-                },
-                "slot": "offhand"
-              }
-            ]
           }
         ]
       }
@@ -362,57 +185,6 @@
             "type": "palladium:ability_unlocked",
             "power": "null",
             "ability": "force_field"
-          },
-          {
-            "type": "palladium:or",
-            "conditions": [
-              {
-                "type": "palladium:has_power",
-                "power": "infinity:infinity_gauntlet"
-              },
-              {
-                "type": "palladium:item_in_slot",
-                "item": {
-                  "item": "infinity:tesseract"
-                },
-                "slot": "mainhand"
-              },
-              {
-                "type": "palladium:item_in_slot",
-                "item": {
-                  "item": "infinity:tesseract"
-                },
-                "slot": "offhand"
-              },
-              {
-                "type": "palladium:item_in_slot",
-                "item": {
-                  "item": "infinity:space_stone"
-                },
-                "slot": "mainhand"
-              },
-              {
-                "type": "palladium:item_in_slot",
-                "item": {
-                  "item": "infinity:space_stone"
-                },
-                "slot": "offhand"
-              },
-              {
-                "type": "palladium:item_in_slot",
-                "item": {
-                  "item": "infinity:cosmi-rod_space"
-                },
-                "slot": "mainhand"
-              },
-              {
-                "type": "palladium:item_in_slot",
-                "item": {
-                  "item": "infinity:cosmi-rod_space"
-                },
-                "slot": "offhand"
-              }
-            ]
           }
         ]
       }
@@ -435,11 +207,6 @@
       "last_tick_commands": [],
       "commands": [""],
       "conditions": {
-        "enabling": [
-          {
-            "type": "palladium:true"
-          }
-        ],
         "unlocking": [
           {
             "type": "palladium:item_buyable",
@@ -452,58 +219,6 @@
             "type": "palladium:ability_unlocked",
             "power": "null",
             "ability": "teleport"
-          },
-
-          {
-            "type": "palladium:or",
-            "conditions": [
-              {
-                "type": "palladium:has_power",
-                "power": "infinity:infinity_gauntlet"
-              },
-              {
-                "type": "palladium:item_in_slot",
-                "item": {
-                  "item": "infinity:tesseract"
-                },
-                "slot": "mainhand"
-              },
-              {
-                "type": "palladium:item_in_slot",
-                "item": {
-                  "item": "infinity:tesseract"
-                },
-                "slot": "offhand"
-              },
-              {
-                "type": "palladium:item_in_slot",
-                "item": {
-                  "item": "infinity:space_stone"
-                },
-                "slot": "mainhand"
-              },
-              {
-                "type": "palladium:item_in_slot",
-                "item": {
-                  "item": "infinity:space_stone"
-                },
-                "slot": "offhand"
-              },
-              {
-                "type": "palladium:item_in_slot",
-                "item": {
-                  "item": "infinity:cosmi-rod_space"
-                },
-                "slot": "mainhand"
-              },
-              {
-                "type": "palladium:item_in_slot",
-                "item": {
-                  "item": "infinity:cosmi-rod_space"
-                },
-                "slot": "offhand"
-              }
-            ]
           }
         ]
       }
@@ -511,24 +226,12 @@
 
     "grab_entity": {
       "type": "palladium:command",
-      "icon": "infinity:space_stone",
-      "title": "Telekinesis",
-      "bar_color": "light_blue",
-      "persistent_data": true,
       "hidden": true,
       "hidden_in_bar": true,
-      "list_index": 2,
-      "gui_position": [0.5, 0],
-      "description": {
-        "translate": "ability.infinity.space_stone.telekinesis.description"
-      },
       "first_tick_commands": [
         "playsound infinity:use_infinity_gauntlet block @s"
       ],
-      "last_tick_commands": [],
-      "commands": [
-        "execute as @s run execute at @s run particle dust 0.345 0.714 0.89 1 ^ ^1.1 ^5 0.3 0.3 0.3 0 50"
-      ],
+      "commands": [],
       "conditions": {
         "enabling": [
           {
@@ -540,7 +243,7 @@
       }
     },
     "grab_entity2": {
-      "type": "phantom_pe:telekinesis",
+      "type": "corewithstuff:telekinesis",
       "icon": "infinity:space_stone",
       "title": "Telekinesis",
       "bar_color": "light_blue",
@@ -552,14 +255,31 @@
       "description": {
         "translate": "ability.infinity.space_stone.telekinesis.description"
       },
-      "range": 6,
-      "strength_multiplier": 1,
-      "damage_multiplier": 2,
+      "range": 20,
+      "strength": 1,
+      "damage": 0,
+      "reset": true,
+      "affect_players": true,
+      "affect_blocks": false,
+      "whitelist_enabled": false,
+      "whitelist": "",
+      "blacklist_enabled": true,
+      "blacklist": "minecraft:bedrock,minecraft:barrier,minecraft:obsidian",
+      "other_rgbs": "null",
+      "other_count": 1,
+      "other_speed": 1,
+      "dust": true,
+      "dust_rgbs": "0.345 0.714 0.89 1",
+      "dust_count": 5,
+      "dust_speed": 1,
       "conditions": {
         "enabling": [
           {
             "type": "palladium:held",
-            "cooldown": 0
+            "cooldown": 0,
+            "key_type": "key_bind",
+            "needs_empty_hand": false,
+            "allow_scrolling_when_crouching": true
           }
         ],
         "unlocking": [
@@ -574,57 +294,97 @@
             "type": "palladium:ability_unlocked",
             "power": "null",
             "ability": "force_field"
-          },
+          }
+        ]
+      }
+    },
+    "grab_push": {
+      "type": "corewithstuff:telekinesis_push",
+      "hidden": true,
+      "hidden_in_bar": true,
+      "min_dist": 2,
+      "max_dist": 30,
+      "show_text": false,
+      "conditions": {
+        "enabling": [
           {
-            "type": "palladium:or",
-            "conditions": [
-              {
-                "type": "palladium:has_power",
-                "power": "infinity:infinity_gauntlet"
-              },
-              {
-                "type": "palladium:item_in_slot",
-                "item": {
-                  "item": "infinity:tesseract"
-                },
-                "slot": "mainhand"
-              },
-              {
-                "type": "palladium:item_in_slot",
-                "item": {
-                  "item": "infinity:tesseract"
-                },
-                "slot": "offhand"
-              },
-              {
-                "type": "palladium:item_in_slot",
-                "item": {
-                  "item": "infinity:space_stone"
-                },
-                "slot": "mainhand"
-              },
-              {
-                "type": "palladium:item_in_slot",
-                "item": {
-                  "item": "infinity:space_stone"
-                },
-                "slot": "offhand"
-              },
-              {
-                "type": "palladium:item_in_slot",
-                "item": {
-                  "item": "infinity:cosmi-rod_space"
-                },
-                "slot": "mainhand"
-              },
-              {
-                "type": "palladium:item_in_slot",
-                "item": {
-                  "item": "infinity:cosmi-rod_space"
-                },
-                "slot": "offhand"
-              }
-            ]
+            "type": "palladium:action",
+            "cooldown": 0,
+            "key_type": "scroll_up"
+          }
+        ],
+        "unlocking": [
+          {
+            "type": "palladium:ability_enabled",
+            "power": "null",
+            "ability": "grab_entity2"
+          }
+        ]
+      }
+    },
+    "grab_pull": {
+      "type": "corewithstuff:telekinesis_pull",
+      "hidden": true,
+      "hidden_in_bar": true,
+      "min_dist": 2,
+      "max_dist": 30,
+      "show_text": false,
+      "conditions": {
+        "enabling": [
+          {
+            "type": "palladium:action",
+            "cooldown": 0,
+            "key_type": "scroll_down"
+          }
+        ],
+        "unlocking": [
+          {
+            "type": "palladium:ability_enabled",
+            "power": "null",
+            "ability": "grab_entity2"
+          }
+        ]
+      }
+    },
+    "grab_throw": {
+      "type": "corewithstuff:telekinesis_throw",
+      "hidden": true,
+      "hidden_in_bar": true,
+      "list_index": 0,
+      "gui_position": "null",
+      "description": "null",
+      "throw_strength": 5,
+      "conditions": {
+        "enabling": [
+          {
+            "type": "palladium:action",
+            "cooldown": 0,
+            "key_type": "left_click",
+            "needs_empty_hand": false,
+            "allow_scrolling_when_crouching": true
+          }
+        ],
+        "unlocking": [
+          {
+            "type": "palladium:ability_enabled",
+            "power": "null",
+            "ability": "grab_entity2"
+          }
+        ]
+      }
+    },
+    "grab_aim": {
+      "type": "palladium:aim",
+      "hidden": true,
+      "hidden_in_bar": true,
+      "time": 1,
+      "arm": "off_arm",
+      "conditions": {
+        "enabling": [
+          {
+            "type": "palladium:ability_enabled",
+            "power": "null",
+            "ability": "grab_entity2"
           }
         ]
       }
@@ -642,59 +402,6 @@
             "type": "palladium:ability_enabled",
             "ability": "force_field"
           }
-        ],
-        "unlocking": [
-          {
-            "type": "palladium:or",
-            "conditions": [
-              {
-                "type": "palladium:has_power",
-                "power": "infinity:infinity_gauntlet"
-              },
-              {
-                "type": "palladium:item_in_slot",
-                "item": {
-                  "item": "infinity:tesseract"
-                },
-                "slot": "mainhand"
-              },
-              {
-                "type": "palladium:item_in_slot",
-                "item": {
-                  "item": "infinity:tesseract"
-                },
-                "slot": "offhand"
-              },
-              {
-                "type": "palladium:item_in_slot",
-                "item": {
-                  "item": "infinity:space_stone"
-                },
-                "slot": "mainhand"
-              },
-              {
-                "type": "palladium:item_in_slot",
-                "item": {
-                  "item": "infinity:space_stone"
-                },
-                "slot": "offhand"
-              },
-              {
-                "type": "palladium:item_in_slot",
-                "item": {
-                  "item": "infinity:cosmi-rod_space"
-                },
-                "slot": "mainhand"
-              },
-              {
-                "type": "palladium:item_in_slot",
-                "item": {
-                  "item": "infinity:cosmi-rod_space"
-                },
-                "slot": "offhand"
-              }
-            ]
-          }
         ]
       }
     },
@@ -709,9 +416,11 @@
       "gui_position": "null",
       "description": "null",
       "first_tick_commands": [
-        "effect give @s minecraft:resistance infinite 255 true"
+        "attribute @s minecraft:generic.movement_speed base set -0.15"
       ],
-      "last_tick_commands": ["effect clear @s minecraft:resistance"],
+      "last_tick_commands": [
+        "attribute @s minecraft:generic.movement_speed base set 0.1"
+      ],
       "commands": ["execute at @s as @s run tp @s @s"],
       "conditions": {
         "enabling": [
@@ -727,7 +436,6 @@
       "list_index": 3,
       "max_value": 8,
       "bar_color": "orange",
-      "title": { "translate": "ability.alienevo_aliens.6.block" },
       "hidden": true,
       "hidden_in_bar": true,
       "conditions": {
@@ -779,57 +487,6 @@
             "type": "palladium:ability_unlocked",
             "power": "null",
             "ability": "fall_immunity"
-          },
-          {
-            "type": "palladium:or",
-            "conditions": [
-              {
-                "type": "palladium:has_power",
-                "power": "infinity:infinity_gauntlet"
-              },
-              {
-                "type": "palladium:item_in_slot",
-                "item": {
-                  "item": "infinity:tesseract"
-                },
-                "slot": "mainhand"
-              },
-              {
-                "type": "palladium:item_in_slot",
-                "item": {
-                  "item": "infinity:tesseract"
-                },
-                "slot": "offhand"
-              },
-              {
-                "type": "palladium:item_in_slot",
-                "item": {
-                  "item": "infinity:space_stone"
-                },
-                "slot": "mainhand"
-              },
-              {
-                "type": "palladium:item_in_slot",
-                "item": {
-                  "item": "infinity:space_stone"
-                },
-                "slot": "offhand"
-              },
-              {
-                "type": "palladium:item_in_slot",
-                "item": {
-                  "item": "infinity:cosmi-rod_space"
-                },
-                "slot": "mainhand"
-              },
-              {
-                "type": "palladium:item_in_slot",
-                "item": {
-                  "item": "infinity:cosmi-rod_space"
-                },
-                "slot": "offhand"
-              }
-            ]
           }
         ]
       }
@@ -854,59 +511,6 @@
           {
             "type": "palladium:ability_enabled",
             "ability": "force_field"
-          }
-        ],
-        "unlocking": [
-          {
-            "type": "palladium:or",
-            "conditions": [
-              {
-                "type": "palladium:has_power",
-                "power": "infinity:infinity_gauntlet"
-              },
-              {
-                "type": "palladium:item_in_slot",
-                "item": {
-                  "item": "infinity:tesseract"
-                },
-                "slot": "mainhand"
-              },
-              {
-                "type": "palladium:item_in_slot",
-                "item": {
-                  "item": "infinity:tesseract"
-                },
-                "slot": "offhand"
-              },
-              {
-                "type": "palladium:item_in_slot",
-                "item": {
-                  "item": "infinity:space_stone"
-                },
-                "slot": "mainhand"
-              },
-              {
-                "type": "palladium:item_in_slot",
-                "item": {
-                  "item": "infinity:space_stone"
-                },
-                "slot": "offhand"
-              },
-              {
-                "type": "palladium:item_in_slot",
-                "item": {
-                  "item": "infinity:cosmi-rod_space"
-                },
-                "slot": "mainhand"
-              },
-              {
-                "type": "palladium:item_in_slot",
-                "item": {
-                  "item": "infinity:cosmi-rod_space"
-                },
-                "slot": "offhand"
-              }
-            ]
           }
         ]
       }
@@ -984,66 +588,9 @@
               }
             ]
           },
-
-          {
-            "type": "palladium:has_power",
-            "power": "infinity:space_stone"
-          },
           {
             "type": "palladium:has_power",
             "power": "infinity:power_stone_passive"
-          },
-
-          {
-            "type": "palladium:or",
-            "conditions": [
-              {
-                "type": "palladium:has_power",
-                "power": "infinity:infinity_gauntlet"
-              },
-              {
-                "type": "palladium:item_in_slot",
-                "item": {
-                  "item": "infinity:tesseract"
-                },
-                "slot": "mainhand"
-              },
-              {
-                "type": "palladium:item_in_slot",
-                "item": {
-                  "item": "infinity:tesseract"
-                },
-                "slot": "offhand"
-              },
-              {
-                "type": "palladium:item_in_slot",
-                "item": {
-                  "item": "infinity:space_stone"
-                },
-                "slot": "mainhand"
-              },
-              {
-                "type": "palladium:item_in_slot",
-                "item": {
-                  "item": "infinity:space_stone"
-                },
-                "slot": "offhand"
-              },
-              {
-                "type": "palladium:item_in_slot",
-                "item": {
-                  "item": "infinity:cosmi-rod_space"
-                },
-                "slot": "mainhand"
-              },
-              {
-                "type": "palladium:item_in_slot",
-                "item": {
-                  "item": "infinity:cosmi-rod_space"
-                },
-                "slot": "offhand"
-              }
-            ]
           }
         ]
       }
@@ -1084,122 +631,12 @@
           },
           {
             "type": "palladium:has_power",
-            "power": "infinity:space_stone"
-          },
-          {
-            "type": "palladium:has_power",
             "power": "infinity:power_stone_passive"
-          },
-
-          {
-            "type": "palladium:or",
-            "conditions": [
-              {
-                "type": "palladium:has_power",
-                "power": "infinity:infinity_gauntlet"
-              },
-              {
-                "type": "palladium:item_in_slot",
-                "item": {
-                  "item": "infinity:tesseract"
-                },
-                "slot": "mainhand"
-              },
-              {
-                "type": "palladium:item_in_slot",
-                "item": {
-                  "item": "infinity:tesseract"
-                },
-                "slot": "offhand"
-              },
-              {
-                "type": "palladium:item_in_slot",
-                "item": {
-                  "item": "infinity:space_stone"
-                },
-                "slot": "mainhand"
-              },
-              {
-                "type": "palladium:item_in_slot",
-                "item": {
-                  "item": "infinity:space_stone"
-                },
-                "slot": "offhand"
-              },
-              {
-                "type": "palladium:item_in_slot",
-                "item": {
-                  "item": "infinity:cosmi-rod_space"
-                },
-                "slot": "mainhand"
-              },
-              {
-                "type": "palladium:item_in_slot",
-                "item": {
-                  "item": "infinity:cosmi-rod_space"
-                },
-                "slot": "offhand"
-              }
-            ]
           }
         ]
       }
     },
 
-    "remove_space_stone": {
-      "type": "palladium:command",
-      "persistent_data": true,
-      "icon": "infinity:space_stone",
-      "title": "Remove Space Stone",
-      "bar_color": "light_blue",
-      "hidden": true,
-      "hidden_in_bar": true,
-      "list_index": -1,
-      "gui_position": "null",
-      "description": {
-        "translate": "ability.infinity.space_stone.remove_space_stone.description"
-      },
-      "commands": [
-        "execute as @s run clear @s infinity:tesseract",
-        "execute as @s run function infinity:givespacestone",
-        "execute as @s run give @s infinity:empty_tesseract"
-      ],
-      "conditions": {
-        "enabling": [
-          {
-            "type": "palladium:action",
-            "cooldown": 0,
-            "key_type": "right_click",
-            "needs_empty_hand": false,
-            "allow_scrolling_when_crouching": true
-          },
-          {
-            "type": "palladium:crouching"
-          }
-        ],
-        "unlocking": [
-          {
-            "type": "palladium:or",
-            "conditions": [
-              {
-                "type": "palladium:item_in_slot",
-                "item": {
-                  "item": "infinity:tesseract"
-                },
-                "slot": "offhand"
-              },
-              {
-                "type": "palladium:item_in_slot",
-                "item": {
-                  "item": "infinity:tesseract"
-                },
-                "slot": "mainhand"
-              }
-            ]
-          }
-        ]
-      }
-    },
     "fall_immunity": {
       "type": "palladium:damage_immunity",
       "icon": "minecraft:diamond_boots",
@@ -1227,62 +664,6 @@
             "type": "palladium:ability_unlocked",
             "power": "null",
             "ability": "step_assist"
-          },
-          {
-            "type": "palladium:has_power",
-            "power": "infinity:space_stone"
-          },
-
-          {
-            "type": "palladium:or",
-            "conditions": [
-              {
-                "type": "palladium:has_power",
-                "power": "infinity:infinity_gauntlet"
-              },
-              {
-                "type": "palladium:item_in_slot",
-                "item": {
-                  "item": "infinity:tesseract"
-                },
-                "slot": "mainhand"
-              },
-              {
-                "type": "palladium:item_in_slot",
-                "item": {
-                  "item": "infinity:tesseract"
-                },
-                "slot": "offhand"
-              },
-              {
-                "type": "palladium:item_in_slot",
-                "item": {
-                  "item": "infinity:space_stone"
-                },
-                "slot": "mainhand"
-              },
-              {
-                "type": "palladium:item_in_slot",
-                "item": {
-                  "item": "infinity:space_stone"
-                },
-                "slot": "offhand"
-              },
-              {
-                "type": "palladium:item_in_slot",
-                "item": {
-                  "item": "infinity:cosmi-rod_space"
-                },
-                "slot": "mainhand"
-              },
-              {
-                "type": "palladium:item_in_slot",
-                "item": {
-                  "item": "infinity:cosmi-rod_space"
-                },
-                "slot": "offhand"
-              }
-            ]
           }
         ]
       }
@@ -1317,57 +698,6 @@
             "type": "palladium:ability_unlocked",
             "power": "null",
             "ability": "speed"
-          },
-          {
-            "type": "palladium:or",
-            "conditions": [
-              {
-                "type": "palladium:has_power",
-                "power": "infinity:infinity_gauntlet"
-              },
-              {
-                "type": "palladium:item_in_slot",
-                "item": {
-                  "item": "infinity:tesseract"
-                },
-                "slot": "mainhand"
-              },
-              {
-                "type": "palladium:item_in_slot",
-                "item": {
-                  "item": "infinity:tesseract"
-                },
-                "slot": "offhand"
-              },
-              {
-                "type": "palladium:item_in_slot",
-                "item": {
-                  "item": "infinity:space_stone"
-                },
-                "slot": "mainhand"
-              },
-              {
-                "type": "palladium:item_in_slot",
-                "item": {
-                  "item": "infinity:space_stone"
-                },
-                "slot": "offhand"
-              },
-              {
-                "type": "palladium:item_in_slot",
-                "item": {
-                  "item": "infinity:cosmi-rod_space"
-                },
-                "slot": "mainhand"
-              },
-              {
-                "type": "palladium:item_in_slot",
-                "item": {
-                  "item": "infinity:cosmi-rod_space"
-                },
-                "slot": "offhand"
-              }
-            ]
           }
         ]
       }
@@ -1397,57 +727,6 @@
               "item": "infinity:aspects_of_existance"
             },
             "amount": 1
-          },
-          {
-            "type": "palladium:or",
-            "conditions": [
-              {
-                "type": "palladium:has_power",
-                "power": "infinity:infinity_gauntlet"
-              },
-              {
-                "type": "palladium:item_in_slot",
-                "item": {
-                  "item": "infinity:tesseract"
-                },
-                "slot": "mainhand"
-              },
-              {
-                "type": "palladium:item_in_slot",
-                "item": {
-                  "item": "infinity:tesseract"
-                },
-                "slot": "offhand"
-              },
-              {
-                "type": "palladium:item_in_slot",
-                "item": {
-                  "item": "infinity:space_stone"
-                },
-                "slot": "mainhand"
-              },
-              {
-                "type": "palladium:item_in_slot",
-                "item": {
-                  "item": "infinity:space_stone"
-                },
-                "slot": "offhand"
-              },
-              {
-                "type": "palladium:item_in_slot",
-                "item": {
-                  "item": "infinity:cosmi-rod_space"
-                },
-                "slot": "mainhand"
-              },
-              {
-                "type": "palladium:item_in_slot",
-                "item": {
-                  "item": "infinity:cosmi-rod_space"
-                },
-                "slot": "offhand"
-              }
-            ]
           }
         ]
       }
@@ -1474,7 +753,7 @@
       }
     },
     "teleport_gui": {
-      "type": "palladium:command",
+      "type": "corewithstuff:wormhole_gui",
       "icon": "infinity:textures/icon/teleport.png",
       "title": "Teleport GUI",
       "bar_color": "light_blue",
@@ -1500,10 +779,6 @@
         ],
         "unlocking": [
           {
-            "type": "palladium:mod_loaded",
-            "mod_id": "corewithstuff"
-          },
-          {
             "type": "palladium:ability_unlocked",
             "power": "null",
             "ability": "teleport"
@@ -1514,57 +789,6 @@
               "item": "infinity:aspects_of_existance"
             },
             "amount": 1
-          },
-          {
-            "type": "palladium:or",
-            "conditions": [
-              {
-                "type": "palladium:has_power",
-                "power": "infinity:infinity_gauntlet"
-              },
-              {
-                "type": "palladium:item_in_slot",
-                "item": {
-                  "item": "infinity:tesseract"
-                },
-                "slot": "mainhand"
-              },
-              {
-                "type": "palladium:item_in_slot",
-                "item": {
-                  "item": "infinity:tesseract"
-                },
-                "slot": "offhand"
-              },
-              {
-                "type": "palladium:item_in_slot",
-                "item": {
-                  "item": "infinity:space_stone"
-                },
-                "slot": "mainhand"
-              },
-              {
-                "type": "palladium:item_in_slot",
-                "item": {
-                  "item": "infinity:space_stone"
-                },
-                "slot": "offhand"
-              },
-              {
-                "type": "palladium:item_in_slot",
-                "item": {
-                  "item": "infinity:cosmi-rod_space"
-                },
-                "slot": "mainhand"
-              },
-              {
-                "type": "palladium:item_in_slot",
-                "item": {
-                  "item": "infinity:cosmi-rod_space"
-                },
-                "slot": "offhand"
-              }
-            ]
           }
         ]
       }

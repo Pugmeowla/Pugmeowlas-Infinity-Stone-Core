@@ -1,1 +1,0 @@
-tellraw @a [{"text":"✨ Mod Creator Joined! ✨ Welcome ","color":"gold","bold":true},{"text":"Pugmeowla","color":"light_purple","bold":true},{"text":" — the creator of Pugmeowla's Infinity Stone Core! Sub to my Kofi 🤑","color":"yellow"}]

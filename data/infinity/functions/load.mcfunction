@@ -15,6 +15,8 @@ scoreboard objectives add blackholetoggle dummy
 scoreboard objectives add portal_lifetime dummy
 scoreboard players set @a blackholetoggle 0
 scoreboard objectives add hasGauntletItem dummy
+scoreboard objectives add infinity_tickThrottle dummy
+scoreboard players set global infinity_tickThrottle 0
 team add peaceful
 scoreboard objectives add initCheck dummy
 execute unless score global initCheck matches 2 run function infinity:init_once
@@ -25,6 +27,9 @@ bossbar set minecraft:time color green
 bossbar set minecraft:time max 11
 
 scoreboard objectives add gauntlet5 dummy
+scoreboard objectives add mapsGiven dummy
+scoreboard objectives add mapTimer dummy
+scoreboard players set #maps mapTimer 0
 
 execute in infinity:soulworld run forceload add -2 -2 2 2
 execute in infinity:soulworld run fill -2 75 2 2 -128 -2 air

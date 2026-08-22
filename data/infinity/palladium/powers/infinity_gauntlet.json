@@ -6,7 +6,7 @@
   "gui_display_type": "tree",
   "persistent_data": true,
   "abilities": {
-    "scoreboards": {
+    "setup": {
       "type": "palladium:command",
       "hidden": true,
       "hidden_in_bar": true,
@@ -35,20 +35,13 @@
         "execute as @a[scores={mind_stone=1}] run superpower remove infinity:mind_stone @s",
         "execute as @a[scores={power_stone=1}] run superpower remove infinity:power_stone_passive @s"
       ],
-      "commands": []
-    },
-    "tick": {
-      "type": "palladium:command",
-      "hidden": true,
-      "hidden_in_bar": true,
-      "first_tick_commands": [],
-      "last_tick_commands": [],
       "commands": [
         "execute if entity @e[type=palladium:custom_projectile,distance=..10,tag=powerborne.stormbreaker_projectile] run scoreboard players set @s powerborne.stormbreaker_projectile_distance 1",
         "execute if entity @e[type=palladium:custom_projectile,distance=..10,tag=powerborne.stormbreaker_projectile] run damage @s 1 minecraft:generic",
         "execute unless entity @e[type=palladium:custom_projectile,distance=..10,tag=powerborne.stormbreaker_projectile] run scoreboard players set @s powerborne.stormbreaker_projectile_distance 0"
       ]
     },
+
     "show_offhand": {
       "type": "palladium:show_both_arms",
       "hidden": true,
@@ -91,7 +84,6 @@
         ]
       }
     },
-
     "render_layer_gauntlet": {
       "type": "palladium:render_layer",
       "hidden": true,
@@ -195,7 +187,6 @@
         ]
       }
     },
-
     "render_layer_gauntlet_mainhand": {
       "type": "palladium:render_layer",
       "hidden": true,
@@ -220,79 +211,25 @@
       "title": "Insert Power Stone",
       "bar_color": "purple",
       "hidden": true,
-      "hidden_in_bar": false,
+      "hidden_in_bar": true,
       "list_index": 0,
       "gui_position": "null",
       "description": "Insert Power Stone",
       "commands": [
-        "clear @s infinity:power_stone 1",
-        "superpower add infinity:power_stone_passive @s",
-        "scoreboard players set @s power_stone 1",
-        "playsound infinity:infinity_stone_equip block @s",
-        "tag @s add insert_anim",
-        "schedule function infinity:remove_insert_anim 20t",
-        "particle dust_color_transition 1 0 1 5 1 1 1 ~ ~1 ~ 1.5 1.5 1.5 0 50 force"
+        "execute if entity @s[palladium.power=!infinity:power_stone_passive] run superpower add infinity:power_stone_passive @s",
+        "execute if entity @s[palladium.power=!infinity:power_stone_passive] run scoreboard players set @s power_stone 1",
+        "execute if entity @s[palladium.power=!infinity:power_stone_passive] run playsound infinity:infinity_stone_equip block @s",
+        "execute if entity @s[palladium.power=!infinity:power_stone_passive] run tag @s add insert_anim",
+        "execute if entity @s[palladium.power=!infinity:power_stone_passive] run schedule function infinity:remove_insert_anim 20t",
+        "execute if entity @s[palladium.power=!infinity:power_stone_passive] run particle dust_color_transition 1 0 1 5 1 1 1 ~ ~1 ~ 1.5 1.5 1.5 0 50 force"
       ],
       "conditions": {
         "enabling": [
           {
-            "type": "palladium:toggle",
-            "cooldown": 0,
-            "key_type": "right_click"
-          }
-        ],
-        "unlocking": [
-          {
-            "type": "palladium:item_in_slot",
-            "item": { "item": "infinity:power_stone" },
-            "slot": "mainhand"
-          },
-          {
-            "type": "palladium:not",
-            "conditions": [
-              {
-                "type": "palladium:and",
-                "conditions": [
-                  {
-                    "type": "palladium:mod_loaded",
-                    "mod_id": "corewithstuff"
-                  },
-                  {
-                    "type": "palladium:or",
-                    "conditions": [
-                      {
-                        "type": "palladium:item_in_slot",
-                        "item": {
-                          "item": "infinity:infinity_gauntlet"
-                        },
-                        "slot": "mainhand"
-                      },
-                      {
-                        "type": "palladium:item_in_slot",
-                        "item": {
-                          "item": "infinity:infinity_gauntlet"
-                        },
-                        "slot": "offhand"
-                      },
-                      {
-                        "type": "palladium:item_in_slot",
-                        "item": {
-                          "item": "infinity:infinity_gauntlet"
-                        },
-                        "slot": "trinkets:offhand/glove"
-                      },
-                      {
-                        "type": "palladium:item_in_slot",
-                        "item": {
-                          "item": "infinity:infinity_gauntlet"
-                        },
-                        "slot": "curios:hands"
-                      }
-                    ]
-                  }
-                ]
-              }
-            ]
+            "type": "corewithstuff:slot_item_first",
+            "gui": "infinity:infinity_gauntlet",
+            "slot": "slot_3_stone",
+            "item": "infinity:power_stone"
           }
         ]
       }
@@ -324,11 +261,6 @@
                     "type": "palladium:ability_enabled",
                     "power": "infinity:power_stone_passive",
                     "ability": "power_blast_aim_mainhand"
-                  },
-                  {
-                    "type": "palladium:ability_enabled",
-                    "power": "infinity:power_stone_passive",
-                    "ability": "power_bast_rainbow"
                   }
                 ]
               }
@@ -470,8 +402,6 @@
       "description": "Remove Power Stone",
       "commands": [
         "playsound infinity:stone_remove block @s",
-        "execute as @s run clear @s infinity:power_stone",
-        "execute as @s run function infinity:givepowerstone",
         "execute as @s run superpower remove infinity:power_stone_passive @s",
         "scoreboard players set @s power_stone 0",
         "tag @s add insert_anim",
@@ -481,19 +411,10 @@
       "conditions": {
         "enabling": [
           {
-            "type": "palladium:action",
-            "cooldown": 0,
-            "key_type": "key_bind",
-            "needs_empty_hand": false,
-            "allow_scrolling_when_crouching": true
-          }
-        ],
-        "unlocking": [
-          {
-            "type": "palladium:objective_score",
-            "objective": "power_stone",
-            "min_score": 1,
-            "max_score": 1
+            "type": "corewithstuff:slot_item_last",
+            "gui": "infinity:infinity_gauntlet",
+            "slot": "slot_3_stone",
+            "item": "infinity:power_stone"
           }
         ]
       }
@@ -504,81 +425,25 @@
       "title": "Insert Space Stone",
       "bar_color": "light_blue",
       "hidden": true,
-      "hidden_in_bar": false,
+      "hidden_in_bar": true,
       "list_index": 0,
       "gui_position": "null",
-      "description": "Space Stone Abilities",
+      "description": "Insert Space Stone",
       "commands": [
-        "clear @s infinity:space_stone 1",
-        "superpower add infinity:space_stone @s",
-        "scoreboard players set @s space_stone 1",
-        "playsound infinity:infinity_stone_equip block @s",
-        "tag @s add insert_anim",
-        "schedule function infinity:remove_insert_anim 20t",
-        "particle dust_color_transition 0 0 1 5 1 1 1 ~ ~1 ~ 1.5 1.5 1.5 0 50 force"
+        "execute if entity @s[palladium.power=!infinity:space_stone] run superpower add infinity:space_stone @s",
+        "execute if entity @s[palladium.power=!infinity:space_stone] run scoreboard players set @s space_stone 1",
+        "execute if entity @s[palladium.power=!infinity:space_stone] run playsound infinity:infinity_stone_equip block @s",
+        "execute if entity @s[palladium.power=!infinity:space_stone] run tag @s add insert_anim",
+        "execute if entity @s[palladium.power=!infinity:space_stone] run schedule function infinity:remove_insert_anim 20t",
+        "execute if entity @s[palladium.power=!infinity:space_stone] run particle dust_color_transition 0 0 1 5 1 1 1 ~ ~1 ~ 1.5 1.5 1.5 0 50 force"
       ],
       "conditions": {
         "enabling": [
           {
-            "type": "palladium:toggle",
-            "cooldown": 0,
-            "key_type": "right_click",
-            "needs_empty_hand": false,
-            "allow_scrolling_when_crouching": true
-          }
-        ],
-        "unlocking": [
-          {
-            "type": "palladium:item_in_slot",
-            "item": { "item": "infinity:space_stone" },
-            "slot": "mainhand"
-          },
-          {
-            "type": "palladium:not",
-            "conditions": [
-              {
-                "type": "palladium:and",
-                "conditions": [
-                  {
-                    "type": "palladium:mod_loaded",
-                    "mod_id": "corewithstuff"
-                  },
-                  {
-                    "type": "palladium:or",
-                    "conditions": [
-                      {
-                        "type": "palladium:item_in_slot",
-                        "item": {
-                          "item": "infinity:infinity_gauntlet"
-                        },
-                        "slot": "mainhand"
-                      },
-                      {
-                        "type": "palladium:item_in_slot",
-                        "item": {
-                          "item": "infinity:infinity_gauntlet"
-                        },
-                        "slot": "offhand"
-                      },
-                      {
-                        "type": "palladium:item_in_slot",
-                        "item": {
-                          "item": "infinity:infinity_gauntlet"
-                        },
-                        "slot": "trinkets:offhand/glove"
-                      },
-                      {
-                        "type": "palladium:item_in_slot",
-                        "item": {
-                          "item": "infinity:infinity_gauntlet"
-                        },
-                        "slot": "curios:hands"
-                      }
-                    ]
-                  }
-                ]
-              }
-            ]
+            "type": "corewithstuff:slot_item_first",
+            "gui": "infinity:infinity_gauntlet",
+            "slot": "slot_2_stone",
+            "item": "infinity:space_stone"
           }
         ]
       }
@@ -609,7 +474,7 @@
                   {
                     "type": "palladium:ability_enabled",
                     "power": "infinity:power_stone_passive",
-                    "ability": "power_bast_rainbow"
+                    "ability": "power_blast11_rainbow"
                   }
                 ]
               }
@@ -673,7 +538,7 @@
               {
                 "type": "palladium:ability_enabled",
                 "power": "infinity:power_stone_passive",
-                "ability": "power_bast_rainbow"
+                "ability": "power_blast11_rainbow"
               },
               {
                 "type": "palladium:ability_enabled",
@@ -751,8 +616,6 @@
       "description": "Remove Space Stone",
       "commands": [
         "playsound infinity:stone_remove block @s",
-        "execute as @s run clear @s infinity:space_stone",
-        "execute as @s run function infinity:givespacestone",
         "execute as @s run superpower remove infinity:space_stone @s",
         "scoreboard players set @s space_stone 0",
         "tag @s add insert_anim",
@@ -762,19 +625,10 @@
       "conditions": {
         "enabling": [
           {
-            "type": "palladium:action",
-            "cooldown": 0,
-            "key_type": "key_bind",
-            "needs_empty_hand": false,
-            "allow_scrolling_when_crouching": true
-          }
-        ],
-        "unlocking": [
-          {
-            "type": "palladium:objective_score",
-            "objective": "space_stone",
-            "min_score": 1,
-            "max_score": 1
+            "type": "corewithstuff:slot_item_last",
+            "gui": "infinity:infinity_gauntlet",
+            "slot": "slot_2_stone",
+            "item": "infinity:space_stone"
           }
         ]
       }
@@ -785,81 +639,25 @@
       "title": "Insert Reality Stone",
       "bar_color": "red",
       "hidden": true,
-      "hidden_in_bar": false,
+      "hidden_in_bar": true,
       "list_index": 0,
       "gui_position": "null",
-      "description": "Reality Stone Abilities",
+      "description": "Insert Reality Stone",
       "commands": [
-        "clear @s infinity:reality_stone 1",
-        "superpower add infinity:reality_stone @s",
-        "scoreboard players set @s reality_stone 1",
-        "playsound infinity:infinity_stone_equip block @s",
-        "tag @s add insert_anim",
-        "schedule function infinity:remove_insert_anim 20t",
-        "particle dust_color_transition 1 0 0 5 1 1 1 ~ ~1 ~ 1.5 1.5 1.5 0 50 force"
+        "execute if entity @s[palladium.power=!infinity:reality_stone] run superpower add infinity:reality_stone @s",
+        "execute if entity @s[palladium.power=!infinity:reality_stone] run scoreboard players set @s reality_stone 1",
+        "execute if entity @s[palladium.power=!infinity:reality_stone] run playsound infinity:infinity_stone_equip block @s",
+        "execute if entity @s[palladium.power=!infinity:reality_stone] run tag @s add insert_anim",
+        "execute if entity @s[palladium.power=!infinity:reality_stone] run schedule function infinity:remove_insert_anim 20t",
+        "execute if entity @s[palladium.power=!infinity:reality_stone] run particle dust_color_transition 1 0 0 5 1 1 1 ~ ~1 ~ 1.5 1.5 1.5 0 50 force"
       ],
       "conditions": {
         "enabling": [
           {
-            "type": "palladium:toggle",
-            "cooldown": 0,
-            "key_type": "right_click",
-            "needs_empty_hand": false,
-            "allow_scrolling_when_crouching": true
-          }
-        ],
-        "unlocking": [
-          {
-            "type": "palladium:item_in_slot",
-            "item": { "item": "infinity:reality_stone" },
-            "slot": "mainhand"
-          },
-          {
-            "type": "palladium:not",
-            "conditions": [
-              {
-                "type": "palladium:and",
-                "conditions": [
-                  {
-                    "type": "palladium:mod_loaded",
-                    "mod_id": "corewithstuff"
-                  },
-                  {
-                    "type": "palladium:or",
-                    "conditions": [
-                      {
-                        "type": "palladium:item_in_slot",
-                        "item": {
-                          "item": "infinity:infinity_gauntlet"
-                        },
-                        "slot": "mainhand"
-                      },
-                      {
-                        "type": "palladium:item_in_slot",
-                        "item": {
-                          "item": "infinity:infinity_gauntlet"
-                        },
-                        "slot": "offhand"
-                      },
-                      {
-                        "type": "palladium:item_in_slot",
-                        "item": {
-                          "item": "infinity:infinity_gauntlet"
-                        },
-                        "slot": "trinkets:offhand/glove"
-                      },
-                      {
-                        "type": "palladium:item_in_slot",
-                        "item": {
-                          "item": "infinity:infinity_gauntlet"
-                        },
-                        "slot": "curios:hands"
-                      }
-                    ]
-                  }
-                ]
-              }
-            ]
+            "type": "corewithstuff:slot_item_first",
+            "gui": "infinity:infinity_gauntlet",
+            "slot": "slot_1_stone",
+            "item": "infinity:reality_stone"
           }
         ]
       }
@@ -885,7 +683,7 @@
                   {
                     "type": "palladium:ability_enabled",
                     "power": "infinity:power_stone_passive",
-                    "ability": "power_bast_rainbow"
+                    "ability": "power_blast11_rainbow"
                   }
                 ]
               }
@@ -944,7 +742,7 @@
               {
                 "type": "palladium:ability_enabled",
                 "power": "infinity:power_stone_passive",
-                "ability": "power_bast_rainbow"
+                "ability": "power_blast11_rainbow"
               },
               {
                 "type": "palladium:ability_enabled",
@@ -1022,8 +820,6 @@
       "description": "Remove Reality Stone",
       "commands": [
         "playsound infinity:stone_remove block @s",
-        "execute as @s run clear @s infinity:reality_stone",
-        "execute as @s run function infinity:giverealitystone",
         "execute as @s run superpower remove infinity:reality_stone @s",
         "scoreboard players set @s reality_stone 0",
         "tag @s add insert_anim",
@@ -1033,19 +829,10 @@
       "conditions": {
         "enabling": [
           {
-            "type": "palladium:action",
-            "cooldown": 0,
-            "key_type": "key_bind",
-            "needs_empty_hand": false,
-            "allow_scrolling_when_crouching": true
-          }
-        ],
-        "unlocking": [
-          {
-            "type": "palladium:objective_score",
-            "objective": "reality_stone",
-            "min_score": 1,
-            "max_score": 1
+            "type": "corewithstuff:slot_item_last",
+            "gui": "infinity:infinity_gauntlet",
+            "slot": "slot_1_stone",
+            "item": "infinity:reality_stone"
           }
         ]
       }
@@ -1056,81 +843,25 @@
       "title": "Insert Time Stone",
       "bar_color": "lime",
       "hidden": true,
-      "hidden_in_bar": false,
+      "hidden_in_bar": true,
       "list_index": 0,
       "gui_position": "null",
-      "description": "Time Stone Abilities",
+      "description": "Insert Time Stone",
       "commands": [
-        "clear @s infinity:time_stone 1",
-        "superpower add infinity:time_stone @s",
-        "scoreboard players set @s time_stone 1",
-        "playsound infinity:infinity_stone_equip block @s",
-        "tag @s add insert_anim",
-        "schedule function infinity:remove_insert_anim 20t",
-        "particle dust_color_transition 0 1 0 5 1 1 1 ~ ~1 ~ 1.5 1.5 1.5 0 50 force"
+        "execute if entity @s[palladium.power=!infinity:time_stone] run superpower add infinity:time_stone @s",
+        "execute if entity @s[palladium.power=!infinity:time_stone] run scoreboard players set @s time_stone 1",
+        "execute if entity @s[palladium.power=!infinity:time_stone] run playsound infinity:infinity_stone_equip block @s",
+        "execute if entity @s[palladium.power=!infinity:time_stone] run tag @s add insert_anim",
+        "execute if entity @s[palladium.power=!infinity:time_stone] run schedule function infinity:remove_insert_anim 20t",
+        "execute if entity @s[palladium.power=!infinity:time_stone] run particle dust_color_transition 0 1 0 5 1 1 1 ~ ~1 ~ 1.5 1.5 1.5 0 50 force"
       ],
       "conditions": {
         "enabling": [
           {
-            "type": "palladium:toggle",
-            "cooldown": 0,
-            "key_type": "right_click",
-            "needs_empty_hand": false,
-            "allow_scrolling_when_crouching": true
-          }
-        ],
-        "unlocking": [
-          {
-            "type": "palladium:item_in_slot",
-            "item": { "item": "infinity:time_stone" },
-            "slot": "mainhand"
-          },
-          {
-            "type": "palladium:not",
-            "conditions": [
-              {
-                "type": "palladium:and",
-                "conditions": [
-                  {
-                    "type": "palladium:mod_loaded",
-                    "mod_id": "corewithstuff"
-                  },
-                  {
-                    "type": "palladium:or",
-                    "conditions": [
-                      {
-                        "type": "palladium:item_in_slot",
-                        "item": {
-                          "item": "infinity:infinity_gauntlet"
-                        },
-                        "slot": "mainhand"
-                      },
-                      {
-                        "type": "palladium:item_in_slot",
-                        "item": {
-                          "item": "infinity:infinity_gauntlet"
-                        },
-                        "slot": "offhand"
-                      },
-                      {
-                        "type": "palladium:item_in_slot",
-                        "item": {
-                          "item": "infinity:infinity_gauntlet"
-                        },
-                        "slot": "trinkets:offhand/glove"
-                      },
-                      {
-                        "type": "palladium:item_in_slot",
-                        "item": {
-                          "item": "infinity:infinity_gauntlet"
-                        },
-                        "slot": "curios:hands"
-                      }
-                    ]
-                  }
-                ]
-              }
-            ]
+            "type": "corewithstuff:slot_item_first",
+            "gui": "infinity:infinity_gauntlet",
+            "slot": "slot_4_stone",
+            "item": "infinity:time_stone"
           }
         ]
       }
@@ -1171,7 +902,7 @@
                   {
                     "type": "palladium:ability_enabled",
                     "power": "infinity:power_stone_passive",
-                    "ability": "power_bast_rainbow"
+                    "ability": "power_blast11_rainbow"
                   }
                 ]
               }
@@ -1245,7 +976,7 @@
               {
                 "type": "palladium:ability_enabled",
                 "power": "infinity:power_stone_passive",
-                "ability": "power_bast_rainbow"
+                "ability": "power_blast11_rainbow"
               },
               {
                 "type": "palladium:ability_enabled",
@@ -1323,8 +1054,6 @@
       "description": "Remove Time Stone",
       "commands": [
         "playsound infinity:stone_remove block @s",
-        "execute as @s run clear @s infinity:time_stone",
-        "execute as @s run function infinity:givetimestone",
         "execute as @s run superpower remove infinity:time_stone @s",
         "scoreboard players set @s time_stone 0",
         "clear @s infinity:eye_of_agamotto",
@@ -1335,19 +1064,10 @@
       "conditions": {
         "enabling": [
           {
-            "type": "palladium:action",
-            "cooldown": 0,
-            "key_type": "key_bind",
-            "needs_empty_hand": false,
-            "allow_scrolling_when_crouching": true
-          }
-        ],
-        "unlocking": [
-          {
-            "type": "palladium:objective_score",
-            "objective": "time_stone",
-            "min_score": 1,
-            "max_score": 1
+            "type": "corewithstuff:slot_item_last",
+            "gui": "infinity:infinity_gauntlet",
+            "slot": "slot_4_stone",
+            "item": "infinity:time_stone"
           }
         ]
       }
@@ -1358,81 +1078,25 @@
       "title": "Insert Soul Stone",
       "bar_color": "orange",
       "hidden": true,
-      "hidden_in_bar": false,
+      "hidden_in_bar": true,
       "list_index": 0,
       "gui_position": "null",
-      "description": "Soul Stone Abilities",
+      "description": "Insert Soul Stone",
       "commands": [
-        "clear @s infinity:soul_stone 1",
-        "superpower add infinity:soul_stone @s",
-        "scoreboard players set @s soul_stone 1",
-        "playsound infinity:infinity_stone_equip block @s",
-        "tag @s add insert_anim",
-        "schedule function infinity:remove_insert_anim 20t",
-        "particle dust_color_transition 1 0.5 0 5 1 1 1 ~ ~1 ~ 1.5 1.5 1.5 0 50 force"
+        "execute if entity @s[palladium.power=!infinity:soul_stone] run superpower add infinity:soul_stone @s",
+        "execute if entity @s[palladium.power=!infinity:soul_stone] run scoreboard players set @s soul_stone 1",
+        "execute if entity @s[palladium.power=!infinity:soul_stone] run playsound infinity:infinity_stone_equip block @s",
+        "execute if entity @s[palladium.power=!infinity:soul_stone] run tag @s add insert_anim",
+        "execute if entity @s[palladium.power=!infinity:soul_stone] run schedule function infinity:remove_insert_anim 20t",
+        "execute if entity @s[palladium.power=!infinity:soul_stone] run particle dust_color_transition 1 0.5 0 5 1 1 1 ~ ~1 ~ 1.5 1.5 1.5 0 50 force"
       ],
       "conditions": {
         "enabling": [
           {
-            "type": "palladium:toggle",
-            "cooldown": 0,
-            "key_type": "right_click",
-            "needs_empty_hand": false,
-            "allow_scrolling_when_crouching": true
-          }
-        ],
-        "unlocking": [
-          {
-            "type": "palladium:item_in_slot",
-            "item": { "item": "infinity:soul_stone" },
-            "slot": "mainhand"
-          },
-          {
-            "type": "palladium:not",
-            "conditions": [
-              {
-                "type": "palladium:and",
-                "conditions": [
-                  {
-                    "type": "palladium:mod_loaded",
-                    "mod_id": "corewithstuff"
-                  },
-                  {
-                    "type": "palladium:or",
-                    "conditions": [
-                      {
-                        "type": "palladium:item_in_slot",
-                        "item": {
-                          "item": "infinity:infinity_gauntlet"
-                        },
-                        "slot": "mainhand"
-                      },
-                      {
-                        "type": "palladium:item_in_slot",
-                        "item": {
-                          "item": "infinity:infinity_gauntlet"
-                        },
-                        "slot": "offhand"
-                      },
-                      {
-                        "type": "palladium:item_in_slot",
-                        "item": {
-                          "item": "infinity:infinity_gauntlet"
-                        },
-                        "slot": "trinkets:offhand/glove"
-                      },
-                      {
-                        "type": "palladium:item_in_slot",
-                        "item": {
-                          "item": "infinity:infinity_gauntlet"
-                        },
-                        "slot": "curios:hands"
-                      }
-                    ]
-                  }
-                ]
-              }
-            ]
+            "type": "corewithstuff:slot_item_first",
+            "gui": "infinity:infinity_gauntlet",
+            "slot": "slot_0_stone",
+            "item": "infinity:soul_stone"
           }
         ]
       }
@@ -1458,7 +1122,7 @@
                   {
                     "type": "palladium:ability_enabled",
                     "power": "infinity:power_stone_passive",
-                    "ability": "power_bast_rainbow"
+                    "ability": "power_blast11_rainbow"
                   }
                 ]
               }
@@ -1517,7 +1181,7 @@
               {
                 "type": "palladium:ability_enabled",
                 "power": "infinity:power_stone_passive",
-                "ability": "power_bast_rainbow"
+                "ability": "power_blast11_rainbow"
               },
               {
                 "type": "palladium:ability_enabled",
@@ -1595,8 +1259,6 @@
       "description": "Remove Soul Stone",
       "commands": [
         "playsound infinity:stone_remove block @s",
-        "execute as @s run clear @s infinity:soul_stone",
-        "execute as @s run function infinity:givesoulstone",
         "execute as @s run superpower remove infinity:soul_stone @s",
         "scoreboard players set @s soul_stone 0",
         "tag @s add insert_anim",
@@ -1606,19 +1268,10 @@
       "conditions": {
         "enabling": [
           {
-            "type": "palladium:action",
-            "cooldown": 0,
-            "key_type": "key_bind",
-            "needs_empty_hand": false,
-            "allow_scrolling_when_crouching": true
-          }
-        ],
-        "unlocking": [
-          {
-            "type": "palladium:objective_score",
-            "objective": "soul_stone",
-            "min_score": 1,
-            "max_score": 1
+            "type": "corewithstuff:slot_item_last",
+            "gui": "infinity:infinity_gauntlet",
+            "slot": "slot_0_stone",
+            "item": "infinity:soul_stone"
           }
         ]
       }
@@ -1629,81 +1282,25 @@
       "title": "Insert Mind Stone",
       "bar_color": "yellow",
       "hidden": true,
-      "hidden_in_bar": false,
+      "hidden_in_bar": true,
       "list_index": 0,
       "gui_position": "null",
-      "description": "Mind Stone Abilities",
+      "description": "Insert Mind Stone",
       "commands": [
-        "clear @s infinity:mind_stone 1",
-        "superpower add infinity:mind_stone @s",
-        "scoreboard players set @s mind_stone 1",
-        "playsound infinity:infinity_stone_equip block @s",
-        "tag @s add insert_anim",
-        "schedule function infinity:remove_insert_anim 20t",
-        "particle dust_color_transition 1 1 0 5 1 1 1 ~ ~1 ~ 1.5 1.5 1.5 0 50 force"
+        "execute if entity @s[palladium.power=!infinity:mind_stone] run superpower add infinity:mind_stone @s",
+        "execute if entity @s[palladium.power=!infinity:mind_stone] run scoreboard players set @s mind_stone 1",
+        "execute if entity @s[palladium.power=!infinity:mind_stone] run playsound infinity:infinity_stone_equip block @s",
+        "execute if entity @s[palladium.power=!infinity:mind_stone] run tag @s add insert_anim",
+        "execute if entity @s[palladium.power=!infinity:mind_stone] run schedule function infinity:remove_insert_anim 20t",
+        "execute if entity @s[palladium.power=!infinity:mind_stone] run particle dust_color_transition 1 1 0 5 1 1 1 ~ ~1 ~ 1.5 1.5 1.5 0 50 force"
       ],
       "conditions": {
         "enabling": [
           {
-            "type": "palladium:toggle",
-            "cooldown": 0,
-            "key_type": "right_click",
-            "needs_empty_hand": false,
-            "allow_scrolling_when_crouching": true
-          }
-        ],
-        "unlocking": [
-          {
-            "type": "palladium:item_in_slot",
-            "item": { "item": "infinity:mind_stone" },
-            "slot": "mainhand"
-          },
-          {
-            "type": "palladium:not",
-            "conditions": [
-              {
-                "type": "palladium:and",
-                "conditions": [
-                  {
-                    "type": "palladium:mod_loaded",
-                    "mod_id": "corewithstuff"
-                  },
-                  {
-                    "type": "palladium:or",
-                    "conditions": [
-                      {
-                        "type": "palladium:item_in_slot",
-                        "item": {
-                          "item": "infinity:infinity_gauntlet"
-                        },
-                        "slot": "mainhand"
-                      },
-                      {
-                        "type": "palladium:item_in_slot",
-                        "item": {
-                          "item": "infinity:infinity_gauntlet"
-                        },
-                        "slot": "offhand"
-                      },
-                      {
-                        "type": "palladium:item_in_slot",
-                        "item": {
-                          "item": "infinity:infinity_gauntlet"
-                        },
-                        "slot": "trinkets:offhand/glove"
-                      },
-                      {
-                        "type": "palladium:item_in_slot",
-                        "item": {
-                          "item": "infinity:infinity_gauntlet"
-                        },
-                        "slot": "curios:hands"
-                      }
-                    ]
-                  }
-                ]
-              }
-            ]
+            "type": "corewithstuff:slot_item_first",
+            "gui": "infinity:infinity_gauntlet",
+            "slot": "slot_5_stone",
+            "item": "infinity:mind_stone"
           }
         ]
       }
@@ -1729,7 +1326,7 @@
                   {
                     "type": "palladium:ability_enabled",
                     "power": "infinity:power_stone_passive",
-                    "ability": "power_bast_rainbow"
+                    "ability": "power_blast11_rainbow"
                   }
                 ]
               }
@@ -1788,7 +1385,7 @@
               {
                 "type": "palladium:ability_enabled",
                 "power": "infinity:power_stone_passive",
-                "ability": "power_bast_rainbow"
+                "ability": "power_blast11_rainbow"
               },
               {
                 "type": "palladium:ability_enabled",
@@ -1866,14 +1463,35 @@
       "description": "Remove Mind Stone",
       "commands": [
         "playsound infinity:stone_remove block @s",
-        "execute as @s run clear @s infinity:mind_stone",
-        "execute as @s run function infinity:givemindstone",
         "execute as @s run superpower remove infinity:mind_stone @s",
         "scoreboard players set @s mind_stone 0",
         "tag @s add insert_anim",
         "schedule function infinity:remove_insert_anim 20t",
         "particle dust_color_transition 1 1 0 5 1 1 1 ~ ~1 ~ 1.5 1.5 1.5 0 50 force"
       ],
+      "conditions": {
+        "enabling": [
+          {
+            "type": "corewithstuff:slot_item_last",
+            "gui": "infinity:infinity_gauntlet",
+            "slot": "slot_5_stone",
+            "item": "infinity:mind_stone"
+          }
+        ]
+      }
+    },
+
+    "gui": {
+      "type": "corewithstuff:open_cws_gui",
+      "icon": "infinity:textures/item/infinity_gauntlet2.png",
+      "title": "Open GUI",
+      "bar_color": "yellow",
+      "hidden": true,
+      "hidden_in_bar": false,
+      "list_index": 0,
+      "gui_position": "null",
+      "description": "null",
+      "gui_id": "infinity:infinity_gauntlet",
       "conditions": {
         "enabling": [
           {
@@ -1886,135 +1504,64 @@
         ],
         "unlocking": [
           {
-            "type": "palladium:objective_score",
-            "objective": "mind_stone",
-            "min_score": 1,
-            "max_score": 1
+            "type": "palladium:not",
+            "conditions": [
+              {
+                "type": "palladium:item_in_slot",
+                "item": {
+                  "item": "infinity:infinity_gauntlet"
+                },
+                "slot": "mainhand"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "gui2": {
+      "type": "corewithstuff:open_cws_gui",
+      "icon": "infinity:textures/item/infinity_gauntlet2.png",
+      "title": "Open GUI",
+      "bar_color": "yellow",
+      "hidden": true,
+      "hidden_in_bar": false,
+      "list_index": 0,
+      "gui_position": "null",
+      "description": "null",
+      "gui_id": "infinity:infinity_gauntlet",
+      "conditions": {
+        "enabling": [
+          {
+            "type": "palladium:action",
+            "cooldown": 0,
+            "key_type": "right_click",
+            "needs_empty_hand": false,
+            "allow_scrolling_when_crouching": true
+          }
+        ],
+        "unlocking": [
+          {
+            "type": "palladium:item_in_slot",
+            "item": {
+              "item": "infinity:infinity_gauntlet"
+            },
+            "slot": "mainhand"
           }
         ]
       }
     },
 
-    "remove_stone_wheel": {
-      "type": "palladium:ability_wheel",
-      "icon": "infinity:textures/item/infinity_gauntlet2.png",
-      "title": "Remove a Stone",
-      "bar_color": "yellow",
-      "hidden": true,
-      "hidden_in_bar": false,
-      "hide_locked": true,
-      "list_index": 0,
-      "abilities": [
-        "remove_power_stone",
-        "remove_space_stone",
-        "remove_reality_stone",
-        "remove_time_stone",
-        "remove_soul_stone",
-        "remove_mind_stone"
-      ],
-      "conditions": {
-        "enabling": [
-          {
-            "type": "palladium:held",
-            "cooldown": 0,
-            "key_type": "right_click",
-            "needs_empty_hand": false
-          }
-        ],
-        "unlocking": [
-          {
-            "type": "palladium:crouching"
-          },
-          {
-            "type": "palladium:not",
-            "conditions": [
-              {
-                "type": "palladium:and",
-                "conditions": [
-                  {
-                    "type": "palladium:mod_loaded",
-                    "mod_id": "corewithstuff"
-                  },
-                  {
-                    "type": "palladium:or",
-                    "conditions": [
-                      {
-                        "type": "palladium:item_in_slot",
-                        "item": {
-                          "item": "infinity:infinity_gauntlet"
-                        },
-                        "slot": "mainhand"
-                      },
-                      {
-                        "type": "palladium:item_in_slot",
-                        "item": {
-                          "item": "infinity:infinity_gauntlet"
-                        },
-                        "slot": "offhand"
-                      },
-                      {
-                        "type": "palladium:item_in_slot",
-                        "item": {
-                          "item": "infinity:infinity_gauntlet"
-                        },
-                        "slot": "trinkets:offhand/glove"
-                      },
-                      {
-                        "type": "palladium:item_in_slot",
-                        "item": {
-                          "item": "infinity:infinity_gauntlet"
-                        },
-                        "slot": "curios:hands"
-                      }
-                    ]
-                  }
-                ]
-              }
-            ]
-          },
-          {
-            "type": "palladium:or",
-            "conditions": [
-              {
-                "type": "palladium:has_power",
-                "power": "infinity:mind_stone"
-              },
-              {
-                "type": "palladium:has_power",
-                "power": "infinity:power_stone_passive"
-              },
-              {
-                "type": "palladium:has_power",
-                "power": "infinity:space_stone"
-              },
-              {
-                "type": "palladium:has_power",
-                "power": "infinity:reality_stone"
-              },
-              {
-                "type": "palladium:has_power",
-                "power": "infinity:time_stone"
-              },
-              {
-                "type": "palladium:has_power",
-                "power": "infinity:soul_stone"
-              }
-            ]
-          }
-        ]
-      }
-    },
     "all_6": {
       "type": "palladium:command",
-      "icon": "infinity:space_stone",
-      "title": "Insert Space Stone",
-      "bar_color": "light_blue",
       "hidden": true,
       "hidden_in_bar": true,
       "list_index": 0,
       "gui_position": "null",
-      "description": "Space Stone Abilities",
-      "first_tick_commands": ["advancement grant @s only infinity:6_stones"],
+      "first_tick_commands": [
+        "advancement grant @s only infinity:6_stones",
+        "tag @s add InfinityGauntlet"
+      ],
+      "last_tick_commands": ["tag @s remove InfinityGauntlet"],
       "commands": [],
       "conditions": {
         "enabling": [
@@ -2157,38 +1704,6 @@
             "objective": "soul_stone",
             "min_score": 1,
             "max_score": 1
-          }
-        ]
-      }
-    },
-    "particles": {
-      "type": "palladium:command",
-      "icon": "minecraft:command_block",
-      "title": "null",
-      "bar_color": "light_gray",
-      "hidden": true,
-      "hidden_in_bar": true,
-      "list_index": -1,
-      "gui_position": "null",
-      "description": "null",
-      "first_tick_commands": [],
-      "last_tick_commands": [],
-      "commands": [
-        "execute at @s run particle dust 1 0.549 0 1 ~ ~1 ~ 2 1 2 0 8 force",
-        "execute at @s run particle dust 0.53 0.81 0.92 1 ~ ~1 ~ 2 1 2 0 8 force",
-        "execute at @s run particle dust 0.8 0.2 0.8 1 ~ ~1 ~ 2 1 2 0 8 force",
-        "execute at @s run particle dust 0.0 1.0 0.0 1 ~ ~1 ~ 2 1 2 0 8 force",
-        "execute at @s run particle dust 1.0 0.5 0.0 1 ~ ~1 ~ 2 1 2 0 8 force",
-        "execute at @s run particle dust 1.0 0.0 0.0 1 ~ ~1 ~ 2 1 2 0 8 force"
-      ],
-      "conditions": {
-        "enabling": [
-          {
-            "type": "palladium:animation_timer_ability",
-            "power": "null",
-            "ability": "transform",
-            "min": 1,
-            "max": 32
           }
         ]
       }
@@ -4846,40 +4361,6 @@
             "ability": "destroy_stones",
             "min": 350,
             "max": 350
-          }
-        ]
-      }
-    },
-    "teleport_gui": {
-      "type": "palladium:command",
-      "icon": "infinity:textures/icon/teleport.png",
-      "title": "Teleport GUI",
-      "bar_color": "light_blue",
-      "hidden": true,
-      "hidden_in_bar": true,
-      "list_index": 4,
-      "first_tick_commands": [],
-      "last_tick_commands": [],
-      "commands": ["superpower add infinity:infinity_gauntlet_gui @s"],
-      "gui_position": [0, -2],
-      "description": {
-        "translate": "ability.infinity.space_stone.portal_gui.description"
-      },
-      "conditions": {
-        "enabling": [
-          {
-            "type": "palladium:action",
-            "cooldown": 0,
-            "key_type": "right_click",
-            "needs_empty_hand": false,
-            "allow_scrolling_when_crouching": true
-          },
-          {
-            "type": "palladium:item_in_slot",
-            "item": {
-              "item": "infinity:infinity_gauntlet"
-            },
-            "slot": "mainhand"
           }
         ]
       }

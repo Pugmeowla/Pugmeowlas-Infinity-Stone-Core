@@ -30,64 +30,14 @@
       "list_index": 0,
       "gui_position": [0, -1],
       "description": "Pacify hostile mobs around you",
-      "first_tick_commands": [],
-      "last_tick_commands": [],
+      "first_tick_commands": ["scoreboard players set @s timestonesidebar 0"],
+      "last_tick_commands": ["scoreboard players set @s tickrateCycle 0"],
       "commands": [
         "scoreboard players remove @e[tag=TimeStopper-stopped] TimeStopper_Time 1",
         "execute as @e[tag=TimeStopper-stopped,scores={TimeStopper_Time=..0}] at @s run function infinity:restore-motion"
       ],
       "conditions": {
-        "enabling": [
-          {
-            "type": "palladium:or",
-            "conditions": [
-              {
-                "type": "palladium:has_power",
-                "power": "infinity:infinity_gauntlet"
-              },
-              {
-                "type": "palladium:item_in_slot",
-                "item": { "item": "infinity:eye_of_agamotto" },
-                "slot": "mainhand"
-              },
-              {
-                "type": "palladium:item_in_slot",
-                "item": { "item": "infinity:eye_of_agamotto" },
-                "slot": "offhand"
-              },
-              {
-                "type": "palladium:item_in_slot",
-                "item": { "item": "infinity:eye_of_agamotto" },
-                "slot": "chest"
-              },
-              {
-                "type": "palladium:item_in_slot",
-                "item": { "item": "infinity:eye_of_agamotto" },
-                "slot": "curios:necklace"
-              },
-              {
-                "type": "palladium:item_in_slot",
-                "item": { "item": "infinity:time_stone" },
-                "slot": "mainhand"
-              },
-              {
-                "type": "palladium:item_in_slot",
-                "item": { "item": "infinity:time_stone" },
-                "slot": "offhand"
-              },
-              {
-                "type": "palladium:item_in_slot",
-                "item": { "item": "infinity:cosmi-rod_time" },
-                "slot": "mainhand"
-              },
-              {
-                "type": "palladium:item_in_slot",
-                "item": { "item": "infinity:cosmi-rod_time" },
-                "slot": "offhand"
-              }
-            ]
-          }
-        ]
+        "enabling": []
       }
     },
 
@@ -208,55 +158,34 @@
             "type": "palladium:ability_unlocked",
             "power": "null",
             "ability": "fast_forward"
+          }
+        ]
+      }
+    },
+    "time_freeze_dummy": {
+      "type": "palladium:dummy",
+      "persistent_data": true,
+      "icon": "infinity:textures/icon/stop.png",
+      "title": "Freeze Time",
+      "bar_color": "lime",
+      "hidden": false,
+      "hidden_in_bar": true,
+      "list_index": -1,
+      "gui_position": [0.5, 1],
+      "description": {
+        "translate": "ability.infinity.time_stone.time_freeze_dummy.description"
+      },
+      "conditions": {
+        "unlocking": [
+          {
+            "type": "palladium:item_buyable",
+            "ingredient": { "item": "infinity:aspects_of_existance" },
+            "amount": 10
           },
           {
-            "type": "palladium:or",
-            "conditions": [
-              {
-                "type": "palladium:has_power",
-                "power": "infinity:infinity_gauntlet"
-              },
-              {
-                "type": "palladium:item_in_slot",
-                "item": { "item": "infinity:eye_of_agamotto" },
-                "slot": "mainhand"
-              },
-              {
-                "type": "palladium:item_in_slot",
-                "item": { "item": "infinity:eye_of_agamotto" },
-                "slot": "offhand"
-              },
-              {
-                "type": "palladium:item_in_slot",
-                "item": { "item": "infinity:eye_of_agamotto" },
-                "slot": "chest"
-              },
-              {
-                "type": "palladium:item_in_slot",
-                "item": { "item": "infinity:eye_of_agamotto" },
-                "slot": "curios:necklace"
-              },
-              {
-                "type": "palladium:item_in_slot",
-                "item": { "item": "infinity:time_stone" },
-                "slot": "mainhand"
-              },
-              {
-                "type": "palladium:item_in_slot",
-                "item": { "item": "infinity:time_stone" },
-                "slot": "offhand"
-              },
-              {
-                "type": "palladium:item_in_slot",
-                "item": { "item": "infinity:cosmi-rod_time" },
-                "slot": "mainhand"
-              },
-              {
-                "type": "palladium:item_in_slot",
-                "item": { "item": "infinity:cosmi-rod_time" },
-                "slot": "offhand"
-              }
-            ]
+            "type": "palladium:ability_unlocked",
+            "power": "null",
+            "ability": "slow_time_dummy"
           }
         ]
       }
@@ -276,63 +205,8 @@
       },
       "commands": [
         "playsound minecraft:block.comparator.click block @s",
-        "scoreboard objectives add tickrateCycle dummy",
-        "execute if score @s tickrateCycle matches -5 run timeclock tickrate 40",
-        "execute if score @s tickrateCycle matches -4 run timeclock tickrate 36",
-        "execute if score @s tickrateCycle matches -3 run timeclock tickrate 32",
-        "execute if score @s tickrateCycle matches -2 run timeclock tickrate 28",
-        "execute if score @s tickrateCycle matches -1 run timeclock tickrate 24",
-        "execute if score @s tickrateCycle matches 0 run timeclock tickrate 20",
-        "execute if score @s tickrateCycle matches 1 run timeclock tickrate 16",
-        "execute if score @s tickrateCycle matches 2 run timeclock tickrate 12",
-        "execute if score @s tickrateCycle matches 3 run timeclock tickrate 8",
-        "execute if score @s tickrateCycle matches 4 run timeclock tickrate 4",
-        "execute if score @s tickrateCycle matches 5 run timeclock tickrate 2",
         "scoreboard players add @s tickrateCycle 1",
-        "execute if score @s tickrateCycle matches 6 run scoreboard players set @s tickrateCycle 5",
-        "execute if score @s tickrateCycle matches -6 run scoreboard players set @s tickrateCycle -5",
-
-        "execute if score @s tickrateCycle matches 1 run effect clear @s minecraft:speed",
-        "execute if score @s tickrateCycle matches 1 run effect give @s minecraft:speed 100 1 true",
-
-        "execute if score @s tickrateCycle matches 2 run effect clear @s minecraft:speed",
-        "execute if score @s tickrateCycle matches 2 run effect give @s minecraft:speed 100 2 true",
-
-        "execute if score @s tickrateCycle matches 3 run effect clear @s minecraft:speed",
-        "execute if score @s tickrateCycle matches 3 run effect give @s minecraft:speed 100 3 true",
-
-        "execute if score @s tickrateCycle matches 4 run effect clear @s minecraft:speed",
-        "execute if score @s tickrateCycle matches 4 run effect give @s minecraft:speed 100 4 true",
-
-        "execute if score @s tickrateCycle matches 5 run effect clear @s minecraft:speed",
-        "execute if score @s tickrateCycle matches 5 run effect give @s minecraft:speed 100 5 true",
-
-        "execute if score @s tickrateCycle matches 6 run effect clear @s minecraft:speed",
-        "execute if score @s tickrateCycle matches 6 run effect give @s minecraft:speed 100 6 true",
-
-        "execute if score @s tickrateCycle matches 7 run effect clear @s minecraft:speed",
-        "execute if score @s tickrateCycle matches 7 run effect give @s minecraft:speed 100 7 true",
-
-        "execute if score @s tickrateCycle matches 1 run effect clear @s minecraft:haste",
-        "execute if score @s tickrateCycle matches 1 run effect give @s minecraft:haste 100 105 true",
-
-        "execute if score @s tickrateCycle matches 2 run effect clear @s minecraft:haste",
-        "execute if score @s tickrateCycle matches 2 run effect give @s minecraft:haste 100 110 true",
-
-        "execute if score @s tickrateCycle matches 3 run effect clear @s minecraft:haste",
-        "execute if score @s tickrateCycle matches 3 run effect give @s minecraft:haste 100 112 true",
-
-        "execute if score @s tickrateCycle matches 4 run effect clear @s minecraft:haste",
-        "execute if score @s tickrateCycle matches 4 run effect give @s minecraft:haste 100 114 true",
-
-        "execute if score @s tickrateCycle matches 5 run effect clear @s minecraft:haste",
-        "execute if score @s tickrateCycle matches 5 run effect give @s minecraft:haste 100 116 true",
-
-        "execute if score @s tickrateCycle matches 6 run effect clear @s minecraft:haste",
-        "execute if score @s tickrateCycle matches 6 run effect give @s minecraft:haste 100 118 true",
-
-        "execute if score @s tickrateCycle matches 7 run effect clear @s minecraft:haste",
-        "execute if score @s tickrateCycle matches 7 run effect give @s minecraft:haste 100 120 true"
+        "execute if score @s tickrateCycle matches 6 run scoreboard players set @s tickrateCycle 5"
       ],
       "first_tick_commands": [
         "playsound infinity:use_infinity_gauntlet block @s"
@@ -367,7 +241,6 @@
         ]
       }
     },
-
     "accelerate_time": {
       "type": "palladium:command",
       "icon": "minecraft:clock",
@@ -381,67 +254,9 @@
         "translate": "ability.infinity.time_stone.accelerate_time.description"
       },
       "commands": [
-        "scoreboard objectives add tickrateCycle dummy",
         "playsound minecraft:block.comparator.click block @s",
-        "execute if score @s tickrateCycle matches -5 run timeclock tickrate 40",
-        "execute if score @s tickrateCycle matches -4 run timeclock tickrate 36",
-        "execute if score @s tickrateCycle matches -3 run timeclock tickrate 32",
-        "execute if score @s tickrateCycle matches -2 run timeclock tickrate 28",
-        "execute if score @s tickrateCycle matches -1 run timeclock tickrate 24",
-        "execute if score @s tickrateCycle matches 0 run timeclock tickrate 20",
-        "execute if score @s tickrateCycle matches 1 run timeclock tickrate 16",
-        "execute if score @s tickrateCycle matches 2 run timeclock tickrate 12",
-        "execute if score @s tickrateCycle matches 3 run timeclock tickrate 8",
-        "execute if score @s tickrateCycle matches 4 run timeclock tickrate 4",
-        "execute if score @s tickrateCycle matches 5 run timeclock tickrate 2",
         "scoreboard players remove @s tickrateCycle 1",
-        "execute if score @s tickrateCycle matches 6 run scoreboard players set @s tickrateCycle 5",
-        "execute if score @s tickrateCycle matches -6 run scoreboard players set @s tickrateCycle -5",
-
-        "execute if score @s tickrateCycle matches 0 run effect clear @s minecraft:speed",
-        "execute if score @s tickrateCycle matches 0 run effect clear @s minecraft:haste",
-
-        "execute if score @s tickrateCycle matches 1 run effect clear @s minecraft:speed",
-        "execute if score @s tickrateCycle matches 1 run effect give @s minecraft:speed 100 1 true",
-
-        "execute if score @s tickrateCycle matches 2 run effect clear @s minecraft:speed",
-        "execute if score @s tickrateCycle matches 2 run effect give @s minecraft:speed 100 2 true",
-
-        "execute if score @s tickrateCycle matches 3 run effect clear @s minecraft:speed",
-        "execute if score @s tickrateCycle matches 3 run effect give @s minecraft:speed 100 3 true",
-
-        "execute if score @s tickrateCycle matches 4 run effect clear @s minecraft:speed",
-        "execute if score @s tickrateCycle matches 4 run effect give @s minecraft:speed 100 4 true",
-
-        "execute if score @s tickrateCycle matches 5 run effect clear @s minecraft:speed",
-        "execute if score @s tickrateCycle matches 5 run effect give @s minecraft:speed 100 5 true",
-
-        "execute if score @s tickrateCycle matches 6 run effect clear @s minecraft:speed",
-        "execute if score @s tickrateCycle matches 6 run effect give @s minecraft:speed 100 6 true",
-
-        "execute if score @s tickrateCycle matches 7 run effect clear @s minecraft:speed",
-        "execute if score @s tickrateCycle matches 7 run effect give @s minecraft:speed 100 7 true",
-
-        "execute if score @s tickrateCycle matches 1 run effect clear @s minecraft:haste",
-        "execute if score @s tickrateCycle matches 1 run effect give @s minecraft:haste 100 105 true",
-
-        "execute if score @s tickrateCycle matches 2 run effect clear @s minecraft:haste",
-        "execute if score @s tickrateCycle matches 2 run effect give @s minecraft:haste 100 110 true",
-
-        "execute if score @s tickrateCycle matches 3 run effect clear @s minecraft:haste",
-        "execute if score @s tickrateCycle matches 3 run effect give @s minecraft:haste 100 112 true",
-
-        "execute if score @s tickrateCycle matches 4 run effect clear @s minecraft:haste",
-        "execute if score @s tickrateCycle matches 4 run effect give @s minecraft:haste 100 114 true",
-
-        "execute if score @s tickrateCycle matches 5 run effect clear @s minecraft:haste",
-        "execute if score @s tickrateCycle matches 5 run effect give @s minecraft:haste 100 116 true",
-
-        "execute if score @s tickrateCycle matches 6 run effect clear @s minecraft:haste",
-        "execute if score @s tickrateCycle matches 6 run effect give @s minecraft:haste 100 118 true",
-
-        "execute if score @s tickrateCycle matches 7 run effect clear @s minecraft:haste",
-        "execute if score @s tickrateCycle matches 7 run effect give @s minecraft:haste 100 120 true"
+        "execute if score @s tickrateCycle matches -6 run scoreboard players set @s tickrateCycle -5"
       ],
       "first_tick_commands": [
         "playsound infinity:use_infinity_gauntlet block @s"
@@ -476,7 +291,6 @@
         ]
       }
     },
-
     "reset_time_speed": {
       "type": "palladium:command",
       "icon": "infinity:textures/icon/hourglass.png",
@@ -489,9 +303,70 @@
       "description": {
         "translate": "ability.infinity.time_stone.reset_time_speed.description"
       },
-      "first_tick_commands": ["function infinity:time_bar"],
-      "commands": [],
-      "last_tick_commands": ["timeclock tickrate 20"],
+      "first_tick_commands": [
+        "playsound infinity:time_stone block @s",
+        "timeclock whitelist add @s",
+        "function infinity:time_bar",
+        "scoreboard objectives add tickrateCycle dummy"
+      ],
+      "last_tick_commands": [
+        "timeclock tickrate 20",
+        "timeclock virtualtickrate 20",
+        "effect clear @s minecraft:speed",
+        "effect clear @s minecraft:haste"
+      ],
+      "commands": [
+        "execute if score @s tickrateCycle matches -5 run timeclock tickrate 40",
+        "execute if score @s tickrateCycle matches -4 run timeclock tickrate 36",
+        "execute if score @s tickrateCycle matches -3 run timeclock tickrate 32",
+        "execute if score @s tickrateCycle matches -2 run timeclock tickrate 28",
+        "execute if score @s tickrateCycle matches -1 run timeclock tickrate 24",
+        "execute if score @s tickrateCycle matches 0 run timeclock tickrate 20",
+        "execute if score @s tickrateCycle matches 0 run timeclock virtualtickrate 20",
+        "execute if score @s tickrateCycle matches 1 run timeclock virtualtickrate 16",
+        "execute if score @s tickrateCycle matches 2 run timeclock virtualtickrate 12",
+        "execute if score @s tickrateCycle matches 3 run timeclock virtualtickrate 8",
+        "execute if score @s tickrateCycle matches 4 run timeclock virtualtickrate 4",
+        "execute if score @s tickrateCycle matches 5 run timeclock virtualtickrate 2",
+
+        "execute if score @s tickrateCycle matches 0 run effect clear @s minecraft:speed",
+        "execute if score @s tickrateCycle matches 0 run effect clear @s minecraft:haste",
+
+        "execute if score @s tickrateCycle matches 1 run effect clear @s minecraft:speed",
+        "execute if score @s tickrateCycle matches 1 run effect give @s minecraft:speed infinite 1 true",
+        "execute if score @s tickrateCycle matches 2 run effect clear @s minecraft:speed",
+        "execute if score @s tickrateCycle matches 2 run effect give @s minecraft:speed infinite 2 true",
+        "execute if score @s tickrateCycle matches 3 run effect clear @s minecraft:speed",
+        "execute if score @s tickrateCycle matches 3 run effect give @s minecraft:speed infinite 3 true",
+        "execute if score @s tickrateCycle matches 4 run effect clear @s minecraft:speed",
+        "execute if score @s tickrateCycle matches 4 run effect give @s minecraft:speed infinite 4 true",
+        "execute if score @s tickrateCycle matches 5 run effect clear @s minecraft:speed",
+        "execute if score @s tickrateCycle matches 5 run effect give @s minecraft:speed infinite 5 true",
+
+        "execute if score @s tickrateCycle matches 1 run effect clear @s minecraft:haste",
+        "execute if score @s tickrateCycle matches 1 run effect give @s minecraft:haste infinite 105 true",
+        "execute if score @s tickrateCycle matches 2 run effect clear @s minecraft:haste",
+        "execute if score @s tickrateCycle matches 2 run effect give @s minecraft:haste infinite 110 true",
+        "execute if score @s tickrateCycle matches 3 run effect clear @s minecraft:haste",
+        "execute if score @s tickrateCycle matches 3 run effect give @s minecraft:haste infinite 112 true",
+        "execute if score @s tickrateCycle matches 4 run effect clear @s minecraft:haste",
+        "execute if score @s tickrateCycle matches 4 run effect give @s minecraft:haste infinite 114 true",
+        "execute if score @s tickrateCycle matches 5 run effect clear @s minecraft:haste",
+        "execute if score @s tickrateCycle matches 5 run effect give @s minecraft:haste infinite 116 true",
+
+        "scoreboard objectives add timestonesidebar dummy",
+        "execute if score @s tickrateCycle matches -5 run scoreboard players set @s timestonesidebar 1",
+        "execute if score @s tickrateCycle matches -4 run scoreboard players set @s timestonesidebar 2",
+        "execute if score @s tickrateCycle matches -3 run scoreboard players set @s timestonesidebar 3",
+        "execute if score @s tickrateCycle matches -2 run scoreboard players set @s timestonesidebar 4",
+        "execute if score @s tickrateCycle matches -1 run scoreboard players set @s timestonesidebar 5",
+        "execute if score @s tickrateCycle matches 0 run scoreboard players set @s timestonesidebar 6",
+        "execute if score @s tickrateCycle matches 1 run scoreboard players set @s timestonesidebar 7",
+        "execute if score @s tickrateCycle matches 2 run scoreboard players set @s timestonesidebar 8",
+        "execute if score @s tickrateCycle matches 3 run scoreboard players set @s timestonesidebar 9",
+        "execute if score @s tickrateCycle matches 4 run scoreboard players set @s timestonesidebar 10",
+        "execute if score @s tickrateCycle matches 5 run scoreboard players set @s timestonesidebar 11"
+      ],
       "conditions": {
         "enabling": [
           {
@@ -511,85 +386,6 @@
         ]
       }
     },
-
-    "time_freeze_dummy": {
-      "type": "palladium:dummy",
-      "persistent_data": true,
-      "icon": "infinity:textures/icon/stop.png",
-      "title": "Freeze Time",
-      "bar_color": "lime",
-      "hidden": false,
-      "hidden_in_bar": true,
-      "list_index": -1,
-      "gui_position": [0.5, 1],
-      "description": {
-        "translate": "ability.infinity.time_stone.time_freeze_dummy.description"
-      },
-      "conditions": {
-        "unlocking": [
-          {
-            "type": "palladium:item_buyable",
-            "ingredient": { "item": "infinity:aspects_of_existance" },
-            "amount": 10
-          },
-          {
-            "type": "palladium:ability_unlocked",
-            "power": "null",
-            "ability": "slow_time_dummy"
-          },
-          {
-            "type": "palladium:or",
-            "conditions": [
-              {
-                "type": "palladium:has_power",
-                "power": "infinity:infinity_gauntlet"
-              },
-              {
-                "type": "palladium:item_in_slot",
-                "item": { "item": "infinity:eye_of_agamotto" },
-                "slot": "mainhand"
-              },
-              {
-                "type": "palladium:item_in_slot",
-                "item": { "item": "infinity:eye_of_agamotto" },
-                "slot": "offhand"
-              },
-              {
-                "type": "palladium:item_in_slot",
-                "item": { "item": "infinity:eye_of_agamotto" },
-                "slot": "chest"
-              },
-              {
-                "type": "palladium:item_in_slot",
-                "item": { "item": "infinity:eye_of_agamotto" },
-                "slot": "curios:necklace"
-              },
-              {
-                "type": "palladium:item_in_slot",
-                "item": { "item": "infinity:time_stone" },
-                "slot": "mainhand"
-              },
-              {
-                "type": "palladium:item_in_slot",
-                "item": { "item": "infinity:time_stone" },
-                "slot": "offhand"
-              },
-              {
-                "type": "palladium:item_in_slot",
-                "item": { "item": "infinity:cosmi-rod_time" },
-                "slot": "mainhand"
-              },
-              {
-                "type": "palladium:item_in_slot",
-                "item": { "item": "infinity:cosmi-rod_time" },
-                "slot": "offhand"
-              }
-            ]
-          }
-        ]
-      }
-    },
-
     "time_freeze": {
       "type": "palladium:command",
       "persistent_data": true,
@@ -633,7 +429,20 @@
         ]
       }
     },
-
+    "water_walking": {
+      "type": "palladium:water_walk",
+      "hidden": true,
+      "hidden_in_bar": true,
+      "conditions": {
+        "enabling": [],
+        "unlocking": [
+          {
+            "type": "palladium:ability_enabled",
+            "ability": "time_freeze"
+          }
+        ]
+      }
+    },
     "fast_forward": {
       "type": "palladium:command",
       "icon": "minecraft:clock",
@@ -665,71 +474,6 @@
               "item": "infinity:aspects_of_existance"
             },
             "amount": 1
-          },
-          {
-            "type": "palladium:or",
-            "conditions": [
-              {
-                "type": "palladium:has_power",
-                "power": "infinity:infinity_gauntlet"
-              },
-              {
-                "type": "palladium:item_in_slot",
-                "item": {
-                  "item": "infinity:eye_of_agamotto"
-                },
-                "slot": "chest"
-              },
-              {
-                "type": "palladium:item_in_slot",
-                "item": {
-                  "item": "infinity:eye_of_agamotto"
-                },
-                "slot": "curios:necklace"
-              },
-              {
-                "type": "palladium:item_in_slot",
-                "item": {
-                  "item": "infinity:time_stone"
-                },
-                "slot": "mainhand"
-              },
-              {
-                "type": "palladium:item_in_slot",
-                "item": {
-                  "item": "infinity:time_stone"
-                },
-                "slot": "offhand"
-              },
-              {
-                "type": "palladium:item_in_slot",
-                "item": {
-                  "item": "infinity:eye_of_agamotto"
-                },
-                "slot": "mainhand"
-              },
-              {
-                "type": "palladium:item_in_slot",
-                "item": {
-                  "item": "infinity:eye_of_agamotto"
-                },
-                "slot": "offhand"
-              },
-              {
-                "type": "palladium:item_in_slot",
-                "item": {
-                  "item": "infinity:cosmi-rod_time"
-                },
-                "slot": "mainhand"
-              },
-              {
-                "type": "palladium:item_in_slot",
-                "item": {
-                  "item": "infinity:cosmi-rod_time"
-                },
-                "slot": "offhand"
-              }
-            ]
           }
         ]
       }
@@ -832,124 +576,6 @@
             "type": "palladium:ability_unlocked",
             "power": "null",
             "ability": "fast_forward"
-          },
-          {
-            "type": "palladium:or",
-            "conditions": [
-              {
-                "type": "palladium:has_power",
-                "power": "infinity:infinity_gauntlet"
-              },
-              {
-                "type": "palladium:item_in_slot",
-                "item": {
-                  "item": "infinity:eye_of_agamotto"
-                },
-                "slot": "chest"
-              },
-              {
-                "type": "palladium:item_in_slot",
-                "item": {
-                  "item": "infinity:eye_of_agamotto"
-                },
-                "slot": "curios:necklace"
-              },
-              {
-                "type": "palladium:item_in_slot",
-                "item": {
-                  "item": "infinity:time_stone"
-                },
-                "slot": "mainhand"
-              },
-              {
-                "type": "palladium:item_in_slot",
-                "item": {
-                  "item": "infinity:time_stone"
-                },
-                "slot": "offhand"
-              },
-              {
-                "type": "palladium:item_in_slot",
-                "item": {
-                  "item": "infinity:eye_of_agamotto"
-                },
-                "slot": "mainhand"
-              },
-              {
-                "type": "palladium:item_in_slot",
-                "item": {
-                  "item": "infinity:eye_of_agamotto"
-                },
-                "slot": "offhand"
-              },
-              {
-                "type": "palladium:item_in_slot",
-                "item": {
-                  "item": "infinity:cosmi-rod_time"
-                },
-                "slot": "mainhand"
-              },
-              {
-                "type": "palladium:item_in_slot",
-                "item": {
-                  "item": "infinity:cosmi-rod_time"
-                },
-                "slot": "offhand"
-              }
-            ]
-          }
-        ]
-      }
-    },
-    "remove_time_stone": {
-      "type": "palladium:command",
-      "icon": "infinity:time_stone",
-      "title": "Remove Time Stone",
-      "bar_color": "lime",
-      "hidden": true,
-      "hidden_in_bar": true,
-      "list_index": -1,
-      "gui_position": "null",
-      "description": {
-        "translate": "ability.infinity.time_stone.remove_time_stone.description"
-      },
-      "commands": [
-        "execute as @s run clear @s infinity:eye_of_agamotto",
-        "execute as @s run function infinity:givetimestone",
-        "execute as @s run give @s infinity:empty_eye_of_agamotto"
-      ],
-      "conditions": {
-        "enabling": [
-          {
-            "type": "palladium:action",
-            "cooldown": 0,
-            "key_type": "left_click",
-            "needs_empty_hand": false,
-            "allow_scrolling_when_crouching": true
-          },
-          {
-            "type": "palladium:crouching"
-          }
-        ],
-        "unlocking": [
-          {
-            "type": "palladium:or",
-            "conditions": [
-              {
-                "type": "palladium:item_in_slot",
-                "item": {
-                  "item": "infinity:eye_of_agamotto"
-                },
-                "slot": "offhand"
-              },
-              {
-                "type": "palladium:item_in_slot",
-                "item": {
-                  "item": "infinity:eye_of_agamotto"
-                },
-                "slot": "mainhand"
-              }
-            ]
           }
         ]
       }
@@ -987,71 +613,6 @@
             "type": "palladium:ability_unlocked",
             "power": "null",
             "ability": "fast_forward"
-          },
-          {
-            "type": "palladium:or",
-            "conditions": [
-              {
-                "type": "palladium:has_power",
-                "power": "infinity:infinity_gauntlet"
-              },
-              {
-                "type": "palladium:item_in_slot",
-                "item": {
-                  "item": "infinity:eye_of_agamotto"
-                },
-                "slot": "chest"
-              },
-              {
-                "type": "palladium:item_in_slot",
-                "item": {
-                  "item": "infinity:eye_of_agamotto"
-                },
-                "slot": "curios:necklace"
-              },
-              {
-                "type": "palladium:item_in_slot",
-                "item": {
-                  "item": "infinity:time_stone"
-                },
-                "slot": "mainhand"
-              },
-              {
-                "type": "palladium:item_in_slot",
-                "item": {
-                  "item": "infinity:time_stone"
-                },
-                "slot": "offhand"
-              },
-              {
-                "type": "palladium:item_in_slot",
-                "item": {
-                  "item": "infinity:eye_of_agamotto"
-                },
-                "slot": "mainhand"
-              },
-              {
-                "type": "palladium:item_in_slot",
-                "item": {
-                  "item": "infinity:eye_of_agamotto"
-                },
-                "slot": "offhand"
-              },
-              {
-                "type": "palladium:item_in_slot",
-                "item": {
-                  "item": "infinity:cosmi-rod_time"
-                },
-                "slot": "mainhand"
-              },
-              {
-                "type": "palladium:item_in_slot",
-                "item": {
-                  "item": "infinity:cosmi-rod_time"
-                },
-                "slot": "offhand"
-              }
-            ]
           }
         ]
       }
@@ -1158,49 +719,6 @@
           {
             "type": "palladium:ability_enabled",
             "ability": "render_layer_time2"
-          }
-        ]
-      }
-    },
-    "sidebar_thingies": {
-      "type": "palladium:command",
-      "icon": "infinity:textures/icon/hourglass.png",
-      "title": "Slow Time",
-      "bar_color": "lime",
-      "hidden": true,
-      "hidden_in_bar": true,
-      "persistent_data": true,
-      "list_index": -1,
-      "description": "Slows the flow of Time",
-      "commands": [
-        "scoreboard objectives add timestonesidebar dummy",
-        "execute if score @s tickrateCycle matches -5 run scoreboard players set @s timestonesidebar 1",
-        "execute if score @s tickrateCycle matches -4 run scoreboard players set @s timestonesidebar 2",
-        "execute if score @s tickrateCycle matches -3 run scoreboard players set @s timestonesidebar 3",
-        "execute if score @s tickrateCycle matches -2 run scoreboard players set @s timestonesidebar 4",
-        "execute if score @s tickrateCycle matches -1 run scoreboard players set @s timestonesidebar 5",
-        "execute if score @s tickrateCycle matches 0 run scoreboard players set @s timestonesidebar 6",
-        "execute if score @s tickrateCycle matches 1 run scoreboard players set @s timestonesidebar 7",
-        "execute if score @s tickrateCycle matches 2 run scoreboard players set @s timestonesidebar 8",
-        "execute if score @s tickrateCycle matches 3 run scoreboard players set @s timestonesidebar 9",
-        "execute if score @s tickrateCycle matches 4 run scoreboard players set @s timestonesidebar 10",
-        "execute if score @s tickrateCycle matches 5 run scoreboard players set @s timestonesidebar 11"
-      ],
-      "first_tick_commands": [],
-      "last_tick_commands": [],
-      "conditions": {
-        "enabling": [
-          {
-            "type": "palladium:ability_enabled",
-            "power": "null",
-            "ability": "reset_time_speed"
-          }
-        ],
-        "unlocking": [
-          {
-            "type": "palladium:ability_unlocked",
-            "power": "null",
-            "ability": "slow_time_dummy"
           }
         ]
       }

@@ -4,4 +4,3 @@ data modify entity @e[type=minecraft:villager,nbt={VillagerData:{profession:"inf
 data modify entity @e[type=minecraft:villager,nbt={VillagerData:{profession:"infinity:soul_guardian"}},limit=1] Offers.Recipes insert 4 value {priceMultiplier:0.08f,rewardExp:5b,maxUses:1,buy:{id:"minecraft:red_dye",Count:1b},buyB:{id:"infinity:aspects_of_existance",Count:16b},sell:{id:"minecraft:map",Count:1b,tag:{display:{Name:'{"text":"Aether Chamber Explorer Map"}'},aethermap:1b}}}
 data modify entity @e[type=minecraft:villager,nbt={VillagerData:{profession:"infinity:soul_guardian"}},limit=1] Offers.Recipes insert 5 value {priceMultiplier:0.08f,rewardExp:5b,maxUses:1,buy:{id:"minecraft:book",Count:1b},buyB:{id:"infinity:aspects_of_existance",Count:16b},sell:{id:"minecraft:map",Count:1b,tag:{display:{Name:'{"text":"Sanctuary Explorer Map"}'},sanctuarymap:1b}}}
 execute as @e[type=minecraft:villager,tag=!giveninfinitymaps] run function infinity:map_give2
-

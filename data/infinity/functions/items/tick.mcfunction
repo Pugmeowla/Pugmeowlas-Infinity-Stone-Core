@@ -1,0 +1,12 @@
+function infinity:items/gauntlet
+function infinity:items/power
+function infinity:items/space
+function infinity:items/reality
+function infinity:items/soul
+function infinity:items/time
+function infinity:items/mind
+function infinity:items/aether
+function infinity:items/tesseract
+function infinity:items/orb
+function infinity:items/scepter
+function infinity:items/eye_of_agamotto

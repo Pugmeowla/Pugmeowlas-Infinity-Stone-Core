@@ -86,21 +86,6 @@
       "first_tick_commands": ["scoreboard objectives add SizeCycle dummy"],
       "last_tick_commands": [],
       "commands": [
-        "execute if score @s SizeCycle matches -4 run scale set pehkui:base 5",
-        "execute if score @s SizeCycle matches -3 run scale set pehkui:base 4",
-        "execute if score @s SizeCycle matches -2 run scale set pehkui:base 3",
-        "execute if score @s SizeCycle matches -1 run scale set pehkui:base 2",
-        "execute if score @s SizeCycle matches 0 run scale set pehkui:base 1",
-        "execute if score @s SizeCycle matches 1 run scale set pehkui:base 0.9",
-        "execute if score @s SizeCycle matches 2 run scale set pehkui:base 0.8",
-        "execute if score @s SizeCycle matches 3 run scale set pehkui:base 0.7",
-        "execute if score @s SizeCycle matches 4 run scale set pehkui:base 0.6",
-        "execute if score @s SizeCycle matches 5 run scale set pehkui:base 0.5",
-        "execute if score @s SizeCycle matches 6 run scale set pehkui:base 0.4",
-        "execute if score @s SizeCycle matches 7 run scale set pehkui:base 0.3",
-        "execute if score @s SizeCycle matches 8 run scale set pehkui:base 0.2",
-        "execute if score @s SizeCycle matches 9 run scale set pehkui:base 0.1",
-
         "execute if score @s SizeCycle matches 10 run scoreboard players set @s SizeCycle 9",
         "execute if score @s SizeCycle matches -5 run scoreboard players set @s SizeCycle -4"
       ],
@@ -131,7 +116,6 @@
         ]
       }
     },
-
     "shrink_dummy": {
       "type": "palladium:dummy",
       "persistent_data": true,
@@ -175,7 +159,50 @@
         "scoreboard players add @s SizeCycle 1"
       ],
       "first_tick_commands": [],
-      "last_tick_commands": [],
+      "last_tick_commands": [
+        "execute if score @s SizeCycle matches -4 run scale set pehkui:height 5",
+        "execute if score @s SizeCycle matches -4 run scale set pehkui:width 5",
+        "execute if score @s SizeCycle matches -4 run scale set pehkui:motion 5",
+        "execute if score @s SizeCycle matches -3 run scale set pehkui:height 4",
+        "execute if score @s SizeCycle matches -3 run scale set pehkui:width 4",
+        "execute if score @s SizeCycle matches -3 run scale set pehkui:motion 4",
+        "execute if score @s SizeCycle matches -2 run scale set pehkui:height 3",
+        "execute if score @s SizeCycle matches -2 run scale set pehkui:width 3",
+        "execute if score @s SizeCycle matches -2 run scale set pehkui:motion 3",
+        "execute if score @s SizeCycle matches -1 run scale set pehkui:height 2",
+        "execute if score @s SizeCycle matches -1 run scale set pehkui:width 2",
+        "execute if score @s SizeCycle matches -1 run scale set pehkui:motion 2",
+        "execute if score @s SizeCycle matches 0 run scale set pehkui:height 1",
+        "execute if score @s SizeCycle matches 0 run scale set pehkui:width 1",
+        "execute if score @s SizeCycle matches 0 run scale set pehkui:motion 1",
+        "execute if score @s SizeCycle matches 1 run scale set pehkui:height 0.9",
+        "execute if score @s SizeCycle matches 1 run scale set pehkui:width 0.9",
+        "execute if score @s SizeCycle matches 1 run scale set pehkui:motion 1",
+        "execute if score @s SizeCycle matches 2 run scale set pehkui:height 0.8",
+        "execute if score @s SizeCycle matches 2 run scale set pehkui:width 0.8",
+        "execute if score @s SizeCycle matches 2 run scale set pehkui:motion 1",
+        "execute if score @s SizeCycle matches 3 run scale set pehkui:height 0.7",
+        "execute if score @s SizeCycle matches 3 run scale set pehkui:width 0.7",
+        "execute if score @s SizeCycle matches 3 run scale set pehkui:motion 1",
+        "execute if score @s SizeCycle matches 4 run scale set pehkui:height 0.6",
+        "execute if score @s SizeCycle matches 4 run scale set pehkui:width 0.6",
+        "execute if score @s SizeCycle matches 4 run scale set pehkui:motion 1",
+        "execute if score @s SizeCycle matches 5 run scale set pehkui:height 0.5",
+        "execute if score @s SizeCycle matches 5 run scale set pehkui:width 0.5",
+        "execute if score @s SizeCycle matches 5 run scale set pehkui:motion 1",
+        "execute if score @s SizeCycle matches 6 run scale set pehkui:height 0.4",
+        "execute if score @s SizeCycle matches 6 run scale set pehkui:width 0.4",
+        "execute if score @s SizeCycle matches 6 run scale set pehkui:motion 1",
+        "execute if score @s SizeCycle matches 7 run scale set pehkui:height 0.3",
+        "execute if score @s SizeCycle matches 7 run scale set pehkui:width 0.3",
+        "execute if score @s SizeCycle matches 7 run scale set pehkui:motion 1",
+        "execute if score @s SizeCycle matches 8 run scale set pehkui:height 0.2",
+        "execute if score @s SizeCycle matches 8 run scale set pehkui:width 0.2",
+        "execute if score @s SizeCycle matches 8 run scale set pehkui:motion 1",
+        "execute if score @s SizeCycle matches 9 run scale set pehkui:height 0.1",
+        "execute if score @s SizeCycle matches 9 run scale set pehkui:width 0.1",
+        "execute if score @s SizeCycle matches 9 run scale set pehkui:motion 1"
+      ],
       "conditions": {
         "enabling": [
           {
@@ -212,7 +239,50 @@
         "scoreboard players remove @s SizeCycle 1"
       ],
       "first_tick_commands": [],
-      "last_tick_commands": [],
+      "last_tick_commands": [
+        "execute if score @s SizeCycle matches -4 run scale set pehkui:height 5",
+        "execute if score @s SizeCycle matches -4 run scale set pehkui:width 5",
+        "execute if score @s SizeCycle matches -4 run scale set pehkui:motion 5",
+        "execute if score @s SizeCycle matches -3 run scale set pehkui:height 4",
+        "execute if score @s SizeCycle matches -3 run scale set pehkui:width 4",
+        "execute if score @s SizeCycle matches -3 run scale set pehkui:motion 4",
+        "execute if score @s SizeCycle matches -2 run scale set pehkui:height 3",
+        "execute if score @s SizeCycle matches -2 run scale set pehkui:width 3",
+        "execute if score @s SizeCycle matches -2 run scale set pehkui:motion 3",
+        "execute if score @s SizeCycle matches -1 run scale set pehkui:height 2",
+        "execute if score @s SizeCycle matches -1 run scale set pehkui:width 2",
+        "execute if score @s SizeCycle matches -1 run scale set pehkui:motion 2",
+        "execute if score @s SizeCycle matches 0 run scale set pehkui:height 1",
+        "execute if score @s SizeCycle matches 0 run scale set pehkui:width 1",
+        "execute if score @s SizeCycle matches 0 run scale set pehkui:motion 1",
+        "execute if score @s SizeCycle matches 1 run scale set pehkui:height 0.9",
+        "execute if score @s SizeCycle matches 1 run scale set pehkui:width 0.9",
+        "execute if score @s SizeCycle matches 1 run scale set pehkui:motion 1",
+        "execute if score @s SizeCycle matches 2 run scale set pehkui:height 0.8",
+        "execute if score @s SizeCycle matches 2 run scale set pehkui:width 0.8",
+        "execute if score @s SizeCycle matches 2 run scale set pehkui:motion 1",
+        "execute if score @s SizeCycle matches 3 run scale set pehkui:height 0.7",
+        "execute if score @s SizeCycle matches 3 run scale set pehkui:width 0.7",
+        "execute if score @s SizeCycle matches 3 run scale set pehkui:motion 1",
+        "execute if score @s SizeCycle matches 4 run scale set pehkui:height 0.6",
+        "execute if score @s SizeCycle matches 4 run scale set pehkui:width 0.6",
+        "execute if score @s SizeCycle matches 4 run scale set pehkui:motion 1",
+        "execute if score @s SizeCycle matches 5 run scale set pehkui:height 0.5",
+        "execute if score @s SizeCycle matches 5 run scale set pehkui:width 0.5",
+        "execute if score @s SizeCycle matches 5 run scale set pehkui:motion 1",
+        "execute if score @s SizeCycle matches 6 run scale set pehkui:height 0.4",
+        "execute if score @s SizeCycle matches 6 run scale set pehkui:width 0.4",
+        "execute if score @s SizeCycle matches 6 run scale set pehkui:motion 1",
+        "execute if score @s SizeCycle matches 7 run scale set pehkui:height 0.3",
+        "execute if score @s SizeCycle matches 7 run scale set pehkui:width 0.3",
+        "execute if score @s SizeCycle matches 7 run scale set pehkui:motion 1",
+        "execute if score @s SizeCycle matches 8 run scale set pehkui:height 0.2",
+        "execute if score @s SizeCycle matches 8 run scale set pehkui:width 0.2",
+        "execute if score @s SizeCycle matches 8 run scale set pehkui:motion 1",
+        "execute if score @s SizeCycle matches 9 run scale set pehkui:height 0.1",
+        "execute if score @s SizeCycle matches 9 run scale set pehkui:width 0.1",
+        "execute if score @s SizeCycle matches 9 run scale set pehkui:motion 1"
+      ],
       "conditions": {
         "enabling": [
           {
@@ -249,7 +319,9 @@
       "commands": [],
       "last_tick_commands": [
         "scoreboard players set @s SizeCycle 0",
-        "scale set pehkui:base 1"
+        "scale set pehkui:height 1",
+        "scale set pehkui:width 1",
+        "scale set pehkui:motion 1"
       ],
       "conditions": {
         "enabling": [
@@ -301,58 +373,6 @@
               "item": "infinity:aspects_of_existance"
             },
             "amount": 1
-          },
-
-          {
-            "type": "palladium:or",
-            "conditions": [
-              {
-                "type": "palladium:has_power",
-                "power": "infinity:infinity_gauntlet"
-              },
-              {
-                "type": "palladium:item_in_slot",
-                "item": {
-                  "item": "infinity:aether"
-                },
-                "slot": "mainhand"
-              },
-              {
-                "type": "palladium:item_in_slot",
-                "item": {
-                  "item": "infinity:aether"
-                },
-                "slot": "offhand"
-              },
-              {
-                "type": "palladium:item_in_slot",
-                "item": {
-                  "item": "infinity:reality_stone"
-                },
-                "slot": "mainhand"
-              },
-              {
-                "type": "palladium:item_in_slot",
-                "item": {
-                  "item": "infinity:reality_stone"
-                },
-                "slot": "offhand"
-              },
-              {
-                "type": "palladium:item_in_slot",
-                "item": {
-                  "item": "infinity:cosmi-rod_reality"
-                },
-                "slot": "mainhand"
-              },
-              {
-                "type": "palladium:item_in_slot",
-                "item": {
-                  "item": "infinity:cosmi-rod_reality"
-                },
-                "slot": "offhand"
-              }
-            ]
           }
         ]
       }
@@ -433,58 +453,6 @@
             "type": "palladium:ability_unlocked",
             "power": "null",
             "ability": "save_dummy"
-          },
-
-          {
-            "type": "palladium:or",
-            "conditions": [
-              {
-                "type": "palladium:has_power",
-                "power": "infinity:infinity_gauntlet"
-              },
-              {
-                "type": "palladium:item_in_slot",
-                "item": {
-                  "item": "infinity:aether"
-                },
-                "slot": "mainhand"
-              },
-              {
-                "type": "palladium:item_in_slot",
-                "item": {
-                  "item": "infinity:aether"
-                },
-                "slot": "offhand"
-              },
-              {
-                "type": "palladium:item_in_slot",
-                "item": {
-                  "item": "infinity:reality_stone"
-                },
-                "slot": "mainhand"
-              },
-              {
-                "type": "palladium:item_in_slot",
-                "item": {
-                  "item": "infinity:reality_stone"
-                },
-                "slot": "offhand"
-              },
-              {
-                "type": "palladium:item_in_slot",
-                "item": {
-                  "item": "infinity:cosmi-rod_reality"
-                },
-                "slot": "mainhand"
-              },
-              {
-                "type": "palladium:item_in_slot",
-                "item": {
-                  "item": "infinity:cosmi-rod_reality"
-                },
-                "slot": "offhand"
-              }
-            ]
           }
         ]
       }
@@ -527,57 +495,6 @@
             "type": "palladium:ability_unlocked",
             "power": "null",
             "ability": "save_dummy"
-          },
-          {
-            "type": "palladium:or",
-            "conditions": [
-              {
-                "type": "palladium:has_power",
-                "power": "infinity:infinity_gauntlet"
-              },
-              {
-                "type": "palladium:item_in_slot",
-                "item": {
-                  "item": "infinity:aether"
-                },
-                "slot": "mainhand"
-              },
-              {
-                "type": "palladium:item_in_slot",
-                "item": {
-                  "item": "infinity:aether"
-                },
-                "slot": "offhand"
-              },
-              {
-                "type": "palladium:item_in_slot",
-                "item": {
-                  "item": "infinity:reality_stone"
-                },
-                "slot": "mainhand"
-              },
-              {
-                "type": "palladium:item_in_slot",
-                "item": {
-                  "item": "infinity:reality_stone"
-                },
-                "slot": "offhand"
-              },
-              {
-                "type": "palladium:item_in_slot",
-                "item": {
-                  "item": "infinity:cosmi-rod_reality"
-                },
-                "slot": "mainhand"
-              },
-              {
-                "type": "palladium:item_in_slot",
-                "item": {
-                  "item": "infinity:cosmi-rod_reality"
-                },
-                "slot": "offhand"
-              }
-            ]
           }
         ]
       }
@@ -629,155 +546,11 @@
               "item": "infinity:aspects_of_existance"
             },
             "amount": 1
-          },
-          {
-            "type": "palladium:or",
-            "conditions": [
-              {
-                "type": "palladium:has_power",
-                "power": "infinity:infinity_gauntlet"
-              },
-              {
-                "type": "palladium:item_in_slot",
-                "item": {
-                  "item": "infinity:aether"
-                },
-                "slot": "mainhand"
-              },
-              {
-                "type": "palladium:item_in_slot",
-                "item": {
-                  "item": "infinity:aether"
-                },
-                "slot": "offhand"
-              },
-              {
-                "type": "palladium:item_in_slot",
-                "item": {
-                  "item": "infinity:reality_stone"
-                },
-                "slot": "mainhand"
-              },
-              {
-                "type": "palladium:item_in_slot",
-                "item": {
-                  "item": "infinity:reality_stone"
-                },
-                "slot": "offhand"
-              },
-              {
-                "type": "palladium:item_in_slot",
-                "item": {
-                  "item": "infinity:cosmi-rod_reality"
-                },
-                "slot": "mainhand"
-              },
-              {
-                "type": "palladium:item_in_slot",
-                "item": {
-                  "item": "infinity:cosmi-rod_reality"
-                },
-                "slot": "offhand"
-              }
-            ]
           }
         ]
       }
     },
-    "aim": {
-      "type": "palladium:aim",
-      "hidden": true,
-      "hidden_in_bar": true,
-      "list_index": -1,
-      "time": 10,
-      "persistent_data": true,
-      "arm": "main_arm",
-      "conditions": {
-        "enabling": [
-          {
-            "type": "palladium:item_in_slot",
-            "item": {
-              "item": "infinity:aether"
-            },
-            "slot": "mainhand"
-          }
-        ]
-      }
-    },
-    "aim2": {
-      "type": "palladium:aim",
-      "hidden": true,
-      "hidden_in_bar": true,
-      "list_index": -1,
-      "persistent_data": true,
-      "time": 10,
-      "arm": "off_arm",
-      "conditions": {
-        "enabling": [
-          {
-            "type": "palladium:item_in_slot",
-            "item": {
-              "item": "infinity:aether"
-            },
-            "slot": "offhand"
-          }
-        ]
-      }
-    },
-    "remove_reality_stone": {
-      "type": "palladium:command",
-      "icon": "infinity:reality_stone",
-      "title": "Remove Reality Stone",
-      "persistent_data": true,
-      "bar_color": "red",
-      "hidden": true,
-      "hidden_in_bar": false,
-      "list_index": -1,
-      "gui_position": "null",
-      "description": {
-        "translate": "ability.infinity.reality_stone.remove_reality_stone.description"
-      },
-      "commands": [
-        "execute as @s run clear @s infinity:aether",
-        "execute as @s run function infinity:giverealitystone",
-        "execute as @s run give @s infinity:empty_aether"
-      ],
-      "conditions": {
-        "enabling": [
-          {
-            "type": "palladium:action",
-            "cooldown": 0,
-            "key_type": "right_click",
-            "needs_empty_hand": false,
-            "allow_scrolling_when_crouching": true
-          }
-        ],
-        "unlocking": [
-          {
-            "type": "palladium:or",
-            "conditions": [
-              {
-                "type": "palladium:item_in_slot",
-                "item": {
-                  "item": "infinity:aether"
-                },
-                "slot": "offhand"
-              },
-              {
-                "type": "palladium:item_in_slot",
-                "item": {
-                  "item": "infinity:aether"
-                },
-                "slot": "mainhand"
-              }
-            ]
-          },
-          {
-            "type": "palladium:crouching"
-          }
-        ]
-      }
-    },
+
     "weather_wheel": {
       "type": "palladium:ability_wheel",
       "icon": "infinity:textures/icon/weather_wheel.png",
@@ -837,59 +610,7 @@
             "allow_scrolling_when_crouching": true
           }
         ],
-        "unlocking": [
-          {
-            "type": "palladium:or",
-            "conditions": [
-              {
-                "type": "palladium:has_power",
-                "power": "infinity:infinity_gauntlet"
-              },
-              {
-                "type": "palladium:item_in_slot",
-                "item": {
-                  "item": "infinity:aether"
-                },
-                "slot": "mainhand"
-              },
-              {
-                "type": "palladium:item_in_slot",
-                "item": {
-                  "item": "infinity:aether"
-                },
-                "slot": "offhand"
-              },
-              {
-                "type": "palladium:item_in_slot",
-                "item": {
-                  "item": "infinity:reality_stone"
-                },
-                "slot": "mainhand"
-              },
-              {
-                "type": "palladium:item_in_slot",
-                "item": {
-                  "item": "infinity:reality_stone"
-                },
-                "slot": "offhand"
-              },
-              {
-                "type": "palladium:item_in_slot",
-                "item": {
-                  "item": "infinity:cosmi-rod_reality"
-                },
-                "slot": "mainhand"
-              },
-              {
-                "type": "palladium:item_in_slot",
-                "item": {
-                  "item": "infinity:cosmi-rod_reality"
-                },
-                "slot": "offhand"
-              }
-            ]
-          }
-        ]
+        "unlocking": []
       }
     },
     "clear": {
@@ -917,59 +638,7 @@
             "allow_scrolling_when_crouching": true
           }
         ],
-        "unlocking": [
-          {
-            "type": "palladium:or",
-            "conditions": [
-              {
-                "type": "palladium:has_power",
-                "power": "infinity:infinity_gauntlet"
-              },
-              {
-                "type": "palladium:item_in_slot",
-                "item": {
-                  "item": "infinity:aether"
-                },
-                "slot": "mainhand"
-              },
-              {
-                "type": "palladium:item_in_slot",
-                "item": {
-                  "item": "infinity:aether"
-                },
-                "slot": "offhand"
-              },
-              {
-                "type": "palladium:item_in_slot",
-                "item": {
-                  "item": "infinity:reality_stone"
-                },
-                "slot": "mainhand"
-              },
-              {
-                "type": "palladium:item_in_slot",
-                "item": {
-                  "item": "infinity:reality_stone"
-                },
-                "slot": "offhand"
-              },
-              {
-                "type": "palladium:item_in_slot",
-                "item": {
-                  "item": "infinity:cosmi-rod_reality"
-                },
-                "slot": "mainhand"
-              },
-              {
-                "type": "palladium:item_in_slot",
-                "item": {
-                  "item": "infinity:cosmi-rod_reality"
-                },
-                "slot": "offhand"
-              }
-            ]
-          }
-        ]
+        "unlocking": []
       }
     },
     "thunder": {
@@ -997,57 +666,46 @@
             "allow_scrolling_when_crouching": true
           }
         ],
-        "unlocking": [
+        "unlocking": []
+      }
+    },
+
+    "aim": {
+      "type": "palladium:aim",
+      "hidden": true,
+      "hidden_in_bar": true,
+      "list_index": -1,
+      "time": 10,
+      "persistent_data": true,
+      "arm": "main_arm",
+      "conditions": {
+        "enabling": [
           {
-            "type": "palladium:or",
-            "conditions": [
-              {
-                "type": "palladium:has_power",
-                "power": "infinity:infinity_gauntlet"
-              },
-              {
-                "type": "palladium:item_in_slot",
-                "item": {
-                  "item": "infinity:aether"
-                },
-                "slot": "mainhand"
-              },
-              {
-                "type": "palladium:item_in_slot",
-                "item": {
-                  "item": "infinity:aether"
-                },
-                "slot": "offhand"
-              },
-              {
-                "type": "palladium:item_in_slot",
-                "item": {
-                  "item": "infinity:reality_stone"
-                },
-                "slot": "mainhand"
-              },
-              {
-                "type": "palladium:item_in_slot",
-                "item": {
-                  "item": "infinity:reality_stone"
-                },
-                "slot": "offhand"
-              },
-              {
-                "type": "palladium:item_in_slot",
-                "item": {
-                  "item": "infinity:cosmi-rod_reality"
-                },
-                "slot": "mainhand"
-              },
-              {
-                "type": "palladium:item_in_slot",
-                "item": {
-                  "item": "infinity:cosmi-rod_reality"
-                },
-                "slot": "offhand"
-              }
-            ]
+            "type": "palladium:item_in_slot",
+            "item": {
+              "item": "infinity:aether"
+            },
+            "slot": "mainhand"
+          }
+        ]
+      }
+    },
+    "aim2": {
+      "type": "palladium:aim",
+      "hidden": true,
+      "hidden_in_bar": true,
+      "list_index": -1,
+      "persistent_data": true,
+      "time": 10,
+      "arm": "off_arm",
+      "conditions": {
+        "enabling": [
+          {
+            "type": "palladium:item_in_slot",
+            "item": {
+              "item": "infinity:aether"
+            },
+            "slot": "offhand"
           }
         ]
       }
